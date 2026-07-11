@@ -72,6 +72,9 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
                 stream=True,
             )
             r.raise_for_status()
+            # Le flux SSE arrive sans charset déclaré : sans ceci, requests
+            # décode en latin-1 et chaque accent devient du mojibake (Ã©…).
+            r.encoding = "utf-8"
             texte, echantillon = _lire_flux(r)
             if texte.strip():
                 return texte

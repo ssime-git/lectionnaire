@@ -54,6 +54,7 @@ class WorkersAiCallTests(unittest.TestCase):
         self.assertTrue(corps["stream"])
         self.assertEqual(post.call_args.kwargs["timeout"], 300)
         self.assertTrue(post.call_args.kwargs["stream"])
+        self.assertEqual(response.encoding, "utf-8")
 
     def test_appel_lit_le_dialecte_openai_de_kimi(self) -> None:
         response = _reponse_sse(
