@@ -82,7 +82,7 @@ def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
         erreurs = reponse.get("errors") or reponse.get("messages") or "inconnue"
         raise RuntimeError(f"Workers AI a refusé la requête : {erreurs}")
     resultat = reponse.get("result")
-    texte = resultat.get("response") if isinstance(resultat, dict) else None
+    texte = _extraire_texte(resultat)
     if not isinstance(texte, str) or not texte.strip():
         cles = sorted(resultat) if isinstance(resultat, dict) else []
         raise RuntimeError(
@@ -90,6 +90,21 @@ def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
             f"(resultat={type(resultat).__name__}, clés={cles})"
         )
     return texte
+
+
+def _extraire_texte(resultat: Any) -> str | None:
+    """Selon le modèle, Workers AI renvoie soit {response}, soit le format
+    OpenAI {choices: [{message: {content}}]} (Kimi, gpt-oss…)."""
+    if not isinstance(resultat, dict):
+        return None
+    if isinstance(resultat.get("response"), str):
+        return resultat["response"]
+    choices = resultat.get("choices")
+    if isinstance(choices, list) and choices:
+        message = choices[0].get("message") if isinstance(choices[0], dict) else None
+        if isinstance(message, dict) and isinstance(message.get("content"), str):
+            return message["content"]
+    return None
 
 
 def _json_propre(txt: str) -> dict:

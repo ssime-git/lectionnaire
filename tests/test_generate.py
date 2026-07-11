@@ -50,6 +50,32 @@ class WorkersAiCallTests(unittest.TestCase):
         self.assertEqual(post.call_args.kwargs["json"]["max_tokens"], 6000)
         self.assertEqual(post.call_args.kwargs["timeout"], 300)
 
+    def test_appel_lit_le_format_openai_de_kimi(self) -> None:
+        response = Mock()
+        response.json.return_value = {
+            "success": True,
+            "result": {
+                "id": "x",
+                "object": "chat.completion",
+                "choices": [
+                    {"message": {"role": "assistant", "content": '{"titre": "Kimi"}'}}
+                ],
+                "usage": {},
+            },
+        }
+        with (
+            patch.dict(
+                os.environ,
+                {
+                    "CLOUDFLARE_ACCOUNT_ID": "account-id",
+                    "CLOUDFLARE_AI_API_TOKEN": "token",
+                },
+                clear=True,
+            ),
+            patch("generate.requests.post", return_value=response),
+        ):
+            self.assertEqual(generate._appel("system", "user"), '{"titre": "Kimi"}')
+
     def test_appel_reessaie_une_fois_apres_timeout(self) -> None:
         response = Mock()
         response.json.return_value = {
