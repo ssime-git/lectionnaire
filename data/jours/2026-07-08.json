@@ -1,0 +1,138 @@
+{
+  "date": "2026-07-08",
+  "date_humaine": "Mercredi 8 juillet 2026",
+  "semaine": "14ᵉ semaine du temps ordinaire",
+  "ferie": "férie",
+  "suite_hier": "La suite d'hier : la prière pour des ouvriers reçoit aujourd'hui des noms.",
+  "deuterocanonique": false,
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "titre": "Défricher",
+  "titre_html": "Dé<span class=\"it\">fricher</span>",
+  "sous_titre": "Il est temps de rouvrir le champ laissé à la ronce. Et les ouvriers qu'on demandait hier, aujourd'hui Jésus les appelle un par un.",
+  "traduction_globale": "Louis Segond 1910",
+  "references_brutes": "Os 10, 1-3.7-8.12 ; Ps 104 ; Mt 10, 1-7",
+  "gravure_alt": "Bois gravé : sillons retournés, une ronce, de jeunes pousses",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 q120 -12 328 0\"/><path d=\"M6 128 q120 -10 328 0\"/><path d=\"M6 136 q120 -7 328 0\"/><path d=\"M6 144 q120 -4 328 0\"/><path d=\"M44 122 l-4 22\"/><path d=\"M76 122 l-4 22\"/><path d=\"M108 122 l-4 22\"/><path d=\"M240 122 l4 22\"/><path d=\"M272 122 l4 22\"/><path d=\"M304 122 l4 22\"/><path d=\"M30.0 120 q-14 -31 12 -34 q-20 19 4 27\"/><path d=\"M30.0 120 q18 -22 -6 -36\"/><path d=\"M22.0 90.0 l6 -5\"/><path d=\"M40.0 98.0 l-6 -5\"/><path d=\"M90.0 120 q-14 -31 12 -34 q-20 19 4 27\"/><path d=\"M90.0 120 q18 -22 -6 -36\"/><path d=\"M82.0 90.0 l6 -5\"/><path d=\"M100.0 98.0 l-6 -5\"/><path d=\"M150.0 120 q-14 -31 12 -34 q-20 19 4 27\"/><path d=\"M150.0 120 q18 -22 -6 -36\"/><path d=\"M142.0 90.0 l6 -5\"/><path d=\"M160.0 98.0 l-6 -5\"/></g><g class=\"trait-liturgie\"><path d=\"M195.0 120 v-30\"/><path d=\"M195.0 100.0 q-8 -5 -12 -14\"/><path d=\"M195.0 98.0 q8 -5 12 -14\"/><path d=\"M235.0 120 v-30\"/><path d=\"M235.0 100.0 q-8 -5 -12 -14\"/><path d=\"M235.0 98.0 q8 -5 12 -14\"/><path d=\"M275.0 120 v-30\"/><path d=\"M275.0 100.0 q-8 -5 -12 -14\"/><path d=\"M275.0 98.0 q8 -5 12 -14\"/><path d=\"M315.0 120 v-30\"/><path d=\"M315.0 100.0 q-8 -5 -12 -14\"/><path d=\"M315.0 98.0 q8 -5 12 -14\"/></g><g class=\"trait-rubrique\"><path d=\"M296 42 m-16 0 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0\"/><path d=\"M296 23 l0 -7\"/><path d=\"M296 61 l0 7\"/><path d=\"M277 42 l-7 0\"/><path d=\"M315 42 l7 0\"/><path d=\"M309 29 l5 -5\"/><path d=\"M283 55 l-5 5\"/><path d=\"M309 55 l5 5\"/><path d=\"M283 29 l-5 -5\"/></g></svg>",
+  "lectures": [
+    {
+      "classe": "",
+      "etiquette": "Première lecture",
+      "reference": "Osée 10, 1-3.7-8.12",
+      "traduction": "Segond 1910",
+      "corps_html": "<span class=\"init\">I</span><span class=\"s\">1</span>sraël était une vigne féconde, qui rendait beaucoup de fruits. Plus ses fruits étaient abondants, plus il a multiplié les <button class=\"mot\" data-g=\"g-autels\">autels</button> ; plus son pays était prospère, plus il a embelli les statues. <span class=\"s\">2</span>Leur cœur est partagé : ils vont en porter la peine. <span class=\"s\">7</span>C'en est fait de Samarie, de son roi, comme de l'écume à la surface des eaux. <span class=\"s\">8</span>Les hauts lieux de Beth-Aven seront détruits ; l'épine et la ronce croîtront sur leurs autels. <span class=\"s\">12</span>Semez selon la justice, moissonnez selon la miséricorde, <button class=\"mot\" data-g=\"g-defriche\">défrichez-vous un champ nouveau</button> ! Il est temps de chercher l'Éternel, jusqu'à ce qu'il vienne, et répande pour vous la justice.",
+      "gloses": [
+        {
+          "id": "g-autels",
+          "lemme": "Plus de fruit, plus d'autels",
+          "html": "La prospérité n'a pas rendu Israël reconnaissant : elle a multiplié ses idoles. Le fruit reçu devient occasion d'oubli — le même piège qu'hier, la sécurité fabriquée contre celui qui l'a donnée."
+        },
+        {
+          "id": "g-defriche",
+          "lemme": "Défrichez-vous un champ nouveau",
+          "html": "Hébreu <span class=\"gr\">nîrû lākem nîr</span> : rompre la terre en friche, durcie et couverte de ronces faute d'avoir été travaillée. Osée ne dit pas « semez plus », il dit « rouvrez le sol ». La conversion commence sous la surface."
+        }
+      ]
+    },
+    {
+      "classe": "psaume",
+      "etiquette": "Psaume",
+      "reference": "104 (105), 2-4",
+      "traduction": "antienne du jour",
+      "corps_html": "<em>« Recherchez sans trêve la face du Seigneur. »</em><br><br>Chantez, jouez pour lui, <button class=\"mot\" data-g=\"g-face\">redites toutes ses merveilles</button> ! Cherchez le Seigneur et sa puissance, recherchez sans trêve sa face. Le psaume répond exactement à Osée 10, 12 : à l'ordre « il est temps de chercher », il donne le refrain — chercher, non pas une fois, mais sans trêve.",
+      "gloses": [
+        {
+          "id": "g-face",
+          "lemme": "La face",
+          "html": "Chercher la <span class=\"gr\">face</span> (hébreu <span class=\"gr\">panîm</span>), ce n'est pas obtenir une réponse : c'est désirer la présence elle-même. On peut chercher les dons de Dieu ; le psaume invite à chercher son visage."
+        }
+      ]
+    },
+    {
+      "classe": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Matthieu 10, 1-7",
+      "traduction": "Segond 1910",
+      "corps_html": "<span class=\"init\">P</span><span class=\"s\">1</span>uis, ayant appelé ses douze disciples, il leur donna le pouvoir de chasser les esprits impurs, et de guérir toute maladie et toute infirmité. <span class=\"s\">2</span>Voici les noms des douze <button class=\"mot\" data-g=\"g-noms\">apôtres</button>. Le premier, Simon appelé Pierre, et André son frère ; Jacques fils de Zébédée, et Jean son frère ; <span class=\"s\">3</span>Philippe et Barthélemy ; Thomas et <button class=\"mot\" data-g=\"g-matthieu\">Matthieu le publicain</button> ; Jacques fils d'Alphée, et Thaddée ; <span class=\"s\">4</span>Simon le Cananite, et Judas l'Iscariot, celui qui livra Jésus. <span class=\"s\">5</span>Tels sont les douze que Jésus envoya, après leur avoir donné ces instructions : N'allez pas vers les païens ; <span class=\"s\">6</span>allez plutôt vers les <button class=\"mot\" data-g=\"g-brebis\">brebis perdues</button> de la maison d'Israël. <span class=\"s\">7</span>Allez, prêchez, et dites : Le royaume des cieux est proche.",
+      "gloses": [
+        {
+          "id": "g-noms",
+          "lemme": "Les ouvriers ont des noms",
+          "html": "Hier : « priez le maître d'envoyer des ouvriers » (Mt 9, 38). Aujourd'hui, verset suivant : il les appelle et les nomme. La prière n'a pas produit un miracle abstrait — mais douze hommes précis, avec leurs prénoms et leurs failles."
+        },
+        {
+          "id": "g-matthieu",
+          "lemme": "Matthieu le publicain",
+          "html": "L'évangéliste, selon la tradition, se nomme lui-même et se colle son ancien métier honteux, collecteur d'impôts pour l'occupant. Dans la même liste : Simon le Cananite (le Zélote), militant anti-Rome. Le collaborateur et le résistant, envoyés ensemble."
+        },
+        {
+          "id": "g-brebis",
+          "lemme": "Brebis perdues",
+          "html": "Reprise directe d'hier (« comme des brebis sans berger », Mt 9, 36). Les Douze sont envoyés précisément vers la foule qui avait ému Jésus de compassion. L'envoi est la forme concrète de cette compassion."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Osée · la fin approche",
+      "corps_html": "On avance de deux chapitres depuis hier. Le royaume du Nord n'a plus que quelques années. « De l'écume à la surface des eaux » : le roi de Samarie, emporté comme un débris. Et au milieu du désastre annoncé, un ordre paradoxal : ce n'est pas le moment de fuir, c'est le moment de <em>défricher</em>. L'espérance passe par la terre rompue."
+    },
+    {
+      "titre": "Matthieu · l'envoi",
+      "corps_html": "Matthieu 10 ouvre le discours missionnaire. Jésus ne garde pas la moisson pour lui : il partage son pouvoir — chasser, guérir — et l'envoie dans des mains ordinaires. Le « allez d'abord vers Israël » est une étape : la mission s'élargira jusqu'aux nations (Mt 28), mais elle commence au plus proche."
+    }
+  ],
+  "analogie": {
+    "titre": "La friche, version 2026",
+    "variantes": [
+      "Il y a toujours, dans une vie, un coin laissé à la ronce. Une relation qu'on n'ose plus rouvrir. Une prière abandonnée sans décision, juste par lassitude. Un pardon repoussé si longtemps que le terrain a durci par-dessus. On n'a rien détruit — on a juste <em>laissé faire</em>, et la ronce a poussé toute seule. Osée ne dit pas « attends des jours meilleurs », il dit : <em>il est temps</em>. Rouvrir un seul sillon aujourd'hui, avec ce qu'on est.",
+      "On regarde volontiers notre époque comme un champ épuisé : les gens fatigués, les liens qui s'effilochent, tout ce qui « part en ronce » sans que personne ne l'ait décidé. C'est exactement ce que voyait Osée dans un royaume qui s'effondrait. Mais au milieu du même désastre, le regard de Jésus ne dit pas « génération perdue ». Il dit <em>moisson</em> — et pour la récolter, il n'attend pas des héros : il appelle douze noms ordinaires, un publicain, un zélote, un traître même. Défricher, ce n'est pas devenir quelqu'un d'autre.",
+      "Le plus étrange, dans ce texte, c'est le moment choisi. Osée lance « semez la justice, il est temps de chercher le Seigneur » précisément quand tout est perdu — Samarie va tomber, le roi est emporté « comme l'écume à la surface des eaux ». L'espérance biblique ne vient pas <em>après</em> le désastre, une fois le terrain assaini : elle passe par la terre rompue, au présent. Et l'évangile le confirme dans le même geste — c'est la foule « languissante et abattue » que Jésus appelle une moisson. Ce que d'autres regardent comme une fin, la foi le regarde comme un champ mûr."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Hier, Jésus demandait de <strong>prier</strong>. Aujourd'hui, il <strong>appelle par leur nom</strong>. Entre les deux, une seule chose a changé : quelqu'un a répondu présent.",
+    "geste": "Aujourd'hui : repérer le coin de vie laissé à la ronce — un message pas envoyé, une réconciliation évitée, une prière tue. En rouvrir <em>un seul</em>, d'un geste minuscule. Pas tout le champ. Un sillon.",
+    "note": "« Il est temps » ne veut pas dire « tout, tout de suite ». Il veut dire « commence, aujourd'hui ». Le reste, Dieu le fait lever."
+  },
+  "question": "Quel coin de ma vie ai-je laissé retourner à la friche — sans jamais le décider ?",
+  "racines": [
+    {
+      "titre": "Une surprise de traduction · Osée 10, 12 grec",
+      "corps_html": "Là où l'hébreu dit « défrichez-vous un champ nouveau », la Septante — la Bible grecque des premiers chrétiens — traduit : « allumez pour vous la lumière de la connaissance » (<span class=\"grec\">phôtisate heautois phôs gnôseôs</span>). Deux images pour un verset : rompre la terre / allumer la lumière. Les Pères grecs, Clément d'Alexandrie en tête, ont bâti sur cette variante toute une spiritualité de l'illumination.",
+      "attribution": "Écart Massorète / Septante — à sourcer dans la version finale."
+    },
+    {
+      "titre": "Jean Calvin · sur Osée 10, 12",
+      "corps_html": "Calvin s'arrête sur « défrichez » : le cœur humain, dit-il, est un champ que les épines ont envahi ; il ne suffit pas d'y jeter la semence par-dessus, il faut que la charrue de la repentance rompe la terre durcie. Sans ce labour, la Parole tombe sur la ronce et s'y perd. La conversion est un travail de sol, pas de surface.",
+      "attribution": "Paraphrase — Commentaires sur les petits prophètes, domaine public."
+    },
+    {
+      "titre": "Jean Chrysostome · sur la liste des Douze",
+      "corps_html": "Chrysostome remarque que l'évangéliste ne cache rien : il nomme Judas « celui qui le livra » sans l'effacer, et Matthieu s'attribue le titre méprisé de « publicain ». Pour lui, cette honnêteté est une preuve : qui invente une religion embellit ses fondateurs ; ceux-là disent la vérité, failles comprises.",
+      "attribution": "Paraphrase — Homélies sur Matthieu, domaine public."
+    }
+  ],
+  "gravure_scene": {
+    "gauche": {
+      "motif": "ronce",
+      "n": 3
+    },
+    "droite": {
+      "motif": "pousse",
+      "n": 4,
+      "trait": "liturgie"
+    },
+    "sol": "sillons",
+    "ciel": {
+      "motif": "soleil",
+      "trait": "rubrique"
+    }
+  }
+}

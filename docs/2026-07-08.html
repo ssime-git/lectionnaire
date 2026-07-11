@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Défricher — Mercredi 8 juillet 2026</title>
+<meta name="description" content="Il est temps de rouvrir le champ laissé à la ronce. Et les ouvriers qu'on demandait hier, aujourd'hui Jésus les appelle un par un.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">Mercredi 8 juillet 2026 · 14ᵉ semaine du temps ordinaire · <span class="couleur">vert · férie</span>
+<span class="suite">La suite d'hier : la prière pour des ouvriers reçoit aujourd'hui des noms.</span></p>
+    <h1>Dé<span class="it">fricher</span></h1>
+    <p class="chapeau">Il est temps de rouvrir le champ laissé à la ronce. Et les ouvriers qu'on demandait hier, aujourd'hui Jésus les appelle un par un.</p>
+    <figure class="gravure" aria-label="Bois gravé : sillons retournés, une ronce, de jeunes pousses"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 q120 -12 328 0"/><path d="M6 128 q120 -10 328 0"/><path d="M6 136 q120 -7 328 0"/><path d="M6 144 q120 -4 328 0"/><path d="M44 122 l-4 22"/><path d="M76 122 l-4 22"/><path d="M108 122 l-4 22"/><path d="M240 122 l4 22"/><path d="M272 122 l4 22"/><path d="M304 122 l4 22"/><path d="M30.0 120 q-14 -31 12 -34 q-20 19 4 27"/><path d="M30.0 120 q18 -22 -6 -36"/><path d="M22.0 90.0 l6 -5"/><path d="M40.0 98.0 l-6 -5"/><path d="M90.0 120 q-14 -31 12 -34 q-20 19 4 27"/><path d="M90.0 120 q18 -22 -6 -36"/><path d="M82.0 90.0 l6 -5"/><path d="M100.0 98.0 l-6 -5"/><path d="M150.0 120 q-14 -31 12 -34 q-20 19 4 27"/><path d="M150.0 120 q18 -22 -6 -36"/><path d="M142.0 90.0 l6 -5"/><path d="M160.0 98.0 l-6 -5"/></g><g class="trait-liturgie"><path d="M195.0 120 v-30"/><path d="M195.0 100.0 q-8 -5 -12 -14"/><path d="M195.0 98.0 q8 -5 12 -14"/><path d="M235.0 120 v-30"/><path d="M235.0 100.0 q-8 -5 -12 -14"/><path d="M235.0 98.0 q8 -5 12 -14"/><path d="M275.0 120 v-30"/><path d="M275.0 100.0 q-8 -5 -12 -14"/><path d="M275.0 98.0 q8 -5 12 -14"/><path d="M315.0 120 v-30"/><path d="M315.0 100.0 q-8 -5 -12 -14"/><path d="M315.0 98.0 q8 -5 12 -14"/></g><g class="trait-rubrique"><path d="M296 42 m-16 0 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0"/><path d="M296 23 l0 -7"/><path d="M296 61 l0 7"/><path d="M277 42 l-7 0"/><path d="M315 42 l7 0"/><path d="M309 29 l5 -5"/><path d="M283 55 l-5 5"/><path d="M309 55 l5 5"/><path d="M283 29 l-5 -5"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Osée 10, 1-3.7-8.12 — Segond 1910</p>
+        <div class="ecriture "><span class="init">I</span><span class="s">1</span>sraël était une vigne féconde, qui rendait beaucoup de fruits. Plus ses fruits étaient abondants, plus il a multiplié les <button class="mot" data-g="g-autels">autels</button> ; plus son pays était prospère, plus il a embelli les statues. <span class="s">2</span>Leur cœur est partagé : ils vont en porter la peine. <span class="s">7</span>C'en est fait de Samarie, de son roi, comme de l'écume à la surface des eaux. <span class="s">8</span>Les hauts lieux de Beth-Aven seront détruits ; l'épine et la ronce croîtront sur leurs autels. <span class="s">12</span>Semez selon la justice, moissonnez selon la miséricorde, <button class="mot" data-g="g-defriche">défrichez-vous un champ nouveau</button> ! Il est temps de chercher l'Éternel, jusqu'à ce qu'il vienne, et répande pour vous la justice.</div>
+        <div class="glose" id="g-autels"><span class="lemme">Plus de fruit, plus d'autels</span> La prospérité n'a pas rendu Israël reconnaissant : elle a multiplié ses idoles. Le fruit reçu devient occasion d'oubli — le même piège qu'hier, la sécurité fabriquée contre celui qui l'a donnée.</div>
+        <div class="glose" id="g-defriche"><span class="lemme">Défrichez-vous un champ nouveau</span> Hébreu <span class="gr">nîrû lākem nîr</span> : rompre la terre en friche, durcie et couverte de ronces faute d'avoir été travaillée. Osée ne dit pas « semez plus », il dit « rouvrez le sol ». La conversion commence sous la surface.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — 104 (105), 2-4 — antienne du jour</p>
+        <div class="ecriture psaume"><em>« Recherchez sans trêve la face du Seigneur. »</em><br><br>Chantez, jouez pour lui, <button class="mot" data-g="g-face">redites toutes ses merveilles</button> ! Cherchez le Seigneur et sa puissance, recherchez sans trêve sa face. Le psaume répond exactement à Osée 10, 12 : à l'ordre « il est temps de chercher », il donne le refrain — chercher, non pas une fois, mais sans trêve.</div>
+        <div class="glose" id="g-face"><span class="lemme">La face</span> Chercher la <span class="gr">face</span> (hébreu <span class="gr">panîm</span>), ce n'est pas obtenir une réponse : c'est désirer la présence elle-même. On peut chercher les dons de Dieu ; le psaume invite à chercher son visage.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Matthieu 10, 1-7 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="init">P</span><span class="s">1</span>uis, ayant appelé ses douze disciples, il leur donna le pouvoir de chasser les esprits impurs, et de guérir toute maladie et toute infirmité. <span class="s">2</span>Voici les noms des douze <button class="mot" data-g="g-noms">apôtres</button>. Le premier, Simon appelé Pierre, et André son frère ; Jacques fils de Zébédée, et Jean son frère ; <span class="s">3</span>Philippe et Barthélemy ; Thomas et <button class="mot" data-g="g-matthieu">Matthieu le publicain</button> ; Jacques fils d'Alphée, et Thaddée ; <span class="s">4</span>Simon le Cananite, et Judas l'Iscariot, celui qui livra Jésus. <span class="s">5</span>Tels sont les douze que Jésus envoya, après leur avoir donné ces instructions : N'allez pas vers les païens ; <span class="s">6</span>allez plutôt vers les <button class="mot" data-g="g-brebis">brebis perdues</button> de la maison d'Israël. <span class="s">7</span>Allez, prêchez, et dites : Le royaume des cieux est proche.</div>
+        <div class="glose" id="g-noms"><span class="lemme">Les ouvriers ont des noms</span> Hier : « priez le maître d'envoyer des ouvriers » (Mt 9, 38). Aujourd'hui, verset suivant : il les appelle et les nomme. La prière n'a pas produit un miracle abstrait — mais douze hommes précis, avec leurs prénoms et leurs failles.</div>
+        <div class="glose" id="g-matthieu"><span class="lemme">Matthieu le publicain</span> L'évangéliste, selon la tradition, se nomme lui-même et se colle son ancien métier honteux, collecteur d'impôts pour l'occupant. Dans la même liste : Simon le Cananite (le Zélote), militant anti-Rome. Le collaborateur et le résistant, envoyés ensemble.</div>
+        <div class="glose" id="g-brebis"><span class="lemme">Brebis perdues</span> Reprise directe d'hier (« comme des brebis sans berger », Mt 9, 36). Les Douze sont envoyés précisément vers la foule qui avait ému Jésus de compassion. L'envoi est la forme concrète de cette compassion.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Osée · la fin approche</h3><p>On avance de deux chapitres depuis hier. Le royaume du Nord n'a plus que quelques années. « De l'écume à la surface des eaux » : le roi de Samarie, emporté comme un débris. Et au milieu du désastre annoncé, un ordre paradoxal : ce n'est pas le moment de fuir, c'est le moment de <em>défricher</em>. L'espérance passe par la terre rompue.</p></div>
+      <div><h3>Matthieu · l'envoi</h3><p>Matthieu 10 ouvre le discours missionnaire. Jésus ne garde pas la moisson pour lui : il partage son pouvoir — chasser, guérir — et l'envoie dans des mains ordinaires. Le « allez d'abord vers Israël » est une étape : la mission s'élargira jusqu'aux nations (Mt 28), mais elle commence au plus proche.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La friche, version 2026</h2>
+<p>Il y a toujours, dans une vie, un coin laissé à la ronce. Une relation qu'on n'ose plus rouvrir. Une prière abandonnée sans décision, juste par lassitude. Un pardon repoussé si longtemps que le terrain a durci par-dessus. On n'a rien détruit — on a juste <em>laissé faire</em>, et la ronce a poussé toute seule. Osée ne dit pas « attends des jours meilleurs », il dit : <em>il est temps</em>. Rouvrir un seul sillon aujourd'hui, avec ce qu'on est.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Hier, Jésus demandait de <strong>prier</strong>. Aujourd'hui, il <strong>appelle par leur nom</strong>. Entre les deux, une seule chose a changé : quelqu'un a répondu présent.</p>
+      <p class="geste">Aujourd'hui : repérer le coin de vie laissé à la ronce — un message pas envoyé, une réconciliation évitée, une prière tue. En rouvrir <em>un seul</em>, d'un geste minuscule. Pas tout le champ. Un sillon.</p>
+      <small>« Il est temps » ne veut pas dire « tout, tout de suite ». Il veut dire « commence, aujourd'hui ». Le reste, Dieu le fait lever.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quel coin de ma vie ai-je laissé retourner à la friche — sans jamais le décider ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une surprise de traduction · Osée 10, 12 grec</h3>
+          <p>Là où l'hébreu dit « défrichez-vous un champ nouveau », la Septante — la Bible grecque des premiers chrétiens — traduit : « allumez pour vous la lumière de la connaissance » (<span class="grec">phôtisate heautois phôs gnôseôs</span>). Deux images pour un verset : rompre la terre / allumer la lumière. Les Pères grecs, Clément d'Alexandrie en tête, ont bâti sur cette variante toute une spiritualité de l'illumination.</p>
+<p class="attrib">Écart Massorète / Septante — à sourcer dans la version finale.</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Jean Calvin · sur Osée 10, 12</h3>
+          <p>Calvin s'arrête sur « défrichez » : le cœur humain, dit-il, est un champ que les épines ont envahi ; il ne suffit pas d'y jeter la semence par-dessus, il faut que la charrue de la repentance rompe la terre durcie. Sans ce labour, la Parole tombe sur la ronce et s'y perd. La conversion est un travail de sol, pas de surface.</p>
+<p class="attrib">Paraphrase — Commentaires sur les petits prophètes, domaine public.</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Jean Chrysostome · sur la liste des Douze</h3>
+          <p>Chrysostome remarque que l'évangéliste ne cache rien : il nomme Judas « celui qui le livra » sans l'effacer, et Matthieu s'attribue le titre méprisé de « publicain ». Pour lui, cette honnêteté est une preuve : qui invente une religion embellit ses fondateurs ; ceux-là disent la vérité, failles comprises.</p>
+<p class="attrib">Paraphrase — Homélies sur Matthieu, domaine public.</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 14ᵉ semaine du temps ordinaire — Os 10, 1-3.7-8.12 ; Ps 104 ; Mt 10, 1-7.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable. <a href="./">Archive</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>

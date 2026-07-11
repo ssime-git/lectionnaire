@@ -1,0 +1,145 @@
+{
+  "date": "2026-12-17",
+  "date_humaine": "Jeudi 17 décembre 2026",
+  "semaine": "Férie majeure de l'Avent",
+  "ferie": "férie majeure",
+  "suite_hier": "Aujourd'hui commence la dernière semaine avant Noël. L'Église ouvre le livre par une liste de noms.",
+  "deuterocanonique": false,
+  "liturgie": {
+    "cle": "violet",
+    "nom": "violet",
+    "hex": "#4C3A63",
+    "hex_sombre": "#9B84B8"
+  },
+  "titre": "La chaîne brisée",
+  "titre_html": "La chaîne <span class=\"it\">brisée</span>",
+  "sous_titre": "Quarante fois « engendra », comme des maillons. Puis, au dernier verset, la chaîne casse — et c'est là que Dieu entre.",
+  "traduction_globale": "Louis Segond 1910",
+  "references_brutes": "Gn 49, 2.8-10 ; Ps 71 ; Mt 1, 1-17",
+  "gravure_alt": "Bois gravé : une chaîne de maillons dont le dernier est ouvert, et par cette ouverture passe une lumière",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M28.0 82 a11 17 0 1 0 0.1 0\"/><path d=\"M68.57142857142857 82 a11 17 0 1 0 0.1 0\"/><path d=\"M109.14285714285714 82 a11 17 0 1 0 0.1 0\"/><path d=\"M149.71428571428572 82 a11 17 0 1 0 0.1 0\"/><path d=\"M190.28571428571428 82 a11 17 0 1 0 0.1 0\"/><path d=\"M230.85714285714283 82 a11 17 0 1 0 0.1 0\"/><path d=\"M271.42857142857144 82 a11 17 0 1 0 0.1 0\"/></g><g class=\"trait-liturgie\"><path d=\"M316.0 65 a11 17 0 0 0 -8 30\"/><path d=\"M308.0 99 a11 17 0 0 0 8 -30\"/><path d=\"M284 75 l26 0\"/><path d=\"M284 75 l24 -12\"/><path d=\"M284 75 l24 12\"/><path d=\"M284 75 l18 -22\"/><path d=\"M284 75 l18 22\"/><path d=\"M284 75 l8 -27\"/><path d=\"M284 75 l8 27\"/></g></svg>",
+  "lectures": [
+    {
+      "classe": "",
+      "etiquette": "Première lecture",
+      "reference": "Genèse 49, 2.8-10",
+      "traduction": "Segond 1910",
+      "corps_html": "<span class=\"init\">R</span><span class=\"s\">2</span>assemblez-vous, et écoutez, fils de Jacob ! Écoutez Israël, votre père ! <span class=\"s\">8</span>Juda, tu recevras les hommages de tes frères ; ta main sera sur la nuque de tes ennemis. <span class=\"s\">9</span>Juda est un jeune lion. <span class=\"s\">10</span>Le sceptre ne s'éloignera point de Juda, ni le bâton souverain d'entre ses pieds, jusqu'à ce que vienne le <button class=\"mot\" data-g=\"g-schilo\">Schilo</button>, et que les peuples lui obéissent.",
+      "gloses": [
+        {
+          "id": "g-schilo",
+          "lemme": "Schilo",
+          "html": "Le mot le plus discuté de la Genèse. Segond le laisse tel quel, faute de certitude. On y a lu « celui à qui appartient le sceptre », ou « celui qui apporte la paix ». Les rabbins comme les Pères y ont vu une annonce messianique — une promesse suspendue à un mot qu'on ne sait pas traduire. Matthieu, six siècles plus tard, ouvre son évangile en rattachant Jésus à Juda."
+        }
+      ]
+    },
+    {
+      "classe": "psaume",
+      "etiquette": "Psaume",
+      "reference": "71 (72), 1-2.3-4.7-8.17",
+      "traduction": "antienne du jour",
+      "corps_html": "<em>« En ces jours-là, fleurira la justice, grande paix jusqu'à la fin des temps. »</em><br><br>Dieu, donne au roi tes jugements, au fils du roi ta justice. Qu'il gouverne ton peuple avec justice, qu'il fasse droit aux malheureux. En ces jours-là fleurira la justice. <button class=\"mot\" data-g=\"g-nom\">Que son nom dure toujours</button> ; qu'il se perpétue tant que subsistera le soleil !",
+      "gloses": [
+        {
+          "id": "g-nom",
+          "lemme": "Que son nom dure",
+          "html": "Le psaume demande qu'un nom traverse le temps. La généalogie de Matthieu est la réponse littérale : quarante-deux noms qui ont traversé mille ans pour aboutir à un seul. Ce que le psalmiste espérait pour un roi, l'évangéliste l'écrit comme un registre d'état civil."
+        }
+      ]
+    },
+    {
+      "classe": "genealogie",
+      "etiquette": "Évangile",
+      "reference": "Matthieu 1, 1-17",
+      "traduction": "Segond 1910",
+      "corps_html": "<p style=\"margin-bottom:.6rem\"><span class=\"s\">1</span>Généalogie de Jésus-Christ, fils de David, fils d'Abraham.</p><ul class=\"chaine\"><li class=\"section\">D'Abraham à David — quatorze générations</li><li>Abraham engendra Isaac</li><li>Isaac engendra Jacob</li><li>Jacob engendra Juda et ses frères</li><li class=\"femme\">Juda engendra Pharès et Zara, de <em><button class=\"mot\" data-g=\"g-tamar\">Thamar</button></em></li><li>Pharès… Naasson, Salmon</li><li class=\"femme\">Salmon engendra Boaz, de <em><button class=\"mot\" data-g=\"g-rahab\">Rahab</button></em></li><li class=\"femme\">Boaz engendra Obed, de <em><button class=\"mot\" data-g=\"g-ruth\">Ruth</button></em></li><li>Obed engendra Isaï</li><li>Isaï engendra David, le roi</li><li class=\"section\">De David à l'Exil — quatorze générations</li><li class=\"femme\">David engendra Salomon, de <em><button class=\"mot\" data-g=\"g-urie\">celle qui avait été la femme d'Urie</button></em></li><li>Salomon… Roboam, Abia, Asa</li><li>Josaphat… Ozias, Joatham, Achaz</li><li>Ézéchias… Manassé, Amon, Josias</li><li>Josias engendra Jéchonias — <button class=\"mot\" data-g=\"g-exil\">au temps de la déportation</button></li><li class=\"section\">De l'Exil au Christ — quatorze générations</li><li>Jéchonias… Salathiel, Zorobabel</li><li>Abiud… Éliakim, Azor, Sadok</li><li>Achim… Éliud, Éléazar, Matthan</li><li>Matthan engendra Jacob</li><li class=\"rupture\"><span class=\"s\">16</span>Jacob engendra Joseph, <button class=\"mot\" data-g=\"g-rupture\">l'époux de Marie, de laquelle est né Jésus</button>, qui est appelé Christ.</li></ul><p class=\"compte\"><span class=\"s\">17</span>Quatorze générations, quatorze, quatorze.</p>",
+      "gloses": [
+        {
+          "id": "g-tamar",
+          "lemme": "Thamar",
+          "html": "Belle-fille de Juda, veuve sans enfant. Privée de son droit, elle se déguise en prostituée pour obtenir de son beau-père la descendance qu'il lui refusait (Gn 38). Juda la condamne à mort, puis reconnaît : « Elle est plus juste que moi. » Matthieu la met dans la lignée du Messie."
+        },
+        {
+          "id": "g-rahab",
+          "lemme": "Rahab",
+          "html": "Prostituée de Jéricho, cananéenne, qui cache les espions d'Israël et sauve sa maison (Jos 2). Une étrangère, hors alliance, hors loi — et sans elle, pas de David."
+        },
+        {
+          "id": "g-ruth",
+          "lemme": "Ruth",
+          "html": "Moabite. Or le Deutéronome exclut le Moabite de l'assemblée du Seigneur « jusqu'à la dixième génération » (Dt 23, 4). Elle est l'arrière-grand-mère de David. Le texte le sait et l'écrit quand même."
+        },
+        {
+          "id": "g-urie",
+          "lemme": "La femme d'Urie",
+          "html": "Matthieu ne dit pas « Bethsabée ». Il dit <span class=\"gr\">celle qui avait été la femme d'Urie</span> — c'est-à-dire : celle que David a prise après avoir fait tuer son mari (2 S 11). L'évangéliste refuse d'effacer le crime en nommant la victime. La lignée royale porte son adultère inscrit dans son registre."
+        },
+        {
+          "id": "g-exil",
+          "lemme": "La déportation",
+          "html": "Babylone, 587. Matthieu fait de l'Exil une charnière : il coupe l'histoire d'Israël en trois quatorzaines. Quatorze est la valeur numérique du nom de David en hébreu (D-W-D : 4+6+4). Toute la structure du texte répète en silence un seul nom."
+        },
+        {
+          "id": "g-rupture",
+          "lemme": "De laquelle est né",
+          "html": "Quarante fois de suite : <span class=\"gr\">X engendra Y</span>. Puis la formule se brise. Joseph n'engendre pas. Le grec passe au féminin — <span class=\"gr\">ex hês egennêthê</span>, « de laquelle fut engendré » — et au passif. La chaîne des hommes s'interrompt exactement là où Dieu entre. La rupture n'est pas un accident du texte : elle <em>est</em> le texte."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Pourquoi une liste, à sept jours de Noël",
+      "corps_html": "Le 17 décembre ouvre la dernière ligne droite de l'Avent. L'Église ne commence pas par la crèche mais par un registre. Le message est délibéré : avant d'être un nouveau-né, le Christ est l'aboutissement d'une histoire longue, sale, humaine, où l'on trouve des rois, des assassins, des prostituées et des exilés."
+    },
+    {
+      "titre": "L'architecture du texte",
+      "corps_html": "Trois fois quatorze générations : Abraham→David, David→l'Exil, l'Exil→le Christ. Le compte est forcé — Matthieu saute des rois connus pour tomber juste. Quatorze est la valeur numérique de « David » en hébreu. La liste n'est pas un document d'archive : c'est une composition, et sa forme prêche autant que ses noms."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qu'on n'écrit pas dans les faire-part",
+    "paragraphes": [
+      "Toute famille a sa version officielle. Celle qu'on raconte aux mariages, où les ancêtres sont courageux et les silences bien tenus. Et puis il y a l'autre, celle qu'on découvre à vingt ans : l'oncle qu'on ne nomme plus, la faillite, l'enfant né avant, la génération qui a fui. On la garde dans un tiroir.",
+      "Matthieu ouvre le tiroir. Il aurait pu écrire « fils de David, fils d'Abraham » et s'arrêter là — c'est le verset 1, il avait déjà tout dit. Au lieu de ça, il déroule quarante-deux noms et il y laisse Thamar, Rahab, Ruth, et « celle qui avait été la femme d'Urie ». Quatre femmes dont trois étrangères, dans une lignée d'hommes hébreux. Il n'excuse rien, il n'efface rien.",
+      "Puis, au bout de la chaîne, le mécanisme casse. Quarante fois « engendra », et soudain plus personne n'engendre. <em>De laquelle est né Jésus.</em> Ce n'est pas la lignée qui produit le Christ ; c'est le Christ qui vient se glisser dans une lignée qu'aucun de nous n'aurait choisie. Y compris la nôtre."
+    ]
+  },
+  "invitation": {
+    "intro": "La généalogie n'est pas un préambule qu'on saute pour arriver à Noël. C'est la façon dont Matthieu dit que Dieu ne se fait pas homme dans une famille propre.",
+    "geste": "Aujourd'hui : penser à un nom de sa propre histoire qu'on préférerait ne pas avoir — un ancêtre, un épisode, une part de soi. Ne pas le corriger, ne pas l'expliquer. Simplement l'inscrire, en silence, dans la liste que Dieu accepte de traverser.",
+    "note": "Le Christ ne rejoint pas une lignée purifiée. Il entre dans celle-là. C'est précisément pour ça qu'il peut entrer dans la tienne."
+  },
+  "question": "Quel nom de mon histoire est-ce que je tiens hors de la liste ?",
+  "racines": [
+    {
+      "titre": "Jean Chrysostome — sur les quatre femmes",
+      "corps_html": "Chrysostome s'étonne à voix haute : pourquoi Matthieu, qui pouvait taire ces noms, les inscrit-il ? Sa réponse tient en une phrase — parce que le Christ est venu guérir, non pas des justes, mais des malades ; et parce que ceux qui rougissent de leurs ancêtres n'ont pas compris qui il est. La honte de la lignée est, pour Chrysostome, la première annonce de l'Évangile.",
+      "attribution": "Homélies sur Matthieu, III — domaine public"
+    },
+    {
+      "titre": "Jean Calvin — sur Matthieu 1, 16",
+      "corps_html": "Calvin s'arrête sur la rupture de formule. Là où l'on attendait « Joseph engendra Jésus », le texte dit « l'époux de Marie ». Pour Calvin, cette torsion de la grammaire est le premier argument de l'évangile : l'évangéliste, qui vient d'établir une descendance légale par les hommes, la brise au dernier maillon pour signifier que l'origine du Christ ne vient pas de la chair.",
+      "attribution": "Commentaire sur l'harmonie évangélique — domaine public"
+    },
+    {
+      "titre": "Le compte qui ne tombe pas juste",
+      "corps_html": "Matthieu annonce trois fois quatorze générations (v. 17). Mais si l'on compte la troisième série, on n'en trouve que treize. Et dans la deuxième, il omet trois rois attestés par les Chroniques — Ochozias, Joas, Amasias. Loin d'être une erreur, c'est un aveu : le texte ne prétend pas à l'exhaustivité de l'archive. Il compose. Quatorze, valeur numérique de « David », est répété comme un refrain. La liste est un poème qui a l'air d'un cadastre.",
+      "attribution": "Écart Matthieu / 1 Chroniques 3 — vérifiable, à sourcer"
+    }
+  ],
+  "gravure_scene": {
+    "bande": {
+      "motif": "maillon",
+      "n": 8,
+      "rupture_a": 8
+    },
+    "sol": "aucun",
+    "ciel": {
+      "motif": "rayons",
+      "trait": "liturgie",
+      "x": 300,
+      "y": 75
+    }
+  }
+}

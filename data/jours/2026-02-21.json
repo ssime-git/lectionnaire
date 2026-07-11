@@ -1,0 +1,131 @@
+{
+  "date": "2026-02-21",
+  "date_humaine": "Samedi 21 février 2026",
+  "semaine": "7ᵉ semaine du temps ordinaire",
+  "ferie": "férie",
+  "suite_hier": null,
+  "deuterocanonique": true,
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "titre": "Le feu et l'eau",
+  "titre_html": "Le feu et <span class=\"it\">l'eau</span>",
+  "sous_titre": "« Il a mis devant toi le feu et l'eau : étends la main vers ce que tu veux. » Un verset sur la liberté, tiré d'un livre que ta Bible ne contient peut-être pas.",
+  "traduction_globale": "Crampon 1923 & Segond 1910",
+  "references_brutes": "Si 17, 1-13 ; Ps 102 ; Mc 10, 13-16",
+  "gravure_alt": "Bois gravé : une flamme à gauche, une coupe d'eau à droite, une croix au ciel entre les deux",
+  "gravure_scene": {
+    "gauche": {
+      "motif": "flamme",
+      "n": 1,
+      "trait": "rubrique",
+      "echelle": 1.2
+    },
+    "droite": {
+      "motif": "coupe",
+      "n": 1,
+      "trait": "liturgie"
+    },
+    "sol": "plat",
+    "ciel": {
+      "motif": "croix",
+      "trait": "encre",
+      "x": 170,
+      "y": 40
+    }
+  },
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M170 20 v40\"/><path d=\"M157 33 h26\"/></g><g class=\"trait-rubrique\"><path d=\"M90.0 120 q-11 -17 -1 -31 q-3 13 6 15 q7 -19 -3 -43 q14 22 3 43 q9 -6 6 -17 q8 19 -11 34\"/></g><g class=\"trait-liturgie\"><path d=\"M242.0 80 q0 18 13 20 q13 -2 13 -20 z\"/><path d=\"M255.0 100 v14\"/><path d=\"M244.0 120 h22\"/></g></svg>",
+  "lectures": [
+    {
+      "classe": "",
+      "etiquette": "Première lecture",
+      "reference": "Siracide 15, 11-20",
+      "traduction": "Crampon 1923",
+      "corps_html": "<span class=\"init\">N</span>e dis pas : « C'est le Seigneur qui m'a fait pécher », car il ne fait pas ce qu'il déteste. Ne dis pas : « C'est lui qui m'a égaré », car il n'a pas besoin du pécheur. <span class=\"s\">14</span>C'est lui qui, au commencement, a fait l'homme, et <button class=\"mot\" data-g=\"g-conseil\">il l'a laissé à son propre conseil</button>. <span class=\"s\">16</span>Il a mis devant toi <button class=\"mot\" data-g=\"g-feu\">le feu et l'eau</button> : étends la main vers ce que tu veux. <span class=\"s\">17</span>Devant les hommes sont la vie et la mort : ce que chacun préfère lui sera donné.",
+      "gloses": [
+        {
+          "id": "g-conseil",
+          "lemme": "Laissé à son propre conseil",
+          "html": "Grec <span class=\"gr\">diaboulion</span> : la délibération, le pouvoir de décider. Le Siracide affirme un libre arbitre fort — l'homme choisit. C'est précisément ce que la Réforme discutera : Calvin ne nie pas le choix, mais il conteste que la volonté déchue soit libre <em>pour le bien</em> sans la grâce. Le texte est le point de départ d'un des plus grands débats chrétiens."
+        },
+        {
+          "id": "g-feu",
+          "lemme": "Le feu et l'eau",
+          "html": "Deux éléments qui ne se mélangent pas : il faut prendre l'un ou l'autre. L'image dit que le choix moral est réel et exclusif. On ne tient pas les deux vases à la fois."
+        }
+      ]
+    },
+    {
+      "classe": "psaume",
+      "etiquette": "Psaume",
+      "reference": "102 (103), 1-2.11-13.18",
+      "traduction": "antienne du jour",
+      "corps_html": "<em>« L'amour du Seigneur, sans fin, sur ceux qui le craignent. »</em><br><br>Bénis le Seigneur, ô mon âme, n'oublie aucun de ses bienfaits. Comme <button class=\"mot\" data-g=\"g-pere\">la tendresse du père pour ses fils</button>, la tendresse du Seigneur pour qui le craint. Le psaume adoucit le Siracide : oui, tu choisis — mais celui devant qui tu choisis est un père.",
+      "gloses": [
+        {
+          "id": "g-pere",
+          "lemme": "Comme un père",
+          "html": "Hébreu <span class=\"gr\">raḥamîm</span>, la tendresse — le mot est de la même racine que <span class=\"gr\">reḥem</span>, le sein maternel. La sévérité apparente du « choisis » se lit sous ce regard-là. Et l'évangile va le montrer en gestes."
+        }
+      ]
+    },
+    {
+      "classe": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Marc 10, 13-16",
+      "traduction": "Segond 1910",
+      "corps_html": "<span class=\"init\">O</span><span class=\"s\">13</span>n lui amena des petits enfants, afin qu'il les touchât. Mais les disciples reprirent ceux qui les amenaient. <span class=\"s\">14</span>Jésus, voyant cela, fut <button class=\"mot\" data-g=\"g-indigne\">indigné</button>, et leur dit : Laissez venir à moi les petits enfants, et ne les en empêchez pas ; car le royaume de Dieu est pour ceux qui leur ressemblent. <span class=\"s\">15</span>Quiconque ne recevra pas le royaume de Dieu comme un petit enfant n'y entrera point. <span class=\"s\">16</span>Puis il les prit dans ses bras, et les bénit en leur imposant les mains.",
+      "gloses": [
+        {
+          "id": "g-indigne",
+          "lemme": "Fut indigné",
+          "html": "Grec <span class=\"gr\">êganaktêsen</span> — une colère, la seule fois où Marc l'emploie pour Jésus face aux siens. Le Siracide disait : « étends la main vers ce que tu veux. » L'enfant, lui, ne choisit pas : il se laisse prendre dans les bras. Les deux lectures se répondent — il y a un choix à faire, et ce choix est de consentir à être porté."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Pourquoi ce texte n'est pas dans toutes les Bibles",
+      "corps_html": "Le Siracide (ou Ecclésiastique) a été écrit vers 180 av. J.-C. en hébreu, puis traduit en grec. Il figure dans la Bible grecque des premiers chrétiens, mais pas dans le canon hébreu fixé plus tard. La Réforme a suivi le canon hébreu : les Bibles protestantes le rangent parmi les <em>apocryphes</em>, l'Église catholique parmi les <em>deutérocanoniques</em> — « du second canon ». Luther l'estimait « utile à lire » sans le tenir pour normatif. Ici, on le lit avec ce statut assumé."
+    },
+    {
+      "titre": "Un livre de sagesse pratique",
+      "corps_html": "Le Siracide n'est pas un récit : c'est un recueil de conseils d'un maître à ses élèves, sur l'amitié, l'argent, la parole, la mort. Le chapitre 15 s'attaque à la plus vieille excuse du monde — « c'est Dieu qui m'a fait pécher » — et la refuse net. La responsabilité est à toi."
+    }
+  ],
+  "analogie": {
+    "titre": "Le vase qu'on choisit",
+    "paragraphes": [
+      "On aime croire que nos actes nous échappent — l'époque, l'enfance, l'algorithme, la fatigue. Le Siracide balaie l'excuse d'un revers : le feu et l'eau sont devant toi, étends la main. Personne ne choisira à ta place, et prétendre le contraire est déjà un choix.",
+      "Mais la liberté que décrit le Siracide n'est pas la toute-puissance qu'on nous vend. Choisir, ce n'est pas tout pouvoir : c'est tendre la main vers un seul des deux vases, en sachant qu'on lâche l'autre. La maturité, c'est renoncer à l'illusion de tout tenir en même temps.",
+      "Et l'évangile déplace la question là où on ne l'attendait pas. Face à la sagesse virile du « choisis », Jésus met un enfant — qui ne choisit rien, qui se laisse porter. Le plus grand choix d'adulte est peut-être celui-là : consentir à ne pas tout maîtriser, se laisser prendre dans les bras."
+    ]
+  },
+  "invitation": {
+    "intro": "Le Siracide refuse qu'on se défausse sur Dieu ou sur les circonstances. L'évangile ajoute que le premier acte libre est de se laisser aimer.",
+    "geste": "Aujourd'hui : repérer une excuse qu'on répète — « je suis comme ça », « c'est pas le moment », « je n'ai pas le choix ». La regarder en face une fois, sans se juger. Puis tendre la main vers le vase qu'on sait être le bon, même un centimètre.",
+    "note": "Choisir n'est pas se durcir. C'est, comme l'enfant de Marc, accepter d'être porté vers ce qu'on ne peut pas atteindre seul."
+  },
+  "question": "Quelle excuse est-ce que je garde pour ne pas avoir à tendre la main ?",
+  "racines": [
+    {
+      "titre": "Le débat que ce texte a ouvert",
+      "corps_html": "Si 15, 14 — « il l'a laissé à son propre conseil » — est l'un des versets les plus cités dans la querelle sur le libre arbitre. Érasme s'en sert contre Luther ; Luther répond dans le <em>Serf arbitre</em> que la volonté, sans la grâce, est libre pour le mal mais non pour le bien. Le Siracide n'est pas tranché par ce débat : il en est l'étincelle. Le lire, c'est toucher un nerf vif de l'histoire chrétienne.",
+      "attribution": "Érasme, <em>De libero arbitrio</em> / Luther, <em>De servo arbitrio</em> — domaine public"
+    },
+    {
+      "titre": "Jean Chrysostome — sur les enfants de Marc",
+      "corps_html": "Chrysostome note que Jésus ne dit pas « le royaume est aux enfants », mais « à ceux qui leur ressemblent ». Ce n'est pas l'innocence qu'il loue — les enfants n'en manquent pas moins — mais l'absence de calcul : l'enfant ne se croit pas quitte, ne négocie pas, se laisse prendre. C'est cela, recevoir le royaume « comme un petit enfant ».",
+      "attribution": "Homélies sur Matthieu (par. Mc 10) — domaine public"
+    },
+    {
+      "titre": "Le nom du livre",
+      "corps_html": "« Ecclésiastique » — <span class=\"gr\">liber ecclesiasticus</span>, « le livre de l'Église » — est le nom que lui donne l'Occident latin : non parce qu'il serait plus saint, mais parce qu'on le lisait abondamment pour l'instruction des catéchumènes. Un livre de seuil, pour ceux qui entrent. Qu'il tombe un jour où l'évangile parle d'enfants qu'on porte au Christ n'est pas un hasard du lectionnaire.",
+      "attribution": "Étymologie — vérifiable"
+    }
+  ]
+}
