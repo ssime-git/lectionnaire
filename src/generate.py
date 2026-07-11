@@ -29,7 +29,9 @@ DATA_JOURS = RACINE / "data" / "jours"
 
 # Le modèle reste configurable dans le code, mais l'appel ne passe par aucun
 # Gateway payant : il utilise directement le quota quotidien Workers AI.
-MODELE_REDACTION = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+# Kimi K2.6 (1T, classe frontière) : ~2 000 neurons par page, soit ~5
+# générations par jour dans le quota gratuit de 10 000 neurons.
+MODELE_REDACTION = "@cf/moonshotai/kimi-k2.6"
 WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
 
@@ -99,6 +101,12 @@ l'homélie patristique). Jamais plaquer l'actualité sur le texte (pas d'eiség�
 - Chaque affirmation interprétative doit rester traçable (verset parallèle, \
 Père de l'Église nommé, note historique). Si tu n'es pas sûr, tu n'affirmes pas.
 - Analogies contemporaines qui PORTENT, concrètes, jamais gadget.
+- Profondeur exigée partout : une glose ou un encart qui se contente d'une \
+définition de dictionnaire est un ÉCHEC. Chaque glose part du mot original \
+(hébreu ou grec translittéré, balisé <span class=\"gr\">…</span>), dit ce que \
+Segond a choisi de traduire et pourquoi c'est discutable ou éclairant, et \
+cite la réception (un Père nommé, Calvin, les rabbins) quand elle existe. \
+Deux à quatre phrases pleines par glose, jamais une seule.
 - Ton : sobre, chaleureux, une image centrale par jour. Style écrit, pas \
 « assistant IA » : pas de listes à puces, pas de formules creuses, pas d'emphase \
 automatique. Prose française soignée.
@@ -154,6 +162,27 @@ def construire_json(date_iso: str) -> dict:
             "mets choisi à 0, l'humain pourra changer ce choix. "
             "N'invente ni couleur, ni SVG : ce n'est pas ton ressort."
         ),
+        "exigences_de_profondeur": (
+            "Gloses : 2 à 4 phrases chacune, partant du mot hébreu/grec, "
+            "discutant le choix de Segond, citant la réception quand elle "
+            "existe. Contexte et racines : paragraphes nourris (300 à 450 "
+            "caractères), avec sources nommées (Chrysostome, Calvin, note "
+            "historique datée) — jamais de généralités. Analogie : chaque "
+            "variante est une vraie scène concrète développée, pas un résumé. "
+            "Question : ouverte, qui travaille le lecteur, pas une question "
+            "de contrôle de lecture."
+        ),
+        "exemple_de_glose_attendue": {
+            "id": "g-schilo",
+            "lemme": "Schilo",
+            "html": (
+                "Le mot le plus discuté de la Genèse. Segond le laisse tel "
+                "quel, faute de certitude. On y a lu « celui à qui appartient "
+                "le sceptre », ou « celui qui apporte la paix ». Les rabbins "
+                "comme les Pères y ont vu l'annonce du Messie — c'est ce "
+                "niveau de précision et d'honnêteté qui est attendu."
+            ),
+        },
     }
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)

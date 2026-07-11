@@ -33,7 +33,7 @@ class WorkersAiCallTests(unittest.TestCase):
             self.assertEqual(generate._appel("system", "user"), '{"titre": "Essai"}')
 
         self.assertIn(
-            "/accounts/account-id/ai/run/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+            "/accounts/account-id/ai/run/@cf/moonshotai/kimi-k2.6",
             post.call_args.args[0],
         )
         self.assertEqual(
