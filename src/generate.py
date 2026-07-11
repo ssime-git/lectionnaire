@@ -54,17 +54,29 @@ def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
         "temperature": 0.7,
         "response_format": {"type": "json_object"},
     }
-    try:
-        r = requests.post(
-            url,
-            headers={"Authorization": f"Bearer {token}"},
-            json=payload,
-            timeout=90,
-        )
-        r.raise_for_status()
-        reponse = r.json()
-    except requests.RequestException as exc:
-        raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
+    # Un modèle de classe frontière met plusieurs minutes à rédiger une page
+    # entière : timeout large, et une seconde chance sur un timeout isolé.
+    derniere_erreur: Exception | None = None
+    for tentative in range(2):
+        try:
+            r = requests.post(
+                url,
+                headers={"Authorization": f"Bearer {token}"},
+                json=payload,
+                timeout=300,
+            )
+            r.raise_for_status()
+            reponse = r.json()
+            break
+        except requests.Timeout as exc:
+            derniere_erreur = exc
+            print(f"⚠  Timeout Workers AI (tentative {tentative + 1}/2)")
+        except requests.RequestException as exc:
+            raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
+    else:
+        raise RuntimeError(
+            f"Échec de l'appel Workers AI : {derniere_erreur}"
+        ) from derniere_erreur
 
     if not reponse.get("success"):
         erreurs = reponse.get("errors") or reponse.get("messages") or "inconnue"

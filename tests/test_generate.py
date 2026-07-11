@@ -48,6 +48,49 @@ class WorkersAiCallTests(unittest.TestCase):
             {"type": "json_object"},
         )
         self.assertEqual(post.call_args.kwargs["json"]["max_tokens"], 6000)
+        self.assertEqual(post.call_args.kwargs["timeout"], 300)
+
+    def test_appel_reessaie_une_fois_apres_timeout(self) -> None:
+        response = Mock()
+        response.json.return_value = {
+            "success": True,
+            "result": {"response": '{"titre": "Essai"}'},
+        }
+        with (
+            patch.dict(
+                os.environ,
+                {
+                    "CLOUDFLARE_ACCOUNT_ID": "account-id",
+                    "CLOUDFLARE_AI_API_TOKEN": "token",
+                },
+                clear=True,
+            ),
+            patch(
+                "generate.requests.post",
+                side_effect=[generate.requests.Timeout("lent"), response],
+            ) as post,
+        ):
+            self.assertEqual(generate._appel("system", "user"), '{"titre": "Essai"}')
+        self.assertEqual(post.call_count, 2)
+
+    def test_appel_abandonne_apres_deux_timeouts(self) -> None:
+        with (
+            patch.dict(
+                os.environ,
+                {
+                    "CLOUDFLARE_ACCOUNT_ID": "account-id",
+                    "CLOUDFLARE_AI_API_TOKEN": "token",
+                },
+                clear=True,
+            ),
+            patch(
+                "generate.requests.post",
+                side_effect=generate.requests.Timeout("toujours lent"),
+            ) as post,
+        ):
+            with self.assertRaisesRegex(RuntimeError, "Échec de l'appel Workers AI"):
+                generate._appel("system", "user")
+        self.assertEqual(post.call_count, 2)
 
     def test_appel_refuse_secret_manquant(self) -> None:
         with patch.dict(os.environ, {}, clear=True):
