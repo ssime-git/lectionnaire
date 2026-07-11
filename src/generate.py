@@ -33,7 +33,7 @@ MODELE_REDACTION = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
 
-def _appel(systeme: str, user: str, max_tokens: int = 1500) -> str:
+def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
     """Appelle Workers AI et retourne uniquement la réponse textuelle du modèle."""
     account = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     token = os.environ.get("CLOUDFLARE_AI_API_TOKEN")
@@ -50,6 +50,7 @@ def _appel(systeme: str, user: str, max_tokens: int = 1500) -> str:
         ],
         "max_tokens": max_tokens,
         "temperature": 0.7,
+        "response_format": {"type": "json_object"},
     }
     try:
         r = requests.post(

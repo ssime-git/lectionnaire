@@ -43,6 +43,11 @@ class WorkersAiCallTests(unittest.TestCase):
                 {"role": "user", "content": "user"},
             ],
         )
+        self.assertEqual(
+            post.call_args.kwargs["json"]["response_format"],
+            {"type": "json_object"},
+        )
+        self.assertEqual(post.call_args.kwargs["json"]["max_tokens"], 6000)
 
 
 if __name__ == "__main__":
