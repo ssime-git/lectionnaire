@@ -53,6 +53,9 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
         "max_tokens": max_tokens,
         "temperature": 0.7,
         "response_format": {"type": "json_object"},
+        # Sans ceci, Kimi « pense » en reasoning_content et épuise le budget
+        # de tokens avant d'écrire le JSON final (run 29159734572).
+        "chat_template_kwargs": {"thinking": False},
         # Un modèle de classe frontière met plusieurs minutes à rédiger une
         # page : sans streaming, la passerelle Cloudflare coupe en 408. En
         # SSE, la connexion reste vivante tant que des tokens arrivent.

@@ -50,6 +50,7 @@ class WorkersAiCallTests(unittest.TestCase):
         )
         self.assertEqual(corps["response_format"], {"type": "json_object"})
         self.assertEqual(corps["max_tokens"], 12000)
+        self.assertEqual(corps["chat_template_kwargs"], {"thinking": False})
         self.assertTrue(corps["stream"])
         self.assertEqual(post.call_args.kwargs["timeout"], 300)
         self.assertTrue(post.call_args.kwargs["stream"])
