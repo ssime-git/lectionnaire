@@ -66,9 +66,14 @@ def _appel(systeme: str, user: str, max_tokens: int = 1500) -> str:
     if not reponse.get("success"):
         erreurs = reponse.get("errors") or reponse.get("messages") or "inconnue"
         raise RuntimeError(f"Workers AI a refusé la requête : {erreurs}")
-    texte = reponse.get("result", {}).get("response")
+    resultat = reponse.get("result")
+    texte = resultat.get("response") if isinstance(resultat, dict) else None
     if not isinstance(texte, str) or not texte.strip():
-        raise RuntimeError("Workers AI n'a pas renvoyé de texte exploitable")
+        cles = sorted(resultat) if isinstance(resultat, dict) else []
+        raise RuntimeError(
+            "Workers AI n'a pas renvoyé de texte exploitable "
+            f"(resultat={type(resultat).__name__}, clés={cles})"
+        )
     return texte
 
 
