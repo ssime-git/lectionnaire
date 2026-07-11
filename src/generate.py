@@ -35,7 +35,7 @@ MODELE_REDACTION = "@cf/moonshotai/kimi-k2.6"
 WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
 
-def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
+def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
     """Appelle Workers AI et retourne uniquement la réponse textuelle du modèle."""
     account = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     token = os.environ.get("CLOUDFLARE_AI_API_TOKEN")
@@ -84,26 +84,32 @@ def _appel(systeme: str, user: str, max_tokens: int = 6000) -> str:
     resultat = reponse.get("result")
     texte = _extraire_texte(resultat)
     if not isinstance(texte, str) or not texte.strip():
-        cles = sorted(resultat) if isinstance(resultat, dict) else []
         raise RuntimeError(
-            "Workers AI n'a pas renvoyé de texte exploitable "
-            f"(resultat={type(resultat).__name__}, clés={cles})"
+            "Workers AI n'a pas renvoyé de texte exploitable — structure reçue : "
+            + json.dumps(resultat, ensure_ascii=False, default=str)[:2000]
         )
     return texte
 
 
 def _extraire_texte(resultat: Any) -> str | None:
     """Selon le modèle, Workers AI renvoie soit {response}, soit le format
-    OpenAI {choices: [{message: {content}}]} (Kimi, gpt-oss…)."""
+    OpenAI {choices: [{message: {content}}]} (Kimi, gpt-oss…). Les modèles
+    « reasoning » peuvent placer le texte final ailleurs que dans content."""
     if not isinstance(resultat, dict):
         return None
-    if isinstance(resultat.get("response"), str):
+    if isinstance(resultat.get("response"), str) and resultat["response"].strip():
         return resultat["response"]
     choices = resultat.get("choices")
-    if isinstance(choices, list) and choices:
-        message = choices[0].get("message") if isinstance(choices[0], dict) else None
-        if isinstance(message, dict) and isinstance(message.get("content"), str):
-            return message["content"]
+    if isinstance(choices, list) and choices and isinstance(choices[0], dict):
+        premier = choices[0]
+        message = premier.get("message")
+        if isinstance(message, dict):
+            for cle in ("content", "reasoning_content"):
+                valeur = message.get(cle)
+                if isinstance(valeur, str) and valeur.strip():
+                    return valeur
+        if isinstance(premier.get("text"), str) and premier["text"].strip():
+            return premier["text"]
     return None
 
 

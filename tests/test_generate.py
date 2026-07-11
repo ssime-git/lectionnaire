@@ -47,7 +47,7 @@ class WorkersAiCallTests(unittest.TestCase):
             post.call_args.kwargs["json"]["response_format"],
             {"type": "json_object"},
         )
-        self.assertEqual(post.call_args.kwargs["json"]["max_tokens"], 6000)
+        self.assertEqual(post.call_args.kwargs["json"]["max_tokens"], 12000)
         self.assertEqual(post.call_args.kwargs["timeout"], 300)
 
     def test_appel_lit_le_format_openai_de_kimi(self) -> None:
