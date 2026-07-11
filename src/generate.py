@@ -86,6 +86,13 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
             derniere_erreur = exc
             print(f"⚠  Timeout Workers AI (tentative {tentative + 1}/2)")
         except requests.RequestException as exc:
+            reponse_http = getattr(exc, "response", None)
+            if reponse_http is not None and reponse_http.status_code == 429:
+                raise RuntimeError(
+                    "Quota Workers AI épuisé (10 000 neurons gratuits par "
+                    "jour). Le compteur se remet à zéro à 00:00 UTC — "
+                    "relancer le workflow après."
+                ) from exc
             raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
     raise RuntimeError(
         f"Échec de l'appel Workers AI : {derniere_erreur}"

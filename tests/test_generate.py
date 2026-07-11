@@ -92,6 +92,18 @@ class WorkersAiCallTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "Échec de l'appel Workers AI"):
                 generate._appel("system", "user")
 
+    def test_appel_explique_le_quota_epuise(self) -> None:
+        reponse_http = Mock(status_code=429)
+        erreur = generate.requests.HTTPError("429", response=reponse_http)
+        response = Mock()
+        response.raise_for_status.side_effect = erreur
+        with (
+            patch.dict(os.environ, SECRETS, clear=True),
+            patch("generate.requests.post", return_value=response),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "Quota Workers AI épuisé"):
+                generate._appel("system", "user")
+
     def test_appel_refuse_un_flux_vide(self) -> None:
         response = _reponse_sse(["data: [DONE]"])
         with (
