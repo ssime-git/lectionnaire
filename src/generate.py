@@ -53,9 +53,11 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
         "max_tokens": max_tokens,
         "temperature": 0.7,
         "response_format": {"type": "json_object"},
+        # Un modèle de classe frontière met plusieurs minutes à rédiger une
+        # page : sans streaming, la passerelle Cloudflare coupe en 408. En
+        # SSE, la connexion reste vivante tant que des tokens arrivent.
+        "stream": True,
     }
-    # Un modèle de classe frontière met plusieurs minutes à rédiger une page
-    # entière : timeout large, et une seconde chance sur un timeout isolé.
     derniere_erreur: Exception | None = None
     for tentative in range(2):
         try:
@@ -64,53 +66,49 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
                 headers={"Authorization": f"Bearer {token}"},
                 json=payload,
                 timeout=300,
+                stream=True,
             )
             r.raise_for_status()
-            reponse = r.json()
-            break
+            texte = _lire_flux(r)
+            if texte.strip():
+                return texte
+            raise RuntimeError(
+                "Workers AI n'a renvoyé aucun token dans le flux SSE."
+            )
         except requests.Timeout as exc:
             derniere_erreur = exc
             print(f"⚠  Timeout Workers AI (tentative {tentative + 1}/2)")
         except requests.RequestException as exc:
             raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
-    else:
-        raise RuntimeError(
-            f"Échec de l'appel Workers AI : {derniere_erreur}"
-        ) from derniere_erreur
-
-    if not reponse.get("success"):
-        erreurs = reponse.get("errors") or reponse.get("messages") or "inconnue"
-        raise RuntimeError(f"Workers AI a refusé la requête : {erreurs}")
-    resultat = reponse.get("result")
-    texte = _extraire_texte(resultat)
-    if not isinstance(texte, str) or not texte.strip():
-        raise RuntimeError(
-            "Workers AI n'a pas renvoyé de texte exploitable — structure reçue : "
-            + json.dumps(resultat, ensure_ascii=False, default=str)[:2000]
-        )
-    return texte
+    raise RuntimeError(
+        f"Échec de l'appel Workers AI : {derniere_erreur}"
+    ) from derniere_erreur
 
 
-def _extraire_texte(resultat: Any) -> str | None:
-    """Selon le modèle, Workers AI renvoie soit {response}, soit le format
-    OpenAI {choices: [{message: {content}}]} (Kimi, gpt-oss…). Les modèles
-    « reasoning » peuvent placer le texte final ailleurs que dans content."""
-    if not isinstance(resultat, dict):
-        return None
-    if isinstance(resultat.get("response"), str) and resultat["response"].strip():
-        return resultat["response"]
-    choices = resultat.get("choices")
-    if isinstance(choices, list) and choices and isinstance(choices[0], dict):
-        premier = choices[0]
-        message = premier.get("message")
-        if isinstance(message, dict):
-            for cle in ("content", "reasoning_content"):
-                valeur = message.get(cle)
-                if isinstance(valeur, str) and valeur.strip():
-                    return valeur
-        if isinstance(premier.get("text"), str) and premier["text"].strip():
-            return premier["text"]
-    return None
+def _lire_flux(r: Any) -> str:
+    """Accumule un flux SSE Workers AI. Deux dialectes selon le modèle :
+    {"response": "delta"} (Meta) ou {"choices": [{"delta": {"content": …}}]}
+    (format OpenAI — Kimi, gpt-oss…)."""
+    morceaux: list[str] = []
+    for ligne in r.iter_lines(decode_unicode=True):
+        if not ligne or not ligne.startswith("data:"):
+            continue
+        donnee = ligne[len("data:"):].strip()
+        if donnee == "[DONE]":
+            break
+        try:
+            paquet = json.loads(donnee)
+        except json.JSONDecodeError:
+            continue
+        delta = paquet.get("response")
+        if not isinstance(delta, str):
+            choices = paquet.get("choices")
+            if isinstance(choices, list) and choices and isinstance(choices[0], dict):
+                contenu = (choices[0].get("delta") or {}).get("content")
+                delta = contenu if isinstance(contenu, str) else None
+        if delta:
+            morceaux.append(delta)
+    return "".join(morceaux)
 
 
 def _json_propre(txt: str) -> dict:
