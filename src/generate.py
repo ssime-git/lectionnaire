@@ -128,6 +128,79 @@ def _json_propre(txt: str) -> dict:
     return json.loads(txt.strip())
 
 
+# --------- La gravure : un second appel, plus court, dédié au dessin -------
+GRAVEUR = """Tu graves des bois pour un lectionnaire : des illustrations SVG \
+minimales, dans l'esprit des gravures sur bois protestantes — quelques traits, \
+une image forte, aucune couleur (les classes CSS colorent selon la liturgie).
+
+Contraintes STRICTES :
+- SVG racine : viewBox="0 0 340 150", xmlns, fill="none", stroke-width="1.3",
+  stroke-linecap="round", stroke-linejoin="round".
+- Uniquement des <g> et des <path>. Pas de texte, pas d'image, pas de script.
+- Les <g> portent class="trait-encre" (traits principaux), et si utile
+  class="trait-rubrique" ou class="trait-liturgie" pour UN élément à teinter.
+- Sobriété : 5 à 20 chemins, lignes épurées, pas de détail réaliste.
+Tu réponds STRICTEMENT en JSON valide : {"gravure_svg": "<svg …>…</svg>"}."""
+
+GRAVURE_EXEMPLE = (
+    '<svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" '
+    'stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">'
+    '<g class="trait-encre"><path d="M6 120 h328"/><path d="M170 20 v40"/>'
+    '<path d="M157 33 h26"/></g>'
+    '<g class="trait-rubrique"><path d="M90.0 120 q-11 -17 -1 -31 q-3 13 6 15 '
+    'q7 -19 -3 -43 q14 22 3 43 q9 -6 6 -17 q8 19 -11 34"/></g>'
+    '<g class="trait-liturgie"><path d="M242.0 80 q0 18 13 20 q13 -2 13 -20 z"/>'
+    '<path d="M255.0 100 v14"/><path d="M244.0 120 h22"/></g></svg>'
+)
+
+
+def _gravure_sure(svg: str) -> bool:
+    """N'accepte qu'un SVG épuré : viewBox attendu, seulement g/path/svg,
+    aucun attribut événement ni lien."""
+    import xml.etree.ElementTree as ET
+
+    if not isinstance(svg, str) or 'viewBox="0 0 340 150"' not in svg:
+        return False
+    try:
+        racine = ET.fromstring(svg)
+    except ET.ParseError:
+        return False
+    for element in racine.iter():
+        balise = element.tag.split("}")[-1]
+        if balise not in {"svg", "g", "path"}:
+            return False
+        for attribut in element.attrib:
+            nom = attribut.split("}")[-1].lower()
+            if nom.startswith("on") or "href" in nom:
+                return False
+    return True
+
+
+def _generer_gravure(alt: str) -> str:
+    """Demande le bois gravé au modèle ; placeholder si le SVG est douteux."""
+    demande = json.dumps(
+        {
+            "sujet": alt,
+            "exemple_du_style_attendu": GRAVURE_EXEMPLE,
+            "consigne": (
+                "Grave ce sujet dans le style exact de l'exemple : mêmes "
+                "attributs racine, mêmes classes, même sobriété."
+            ),
+        },
+        ensure_ascii=False,
+    )
+    try:
+        contenu = _json_propre(_appel(GRAVEUR, demande, max_tokens=3000))
+        svg = contenu.get("gravure_svg", "")
+    except (RuntimeError, json.JSONDecodeError) as exc:
+        print(f"⚠  Gravure non générée ({exc}) : placeholder utilisé.")
+        return _GRAVURE_ABSENTE
+    if _gravure_sure(svg):
+        return svg
+    print("⚠  Gravure refusée par la validation : placeholder utilisé.")
+    return _GRAVURE_ABSENTE
+
+
 # --------- Le prompt système : c'est ICI que vit la VOIX du projet ---------
 # La qualité ne vient pas du modèle mais de ce cadrage. C'est le garde-fou
 # herméneutique + le ton (Chrysostome vulgarisateur, pas eiségèse actu).
@@ -228,6 +301,9 @@ def construire_json(date_iso: str) -> dict:
     }
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
+    # Si le modèle rédacteur a produit un SVG malgré la consigne, on l'écarte :
+    # la gravure vient du second appel dédié, jamais de celui-ci.
+    contenu.pop("gravure_svg", None)
 
     # 3) Assemblage du contrat. Ce qui est DÉTERMINISTE ne passe pas par le LLM :
     #    la couleur vient du calendrier, les références de l'API, le texte de
@@ -241,11 +317,10 @@ def construire_json(date_iso: str) -> dict:
         "deuterocanonique": jour.deuterocanonique,
         "references_brutes": jour.references_brutes,
         "traduction_globale": "Louis Segond 1910",
-        # Le bois gravé n'est PAS généré (sous-problème ouvert). S'il manque, on
-        # met un SVG vide plutôt que de faire tomber le cron : la page paraît
-        # sans image, ce qui est dégradé mais lisible. Le message d'avertissement
-        # signale qu'un geste humain est attendu.
-        "gravure_svg": contenu.pop("gravure_svg", "") or _GRAVURE_ABSENTE,
+        # Le bois gravé sort d'un second appel dédié, cadré par un exemple réel
+        # et validé strictement (g/path seulement). En cas d'échec : SVG vide,
+        # la page paraît sans image — dégradé mais lisible, jamais bloquant.
+        "gravure_svg": _generer_gravure(contenu.get("gravure_alt", "")),
         **contenu,
     }
 

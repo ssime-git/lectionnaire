@@ -143,6 +143,47 @@ class LireFluxTests(unittest.TestCase):
         self.assertTrue(echantillon)
 
 
+class GravureTests(unittest.TestCase):
+    SVG_VALIDE = (
+        '<svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" '
+        'fill="none"><g class="trait-encre"><path d="M6 120 h328"/></g></svg>'
+    )
+
+    def test_accepte_un_svg_epure(self) -> None:
+        self.assertTrue(generate._gravure_sure(self.SVG_VALIDE))
+
+    def test_refuse_script_texte_mauvais_viewbox_et_liens(self) -> None:
+        refusables = [
+            "pas du svg",
+            '<svg viewBox="0 0 100 100"><path d="M0 0"/></svg>',
+            '<svg viewBox="0 0 340 150"><script>alert(1)</script></svg>',
+            '<svg viewBox="0 0 340 150"><text>x</text></svg>',
+            '<svg viewBox="0 0 340 150"><path d="M0 0" onclick="x()"/></svg>',
+            '<svg viewBox="0 0 340 150"><path d="M0 0" href="http://x"/></svg>',
+            '<svg viewBox="0 0 340 150"><path d="M0 0"',
+        ]
+        for svg in refusables:
+            self.assertFalse(generate._gravure_sure(svg), svg[:60])
+
+    def test_generer_gravure_retourne_le_svg_valide(self) -> None:
+        reponse = f'{{"gravure_svg": {generate.json.dumps(self.SVG_VALIDE)}}}'
+        with patch("generate._appel", return_value=reponse):
+            self.assertEqual(generate._generer_gravure("une vigne"), self.SVG_VALIDE)
+
+    def test_generer_gravure_retombe_sur_le_placeholder(self) -> None:
+        cas = [
+            patch("generate._appel", return_value='{"gravure_svg": "<svg>cassé"}'),
+            patch("generate._appel", return_value="pas du json"),
+            patch("generate._appel", side_effect=RuntimeError("api en panne")),
+        ]
+        for scenario in cas:
+            with scenario:
+                self.assertEqual(
+                    generate._generer_gravure("une vigne"),
+                    generate._GRAVURE_ABSENTE,
+                )
+
+
 class JsonPropreTests(unittest.TestCase):
     def test_json_propre_retire_les_clotures_markdown(self) -> None:
         brut = '```json\n{"titre": "Essai"}\n```'
