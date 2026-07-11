@@ -5,14 +5,11 @@ Ne PAS brancher tant que render.py n'est pas validé sur plusieurs jours écrits
 à la main. Ici on remplace l'humain qui écrit le JSON par le LLM — le template,
 lui, ne change plus.
 
-Principe : ROUTER PAR TÂCHE, pas par habitude.
-  - extraction/classification légère → petit modèle gratuit (Workers AI)
-  - rédaction qui porte la voix (analogie, geste, notes) → modèle capable
-Le tout via l'AI Gateway (endpoint OpenAI-compatible) : changer de modèle = une
-chaîne de caractères, sans toucher au reste du pipeline.
+Principe : ce qui est déterministe reste local ; Workers AI ne rédige que les
+champs éditoriaux du contrat.
 
 Secrets attendus (repository secrets GitHub, jamais dans le code) :
-  CF_ACCOUNT_ID, CF_GATEWAY, CF_API_TOKEN
+  CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_AI_API_TOKEN
 """
 
 from __future__ import annotations
@@ -30,26 +27,23 @@ from liturgie import depuis_aelf  # type: ignore
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
 
-# --- Routage des modèles (édite ces deux lignes pour changer de moteur) ---
-MODELE_REDACTION = "@cf/moonshotai/kimi-k2.6"      # voix, analogies, notes
-MODELE_LEGER = "@cf/meta/llama-3.1-8b-instruct"    # extraction, tags
-
-# Endpoint AI Gateway compatible OpenAI : un seul chemin, modèle interchangeable.
-# https://gateway.ai.cloudflare.com/v1/{account}/{gateway}/compat/chat/completions
-GATEWAY_URL = (
-    "https://gateway.ai.cloudflare.com/v1/"
-    "{account}/{gateway}/compat/chat/completions"
-)
+# Le modèle reste configurable dans le code, mais l'appel ne passe par aucun
+# Gateway payant : il utilise directement le quota quotidien Workers AI.
+MODELE_REDACTION = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
 
-def _appel(modele: str, systeme: str, user: str,
-           json_mode: bool = True, max_tokens: int = 1500) -> str:
-    url = GATEWAY_URL.format(
-        account=os.environ["CF_ACCOUNT_ID"],
-        gateway=os.environ["CF_GATEWAY"],
-    )
+def _appel(systeme: str, user: str, max_tokens: int = 1500) -> str:
+    """Appelle Workers AI et retourne uniquement la réponse textuelle du modèle."""
+    account = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+    token = os.environ.get("CLOUDFLARE_AI_API_TOKEN")
+    if not account:
+        raise RuntimeError("CLOUDFLARE_ACCOUNT_ID manquant")
+    if not token:
+        raise RuntimeError("CLOUDFLARE_AI_API_TOKEN manquant")
+
+    url = WORKERS_AI_URL.format(account=account, model=MODELE_REDACTION)
     payload: dict[str, Any] = {
-        "model": modele,
         "messages": [
             {"role": "system", "content": systeme},
             {"role": "user", "content": user},
@@ -57,15 +51,25 @@ def _appel(modele: str, systeme: str, user: str,
         "max_tokens": max_tokens,
         "temperature": 0.7,
     }
-    if json_mode:
-        payload["response_format"] = {"type": "json_object"}
-    r = requests.post(
-        url,
-        headers={"Authorization": f"Bearer {os.environ['CF_API_TOKEN']}"},
-        json=payload, timeout=90,
-    )
-    r.raise_for_status()
-    return r.json()["choices"][0]["message"]["content"]
+    try:
+        r = requests.post(
+            url,
+            headers={"Authorization": f"Bearer {token}"},
+            json=payload,
+            timeout=90,
+        )
+        r.raise_for_status()
+        reponse = r.json()
+    except requests.RequestException as exc:
+        raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
+
+    if not reponse.get("success"):
+        erreurs = reponse.get("errors") or reponse.get("messages") or "inconnue"
+        raise RuntimeError(f"Workers AI a refusé la requête : {erreurs}")
+    texte = reponse.get("result", {}).get("response")
+    if not isinstance(texte, str) or not texte.strip():
+        raise RuntimeError("Workers AI n'a pas renvoyé de texte exploitable")
+    return texte
 
 
 def _json_propre(txt: str) -> dict:
@@ -136,16 +140,16 @@ def construire_json(date_iso: str) -> dict:
             "en <button class=\"mot\" data-g=\"g-xxx\">…</button>, "
             "gloses: [{id: 'g-xxx', lemme: court, html: la glose}]}), "
             "contexte (liste de 2 {titre, corps_html}), "
-            "analogie {titre, paragraphes[]}, "
+            "analogie {titre, variantes: [3 paragraphes distincts], choisi: 0}, "
             "invitation {intro, geste, note}, "
             "question (une seule, ouverte), "
             "racines (liste de 3 {titre, corps_html, attribution}). "
-            "Pour analogie.paragraphes, propose 3 variantes distinctes : "
-            "l'humain choisira. "
+            "analogie.variantes doit contenir exactement 3 variantes distinctes ; "
+            "mets choisi à 0, l'humain pourra changer ce choix. "
             "N'invente ni couleur, ni SVG : ce n'est pas ton ressort."
         ),
     }
-    brut = _appel(MODELE_REDACTION, VOIX, json.dumps(demande, ensure_ascii=False))
+    brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
 
     # 3) Assemblage du contrat. Ce qui est DÉTERMINISTE ne passe pas par le LLM :

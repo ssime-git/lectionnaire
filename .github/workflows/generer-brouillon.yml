@@ -1,0 +1,72 @@
+name: Générer un brouillon du lectionnaire
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Date liturgique au format AAAA-MM-JJ
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generer:
+    name: Générer et proposer le brouillon
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vérifier le format de la date
+        env:
+          DATE: ${{ inputs.date }}
+        run: |
+          if ! [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "La date doit avoir le format AAAA-MM-JJ."
+            exit 2
+          fi
+
+      - name: Récupérer main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Installer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installer les dépendances verrouillées
+        run: uv sync --locked
+
+      - name: Générer le contrat avec Workers AI
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_AI_API_TOKEN: ${{ secrets.CLOUDFLARE_AI_API_TOKEN }}
+        run: make generate DATE=${{ inputs.date }}
+
+      - name: Valider le contrat
+        run: make validate DATE=${{ inputs.date }}
+
+      - name: Rendre l'aperçu HTML
+        run: make render DATE=${{ inputs.date }}
+
+      - name: Ouvrir la pull request de relecture
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: draft/${{ inputs.date }}
+          base: main
+          title: "Brouillon du lectionnaire — ${{ inputs.date }}"
+          commit-message: "Brouillon du lectionnaire pour le ${{ inputs.date }}"
+          body: |
+            Brouillon généré par Workers AI, validé puis rendu automatiquement.
+
+            À relire avant fusion : exactitude biblique et patristique, style,
+            gloses, attribution des racines et variante d'analogie retenue.
+            L'aperçu Cloudflare Pages de cette PR permet la relecture HTML.
+
+            Ne pas fusionner sans décision humaine : la fusion publie le jour
+            sur GitHub Pages.
+          add-paths: |
+            data/jours/${{ inputs.date }}.json
+            docs/${{ inputs.date }}.html
+            docs/index.html

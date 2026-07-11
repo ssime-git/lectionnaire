@@ -60,12 +60,25 @@ main corrige un jour, changer un index republie une autre analogie.
 ## Démarrage en 3 minutes
 
 ```bash
-pip install -r requirements.txt
-python src/render.py 2026-07-08      # assemble docs/2026-07-08.html
+uv sync
+make render DATE=2026-07-08          # assemble docs/2026-07-08.html
 ```
 
 Ouvre `docs/2026-07-08.html` : la page du 8 juillet. Bascule ton système en mode
 sombre — elle reste lisible, c'est voulu.
+
+Les commandes utiles sont :
+
+```bash
+make check                            # tests + validation des trois jours de démo
+make validate DATE=2026-07-08         # valide un seul JSON
+make render DATE=2026-07-08           # rend une page et l'archive
+make serve                            # aperçu local sur http://localhost:8000
+```
+
+`uv` est le seul gestionnaire Python requis. Installe-le si besoin avec la
+[procédure officielle](https://docs.astral.sh/uv/getting-started/installation/),
+puis lance `uv sync`. Le fichier `.venv/` est local et ignoré par Git.
 
 Pour comprendre le pipeline et les trois étapes de travail :
 **[docs-projet/PIPELINE.md](docs-projet/PIPELINE.md)**.
@@ -77,6 +90,37 @@ Pour **laisser Claude Code faire le setup à ta place** (création du dépôt av
 `gh`, tests, push, activation de Pages) : ouvre le projet dans Claude Code et
 suis **[CLAUDE.md](CLAUDE.md)** — il s'arrête pour te demander avant chaque action
 publique.
+
+## Générer un brouillon avec Cloudflare Workers AI
+
+La génération est volontairement séparée de la publication : elle produit un
+brouillon JSON, qui doit être relu dans son aperçu HTML avant toute fusion.
+
+1. Dans GitHub, ouvre **Actions** → **Générer un brouillon du lectionnaire** →
+   **Run workflow**, puis indique une date au format `AAAA-MM-JJ`.
+2. L'action interroge Workers AI, valide le JSON, rend le HTML et ouvre une pull
+   request `draft/AAAA-MM-JJ`.
+3. Ouvre l'URL Cloudflare Pages affichée dans la PR pour relire la page telle
+   qu'elle sera servie. Choisis et ajuste notamment l'analogie proposée.
+4. Fusionne la PR seulement après relecture : GitHub Pages publiera alors la
+   version validée.
+
+Pour tester localement, exporte les deux variables avant de lancer la commande :
+
+```bash
+export CLOUDFLARE_ACCOUNT_ID="…"
+export CLOUDFLARE_AI_API_TOKEN="…"
+make generate DATE=2026-07-08
+make validate DATE=2026-07-08
+make render DATE=2026-07-08
+```
+
+Ne copie jamais un jeton dans le dépôt ou dans un message. En CI, seuls les
+secrets GitHub `CLOUDFLARE_ACCOUNT_ID` et `CLOUDFLARE_AI_API_TOKEN` sont lus.
+
+Si l'action ne peut pas ouvrir sa pull request, ouvre GitHub → **Settings** →
+**Actions** → **General** et autorise les workflows à lire et écrire le contenu
+du dépôt ainsi qu'à créer des pull requests.
 
 ---
 
