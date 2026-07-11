@@ -37,6 +37,9 @@ jobs:
       - name: Installer les dépendances verrouillées
         run: uv sync --locked
 
+      - name: Lancer les tests
+        run: make test
+
       - name: Générer le contrat avec Workers AI
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -58,14 +61,25 @@ jobs:
           title: "Brouillon du lectionnaire — ${{ inputs.date }}"
           commit-message: "Brouillon du lectionnaire pour le ${{ inputs.date }}"
           body: |
-            Brouillon généré par Workers AI, validé puis rendu automatiquement.
+            Brouillon généré par Workers AI (`${{ inputs.date }}`), validé puis
+            rendu automatiquement. Relecture dans l'aperçu Cloudflare Pages de
+            cette PR (lien dans les checks ci-dessous).
 
-            À relire avant fusion : exactitude biblique et patristique, style,
-            gloses, attribution des racines et variante d'analogie retenue.
-            L'aperçu Cloudflare Pages de cette PR permet la relecture HTML.
+            ## Checklist de relecture
 
-            Ne pas fusionner sans décision humaine : la fusion publie le jour
-            sur GitHub Pages.
+            - [ ] Exactitude biblique : références, texte Segond, versets
+            - [ ] Gloses : mot original, choix de traduction, réception — pas de définition de dictionnaire
+            - [ ] Racines : attributions patristiques vérifiées (rien d'inventé)
+            - [ ] Analogie : choisir la variante (`analogie.choisi` : 0, 1 ou 2)
+            - [ ] Ton : sobre, sans formules creuses
+            - [ ] Gravure : ajouter `gravure_svg` à la main, sinon la page paraît sans image
+
+            Pour corriger : éditer `data/jours/${{ inputs.date }}.json`
+            directement dans la PR — le HTML est re-rendu automatiquement à
+            chaque commit, et l'aperçu Pages se met à jour.
+
+            La fusion publie le jour sur le site. Ne pas fusionner sans
+            relecture humaine.
           add-paths: |
             data/jours/${{ inputs.date }}.json
             docs/${{ inputs.date }}.html

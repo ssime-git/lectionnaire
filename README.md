@@ -100,10 +100,14 @@ brouillon JSON, qui doit être relu dans son aperçu HTML avant toute fusion.
    **Run workflow**, puis indique une date au format `AAAA-MM-JJ`.
 2. L'action interroge Workers AI, valide le JSON, rend le HTML et ouvre une pull
    request `draft/AAAA-MM-JJ`.
-3. Ouvre l'URL Cloudflare Pages affichée dans la PR pour relire la page telle
-   qu'elle sera servie. Choisis et ajuste notamment l'analogie proposée.
-4. Fusionne la PR seulement après relecture : GitHub Pages publiera alors la
-   version validée.
+3. Ouvre l'URL Cloudflare Pages affichée dans les checks de la PR pour relire
+   la page telle qu'elle sera servie. Choisis notamment la variante d'analogie
+   (`analogie.choisi`).
+4. Pour corriger, édite `data/jours/AAAA-MM-JJ.json` directement dans la PR :
+   le workflow « Rendre le brouillon après édition » re-valide, re-rend le HTML
+   et met l'aperçu Pages à jour à chaque commit.
+5. Fusionne la PR seulement après relecture : Cloudflare Pages redéploie alors
+   le site complet, nouveau jour inclus.
 
 Pour tester localement, exporte les deux variables avant de lancer la commande :
 

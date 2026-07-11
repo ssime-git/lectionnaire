@@ -1,0 +1,55 @@
+name: Rendre le brouillon après édition
+
+# Quand un relecteur corrige le JSON directement dans la PR de brouillon,
+# le HTML commité devient obsolète. Ce workflow re-valide et re-rend la page,
+# puis commite le résultat sur la même branche : l'aperçu Cloudflare Pages
+# se met à jour tout seul.
+#
+# Pas de boucle possible : le commit de rendu ne touche que docs/, et le
+# déclencheur ne surveille que data/jours/. Les pushes du bot de génération
+# (GITHUB_TOKEN) ne déclenchent de toute façon aucun workflow.
+
+on:
+  push:
+    branches:
+      - "draft/**"
+    paths:
+      - "data/jours/*.json"
+
+permissions:
+  contents: write
+
+jobs:
+  rendre:
+    name: Re-valider et re-rendre la page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer la branche de brouillon
+        uses: actions/checkout@v6
+
+      - name: Déduire la date depuis le nom de la branche
+        run: echo "DATE=${GITHUB_REF_NAME#draft/}" >> "$GITHUB_ENV"
+
+      - name: Installer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installer les dépendances verrouillées
+        run: uv sync --locked
+
+      - name: Valider le contrat corrigé
+        run: make validate DATE=$DATE
+
+      - name: Rendre la page
+        run: make render DATE=$DATE
+
+      - name: Commiter le rendu s'il a changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "Rendu inchangé, rien à commiter."
+          else
+            git commit -m "Rend la page après édition du JSON ($DATE)"
+            git push
+          fi
