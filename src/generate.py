@@ -69,11 +69,12 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
                 stream=True,
             )
             r.raise_for_status()
-            texte = _lire_flux(r)
+            texte, echantillon = _lire_flux(r)
             if texte.strip():
                 return texte
             raise RuntimeError(
-                "Workers AI n'a renvoyé aucun token dans le flux SSE."
+                "Workers AI n'a renvoyé aucun token dans le flux SSE. "
+                f"Premières lignes reçues : {echantillon!r}"
             )
         except requests.Timeout as exc:
             derniere_erreur = exc
@@ -85,12 +86,16 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
     ) from derniere_erreur
 
 
-def _lire_flux(r: Any) -> str:
-    """Accumule un flux SSE Workers AI. Deux dialectes selon le modèle :
-    {"response": "delta"} (Meta) ou {"choices": [{"delta": {"content": …}}]}
-    (format OpenAI — Kimi, gpt-oss…)."""
+def _lire_flux(r: Any) -> tuple[str, list[str]]:
+    """Accumule un flux SSE Workers AI et garde un échantillon brut pour le
+    diagnostic. Deux dialectes selon le modèle : {"response": "delta"} (Meta)
+    ou {"choices": [{"delta": {"content": …}}]} (format OpenAI — Kimi,
+    gpt-oss…)."""
     morceaux: list[str] = []
+    echantillon: list[str] = []
     for ligne in r.iter_lines(decode_unicode=True):
+        if len(echantillon) < 10 and ligne:
+            echantillon.append(ligne[:300])
         if not ligne or not ligne.startswith("data:"):
             continue
         donnee = ligne[len("data:"):].strip()
@@ -108,7 +113,7 @@ def _lire_flux(r: Any) -> str:
                 delta = contenu if isinstance(contenu, str) else None
         if delta:
             morceaux.append(delta)
-    return "".join(morceaux)
+    return "".join(morceaux), echantillon
 
 
 def _json_propre(txt: str) -> dict:

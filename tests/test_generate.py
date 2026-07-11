@@ -136,7 +136,9 @@ class LireFluxTests(unittest.TestCase):
              "data: [DONE]",
              'data: {"response": "après done, jamais lu"}']
         )
-        self.assertEqual(generate._lire_flux(r), "ok")
+        texte, echantillon = generate._lire_flux(r)
+        self.assertEqual(texte, "ok")
+        self.assertTrue(echantillon)
 
 
 class JsonPropreTests(unittest.TestCase):
