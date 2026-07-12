@@ -69,7 +69,7 @@ jobs:
           Règles strictes :
           - Modifie UNIQUEMENT le fichier JSON du jour indiqué (aucun autre fichier).
           - Conserve toutes les clés et la structure exacte du contrat : le fichier doit rester un JSON valide qui passe src/valider.py.
-          - Voix du projet : prose française soignée, rigueur exégétique (texte, sens, application), sources du domaine public réelles et nommées (Segond 1910, Chrysostome, Calvin) — jamais d'invention. Gloses : mot original hébreu/grec, choix de traduction de Segond, réception. Pas de listes à puces, pas de formules creuses.
+          - Voix du projet : prose française soignée, rigueur exégétique (texte, sens, application), sources du domaine public réelles et nommées (Segond 1910, Chrysostome, Calvin) — jamais d'invention. Gloses : mot original hébreu/grec, choix de traduction de Segond, réception. Analogies : expérience spirituelle intérieure adressée au lecteur, qui le conduit devant Dieu — jamais de saynète anecdotique qui rejoue le texte. Pas de listes à puces, pas de formules creuses.
           - Ne touche ni aux couleurs ni au bloc liturgie (déterministes), sauf si le retour le demande explicitement.
           - Si le retour ne concerne qu'une partie, ne réécris que cette partie — laisse le reste strictement intact.
 
