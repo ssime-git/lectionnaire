@@ -1,0 +1,121 @@
+name: Retravailler un brouillon (/claude-feedback)
+
+# Commande de relecture : commenter une PR de brouillon avec
+#   /claude-feedback <consignes de retravail>
+# → Claude (abonnement Pro, headless) retravaille data/jours/<date>.json
+#   selon les consignes, le contrat est re-validé, la page re-rendue, et le
+#   tout est poussé sur la branche draft — l'aperçu Cloudflare Pages suit.
+#
+# Garde-fous :
+# - seuls les commentaires du propriétaire/collaborateurs déclenchent ;
+# - uniquement sur les branches draft/ ;
+# - la validation du contrat doit passer avant tout push ;
+# - la fusion reste un geste humain.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  retravailler:
+    name: Appliquer le retour de relecture
+    if: >
+      github.event.issue.pull_request != null &&
+      startsWith(github.event.comment.body, '/claude-feedback') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Identifier la branche et la date du brouillon
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCHE=$(gh pr view ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} --json headRefName --jq .headRefName)
+          case "$BRANCHE" in
+            draft/*) ;;
+            *) echo "Pas une branche draft/ — abandon."; exit 2 ;;
+          esac
+          DATE=${BRANCHE#draft/}
+          echo "branche=$BRANCHE" >> "$GITHUB_OUTPUT"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+
+      - name: Récupérer la branche de brouillon
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.pr.outputs.branche }}
+
+      - name: Installer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installer les dépendances verrouillées
+        run: uv sync --locked
+
+      - name: Retravailler le JSON avec Claude
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RETOUR: ${{ github.event.comment.body }}
+          DATE: ${{ steps.pr.outputs.date }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          CONSIGNE=$(printf '%s' "$RETOUR" | sed 's|^/claude-feedback[[:space:]]*||')
+          claude -p --model claude-sonnet-5 \
+            --allowedTools "Read,Edit,Write" \
+            "Tu es le rédacteur du lectionnaire. Retravaille le fichier \
+          data/jours/$DATE.json selon le retour de relecture ci-dessous.
+
+          Règles strictes :
+          - Modifie UNIQUEMENT data/jours/$DATE.json (aucun autre fichier).
+          - Conserve toutes les clés et la structure exacte du contrat : le \
+          fichier doit rester un JSON valide qui passe src/valider.py.
+          - Voix du projet : prose française soignée, rigueur exégétique \
+          (texte → sens → application), sources du domaine public réelles et \
+          nommées (Segond 1910, Chrysostome, Calvin) — jamais d'invention. \
+          Gloses : mot original hébreu/grec, choix de traduction de Segond, \
+          réception. Pas de listes à puces, pas de formules creuses.
+          - Ne touche ni aux couleurs ni au bloc liturgie (déterministes), \
+          sauf si le retour le demande explicitement.
+          - Si le retour ne concerne qu'une partie, ne réécris que cette \
+          partie — laisse le reste strictement intact.
+
+          Retour du relecteur :
+          $CONSIGNE"
+
+      - name: Valider le contrat retravaillé
+        run: make validate DATE=${{ steps.pr.outputs.date }}
+
+      - name: Rendre la page
+        run: make render DATE=${{ steps.pr.outputs.date }}
+
+      - name: Pousser sur la branche de brouillon
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/jours docs
+          if git diff --cached --quiet; then
+            echo "Aucun changement produit."
+          else
+            git commit -m "Retravaille le brouillon selon le retour de relecture (${{ steps.pr.outputs.date }})"
+            git push
+          fi
+
+      - name: Confirmer sur la PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr comment ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --body "♻️ Brouillon retravaillé selon le retour, contrat validé, aperçu Cloudflare Pages en cours de mise à jour."
+
+      - name: Signaler un échec sur la PR
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr comment ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --body "❌ Le retravail a échoué (voir le run Actions). Le brouillon n'a pas été modifié."

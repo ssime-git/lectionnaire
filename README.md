@@ -107,9 +107,14 @@ restent des gestes humains. Pour une autre date, lance le workflow à la main :
 3. Ouvre l'URL Cloudflare Pages affichée dans les checks de la PR pour relire
    la page telle qu'elle sera servie. Choisis notamment la variante d'analogie
    (`analogie.choisi`).
-4. Pour corriger, édite `data/jours/AAAA-MM-JJ.json` directement dans la PR :
-   le workflow « Rendre le brouillon après édition » re-valide, re-rend le HTML
-   et met l'aperçu Pages à jour à chaque commit.
+4. Pour corriger, deux voies :
+   - **`/claude-feedback <consignes>`** en commentaire de la PR : Claude
+     retravaille le JSON selon tes consignes (« approfondis la deuxième
+     glose », « l'analogie 1 est gadget, propose autre chose »…), re-valide,
+     re-rend et pousse — l'aperçu se met à jour, un commentaire confirme.
+   - Éditer `data/jours/AAAA-MM-JJ.json` à la main dans la PR : le workflow
+     « Rendre le brouillon après édition » re-valide et re-rend à chaque
+     commit.
 5. Fusionne la PR seulement après relecture : Cloudflare Pages redéploie alors
    le site complet, nouveau jour inclus.
 
