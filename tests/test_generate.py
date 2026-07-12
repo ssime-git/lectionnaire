@@ -92,17 +92,36 @@ class WorkersAiCallTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "Échec de l'appel Workers AI"):
                 generate._appel("system", "user")
 
-    def test_appel_explique_le_quota_epuise(self) -> None:
-        reponse_http = Mock(status_code=429)
+    def test_appel_reessaie_puis_explique_le_429(self) -> None:
+        reponse_http = Mock(status_code=429, text='{"errors": ["capacity"]}')
         erreur = generate.requests.HTTPError("429", response=reponse_http)
         response = Mock()
         response.raise_for_status.side_effect = erreur
         with (
             patch.dict(os.environ, SECRETS, clear=True),
-            patch("generate.requests.post", return_value=response),
+            patch("generate.requests.post", return_value=response) as post,
+            patch("generate.time.sleep") as sleep,
         ):
-            with self.assertRaisesRegex(RuntimeError, "Quota Workers AI épuisé"):
+            with self.assertRaisesRegex(RuntimeError, "429 après plusieurs"):
                 generate._appel("system", "user")
+        self.assertEqual(post.call_count, 4)
+        self.assertEqual(sleep.call_count, 4)
+
+    def test_appel_se_remet_d_un_429_passager(self) -> None:
+        reponse_http = Mock(status_code=429, text="capacity")
+        erreur = generate.requests.HTTPError("429", response=reponse_http)
+        rate_limited = Mock()
+        rate_limited.raise_for_status.side_effect = erreur
+        ok = _reponse_sse(
+            ['data: {"response": "{\\"titre\\": \\"Essai\\"}"}', "data: [DONE]"]
+        )
+        with (
+            patch.dict(os.environ, SECRETS, clear=True),
+            patch("generate.requests.post", side_effect=[rate_limited, ok]) as post,
+            patch("generate.time.sleep"),
+        ):
+            self.assertEqual(generate._appel("system", "user"), '{"titre": "Essai"}')
+        self.assertEqual(post.call_count, 2)
 
     def test_appel_refuse_un_flux_vide(self) -> None:
         response = _reponse_sse(["data: [DONE]"])
@@ -127,7 +146,7 @@ class WorkersAiCallTests(unittest.TestCase):
             self.assertEqual(generate._appel("system", "user"), '{"titre": "Essai"}')
         self.assertEqual(post.call_count, 2)
 
-    def test_appel_abandonne_apres_deux_timeouts(self) -> None:
+    def test_appel_abandonne_apres_quatre_timeouts(self) -> None:
         with (
             patch.dict(os.environ, SECRETS, clear=True),
             patch(
@@ -137,7 +156,7 @@ class WorkersAiCallTests(unittest.TestCase):
         ):
             with self.assertRaisesRegex(RuntimeError, "Échec de l'appel Workers AI"):
                 generate._appel("system", "user")
-        self.assertEqual(post.call_count, 2)
+        self.assertEqual(post.call_count, 4)
 
 
 class LireFluxTests(unittest.TestCase):

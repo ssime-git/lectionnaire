@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from pathlib import Path
 from typing import Any
 
@@ -62,7 +63,7 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
         "stream": True,
     }
     derniere_erreur: Exception | None = None
-    for tentative in range(2):
+    for tentative in range(4):
         try:
             r = requests.post(
                 url,
@@ -84,15 +85,24 @@ def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
             )
         except requests.Timeout as exc:
             derniere_erreur = exc
-            print(f"⚠  Timeout Workers AI (tentative {tentative + 1}/2)")
+            print(f"⚠  Timeout Workers AI (tentative {tentative + 1}/4)")
         except requests.RequestException as exc:
             reponse_http = getattr(exc, "response", None)
             if reponse_http is not None and reponse_http.status_code == 429:
-                raise RuntimeError(
-                    "Quota Workers AI épuisé (10 000 neurons gratuits par "
-                    "jour). Le compteur se remet à zéro à 00:00 UTC — "
-                    "relancer le workflow après."
-                ) from exc
+                # Un 429 est ambigu : quota quotidien épuisé, OU modèle
+                # momentanément saturé. Le corps de la réponse tranche ; on
+                # réessaie avec attente croissante avant d'abandonner.
+                detail = (reponse_http.text or "")[:400]
+                derniere_erreur = RuntimeError(
+                    "Workers AI renvoie 429 après plusieurs tentatives. "
+                    "Si le détail parle de quota : 10 000 neurons gratuits "
+                    "par jour, retour à zéro à 00:00 UTC. Détail : " + detail
+                )
+                attente = 30 * (tentative + 1)
+                print(f"⚠  429 Workers AI (tentative {tentative + 1}/4), "
+                      f"nouvel essai dans {attente} s. Détail : {detail}")
+                time.sleep(attente)
+                continue
             raise RuntimeError(f"Échec de l'appel Workers AI : {exc}") from exc
     raise RuntimeError(
         f"Échec de l'appel Workers AI : {derniere_erreur}"
