@@ -109,6 +109,14 @@ brouillon JSON, qui doit être relu dans son aperçu HTML avant toute fusion.
 5. Fusionne la PR seulement après relecture : Cloudflare Pages redéploie alors
    le site complet, nouveau jour inclus.
 
+**Moteur de secours.** Si Workers AI échoue (quota gratuit de 10 000
+neurons/jour épuisé), le workflow bascule automatiquement sur Claude
+(`claude-sonnet-5`) via Claude Code en mode headless — couvert par
+l'abonnement Claude Pro. Prérequis : générer un token avec
+`claude setup-token` sur ta machine et le stocker dans le secret GitHub
+`CLAUDE_CODE_OAUTH_TOKEN`. En local : `LECTIONNAIRE_MOTEUR=claude make
+generate DATE=…` (nécessite le CLI `claude` connecté).
+
 Pour tester localement, exporte les deux variables avant de lancer la commande :
 
 ```bash
