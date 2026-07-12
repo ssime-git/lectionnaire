@@ -1,5 +1,9 @@
 name: Générer un brouillon du lectionnaire
 
+# Deux déclencheurs, un même garde-fou : la fusion de la PR reste humaine.
+# - workflow_dispatch : n'importe quelle date, à la demande.
+# - cron nocturne 02:20 UTC (04:20 à Paris l'été) : génère le jour SUIVANT,
+#   juste après la remise à zéro du quota gratuit Workers AI (00:00 UTC).
 on:
   workflow_dispatch:
     inputs:
@@ -7,6 +11,8 @@ on:
         description: Date liturgique au format AAAA-MM-JJ
         required: true
         type: string
+  schedule:
+    - cron: "20 2 * * *"
 
 permissions:
   contents: write
@@ -17,14 +23,22 @@ jobs:
     name: Générer et proposer le brouillon
     runs-on: ubuntu-latest
     steps:
-      - name: Vérifier le format de la date
+      - name: Déterminer la date à générer
+        id: date
         env:
-          DATE: ${{ inputs.date }}
+          DATE_DEMANDEE: ${{ inputs.date }}
         run: |
+          if [ -n "$DATE_DEMANDEE" ]; then
+            DATE="$DATE_DEMANDEE"
+          else
+            DATE=$(TZ=Europe/Paris date -d tomorrow +%F)
+          fi
           if ! [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "La date doit avoir le format AAAA-MM-JJ."
             exit 2
           fi
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "Date retenue : $DATE"
 
       - name: Récupérer main
         uses: actions/checkout@v6
@@ -46,7 +60,7 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_AI_API_TOKEN: ${{ secrets.CLOUDFLARE_AI_API_TOKEN }}
-        run: make generate DATE=${{ inputs.date }}
+        run: make generate DATE=${{ steps.date.outputs.date }}
 
       # Filet de secours : quota Workers AI épuisé (ou toute panne du moteur
       # principal) → Claude Code headless, couvert par l'abonnement Claude Pro.
@@ -60,25 +74,25 @@ jobs:
         run: |
           echo "Workers AI a échoué — bascule sur Claude (claude-sonnet-5)."
           npm install -g @anthropic-ai/claude-code
-          make generate DATE=${{ inputs.date }}
+          make generate DATE=${{ steps.date.outputs.date }}
 
       - name: Valider le contrat
-        run: make validate DATE=${{ inputs.date }}
+        run: make validate DATE=${{ steps.date.outputs.date }}
 
       - name: Rendre l'aperçu HTML
-        run: make render DATE=${{ inputs.date }}
+        run: make render DATE=${{ steps.date.outputs.date }}
 
       - name: Ouvrir la pull request de relecture
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: draft/${{ inputs.date }}
+          branch: draft/${{ steps.date.outputs.date }}
           base: main
-          title: "Brouillon du lectionnaire — ${{ inputs.date }}"
-          commit-message: "Brouillon du lectionnaire pour le ${{ inputs.date }}"
+          title: "Brouillon du lectionnaire — ${{ steps.date.outputs.date }}"
+          commit-message: "Brouillon du lectionnaire pour le ${{ steps.date.outputs.date }}"
           body: |
-            Brouillon généré par Workers AI (`${{ inputs.date }}`), validé puis
-            rendu automatiquement. Relecture dans l'aperçu Cloudflare Pages de
+            Brouillon généré automatiquement (`${{ steps.date.outputs.date }}`),
+            validé puis rendu. Relecture dans l'aperçu Cloudflare Pages de
             cette PR (lien dans les checks ci-dessous).
 
             ## Checklist de relecture
@@ -88,15 +102,15 @@ jobs:
             - [ ] Racines : attributions patristiques vérifiées (rien d'inventé)
             - [ ] Analogie : choisir la variante (`analogie.choisi` : 0, 1 ou 2)
             - [ ] Ton : sobre, sans formules creuses
-            - [ ] Gravure : ajouter `gravure_svg` à la main, sinon la page paraît sans image
+            - [ ] Gravure : vérifier le bois gravé (généré ; le retoucher à la main si besoin)
 
-            Pour corriger : éditer `data/jours/${{ inputs.date }}.json`
+            Pour corriger : éditer `data/jours/${{ steps.date.outputs.date }}.json`
             directement dans la PR — le HTML est re-rendu automatiquement à
             chaque commit, et l'aperçu Pages se met à jour.
 
             La fusion publie le jour sur le site. Ne pas fusionner sans
             relecture humaine.
           add-paths: |
-            data/jours/${{ inputs.date }}.json
-            docs/${{ inputs.date }}.html
+            data/jours/${{ steps.date.outputs.date }}.json
+            docs/${{ steps.date.outputs.date }}.html
             docs/index.html

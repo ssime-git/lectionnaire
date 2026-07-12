@@ -96,6 +96,10 @@ publique.
 La génération est volontairement séparée de la publication : elle produit un
 brouillon JSON, qui doit être relu dans son aperçu HTML avant toute fusion.
 
+Un cron nocturne (02:20 UTC, soit 04:20 à Paris l'été) génère automatiquement
+le brouillon du **lendemain** et ouvre sa PR — la relecture et la fusion
+restent des gestes humains. Pour une autre date, lance le workflow à la main :
+
 1. Dans GitHub, ouvre **Actions** → **Générer un brouillon du lectionnaire** →
    **Run workflow**, puis indique une date au format `AAAA-MM-JJ`.
 2. L'action interroge Workers AI, valide le JSON, rend le HTML et ouvre une pull
