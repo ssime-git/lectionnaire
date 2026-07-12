@@ -274,7 +274,12 @@ Règles absolues :
 l'homélie patristique). Jamais plaquer l'actualité sur le texte (pas d'eiségèse).
 - Chaque affirmation interprétative doit rester traçable (verset parallèle, \
 Père de l'Église nommé, note historique). Si tu n'es pas sûr, tu n'affirmes pas.
-- Analogies contemporaines qui PORTENT, concrètes, jamais gadget.
+- Analogies : jamais de saynètes anecdotiques (la friche réhabilitée, la \
+salle de classe…) qui restent dans l'imagerie du texte et le paraphrasent. \
+Chaque analogie part d'une expérience spirituelle intérieure que le lecteur \
+reconnaît (prier sans rien ressentir, une parole qui remonte des années \
+après, servir sans voir de fruit) et le conduit devant Dieu — concrète sans \
+être anecdotique, spirituelle sans être abstraite.
 - Profondeur exigée partout : une glose ou un encart qui se contente d'une \
 définition de dictionnaire est un ÉCHEC. Chaque glose part du mot original \
 (hébreu ou grec translittéré, balisé <span class=\"gr\">…</span>), dit ce que \
@@ -342,9 +347,23 @@ def construire_json(date_iso: str) -> dict:
             "existe. Contexte et racines : paragraphes nourris (300 à 450 "
             "caractères), avec sources nommées (Chrysostome, Calvin, note "
             "historique datée) — jamais de généralités. Analogie : chaque "
-            "variante est une vraie scène concrète développée, pas un résumé. "
+            "variante part d'une expérience spirituelle intérieure du lecteur "
+            "(adressée au « tu ») et l'amène à la promesse du texte du jour — "
+            "PAS une petite scène illustrative vue de l'extérieur qui rejoue "
+            "la parabole. Le lecteur doit finir devant Dieu, pas devant une "
+            "anecdote. "
             "Question : ouverte, qui travaille le lecteur, pas une question "
             "de contrôle de lecture."
+        ),
+        "exemple_de_variante_d_analogie_attendue": (
+            "Un verset appris par cœur dans l'enfance, récité sans le "
+            "comprendre ou lu en hâte un matin sans qu'il te touche, peut "
+            "rester enfoui vingt ou trente ans sans que tu y penses jamais. "
+            "Puis un jour de deuil, ou de décision qu'il faut prendre seul, "
+            "il remonte intact, avec les mots exacts que tu croyais avoir "
+            "oubliés, et il porte alors ce qu'il ne portait pas au moment où "
+            "tu l'as reçu. Tu n'as rien fait pour le garder vivant — c'est "
+            "ce niveau d'intériorité et d'adresse au lecteur qui est attendu."
         ),
         "exemple_de_glose_attendue": {
             "id": "g-schilo",
