@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
 import time
 from pathlib import Path
 from typing import Any
@@ -36,7 +37,48 @@ MODELE_REDACTION = "@cf/moonshotai/kimi-k2.6"
 WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
 
+# Moteur de secours : Claude Code en mode headless, couvert par l'abonnement
+# Claude Pro (voie officiellement supportée : `claude setup-token` +
+# CLAUDE_CODE_OAUTH_TOKEN). Sélection par LECTIONNAIRE_MOTEUR=claude.
+# Sonnet 5 : excellent en prose française, économe en limites d'abonnement.
+MODELE_CLAUDE = "claude-sonnet-5"
+
+
 def _appel(systeme: str, user: str, max_tokens: int = 12000) -> str:
+    """Route l'appel vers le moteur choisi et retourne le texte du modèle."""
+    if os.environ.get("LECTIONNAIRE_MOTEUR") == "claude":
+        return _appel_claude(systeme, user)
+    return _appel_workers_ai(systeme, user, max_tokens)
+
+
+def _appel_claude(systeme: str, user: str) -> str:
+    """Appelle Claude Code en mode headless (`claude -p`), sans outils :
+    le prompt entre par stdin, le JSON ressort par stdout."""
+    cmd = [
+        "claude", "-p",
+        "--model", MODELE_CLAUDE,
+        "--system-prompt", systeme,
+    ]
+    try:
+        r = subprocess.run(
+            cmd, input=user, capture_output=True, text=True, timeout=900,
+        )
+    except FileNotFoundError as exc:
+        raise RuntimeError(
+            "CLI `claude` introuvable — installer @anthropic-ai/claude-code."
+        ) from exc
+    except subprocess.TimeoutExpired as exc:
+        raise RuntimeError("Claude Code n'a pas répondu en 15 minutes.") from exc
+    if r.returncode != 0:
+        raise RuntimeError(
+            f"Échec de Claude Code (code {r.returncode}) : {r.stderr.strip()[:400]}"
+        )
+    if not r.stdout.strip():
+        raise RuntimeError("Claude Code n'a renvoyé aucun texte.")
+    return r.stdout
+
+
+def _appel_workers_ai(systeme: str, user: str, max_tokens: int = 12000) -> str:
     """Appelle Workers AI et retourne uniquement la réponse textuelle du modèle."""
     account = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     token = os.environ.get("CLOUDFLARE_AI_API_TOKEN")

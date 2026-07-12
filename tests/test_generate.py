@@ -159,6 +159,56 @@ class WorkersAiCallTests(unittest.TestCase):
         self.assertEqual(post.call_count, 4)
 
 
+class ClaudeFallbackTests(unittest.TestCase):
+    SECRETS_CLAUDE = {**SECRETS, "LECTIONNAIRE_MOTEUR": "claude"}
+
+    def test_appel_bascule_sur_claude_selon_l_environnement(self) -> None:
+        resultat = Mock(returncode=0, stdout='{"titre": "Sonnet"}', stderr="")
+        with (
+            patch.dict(os.environ, self.SECRETS_CLAUDE, clear=True),
+            patch("generate.subprocess.run", return_value=resultat) as run,
+            patch("generate.requests.post") as post,
+        ):
+            self.assertEqual(generate._appel("système", "user"), '{"titre": "Sonnet"}')
+        post.assert_not_called()
+        cmd = run.call_args.args[0]
+        self.assertEqual(cmd[0], "claude")
+        self.assertIn("-p", cmd)
+        self.assertIn("claude-sonnet-5", cmd)
+        self.assertIn("système", cmd)
+        self.assertEqual(run.call_args.kwargs["input"], "user")
+
+    def test_appel_claude_traduit_un_echec_du_cli(self) -> None:
+        resultat = Mock(returncode=1, stdout="", stderr="Invalid OAuth token")
+        with (
+            patch.dict(os.environ, self.SECRETS_CLAUDE, clear=True),
+            patch("generate.subprocess.run", return_value=resultat),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "Invalid OAuth token"):
+                generate._appel("système", "user")
+
+    def test_appel_claude_refuse_une_sortie_vide(self) -> None:
+        resultat = Mock(returncode=0, stdout="   ", stderr="")
+        with (
+            patch.dict(os.environ, self.SECRETS_CLAUDE, clear=True),
+            patch("generate.subprocess.run", return_value=resultat),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "aucun texte"):
+                generate._appel("système", "user")
+
+    def test_le_moteur_workers_ai_reste_le_defaut(self) -> None:
+        response = _reponse_sse(
+            ['data: {"response": "{\\"titre\\": \\"Kimi\\"}"}', "data: [DONE]"]
+        )
+        with (
+            patch.dict(os.environ, SECRETS, clear=True),
+            patch("generate.requests.post", return_value=response),
+            patch("generate.subprocess.run") as run,
+        ):
+            self.assertEqual(generate._appel("système", "user"), '{"titre": "Kimi"}')
+        run.assert_not_called()
+
+
 class LireFluxTests(unittest.TestCase):
     def test_ignore_les_lignes_non_sse_et_le_json_invalide(self) -> None:
         r = _reponse_sse(
