@@ -63,27 +63,21 @@ jobs:
         run: |
           npm install -g @anthropic-ai/claude-code
           CONSIGNE=$(printf '%s' "$RETOUR" | sed 's|^/claude-feedback[[:space:]]*||')
-          claude -p --model claude-sonnet-5 \
-            --allowedTools "Read,Edit,Write" \
-            "Tu es le rédacteur du lectionnaire. Retravaille le fichier \
-          data/jours/$DATE.json selon le retour de relecture ci-dessous.
-
+          {
+            printf 'Tu es le rédacteur du lectionnaire. Retravaille le fichier data/jours/%s.json selon le retour de relecture ci-dessous.\n\n' "$DATE"
+            cat <<'REGLES'
           Règles strictes :
-          - Modifie UNIQUEMENT data/jours/$DATE.json (aucun autre fichier).
-          - Conserve toutes les clés et la structure exacte du contrat : le \
-          fichier doit rester un JSON valide qui passe src/valider.py.
-          - Voix du projet : prose française soignée, rigueur exégétique \
-          (texte → sens → application), sources du domaine public réelles et \
-          nommées (Segond 1910, Chrysostome, Calvin) — jamais d'invention. \
-          Gloses : mot original hébreu/grec, choix de traduction de Segond, \
-          réception. Pas de listes à puces, pas de formules creuses.
-          - Ne touche ni aux couleurs ni au bloc liturgie (déterministes), \
-          sauf si le retour le demande explicitement.
-          - Si le retour ne concerne qu'une partie, ne réécris que cette \
-          partie — laisse le reste strictement intact.
+          - Modifie UNIQUEMENT le fichier JSON du jour indiqué (aucun autre fichier).
+          - Conserve toutes les clés et la structure exacte du contrat : le fichier doit rester un JSON valide qui passe src/valider.py.
+          - Voix du projet : prose française soignée, rigueur exégétique (texte, sens, application), sources du domaine public réelles et nommées (Segond 1910, Chrysostome, Calvin) — jamais d'invention. Gloses : mot original hébreu/grec, choix de traduction de Segond, réception. Pas de listes à puces, pas de formules creuses.
+          - Ne touche ni aux couleurs ni au bloc liturgie (déterministes), sauf si le retour le demande explicitement.
+          - Si le retour ne concerne qu'une partie, ne réécris que cette partie — laisse le reste strictement intact.
 
           Retour du relecteur :
-          $CONSIGNE"
+          REGLES
+            printf '%s\n' "$CONSIGNE"
+          } | claude -p --model claude-sonnet-5 \
+            --allowedTools "Read,Edit,Write"
 
       - name: Valider le contrat retravaillé
         run: make validate DATE=${{ steps.pr.outputs.date }}
