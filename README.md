@@ -15,7 +15,7 @@ lecteurs catholiques. Sources en **domaine public** uniquement.
 
 ## Ce que produit le projet
 
-Une page par jour, statique, hébergée gratuitement sur GitHub Pages. Sa structure
+Une page par jour, statique, hébergée gratuitement sur Cloudflare Pages. Sa structure
 suit une **croix** : on descend (profondeur spirituelle), on glisse latéralement
 (exploration).
 
@@ -91,10 +91,40 @@ Pour **laisser Claude Code faire le setup à ta place** (création du dépôt av
 suis **[CLAUDE.md](CLAUDE.md)** — il s'arrête pour te demander avant chaque action
 publique.
 
-## Générer un brouillon avec Cloudflare Workers AI
+## Architecture de l'automatisation
 
 La génération est volontairement séparée de la publication : elle produit un
 brouillon JSON, qui doit être relu dans son aperçu HTML avant toute fusion.
+**La fusion de la PR est le seul geste qui publie.**
+
+```
+cron nocturne (02:20 UTC, J+1)          Run workflow manuel (toute date)
+        └───────────────┬───────────────────────┘
+                        ▼
+        make generate ── Workers AI (Kimi K2.6, quota gratuit)
+                            └─ échec → Claude Sonnet 5 (abonnement Pro)
+                        ▼
+        make validate → make render
+                        ▼
+        PR draft/<date> + aperçu Cloudflare Pages
+                        ▼
+        RELECTURE HUMAINE ──┬─ /claude-feedback <consignes>  ──┐
+                            ├─ édition manuelle du JSON        ├─ re-valide,
+                            │                                  │  re-rend,
+                            │  ◄────── aperçu mis à jour ──────┘  re-pousse
+                            ▼
+        MERGE (geste humain) → Cloudflare Pages redéploie le site
+```
+
+Trois workflows GitHub :
+
+| Workflow | Déclencheur | Rôle |
+|---|---|---|
+| `generer-brouillon.yml` | cron 02:20 UTC (J+1) ou manuel (date au choix) | tests → génération → validation → rendu → PR |
+| `claude-feedback.yml` | commentaire `/claude-feedback …` sur une PR draft | Claude retravaille le JSON selon les consignes |
+| `rendre-brouillon.yml` | commit humain sur `data/jours/*.json` d'une branche draft | re-valide et re-rend la page |
+
+## Générer un brouillon
 
 Un cron nocturne (02:20 UTC, soit 04:20 à Paris l'été) génère automatiquement
 le brouillon du **lendemain** et ouvre sa PR — la relecture et la fusion
@@ -118,43 +148,53 @@ restent des gestes humains. Pour une autre date, lance le workflow à la main :
 5. Fusionne la PR seulement après relecture : Cloudflare Pages redéploie alors
    le site complet, nouveau jour inclus.
 
-**Moteur de secours.** Si Workers AI échoue (quota gratuit de 10 000
-neurons/jour épuisé), le workflow bascule automatiquement sur Claude
-(`claude-sonnet-5`) via Claude Code en mode headless — couvert par
-l'abonnement Claude Pro. Prérequis : générer un token avec
-`claude setup-token` sur ta machine et le stocker dans le secret GitHub
-`CLAUDE_CODE_OAUTH_TOKEN`. En local : `LECTIONNAIRE_MOTEUR=claude make
-generate DATE=…` (nécessite le CLI `claude` connecté).
+---
 
-Pour tester localement, exporte les deux variables avant de lancer la commande :
+## Setup de l'automatisation
+
+### Secrets GitHub (Settings → Secrets and variables → Actions)
+
+| Secret | Rôle | Comment l'obtenir |
+|---|---|---|
+| `CLOUDFLARE_ACCOUNT_ID` | moteur principal (Workers AI) | dashboard Cloudflare → Workers & Pages → Account ID |
+| `CLOUDFLARE_AI_API_TOKEN` | moteur principal | dashboard Cloudflare → API Tokens → modèle « Workers AI » |
+| `CLAUDE_CODE_OAUTH_TOKEN` | moteur de secours + `/claude-feedback` | `claude setup-token` sur ta machine (abonnement Claude Pro) |
+
+Ne copie jamais un jeton dans le dépôt ou dans un message. Si une action ne
+peut pas ouvrir sa pull request : **Settings → Actions → General** → autoriser
+les workflows à écrire et à créer des PR.
+
+Côté hébergement : projet **Cloudflare Pages** relié au dépôt, branche de
+production `main`, dossier de sortie `docs` — chaque PR reçoit son URL
+d'aperçu, chaque merge redéploie le site.
+
+### Options (variables d'environnement)
+
+| Variable | Valeurs | Effet |
+|---|---|---|
+| `LECTIONNAIRE_MOTEUR` | *(vide)* / `claude` | vide = Workers AI ; `claude` = Claude Code headless |
+| `CLOUDFLARE_ACCOUNT_ID` / `CLOUDFLARE_AI_API_TOKEN` | — | requis pour le moteur Workers AI |
+| `CLAUDE_CODE_OAUTH_TOKEN` | — | requis pour le moteur `claude` en CI |
+
+Les modèles se règlent dans [src/generate.py](src/generate.py) :
+`MODELE_REDACTION` (`@cf/moonshotai/kimi-k2.6`, ~2 000 neurons/page sur les
+10 000 gratuits/jour) et `MODELE_CLAUDE` (`claude-sonnet-5`).
+
+### Générer en local
 
 ```bash
+# Moteur Workers AI
 export CLOUDFLARE_ACCOUNT_ID="…"
 export CLOUDFLARE_AI_API_TOKEN="…"
 make generate DATE=2026-07-08
+
+# Moteur Claude (CLI `claude` connecté à ton abonnement)
+LECTIONNAIRE_MOTEUR=claude make generate DATE=2026-07-08
+
+# Puis, dans les deux cas
 make validate DATE=2026-07-08
 make render DATE=2026-07-08
 ```
-
-Ne copie jamais un jeton dans le dépôt ou dans un message. En CI, seuls les
-secrets GitHub `CLOUDFLARE_ACCOUNT_ID` et `CLOUDFLARE_AI_API_TOKEN` sont lus.
-
-Si l'action ne peut pas ouvrir sa pull request, ouvre GitHub → **Settings** →
-**Actions** → **General** et autorise les workflows à lire et écrire le contenu
-du dépôt ainsi qu'à créer des pull requests.
-
----
-
-## Les trois étapes de travail
-
-```
-ÉTAPE 1  valider le template          (aucun LLM)
-ÉTAPE 2  brancher la génération       (le skill, un modèle puissant)
-ÉTAPE 3  automatiser la nuit          (GitHub Actions, avec relecture)
-```
-
-**Ne pas les mélanger.** Câbler le LLM avant d'avoir éprouvé le template revient
-à déboguer les deux en même temps. Détail dans `docs-projet/PIPELINE.md`.
 
 ---
 
@@ -172,13 +212,14 @@ src/
   gravure.py               moteur de bois gravé (lexique de motifs)
   render.py                JSON + template → HTML + archive
   valider.py               refuse un contrat bancal
-  generate.py              ÉTAPE 2 — remplit le JSON via inférence
-docs/                      sortie publiée par GitHub Pages
-.github/workflows/nuit.yml ÉTAPE 3 — le cron nocturne
+  generate.py              remplit le JSON via inférence (2 moteurs)
+tests/                     tests unitaires de la génération
+docs/                      sortie publiée par Cloudflare Pages
+.github/workflows/
+  generer-brouillon.yml    cron nocturne + dispatch manuel → PR de brouillon
+  claude-feedback.yml      /claude-feedback sur une PR → retravail par Claude
+  rendre-brouillon.yml     re-rend la page après édition manuelle du JSON
 ```
-
-Le skill portable de génération vit **hors de ce dépôt**
-(`skills/lectionnaire-du-jour/`) : il se charge dans Claude Code, Codex, Cursor.
 
 ---
 
