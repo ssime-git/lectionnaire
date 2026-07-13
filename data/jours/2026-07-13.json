@@ -1,0 +1,117 @@
+{
+  "date": "2026-07-13",
+  "date_humaine": "lundi",
+  "semaine": "15ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 1, 10-17 ; Mt 10, 34 – 11, 1",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M280 120 v-35 h15 v35 h15 v-35 h15 v35\"/><path d=\"M285 90 h25\"/><path d=\"M290 85 h15\"/><path d=\"M40 120 v-20 q0 -15 15 -15 q15 0 15 15 v20\"/><path d=\"M55 85 v-8 q0 -12 12 -12\"/><path d=\"M50 55 q5 -8 10 0\"/><path d=\"M45 65 q-3 -10 5 -15\"/><path d=\"M65 65 q3 -10 -5 -15\"/><path d=\"M35 75 q-5 5 0 12\"/><path d=\"M75 75 q5 5 0 12\"/><path d=\"M30 95 q12 -5 25 0 q12 5 25 0\"/><path d=\"M45 105 q10 -3 20 0 q10 3 20 0\"/><path d=\"M150 120 v-60 q0 -8 5 -8 q5 0 5 8 v60\"/><path d=\"M155 52 v-22\"/><path d=\"M148 42 h14\"/><path d=\"M145 60 h20\"/><path d=\"M152 30 l3 -8 l3 8\"/><path d=\"M160 30 l3 -8 l3 8\"/><path d=\"M140 120 h30\"/><path d=\"M120 120 l25 -25\"/><path d=\"M180 120 l-25 -25\"/></g><g class=\"trait-rubrique\"><path d=\"M155 55 q-3 15 0 25\"/></g><g class=\"trait-liturgie\"><path d=\"M175 120 v-55 q0 -10 8 -10 q8 0 8 10 v55\"/><path d=\"M180 55 l3 -10 l3 10\"/><path d=\"M183 45 v-15\"/><path d=\"M172 68 h22\"/></g></svg>",
+  "titre": "L'épée de la paix",
+  "titre_html": "L'épée de la <span class=\"it\">paix</span>",
+  "sous_titre": "Quand le Christ déchire nos calculs pour nous rejoindre au vif",
+  "suite_hier": null,
+  "gravure_alt": "Un prophète barbu tendant les mains ouvertes vers une ville aux portes closes, avec une épée plantée verticalement entre lui et les murailles, lame tournée vers le ciel comme un arbre dénudé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 1, 10-17",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">10</span> Écoutez la parole de l'Éternel, chefs de Sodome ! Prêtez l'oreille à la loi de notre Dieu, peuple de Gomorrhe ! <span class=\"s\">11</span> Qu'ai-je besoin, dit l'Éternel, de la multitude de vos sacrifices ? Je suis rassasié des holocaustes de béliers et de la graisse des veaux ; je ne prends point plaisir au sang des taureaux, des agneaux et des boucs. <span class=\"s\">12</span> Quand vous venez vous présenter devant moi, qui vous demande de fouler mes parvis ? <span class=\"s\">13</span> Cessez d'apporter de <button class=\"mot\" data-g=\"g-vaines\">vaines</button> offrandes : j'ai en horreur l'encens, les nouvelles lunes, les sabbats, les assemblées ; la réunion des méchants est pour moi un fardeau que je ne puis supporter. <span class=\"s\">14</span> Je hais vos nouvelles lunes et vos fêtes ; elles me sont à charge ; je suis las de les supporter. <span class=\"s\">15</span> Quand vous étendez vos mains, je détourne de vous mes yeux ; quand vous multipliez les prières, je n'écoute pas : vos mains sont pleines de sang. <span class=\"s\">16</span> Lavez-vous, purifiez-vous, ôtez de devant mes yeux la méchanceté de vos actions ; cessez de faire le mal. <span class=\"s\">17</span> Apprenez à faire le bien, recherchez la justice, <button class=\"mot\" data-g=\"g-redressez\">redressez</button> l'opprimé ; rendez justice à l'orphelin, défendez la cause de la veuve.</p>",
+      "gloses": [
+        {
+          "id": "g-vaines",
+          "lemme": "vaines",
+          "html": "L'hébreu <span class=\"gr\">req</span> signifie « vide, creux, sans contenu ». Segond traduit par « vaines », qui garde cette hollowness mais perd la dimension spatiale du mot : quelque chose qui ne tient pas debout, qui s'effondre sur soi-même. Les rabbins du Talmud de Babylone (<i>Tractate Yoma</i>) ont souligné que la prière sans justice intérieure est comme un corps sans âme. Isaïe ne dit pas que les offrandes sont mauvaises en soi, mais qu'elles sont devenues des enveloppes sans destinataire vivant."
+        },
+        {
+          "id": "g-redressez",
+          "lemme": "redressez",
+          "html": "Le verbe hébreu <span class=\"gr\">yashar</span> est à la racine même du mot « Israël » — « celui qui lutte pour être droit ». Segond choisit « redressez », qui conserve l'idée de垂直ité morale après une chute. Calvin, dans son <i>Commentaire sur Isaïe</i> (1551), insiste sur ce que ce « redresser » implique une action concrète dans la cité, non une repentance intérieure abstraite : « Ce n'est pas assez de cesser le mal, il faut mettre la main à l'œuvre pour rétablir celui qu'on a abattu. »"
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 49 (50), 8-9, 16bc-17, 21, 23",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">8</span> Je ne te reprocherai pas tes sacrifices, et tes holocaustes sont continuellement devant moi. <span class=\"s\">9</span> Je ne prendrai pas de taureau dans ta maison, ni de bouc dans tes bergeries. <span class=\"s\">16</span> Mais au méchant Dieu dit : Quel droit as-tu de réciter mes lois, et de porter mon alliance dans ta bouche ? <span class=\"s\">17</span> Toi qui hais la correction, et qui jettes mes paroles derrière toi ! <span class=\"s\">21</span> Tu as fait ces choses, et j'ai gardé le silence : tu t'es imaginé que j'étais comme toi. Je t'<button class=\"mot\" data-g=\"g-reprendr\">reprendrai</button>, je mettrai tout en ordre devant tes yeux. <span class=\"s\">23</span> Celui qui offre l'action de grâces comme sacrifice m'honore, et à celui qui veille sur sa voie je ferai voir le salut de Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-reprendr",
+          "lemme": "reprendrai",
+          "html": "Le verbe hébreu <span class=\"gr\">yakah</span> est celui de la contestation juridique, du procès où l'on établit la vérité par confrontation. Segond opte pour « reprendre », plus doux que « convaincre » ou « réfuter ». Le Psaume 50 est structuré comme une <i>rib</i>, une querelle d'alliance : Dieu appelle les cieux et la terre à témoigner. Chrysostome, dans ses <i>Homélies sur les Psaumes</i>, remarque que cette « reprise » est miséricorde déguisée : « Ce n'est pas pour perdre qu'il argue, mais pour guérir par la clarté. »"
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 10, 34 – 11, 1",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">34</span> N'allez pas croire que je sois venu apporter la paix sur la terre ; je ne suis pas venu apporter la paix, mais l'<button class=\"mot\" data-g=\"g-epee\">épée</button>. <span class=\"s\">35</span> Car je suis venu mettre la division entre l'homme et son père, entre la fille et sa mère, entre la belle-fille et sa belle-mère ; <span class=\"s\">36</span> et l'homme aura pour ennemis les gens de sa maison. <span class=\"s\">37</span> Celui qui aime son père ou sa mère plus que moi n'est pas digne de moi, et celui qui aime son fils ou sa fille plus que moi n'est pas digne de moi. <span class=\"s\">38</span> Celui qui ne prend pas sa croix et ne me suit pas n'est pas digne de moi. <span class=\"s\">39</span> Celui qui conservera sa vie la perdra, et celui qui perdra sa vie à cause de moi la conservera. <span class=\"s\">40</span> Celui qui vous reçoit me reçoit, et celui qui me reçoit reçoit celui qui m'a envoyé. <span class=\"s\">41</span> Celui qui reçoit un prophète en qualité de prophète recevra une récompense de prophète, et celui qui reçoit un juste en qualité de juste recevra une récompense de juste. <span class=\"s\">42</span> Et quiconque donnera seulement un verre d'eau froide à l'un de ces petits en qualité de disciple, je vous le dis en vérité, il ne perdra point sa récompense. <span class=\"s\">1</span> Lorsque Jésus eut achevé de donner ses <button class=\"mot\" data-g=\"g-ordres\">ordres</button> à ses douze disciples, il partit de là pour enseigner et prêcher dans les villes de la contrée.</p>",
+      "gloses": [
+        {
+          "id": "g-epee",
+          "lemme": "épée",
+          "html": "Le grec <span class=\"gr\">machaira</span> désigne le glaive court, d'infanterie, distinct du <span class=\"gr\">rhomphaia</span> des visions apocalyptiques. Segond traduit fidèlement, mais le lecteur moderne peut confondre avec l'image guerrière de l'Apocalypse. Origen, dans son <i>Commentaire sur Matthieu</i> (livre X), est le premier à insister sur le caractère intérieur de cette épée : elle sépare non les personnes extérieurement, mais les affections dans une même conscience. L'épée est instrument de discernement, non d'hostilité — elle découpe pour guérir, comme le scalpel."
+        },
+        {
+          "id": "g-ordres",
+          "lemme": "ordres",
+          "html": "Le grec <span class=\"gr\">entellomai</span> est le verbe de la tradition transmissible, de la <i>paradosis</i> vivante. Segond traduit par « ordres », qui sonne militaire ; Calvin préfère « commandements » dans son <i>Harmonie évangélique</i>, mais note que ce n'est pas la loi écrite, c'est la parole donnée à des envoyés particuliers. Le terme implique une délégation de responsabilité : ce que Jésus confie, les disciples doivent le porter comme un fardeau qui les constitue en personnes nouvelles."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le prophète et la cour",
+      "corps_html": "Isaïe 1 s'inscrit dans un contexte précis : le règne d'Achaz, vers 735 avant notre ère, où Jérusalem survivait entre l'Assyrie montante et les coalitions syro-éphraïmites. Le temple fonctionnait, les sacrifices s'accumulaient, et le roi lui-même pratiquait l'inspection régulière du culte. Le prophète ne dénonce pas des païens ignorants mais des pratiquants assidus. La comparaison avec Sodome et Gomorrhe (v. 10) est une provocation rhétorique extrême : ces villes n'avaient pas de temple, pas de loi, pas de sabbats. Les Jérusalemites en possèdent tous les signes, et c'est précisément ce qui rend leur injustice plus coupable. Calvin, dans son <i>Commentaire sur Isaïe</i>, souligne que le prophète « ne commence pas par les vices grossiers, mais par le masque de la piété » — le diagnostic touche au système nerveux, non à la peau."
+    },
+    {
+      "titre": "Mission et menace",
+      "corps_html": "Matthieu 10 place ces paroles dans le discours missionnaire de Jésus, adressé aux douze avant leur envoi en territoire hostile. Le contexte n'est pas théorique : les communautés matthéennes, vers 80-90 de notre ère, connaissaient réellement la rupture familiale comme conséquence du baptême. La mention de l'épée (v. 34) reprend un motif prophétique — Michée 7, 6 est cité littéralement — mais l'inverse : là où Michée déplorait la désolation comme jugement, Jésus l'annonce comme conséquence de sa venue même. Chrysostome, dans sa 34e homélie sur Matthieu, refuse d'atténuer : « Il ne dit pas 'je permettrai', mais 'je suis venu apporter' — la division est son œuvre propre, parce que sa vérité ne peut pas cohabiter avec le mensonge établi. »"
+    }
+  ],
+  "analogie": {
+    "titre": "Le tranchant qui libère",
+    "variantes": [
+      "Tu as peut-être vécu ce moment où une vérité que tu refusais finit par t'atteindre non pas comme une information nouvelle, mais comme une reconnaissance — quelque chose que tu savais déjà sans le savoir. Ce n'est pas une dispute gagnée, c'est un mur qui cède intérieurement, et la paix qui suit n'est pas celle que tu recherchais, mais celle que tu n'osais pas désirer. Le Christ ne vient pas ajouter une opinion parmi d'autres ; il vient couper ce qui, en toi, tenait debout par habitude et non par vie.",
+      "Il y a dans la prière des temps de stérile répétition, où les mots passent sans que rien ne passe — et puis un matin, sans que tu aies changé de méthode, le même verset te traverse comme une lame qui sépare deux époques de ton existence. Ce qui avant était exercice devient brûlure, ce qui était convention devient nécessité. Tu ne peux pas provoquer ce moment ; tu peux seulement refuser de fuir quand le tranchant se fait sentir, et rester là, dans la division intérieure, jusqu'à ce que la paisonde profonde se lève.",
+      "Tu connais peut-être cette expérience d'avoir longtemps porté une relation, une communauté, une image de toi-même, par pure loyauté ou par peur du vide qu'abandonner créerait. Et puis un jour la vérité du Christ, silencieuse et inflexible, tranche ce lien — non pour te livrer à la solitude, mais pour que tu puisses enfin être trouvé là où tu es réellement, non là où tu te tenais par contrat. La division qu'il apporte est l'ouverture d'un espace où son être peut habiter le tien, sans les intermédiaires que tu t'étais construits pour tenir à distance la brûlure de sa présence."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Nous n'avons pas à chercher l'épée : elle est déjà là, dans les divisions que nous refusons de regarder.",
+    "geste": "Demande au Christ de te montrer une seule chose aujourd'hui — une relation, une pratique, une image de toi — que tu maintiens par habitude et non par vie. Ne cherche pas à la résoudre ; demande seulement de la voir.",
+    "note": "La paix qu'il donne n'est pas l'absence de conflit, mais la cohérence d'un être tout entier tourné vers lui."
+  },
+  "question": "Qu'est-ce en toi, aujourd'hui, que le Christ devrait séparer pour que tu puisses enfin être un ?",
+  "racines": [
+    {
+      "titre": "La division comme salut",
+      "corps_html": "Origène, dans son <i>Commentaire sur Matthieu</i> (X, 23), est le premier à lire l'épée de Matthieu 10 comme opération intérieure : « L'âme qui reçoit la parole de vérité est divisée contre elle-même : ses affections anciennes combattent ses nouveaux désirs, et cette guerre est salutaire. » Il reprend là le <i>logismoi</i> de la tradition égyptienne, mais le christologise : le Christ est lui-même le tranchant qui sépare en l'homme ce qui est de l'homme et ce qui est de Dieu.",
+      "attribution": "Origène, <i>Commentaire sur Matthieu</i>, X, 23"
+    },
+    {
+      "titre": "Le culte refusé",
+      "corps_html": "Jean Chrysostome, dans ses <i>Homélies sur Isaïe</i> (VI, 1-2), développe la comparaison avec un médecin qui trouve son malade couvert de pansements sur une plaie purulente : « Tu me montres les bandelettes de soie, et tu caches la chair pourrie. Enlève d'abord ce qui est caché, et alors je recevrai ce que tu m'offres. » Le refus divin n'est pas caprice mais diagnostic : Dieu ne peut recevoir le culte que d'un être vivant, et le culte des morts-vivants est pour lui une addition d'horreur.",
+      "attribution": "Jean Chrysostome, <i>Homélies sur Isaïe</i>, VI, 1-2"
+    },
+    {
+      "titre": "Perdre pour conserver",
+      "corps_html": "Calvin, commentant Matthieu 10, 39 dans son <i>Harmonie évangélique</i> (1555), insiste sur le caractère actif de la perte : « Ce n'est pas assez de subir la mort, il faut la chercher, la prendre comme on prend une croix qu'on charge sur soi. » Le grec <span class=\"gr\">apollymi</span> est le même verbe que dans la parabole de la brebis perdue — la perte ici est volontaire, quasi liturgique, un abandon qui mime le mouvement du Christ lui-même vers la croix.",
+      "attribution": "Jean Calvin, <i>Harmonie évangélique</i>, 1555"
+    }
+  ]
+}
