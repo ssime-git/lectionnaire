@@ -232,4 +232,4 @@ qu'aux *références* : sa traduction liturgique est sous droits et n'est jamais
 reproduite.
 
 Le site est un **objet d'étude, pas une autorité**. Son honnêteté tient à une
-règle : chaque affirmation reste traçable vers sa source.
+règle : chaque affirmation reste traçable vers sa source. 
