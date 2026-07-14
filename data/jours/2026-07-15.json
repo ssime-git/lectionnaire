@@ -1,0 +1,132 @@
+{
+  "date": "2026-07-15",
+  "date_humaine": "mercredi",
+  "semaine": "15ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 10, 5-7.13-16 ; Mt 11, 25-27",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M50 120 q15 -25 30 -40 q-8 15 -5 30 q-12 5 -25 10 z\"/><path d=\"M72 82 q-6 -5 -12 0\"/><path d=\"M72 82 q6 -5 12 0\"/><path d=\"M260 120 l15 -50 l10 2 l-12 48 z\"/><path d=\"M275 72 l8 -2\"/><path d=\"M283 70 l4 12\"/><path d=\"M120 45 q30 -15 60 -5 q20 -8 40 0\"/><path d=\"M140 35 l25 15\"/><path d=\"M200 30 l-20 18\"/></g><g class=\"trait-rubrique\"><path d=\"M72 82 q-8 -12 -15 -8 q5 10 15 8\"/></g><g class=\"trait-liturgie\"><path d=\"M180 40 l-30 80\"/></g></svg>",
+  "titre": "Le caché révélé",
+  "titre_html": "Le <span class=\"it\">caché révélé</span>",
+  "sous_titre": "Quand Dieu se donne aux petits plutôt qu'aux sages",
+  "suite_hier": null,
+  "gravure_alt": "Un enfant assis par terre, les mains ouvertes vers le ciel, tandis qu'un vieillard à livres fermés passe à côté sans le voir ; au-dessus, un rayon oblique perce les nuages.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 10, 5-7.13-16",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">5</span> Malheur à l'Assyrien, verge de ma colère ! C'est dans sa main le <button class=\"mot\" data-g=\"g-baton\">bâton</button> de mon indignation. <span class=\"s\">6</span> Je l'ai lancé contre une nation impie, je lui ai donné contre le peuple de mon courroux l'ordre de faire du butin et de piller, de le fouler aux pieds comme la boue des rues. <span class=\"s\">7</span> Mais il n'en est pas ainsi, il n'a pas le même dessein, et son cœur ne pense pas la même chose ; car il a la destruction dans le cœur, le ravage de nombreuses nations. <span class=\"s\">13</span> Car il dit : C'est par la force de ma main que j'ai agi, et par ma sagesse, car je suis intelligent ; j'ai aboli les bornes des peuples, et j'ai pillé leurs trésors, et j'ai renversé ceux qui s'assoyaient sur des trônes comme un héros. <span class=\"s\">14</span> Ma main a saisi les richesses des peuples comme un nid, et comme on ramasse des œufs abandonnés, j'ai ramassé toute la terre ; nul n'a remué l'aile, ni ouvert le bec, ni poussé un cri. <span class=\"s\">15</span> La <button class=\"mot\" data-g=\"g-hache\">hache</button> se glorifie-t-elle envers celui qui s'en sert ? La scie s'est-elle élevée contre celui qui la manie ? Comme si le bâton faisait mouvoir celui qui le lève, comme si la verge soulevait celui qui n'est pas du bois ! <span class=\"s\">16</span> C'est pourquoi le Seigneur, l'Éternel des armées, enverra la consomption parmi ses gros et gras ; et sous sa gloire il mettra un embrasement, comme l'embrasement d'un feu.</p>",
+      "gloses": [
+        {
+          "id": "g-baton",
+          "lemme": "bâton",
+          "html": "L'hébreu <span class=\"gr\">matteh</span> désigne à la fois le sceptre du chef et la verge du berger, voire la branche d'arbres. Segond choisit « bâton », qui efface la dimension royale pour souligner l'instrumentalisation : l'Assyrien est réduit à l'état d'outil, non de partenaire. Calvin, commentant ce passage, y voit la juste démesure de Dieu qui se sert même des méchants sans leur accord ni leur conscience, « comme on se sert d'une hache ou d'une scie » — l'orgueil de l'instrument est d'autant plus absurde qu'il ignore son propre statut."
+        },
+        {
+          "id": "g-hache",
+          "lemme": "hache",
+          "html": "Le mot hébreu <span class=\"gr\">ma'atsad</span> est rare, peut-être un terme technique de la menuiserie sacrée. Segond le rend par « hache », alors que la LXX avait lu autrement. Le choix est éclairant : la hache n'est pas l'outil noble du sculpteur, mais l'instrument brutal du bûcheron. La métaphore culmine en un renversement comique et terrible — le bois se révoltant contre le bûcheron — que les Pères, Origène en tête, ont lue comme une parabole de la créature s'insurgeant contre son Créateur : l'absurdité même de l'orgueil."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 93 (94), 5-6, 7-8, 9-10, 14-15",
+      "traduction": "Louis Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">5</span> Ils écrasent ton peuple, ô Éternel ! ils oppriment ton héritage ; <span class=\"s\">6</span> ils tuent la veuve et l'étranger, ils assassinent les orphelins. <span class=\"s\">7</span> Et ils disent : L'Éternel ne voit pas, le Dieu de Jacob ne fait pas attention. <span class=\"s\">8</span> Prenez garde, peuples stupides ! insensés, quand serez-vous <button class=\"mot\" data-g=\"g-sages\">sages</button> ? <span class=\"s\">9</span> Celui qui a planté l'oreille n'entendrait-il pas ? Celui qui a formé l'œil ne verrait-il pas ? <span class=\"s\">10</span> Celui qui <button class=\"mot\" data-g=\"g-chatit\">châtie</button> les nations ne punirait-il pas ? Celui qui instruit les hommes ne connaîtrait-il pas ? <span class=\"s\">14</span> Car l'Éternel ne renonce pas à son peuple, il n'abandonne pas son héritage ; <span class=\"s\">15</span> car le jugement revient à la justice, et tous ceux qui ont le cœur droit le suivront.</p>",
+      "gloses": [
+        {
+          "id": "g-sages",
+          "lemme": "sages",
+          "html": "L'hébreu <span class=\"gr\">tāḇīnû</span> est un impératif intensif de <span class=\"gr\">bin</span>, « discerner, pénétrer ». Segond traduit « quand serez-vous sages », mais le verbe original porte plus de violence : « quand pénétrerez-vous », « quand comprendrez-vous enfin ». C'est l'exclamation du psalmiste face à l'endurcissement volontaire, cette sottise qui se croit maligne. Chrysostome, dans ses Homélies sur les Psaumes, y lit l'appel constant de Dieu : la sagesse n'est pas accumulation de savoir, mais conversion du regard."
+        },
+        {
+          "id": "g-chatit",
+          "lemme": "châtie",
+          "html": "Le hifil de <span class=\"gr\">yāsar</span> signifie proprement « instruire par la correction », « former par l'épreuve ». Segond oscille ici entre « châtier » et « instruire » dans les versets voisins, rendant la polysémie mais la fragmentant. Le mot hébreu unit ce que nous séparons : la discipline n'est pas l'antithèse de l'enseignement, elle en est la forme la plus exigeante. Les rabbins du Talmud de Babylone (Berakhot 5a) y voyaient la preuve que les souffrances du juste sont elles-mêmes une pédagogie divine."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 11, 25-27",
+      "traduction": "Louis Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">25</span> En ce temps-là, Jésus prit la parole et dit : Je te <button class=\"mot\" data-g=\"g-loue\">loue</button>, Père, Seigneur du ciel et de la terre, de ce que tu as caché ces choses aux <button class=\"mot\" data-g=\"g-sages\">sages</button> et aux intelligents, et de ce que tu les as révélées aux petits enfants. <span class=\"s\">26</span> Oui, Père, je te loue de ce que tu l'as voulu ainsi. <span class=\"s\">27</span> Toutes choses m'ont été <button class=\"mot\" data-g=\"g-donnees\">données</button> par mon Père, et personne ne connaît le Fils si ce n'est le Père ; personne non plus ne connaît le Père si ce n'est le Fils et celui à qui le Fils veut le <button class=\"mot\" data-g=\"g-reveler\">révéler</button>.</p>",
+      "gloses": [
+        {
+          "id": "g-loue",
+          "lemme": "loue",
+          "html": "Le grec <span class=\"gr\">exomologoumai</span> est plus fort que le simple « louer » : c'est le « confesser », au sens biblique plein, à la fois reconnaissance de dette et proclamation publique. Segond l'atténue peut-être pour préserver l'intimité du moment, mais le verbe implique que Jésus s'engage tout entier, corps et voix, dans cette action de grâce. Origène, dans son Commentaire sur Matthieu, y entend le cri du Fils unique qui rend témoignage au Père devant toute créature."
+        },
+        {
+          "id": "g-sages",
+          "lemme": "sages",
+          "html": "Le grec <span class=\"gr\">sophôn</span> désigne les « sages », les détenteurs d'une <span class=\"gr\">sophia</span> qu'ils croient leur propre acquisition. Segond ajoute « et aux intelligents » (<span class=\"gr\">synetôn</span>), ceux qui se pensent capables de <span class=\"gr\">synienai</span>, de « comprendre ensemble », de saisir par eux-mêmes. Le renversement évangélique ne vise pas la connaissance elle-même, mais l'orgueil de la possession : les « petits enfants » (<span class=\"gr\">nêpiois</span>), ceux qui ne peuvent que recevoir, sont précisément ceux qui ne bloquent pas le don par leur suffisance préalable."
+        },
+        {
+          "id": "g-donnees",
+          "lemme": "données",
+          "html": "Le grec <span class=\"gr\">paredothê</span>, de <span class=\"gr\">paradidômi</span>, est le verbe de la tradition, de la transmission, du don confié — mais aussi, plus durement, celui de la livraison, de la mise entre les mains d'un autre : la même racine que pour la « tradition » (<span class=\"gr\">paradosis</span>) et, tragiquement, pour la trahison de Judas. Segond traduit sobrement « données », un don paisible qui efface l'ombre plus rude que porte le verbe grec. Calvin, dans son Harmonie évangélique, insiste sur le paradoxe que le mot recouvre : tout est donné au Fils, mais ce « tout » n'est pas possession statique, il est mission dynamique, charge de révéler le Père."
+        },
+        {
+          "id": "g-reveler",
+          "lemme": "révéler",
+          "html": "Le grec <span class=\"gr\">apokalypsai</span>, de <span class=\"gr\">apokaluptô</span>, est le verbe de l'apocalypse, du dévoilement qui arrache le voile. Segond le rend par « révéler », qui a perdu en français sa force étymologique (du latin <span class=\"gr\">revelare</span>, « dévoiler »). Ce n'est pas une information transmise, c'est une présence rendue visible. Le Fils ne « dit » pas le Père, il le <span class=\"gr\">apokaluptei</span> : il fait que celui qui était caché sous le voile de la majesté inaccessible devienne proche, touchable, recevable par celui à qui il le veut — le vouloir du Fils, ici, est le lieu même de la grâce élective."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le cri du Fils dans la déroute",
+      "corps_html": "Matthieu place cette prière à un moment de crise : Jésus vient de dénoncer les villes du lac, Chorazin et Bethsaïde, qui n'ont pas converti malgré ses miracles. C'est le constat d'un échec apparent, le désarroi du prophète devant l'endurcissement. C'est alors, non pas malgré mais au cœur de ce constat, qu'éclate le <span class=\"gr\">exomologoumai</span>. Chrysostome, dans ses Homélies sur Matthieu (34e homélie), y voit la leçon essentielle : le Fils ne dénonce pas pour accuser, il dénonce pour louer — la reconnaissance du mystère de l'élection dépasse le scandale du refus. Calvin, plus sobre, note que ce passage est le seul du premier évangile où le Fils s'adresse directement au Père en public, ce qui en fait une sorte de transposition trinitaire du <span class=\"gr\">Abba</span> de Marc. La prière de louange naît donc non du triomphe mais de l'obéissance acceptée dans l'incompréhension."
+    },
+    {
+      "titre": "L'Assyrien, figure de tout pouvoir autonome",
+      "corps_html": "Ésaïe 10 articule la grande théologie prophétique de l'instrument divin : l'Assyrien est à la fois utilisé et jugé, employé et puni. Cette tension structurelle — Dieu se sert du mal sans le cautionner, le mal se perd en croyant se servir de Dieu — a fasciné la réception. Calvin, dans son Commentaire sur Ésaïe, y lit la preuve que la providence n'abolit pas la responsabilité humaine : l'Assyrien « a la destruction dans le cœur » (<span class=\"gr\">verset 7</span>), sa méchanceté lui est propre, même si Dieu en use. Cette double vérité, que la théologie a parfois voulu trancher au profit de l'une ou l'autre, reste ici tenue dans l'équilibre prophétique : la verge de la colère se prend pour le bras qui la brandit, et cette illusion est précisément son crime, sa punition, sa révélation."
+    }
+  ],
+  "analogie": {
+    "titre": "La connaissance qui vient par dépossession",
+    "variantes": [
+      "Il t'arrive de poursuivre une compréhension, une maîtrise, une assurance dans la foi, comme si la certitude devait être conquise, méritée, tenue de ta propre force. Tu lis, tu interroges, tu cherches le système qui tout expliquerait. Et puis un jour, dans une nuit de fatigue ou d'échec, tu te retrouves sans ressource, sans argument, presque sans désir — et c'est là, dans ce vide, qu'une présence se fait sentir qui n'a rien à voir avec ce que tu avais construit. Ce n'est pas que tu aies trouvé ; c'est que, n'ayant plus rien à tenir, tu te laisses tenir.",
+      "Tu as peut-être vécu ces longues périodes où la prière semblait une lettre sans adresse, où les mots du psaume passaient sur toi comme sur une pierre. Tu croyais que c'était à toi de faire le premier pas, de produire le mouvement, de mériter par ta constance quelque réponse. Puis un matin, sans que tu saches pourquoi ce matin plutôt qu'un autre, le même verset lu cent fois s'est soudain ouvert — non parce que tu avais enfin compris, mais parce que tu avais cessé de vouloir comprendre. Le don n'attendait que cette démission de toi-même.",
+      "Il y a dans ta mémoire des paroles entendues dans l'enfance, des prières récitées sans les entendre, des vérités reçues comme on reçoit un nom qu'on n'a pas choisi. Tu les as portées sans les porter, elles étaient là sans être vivantes. Et puis, à l'âge où l'on se croit enfin capable de juger par soi-même, une épreuve, une rencontre, un silence, et ces mots remontent, intactes, avec une pertinence que tu ne leur avais jamais donnée. Tu comprends alors qu'ils ne t'avaient pas attendu : ils attendaient que tu deviennes quelqu'un qui puisse les recevoir, quelqu'un que seule la dépossession pouvait faire naître."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Fils ne dit pas : « Heureux les sages qui se font petits. » Il dit : « Tu les as cachées aux sages, et révélées aux petits enfants. » Ce n'est pas une méthode à imiter, c'est une grâce à recevoir.",
+    "geste": "Pose sur ton cœur, un instant, la main ouverte vers le haut — geste de celui qui ne prend pas, qui reçoit.",
+    "note": "Tu n'as pas à devenir stupide pour plaire à Dieu. Tu as à cesser de faire de ton intelligence une muraille contre lui."
+  },
+  "question": "Qu'est-ce en toi que tu continues de vouloir comprendre avant de pouvoir le recevoir ?",
+  "racines": [
+    {
+      "titre": "Origène sur le « petit enfant » intérieur",
+      "corps_html": "Dans son Commentaire sur Matthieu (XIII, 2), Origène distingue deux enfances : celle de l'âge, qui passe, et celle de l'âme, qui se conquiert. Le « petit enfant » digne du Royaume n'est pas l'ignorant, mais celui qui a « chassé de lui la malice », qui s'est fait « lieu de simplicité ». Cette simplicité n'est pas naïveté : c'est le fruit d'un travail spirituel, la dépouille de tout ce qui encombre la réception. Origène y voit l'état permanent du chrétien, jamais acquis, toujours à retrouver dans la prière.",
+      "attribution": "Origène, Commentaire sur Matthieu, XIII, 2"
+    },
+    {
+      "titre": "Calvin sur l'élection et le scandale",
+      "corps_html": "Calvin, dans l'Institution (III, 21-24), revient souvent sur ce passage comme sur le lieu où le mystère de l'élection cesse d'être spéculatif pour devenir louange. Il note que Jésus « ne s'informe point du pourquoi », il « se soumet à la volonté du Père ». Cette soumission n'est pas résignation : c'est l'accomplissement même de la filiation. Le scandale du choix divin — pourquoi lui, pourquoi pas moi ? — est ici transmué en action de grâce, parce que le Fils, en louant, fait de l'élection non un privilège exclusif mais une ouverture communicable.",
+      "attribution": "Jean Calvin, Institution chrétienne, III, 21-24"
+    },
+    {
+      "titre": "Chrysostome sur la prière dans l'échec",
+      "corps_html": "La 34e homélie de Chrysostome sur Matthieu est tout entière construite sur ce paradoxe : Jésus loue alors que les villes n'ont pas converti. « Autrui, dit le Père des Grecs, aurait maudit ; lui, il bénit. » Cette louange est le propre du Fils, sa signature trinitaire : où nous voyons échec, il voit mystère ; où nous voulons résultat, il veut Père. Chrysostome en tire une pédagogie de la désolation spirituelle : celui qui sait louer dans l'obscurité a dépassé le stade de l'utilisateur de Dieu pour entrer dans la familiarité du Fils.",
+      "attribution": "Jean Chrysostome, Homélies sur Matthieu, 34"
+    }
+  ]
+}
