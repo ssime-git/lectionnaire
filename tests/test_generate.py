@@ -9,6 +9,7 @@ from unittest.mock import Mock, patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import generate  # noqa: E402
+import valider  # noqa: E402
 
 SECRETS = {
     "CLOUDFLARE_ACCOUNT_ID": "account-id",
@@ -272,6 +273,114 @@ class JsonPropreTests(unittest.TestCase):
 
     def test_json_propre_accepte_le_json_nu(self) -> None:
         self.assertEqual(generate._json_propre('{"a": 1}'), {"a": 1})
+
+
+def _contrat_valide() -> dict:
+    """Le plus petit contrat qui passe valider.valider_contrat sans faute."""
+    return {
+        "date": "2026-07-15",
+        "date_humaine": "mercredi 15 juillet 2026",
+        "semaine": "15e semaine du Temps Ordinaire",
+        "ferie": "férie",
+        "deuterocanonique": False,
+        "liturgie": {"nom": "vert", "hex": "#2f6f4f", "hex_sombre": "#8fc9a8"},
+        "titre": "Essai",
+        "titre_html": 'Essai <span class="it">simple</span>',
+        "sous_titre": "Un sous-titre",
+        "traduction_globale": "Louis Segond 1910",
+        "references_brutes": [],
+        "gravure_alt": "une vigne",
+        "gravure_svg": generate._GRAVURE_ABSENTE,
+        "lectures": [{
+            "reference": "Mt 11, 25-27",
+            "classe": "evangile",
+            "corps_html": '<p><button class="mot" data-g="g-loue">loue</button></p>',
+            "gloses": [{"id": "g-loue", "lemme": "loue", "html": "Une glose."}],
+        }],
+        "contexte": [
+            {"titre": "a", "corps_html": "b"},
+            {"titre": "c", "corps_html": "d"},
+        ],
+        "analogie": {"titre": "t", "variantes": ["a", "b", "c"], "choisi": 0},
+        "invitation": {"intro": "i", "geste": "g", "note": "n"},
+        "question": "Une question ?",
+        "racines": [
+            {"titre": "r1", "corps_html": "c", "attribution": "Calvin"},
+            {"titre": "r2", "corps_html": "c", "attribution": "Chrysostome"},
+            {"titre": "r3", "corps_html": "c", "attribution": "Augustin"},
+        ],
+    }
+
+
+class NormaliserClassesTests(unittest.TestCase):
+    def test_normalise_les_classes_accentuees_ou_majuscules(self) -> None:
+        contenu = {"lectures": [
+            {"classe": "évangile"},
+            {"classe": "Psaume "},
+            {"classe": "psaume"},
+            {"classe": "inconnu"},
+        ]}
+        generate._normaliser_classes(contenu)
+        self.assertEqual(
+            [lec["classe"] for lec in contenu["lectures"]],
+            ["evangile", "psaume", "psaume", "inconnu"],
+        )
+
+
+class ReparerTests(unittest.TestCase):
+    def _casser(self, contrat: dict) -> dict:
+        contrat["lectures"][0]["corps_html"] = "<p>loue</p>"  # glose orpheline
+        return contrat
+
+    def test_le_contrat_valide_de_reference_est_bien_valide(self) -> None:
+        self.assertEqual(valider.valider_contrat(_contrat_valide()), [])
+
+    def test_reparer_corrige_puis_valide(self) -> None:
+        casse = self._casser(_contrat_valide())
+        fautes = valider.valider_contrat(casse)
+        self.assertTrue(fautes)
+        repare = {k: v for k, v in _contrat_valide().items() if k != "gravure_svg"}
+        with patch(
+            "generate._appel",
+            return_value=generate.json.dumps(repare, ensure_ascii=False),
+        ) as appel:
+            resultat = generate._reparer(casse, fautes)
+        self.assertEqual(valider.valider_contrat(resultat), [])
+        self.assertEqual(appel.call_count, 1)
+        # Les fautes exactes sont montrées au modèle, la gravure ne l'est pas.
+        demande = appel.call_args.args[1]
+        self.assertIn("g-loue", demande)
+        self.assertNotIn("gravure_svg", demande)
+
+    def test_reparer_reimpose_les_champs_deterministes(self) -> None:
+        casse = self._casser(_contrat_valide())
+        fautes = valider.valider_contrat(casse)
+        repare = {k: v for k, v in _contrat_valide().items() if k != "gravure_svg"}
+        repare["liturgie"] = {"nom": "violet"}
+        repare["date"] = "1999-01-01"
+        with patch(
+            "generate._appel",
+            return_value=generate.json.dumps(repare, ensure_ascii=False),
+        ):
+            resultat = generate._reparer(casse, fautes)
+        self.assertEqual(resultat["liturgie"]["nom"], "vert")
+        self.assertEqual(resultat["date"], "2026-07-15")
+        self.assertEqual(resultat["gravure_svg"], generate._GRAVURE_ABSENTE)
+
+    def test_reparer_abandonne_apres_deux_essais(self) -> None:
+        casse = self._casser(_contrat_valide())
+        fautes = valider.valider_contrat(casse)
+        toujours_casse = {
+            k: v for k, v in self._casser(_contrat_valide()).items()
+            if k != "gravure_svg"
+        }
+        with patch(
+            "generate._appel",
+            return_value=generate.json.dumps(toujours_casse, ensure_ascii=False),
+        ) as appel:
+            with self.assertRaisesRegex(ValueError, "toujours invalide"):
+                generate._reparer(casse, fautes)
+        self.assertEqual(appel.call_count, 2)
 
 
 class ContratTests(unittest.TestCase):

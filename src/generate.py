@@ -18,6 +18,7 @@ import os
 import re
 import subprocess
 import time
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +26,7 @@ import requests
 
 from refs import recuperer, texte_segond  # type: ignore
 from liturgie import depuis_aelf  # type: ignore
+from valider import CLASSES_CONNUES, valider_contrat  # type: ignore
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -260,6 +262,72 @@ def _generer_gravure(alt: str) -> str:
     return _GRAVURE_ABSENTE
 
 
+# --------- La réparation : le validateur dicte, le modèle corrige ----------
+# Les fautes récurrentes (glose sans bouton, classe accentuée) ne justifient
+# pas de jeter toute la page : on renvoie le JSON au modèle avec la liste
+# exacte des fautes, deux fois au plus, avant d'abandonner.
+REPARATEUR = """Tu répares un JSON de page d'étude biblique refusé par le \
+validateur. Tu reçois le JSON et la liste exacte des fautes. Tu corriges \
+UNIQUEMENT ce que les fautes exigent, sans réécrire le reste :
+- une glose sans bouton : insère <button class="mot" data-g="ID">mot</button> \
+dans corps_html, autour du mot que la glose commente, avec le même id ;
+- un bouton sans glose : ajoute la glose manquante dans la liste gloses ;
+- une classe inconnue : remplace par '' ou 'psaume' ou 'evangile' ou \
+'genealogie' — minuscules, sans accent, jamais 'évangile'.
+Tu réponds STRICTEMENT avec le JSON complet corrigé, sans texte autour."""
+
+# Ce qui ne vient pas du modèle n'est jamais repris de sa réponse.
+CHAMPS_DETERMINISTES = (
+    "date", "date_humaine", "semaine", "ferie", "liturgie", "deuterocanonique",
+    "references_brutes", "traduction_globale", "gravure_svg",
+)
+
+
+def _normaliser_classes(contenu: dict) -> None:
+    """Répare sans LLM la faute la plus courante : une classe accentuée ou
+    majuscule ('évangile', 'Psaume') là où le contrat exige l'identifiant exact."""
+    for lec in contenu.get("lectures", []):
+        classe = lec.get("classe")
+        if not isinstance(classe, str) or classe in CLASSES_CONNUES:
+            continue
+        aplati = (
+            unicodedata.normalize("NFKD", classe)
+            .encode("ascii", "ignore").decode("ascii").lower().strip()
+        )
+        if aplati in CLASSES_CONNUES:
+            lec["classe"] = aplati
+
+
+def _reparer(contrat: dict, fautes: list[str], essais: int = 2) -> dict:
+    """Renvoie le contrat au modèle avec ses fautes jusqu'à ce que la
+    validation passe. Lève ValueError une fois les essais épuisés."""
+    for essai in range(essais):
+        print(f"⚠  Contrat refusé ({len(fautes)} faute(s)), "
+              f"réparation {essai + 1}/{essais}…")
+        # La gravure sort d'un circuit déjà validé : inutile de l'exposer.
+        allege = {k: v for k, v in contrat.items() if k != "gravure_svg"}
+        demande = json.dumps(
+            {"json_a_reparer": allege, "fautes": fautes}, ensure_ascii=False
+        )
+        try:
+            repare = _json_propre(_appel(REPARATEUR, demande))
+        except (RuntimeError, json.JSONDecodeError) as exc:
+            print(f"⚠  Réparation {essai + 1} échouée ({exc}).")
+            continue
+        for cle in CHAMPS_DETERMINISTES:
+            if cle in contrat:
+                repare[cle] = contrat[cle]
+        _normaliser_classes(repare)
+        contrat = repare
+        fautes = valider_contrat(contrat)
+        if not fautes:
+            print("✓ Contrat réparé.")
+            return contrat
+    raise ValueError(
+        "Contrat toujours invalide après réparation : " + " ; ".join(fautes)
+    )
+
+
 # --------- Le prompt système : c'est ICI que vit la VOIX du projet ---------
 # La qualité ne vient pas du modèle mais de ce cadrage. C'est le garde-fou
 # herméneutique + le ton (Chrysostome vulgarisateur, pas eiségèse actu).
@@ -328,10 +396,16 @@ def construire_json(date_iso: str) -> dict:
             "suite_hier (une phrase reliant au texte de la veille, ou null), "
             "gravure_alt (description du bois gravé à dessiner), "
             "lectures (liste, une par lecture reçue, {etiquette, reference, "
-            "traduction, classe: ''|'psaume'|'evangile', corps_html avec les "
+            "traduction, classe: ''|'psaume'|'evangile' (EXACTEMENT l'une de "
+            "ces valeurs, minuscules, sans accent — jamais 'évangile'), "
+            "corps_html avec les "
             "sigles de verset <span class=\"s\">N</span> et les mots glosables "
             "en <button class=\"mot\" data-g=\"g-xxx\">…</button>, "
-            "gloses: [{id: 'g-xxx', lemme: court, html: la glose}]}), "
+            "gloses: [{id: 'g-xxx', lemme: court, html: la glose}]}). "
+            "APPARIEMENT OBLIGATOIRE : chaque id de gloses doit avoir son "
+            "<button data-g=\"…\"> dans corps_html, et chaque bouton sa glose "
+            "— aucune glose orpheline, aucun bouton mort ; vérifie cet "
+            "appariement avant de répondre, "
             "contexte (liste de 2 {titre, corps_html}), "
             "analogie {titre, variantes: [3 paragraphes distincts], choisi: 0}, "
             "invitation {intro, geste, note}, "
@@ -408,6 +482,12 @@ def construire_json(date_iso: str) -> dict:
             f"Contrat incomplet, le rendu échouerait : {', '.join(manquantes)}. "
             f"Le modèle n'a pas respecté la consigne — relancer ou corriger à la main."
         )
+    # 4) Le validateur passe AVANT l'écriture : ce qu'il refuse part en
+    #    réparation, au lieu de faire échouer le workflow deux étapes plus loin.
+    _normaliser_classes(contrat)
+    fautes = valider_contrat(contrat)
+    if fautes:
+        contrat = _reparer(contrat, fautes)
     if contrat["gravure_svg"] is _GRAVURE_ABSENTE:
         print("⚠  Pas de bois gravé pour ce jour : la page paraîtra sans image. "
               "Ajoute 'gravure_svg' à la main dans le JSON.")

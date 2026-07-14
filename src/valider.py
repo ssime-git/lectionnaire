@@ -33,11 +33,17 @@ SOURCES_INTERDITES = re.compile(
 
 
 def valider(chemin: Path) -> list[str]:
-    fautes: list[str] = []
     try:
         d = json.loads(chemin.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         return [f"JSON invalide : {e}"]
+    return valider_contrat(d)
+
+
+def valider_contrat(d: dict) -> list[str]:
+    """Même contrôle que `valider`, mais sur un dict déjà chargé — pour que
+    generate.py puisse refuser (et faire réparer) un contrat avant de l'écrire."""
+    fautes: list[str] = []
 
     # 1. Clés du contrat
     for k in sorted(CLES_REQUISES - set(d)):
