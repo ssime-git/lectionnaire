@@ -62,17 +62,27 @@ jobs:
           CLOUDFLARE_AI_API_TOKEN: ${{ secrets.CLOUDFLARE_AI_API_TOKEN }}
         run: make generate DATE=${{ steps.date.outputs.date }}
 
-      # Filet de secours : quota Workers AI épuisé (ou toute panne du moteur
-      # principal) → Claude Code headless, couvert par l'abonnement Claude Pro.
-      # Voie officielle : token généré par `claude setup-token`, stocké dans le
-      # secret CLAUDE_CODE_OAUTH_TOKEN.
+      # Un contrat généré mais refusé par le validateur (même après la passe de
+      # réparation côté generate.py) déclenche aussi la bascule : run du 14
+      # juillet, 9 fautes de gloses. Cette validation-ci est un aiguillage,
+      # pas un verdict — le verdict est l'étape « Valider le contrat ».
+      - name: Valider le brouillon Workers AI
+        id: validation-workers
+        if: steps.workers-ai.outcome == 'success'
+        continue-on-error: true
+        run: make validate DATE=${{ steps.date.outputs.date }}
+
+      # Filet de secours : quota Workers AI épuisé, panne du moteur principal,
+      # ou brouillon irréparable → Claude Code headless, couvert par
+      # l'abonnement Claude Pro. Voie officielle : token généré par
+      # `claude setup-token`, stocké dans le secret CLAUDE_CODE_OAUTH_TOKEN.
       - name: Générer avec Claude en secours (abonnement Pro)
-        if: steps.workers-ai.outcome == 'failure'
+        if: steps.workers-ai.outcome == 'failure' || steps.validation-workers.outcome == 'failure'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           LECTIONNAIRE_MOTEUR: claude
         run: |
-          echo "Workers AI a échoué — bascule sur Claude (claude-sonnet-5)."
+          echo "Workers AI a échoué ou son brouillon est invalide — bascule sur Claude (claude-sonnet-5)."
           npm install -g @anthropic-ai/claude-code
           make generate DATE=${{ steps.date.outputs.date }}
 
