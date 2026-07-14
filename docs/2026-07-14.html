@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cité trahie — mardi</title>
+<meta name="description" content="Quand le cœur tremble plus que les murailles">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mardi · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+<span class="suite">Hier, Isaïe annonçait la venue d'un prince de paix ; aujourd'hui, le même prophète montre ce prince naissant au milieu d'une cité qui préfère ses alliances humaines à la foi qui sauve.</span></p>
+    <h1>Cité <span class="it">trahie</span></h1>
+    <p class="chapeau">Quand le cœur tremble plus que les murailles</p>
+    <figure class="gravure" aria-label="Jérusalem vue du nord, avec les montagnes de Samarie à l'horizon ; au premier plan, un roi agenouillé devant le prophète, le cœur visible comme une petite flamme vacillante entre deux eaux."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 125 h320"/><path d="M20 125 q40 -30 80 -20 q50 -25 100 -15 q60 -20 110 -5"/><path d="M50 105 q30 -8 50 5"/><path d="M160 90 q40 -10 70 5"/><path d="M260 85 q30 -5 50 10"/><path d="M80 125 v-35 q-5 -15 -15 -20 q15 5 20 20 v35"/><path d="M85 90 q-8 5 -12 15"/><path d="M85 75 q5 -8 12 -5"/><path d="M85 75 q-3 -10 5 -12"/><path d="M140 125 l-8 -45 q-3 -12 5 -20 q8 8 5 20 l-8 45"/><path d="M132 80 q-10 5 -15 15"/><path d="M132 60 q6 -5 10 2"/><path d="M60 125 q5 -25 15 -40"/><path d="M120 125 q-5 -20 -10 -35"/><path d="M200 125 q8 -15 12 -30"/><path d="M280 125 q-5 -12 -8 -25"/></g><g class="trait-rubrique"><path d="M82 85 q-4 8 0 14 q4 -6 0 -14"/><path d="M78 92 q-6 2 -4 8 q6 -3 4 -8"/><path d="M86 92 q6 2 4 8 q-6 -3 -4 -8"/></g><g class="trait-liturgie"><path d="M80 82 q3 -6 6 0 q-3 4 -6 0"/><path d="M81 84 l-2 4"/><path d="M83 84 l2 4"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 7, 1-9 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> Il arriva, du temps d'Achaz, fils de Jotham, fils d'Ozias, roi de Juda, que Retsin, roi de Syrie, et Pékach, fils de Remalia, roi d'Israël, montèrent contre Jérusalem, pour l'assiéger. Mais ils ne purent la prendre. <span class="s">2</span> On vint dire à la maison de David : Les Syriens sont campés en <button class="mot" data-g="g-ephraim">Éphraïm</button>. Et le cœur d'Achaz et le cœur de son peuple s'agitèrent, comme s'agitent les arbres de la forêt sous l'action du vent. <span class="s">3</span> Alors l'Éternel dit à Ésaïe : Sors au-devant d'Achaz, toi et <button class="mot" data-g="g-shear">Schear-Jaschub</button>, ton fils, vers l'extrémité du canal de l'étang supérieur, sur la route du champ du foulon. <span class="s">4</span> Tu lui diras : Garde-toi de te laisser aller à la crainte, et que ton cœur ne s'effraie point de ces deux bouts de tisons fumants, de l'ardeur de la colère de Retsin et de la Syrie, et du fils de Remalia. <span class="s">5</span> De ce que la Syrie, Éphraïm et le fils de Remalia méditent du mal contre toi, <span class="s">6</span> disant : Allons contre Juda, assiégeons les villes, emparons-nous d'elles, et proclamons-y pour roi le fils de <button class="mot" data-g="g-tabeel">Tabeel</button> — <span class="s">7</span> ainsi parle le Seigneur, l'Éternel : Cela n'arrivera point, cela n'aura pas lieu. <span class="s">8</span> Car le chef de la Syrie, c'est Damas, et le chef de Damas, c'est Retsin ; encore soixante-cinq ans, et Éphraïm ne sera plus un peuple. <span class="s">9</span> Et le chef d'Éphraïm, c'est Samarie, et le chef de Samarie, c'est le fils de Remalia. Si vous n'avez pas la <button class="mot" data-g="g-emounah">foi</button>, vous ne subsisterez point.</div>
+        <div class="glose" id="g-ephraim"><span class="lemme">Éphraïm</span> Segond garde le nom propre, alors que le contexte demande qu'on l'entende comme synonyme du royaume déchu d'Israël. En hébreu, <span class="gr">אֶפְרַיִם</span> désigne la tribu la plus puissante du nord, devenue métonymie du royaume tout entier. Le choix de ne pas traduire par « Israël » ou « le royaume du nord » laisse le lecteur du xxe siècle dans l'ignorance de la fracture : deux royaumes issus d'un même peuple, désormais coalisés contre Juda. Les rabbins du Talmud de Jérusalem (Shekalim VI, 1) rappellent qu'Éphraïm, « fruité », porte encore le nom de la bénédiction de Jacob, ce qui rend plus amère encore sa révolte contre la maison de David.</div>
+        <div class="glose" id="g-shear"><span class="lemme">Schear-Jaschub</span> Segond translittère ce nom propre sans en livrer le sens prophétique : <span class="gr">שְׁאָר יָשׁוּב</span>, « un reste reviendra ». L'enfant du prophète est lui-même oracle ambulant, comme <button class="mot" data-g="g-emmanuel">Emmanuel</button> plus loin. Calvin, dans son <em>Commentaire sur Ésaïe</em> (1550), souligne que ce nom est à la fois menace et promesse : menace pour le royaume entier, promesse pour le « reste » fidèle. Le prophète marche avec son fils vers le roi tremblant ; la promesse est incarnée, portée par une chair d'enfant, avant même d'être prononcée.</div>
+        <div class="glose" id="g-tabeel"><span class="lemme">Tabeel</span> Nom araméen, <span class="gr">טָבְאֵל</span>, que Segond laisse opaque : « Dieu est bon », ironie cruelle puisque ce Tabeel est un instrument de rébellion contre le dessein divin. On ne sait rien de lui, et c'est précisément le point. Les historiens (E. J. Young, <em>The Book of Isaiah</em>, 1965, reprenant des données assyriennes) suggèrent un vassal syrien, un homme de paille. Le prophète le nomme pour le réduire à néant : un nom qui sonne comme une bénédiction, porté par celui qui voudrait usurper le trône de la promesse.</div>
+        <div class="glose" id="g-emounah"><span class="lemme">foi</span> Segond traduit <span class="gr">אֱמוּנָה</span> (<em>emounah</em>) par « foi », alors que le terme hébreu porte le poids de la fidélité, de la solidité, de la tenue. Ce n'est pas l'assentiment à une doctrine, mais l'ancrage dans la parole de Dieu malgré l'assaut visible. Le Targum Jonathan paraphrase par « si vous n'écoutez pas la parole du Seigneur ». Chrysostome, dans ses <em>Homélies sur Ésaïe</em> (incomplet, mais cité par Théodoret de Cyr), entendait là une exigence de <em>confiance</em> active, non de simple croyance : le cœur qui s'appuie sur Dieu tient, le cœur qui calcule ses alliances s'effondre. Le verset 9b, <em>im lo taaminu ki lo teamenu</em>, joue sur la racine : sans cette emounah, point de <em>néaménouth</em>, de stabilité.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 47 (48), 2-3ab, 3cd-4, 5-6, 7-8 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> L'Éternel est grand, il est l'objet de toutes les louanges, dans la ville de notre Dieu, sur sa montagne sainte. <span class="s">3</span> <button class="mot" data-g="g-beaute">Belle</button> est la colline, joie de toute la terre, la montagne de Sion ; le côté septentrional, c'est la ville du grand roi. <span class="s">4</span> Dieu, dans ses palais, est connu pour une haute <button class="mot" data-g="g-misgab">retraite</button>. <span class="s">5</span> Car voici, les rois s'étaient concertés : ils n'ont fait que passer ensemble. <span class="s">6</span> Ils ont regardé, tout stupéfaits, ils ont été saisis d'épouvante, ils ont pris la fuite. <span class="s">7</span> Là un tremblement les a saisis, comme la douleur d'une femme qui accouche. <span class="s">8</span> Ils ont été chassés comme par le vent d'orient, qui brise les navires de <button class="mot" data-g="g-tarsis">Tarsis</button>.</div>
+        <div class="glose" id="g-beaute"><span class="lemme">belle</span> Segond traduit <span class="gr">נָאוָה</span> (<em>na'wah</em>) par « belle », adoucissant le terme hébreu qui porte plutôt l'idée de convenance, d'harmonie, de ce qui est à sa place. La Vulgate avait <em>speciosa</em>, mais les rabbins (Rachi, commentaire sur ce psaume) insistent sur le <em>shalom</em>, la paix des choses en leur ordre. Ce n'est pas un jugement esthétique sur Jérusalem, c'est l'affirmation que la ville où Dieu demeure est « bien assise », fondée, conforme à son dessein. La beauté ici est stabilité, non parure.</div>
+        <div class="glose" id="g-misgab"><span class="lemme">retraite</span> Segond choisit « retraite » pour <span class="gr">מִשְׂגָּב</span> (<em>misgab</em>), mot rare, de la racine <em>sgb</em>, « être élevé, inaccessible ». La Septante avait <em>ὑπερασπισμός</em>, « bouclier par-dessus ». Calvin préfère « haut-lieu fortifié », soulignant que Dieu lui-même est la citadelle. Le psalmiste ne dit pas que la ville est forte, mais que Dieu en est la force — et cette force se connaît (<em>noda</em>, « est connu »), elle s'éprouve dans l'épreuve, non dans l'inspection tranquille.</div>
+        <div class="glose" id="g-tarsis"><span class="lemme">Tarsis</span> Segond garde le nom propre, alors que le sens symbolique importe : Tarsis, loin au bout de la Méditerranée, c'est l'extrême puissance maritime, l'empire lointain dont on redoute la flotte. Le psalmiste fait mémoire d'une défaite des armées assyriennes ou babyloniennes — on pense à la retraite de Sennachérib en 701, racontée en 2 Rois 19 — mais il la lit comme œuvre de Dieu seul, « par le vent d'orient ». Le <em>ruach</em> oriental est le même souffle qui passait sur les eaux en Genèse 1,2 ; il n'y a pas de hasard dans l'histoire, seulement une providence que le psaume nomme après coup.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 11, 20-24 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">20</span> Alors il se mit à faire des <button class="mot" data-g="g-oupai">reproches</button> aux villes dans lesquelles avaient eu lieu la plupart de ses miracles, parce qu'elles ne s'étaient pas repenties. <span class="s">21</span> Malheur à toi, Chorazin ! malheur à toi, Bethsaïda ! car, si les miracles qui ont été faits au milieu de vous avaient été faits dans Tyr et dans Sidon, il y a longtemps qu'elles se seraient repenties en <button class="mot" data-g="g-sakkos">sacre et en cendre</button>. <span class="s">22</span> C'est pourquoi je vous le dis, au jour du jugement, Tyr et Sidon seront traitées moins rigoureusement que vous. <span class="s">23</span> Et toi, Capernaüm, seras-tu élevée jusqu'au ciel ? Tu descendras jusqu'aux <button class="mot" data-g="g-hades">enfers</button>. Car, si les miracles qui ont été faits au milieu de toi avaient été faits dans Sodome, elle subsisterait encore aujourd'hui. <span class="s">24</span> C'est pourquoi je vous le dis, au jour du jugement, le pays de Sodome sera traité moins rigoureusement que toi.</div>
+        <div class="glose" id="g-oupai"><span class="lemme">reproches</span> Segond atténue : <span class="gr">ὀνειδίζειν</span> (<em>oneidizein</em>) est plus fort, « mettre en accusation », « couvrir de honte publique ». Le verbe appartient au registre du procès, non de la simple réprimande. Jésus ne gourmande pas ; il constitue un tribunal. Chrysostome, <em>Homélies sur Matthieu</em>, 38, 3, s'effraie de cette gravité : le Christ qui a pleuré sur Jérusalem (Lc 19, 41) prononce ici une sentence sans appel, parce que le don reçu et rejeté crée une responsabilité proportionnée.</div>
+        <div class="glose" id="g-sakkos"><span class="lemme">sacre et en cendre</span> Segond traduit <span class="gr">σάκκῳ καὶ σποδῷ</span> (<em>sakkô kai spodô</em>) par « sac et cendre », conservant la matérialité du geste biblique. Le <em>sakk</em> hébreu, toile rude portée sur la peau nue, et la <em>epher</em>, cendre de l'âtre répandue sur la tête, sont le langage corporel du deuil et de la conversion en Israël. Jonas 3, 6 le montre chez le roi de Ninive. Mais Jésus ne demande pas le geste : il dit que Tyr et Sidon l'auraient fait, ce qui signifie que Chorazin et Bethsaïde n'ont même pas atteint cette apparence de repentance. La condamnation est d'autant plus profonde qu'elle porte sur l'indifférence, non sur l'hypocrisie.</div>
+        <div class="glose" id="g-hades"><span class="lemme">enfers</span> Segond traduit <span class="gr">ᾅδης</span> (<em>háidês</em>) par « enfers », dans le sens biblique du séjour des morts, non de la géhenne des damné·e·s. Le mot grec, emprunté à la mythologie (Hadès, dieu des morts), est dépouillé par la Septante de ses connotations païennes pour désigner le <em>sheol</em> hébreu, la fosse commune de l'attente. Jésus ne dit pas que Capernaüm brûle, mais qu'elle descend, qu'elle s'abaisse au lieu le plus bas, annulant son orgueil d'avoir été « élevée jusqu'au ciel ». La chute n'est pas punition extérieure, c'est l'aboutissement logique d'une élévation sans gratitude : le vide intérieur qui suit le refus de la grâce.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le canal de l'étang supérieur</h3><p>Le champ du foulon, mentionné en Is 7, 3, se situe à l'entrée nord-ouest de Jérusalem, là où le conduit des eaux de Gihon alimentait la ville. C'est un lieu de vulnérabilité : Achaz inspecte les défenses, calcule les approvisionnements, tandis que les armées syro-éphraïmites campent à quelques lieues. Le prophète l'y rejoint, non pour un conseil stratégique, mais pour une épreuve de foi. Le contexte historique est celui de la crise de 735-732 avant J.-C., quand le roi d'Israël Pékach et le roi de Syrie Retsin tentent de forcer Juda à rejoindre leur coalition anti-assyrienne. Achaz panique ; il va bientôt appeler Tiglat-Phélasar III à son secours (2 R 16, 7), vendant l'indépendance de Juda pour une protection qui se révélera devastatrice. Le prophète, lui, propose un autre chemin : ne pas demander de signe, ne pas calculer, mais croire que le trône de David tient par la promesse, non par les alliances.</p></div>
+      <div><h3>Chorazin, Bethsaïde, Capernaüm</h3><p>Ces trois villes du littoral de la Galilée formaient le triangle où Jésus avait concentré son ministère. Capernaüm, « village de Nahum », était son quartier général (Mc 2, 1). Bethsaïde, « maison de pêche », ville natale de Pierre, d'André et de Philippe (Jn 1, 44). Chorazin, à trois kilomètres au nord de Capernaüm, n'est mentionnée dans les Évangiles que ici. Leur proximité géographique rend plus cuisante leur exclusion : ce ne sont pas des villes païennes qui ont repoussé Jésus, mais des lieux où il a mangé, enseigné, guéri, ressuscité. La « woe » (<em>ouai</em>) prononcée contre elles est la même formule prophétique qu'en Ésaïe 5 et 10, mais appliquée au peuple de l'alliance. Jérôme, dans son <em>Commentaire sur Matthieu</em>, note que la condamnation porte sur ceux qui ont vu et n'ont pas voulu voir — le péché de Capernaüm n'est pas l'ignorance, c'est la familiarité blasée avec la grâce.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le don qui s'use sans être ouvert</h2>
+<p>Tu as vécu dans une maison où l'on priait, où les mots de l'Évangile passaient comme de l'air qu'on respire sans le compter. Tu les as entendus si souvent qu'ils ont fini par se confondre avec le bruit de la routine, et un jour tu t'es aperçu·e que tu ne savais plus si tu y croyais vraiment ou si tu croyais seulement à l'habitude de croire. C'est alors que le silence de Dieu devient terrifiant — non parce qu'il s'est éloigné, mais parce que tu n'as plus l'oreille tendue pour l'entendre. Le texte d'aujourd'hui dit que cette familiarité est le risque le plus grave : voir le miracle et ne plus y prêter attention, c'est pire que de ne pas le voir du tout.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Prends un moment, ce soir, pour nommer devant Dieu une grâce que tu as reçue et laissée s'émousser.</p>
+      <p class="geste">Écris sur un papier un mot, un lieu, un visage lié à cette grâce ; pose-le devant toi, ou porte-le sur toi, comme mémoire de ce que tu ne veux plus oublier.</p>
+      <small>Ce n'est pas une promesse de faire mieux ; c'est un acte de reconnaissance, le premier pas de la repentance que le Christ demande.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, dans ta vie, a reçu tant de présence de Dieu que tu as fini par ne plus y faire attention — et que signifierait de rouvrir les yeux ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur la foi d'Ésaïe 7, 9</h3>
+          <p>Dans son <em>Commentaire sur le prophète Ésaïe</em> (1551), Calvin écrit que « la foi dont parle le prophète n'est pas une opinion flottante ou une imagination vaine, mais une ferme et stable confiance du cœur ». Il ajoute que la chute d'Achaz est précisément celle d'un homme « qui, ayant reçu les oracles de Dieu, s'en remet néanmoins aux armes de la chair ». Pour Calvin, le jeu de mots hébreu <em>taaminu / te'amenu</em> est crucial : la foi est le fondement (<em>fundamentum</em>) sans lequel l'édifice de la vie spirituelle s'écroule. La traduction de Segond par « subsister » est donc faible ; Calvin préférait « être établi », avec l'idée d'une fondation que rien n'ébranle.</p>
+<p class="attrib">Jean Calvin, <em>Commentaire sur Ésaïe</em>, 7, 9</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur les villes impénitentes</h3>
+          <p>Jean Chrysostome, dans sa trente-huitième homélie sur Matthieu, s'arrête longuement sur les « malheur » de Mt 11, 21. Il remarque que Jésus ne reproche pas à Tyr et Sidon d'être païennes, ni à Sodome d'être criminelle : il reproche à Chorazin et à Bethsaïde d'avoir vu et d'avoir persisté. « Ce n'est pas la nature du péché qui condamne ici, dit-il, mais le refus de la guérison. » Il compare ces villes à un malade qui, ayant le médecin à son chevet, refuse le remède. La condamnation n'est pas vengeance, elle est « constatation d'une maladie devenue incurable par refus de traitement ». Cette lecture médicale, typique de l'Antiochène, évite toute moralisation : le Christ ne menace pas, il constate que la grâce refusée devient jugement en soi.</p>
+<p class="attrib">Jean Chrysostome, <em>Homélies sur Matthieu</em>, 38, 3</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La réception rabbinique du reste</h3>
+          <p>Le Talmud de Babylone, traité Sanhédrin (97b), discute le « reste qui reviendra » (<em>shear yashuv</em>) d'Ésaïe 7, 3. Les rabbins s'interrogent : le reste revient-il parce qu'il est fidèle, ou devient-il fidèle parce qu'il revient ? La réponse du Talmud, dans la voix de Rabbi Yéhoudah, est que le retour précède la fidélité : « Le Saint, béni soit-il, ne repousse pas ceux qui tournent vers lui le visage, même s'ils n'ont encore rien changé en eux-mêmes. » Cette lecture ouvre une brèche d'espérance dans le texte d'Isaïe, qui semble d'abord menaçant. Le fils du prophète, Schear-Jaschub, porte donc un nom qui est promesse avant d'être condition : le retour est possible, même pour Achaz, même pour nous, dès que le visage se tourne — ne serait-ce qu'un instant — vers le Dieu qui parle.</p>
+<p class="attrib">Talmud de Babylone, Sanhédrin 97b</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 15ème Semaine du Temps Ordinaire — Is 7, 1-9 ; Mt 11, 20-24.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable. <a href="./">Archive</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
