@@ -2,19 +2,36 @@
 <html lang="fr"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lectionnaire — archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
 <style>
-body{font-family:'EB Garamond',serif;background:#EFEAE0;color:#26302A;max-width:640px;margin:0 auto;padding:3rem 1.5rem}
+:root{color-scheme:light dark;
+  --papier:#EFEAE0;--ink:#26302A;--muet:#8E8B7C;--filet:#DAD1BE;--accent:#7A5230;--rubrique:#A33324}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}}
+:root[data-theme="dark"]{
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+body{font-family:'EB Garamond',serif;background:var(--papier);color:var(--ink);max-width:640px;margin:0 auto;padding:3rem 1.5rem}
 h1{font-weight:500;font-size:2.2rem;margin-bottom:.3rem}
-p.sous{color:#8E8B7C;margin-bottom:2.5rem}
+p.sous{color:var(--muet);margin-bottom:1.2rem}
+nav.pages{margin-bottom:2.5rem;font-variant:small-caps;letter-spacing:.08em;font-size:.95rem}
+nav.pages a{color:var(--accent);text-decoration:none;margin-right:1.4rem}
+nav.pages a:hover{text-decoration:underline}
 ul{list-style:none;padding:0}
-li a{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid #DAD1BE;text-decoration:none;color:inherit}
-li a:hover .t{color:#7A5230}
-.d{font-family:'Archivo',sans-serif;font-size:.8rem;color:#8E8B7C;min-width:5.5rem}
+li a{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--filet);text-decoration:none;color:inherit}
+li a:hover .t{color:var(--accent)}
+.d{font-family:'Archivo',sans-serif;font-size:.8rem;color:var(--muet);min-width:5.5rem}
 .t{font-size:1.25rem;transition:color .2s}
+.auj{font-family:'Archivo',sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.05rem .45rem;margin-left:auto}
+#basculer-theme{position:fixed;top:1rem;right:1rem;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer}
+#basculer-theme:hover{border-color:var(--accent)}
 </style></head><body>
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
 <h1>Lectionnaire</h1>
 <p class="sous">Une invitation quotidienne à la découverte des Écritures.</p>
+<nav class="pages"><a href="./guide.html">Comment lire une page</a><a href="./calendrier.html">L'année liturgique</a></nav>
 <ul>
 <li><a href="./2026-12-17.html"><span class="d">17/12/2026</span><span class="t">La chaîne brisée</span></a></li>
 <li><a href="./2026-07-15.html"><span class="d">15/07/2026</span><span class="t">Le caché révélé</span></a></li>
@@ -24,4 +41,17 @@ li a:hover .t{color:#7A5230}
 <li><a href="./2026-07-08.html"><span class="d">08/07/2026</span><span class="t">Champ nouveau</span></a></li>
 <li><a href="./2026-02-21.html"><span class="d">21/02/2026</span><span class="t">Le feu et l'eau</span></a></li>
 </ul>
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'\u2600':'\u263E'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+  var d=new Date();
+  var iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  var a=document.querySelector('a[href="./'+iso+'.html"]');
+  if(a)a.insertAdjacentHTML('beforeend','<span class="auj">aujourd\u2019hui</span>');
+})();
+</script>
 </body></html>

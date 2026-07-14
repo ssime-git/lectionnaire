@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'année liturgique — Lectionnaire</title>
+<meta name="description" content="La division de l'année liturgique expliquée simplement : Avent, Noël, temps ordinaire, Carême, Pâques — et pourquoi la page change de couleur.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+  --papier:#EFEAE0;--ink:#26302A;--muet:#8E8B7C;--filet:#DAD1BE;--accent:#7A5230;--rubrique:#A33324;
+  --vert:#345E44;--violet:#4C3A63;--blanc:#8C7B4E;--rouge:#8C2B22;--rose:#9C5F6B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B;
+  --vert:#6E9B7C;--violet:#9B84B8;--blanc:#D6BE83;--rouge:#D2685A;--rose:#D094A0}}
+:root[data-theme="dark"]{
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B;
+  --vert:#6E9B7C;--violet:#9B84B8;--blanc:#D6BE83;--rouge:#D2685A;--rose:#D094A0}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'EB Garamond',serif;background:var(--papier);color:var(--ink);font-size:1.15rem;line-height:1.6;max-width:640px;margin:0 auto;padding:3rem 1.5rem 4rem}
+h1{font-family:'Fraunces',serif;font-weight:500;font-size:2.2rem;line-height:1.1;margin-bottom:.4rem}
+p.sous{color:var(--muet);font-style:italic;margin-bottom:2rem}
+nav.retour{font-variant:small-caps;letter-spacing:.08em;font-size:.95rem;margin-bottom:2rem}
+nav.retour a{color:var(--accent);text-decoration:none;margin-right:1.4rem}
+nav.retour a:hover{text-decoration:underline}
+figure{margin:1.5rem auto 2.5rem;max-width:420px}
+figure svg{display:block;width:100%;height:auto}
+.anneau circle{fill:none;stroke-width:34}
+.avent,.careme{stroke:var(--violet)}
+.noel,.paques{stroke:var(--blanc)}
+.to{stroke:var(--vert)}
+svg text{font-family:'EB Garamond',serif;font-size:14px;fill:var(--muet)}
+svg .centre{font-family:'Fraunces',serif;font-size:17px;fill:var(--ink)}
+.temps{padding:1.1rem 0;border-top:1px solid var(--filet);display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:baseline}
+.pastille{width:14px;height:14px;border-radius:50%;position:relative;top:2px}
+.temps h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-bottom:.2rem}
+.temps .quand{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.88rem;margin-left:.6rem}
+.temps p{font-size:1.05rem;margin-top:.2rem}
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding-top:1.4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem}
+footer a{color:var(--rubrique)}
+#basculer-theme{position:fixed;top:1rem;right:1rem;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer}
+#basculer-theme:hover{border-color:var(--accent)}
+</style></head><body>
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav class="retour"><a href="./">← Archive</a><a href="./guide.html">Comment lire une page</a></nav>
+
+<h1>L'année liturgique</h1>
+<p class="sous">Pourquoi la page est verte aujourd'hui, violette en décembre — l'année chrétienne en un anneau.</p>
+
+<p>L'Église ne suit pas l'année civile : son année commence fin novembre,
+avec l'Avent, et raconte en douze mois toute l'histoire du salut — attente,
+naissance, vie publique, croix, résurrection, puis la longue croissance.
+Chaque temps a sa couleur, et c'est elle qui teinte le filet de chaque page.</p>
+
+<figure aria-label="Anneau de l'année liturgique : Avent, Noël, temps ordinaire, Carême, temps pascal, puis le long temps ordinaire.">
+<svg viewBox="-35 -20 370 340" xmlns="http://www.w3.org/2000/svg">
+  <g class="anneau" transform="rotate(-90 150 150)">
+    <circle cx="150" cy="150" r="90" class="avent"  stroke-dasharray="43.5 565.5"  stroke-dashoffset="0"/>
+    <circle cx="150" cy="150" r="90" class="noel"   stroke-dasharray="21.7 565.5"  stroke-dashoffset="-43.5"/>
+    <circle cx="150" cy="150" r="90" class="to"     stroke-dasharray="76.1 565.5"  stroke-dashoffset="-65.2"/>
+    <circle cx="150" cy="150" r="90" class="careme" stroke-dasharray="65.2 565.5"  stroke-dashoffset="-141.3"/>
+    <circle cx="150" cy="150" r="90" class="paques" stroke-dasharray="76.1 565.5"  stroke-dashoffset="-206.5"/>
+    <circle cx="150" cy="150" r="90" class="to"     stroke-dasharray="282.9 565.5" stroke-dashoffset="-282.6"/>
+  </g>
+  <text x="180" y="26" text-anchor="middle">Avent</text>
+  <text x="223" y="46" text-anchor="start">Noël</text>
+  <text x="266" y="100" text-anchor="start">ordinaire</text>
+  <text x="268" y="196" text-anchor="start">Carême</text>
+  <text x="203" y="272" text-anchor="middle">Pâques</text>
+  <text x="36" y="146" text-anchor="end">temps</text>
+  <text x="36" y="163" text-anchor="end">ordinaire</text>
+  <text x="150" y="145" text-anchor="middle" class="centre">une année,</text>
+  <text x="150" y="166" text-anchor="middle" class="centre">toute l'histoire</text>
+</svg>
+</figure>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--violet)"></span>
+  <div>
+    <h2>L'Avent <span class="quand">4 semaines avant Noël · violet</span></h2>
+    <p>L'année commence par une attente. Quatre semaines pour se préparer à
+    la venue du Christ — celle de Noël, et celle qu'on attend encore. Le
+    violet est la couleur du désir et de la conversion.</p>
+  </div>
+</div>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--blanc)"></span>
+  <div>
+    <h2>Noël <span class="quand">du 25 décembre au Baptême du Seigneur · blanc</span></h2>
+    <p>Dieu entre dans l'histoire comme un nouveau-né. Deux semaines de
+    fête ; le blanc (rendu ici en doré) dit la joie et la lumière.</p>
+  </div>
+</div>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--vert)"></span>
+  <div>
+    <h2>Le temps ordinaire <span class="quand">deux tronçons, ~33 semaines · vert</span></h2>
+    <p>« Ordinaire » ne veut pas dire banal : c'est le temps <em>ordonné</em>,
+    compté semaine après semaine, où l'on marche avec le Christ de sa vie
+    publique. C'est le plus long — comme dans une vie, l'essentiel se joue
+    dans la durée. Le vert est la couleur de la croissance. C'est là que
+    nous sommes la plus grande partie de l'année.</p>
+  </div>
+</div>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--violet)"></span>
+  <div>
+    <h2>Le Carême <span class="quand">40 jours avant Pâques · violet</span></h2>
+    <p>Du mercredi des Cendres au seuil de Pâques : quarante jours de
+    dépouillement, comme Israël au désert, comme Jésus avant sa vie
+    publique. Retour du violet — on se prépare à quelque chose de plus
+    grand que soi.</p>
+  </div>
+</div>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--blanc)"></span>
+  <div>
+    <h2>Le temps pascal <span class="quand">50 jours, de Pâques à la Pentecôte · blanc puis rouge</span></h2>
+    <p>Le sommet de l'année : la résurrection, fêtée pendant cinquante
+    jours — plus longtemps que le Carême n'a duré. Il s'achève à la
+    Pentecôte, vêtue de <span style="color:var(--rouge)">rouge</span>, la
+    couleur du feu de l'Esprit (et du sang des martyrs, les jours où on les
+    fête).</p>
+  </div>
+</div>
+
+<div class="temps">
+  <span class="pastille" style="background:var(--rose)"></span>
+  <div>
+    <h2>Et les autres couleurs ? <span class="quand">rose, rouge, blanc</span></h2>
+    <p>Deux dimanches par an, le violet s'éclaircit en rose : une pause de
+    joie au milieu de l'attente (3ᵉ d'Avent, 4ᵉ de Carême). Le rouge
+    revient au Vendredi saint et aux fêtes des martyrs ; le blanc, aux
+    grandes fêtes du Seigneur et des saints.</p>
+  </div>
+</div>
+
+<footer>
+La couleur de chaque page vient de ce calendrier, jamais d'un choix esthétique.<br>
+<a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+</script>
+</body></html>

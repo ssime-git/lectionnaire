@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment lire une page — Lectionnaire</title>
+<meta name="description" content="Le mode d'emploi du lectionnaire : ce que contient chaque page, et comment s'en servir jour après jour.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+  --papier:#EFEAE0;--ink:#26302A;--muet:#8E8B7C;--filet:#DAD1BE;--accent:#7A5230;--rubrique:#A33324;--creux:#E7E1D3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B;--creux:#1E1C23}}
+:root[data-theme="dark"]{
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B;--creux:#1E1C23}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'EB Garamond',serif;background:var(--papier);color:var(--ink);font-size:1.15rem;line-height:1.6;max-width:640px;margin:0 auto;padding:3rem 1.5rem 4rem}
+h1{font-family:'Fraunces',serif;font-weight:500;font-size:2.2rem;line-height:1.1;margin-bottom:.4rem}
+p.sous{color:var(--muet);font-style:italic;margin-bottom:2.2rem}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;margin:2.4rem 0 .7rem;padding-top:1.4rem;border-top:1px solid var(--filet)}
+h3{font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;color:var(--rubrique);margin:1.4rem 0 .3rem;font-weight:500}
+p{margin-bottom:.9rem}
+p em{font-style:italic}
+.exemple{border-left:2px solid var(--accent);padding:.4rem 0 .4rem 1rem;background:var(--creux);margin:.6rem 0 1rem;font-size:1.05rem}
+.exemple .mot-demo{cursor:pointer;border:0;background:none;font:inherit;color:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--accent)}
+nav.retour{font-variant:small-caps;letter-spacing:.08em;font-size:.95rem;margin-bottom:2rem}
+nav.retour a{color:var(--accent);text-decoration:none;margin-right:1.4rem}
+nav.retour a:hover{text-decoration:underline}
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding-top:1.4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem}
+footer a{color:var(--rubrique)}
+#basculer-theme{position:fixed;top:1rem;right:1rem;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer}
+#basculer-theme:hover{border-color:var(--accent)}
+</style></head><body>
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav class="retour"><a href="./">← Archive</a><a href="./calendrier.html">L'année liturgique</a></nav>
+
+<h1>Comment lire une page</h1>
+<p class="sous">Cinq minutes pour comprendre ce que tu as sous les yeux — et comment t'en servir.</p>
+
+<p>Chaque jour, ce site publie une page construite sur les lectures du
+lectionnaire romain : un texte de l'Ancien Testament (ou d'une épître), un
+psaume, un évangile. Le texte biblique est celui de la traduction Louis
+Segond (1910), du domaine public. Tout le reste — contexte, analogie,
+question — est là pour t'aider à le rencontrer, jamais pour le remplacer.</p>
+
+<h2>Ce que contient une page</h2>
+
+<h3>L'en-tête</h3>
+<p>La date, la semaine liturgique et la <em>couleur du jour</em> : le filet
+vertical qui court le long de la page prend la couleur du calendrier
+liturgique (vert au temps ordinaire, violet en Avent et en Carême…).
+Voir <a href="./calendrier.html" style="color:var(--accent)">l'année liturgique</a>
+pour comprendre ces temps. Le titre et la gravure donnent l'image centrale
+du jour.</p>
+
+<h3>La rencontre — « Ce que dit le texte »</h3>
+<p>Les lectures du jour, à faire défiler horizontalement (flèches ← →).
+Certains mots sont finement soulignés :</p>
+<div class="exemple">« Si vous ne croyez pas, vous ne
+<button class="mot-demo" type="button">subsisterez</button> pas. »
+— un mot souligné se clique.</div>
+<p>Cliquer un mot ouvre une <em>glose</em> : le mot hébreu ou grec
+d'origine, ce que Segond a choisi d'en traduire, et ce que les anciens
+lecteurs y ont vu. C'est la profondeur cachée de la page — prends le temps
+de cliquer.</p>
+
+<h3>Le sol — « D'où parlent ces textes »</h3>
+<p>Deux courtes notes d'histoire : qui écrit, à qui, dans quelle situation.
+Un texte biblique parle d'abord depuis son sol ; le connaître évite de lui
+faire dire n'importe quoi.</p>
+
+<h3>Le pont</h3>
+<p>Une analogie qui part d'une expérience que tu reconnais — prier sans
+rien ressentir, une parole qui remonte des années après — et te conduit
+vers ce que le texte promet. Ce n'est pas une explication : c'est un pont.</p>
+
+<h3>Le geste — « Se laisser rejoindre »</h3>
+<p>Une invitation concrète pour aujourd'hui, dans l'encadré rouge. Petite
+exprès : un geste qu'on peut vraiment poser avant ce soir.</p>
+
+<h3>La question</h3>
+<p>Une seule, ouverte, sans réponse fournie. Elle n'attend pas d'être
+résolue mais de travailler en toi. C'est le cœur silencieux de la page.</p>
+
+<h3>Les racines — « Ce que les anciens y ont lu »</h3>
+<p>Trois échos de la tradition : un Père de l'Église (Chrysostome,
+Augustin…), Calvin, une note historique. Chaque écho est attribué — le
+site est anonyme, son autorité vient de ses sources.</p>
+
+<h3>La mini-carte</h3>
+<p>Les points sur le bord droit dessinent ta position dans la page : l'axe
+vertical descend en profondeur (texte → sol → pont → geste → question),
+les traits horizontaux marquent les moments d'exploration (les lectures,
+les racines).</p>
+
+<h2>Comment s'en servir</h2>
+<p><strong>Un jour à la fois.</strong> La page est courte à dessein :
+mieux vaut un texte fréquenté lentement que dix survolés.</p>
+<p><strong>Lis d'abord le texte, pas les commentaires.</strong> Descends
+vers le contexte et le pont seulement après avoir laissé le texte parler.</p>
+<p><strong>Clique les mots soulignés.</strong> Les gloses sont là où la
+traduction cache un choix ; c'est souvent là que le texte s'ouvre.</p>
+<p><strong>Laisse la question travailler.</strong> Ne cherche pas à y
+répondre tout de suite. Emporte-la dans la journée, avec le geste proposé.</p>
+<p><strong>Reviens demain.</strong> Le lectionnaire lit les livres en
+continu : les jours se suivent et se répondent — la ligne « hier » en tête
+de page t'en donne le fil.</p>
+
+<footer>
+Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+<a href="./">Archive</a> · <a href="./calendrier.html">L'année liturgique</a>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+  var demo=document.querySelector('.mot-demo');
+  if(demo)demo.addEventListener('click',function(){alert("Sur une vraie page, ce clic ouvre la glose : le mot hébreu ou grec, le choix de Segond, la lecture des anciens.")});
+})();
+</script>
+</body></html>

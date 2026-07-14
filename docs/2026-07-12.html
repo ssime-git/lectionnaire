@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le Semeur — dimanche</title>
+<title>Le Semeur — dimanche 12 juillet 2026</title>
 <meta name="description" content="Ésaïe 55, Psaume 65, Romains 8 et Matthieu 13 — la parole qui ne revient pas à vide">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
 }
 
 @media (prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme="light"]){
     /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
     --papier:#17161B;
     --ink:#E9E5DB;
@@ -42,8 +43,32 @@
     --glose-ink:#CBC6BA;
     --ctx-ink:#CBC6BA;
     --gravure-ink:#E9E5DB;
+
   }
 }
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
 body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
@@ -183,6 +208,8 @@ footer a{color:var(--rubrique)}
 </head>
 <body>
 
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
 <nav id="carte" aria-label="Position dans la page">
   <a href="#haut" title="L'image"></a><span class="fil"></span>
   <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
@@ -198,7 +225,7 @@ footer a{color:var(--rubrique)}
 
   <!-- ① INCIPIT -->
   <header class="incipit" id="haut">
-    <p class="dateline">dimanche · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+    <p class="dateline">dimanche 12 juillet 2026 · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
 </p>
     <h1>Le <span class="it">Semeur</span></h1>
     <p class="chapeau">Ésaïe 55, Psaume 65, Romains 8 et Matthieu 13 — la parole qui ne revient pas à vide</p>
@@ -320,13 +347,21 @@ footer a{color:var(--rubrique)}
 
   <footer>
     Références : lectionnaire romain (AELF), 15ème Semaine du Temps Ordinaire — Is 55, 10-11 ; Rm 8, 18-23 ; Mt 13, 1-23 ; Mt 13, 1-9.<br>
-    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable. <a href="./">Archive</a>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
   </footer>
 
 </div>
 </div>
 
 <script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
 document.querySelectorAll('.mot').forEach(function(b){
   b.addEventListener('click',function(){
     var g=document.getElementById(b.dataset.g);

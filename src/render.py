@@ -26,6 +26,22 @@ TEMPLATE_DIR = RACINE / "template"
 DOCS = RACINE / "docs"
 
 
+# La date affichée se compose ici, en français et sans locale système :
+# le `date_humaine` d'AELF est parfois tronqué (« mardi » tout court), ce qui
+# laissait le lecteur deviner de quel jour parlait la page.
+JOURS_FR = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+MOIS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+           "août", "septembre", "octobre", "novembre", "décembre"]
+
+
+def _date_complete(jour_iso: str) -> str:
+    try:
+        d = datetime.strptime(jour_iso, "%Y-%m-%d").date()
+    except ValueError:
+        return jour_iso
+    return f"{JOURS_FR[d.weekday()]} {d.day} {MOIS_FR[d.month - 1]} {d.year}"
+
+
 def charger_jour(jour: str) -> dict:
     chemin = DATA_JOURS / f"{jour}.json"
     if not chemin.exists():
@@ -34,6 +50,7 @@ def charger_jour(jour: str) -> dict:
             f"Écris-le à la main (étape 1) ou lance generate.py (étape 2)."
         )
     donnees = json.loads(chemin.read_text(encoding="utf-8"))
+    donnees["date_complete"] = _date_complete(donnees.get("date", jour))
     _resoudre_analogie(donnees)
     _valider(donnees, chemin)
     return donnees
@@ -145,29 +162,65 @@ def reconstruire_index() -> None:
             f'<span class="t">{titre}</span></a></li>'
         )
 
-    index = f"""<!DOCTYPE html>
+    index = _INDEX_AVANT + "\n".join(liens) + _INDEX_APRES
+    (DOCS / "index.html").write_text(index, encoding="utf-8")
+    print(f"✓ docs/index.html  ({len(jours)} jour·s)")
+
+
+# Chaînes brutes (pas d'f-string) : le CSS et le JS regorgent d'accolades.
+_INDEX_AVANT = """<!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lectionnaire — archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
 <style>
-body{{font-family:'EB Garamond',serif;background:#EFEAE0;color:#26302A;max-width:640px;margin:0 auto;padding:3rem 1.5rem}}
-h1{{font-weight:500;font-size:2.2rem;margin-bottom:.3rem}}
-p.sous{{color:#8E8B7C;margin-bottom:2.5rem}}
-ul{{list-style:none;padding:0}}
-li a{{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid #DAD1BE;text-decoration:none;color:inherit}}
-li a:hover .t{{color:#7A5230}}
-.d{{font-family:'Archivo',sans-serif;font-size:.8rem;color:#8E8B7C;min-width:5.5rem}}
-.t{{font-size:1.25rem;transition:color .2s}}
+:root{color-scheme:light dark;
+  --papier:#EFEAE0;--ink:#26302A;--muet:#8E8B7C;--filet:#DAD1BE;--accent:#7A5230;--rubrique:#A33324}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}}
+:root[data-theme="dark"]{
+  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+body{font-family:'EB Garamond',serif;background:var(--papier);color:var(--ink);max-width:640px;margin:0 auto;padding:3rem 1.5rem}
+h1{font-weight:500;font-size:2.2rem;margin-bottom:.3rem}
+p.sous{color:var(--muet);margin-bottom:1.2rem}
+nav.pages{margin-bottom:2.5rem;font-variant:small-caps;letter-spacing:.08em;font-size:.95rem}
+nav.pages a{color:var(--accent);text-decoration:none;margin-right:1.4rem}
+nav.pages a:hover{text-decoration:underline}
+ul{list-style:none;padding:0}
+li a{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--filet);text-decoration:none;color:inherit}
+li a:hover .t{color:var(--accent)}
+.d{font-family:'Archivo',sans-serif;font-size:.8rem;color:var(--muet);min-width:5.5rem}
+.t{font-size:1.25rem;transition:color .2s}
+.auj{font-family:'Archivo',sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.05rem .45rem;margin-left:auto}
+#basculer-theme{position:fixed;top:1rem;right:1rem;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer}
+#basculer-theme:hover{border-color:var(--accent)}
 </style></head><body>
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
 <h1>Lectionnaire</h1>
 <p class="sous">Une invitation quotidienne à la découverte des Écritures.</p>
+<nav class="pages"><a href="./guide.html">Comment lire une page</a><a href="./calendrier.html">L'année liturgique</a></nav>
 <ul>
-{chr(10).join(liens)}
+"""
+
+_INDEX_APRES = """
 </ul>
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'\\u2600':'\\u263E'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+  var d=new Date();
+  var iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  var a=document.querySelector('a[href="./'+iso+'.html"]');
+  if(a)a.insertAdjacentHTML('beforeend','<span class="auj">aujourd\\u2019hui</span>');
+})();
+</script>
 </body></html>"""
-    (DOCS / "index.html").write_text(index, encoding="utf-8")
-    print(f"✓ docs/index.html  ({len(jours)} jour·s)")
 
 
 if __name__ == "__main__":
