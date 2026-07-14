@@ -45,17 +45,34 @@ jobs:
         with:
           ref: main
 
+      # Un jour déjà écrit (démo à la main, brouillon déjà mergé) ne se
+      # régénère pas : la PR proposerait d'écraser une page relue par un
+      # humain. On s'arrête proprement, sans échec.
+      - name: Ne pas écraser un jour déjà écrit
+        id: existe
+        run: |
+          if [ -f "data/jours/${{ steps.date.outputs.date }}.json" ]; then
+            echo "Le jour ${{ steps.date.outputs.date }} existe déjà — rien à générer."
+            echo "deja=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deja=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Installer uv
+        if: steps.existe.outputs.deja == 'false'
         uses: astral-sh/setup-uv@v7
 
       - name: Installer les dépendances verrouillées
+        if: steps.existe.outputs.deja == 'false'
         run: uv sync --locked
 
       - name: Lancer les tests
+        if: steps.existe.outputs.deja == 'false'
         run: make test
 
       - name: Générer le contrat avec Workers AI
         id: workers-ai
+        if: steps.existe.outputs.deja == 'false'
         continue-on-error: true
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -87,12 +104,15 @@ jobs:
           make generate DATE=${{ steps.date.outputs.date }}
 
       - name: Valider le contrat
+        if: steps.existe.outputs.deja == 'false'
         run: make validate DATE=${{ steps.date.outputs.date }}
 
       - name: Rendre l'aperçu HTML
+        if: steps.existe.outputs.deja == 'false'
         run: make render DATE=${{ steps.date.outputs.date }}
 
       - name: Ouvrir la pull request de relecture
+        if: steps.existe.outputs.deja == 'false'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
