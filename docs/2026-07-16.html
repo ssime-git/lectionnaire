@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le joug doux — jeudi 16 juillet 2026</title>
+<meta name="description" content="Quand le Seigneur promet le repos, il ne le promet pas à l'oisif, mais à celui qui porte déjà un autre fardeau.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">jeudi 16 juillet 2026 · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Le <span class="it">joug doux</span></h1>
+    <p class="chapeau">Quand le Seigneur promet le repos, il ne le promet pas à l'oisif, mais à celui qui porte déjà un autre fardeau.</p>
+    <figure class="gravure" aria-label="Un homme courbé sous un joug de bois lourd, les épaules en sang ; derrière lui, une main invisible pose un joug de liège et d'olivier, si léger qu'il flotte. Le ciel est gris-bleu de l'aube."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 110 h340"/><path d="M20 110 q30 -5 50 0"/><path d="M270 110 q30 -5 50 0"/><path d="M90 110 q-5 -35 15 -55 q8 -10 20 -12"/><path d="M130 110 q5 -45 -10 -67 q-3 -4 -8 -6"/><path d="M90 55 q20 -8 40 -2"/><path d="M85 65 q25 -5 45 3"/><path d="M100 75 q15 5 25 0"/><path d="M95 85 q20 8 35 0"/><path d="M105 45 l-8 -12"/><path d="M115 43 l-5 -14"/><path d="M125 48 l-2 -15"/><path d="M60 20 h80"/><path d="M70 20 v15"/><path d="M130 20 v15"/><path d="M75 20 l-10 25"/><path d="M125 20 l10 25"/><path d="M65 45 l-15 8"/><path d="M135 45 l15 8"/><path d="M50 53 q5 15 20 12"/><path d="M150 53 q-5 15 -20 12"/><path d="M200 40 q15 -20 35 -10"/><path d="M235 30 q10 10 5 25"/><path d="M210 55 q20 -5 30 5"/><path d="M215 65 q15 0 20 10"/><path d="M220 45 q5 -15 20 -10"/><path d="M200 75 q25 -5 40 10"/><path d="M190 85 q30 -10 55 5"/><path d="M180 95 q35 -10 60 0"/><path d="M195 50 q-5 -15 5 -25"/><path d="M205 35 q-3 -10 8 -15"/><path d="M225 25 q5 -5 12 0"/><path d="M0 20 h340"/></g><g class="trait-rubrique"><path d="M110 110 q-3 -20 8 -35 q5 -8 12 -10"/><path d="M115 75 q8 -3 12 2"/></g><g class="trait-liturgie"><path d="M220 30 q-8 25 5 45 q8 12 20 5 q12 -8 15 -25 q3 -20 -10 -35 q-15 -12 -30 10 z"/><path d="M235 75 q5 15 0 25"/><path d="M225 105 q15 5 25 -5"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 26, 7-9.12.16-19 — Louis Segond 1910</p>
+        <div class="ecriture "><p><span class="s">7</span> La voie du juste est droite ; tu aplanis le sentier du juste. <span class="s">8</span> Dans la voie de tes jugements, ô Éternel, nous t'avons attendu ! Vers ton nom et vers ton <button class="mot" data-g="g-souvenir">souvenir</button> s'est porté le désir de notre âme. <span class="s">9</span> Mon âme te désire pendant la nuit, et mon esprit, au-dedans de moi, te cherche au point du jour ; car, lorsque tes jugements s'exercent sur la terre, les habitants du monde apprennent la justice. <span class="s">12</span> Éternel, tu nous accorderas la paix, car c'est toi qui as fait pour nous tous nos œuvres. <span class="s">16</span> Éternel ! dans la détresse ils t'ont <button class="mot" data-g="g-visite">visité</button>, ils ont répandu leurs <button class="mot" data-g="g-chuchotements">chuchotements</button>, ta discipline les a atteints. <span class="s">17</span> Comme une femme enceinte, près d'accoucher, se tord et crie dans ses douleurs, ainsi avons-nous été devant toi, Éternel ! <span class="s">18</span> Nous avons conçu, nous nous sommes tordus, c'est comme si nous avions enfanté du vent : nous n'avons pas opéré de délivrance sur la terre, et les habitants du monde ne sont pas tombés. <span class="s">19</span> Tes morts vivront, mes cadavres ressusciteront. Réveillez-vous et tressaillez de joie, habitants de la poussière ! Car ta rosée est une rosée de lumière, et la terre enfantera les morts.</p></div>
+        <div class="glose" id="g-souvenir"><span class="lemme">souvenir</span> L'hébreu <span class="gr">zēker</span> (de <span class="gr">zākar</span>, « se souvenir, invoquer ») désigne ici le nom même de Dieu, sa renommée vivante. Segond traduit par « souvenir », mais le mot porte plus que la mémoire : c'est l'invocation cultuelle, le fait de rappeler Dieu à soi et de se rappeler à lui. Les LXX ont rendu par <span class="gr">mnēmosunon</span>, « mémorial ». Calvin, commentant le Psaume 135, note que le nom de Dieu est « le vrai sanctuaire où l'âme trouve son asile ». Le désir du croyant s'oriente donc non vers une idée, mais vers la présence invoquée.</div>
+        <div class="glose" id="g-visite"><span class="lemme">visité</span> L'hébreu <span class="gr">pāqaḏ</span> est un verbe riche et ambigu : « visiter », mais aussi « passer en revue, compter, punir, secourir ». Segond opte pour « visiter », atténuant la nuance de jugement. Pourtant, en Is 24,21, le même verbe désigne le châtiment des puissances célestes déchues. Chrysostome, dans ses <em>Homélies sur Osée</em>, remarque que Dieu « visite » son peuple comme un médecin visite un malade : pour sonder et pour guérir. La détresse est ici le lieu paradoxal de cette visite salvatrice.</div>
+        <div class="glose" id="g-chuchotements"><span class="lemme">chuchotements</span> Le terme hébreu <span class="gr">lāḥaš</span> désigne proprement le murmure magique, l'incantation. Segond le rend par « chuchotements », préservant le secret, mais perdant la connotation de pratique religieuse étrangère. Les LXX ont traduit par <span class="gr">proseuchē</span>, « prière », en détournant le sens vers l'oraison légitime. Le Targum Jonathan comprend un murmure de supplication. La Septante, en rabattant le sens vers la prière, témoigne d'une lecture qui refuse de laisser Israël dans la magie : même le murmure détourné devient, sous la main de Dieu, une forme de prière.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 101 (102), 13-15.16-18.19-21 — Louis Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">13</span> Mais toi, Éternel, tu sièges à perpétuité, et ton nom dure de génération en génération ! <span class="s">14</span> Tu te lèveras, tu auras pitié de Sion, car le temps d'avoir pitié d'elle, le temps fixé est venu. <span class="s">15</span> Car tes serviteurs aiment ses pierres, ils prennent pitié de sa poussière. <span class="s">16</span> Alors les nations craindront le nom de l'Éternel, et tous les rois de la terre ta gloire. <span class="s">17</span> Car l'Éternel rebâtit Sion, il apparaît dans sa gloire ; <span class="s">18</span> il est attentif à la prière du <button class="mot" data-g="g-desespere">désespéré</button>, il n'égare point leur prière. <span class="s">19</span> Que cela soit écrit pour la génération future, et le peuple qui sera créé louera l'Éternel. <span class="s">20</span> De son sanctuaire des hauteurs l'Éternel regarde la terre ; <span class="s">21</span> il écoute les gémissements des prisonniers, il délivre ceux qui vont <button class="mot" data-g="g-perir">périr</button>.</p></div>
+        <div class="glose" id="g-desespere"><span class="lemme">désespéré</span> L'hébreu <span class="gr">ʿārēr</span> (participe passé de <span class="gr">ʿārar</span>) signifie proprement « nu, dépouillé, mis à nu ». Segond traduit par « désespéré », interprétant l'état d'exposition totale devant Dieu comme un abattement psychologique. Les LXX ont rendu par <span class="gr">tapeinōn</span>, « humbles », lisant la nudité comme anéantissement volontaire. Calvin, dans son commentaire sur les Psaumes, préfère « les misérables », insistant sur l'aspect objectif de la détresse plutôt que sur le sentiment. Le mot désigne celui qui n'a plus rien derrière quoi se cacher, et c'est précisément celui-là que Dieu écoute.</div>
+        <div class="glose" id="g-perir"><span class="lemme">périr</span> Le verbe hébreu <span class="gr">mūṯ</span> est ici au participe : « ceux qui meurent », « les mourants ». Segond choisit « ceux qui vont périr », accentuant l'urgence. Les LXX ont <span class="gr">tethnēkotas</span>, « ceux qui sont déjà morts », poussant le sens vers une résurrection anticipée. Le Talmud de Babylone (<em>Berakhot</em> 10b) rapporte que ce verset fut récité par les sages pendant la persécution d'Hadrien, lorsque la mort était le quotidien. La promesse n'est pas d'épargner la mort, mais de délivrer au sein même de sa proximité.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 11, 28-30 — Louis Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">28</span> Venez à moi, vous tous qui êtes <button class="mot" data-g="g-lasses">lassés</button> et chargés de <button class="mot" data-g="g-fardeau">fardeaux</button>, et je vous donnerai du repos. <span class="s">29</span> Prenez mon joug sur vous, et recevez mes enseignements ; car je suis <button class="mot" data-g="g-doux">doux</button> et <button class="mot" data-g="g-humble">humble</button> de cœur, et vous trouverez du repos pour vos âmes. <span class="s">30</span> Car mon joug est <button class="mot" data-g="g-agreable">agréable</button>, et mon fardeau est léger.</p></div>
+        <div class="glose" id="g-lasses"><span class="lemme">lassés</span> Le grec <span class="gr">kopiaōntes</span> (de <span class="gr">kopos</span>, « travail épuisant ») désigne ceux qui ont peiné jusqu'à l'épuisement, les ouvriers de la dernière heure. Segond traduit par « lassés », plus intime que « fatigués ». Les LXX employaient le même verbe pour les labeurs d'Israël en Égypte (<em>Ex 5</em>). Chrysostome, dans sa <em>Homélie 37 sur Matthieu</em>, remarque que Jésus n'appelle pas les oisifs mais ceux qui « portent déjà le poids d'un autre maître » — le fardeau de la Loi interprétée par les scribes, ou celui du péché lui-même.</div>
+        <div class="glose" id="g-fardeau"><span class="lemme">fardeaux</span> Le grec <span class="gr">pephortismenoi</span> est un participe passif perfect de <span class="gr">phortizō</span>, « charger comme une bête de somme ». Le mot évoque le <span class="gr">phortion</span> du verset 30, le fardeau propre à chaque profession. Segond garde « fardeaux », conservant l'image du chargement. Calvin, dans ses <em>Harmonies évangéliques</em>, souligne que Jésus ne promet pas l'absence de charge, mais son allègement : « Il ne nous décharge point de toute peine, mais il nous donne des forces pour porter la sienne. »</div>
+        <div class="glose" id="g-doux"><span class="lemme">doux</span> L'adjectif grec <span class="gr">praus</span> (de <span class="gr">praüs</span>) est le même que celui des Béatitudes : « Heureux les doux » (<em>Mt 5,5</em>). Segond le rend par « doux », mais le mot grec porte une nuance de force maîtrisée, de pouvoir refréné. Le <span class="gr">praus</span> est celui qui a le pouvoir de faire mal et s'en abstient. Les LXX l'employaient pour Moise (<em>Nb 12,3</em>), « très doux, plus que tous les hommes ». Origène, dans ses <em>Homélies sur Jérémie</em>, voit dans cette douceur la révélation du Père lui-même, que nul n'a jamais vu sinon par le Fils qui le manifeste.</div>
+        <div class="glose" id="g-humble"><span class="lemme">humble</span> Le grec <span class="gr">tapeinos</span> signifie proprement « abaissé, de basse condition ». Segond traduit par « humble », christianisant le terme. Les LXX l'avaient appliqué à Israël en exil, au peuple « abaissé » sous le joug. Philon d'Alexandrie, dans <em>De vita Mosis</em>, oppose le <span class="gr">tapeinos</span> au <span class="gr">hypsēlos</span>, l'orgueilleux. Jésus revendique cette humilité comme titre de gloire : ce n'est pas une qualité accessoire, mais sa manière d'être Dieu, celle du serviteur souffrant d'Isaïe 53.</div>
+        <div class="glose" id="g-agreable"><span class="lemme">agréable</span> L'adjectif grec <span class="gr">chrēstos</span> dérive de la même racine que <span class="gr">chrestos</span>, « bon, utilisable, doux au toucher ». Segond choisit « agréable », mais le mot grec suggère aussi « bénéfique, salutaire ». Les papyrus de l'époque l'employaient pour décrire un sol fertile ou un tissu souple. Chrysostome, dans la même homélie 37, joue sur la paronomase avec <span class="gr">Christos</span> : « Le joug du Christ (<span class="gr">Christos</span>) est chrestos, bon et doux. » Cette assonance, probablement volontaire dans la tradition orale, fait entendre que le Nom lui-même est déjà promesse.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le repos sabbatique d'Isaïe à Jésus</h3><p><p>Le <em>Chapitre 26</em> d'Isaïe appartient au « petit apocalypse » des chapitres 24-27, une composition post-exilique qui réinterprète l'espérance prophétique à la lumière de la délivrance de Babylone. La « voie du juste » (v. 7) reprend la langue de l'Exode, où Dieu aplanissait le chemin pour son peuple. Mais le verset 19, sur la résurrection des morts, marque un tournant : pour la première fois dans l'Ancien Testament, la résurrection individuelle est proclamée non comme exception (Ézéchiel 37 demeure vision collective), mais comme promesse eschatologique. Calvin, dans son <em>Commentaire sur Ésaïe</em> (1551), y voit « le fondement de notre espérance en la chair ressuscitée », ajoutant que « sans ce témoignage, l'âme chrétienne serait en proie à l'incrédulité ». Le psaume 102, lui, est le cri du captif : la mention des « prisonniers » (v. 21) renvoie probablement à la détention de Joachim ou de Sédécias, voire à la situation des exilés. Les versets choisis par le lectionnaire tissent ainsi une continuité : de la prison babylonienne à la prison du péché, le même Dieu « regarde » et « délivre ».</p></p></div>
+      <div><h3>Le joug des scribes et le joug du Christ</h3><p><p>Dans le judaïsme de l'époque hellénistique, le « joug de la Torah » (<span class="gr">ʿol torah</span>) était une expression courante pour désigner l'observance des commandements, parfois présentée comme libératrice (Pirke Avot 3,5), parfois comme pesante. Les scribes, par leur casuistique, avaient multiplié les préceptes : la <em>Michna</em> en dénombre 613. Jésus, en proposant son « joug », entre dans cette langue mais la redéfinit radicalement. La formule « prenez mon joug » (v. 29) est un imperatif présent, appelant à une décision continue, non à un événement unique. L'antithèse entre le « lourd » et le « léger » n'oppose pas la Torah et son absence, mais deux manières de la porter : celle qui transforme la Loi en fardeau humain, et celle qui la reçoit de la main du Maître lui-même. Origène, dans le <em>Traité des principes</em> III, 2, distingue ainsi « la lettre qui tue » et « l'esprit qui donne la vie » — distinction que le lectionnaire d'aujourd'hui incarne dans la chair du Christ humble.</p></p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le poids qu'on a appris à ne plus sentir</h2>
+<p>Tu portes depuis si longtemps une tension, une surveillance de toi-même, une inquiétude que tu nommes « normal » que tu as cessé de la percevoir. Elle fait partie de ton corps, de ton souffle, de la façon dont tu te tiens au réveil. Puis quelqu'un, un jour, pose simplement la main sur ton épaule — et tu t'aperçois que tes muscles étaient contractés depuis des années. Le repos ne vient pas d'un enseignement nouveau, mais de la rencontre avec celui qui porte avec toi ce que tu croyais porter seul.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le Christ ne promet pas de soustraire à l'effort, mais de transformer celui qui porte avec lui.</p>
+      <p class="geste">Pose une main sur ton cœur, là où le poids se loge depuis trop longtemps — et laisse le mot de Jésus, « je suis doux », y descendre comme une respiration plus lente que la tienne.</p>
+      <small>Ce repos n'est pas une fuite. Il est la force même de Dieu, revenue à ceux qui n'en peuvent plus d'être forts seuls.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quel joug as-tu si bien appris à porter que tu confonds sa trace avec ta propre silhouette ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur le joug du Christ</h3>
+          <p>« Ce n'est pas un joug de bois, mais un joug d'amour ; non un maître qui fouette, mais un médecin qui soigne. Il dit : 'Prenez mon joug', non 'Arrachez le vôtre'. Car celui qui se décharge de son fardeau pour rester les bras vides n'est pas soulagé, mais désœuvré. » <em>Homélie 37 sur Matthieu</em>, § 4.</p>
+<p class="attrib">Jean Chrysostome, ~390</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur l'humilité du Fils</h3>
+          <p>« Il ne dit point qu'il est puissant, bien que le ciel et la terre lui soient assujettis ; il ne dit point qu'il est plein de majesté, bien qu'il soit revêtu de la gloire du Père. Mais il nous attire par ce qui est propre à nous rassurer : il se montre doux et humble. Car c'est là ce que nous cherchions. » <em>Harmonie évangélique sur Matthieu 11</em>, CO 45, 310.</p>
+<p class="attrib">Jean Calvin, 1555</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le midrash sur la Torah et le joug</h3>
+          <p>« Rabbi Néhémie disait : La Torah est comparée à un joug, comme il est dit : 'Il a brisé les verrous de mon joug' (<em>Lam 1,14</em>). De même que le joug est lourd pour la bête au commencement et légère à la fin, ainsi la Torah est d'abord amère comme le fiel, puis douce comme le miel. » <em>Mekhilta de Rabbi Ishmaël</em>, <em>Bechallah</em>, § 5, éd. Lauterbach I, 242.</p>
+<p class="attrib">Mekhilta, ~IIIe siècle</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 15ème Semaine du Temps Ordinaire — Is 26, 7-9.12.16-19 ; Mt 11, 28-30.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
