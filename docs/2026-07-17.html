@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le sabbat de l'homme — vendredi 17 juillet 2026</title>
+<meta name="description" content="Quand Jésus ouvre les épis et les Écritures pour ceux qui ont faim de Dieu">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">vendredi 17 juillet 2026 · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Le sabbat <span class="it">de l'homme</span></h1>
+    <p class="chapeau">Quand Jésus ouvre les épis et les Écritures pour ceux qui ont faim de Dieu</p>
+    <figure class="gravure" aria-label="Des disciples marchant dans un champ de blé mûr, leurs mains ouvertes vers les épis, tandis qu'un pharisien, les bras croisés, observe depuis le chemin ; au centre, le Christ, le regard tourné vers les cieux, dit que le Fils de l'homme est maître du sabbat."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 115 h320"/><path d="M5 115 q40 -8 80 -15 q60 -10 120 0 q60 8 110 15"/><path d="M20 115 l15 -25 l15 25"/><path d="M60 115 l12 -30 l12 30"/><path d="M100 115 l18 -35 l18 35"/><path d="M150 115 l10 -28 l10 28"/><path d="M200 115 l20 -32 l20 32"/><path d="M260 115 l15 -25 l15 25"/><path d="M300 115 l10 -20 l10 20"/><path d="M45 70 l-8 12"/><path d="M52 72 l-5 10"/><path d="M115 65 l8 10"/><path d="M108 68 l5 8"/><path d="M170 30 v50"/><path d="M158 38 h24"/><path d="M162 45 h16"/><path d="M285 50 l-8 25"/><path d="M295 55 l-5 20"/><path d="M305 50 l-3 22"/></g><g class="trait-rubrique"><path d="M170 80 q-12 0 -12 15 q0 12 12 15 q12 -3 12 -15 q0 -15 -12 -15"/><path d="M170 110 v5"/><path d="M160 120 h20"/></g><g class="trait-liturgie"><path d="M170 30 l-5 -8"/><path d="M170 30 l5 -8"/><path d="M170 22 v-6"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 38, 1-6.21-22.7-8 — Louis Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span>En ce temps-là, Ézéchias fut malade à la mort. Le prophète Ésaïe, fils d'Amots, vint auprès de lui, et lui dit: Ainsi parle l'Éternel: Donne tes ordres à ta maison, car tu vas mourir, et tu ne vivras plus. <span class="s">2</span>Ézéchias tourna son visage contre le mur, et fit cette prière à l'Éternel: <span class="s">3</span>Éternel! rappelle-toi que j'ai marché devant toi avec <button class="mot" data-g="g-verite">vérité</button> et d'un cœur intègre, et que j'ai fait ce qui est bien à tes yeux! Et Ézéchias répandit d'abondantes larmes. <span class="s">4</span>Alors la parole de l'Éternel fut adressée à Ésaïe, en ces mots: <span class="s">5</span>Va, et dis à Ézéchias: Ainsi parle l'Éternel, le Dieu de David, ton père: J'ai entendu ta prière, j'ai vu tes larmes. Voici, j'ajouterai à tes jours quinze années. <span class="s">6</span>Je te délivrerai, toi et cette ville, de la main du roi d'Assyrie; je protégerai cette ville. <span class="s">21</span>Ésaïe avait dit: Qu'on apporte une masse de figues, et qu'on les étende sur l'ulcère; et Ézéchias vivra. <span class="s">22</span>Ézéchias avait dit: A quel signe reconnaîtrai-je que je monterai à la maison de l'Éternel? <span class="s">7</span>Et Ésaïe dit: Voici, de la part de l'Éternel, le signe auquel tu reconnaîtras que l'Éternel accomplira la parole qu'il a prononcée: <span class="s">8</span>voici, je ferai reculer de dix degrés l'ombre qui est déjà descendue avec le soleil sur le cadran d'Achaz. Et le soleil recula de dix degrés sur le cadran où il était déjà descendu.</div>
+        <div class="glose" id="g-verite"><span class="lemme">vérité</span> Segond traduit ici l'hébreu <span class="gr">emet</span> par « vérité », alors que le contexte prière d'un roi mourant appellerait plutôt « fidélité » ou « constance ». La racine <span class="gr">ʾmn</span> (d'où « amen ») désigne d'abord la solidité, ce qui tient debout. Les rabbins ont longtemps débattu de savoir si <span class="gr">emet</span> qualifiait ici la sincérité d'Ézéchias ou son adhésion stable à l'alliance. Calvin, commentant le Psaume 26, préfère « intégrité » pour rendre cette même racine : il voit dans le cri d'Ézéchias non une revendication de mérite, mais le témoignage d'une vie tournée vers Dieu sans partage.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Cantique — Is 38, 10, 11, 12abcd, 16-17a — Louis Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">10</span>Je disais: Au milieu de mes jours, je m'en vais; je suis rappelé par le reste de mes années. <span class="s">11</span>Je disais: Je ne verrai plus l'Éternel, l'Éternel sur la terre des vivants; je ne verrai plus aucun des habitants du monde. <span class="s">12</span>Ma <button class="mot" data-g="g-demeure">demeure</button> est enlevée et transportée loin de moi, comme une tente de berger; je déroule ma vie, comme un tisserand... <span class="s">16</span>Seigneur, c'est par elles qu'on obtient la vie, et c'est en tout cela qu'est la vie de mon esprit; tu me guériras, tu me rendras la vie! <span class="s">17</span>Voici, c'est pour ma paix que j'ai eu de l'amertume; car tu as pris plaisir à mon âme pour qu'elle ne périsse pas, tu as jeté derrière toi tous mes péchés.</div>
+        <div class="glose" id="g-demeure"><span class="lemme">demeure</span> Segond rend l'hébreu <span class="gr">naweh</span> par « demeure », un terme qui adoucit l'image. La racine évoque pourtant le pâturage, le lieu où le berger fait reposer son troupeau — puis, par extension, la habitation provisoire. Le mot choisi par Ézéchias pour sa propre vie est celui qu'on utilise pour la tente des nomades, non pour la maison fixe. Chrysostome, dans ses homélies sur les psaumes, relie ce <span class="gr">naweh</span> à l'errance du peuple dans le désert : la vie elle-même est pèlerinage, et sa fin n'est pas anéantissement mais relèvement. La traduction de Segond, plus domestiquée, fait peut-être perdre cette précarité essentielle.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 12, 1-8 — Louis Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span>En ce temps-là, Jésus traversa des champs de blé un jour de <button class="mot" data-g="g-sabbat">sabbat</button>; et ses disciples, qui avaient faim, se mirent à arracher des épis et à manger. <span class="s">2</span>Les pharisiens, voyant cela, lui dirent: Voici, tes disciples font ce qu'il n'est pas permis de faire le jour du sabbat. <span class="s">3</span>Mais il leur répondit: N'avez-vous pas lu ce que fit David, quand il eut faim, lui et ceux qui l'accompagnaient; <span class="s">4</span>comment il entra dans la maison de Dieu, et mangea les pains de proposition, qu'il ne lui était pas permis de manger, non plus qu'à ceux qui l'accompagnaient, et qui étaient réservés aux sacrificateurs seuls? <span class="s">5</span>Ou n'avez-vous pas lu dans la loi que, les jours de sabbat, les sacrificateurs violentent le sabbat dans le temple, sans se rendre coupables? <span class="s">6</span>Or, je vous le dis, il est ici plus grand que le temple. <span class="s">7</span>Si vous saviez ce que signifie: Je prends plaisir à la <button class="mot" data-g="g-misericorde">miséricorde</button>, et non aux sacrifices, vous n'auriez pas condamné des innocents. <span class="s">8</span>Car le Fils de l'homme est maître du sabbat.</div>
+        <div class="glose" id="g-sabbat"><span class="lemme">sabbat</span> Le mot grec <span class="gr">sabbaton</span> translittère directement l'hébreu <span class="gr">shabbat</span>, de la racine <span class="gr">shvt</span> qui signifie « cesser », « reposer », « s'arrêter ». Segond conserve le terme hébraïque plutôt que de le traduire par « repos » ou « septième jour », ce qui maintient le lien avec l'économie de l'alliance. Le sabbat n'est pas seulement une pause ; c'est l'institution qui rythme la relation entre Dieu et Israël, mémorial de la création et de la sortie d'Égypte. Calvin, dans son commentaire sur la Genèse (II, 2), insiste sur ce double fondement : le sabbat sanctifie le temps en le rendant témoignage de la libération divine. Jésus ne l'abolit pas ici ; il en revendique la propriété, comme celui qui en est le sens ultime.</div>
+        <div class="glose" id="g-misericorde"><span class="lemme">miséricorde</span> Segond traduit ici le grec <span class="gr">eleos</span> par « miséricorde », un choix qui porte le poids de la Vulgate et de toute la théologie médiévale. Le terme grec, pourtant, évoque plutôt la compassion active, le secours porté à celui qui souffre. Jésus cite Osée 6, 6 : <span class="gr">eleos</span> y répond à l'hébreu <span class="gr">hesed</span>, cette fidélité tendre qui lie Dieu à son peuple et que les humains doivent se rendre mutuellement. Chrysostome, Homélie sur Matthieu 38, souligne que cette parole d'Hosée avait été « écrite pour les pharisiens avant qu'ils ne naissent » : elle dénonce toute religiosité qui fait de l'observance un écran contre l'amour concret. Segond, en conservant « miséricorde », maintient la résonance liturgique ; mais le lecteur doit entendre derrière ce mot le cri de celui qui a faim et que la loi ne peut laisser mourir.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>David et les pains de proposition</h3><p>Jésus invoque l'épisode de 1 Samuel 21 où David, fuyant Saül, reçoit du prêtre Ahimélek le pain consacré réservé aux sacrificateurs. Cette référence n'est pas anecdotique : elle établit un parallèle entre David, l'oint persécuté, et Jésus, le Fils de David dont les disciples subissent le même reproche. Calvin, commentant ce passage, note que « le Seigneur use ici d'une comparaison tirée du droit de la guerre, où la nécessité absolue excuse ce qui serait autrement illicite ». Mais Jésus va plus loin : il ne plaide pas la simple nécessité, il affirme que ses disciples agissent en droit, parce qu'il est « plus grand que le temple ». La citation d'Osee 6, 6 — « Je prends plaisir à la miséricorde, et non aux sacrifices » — achève de retourner l'accusation : ce ne sont pas les disciples qui violent le sabbat, ce sont les pharisiens qui violent le sens même du sabbat en condamnant des innocents.</p></div>
+      <div><h3>Le sabbat dans le judaïsme du second Temple</h3><p>La controverse sur le sabbat était vive au Ier siècle. Les Sadducéens, attachés à la lettre de la Torah, interdisaient même les soins le jour du sabbat. Les pharisiens, plus flexibles, permettaient certaines dérogations, mais la récolte d'épis — action composée de plusieurs gestes techniques (faucher, porter, battre) — restait prohibée. Jésus argumente selon les règles rabbiniques : il cite un précédent biblique (David), une institution légitime (les sacrificateurs dans le temple), puis une prophétie (Osée). Chrysostome, dans sa trente-huitième homélie sur Matthieu, admire cette méthode : « Il ne dit pas d'abord qu'il est Seigneur du sabbat ; il les convainc par des arguments tirés de la loi elle-même, pour qu'ils ne puissent répondre. » Le verset 8, « le Fils de l'homme est maître du sabbat », est alors l'apogée, non la rupture : il révèle que le repos du septième jour trouve son accomplissement dans la personne qui donne le vrai repos aux hommes.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La loi qui libère</h2>
+<p>Il t'arrive de connaître une règle si bien, de l'avoir répétée et justifiée si longtemps qu'elle est devenue opaque à sa propre fin. Tu la défends avec une chaleur qui vient parfois de ce qu'elle te structure, te distingue, te rassure toi-même. Puis quelqu'un traverse ton champ de vision — un ami qui souffre, un étranger qui demande — et cette règle, soudain, devient mur où elle devait être porte. Tu n'as pas tort de la tenir ; mais tu découvres, avec une douleur mêlée de délivrance, qu'elle n'était pas le dernier mot. Le dernier mot est celui qui regarde la personne, et qui dit : viens, il est ici ce que tu cherchais.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le Christ ne t'invite pas à négliger le sabbat, mais à le recevoir de sa main.</p>
+      <p class="geste">Pose une main sur ton cœur, l'autre ouverte vers le ciel. Demande à Jésus de te montrer une « loi » que tu tiens trop serrée, ou une faim que tu n'oses pas exprimer devant lui.</p>
+      <small>Dans la tradition ÉPUdF, le repos dominical n'est pas observance mais grâce partagée : le dimanche est le jour où la communauté se rassemble pour entendre la Parole et se nourrir à la table du Seigneur, préfiguration du repos éternel.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle faim en toi le Christ autoriserait-il aujourd'hui, au risque de déranger l'ordre que tu t'es construit ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur le sabbat des disciples</h3>
+          <p>« Pourquoi les disciples ont-ils faim ? Pourquoi ne se sont-ils pas préparés ? C'est que le Christ les entraînait dans une vie pauvre, afin qu'ils n'aient rien à perdre, rien à craindre. La faim des disciples n'est pas négligence ; c'est l'effet d'une vie donnée sans réserve. Et le Christ ne les reprend pas ; il les défend. » Homélie 38 sur Matthieu.</p>
+<p class="attrib">Jean Chrysostome, ~390</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur la nécessité et la loi</h3>
+          <p>« Le Seigneur ne dit pas que la nécessité excuse le péché, mais qu'elle ouvre ce qui était fermé. Car les pains de proposition n'étaient pas impurs, mais réservés ; et la réservation cède devant la vie de celui que Dieu a oint. » Commentaire sur l'harmonie évangélique, 1555.</p>
+<p class="attrib">Jean Calvin</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le Talmud sur le sabbat et la vie</h3>
+          <p>La Mishna (Yoma 85b) rapporte la règle de Rabbi Yonathan ben Joseph : « Car le sabbat vous est donné, et vous ne l'êtes pas au sabbat. » Cette formule, antérieure à la rédaction talmudique mais reprise dans la tradition rabbinique classique, affirme que le sabbat est au service de l'homme, non l'inverse. Jésus ne fait pas autre chose ici qu'approfondir ce principe jusqu'à son fondement christologique.</p>
+<p class="attrib">Mishna, Yoma 85b ; réception rabbinique</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 15ème Semaine du Temps Ordinaire — Is 38, 1-6.21-22.7-8 ; Is 38, 10, 11, 12abcd, 16-17a ; Mt 12, 1-8.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
