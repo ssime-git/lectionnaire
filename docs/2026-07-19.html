@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'ivraie et le blé — dimanche 19 juillet 2026</title>
+<meta name="description" content="Sur la patience de Dieu qui laisse croître ensemble ce que nous voulions arracher d'emblée">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 19 juillet 2026 · 16ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+<span class="badge">Comprend un livre deutérocanonique</span>    <h1>L'ivraie et le <span class="it">blé</span></h1>
+    <p class="chapeau">Sur la patience de Dieu qui laisse croître ensemble ce que nous voulions arracher d'emblée</p>
+    <figure class="gravure" aria-label="Un champ au crépuscule, où des épis mûrs et des tiges folles se mêlent dans la même lumière dorée ; au loin, le silhouette d'un moissoneur qui attend, une faucille à la main, sans trancher encore."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 125 h340"/><path d="M15 125 q40 -35 80 -25 q35 8 55 -5 q40 -18 75 -2 q30 12 55 3 q35 -10 55 -21"/><path d="M20 125 l25 -60 l8 60"/><path d="M55 125 l18 -45 l12 45"/><path d="M95 125 l10 -55 l15 55"/><path d="M130 125 l-5 -40 l20 40"/><path d="M165 125 l8 -50 l8 50"/><path d="M195 125 l-3 -35 l18 35"/><path d="M230 125 l5 -48 l12 48"/><path d="M270 125 l-8 -30 l15 30"/><path d="M300 125 l5 -42 l10 42"/><path d="M45 80 q-8 5 -5 15"/><path d="M75 90 q-10 -3 -12 8"/><path d="M140 95 q-12 0 -10 12"/><path d="M210 88 q-8 8 -5 18"/><path d="M285 95 q-10 5 -8 15"/></g><g class="trait-rubrique"><path d="M255 125 v-55 l-12 -8 l12 -5 l-5 -12"/><path d="M255 70 l8 -3"/><path d="M240 125 h30"/></g><g class="trait-liturgie"><path d="M180 58 q-15 8 -25 20"/><path d="M185 55 q0 -12 -8 -18"/><path d="M190 52 q12 -5 15 -15"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 85 (86), 5-6, 9ab.10, 15-16ab — Segond 1910</p>
+        <div class="ecriture psaume">Car toi, Seigneur, tu es bon, tu pardonnes, et tu es plein de <button class="mot" data-g="g-misericorde">miséricorde</button> envers tous ceux qui t'invoquent. Écoute, Éternel, ma prière ! Sois attentif à la voix de mes supplications ! Toutes les nations que tu as faites viendront et se prosterneront devant toi, Seigneur, et glorifieront ton nom. Car tu es grand, et tu opères des prodiges ; tu es Dieu, toi seul. Mais toi, Seigneur, tu es un Dieu miséricordieux et compatissant, lent à la colère, riche en bonté et en fidélité. Tourne vers moi ta <button class="mot" data-g="g-face">face</button> et aie pitié de moi.</div>
+        <div class="glose" id="g-misericorde"><span class="lemme">miséricorde</span> L'hébreu <span class="gr">חֶסֶד</span> (<i>ḥesed</i>) est le mot le plus dense du vocabulaire biblique : fidélité tenace, amour qui tient parole, alliance inébranlable. Segond le rend par « miséricorde » ou « bonté » selon les passages, perdant parfois l'idée d'engagement. Les rabbins parlent de <i>ḥesed</i> comme de l'acte qui dépasse ce que la justice exige ; le Midrash sur les Psaumes le relie à la création elle-même, que Dieu n'avait aucune obligation de faire. On comprend mieux alors pourquoi ce psaume s'adresse à un Dieu qui ne se contente pas de pardonner, mais reste.</div>
+        <div class="glose" id="g-face"><span class="lemme">face</span> L'hébreu <span class="gr">פָּנִים</span> (<i>pānîm</i>), au pluriel grammatical, désigne la présence personnelle et directe de Dieu. Segond traduit par « face », conservant l'antique biblicalisme. La théologie de la <i>Shekhinah</i> chez les rabbins fait de cette face la manifestation habitante, non pas un attribut mais une relation. Quand le psalmiste demande que la face se tourne, il demande que Dieu se montre là, présent de façon reconnaissable — non qu'il change d'humeur, mais qu'il se donne à voir.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — Rm 8, 26-27 — Segond 1910</p>
+        <div class="ecriture ">De même, l'Esprit vient en aide à notre faiblesse, car nous ne savons pas ce que nous devons <button class="mot" data-g="g-prier">prier</button> comme il le faut ; mais l'Esprit lui-même intercède par des <button class="mot" data-g="g-gemissements">gémissements</button> inexprimables. Et celui qui sonde les cœurs connaît quelle est la pensée de l'Esprit, parce que c'est selon Dieu qu'il intercède en faveur des saints.</div>
+        <div class="glose" id="g-prier"><span class="lemme">prier</span> Le grec <span class="gr">προσεύχομαι</span> (<i>proseuchomai</i>) porte le préfixe <i>pros-</i>, vers, suggérant une direction, une orientation du tout de soi. Segond ne peut que traduire par « prier », mais le verbe grec est plus fortuit, moins ritualisé que notre mot : c'est le fait de se mettre en présence, de s'adresser. Calvin, dans son commentaire sur cette épître, remarque que Paul ne dit pas « nous ne savons pas quoi demander » mais « nous ne savons pas prier », comme si la prière elle-même nous dépassait et demandait à être apprise de l'intérieur.</div>
+        <div class="glose" id="g-gemissements"><span class="lemme">gémissements</span> Le grec <span class="gr">στεναγμοί</span> (<i>stenagmoi</i>) vient de la racine <i>sten-</i>, étreindre, presser ; ce sont les souffles courts de celui que l'oppression étouffe. Segond traduit bien par « gémissements », mais il faut entendre le non-verbal, ce qui précède et dépasse les mots. Origène, dans ses <i>Homélies sur l'Exode</i>, rapprochait ces gémissements de ceux d'Israël sous l'esclavage égyptien, que Dieu entendit avant tout discours structuré. L'Esprit prie ainsi en nous : non pas en embellissant notre demande, mais en portant ce que nous ne pouvons même pas former.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 13, 24-43 — Segond 1910</p>
+        <div class="ecriture evangile">Jésus leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un homme qui a semé une bonne semence dans son champ. Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie au milieu du blé, et s'en alla. Lorsque l'herbe eut poussé et produit du fruit, l'ivraie parut aussi. Les serviteurs du maître de maison vinrent lui dire : Seigneur, n'as-tu pas semé une bonne semence dans ton champ ? D'où vient donc l'ivraie ? Il leur répondit : C'est un ennemi qui a fait cela. Et les serviteurs lui dirent : Veux-tu que nous allions l'arracher ? Non, dit-il, de peur qu'en arrachant l'ivraie, vous ne déraciniez en même temps le blé. Laissez croître ensemble l'un et l'autre jusqu'à la moisson, et, au temps de la moisson, je dirai aux moissonneurs : Arrachez d'abord l'ivraie, et liez-la en gerbes pour la brûler ; mais amassez le blé dans mon <button class="mot" data-g="g-grenier">grenier</button>. Il leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un grain de <button class="mot" data-g="g-moutarde">moutarde</button> qu'on a pris et semé dans son champ. C'est la plus petite de toutes les semences ; mais, quand il a poussé, il est plus grand que les légumes, et il devient un arbre, si bien que les oiseaux du ciel viennent habiter dans ses branches. Il leur dit encore une autre parabole. Le royaume des cieux est semblable à du <button class="mot" data-g="g-levain">levain</button> qu'une femme a pris et mis dans trois mesures de farine, jusqu'à ce que la pâte soit toute levée. Jésus dit toutes ces choses en paraboles à la foule, et il ne leur disait rien sans parabole, afin que s'accomplît ce qui avait été annoncé par le prophète : J'ouvrirai ma bouche en paraboles, je publierai des choses cachées depuis la fondation du monde. Alors il renvoya la foule, et entra dans la maison. Ses disciples s'approchèrent de lui, et lui dirent : Explique-nous la parabole de l'ivraie du champ. Il répondit : Celui qui sème la bonne semence, c'est le Fils de l'homme ; le champ, c'est le monde ; la bonne semence, ce sont les enfants du royaume ; l'ivraie, ce sont les enfants du malin ; l'ennemi qui l'a semée, c'est le diable ; la moisson, c'est la fin du monde ; les moissonneurs, ce sont les anges. Or, comme on arrache l'ivraie et qu'on la brûle au feu, il en sera de même à la fin du monde. Le Fils de l'homme enverra ses anges, qui arracheront de son royaume tous les scandales et ceux qui commettent l'iniquité, et ils les jetteront dans la fournaise ardente, où il y aura des pleurs et des grincements de dents. Alors les justes resplendiront comme le soleil dans le royaume de leur Père. Que celui qui a des oreilles pour entendre entende.</div>
+        <div class="glose" id="g-grenier"><span class="lemme">grenier</span> Le grec <span class="gr">ἀποθήκη</span> (<i>apothēkē</i>), de <i>apotithēmi</i>, mettre à part, désigne le lieu de dépôt sûr, la réserve protégée. Segond traduit par « grenier », qui en français évoque plutôt le grenier à grain du paysan. Le mot grec est plus technique, celui où l'on stocke ce qui a été séparé pour être gardé. Jérôme, dans la <i>Vulgate</i>, avait choisi <i>horreum</i>, le terme latin du magasin d'État, peut-être pour marquer la dimension collective et finale de ce rassemblement. Le grenier n'est pas seulement le salut du bon grain : c'est la fin visible de la patience du maître, le moment où ce qui a attendu ensemble trouve enfin sa véritable séparation.</div>
+        <div class="glose" id="g-moutarde"><span class="lemme">moutarde</span> Le grec <span class="gr">σίναπι</span> (<i>sinapi</i>) désigne la moutarde noire, <i>Sinapis nigra</i>, dont la graine mesure environ un millimètre. Segond reste sobre. Les rabbins du Talmud de Jérusalem (<i>Berakhot</i> 6b) utilisaient déjà cette image pour parler de quelque chose de méprisable devenant remarquable. Mais Jésus pousse plus loin : l'arbre de la moutarde n'existe pas, la plante reste arbustive. La parabole crée une attente déçue puis dépassée : ce que le royaume fait de petit n'est pas seulement croître, c'est devenir autre chose que ce que la nature prévoyait. Chrysostome y voyait l'Église elle-même, sortie de douze hommes sans envergure.</div>
+        <div class="glose" id="g-levain"><span class="lemme">levain</span> Le grec <span class="gr">ζύμη</span> (<i>zumē</i>) est le levain ferment, souvent connoté négativement dans la Bible (le péché comme levain qui fermente). Segond ne trahit pas cette ambivalence en le traduisant simplement. Ici, le renversement est total : ce qui corrompait devient ce qui fait vivre. La <i>midah</i> de farine, mesure hébraïque d'environ 22 litres, rend l'image domestique mais massive — trois mesures, c'est la pâte d'une communauté, non d'un repas individuel. Calvin remarquait que la femme travaille sans voir le levain agir, ce qui fait toute la force de la parabole : le royaume opère dans l'invisible de l'attente.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile (version courte) — Mt 13, 24-30 — Segond 1910</p>
+        <div class="ecriture evangile">Jésus leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un homme qui a semé une bonne semence dans son champ. Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie au milieu du blé, et s'en alla. Lorsque l'herbe eut poussé et produit du fruit, l'ivraie parut aussi. Les serviteurs du maître de maison vinrent lui dire : Seigneur, n'as-tu pas semé une bonne semence dans ton champ ? D'où vient donc l'ivraie ? Il leur répondit : C'est un ennemi qui a fait cela. Et les serviteurs lui dirent : Veux-tu que nous allions l'arracher ? Non, dit-il, de peur qu'en arrachant l'ivraie, vous ne déraciniez en même temps le blé. Laissez croître ensemble l'un et l'autre jusqu'à la moisson, et, au temps de la moisson, je dirai aux moissonneurs : Arrachez d'abord l'ivraie, et liez-la en gerbes pour la brûler ; mais amassez le blé dans mon grenier.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le sommeil et l'ennemi</h3><p>Le détail que « les gens dormaient » n'est pas ornemental. Chrysostome, dans sa 46<sup>e</sup> homélie sur Matthieu, y voit non une faute des serviteurs mais la condition humaine : la vigilance parfaite est impossible, et c'est précisément dans cette impossibilité que l'ennemi sème. Le champ n'est pas abandonné, il est habité par des hommes qui doivent dormir. Le commentaire de Calvin sur ce passage (1562) insiste sur la même limite : nous voudrions un monde où le bien pourrait croître protégé, et nous recevons un monde où le mal s'insère dans l'intervalle même de notre fatigue. C'est là que la patience de Dieu devient scandaliseuse, parce qu'elle accepte de gouverner un champ qui n'est pas sécurisé.</p></div>
+      <div><h3>L'ivraie, de la zizanie au jugement</h3><p>Le grec <span class="gr">ζιζάνιον</span> (<i>zizanion</span>) désigne probablement le <i>Lolium temulentum</i>, ivraie commune qui ressemble au blé jeune et ne se distingue vraiment qu'à la maturité. Les Pères ont souvent moralisé cette ressemblance, mais le texte lui-même insiste sur le temps nécessaire à la distinction. Origène, dans ses <i>Homélies sur Jérémie</i>, remarquait que l'arrachement prématuré est une tentation constante des « serviteurs zélés », qui veulent purifier l'Église avant le temps de Dieu. La parabole ne dit pas que l'ivraie est tolérée, mais qu'elle est jugée par celui qui voit au temps de la maturité — nous ne sommes ni les juges ni les moissonneurs.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que nous voulions régler et que Dieu laisse murir</h2>
+<p>Tu as vécu ces moments où une vérité t'apparaît soudain, claire, tranchante, et où tu voudrais l'imposer — à toi-même d'abord, aux autres ensuite. Une injustice réparée, une vérité dite enfin, une conversion exigée sur-le-champ. Tu sens que tu tiens le bon fil, et que tirer suffirait. Mais quelque chose retient ta main. Non pas la peur ni l'indécision, mais une certitude plus obscure : que bousculer maintenant briserait plus qu'il ne réparerait. Tu restes avec cette vérité non dite, cette action non faite, et le temps passe sans que rien ne change visiblement. C'est alors que tu découvres, parfois des années plus tard, que ce que tu voulais arracher a mûri autrement, que le blé a grandi malgré tout, et que ta patience — ou celle de Dieu en toi — a porté un fruit que ta décision ferme n'aurait pas produit. Tu n'as pas été lâche ; tu as été tenu par une sagesse qui te dépassait.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Aujourd'hui, laisse le Christ te rejoindre dans cette impatience que tu portes — celle de vouloir déjà voir le fruit, déjà juger, déjà séparer.</p>
+      <p class="geste">Quand une pensée de jugement surgira — sur toi, sur un autre, sur l'Église — retiens-la un instant. Ne la supprime pas ; simplement, offre-la en silence, comme les serviteurs offrent leur zèle au maître du champ.</p>
+      <small>Ce geste n'est pas une technique de maîtrise de soi, mais une prière d'adoration : reconnaître que le champ est à lui, et que nous sommes dedans avant d'en être les ouvriers.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Si le jugement final n'appartient pas à toi, que devient alors l'urgence de ta foi — et comment la vivre sans qu'elle se retourne en violence contre toi ou contre les autres ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Origène sur le temps de la maturité</h3>
+          <p>« Il ne faut pas couper l'herbe avant le temps, de peur d'arracher avec l'ivraie le blé qui n'est pas encore assez fort pour résister. » Origène, <i>Homélies sur l'Épître aux Romains</i>, 8, 8. Le commentateur alexandrin applique la parabole à la pédagogie de Dieu dans l'âme : Dieu ne hâte pas la maturité, parce que la maturité ne se hâte pas. Cette patience divine n'est pas indifférence, mais connaissance de ce que la croissance exige.</p>
+<p class="attrib">Origène d'Alexandrie, III<sup>e</sup> siècle</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur le scandale de la mixité</h3>
+          <p>« Nous voudrions une Église pure, et nous trouvons un corps où le bon et le mauvais sont mêlés. C'est là notre tentation : vouloir faire nous-mêmes ce que Christ a réservé à son jour. » Calvin, <i>Commentaire sur l'Évangile selon saint Matthieu</i>, 1562. Le réformateur genevois lutte contre l'enthousiasme de ceux qui prétendent reconnaître les élus et les réprouvés avant le temps, et rappelle que la discipline ecclésiale elle-même doit respecter cette économie.</p>
+<p class="attrib">Jean Calvin, XVI<sup>e</sup> siècle</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur le sommeil des serviteurs</h3>
+          <p>« Ce n'est pas par négligence qu'ils dorment, mais par nature. L'ennemi ne profite pas d'une faute, mais de notre condition. Dieu le sait, et pourtant il confie le champ à des hommes qui doivent reposer. » Jean Chrysostome, <i>Homélies sur saint Matthieu</i>, 46, 2. L'évêque de Constantinople refuse tout moralisme sur le sommeil : la vulnérabilité humaine est assumée par Dieu, non utilisée contre l'homme. C'est le mystère de la providence dans un monde créé capable de fatigue.</p>
+<p class="attrib">Jean Chrysostome, IV<sup>e</sup> siècle</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 16ème Semaine du Temps Ordinaire — Sg 12, 13.16-19 ; Rm 8, 26-27 ; Mt 13, 24-43 ; Mt 13, 24-30.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
