@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviteur fragile — samedi 18 juillet 2026</title>
+<meta name="description" content="Le Fils de l'homme ne brise pas le roseau qui fléchit, et n'éteint pas la mèche qui fume encore">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">samedi 18 juillet 2026 · 15ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Serviteur <span class="it">fragile</span></h1>
+    <p class="chapeau">Le Fils de l'homme ne brise pas le roseau qui fléchit, et n'éteint pas la mèche qui fume encore</p>
+    <figure class="gravure" aria-label="Un roseau penché sous le poids de l'eau, au bord d'un marais pâle ; à ses pieds, une mèche de lin encore tiède, légèrement fumante, que quelqu'un tient sans la briser."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 110 q40 -8 80 -2 q60 -6 120 0 q40 -4 100 2"/><path d="M40 112 q20 6 40 0 q30 4 60 -2 q40 6 80 0 q30 4 60 0"/><path d="M180 110 q-5 -25 -15 -50 q-8 -20 -20 -35 q12 12 22 32 q10 28 18 53"/><path d="M165 72 q-8 -5 -12 -15 q6 8 14 12"/><path d="M175 55 q-6 -8 -10 -18 q5 6 12 14"/><path d="M250 112 q-15 -35 -8 -68 q5 -20 18 -30 q-10 15 -12 35 q-5 30 5 63"/><path d="M235 72 q6 -4 10 -12 q-3 8 -8 12"/><path d="M248 48 q4 -6 8 -14 q-2 8 -6 12"/><path d="M255 112 q-3 -15 -2 -30 q-8 12 -18 8 q12 4 20 -6 q-2 14 2 28"/><path d="M235 95 q-5 8 -12 10 q10 -2 15 -10"/><path d="M258 92 q5 6 12 8 q-8 -2 -12 -6"/><path d="M242 108 q8 -18 16 -22 q-6 10 -10 20"/><path d="M252 105 q4 -12 10 -18 q-4 8 -6 16"/></g><g class="trait-rubrique"><path d="M242 44 q-3 6 -2 12 q-4 -4 -2 -10 z"/></g><g class="trait-liturgie"><path d="M120 112 q8 -20 15 -38 q6 -16 12 -28 q-4 16 -10 32 q-8 20 -14 34 z"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Mi 2, 1-5 — Louis Segond 1910</p>
+        <div class="ecriture "><p><span class="s">1</span> Malheur à ceux qui méditent l'iniquité et qui préparent le mal sur leur couche ! Au point du jour ils l'exécutent, parce que le pouvoir est à eux. <span class="s">2</span> Ils convoitent des champs, et ils s'en emparent, des maisons, et ils les enlèvent ; ils portent leur violence sur l'homme et sur sa maison, sur l'homme et sur son <button class="mot" data-g="g-halek">héritage</button>.</p><p><span class="s">3</span> C'est pourquoi ainsi parle l'Éternel : Voici, je médite contre cette race un mal dont vous ne retirerez pas vos cous, et vous ne marcherez plus la tête haute, car ce sera un temps de détresse. <span class="s">4</span> On fera de vous un sujet de sarcasme, on prononcera une complainte amère, et on dira : Nous sommes entièrement dévastés ! Il donne à d'autres la part de mon peuple ! Comment me l'enlève-t-il ? Il distribue nos champs à l'ennemi ! <span class="s">5</span> C'est pourquoi tu n'auras personne qui jette le cordeau pour le <button class="mot" data-g="g-goral">tirage au sort</button> dans l'assemblée de l'Éternel.</p></div>
+        <div class="glose" id="g-halek"><span class="lemme">héritage</span> L'hébreu <span class="gr">naḥălāh</span>, de la racine <span class="gr">n-ḥ-l</span>, désigne d'abord le patrimoine familial transmis par partage, non par simple succession. La LXX traduit par <span class="gr">klēronomia</span>, le même mot que Paul emploie pour l'héritage en Christ (Ga 3,18). Segond choisit « héritage » pour marquer la dimension juridique, mais le terme hébreu porte plus fortement l'idée d'un bien communautaire confié par YHWH. Les prophètes y reviennent sans cesse : Amos attaque ceux qui « dévorent l'héritage du pauvre » (Am 2,7). Le rabbin Rachi, commentant ce verset, note que l'héritage n'est jamais une propriété absolue : il est détenu en fief divin.</div>
+        <div class="glose" id="g-goral"><span class="lemme">tirage au sort</span> Le <span class="gr">gōrāl</span>, mot hébreu ancien, est le caillou ou le fragment d'os marqué que l'on tire pour répartir un bien commun. Segond le rend par « tirage au sort », conservant l'archaïsme du rituel. La répartition par <span class="gr">gōrāl</span> fonde l'identité d'Israël : Josué en attribue les tribus (Jos 14,2), et David reçoit le <span class="gr">gōrāl</span> de Jérusalem (Ps 125[126],3). Le prophète annonce ici l'exclusion totale : plus de part, plus de place dans l'économie sacrée. Calvin, dans son <em>Commentaire sur les douze petits prophètes</em>, lit ce verset comme le retrait de la citoyenneté spirituelle : « Ce n'est pas seulement une perte terrestre, c'est l'anéantissement de leur nom dans le peuple de Dieu. »</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 9 B (10), 1-2, 3-4, 7-8ab, 14 — Louis Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">1</span> Éternel ! pourquoi te tiens-tu loin ? Pourquoi te <button class="mot" data-g="g-caches">caches</button>-tu au temps de la détresse ? <span class="s">2</span> Le méchant, dans l'arrogance de sa colère, poursuit les malheureux : qu'ils soient pris dans les machinations qu'ils ont conçues !</p><p><span class="s">3</span> Car le méchant se glorifie du désir de son âme, l'avare se révolte, il outrage l'Éternel. <span class="s">4</span> Le méchant dit dans son orgueil : Il ne punit pas ! Il n'y a point de Dieu ! Telles sont ses pensées.</p><p><span class="s">7</span> Il dit en son cœur : Je ne chancelle pas, je suis pour toujours à l'abri du malheur. <span class="s">8ab</span> Sa bouche est pleine de malédiction, de tromperie et de violence.</p><p><span class="s">14</span> Tu vois, car tu regardes la peine et la souffrance, pour reprendre en tes mains leur <button class="mot" data-g="g-cause">cause</button>. A toi s'abandonne le malheureux, tu viens en aide à l'orphelin.</p></div>
+        <div class="glose" id="g-caches"><span class="lemme">caches</span> L'hébreu <span class="gr">tistēr</span>, hithpael de <span class="gr">s-t-r</span>, est un verbe réfléchi intense : Dieu se voile lui-même, il se met en retrait. Segond traduit par « te caches », préservant le mystère de cette retraite divine. Ce n'est pas l'absence, mais l'occultation volontaire. Le même verbe apparaît en Es 45,15 : « Vraiment, tu es un Dieu qui te caches ». Chrysostome, dans ses <em>Homélies sur les Psaumes</em>, ne résout pas l'aporie : « Le Seigneur se cache pour nous éprouver, mais aussi pour nous rendre plus ardents dans la quête. Celui qui cherche trouve, parce que le caché appelle le désir. » Les rabbins du <em>Midrash Tehillim</em> notent que <span class="gr">s-t-r</span> est proche de <span class="gr">sāṭār</span>, le voile du tabernacle : Dieu se cache derrière ce qu'il a lui-même établi.</div>
+        <div class="glose" id="g-cause"><span class="lemme">cause</span> Le mot hébreu <span class="gr">mispaṭ</span>, de la racine <span class="gr">š-p-ṭ</span>, est le jugement, la sentence, mais aussi le droit que l'on défend. Segond choisit « cause », élargissant le sens vers la procédure juridique. LXX traduit par <span class="gr">krima</span>, le verdict rendu. Le psalmiste demande que Dieu ne se contente pas de voir la souffrance, mais qu'il en assume la juridiction. C'est le langage des plaideurs sans défenseur : l'orphelin, l'étranger, la veuve. Calvin écrit : « Dieu n'est pas un spectateur ; il prend la cause en main comme avocat et comme juge. » Le <span class="gr">mispaṭ</span> est ainsi à la fois ce que l'on réclame et ce que Dieu donne.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 12, 14-21 — Louis Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">14</span> Les pharisiens sortirent, et ils prirent conseil contre Jésus pour le faire <button class="mot" data-g="g-perdre">périr</button>. <span class="s">15</span> Jésus, l'ayant su, se retira de ce lieu. Une grande foule le suivit, et il guérit tous les malades, <span class="s">16</span> en leur recommandant strictement de ne pas le faire connaître. <span class="s">17</span> Cela fit accomplir ce qui avait été annoncé par Ésaïe le prophète :</p><p><span class="s">18</span> Voici mon <button class="mot" data-g="g-serviteur">serviteur</button>, que j'ai choisi, Mon bien-aimé, en qui mon âme a mis ses complaisances. Je mettrai mon Esprit sur lui, Et il annoncera la justice aux nations. <span class="s">19</span> Il ne contestera point, il ne criera point, Et personne n'entendra sa voix dans les rues. <span class="s">20</span> Il ne brisera pas le roseau cassé, Et il n'éteindra pas la mèche qui fume encore, Jusqu'à ce qu'il ait fait triompher la justice. <span class="s">21</span> Et les nations mettront leur espérance en son nom.</p></div>
+        <div class="glose" id="g-perdre"><span class="lemme">périr</span> Le grec <span class="gr">apolésōsin</span>, aoriste subjonctif de <span class="gr">apollumi</span>, est le verbe de destruction totale : non seulement tuer, mais faire disparaître, annihiler. Segond atténue en « faire périr », conservant le sens mais perdant la nuance d'effacement. Ce même verbe, au présent, est celui des brebis perdues (Lc 15,4 : <span class="gr">apolōlós</span>). Les pharisiens veulent pour Jésus le sort de ce qui est voué à l'abolition. Matthieu seul rapporte cette intention précise ; Marc (3,6) parle simplement de « détruire » (<span class="gr">apolésōsin</span> aussi, mais dans une construction moins emphatique). Chrysostome, dans ses <em>Homélies sur Matthieu</em>, relève l'ironie : ceux qui veulent faire périr le Christ sont eux-mêmes sur le chemin de la perdition qu'ils projettent.</div>
+        <div class="glose" id="g-serviteur"><span class="lemme">serviteur</span> Le grec <span class="gr">pais</span> est double : enfant et serviteur. La LXX d'Ésaïe 42,1 — que Matthieu cite — avait traduit l'hébreu <span class="gr">ʿeḇeḏ</span> par <span class="gr">pais</span>, conservant l'ambiguïté du jeune serviteur confié à une maison. Segond choisit « serviteur », écartant l'enfance pour marquer la fonction. Or le <span class="gr">pais</span> de Dieu dans la Septante désigne aussi Isaac, le fils offert (Gn 22,5), et Israël lui-même (És 41,8). Le titre rassemble donc obéissance, vulnérabilité, filiation. Jérôme, dans sa <em>Commentaire sur Isaïe</em>, hésite : « <em>Puer</em> en latin dit l'âge autant que le service ; c'est le Christ enfant qui obéit, et c'est le serviteur qui souffre. »</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le retrait messianique</h3><p>Matthieu structure toute sa narration autour de ce motif du retrait volontaire. Après la guérison du paralytique, Jésus « se retira » (Mt 9,24) ; ici encore, « se retira de ce lieu ». Ce n'est pas la fuite de la lâcheté, mais la stratégie du <span class="gr">pais</span> d'Ésaïe : non-contestation, non-clameur. Chrysostome, dans l'<em>Homélie 41 sur Matthieu</em>, insiste sur cette réserve : « Il se cache, non parce qu'il craint, mais parce qu'il attend le temps fixé par le Père. » Le retrait est lui-même prophétique : il accomplit ce qu'Ésaïe avait vu du Serviteur, et il prépare la croix, où le silence deviendra définitif. Calvin, plus sobre, note que « la sagesse du Fils consiste à ne pas précipiter l'accomplissement, parce que la justice qu'il doit établir exige la mesure et le temps de Dieu ».</p></div>
+      <div><h3>Mi 2 et le partage aboli</h3><p>Le prophète Michée dénonce une violence systémique : l'accumulation foncière par les puissants, qui réduit le paysan à la dépossession totale. Le <span class="gr">gōrāl</span>, le tirage au sort qui fondait l'égalité tribale, devient impossible. Cette situation n'est pas abstraite : les archives assyriennes du VIIIe siècle attestent une concentration des terres sous les rois d'Israël du Nord, et les prophètes Amos (2,6-8) et Isaïe (5,8) reprennent le même thème. L'exclusion du <span class="gr">gōrāl</span> dans l'assemblée de YHWH signifie l'effacement de la mémoire : sans part, sans nom, sans descendance. Le psaume répond à cette menace par la confiance inverse : Dieu lui-même « prend la cause en main » (<span class="gr">mispaṭ</span>), contre ceux qui croient leur violence impunie.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le roseau que l'on croyait sec</h2>
+<p>Tu as prié, parfois, avec des mots si érodés qu'ils semblaient n'être plus que geste, plus que son. Tu répétais une demande, une louange, une plainte, sans que rien en toi réponde, sans que le ciel parût s'entrouvrir. Et tu as pensé que cette prière était morte, qu'elle n'avait pas porté, qu'elle s'était usée en chemin comme une requête inutile. Or le texte d'aujourd'hui dit que le roseau cassé — celui qui ne tient plus debout, qui ne fait plus de bruit quand le vent passe — n'est pas brisé par le Serviteur. Ce que tu croyais fini dans ta bouche, il le garde. Ce que tu jugais sans valeur, il l'assume dans son silence même.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le Christ ne demande pas que tu sois intact avant de venir à lui. Il demande que tu lui confies ce qui est cassé, ce qui fume encore, ce que tu jugerais indigne.</p>
+      <p class="geste">Pose devant toi, sur la paume de ta main, ce que tu croyais devoir cacher : la prière qui n'a pas porté, le service sans fruit visible, le silence forcé. Offre-le au Serviteur qui ne brise pas.</p>
+      <small>Ce geste peut être fait avec un objet réel — un papier, une mèche de coton, un brin d'herbe — ou simplement dans le creux de la main fermée, comme on tient ce qu'on ne veut pas lâcher.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu as si longtemps cru perdu en toi que le Serviteur pourrait encore porter, sans que tu le saches ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le chant du Serviteur en Ésaïe</h3>
+          <p>Matthieu cite Ésaïe 42,1-4, le premier des « chants du Serviteur ». Ce texte, rédigé pendant l'exil ou peu après (VIe siècle av. J.-C.), redéfinit la mission d'Israël : non plus puissance politique, mais lumière pour les nations par la souffrance patiente. La LXX, traduite à Alexandrie au IIIe siècle av. J.-C., renforce l'universalisme : « les nations » (<span class="gr">ethnē</span>, les païens) mettront leur espérance dans le <span class="gr">onomati</span>, le nom du Serviteur. Matthieu reprend cette ouverture, mais il l'oriente christologiquement : le <span class="gr">pais</span> c'est Jésus, et les nations, c'est la foule des païens qui le suivra jusqu'à la croix. Jérôme, dans sa <em>Lettre à Marcella</em> (384), écrit que « le Serviteur d'Ésaïe est le Christ dans sa chair, non dans sa divinité : c'est l'homme Jésus qui se tait, qui souffre, qui espère ».</p>
+<p class="attrib">Jérôme, Lettre à Marcella</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le silence comme force</h3>
+          <p>Chrysostome, dans sa <em>Homélie 41 sur Matthieu</em>, développe longuement le paradoxe du silence christique. Il oppose le bruit des pharisiens, « qui sortent pour prendre conseil », au retrait de Jésus, « qui se tait et guérit ». Le silence n'est pas passivité : c'est « la force qui contient sa propre puissance, comme un fleuve qu'on endigue pour irriguer plus loin ». Cette image du fleuve endigué revient chez Chrysostome chaque fois qu'il commente les retraits de Jésus. Il ajoute une note psychologique : « Le peuple le suivait parce qu'il guérissait ; mais il ne le proclamait pas, parce que la guérison suffisait à parler de lui. » La mèche qui fume, le roseau cassé, sont ainsi les disciples mêmes : « Vous qui croyez être sans valeur, il vous porte jusqu'au triomphe. »</p>
+<p class="attrib">Jean Chrysostome, Homélie 41 sur Matthieu</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La justice différée</h3>
+          <p>Calvin, commentant Ésaïe 42 dans son <em>Commentaire sur le livre d'Ésaïe</em> (1551), insiste sur la temporalité du texte : « Jusqu'à ce qu'il fasse triompher la justice » (<span class="gr">eis telos</span>, jusqu'au terme). Ce n'est pas que la justice soit absente maintenant, mais qu'elle est en chemin, et que son chemin passe par la patience. Calvin oppose cette patience à l'impatience révolutionnaire : « Les hommes veulent que Dieu juge selon leur chaleur ; il juge selon sa mesure, qui est la durée de la foi. » Cette durée, c'est celle du roseau qui ne se brise pas : « Il est penché, il est meurtri, mais il tient, parce que le Fils le tient. » La mèche qui fume, ajoute Calvin, « n'est pas une mèche éteinte ; elle est encore tiède, et le Fils souffle sur elle, non pour l'embraser tout de suite, mais pour qu'elle reprenne quand il sera temps ».</p>
+<p class="attrib">Jean Calvin, Commentaire sur Ésaïe</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 15ème Semaine du Temps Ordinaire — Mi 2, 1-5 ; Mt 12, 14-21.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
