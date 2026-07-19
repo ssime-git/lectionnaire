@@ -1,0 +1,135 @@
+{
+  "date": "2026-07-19",
+  "date_humaine": "dimanche",
+  "semaine": "16ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": true,
+  "references_brutes": "Sg 12, 13.16-19 ; Rm 8, 26-27 ; Mt 13, 24-43 ; Mt 13, 24-30",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M0 125 h340\"/><path d=\"M15 125 q40 -35 80 -25 q35 8 55 -5 q40 -18 75 -2 q30 12 55 3 q35 -10 55 -21\"/><path d=\"M20 125 l25 -60 l8 60\"/><path d=\"M55 125 l18 -45 l12 45\"/><path d=\"M95 125 l10 -55 l15 55\"/><path d=\"M130 125 l-5 -40 l20 40\"/><path d=\"M165 125 l8 -50 l8 50\"/><path d=\"M195 125 l-3 -35 l18 35\"/><path d=\"M230 125 l5 -48 l12 48\"/><path d=\"M270 125 l-8 -30 l15 30\"/><path d=\"M300 125 l5 -42 l10 42\"/><path d=\"M45 80 q-8 5 -5 15\"/><path d=\"M75 90 q-10 -3 -12 8\"/><path d=\"M140 95 q-12 0 -10 12\"/><path d=\"M210 88 q-8 8 -5 18\"/><path d=\"M285 95 q-10 5 -8 15\"/></g><g class=\"trait-rubrique\"><path d=\"M255 125 v-55 l-12 -8 l12 -5 l-5 -12\"/><path d=\"M255 70 l8 -3\"/><path d=\"M240 125 h30\"/></g><g class=\"trait-liturgie\"><path d=\"M180 58 q-15 8 -25 20\"/><path d=\"M185 55 q0 -12 -8 -18\"/><path d=\"M190 52 q12 -5 15 -15\"/></g></svg>",
+  "titre": "L'ivraie et le blé",
+  "titre_html": "L'ivraie et le <span class=\"it\">blé</span>",
+  "sous_titre": "Sur la patience de Dieu qui laisse croître ensemble ce que nous voulions arracher d'emblée",
+  "suite_hier": null,
+  "gravure_alt": "Un champ au crépuscule, où des épis mûrs et des tiges folles se mêlent dans la même lumière dorée ; au loin, le silhouette d'un moissoneur qui attend, une faucille à la main, sans trancher encore.",
+  "lectures": [
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 85 (86), 5-6, 9ab.10, 15-16ab",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "Car toi, Seigneur, tu es bon, tu pardonnes, et tu es plein de <button class=\"mot\" data-g=\"g-misericorde\">miséricorde</button> envers tous ceux qui t'invoquent. Écoute, Éternel, ma prière ! Sois attentif à la voix de mes supplications ! Toutes les nations que tu as faites viendront et se prosterneront devant toi, Seigneur, et glorifieront ton nom. Car tu es grand, et tu opères des prodiges ; tu es Dieu, toi seul. Mais toi, Seigneur, tu es un Dieu miséricordieux et compatissant, lent à la colère, riche en bonté et en fidélité. Tourne vers moi ta <button class=\"mot\" data-g=\"g-face\">face</button> et aie pitié de moi.",
+      "gloses": [
+        {
+          "id": "g-misericorde",
+          "lemme": "miséricorde",
+          "html": "L'hébreu <span class=\"gr\">חֶסֶד</span> (<i>ḥesed</i>) est le mot le plus dense du vocabulaire biblique : fidélité tenace, amour qui tient parole, alliance inébranlable. Segond le rend par « miséricorde » ou « bonté » selon les passages, perdant parfois l'idée d'engagement. Les rabbins parlent de <i>ḥesed</i> comme de l'acte qui dépasse ce que la justice exige ; le Midrash sur les Psaumes le relie à la création elle-même, que Dieu n'avait aucune obligation de faire. On comprend mieux alors pourquoi ce psaume s'adresse à un Dieu qui ne se contente pas de pardonner, mais reste."
+        },
+        {
+          "id": "g-face",
+          "lemme": "face",
+          "html": "L'hébreu <span class=\"gr\">פָּנִים</span> (<i>pānîm</i>), au pluriel grammatical, désigne la présence personnelle et directe de Dieu. Segond traduit par « face », conservant l'antique biblicalisme. La théologie de la <i>Shekhinah</i> chez les rabbins fait de cette face la manifestation habitante, non pas un attribut mais une relation. Quand le psalmiste demande que la face se tourne, il demande que Dieu se montre là, présent de façon reconnaissable — non qu'il change d'humeur, mais qu'il se donne à voir."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Rm 8, 26-27",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "De même, l'Esprit vient en aide à notre faiblesse, car nous ne savons pas ce que nous devons <button class=\"mot\" data-g=\"g-prier\">prier</button> comme il le faut ; mais l'Esprit lui-même intercède par des <button class=\"mot\" data-g=\"g-gemissements\">gémissements</button> inexprimables. Et celui qui sonde les cœurs connaît quelle est la pensée de l'Esprit, parce que c'est selon Dieu qu'il intercède en faveur des saints.",
+      "gloses": [
+        {
+          "id": "g-prier",
+          "lemme": "prier",
+          "html": "Le grec <span class=\"gr\">προσεύχομαι</span> (<i>proseuchomai</i>) porte le préfixe <i>pros-</i>, vers, suggérant une direction, une orientation du tout de soi. Segond ne peut que traduire par « prier », mais le verbe grec est plus fortuit, moins ritualisé que notre mot : c'est le fait de se mettre en présence, de s'adresser. Calvin, dans son commentaire sur cette épître, remarque que Paul ne dit pas « nous ne savons pas quoi demander » mais « nous ne savons pas prier », comme si la prière elle-même nous dépassait et demandait à être apprise de l'intérieur."
+        },
+        {
+          "id": "g-gemissements",
+          "lemme": "gémissements",
+          "html": "Le grec <span class=\"gr\">στεναγμοί</span> (<i>stenagmoi</i>) vient de la racine <i>sten-</i>, étreindre, presser ; ce sont les souffles courts de celui que l'oppression étouffe. Segond traduit bien par « gémissements », mais il faut entendre le non-verbal, ce qui précède et dépasse les mots. Origène, dans ses <i>Homélies sur l'Exode</i>, rapprochait ces gémissements de ceux d'Israël sous l'esclavage égyptien, que Dieu entendit avant tout discours structuré. L'Esprit prie ainsi en nous : non pas en embellissant notre demande, mais en portant ce que nous ne pouvons même pas former."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 24-43",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "Jésus leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un homme qui a semé une bonne semence dans son champ. Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie au milieu du blé, et s'en alla. Lorsque l'herbe eut poussé et produit du fruit, l'ivraie parut aussi. Les serviteurs du maître de maison vinrent lui dire : Seigneur, n'as-tu pas semé une bonne semence dans ton champ ? D'où vient donc l'ivraie ? Il leur répondit : C'est un ennemi qui a fait cela. Et les serviteurs lui dirent : Veux-tu que nous allions l'arracher ? Non, dit-il, de peur qu'en arrachant l'ivraie, vous ne déraciniez en même temps le blé. Laissez croître ensemble l'un et l'autre jusqu'à la moisson, et, au temps de la moisson, je dirai aux moissonneurs : Arrachez d'abord l'ivraie, et liez-la en gerbes pour la brûler ; mais amassez le blé dans mon <button class=\"mot\" data-g=\"g-grenier\">grenier</button>. Il leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un grain de <button class=\"mot\" data-g=\"g-moutarde\">moutarde</button> qu'on a pris et semé dans son champ. C'est la plus petite de toutes les semences ; mais, quand il a poussé, il est plus grand que les légumes, et il devient un arbre, si bien que les oiseaux du ciel viennent habiter dans ses branches. Il leur dit encore une autre parabole. Le royaume des cieux est semblable à du <button class=\"mot\" data-g=\"g-levain\">levain</button> qu'une femme a pris et mis dans trois mesures de farine, jusqu'à ce que la pâte soit toute levée. Jésus dit toutes ces choses en paraboles à la foule, et il ne leur disait rien sans parabole, afin que s'accomplît ce qui avait été annoncé par le prophète : J'ouvrirai ma bouche en paraboles, je publierai des choses cachées depuis la fondation du monde. Alors il renvoya la foule, et entra dans la maison. Ses disciples s'approchèrent de lui, et lui dirent : Explique-nous la parabole de l'ivraie du champ. Il répondit : Celui qui sème la bonne semence, c'est le Fils de l'homme ; le champ, c'est le monde ; la bonne semence, ce sont les enfants du royaume ; l'ivraie, ce sont les enfants du malin ; l'ennemi qui l'a semée, c'est le diable ; la moisson, c'est la fin du monde ; les moissonneurs, ce sont les anges. Or, comme on arrache l'ivraie et qu'on la brûle au feu, il en sera de même à la fin du monde. Le Fils de l'homme enverra ses anges, qui arracheront de son royaume tous les scandales et ceux qui commettent l'iniquité, et ils les jetteront dans la fournaise ardente, où il y aura des pleurs et des grincements de dents. Alors les justes resplendiront comme le soleil dans le royaume de leur Père. Que celui qui a des oreilles pour entendre entende.",
+      "gloses": [
+        {
+          "id": "g-grenier",
+          "lemme": "grenier",
+          "html": "Le grec <span class=\"gr\">ἀποθήκη</span> (<i>apothēkē</i>), de <i>apotithēmi</i>, mettre à part, désigne le lieu de dépôt sûr, la réserve protégée. Segond traduit par « grenier », qui en français évoque plutôt le grenier à grain du paysan. Le mot grec est plus technique, celui où l'on stocke ce qui a été séparé pour être gardé. Jérôme, dans la <i>Vulgate</i>, avait choisi <i>horreum</i>, le terme latin du magasin d'État, peut-être pour marquer la dimension collective et finale de ce rassemblement. Le grenier n'est pas seulement le salut du bon grain : c'est la fin visible de la patience du maître, le moment où ce qui a attendu ensemble trouve enfin sa véritable séparation."
+        },
+        {
+          "id": "g-moutarde",
+          "lemme": "moutarde",
+          "html": "Le grec <span class=\"gr\">σίναπι</span> (<i>sinapi</i>) désigne la moutarde noire, <i>Sinapis nigra</i>, dont la graine mesure environ un millimètre. Segond reste sobre. Les rabbins du Talmud de Jérusalem (<i>Berakhot</i> 6b) utilisaient déjà cette image pour parler de quelque chose de méprisable devenant remarquable. Mais Jésus pousse plus loin : l'arbre de la moutarde n'existe pas, la plante reste arbustive. La parabole crée une attente déçue puis dépassée : ce que le royaume fait de petit n'est pas seulement croître, c'est devenir autre chose que ce que la nature prévoyait. Chrysostome y voyait l'Église elle-même, sortie de douze hommes sans envergure."
+        },
+        {
+          "id": "g-levain",
+          "lemme": "levain",
+          "html": "Le grec <span class=\"gr\">ζύμη</span> (<i>zumē</i>) est le levain ferment, souvent connoté négativement dans la Bible (le péché comme levain qui fermente). Segond ne trahit pas cette ambivalence en le traduisant simplement. Ici, le renversement est total : ce qui corrompait devient ce qui fait vivre. La <i>midah</i> de farine, mesure hébraïque d'environ 22 litres, rend l'image domestique mais massive — trois mesures, c'est la pâte d'une communauté, non d'un repas individuel. Calvin remarquait que la femme travaille sans voir le levain agir, ce qui fait toute la force de la parabole : le royaume opère dans l'invisible de l'attente."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile (version courte)",
+      "reference": "Mt 13, 24-30",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "Jésus leur proposa une autre parabole. Il dit : Le royaume des cieux est semblable à un homme qui a semé une bonne semence dans son champ. Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie au milieu du blé, et s'en alla. Lorsque l'herbe eut poussé et produit du fruit, l'ivraie parut aussi. Les serviteurs du maître de maison vinrent lui dire : Seigneur, n'as-tu pas semé une bonne semence dans ton champ ? D'où vient donc l'ivraie ? Il leur répondit : C'est un ennemi qui a fait cela. Et les serviteurs lui dirent : Veux-tu que nous allions l'arracher ? Non, dit-il, de peur qu'en arrachant l'ivraie, vous ne déraciniez en même temps le blé. Laissez croître ensemble l'un et l'autre jusqu'à la moisson, et, au temps de la moisson, je dirai aux moissonneurs : Arrachez d'abord l'ivraie, et liez-la en gerbes pour la brûler ; mais amassez le blé dans mon grenier.",
+      "gloses": []
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le sommeil et l'ennemi",
+      "corps_html": "Le détail que « les gens dormaient » n'est pas ornemental. Chrysostome, dans sa 46<sup>e</sup> homélie sur Matthieu, y voit non une faute des serviteurs mais la condition humaine : la vigilance parfaite est impossible, et c'est précisément dans cette impossibilité que l'ennemi sème. Le champ n'est pas abandonné, il est habité par des hommes qui doivent dormir. Le commentaire de Calvin sur ce passage (1562) insiste sur la même limite : nous voudrions un monde où le bien pourrait croître protégé, et nous recevons un monde où le mal s'insère dans l'intervalle même de notre fatigue. C'est là que l'attitude de Dieu peut devenir objet d'incompréhension : elle accepte de gouverner un champ qui n'est pas sécurisé, quand nous voudrions un maître qui prévienne le mal plutôt qu'il ne le laisse s'installer."
+    },
+    {
+      "titre": "L'ivraie, de la zizanie au jugement",
+      "corps_html": "Le grec <span class=\"gr\">ζιζάνιον</span> (<i>zizanion</span>) désigne probablement le <i>Lolium temulentum</i>, ivraie commune qui ressemble au blé jeune et ne se distingue vraiment qu'à la maturité. Les Pères ont souvent moralisé cette ressemblance, mais le texte lui-même insiste sur le temps nécessaire à la distinction. Origène, dans ses <i>Homélies sur Jérémie</i>, remarquait que l'arrachement prématuré est une tentation constante des « serviteurs zélés », qui veulent purifier l'Église avant le temps de Dieu. La parabole ne dit pas que l'ivraie est tolérée, mais qu'elle est jugée par celui qui voit au temps de la maturité — nous ne sommes ni les juges ni les moissonneurs."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que nous voulions régler et que Dieu laisse murir",
+    "variantes": [
+      "Tu as vécu ces moments où une vérité t'apparaît soudain, claire, tranchante, et où tu voudrais l'imposer — à toi-même d'abord, aux autres ensuite. Une injustice réparée, une vérité dite enfin, une conversion exigée sur-le-champ. Tu sens que tu tiens le bon fil, et que tirer suffirait. Mais quelque chose retient ta main, et tu voudrais aussitôt croire que c'est Dieu qui la retient. Prends garde à cette pente : la parabole ne dit pas que toute abstention est sagesse, ni que tout silence gardé porte la patience divine. Le maître du champ attend parce qu'il voit ce que ses serviteurs ne voient pas encore ; toi, tu peux tout aussi bien reculer par lassitude, par peur du conflit, ou par un confort que tu déguises en longanimité. Ne te déclare donc pas trop vite l'instrument de sa patience : interroge plutôt, devant lui, si ce que tu appelles attente n'est pas simplement ta fuite. Demeure avec cette vérité non dite, cette action encore différée, mais demeure-y en examinant ton cœur, non en te félicitant déjà de ta retenue. C'est cet examen, tenu devant Dieu, qui distingue la vraie patience de son imitation — celle qui sait, le moment venu, ne plus se taire. Ce que tu voulais arracher mûrira peut-être autrement ; mais cela ne t'autorise jamais à baptiser du nom de Dieu tout ce que, en réalité, tu n'as fait que remettre à plus tard.",
+      "Il t'arrive de prier pour quelqu'un — un proche qui s'éloigne, un ami qui s'endurcit — avec l'urgence de celui qui voit le danger. Tu demandes à Dieu qu'il intervienne, qu'il parle, qu'il brise ce qui s'oppose. Et rien ne vient. Ou plutôt, ce qui vient n'est pas ce que tu attendais : pas de conversion spectaculaire, pas de jugement qui sépare le bon grain de l'ivraie. Seulement la continuation de la vie commune, avec ses maladresses, ses offenses répétées, ses pardons demandés et parfois accordés. Tu pensais que Dieu agirait en toi comme tu aurais voulu agir toi-même : d'un coup, en nettoyant. Tu découvres qu'il agit comme le maître du champ, laissant croître ensemble ce que tu séparerais, et que ta prière elle-même a été transformée par cet attente. Tu ne pries plus pour un miracle ; tu pries pour voir ce que le miracle caché de sa patience fait lentement.",
+      "Tu portes en toi des zones que tu nommerais volontiers ivraie : des penchants, des blessures, des répétitions que tu reconnais et détestes. Tu as tenté l'arrachement radical, les résolutions, les renoncements nets. Et tu as vu revenir, chaque fois, ce que tu croyais avoir extirpé, parfois plus vigoureux. La parabole te dit autre chose : non pas que tu doives cesser de lutter, mais que le jugement sur toi n'est pas le tien. Il y a un temps où le blé et l'ivraie se ressemblent, où même toi tu ne sais plus bien qui tu es. Ce temps n'est pas un échec de ta volonté ; c'est le temps que Dieu prend pour te laisser devenir ce que tu ne peux pas encore distinguer. La moisson viendra, et elle ne sera pas ta propre auto-évaluation. D'ici là, tu es appelé à croître dans la même patience que celle dont tu bénéficies."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Aujourd'hui, laisse le Christ te rejoindre dans cette impatience que tu portes — celle de vouloir déjà voir le fruit, déjà juger, déjà séparer.",
+    "geste": "Quand une pensée de jugement surgira — sur toi, sur un autre, sur l'Église — retiens-la un instant. Ne la supprime pas ; simplement, offre-la en silence, comme les serviteurs offrent leur zèle au maître du champ.",
+    "note": "Ce geste n'est pas une technique de maîtrise de soi, mais une prière d'adoration : reconnaître que le champ est à lui, et que nous sommes dedans avant d'en être les ouvriers."
+  },
+  "question": "Si le jugement final n'appartient pas à toi, que devient alors l'urgence de ta foi — et comment la vivre sans qu'elle se retourne en violence contre toi ou contre les autres ?",
+  "racines": [
+    {
+      "titre": "Origène sur le temps de la maturité",
+      "corps_html": "« Il ne faut pas couper l'herbe avant le temps, de peur d'arracher avec l'ivraie le blé qui n'est pas encore assez fort pour résister. » Origène, <i>Homélies sur l'Épître aux Romains</i>, 8, 8. Le commentateur alexandrin applique la parabole à la pédagogie de Dieu dans l'âme : Dieu ne hâte pas la maturité, parce que la maturité ne se hâte pas. Cette patience divine n'est pas indifférence, mais connaissance de ce que la croissance exige.",
+      "attribution": "Origène d'Alexandrie, III<sup>e</sup> siècle"
+    },
+    {
+      "titre": "Calvin sur le scandale de la mixité",
+      "corps_html": "« Nous voudrions une Église pure, et nous trouvons un corps où le bon et le mauvais sont mêlés. C'est là notre tentation : vouloir faire nous-mêmes ce que Christ a réservé à son jour. » Calvin, <i>Commentaire sur l'Évangile selon saint Matthieu</i>, 1562. Le réformateur genevois lutte contre l'enthousiasme de ceux qui prétendent reconnaître les élus et les réprouvés avant le temps, et rappelle que la discipline ecclésiale elle-même doit respecter cette économie.",
+      "attribution": "Jean Calvin, XVI<sup>e</sup> siècle"
+    },
+    {
+      "titre": "Chrysostome sur le sommeil des serviteurs",
+      "corps_html": "« Ce n'est pas par négligence qu'ils dorment, mais par nature. L'ennemi ne profite pas d'une faute, mais de notre condition. Dieu le sait, et pourtant il confie le champ à des hommes qui doivent reposer. » Jean Chrysostome, <i>Homélies sur saint Matthieu</i>, 46, 2. L'évêque de Constantinople refuse tout moralisme sur le sommeil : la vulnérabilité humaine est assumée par Dieu, non utilisée contre l'homme. C'est le mystère de la providence dans un monde créé capable de fatigue.",
+      "attribution": "Jean Chrysostome, IV<sup>e</sup> siècle"
+    }
+  ]
+}
