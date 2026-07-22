@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconnaître — mercredi 22 juillet 2026</title>
+<meta name="description" content="Marie de Magdala cherche le corps ; elle trouve le Vivant, qu'elle prend d'abord pour le jardinier.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 22 juillet 2026 · None · <span class="couleur">blanc · Fête</span>
+</p>
+    <h1>Reconnaître <span class="it">la voix</span></h1>
+    <p class="chapeau">Marie de Magdala cherche le corps ; elle trouve le Vivant, qu'elle prend d'abord pour le jardinier.</p>
+    <figure class="gravure" aria-label="Marie de Magdala en manteau sombre, penchée vers une silhouette debout dans la brume d'un jardin à l'aube, la main levée en un geste qui suspend le geste — entre l'étreinte et le recul."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 120 h300"/><path d="M40 120 q15 -25 35 -40 q-10 15 -5 40"/><path d="M100 120 q-5 -30 15 -55 q10 20 5 55"/><path d="M130 65 q8 -5 12 2 q-5 8 -12 -2"/><path d="M80 120 q20 -50 45 -70 q25 20 40 60"/><path d="M200 50 q30 5 50 25 q-20 10 -40 5"/><path d="M250 80 q15 15 10 40"/><path d="M260 120 q5 -25 -5 -40"/><path d="M180 120 q-10 -40 20 -70 q30 25 25 70"/><path d="M220 55 q8 3 15 10"/><path d="M60 40 q40 -15 80 -10 q40 5 70 25"/><path d="M280 90 q15 5 25 30"/><path d="M300 120 q-5 -20 -15 -25"/></g><g class="trait-rubrique"><path d="M145 75 q-8 12 -5 25 q3 -8 8 -5 q-3 -10 5 -18 q-5 5 -8 -2"/></g><g class="trait-liturgie"><path d="M250 55 q0 12 8 14 q8 -2 8 -14 z"/><path d="M258 69 v8"/><path d="M252 80 h12"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ct 3, 1-4a — Louis Segond 1910</p>
+        <div class="ecriture "><p><span class="s">1</span> Sur ma couche, pendant les nuits, j'ai cherché celui que <button class="mot" data-g="g-nephesh">mon âme</button> aime ; je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class="s">2</span> Je me lèverai, et je ferai le tour de la ville ; dans les rues et sur les places, je chercherai celui que mon âme aime. Je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class="s">3</span> Les gardes qui font le tour de la ville m'ont rencontrée : — Avez-vous vu celui que mon âme aime ?</p><p><span class="s">4</span> A peine les avais-je quittés, que j'ai trouvé celui que mon âme aime ; <button class="mot" data-g="g-saisi">je l'ai saisi</button>, et je ne l'ai point lâché, jusqu'à ce que je l'aie amené dans la maison de ma mère, dans la chambre de celle qui m'a conçue.</p></div>
+        <div class="glose" id="g-nephesh"><span class="lemme">mon âme</span> <span class="gr">nep̄eš</span>, le souffle de vie lui-même, ce qui fait qu'un corps n'est pas cadavre. Segond traduit « âme » par habitude héritée de la Septante, mais le mot hébreu désigne l'être tout entier dans son désir, sa faim, sa soif de vivre. Les rabbins lisent ici l'âme d'Israël cherchant Dieu dans l'exil. Origène, dans son <i>Commentaire sur le Cantique</i>, en fait l'âme de l'Église cherchant l'Époux ressuscité.</div>
+        <div class="glose" id="g-saisi"><span class="lemme">je l'ai saisi</span> <span class="gr">ʾeḥĕzaqtî</span>, du verbe <i>ḥazaq</i>, saisir avec force, s'emparer comme on prend un fugitif ou un trésor. Segond adoucit en « saisi », mais le terme hébraïque porte la violence de l'entreprise. L'Église des Pères y voyait l'adhésion de la foi : non pas une opinion tranquille, mais une prise de possession qui ne lâche plus. Chrysostome, dans ses <i>Homélies sur Matthieu</i>, compare cette poigne à celle de la femme hémorroïsse touchant le vêtement de Jésus.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 2 Co 5, 14-17 — Louis Segond 1910</p>
+        <div class="ecriture "><p><span class="s">14</span> Car l'amour du <button class="mot" data-g="g-christos">Christ</button> nous presse, parce que nous avons jugé que si un seul est mort pour tous, tous donc sont morts ;</p><p><span class="s">15</span> et qu'il est mort pour tous, afin que ceux qui vivent ne vivent plus pour eux-mêmes, mais pour celui qui est mort et ressuscité pour eux.</p><p><span class="s">16</span> Ainsi, dès maintenant, nous ne connaissons personne selon la chair ; et si nous avons connu <button class="mot" data-g="g-christ-kata-sarka">Christ selon la chair</button>, maintenant nous ne le connaissons plus de cette manière.</p><p><span class="s">17</span> Si quelqu'un est en <button class="mot" data-g="g-christos">Christ</button>, il est une <button class="mot" data-g="g-ktisis">nouvelle créature</button>. Les choses anciennes sont passées ; voici, toutes choses sont devenues nouvelles.</p></div>
+        <div class="glose" id="g-christos"><span class="lemme">Christ</span> <span class="gr">Christós</span>, le Messie oint, titre devenu nom propre. Segond le laisse tel quel, suivant l'usage néotestamentaire où le titre a absorbé la personne. Calvin, dans son <i>Commentaire sur les Épîtres aux Corinthiens</i>, insiste sur ce glissement sémantique : dire « Christ » c'est déjà confesser la résurrection, car l'oint sans victoire serait un messie décapité, non le Seigneur vivant.</div>
+        <div class="glose" id="g-christ-kata-sarka"><span class="lemme">Christ selon la chair</span> <span class="gr">Christòn katà sárka</span>, la connaissance charnelle du Ressuscité, celle de ses contemporains, de ses disciples avant Pâques, de Marie même dans le jardin. Segond traduit « selon la chair » en maintenant l'ambiguïté paulinienne : Paul ne nie pas l'incarnation, il relativise tout rapport à Jésus qui s'arrêterait au corps mortel. La <i>Catéchèse mystagogique</i> de Cyrille de Jérusalem lie ce verset à la transformation des regards au moment de la communion pascale.</div>
+        <div class="glose" id="g-ktisis"><span class="lemme">nouvelle créature</span> <span class="gr">ktísis néa</span>, création absolument neuve, non pas amélioration mais <i>ex nihilo</i> spirituel. Segond choisit « créature » plutôt que « création » pour garder le personnel : ce n'est pas un monde nouveau en général, mais un moi refondu. Luther, dans ses <i>Préfaces aux Épîtres</i>, fait de ce verset la pierre de touche de la Réforme : la justice nouvelle n'est pas un vernis sur l'ancien homme, mais une naissance dont la Pâque est la maternité.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 62 (63), 2, 3-4, 5-6, 8-9 — Louis Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">2</span> O Dieu ! tu es mon Dieu, je te cherche dès l'<button class="mot" data-g="g-shahar">aurore</button> ; mon âme a soif de toi, mon corps soupire après toi, dans une terre aride, desséchée, sans eau.</p><p><span class="s">3</span> Ainsi je te contemple dans ton sanctuaire, pour voir ta puissance et ta gloire.</p><p><span class="s">4</span> Car ta bonté vaut mieux que la vie : mes lèvres te célèbrent.</p><p><span class="s">5</span> Je te bénirai donc toute ma vie, et au nom de Dieu je lèverai mes mains.</p><p><span class="s">6</span> Mon âme sera rassasiée comme de mets gras et d'abondance ; et, avec des cris de joie, ma bouche te louera.</p><p><span class="s">8</span> Car tu es mon secours, et je suis dans l'allégresse à l'ombre de tes ailes.</p><p><span class="s">9</span> Mon âme est attachée à toi ; ta droite me soutient.</p></div>
+        <div class="glose" id="g-shahar"><span class="lemme">aurore</span> <span class="gr">šāḥar</span>, le blanchiment précurseur, l'aube encore incertaine avant le lever. Segond traduit « aurore » en conservant l'archaïsme poétique, mais le mot hébreu évoque la veille nocturne qui perce. Les <i>Targums</i> rattachaient ce verset au matin du troisième jour, celui de la résurrection. Jean Calvin, dans son <i>Commentaire sur les Psaumes</i>, note que David cherche Dieu « avant que le jour n'ait commencé de luire », c'est-à-dire dans l'obscurité où la foi seule discerne.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Jn 20, 1.11-18 — Louis Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">1</span> Le premier jour de la semaine, Marie de Magdala se rendit au sépulcre dès le matin, comme il faisait encore <button class="mot" data-g="g-skotia">obscur</button>, et elle vit que la pierre avait été ôtée du sépulcre.</p><p><span class="s">11</span> Marie se tenait près du sépulcre, dehors, et elle pleurait. Comme elle pleurait, elle se pencha dans le sépulcre,</p><p><span class="s">12</span> et elle vit deux anges vêtus de blanc, assis à la place où avait été couché le corps de Jésus, l'un à la tête, l'autre aux pieds.</p><p><span class="s">13</span> Ils lui dirent : Femme, pourquoi pleures-tu ? Elle leur répondit : Parce qu'on a enlevé mon Seigneur, et je ne sais pas où on l'a mis.</p><p><span class="s">14</span> Ayant ainsi parlé, elle se retourna, et elle vit <button class="mot" data-g="g-iestous">Jésus</button> debout ; mais elle ne savait pas que c'était <button class="mot" data-g="g-iestous">Jésus</button>.</p><p><span class="s">15</span> Jésus lui dit : Femme, pourquoi pleures-tu ? Qui cherches-tu ? Elle, pensant que c'était le jardinier, lui dit : Seigneur, si c'est toi qui l'as emporté, dis-moi où tu l'as mis, et j'irai le prendre.</p><p><span class="s">16</span> Jésus lui dit : <button class="mot" data-g="g-mariam">Marie</button> ! Elle se retourna, et lui dit en hébreu : <button class="mot" data-g="g-rabbouni">Rabbouni</button> ! c'est-à-dire, Maître.</p><p><span class="s">17</span> Jésus lui dit : Ne me retiens pas ; car je ne suis pas encore monté vers mon Père. Va trouver mes frères, et dis-leur que je monte vers mon Père et votre Père, vers mon Dieu et votre Dieu.</p><p><span class="s">18</span> Marie de Magdala alla annoncer aux disciples qu'elle avait vu le Seigneur, et qu'il lui avait dit ces choses.</p></div>
+        <div class="glose" id="g-skotia"><span class="lemme">obscur</span> <span class="gr">skotía</span>, ténèbres actives, non simple absence de lumière mais principe qui résiste au jour. Segond traduit « obscur » en atténuant ; le grec dit la nuit persistante. Jean Chrysostome, dans sa <i>Homélie 85 sur Jean</i>, y voit le symbole de l'âme encore dans les ténèbres qui cherche sans comprendre : « la pierre est ôtée, et elle cherche le mort ».</div>
+        <div class="glose" id="g-iestous"><span class="lemme">Jésus</span> <span class="gr">Iēsoûs</span>, forme hellénisée de Yéshoua, « Yahvé sauve ». Segond ne le glose pas, mais Jean répète deux fois le nom propre en 20,14 avec une insistance étrange : elle voit Jésus, elle ne sait pas que c'est Jésus. Le nom même est devenu méconnaissable parce que le cadre de la mort l'accommodait à un cadavre. Augustin, dans son <i>Tractatus in Ioannem</i> 121, écrit que « ses yeux étaient retenus par l'amour charnel, qui ne pouvait concevoir la vie ».</div>
+        <div class="glose" id="g-mariam"><span class="lemme">Marie</span> <span class="gr">Mariám</span>, translittération de l'araméen <i>Miryam</i>, le nom propre prononcé par celui qui l'a porté dans sa chair. Segond ne note rien de particulier, mais le grec conserve l'appellation familière. Orige, dans son <i>Commentaire sur Jean</i>, livre X, souligne que le berger connaît le nom de sa brebis : « non pas le titre de femme, mais le nom propre, le secret de l'appartenance ».</div>
+        <div class="glose" id="g-rabbouni"><span class="lemme">Rabbouni</span> <span class="gr">Rabbouní</span>, araméen emphatique, « mon grand maître », plus affectueux que le simple <i>Rabbi</i>. Segond glose « c'est-à-dire, Maître », en ramenant le terme à l'ordinaire du français biblique. Mais le mot araméen porte la reconnaissance d'une relation intacte malgré la mort. La <i>Peschitta</i> syriaque conserve ce mot comme mystère liturgique ; Cyrille d'Alexandrie, dans son <i>Commentaire sur Jean</i>, y lit l'acclamation de l'Église retrouvant sa tête.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le Cantique et le jardin</h3><p>Le premier lecteur du Cantique des cantiques qui lit Jean 20 ne peut manquer l'écho : une femme qui cherche l'aimé dans la nuit, qui interroge les gardes, qui le trouve enfin et le saisit. Jean connaît ce texte, et ses premiers lecteurs le connaissaient. Mais le glissement est radical : au Cantique, l'aimée trouve l'aimé et l'entraîne dans la chambre nuptiale ; ici, Jésus dit « ne me retiens pas ». La chair même de la résurrection n'est pas la possession, elle est l'envoi. Origène, dans sa <i>Homélie I sur le Cantique</i>, avait déjà lu le texte comme trajectoire de l'âme vers le Verbe ; Jean donne à cette trajectoire son terme pascal : le Verbe rejoint ne se laisse plus attraper, il envoie. Le jardin de Marie n'est pas le jardin d'Éden restauré : c'est un jardin de départ, où l'on apprend à nommer autrement.</p></div>
+      <div><h3>Paul, ou la fin de la connaissance charnelle</h3><p>La lettre aux Corinthiens dit ce que Marie vit : « si nous avons connu Christ selon la chair, maintenant nous ne le connaissons plus de cette manière ». Paul écrit cela vers 55-57, quinze ans avant l'Évangile de Jean, mais la communauté johannique le reçoit comme clé de sa propre narration. La chair de Jésus n'est ni niée ni figée : elle est transformée en condition de reconnaissance nouvelle. Calvin, dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i>, insiste sur ce point contre les « enthousiastes » de son temps : « il ne dit pas que Christ soit devenu esprit, mais que notre connaissance cesse d'être charnelle ». La chair du Ressuscité reste vraie, mais elle ne se donne plus au regard qui catalogue, au toucher qui constate. Elle se donne à l'oreille qui entend son nom.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La reconnaissance après la nuit</h2>
+<p>Tu as prié pendant des années en récitant des mots que tu ne sentais pas, la langue obéissant pendant que l'âme sommeillait. Ce n'était pas du faux, ce n'était pas de l'hypocrisie : c'était une semence mise en terre sans que tu saches si la terre était bonne. Puis un matin de rien, dans un hôpital, dans un train, au bord d'un réveil difficile, ces mêmes mots remontent avec une densité que tu ne leur avais jamais prêtée. Tu ne les as pas cultivés ; ils ont poussé dans l'obscurité où tu les avais laissés. C'est ainsi que Marie entend son nom : non pas une nouveauté qu'elle aurait conquise, mais une familiarité qui lui est rendue, changée.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le Christ ressuscité ne se laisse pas retenir, mais il se laisse reconnaitre.</p>
+      <p class="geste">Lis à haute voix ton propre prénom, lentement, comme si quelqu'un qui t'aime le prononçait dans l'obscurité d'un jardin.</p>
+      <small>Cette parole que tu entends, tu peux la porter aujourd'hui à quelqu'un qui cherche encore parmi les tombes.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Que cherches-tu quand tu cherches Dieu, et que devient cette quête quand celui que tu croyais mort t'appelle par ton nom ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur le retard de la foi</h3>
+          <p>Jean Chrysostome, dans sa <i>Homélie 85 sur l'Évangile de Jean</i> (vers 390), ne ménage pas Marie : « Elle voit les anges, elle entend leurs paroles, et elle pleure encore ! ». Mais aussitôt il corrige son propre étonnement : car l'amour ne raisonne pas, l'amour a ses propres yeux, et ces yeux-là doivent être ouverts par celui qu'ils cherchent. La résurrection n'est pas un spectacle qui convainc, elle est une voix qui nomme.</p>
+<p class="attrib">Jean Chrysostome, <i>Homélie 85 sur Jean</i>, PG 59, 461-464</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur la nouvelle créature</h3>
+          <p>Calvin, commentant 2 Corinthiens 5,17 dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i> (1546), met en garde contre une lecture moralisante : « Ce n'est pas à dire que les fidèles soient parfaits, mais que le fondement est nouveau ». La nouveauté n'est pas un état acquis, c'est une orientation donnée. Et cette orientation vient de la mort et de la résurrection du Christ, non de notre effort. C'est pourquoi, ajoute-t-il, « Paul parle de tous en commun, pour ôter tout sujet de gloire ».</p>
+<p class="attrib">Jean Calvin, <i>Commentaire sur 2 Co</i>, CO 50, 75-76</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La réception rabbinique du Cantique</h3>
+          <p>Le <i>Talmud de Babylone</i>, traité <i>Ta'anit</i> 4a, rapporte la controverse qui fit du Cantique un livre canonique : Rabbi Akiva (mort vers 135) trancha en sa faveur en déclarant que « tout l'univers n'est pas digne du jour où le Cantique des cantiques fut donné à Israël ». Pour les rabbins, le texte n'est pas allégorique au sens faible : il est le dialogue même entre Dieu et son peuple dans l'histoire, et particulièrement dans l'exil. Cette lecture fait du chapitre 3 une nuit de Pâque, où le séparé cherche le séparateur jusqu'à la reconnaissance.</p>
+<p class="attrib"><i>Talmud de Babylone</i>, <i>Ta'anit</i> 4a ; Mishnah <i>Yadaim</i> 3,5</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Ct 3, 1-4a ; 2 Co 5, 14-17 ; Jn 20, 1.11-18.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>

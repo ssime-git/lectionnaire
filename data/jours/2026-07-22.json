@@ -1,0 +1,300 @@
+{
+  "json_a_reparer": {
+    "date": "2026-07-22",
+    "date_humaine": null,
+    "semaine": null,
+    "ferie": "Fête",
+    "liturgie": {
+      "cle": "blanc",
+      "nom": "blanc",
+      "hex": "#8C7B4E",
+      "hex_sombre": "#D6BE83"
+    },
+    "deuterocanonique": false,
+    "references_brutes": "Ct 3, 1-4a ; 2 Co 5, 14-17 ; Jn 20, 1.11-18",
+    "traduction_globale": "Louis Segond 1910",
+    "titre": "Reconnaître",
+    "titre_html": "Reconnaître <span class=\"it\">la voix</span>",
+    "sous_titre": "Marie de Magdala cherche le corps ; elle trouve le Vivant, qu'elle prend d'abord pour le jardinier.",
+    "gravure_alt": "Marie de Magdala en manteau sombre, penchée vers une silhouette debout dans la brume d'un jardin à l'aube, la main levée en un geste qui suspend le geste — entre l'étreinte et le recul.",
+    "lectures": [
+      {
+        "etiquette": "Première lecture",
+        "reference": "Ct 3, 1-4a",
+        "traduction": "Louis Segond 1910",
+        "classe": "",
+        "corps_html": "<p><span class=\"s\">1</span> Sur ma couche, pendant les nuits, j'ai cherché celui que <button class=\"mot\" data-g=\"g-nephesh\">mon âme</button> aime ; je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class=\"s\">2</span> Je me lèverai, et je ferai le tour de la ville ; dans les rues et sur les places, je chercherai celui que mon âme aime. Je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class=\"s\">3</span> Les gardes qui font le tour de la ville m'ont rencontrée : — Avez-vous vu celui que mon âme aime ?</p><p><span class=\"s\">4</span> A peine les avais-je quittés, que j'ai trouvé celui que mon âme aime ; <button class=\"mot\" data-g=\"g-saisi\">je l'ai saisi</button>, et je ne l'ai point lâché, jusqu'à ce que je l'aie amené dans la maison de ma mère, dans la chambre de celle qui m'a conçue.</p>",
+        "gloses": [
+          {
+            "id": "g-nephesh",
+            "lemme": "mon âme",
+            "html": "<span class=\"gr\">nep̄eš</span>, le souffle de vie lui-même, ce qui fait qu'un corps n'est pas cadavre. Segond traduit « âme » par habitude héritée de la Septante, mais le mot hébreu désigne l'être tout entier dans son désir, sa faim, sa soif de vivre. Les rabbins lisent ici l'âme d'Israël cherchant Dieu dans l'exil. Origène, dans son <i>Commentaire sur le Cantique</i>, en fait l'âme de l'Église cherchant l'Époux ressuscité."
+          },
+          {
+            "id": "g-saisi",
+            "lemme": "je l'ai saisi",
+            "html": "<span class=\"gr\">ʾeḥĕzaqtî</span>, du verbe <i>ḥazaq</i>, saisir avec force, s'emparer comme on prend un fugitif ou un trésor. Segond adoucit en « saisi », mais le terme hébraïque porte la violence de l'entreprise. L'Église des Pères y voyait l'adhésion de la foi : non pas une opinion tranquille, mais une prise de possession qui ne lâche plus. Chrysostome, dans ses <i>Homélies sur Matthieu</i>, compare cette poigne à celle de la femme hémorroïsse touchant le vêtement de Jésus."
+          }
+        ]
+      },
+      {
+        "etiquette": "Deuxième lecture",
+        "reference": "2 Co 5, 14-17",
+        "traduction": "Louis Segond 1910",
+        "classe": "",
+        "corps_html": "<p><span class=\"s\">14</span> Car l'amour du <button class=\"mot\" data-g=\"g-christos\">Christ</button> nous presse, parce que nous avons jugé que si un seul est mort pour tous, tous donc sont morts ;</p><p><span class=\"s\">15</span> et qu'il est mort pour tous, afin que ceux qui vivent ne vivent plus pour eux-mêmes, mais pour celui qui est mort et ressuscité pour eux.</p><p><span class=\"s\">16</span> Ainsi, dès maintenant, nous ne connaissons personne selon la chair ; et si nous avons connu <button class=\"mot\" data-g=\"g-christ-kata-sarka\">Christ selon la chair</button>, maintenant nous ne le connaissons plus de cette manière.</p><p><span class=\"s\">17</span> Si quelqu'un est en <button class=\"mot\" data-g=\"g-christos\">Christ</button>, il est une <button class=\"mot\" data-g=\"g-ktisis\">nouvelle créature</button>. Les choses anciennes sont passées ; voici, toutes choses sont devenues nouvelles.</p>",
+        "gloses": [
+          {
+            "id": "g-christos",
+            "lemme": "Christ",
+            "html": "<span class=\"gr\">Christós</span>, le Messie oint, titre devenu nom propre. Segond le laisse tel quel, suivant l'usage néotestamentaire où le titre a absorbé la personne. Calvin, dans son <i>Commentaire sur les Épîtres aux Corinthiens</i>, insiste sur ce glissement sémantique : dire « Christ » c'est déjà confesser la résurrection, car l'oint sans victoire serait un messie décapité, non le Seigneur vivant."
+          },
+          {
+            "id": "g-christ-kata-sarka",
+            "lemme": "Christ selon la chair",
+            "html": "<span class=\"gr\">Christòn katà sárka</span>, la connaissance charnelle du Ressuscité, celle de ses contemporains, de ses disciples avant Pâques, de Marie même dans le jardin. Segond traduit « selon la chair » en maintenant l'ambiguïté paulinienne : Paul ne nie pas l'incarnation, il relativise tout rapport à Jésus qui s'arrêterait au corps mortel. La <i>Catéchèse mystagogique</i> de Cyrille de Jérusalem lie ce verset à la transformation des regards au moment de la communion pascale."
+          },
+          {
+            "id": "g-ktisis",
+            "lemme": "nouvelle créature",
+            "html": "<span class=\"gr\">ktísis néa</span>, création absolument neuve, non pas amélioration mais <i>ex nihilo</i> spirituel. Segond choisit « créature » plutôt que « création » pour garder le personnel : ce n'est pas un monde nouveau en général, mais un moi refondu. Luther, dans ses <i>Préfaces aux Épîtres</i>, fait de ce verset la pierre de touche de la Réforme : la justice nouvelle n'est pas un vernis sur l'ancien homme, mais une naissance dont la Pâque est la maternité."
+          }
+        ]
+      },
+      {
+        "etiquette": "Psaume",
+        "reference": "Ps 62 (63), 2, 3-4, 5-6, 8-9",
+        "traduction": "Louis Segond 1910",
+        "classe": "psaume",
+        "corps_html": "<p><span class=\"s\">2</span> O Dieu ! tu es mon Dieu, je te cherche dès l'<button class=\"mot\" data-g=\"g-shahar\">aurore</button> ; mon âme a soif de toi, mon corps soupire après toi, dans une terre aride, desséchée, sans eau.</p><p><span class=\"s\">3</span> Ainsi je te contemple dans ton sanctuaire, pour voir ta puissance et ta gloire.</p><p><span class=\"s\">4</span> Car ta bonté vaut mieux que la vie : mes lèvres te célèbrent.</p><p><span class=\"s\">5</span> Je te bénirai donc toute ma vie, et au nom de Dieu je lèverai mes mains.</p><p><span class=\"s\">6</span> Mon âme sera rassasiée comme de mets gras et d'abondance ; et, avec des cris de joie, ma bouche te louera.</p><p><span class=\"s\">8</span> Car tu es mon secours, et je suis dans l'allégresse à l'ombre de tes ailes.</p><p><span class=\"s\">9</span> Mon âme est attachée à toi ; ta droite me soutient.</p>",
+        "gloses": [
+          {
+            "id": "g-shahar",
+            "lemme": "aurore",
+            "html": "<span class=\"gr\">šāḥar</span>, le blanchiment précurseur, l'aube encore incertaine avant le lever. Segond traduit « aurore » en conservant l'archaïsme poétique, mais le mot hébreu évoque la veille nocturne qui perce. Les <i>Targums</i> rattachaient ce verset au matin du troisième jour, celui de la résurrection. Jean Calvin, dans son <i>Commentaire sur les Psaumes</i>, note que David cherche Dieu « avant que le jour n'ait commencé de luire », c'est-à-dire dans l'obscurité où la foi seule discerne."
+          }
+        ]
+      },
+      {
+        "etiquette": "Évangile",
+        "reference": "Jn 20, 1.11-18",
+        "traduction": "Louis Segond 1910",
+        "classe": "evangile",
+        "corps_html": "<p><span class=\"s\">1</span> Le premier jour de la semaine, Marie de Magdala se rendit au sépulcre dès le matin, comme il faisait encore <button class=\"mot\" data-g=\"g-skotia\">obscur</button>, et elle vit que la pierre avait été ôtée du sépulcre.</p><p><span class=\"s\">11</span> Marie se tenait près du sépulcre, dehors, et elle pleurait. Comme elle pleurait, elle se pencha dans le sépulcre,</p><p><span class=\"s\">12</span> et elle vit deux anges vêtus de blanc, assis à la place où avait été couché le corps de Jésus, l'un à la tête, l'autre aux pieds.</p><p><span class=\"s\">13</span> Ils lui dirent : Femme, pourquoi pleures-tu ? Elle leur répondit : Parce qu'on a enlevé mon Seigneur, et je ne sais pas où on l'a mis.</p><p><span class=\"s\">14</span> Ayant ainsi parlé, elle se retourna, et elle vit <button class=\"mot\" data-g=\"g-iestous\">Jésus</button> debout ; mais elle ne savait pas que c'était <button class=\"mot\" data-g=\"g-iestous\">Jésus</button>.</p><p><span class=\"s\">15</span> Jésus lui dit : Femme, pourquoi pleures-tu ? Qui cherches-tu ? Elle, pensant que c'était le jardinier, lui dit : Seigneur, si c'est toi qui l'as emporté, dis-moi où tu l'as mis, et j'irai le prendre.</p><p><span class=\"s\">16</span> Jésus lui dit : <button class=\"mot\" data-g=\"g-mariam\">Marie</button> ! Elle se retourna, et lui dit en hébreu : <button class=\"mot\" data-g=\"g-rabbouni\">Rabbouni</button> ! c'est-à-dire, Maître.</p><p><span class=\"s\">17</span> Jésus lui dit : Ne me retiens pas ; car je ne suis pas encore monté vers mon Père. Va trouver mes frères, et dis-leur que je monte vers mon Père et votre Père, vers mon Dieu et votre Dieu.</p><p><span class=\"s\">18</span> Marie de Magdala alla annoncer aux disciples qu'elle avait vu le Seigneur, et qu'il lui avait dit ces choses.</p>",
+        "gloses": [
+          {
+            "id": "g-skotia",
+            "lemme": "obscur",
+            "html": "<span class=\"gr\">skotía</span>, ténèbres actives, non simple absence de lumière mais principe qui résiste au jour. Segond traduit « obscur » en atténuant ; le grec dit la nuit persistante. Jean Chrysostome, dans sa <i>Homélie 85 sur Jean</i>, y voit le symbole de l'âme encore dans les ténèbres qui cherche sans comprendre : « la pierre est ôtée, et elle cherche le mort »."
+          },
+          {
+            "id": "g-iestous",
+            "lemme": "Jésus",
+            "html": "<span class=\"gr\">Iēsoûs</span>, forme hellénisée de Yéshoua, « Yahvé sauve ». Segond ne le glose pas, mais Jean répète deux fois le nom propre en 20,14 avec une insistance étrange : elle voit Jésus, elle ne sait pas que c'est Jésus. Le nom même est devenu méconnaissable parce que le cadre de la mort l'accommodait à un cadavre. Augustin, dans son <i>Tractatus in Ioannem</i> 121, écrit que « ses yeux étaient retenus par l'amour charnel, qui ne pouvait concevoir la vie »."
+          },
+          {
+            "id": "g-mariam",
+            "lemme": "Marie",
+            "html": "<span class=\"gr\">Mariám</span>, translittération de l'araméen <i>Miryam</i>, le nom propre prononcé par celui qui l'a porté dans sa chair. Segond ne note rien de particulier, mais le grec conserve l'appellation familière. Orige, dans son <i>Commentaire sur Jean</i>, livre X, souligne que le berger connaît le nom de sa brebis : « non pas le titre de femme, mais le nom propre, le secret de l'appartenance »."
+          },
+          {
+            "id": "g-rabbouni",
+            "lemme": "Rabbouni",
+            "html": "<span class=\"gr\">Rabbouní</span>, araméen emphatique, « mon grand maître », plus affectueux que le simple <i>Rabbi</i>. Segond glose « c'est-à-dire, Maître », en ramenant le terme à l'ordinaire du français biblique. Mais le mot araméen porte la reconnaissance d'une relation intacte malgré la mort. La <i>Peschitta</i> syriaque conserve ce mot comme mystère liturgique ; Cyrille d'Alexandrie, dans son <i>Commentaire sur Jean</i>, y lit l'acclamation de l'Église retrouvant sa tête."
+          }
+        ]
+      }
+    ],
+    "contexte": [
+      {
+        "titre": "Le Cantique et le jardin",
+        "corps_html": "Le premier lecteur du Cantique des cantiques qui lit Jean 20 ne peut manquer l'écho : une femme qui cherche l'aimé dans la nuit, qui interroge les gardes, qui le trouve enfin et le saisit. Jean connaît ce texte, et ses premiers lecteurs le connaissaient. Mais le glissement est radical : au Cantique, l'aimée trouve l'aimé et l'entraîne dans la chambre nuptiale ; ici, Jésus dit « ne me retiens pas ». La chair même de la résurrection n'est pas la possession, elle est l'envoi. Origène, dans sa <i>Homélie I sur le Cantique</i>, avait déjà lu le texte comme trajectoire de l'âme vers le Verbe ; Jean donne à cette trajectoire son terme pascal : le Verbe rejoint ne se laisse plus attraper, il envoie. Le jardin de Marie n'est pas le jardin d'Éden restauré : c'est un jardin de départ, où l'on apprend à nommer autrement."
+      },
+      {
+        "titre": "Paul, ou la fin de la connaissance charnelle",
+        "corps_html": "La lettre aux Corinthiens dit ce que Marie vit : « si nous avons connu Christ selon la chair, maintenant nous ne le connaissons plus de cette manière ». Paul écrit cela vers 55-57, quinze ans avant l'Évangile de Jean, mais la communauté johannique le reçoit comme clé de sa propre narration. La chair de Jésus n'est ni niée ni figée : elle est transformée en condition de reconnaissance nouvelle. Calvin, dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i>, insiste sur ce point contre les « enthousiastes » de son temps : « il ne dit pas que Christ soit devenu esprit, mais que notre connaissance cesse d'être charnelle ». La chair du Ressuscité reste vraie, mais elle ne se donne plus au regard qui catalogue, au toucher qui constate. Elle se donne à l'oreille qui entend son nom."
+      }
+    ],
+    "analogie": {
+      "titre": "La reconnaissance après la nuit",
+      "variantes": [
+        "Tu as prié pendant des années en récitant des mots que tu ne sentais pas, la langue obéissant pendant que l'âme sommeillait. Ce n'était pas du faux, ce n'était pas de l'hypocrisie : c'était une semence mise en terre sans que tu saches si la terre était bonne. Puis un matin de rien, dans un hôpital, dans un train, au bord d'un réveil difficile, ces mêmes mots remontent avec une densité que tu ne leur avais jamais prêtée. Tu ne les as pas cultivés ; ils ont poussé dans l'obscurité où tu les avais laissés. C'est ainsi que Marie entend son nom : non pas une nouveauté qu'elle aurait conquise, mais une familiarité qui lui est rendue, changée.",
+        "Tu as perdu quelqu'un que tu croyais connaitre, et la mort t'a appris que ta connaissance s'arrêtait au visible, au palpable, au quotidien échangeable. Tu reviens sur les lieux, tu refais les gestes, tu cherches le corps dans les objets restés. Puis un jour quelqu'un prononce ton nom comme seul ce disparu le prononçait, avec cette intonation que tu croyais irrémédiablement perdue, et tu comprends que le rapport n'était pas dans la chair que tu pouvais toucher, mais dans l'appel qui te constituait. C'est ce décalage même que vit Marie : le jardinier qu'elle interroge porte déjà la voix de celui qu'elle pleure.",
+        "Tu as servi longtemps sans voir de fruit, donné sans retour, aimé sans que l'autre parût le recevoir. La nuit de cette obscurité t'a fait un jour douter du bien-fondé même de ton geste. Puis tu rencontres quelqu'un que tu n'as pas revu depuis des années, et il te dit que telle parole, telle présence, telle patience venue de toi a été le point de bascule d'une vie que tu ne soupçonnais pas. Tu n'as rien vu passer ; le grain est tombé dans une terre que tu ne contrôlais pas. Marie porte le myrrhe pour un mort et devient la première apôtre d'une vie qu'elle ne peut encore nommer : c'est ce dépassement de l'économie de la perte par l'économie de la grâce que le matin pascal inaugure."
+      ],
+      "choisi": 0
+    },
+    "invitation": {
+      "intro": "Le Christ ressuscité ne se laisse pas retenir, mais il se laisse reconnaitre.",
+      "geste": "Lis à haute voix ton propre prénom, lentement, comme si quelqu'un qui t'aime le prononçait dans l'obscurité d'un jardin.",
+      "note": "Cette parole que tu entends, tu peux la porter aujourd'hui à quelqu'un qui cherche encore parmi les tombes."
+    },
+    "question": "Que cherches-tu quand tu cherches Dieu, et que devient cette quête quand celui que tu croyais mort t'appelle par ton nom ?",
+    "racines": [
+      {
+        "titre": "Chrysostome sur le retard de la foi",
+        "corps_html": "Jean Chrysostome, dans sa <i>Homélie 85 sur l'Évangile de Jean</i> (vers 390), ne ménage pas Marie : « Elle voit les anges, elle entend leurs paroles, et elle pleure encore ! ». Mais aussitôt il corrige son propre étonnement : car l'amour ne raisonne pas, l'amour a ses propres yeux, et ces yeux-là doivent être ouverts par celui qu'ils cherchent. La résurrection n'est pas un spectacle qui convainc, elle est une voix qui nomme.",
+        "attribution": "Jean Chrysostome, <i>Homélie 85 sur Jean</i>, PG 59, 461-464"
+      },
+      {
+        "titre": "Calvin sur la nouvelle créature",
+        "corps_html": "Calvin, commentant 2 Corinthiens 5,17 dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i> (1546), met en garde contre une lecture moralisante : « Ce n'est pas à dire que les fidèles soient parfaits, mais que le fondement est nouveau ». La nouveauté n'est pas un état acquis, c'est une orientation donnée. Et cette orientation vient de la mort et de la résurrection du Christ, non de notre effort. C'est pourquoi, ajoute-t-il, « Paul parle de tous en commun, pour ôter tout sujet de gloire ».",
+        "attribution": "Jean Calvin, <i>Commentaire sur 2 Co</i>, CO 50, 75-76"
+      },
+      {
+        "titre": "La réception rabbinique du Cantique",
+        "corps_html": "Le <i>Talmud de Babylone</i>, traité <i>Ta'anit</i> 4a, rapporte la controverse qui fit du Cantique un livre canonique : Rabbi Akiva (mort vers 135) trancha en sa faveur en déclarant que « tout l'univers n'est pas digne du jour où le Cantique des cantiques fut donné à Israël ». Pour les rabbins, le texte n'est pas allégorique au sens faible : il est le dialogue même entre Dieu et son peuple dans l'histoire, et particulièrement dans l'exil. Cette lecture fait du chapitre 3 une nuit de Pâque, où le séparé cherche le séparateur jusqu'à la reconnaissance.",
+        "attribution": "<i>Talmud de Babylone</i>, <i>Ta'anit</i> 4a ; Mishnah <i>Yadaim</i> 3,5"
+      }
+    ]
+  },
+  "fautes": [],
+  "date": "2026-07-22",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ct 3, 1-4a ; 2 Co 5, 14-17 ; Jn 20, 1.11-18",
+  "traduction_globale": "Louis Segond 1910",
+  "titre": "Reconnaître",
+  "titre_html": "Reconnaître <span class=\"it\">la voix</span>",
+  "sous_titre": "Marie de Magdala cherche le corps ; elle trouve le Vivant, qu'elle prend d'abord pour le jardinier.",
+  "gravure_alt": "Marie de Magdala en manteau sombre, penchée vers une silhouette debout dans la brume d'un jardin à l'aube, la main levée en un geste qui suspend le geste — entre l'étreinte et le recul.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ct 3, 1-4a",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Sur ma couche, pendant les nuits, j'ai cherché celui que <button class=\"mot\" data-g=\"g-nephesh\">mon âme</button> aime ; je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class=\"s\">2</span> Je me lèverai, et je ferai le tour de la ville ; dans les rues et sur les places, je chercherai celui que mon âme aime. Je l'ai cherché, et je ne l'ai point trouvé.</p><p><span class=\"s\">3</span> Les gardes qui font le tour de la ville m'ont rencontrée : — Avez-vous vu celui que mon âme aime ?</p><p><span class=\"s\">4</span> A peine les avais-je quittés, que j'ai trouvé celui que mon âme aime ; <button class=\"mot\" data-g=\"g-saisi\">je l'ai saisi</button>, et je ne l'ai point lâché, jusqu'à ce que je l'aie amené dans la maison de ma mère, dans la chambre de celle qui m'a conçue.</p>",
+      "gloses": [
+        {
+          "id": "g-nephesh",
+          "lemme": "mon âme",
+          "html": "<span class=\"gr\">nep̄eš</span>, le souffle de vie lui-même, ce qui fait qu'un corps n'est pas cadavre. Segond traduit « âme » par habitude héritée de la Septante, mais le mot hébreu désigne l'être tout entier dans son désir, sa faim, sa soif de vivre. Les rabbins lisent ici l'âme d'Israël cherchant Dieu dans l'exil. Origène, dans son <i>Commentaire sur le Cantique</i>, en fait l'âme de l'Église cherchant l'Époux ressuscité."
+        },
+        {
+          "id": "g-saisi",
+          "lemme": "je l'ai saisi",
+          "html": "<span class=\"gr\">ʾeḥĕzaqtî</span>, du verbe <i>ḥazaq</i>, saisir avec force, s'emparer comme on prend un fugitif ou un trésor. Segond adoucit en « saisi », mais le terme hébraïque porte la violence de l'entreprise. L'Église des Pères y voyait l'adhésion de la foi : non pas une opinion tranquille, mais une prise de possession qui ne lâche plus. Chrysostome, dans ses <i>Homélies sur Matthieu</i>, compare cette poigne à celle de la femme hémorroïsse touchant le vêtement de Jésus."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "2 Co 5, 14-17",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">14</span> Car l'amour du <button class=\"mot\" data-g=\"g-christos\">Christ</button> nous presse, parce que nous avons jugé que si un seul est mort pour tous, tous donc sont morts ;</p><p><span class=\"s\">15</span> et qu'il est mort pour tous, afin que ceux qui vivent ne vivent plus pour eux-mêmes, mais pour celui qui est mort et ressuscité pour eux.</p><p><span class=\"s\">16</span> Ainsi, dès maintenant, nous ne connaissons personne selon la chair ; et si nous avons connu <button class=\"mot\" data-g=\"g-christ-kata-sarka\">Christ selon la chair</button>, maintenant nous ne le connaissons plus de cette manière.</p><p><span class=\"s\">17</span> Si quelqu'un est en <button class=\"mot\" data-g=\"g-christos\">Christ</button>, il est une <button class=\"mot\" data-g=\"g-ktisis\">nouvelle créature</button>. Les choses anciennes sont passées ; voici, toutes choses sont devenues nouvelles.</p>",
+      "gloses": [
+        {
+          "id": "g-christos",
+          "lemme": "Christ",
+          "html": "<span class=\"gr\">Christós</span>, le Messie oint, titre devenu nom propre. Segond le laisse tel quel, suivant l'usage néotestamentaire où le titre a absorbé la personne. Calvin, dans son <i>Commentaire sur les Épîtres aux Corinthiens</i>, insiste sur ce glissement sémantique : dire « Christ » c'est déjà confesser la résurrection, car l'oint sans victoire serait un messie décapité, non le Seigneur vivant."
+        },
+        {
+          "id": "g-christ-kata-sarka",
+          "lemme": "Christ selon la chair",
+          "html": "<span class=\"gr\">Christòn katà sárka</span>, la connaissance charnelle du Ressuscité, celle de ses contemporains, de ses disciples avant Pâques, de Marie même dans le jardin. Segond traduit « selon la chair » en maintenant l'ambiguïté paulinienne : Paul ne nie pas l'incarnation, il relativise tout rapport à Jésus qui s'arrêterait au corps mortel. La <i>Catéchèse mystagogique</i> de Cyrille de Jérusalem lie ce verset à la transformation des regards au moment de la communion pascale."
+        },
+        {
+          "id": "g-ktisis",
+          "lemme": "nouvelle créature",
+          "html": "<span class=\"gr\">ktísis néa</span>, création absolument neuve, non pas amélioration mais <i>ex nihilo</i> spirituel. Segond choisit « créature » plutôt que « création » pour garder le personnel : ce n'est pas un monde nouveau en général, mais un moi refondu. Luther, dans ses <i>Préfaces aux Épîtres</i>, fait de ce verset la pierre de touche de la Réforme : la justice nouvelle n'est pas un vernis sur l'ancien homme, mais une naissance dont la Pâque est la maternité."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 62 (63), 2, 3-4, 5-6, 8-9",
+      "traduction": "Louis Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">2</span> O Dieu ! tu es mon Dieu, je te cherche dès l'<button class=\"mot\" data-g=\"g-shahar\">aurore</button> ; mon âme a soif de toi, mon corps soupire après toi, dans une terre aride, desséchée, sans eau.</p><p><span class=\"s\">3</span> Ainsi je te contemple dans ton sanctuaire, pour voir ta puissance et ta gloire.</p><p><span class=\"s\">4</span> Car ta bonté vaut mieux que la vie : mes lèvres te célèbrent.</p><p><span class=\"s\">5</span> Je te bénirai donc toute ma vie, et au nom de Dieu je lèverai mes mains.</p><p><span class=\"s\">6</span> Mon âme sera rassasiée comme de mets gras et d'abondance ; et, avec des cris de joie, ma bouche te louera.</p><p><span class=\"s\">8</span> Car tu es mon secours, et je suis dans l'allégresse à l'ombre de tes ailes.</p><p><span class=\"s\">9</span> Mon âme est attachée à toi ; ta droite me soutient.</p>",
+      "gloses": [
+        {
+          "id": "g-shahar",
+          "lemme": "aurore",
+          "html": "<span class=\"gr\">šāḥar</span>, le blanchiment précurseur, l'aube encore incertaine avant le lever. Segond traduit « aurore » en conservant l'archaïsme poétique, mais le mot hébreu évoque la veille nocturne qui perce. Les <i>Targums</i> rattachaient ce verset au matin du troisième jour, celui de la résurrection. Jean Calvin, dans son <i>Commentaire sur les Psaumes</i>, note que David cherche Dieu « avant que le jour n'ait commencé de luire », c'est-à-dire dans l'obscurité où la foi seule discerne."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Jn 20, 1.11-18",
+      "traduction": "Louis Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Le premier jour de la semaine, Marie de Magdala se rendit au sépulcre dès le matin, comme il faisait encore <button class=\"mot\" data-g=\"g-skotia\">obscur</button>, et elle vit que la pierre avait été ôtée du sépulcre.</p><p><span class=\"s\">11</span> Marie se tenait près du sépulcre, dehors, et elle pleurait. Comme elle pleurait, elle se pencha dans le sépulcre,</p><p><span class=\"s\">12</span> et elle vit deux anges vêtus de blanc, assis à la place où avait été couché le corps de Jésus, l'un à la tête, l'autre aux pieds.</p><p><span class=\"s\">13</span> Ils lui dirent : Femme, pourquoi pleures-tu ? Elle leur répondit : Parce qu'on a enlevé mon Seigneur, et je ne sais pas où on l'a mis.</p><p><span class=\"s\">14</span> Ayant ainsi parlé, elle se retourna, et elle vit <button class=\"mot\" data-g=\"g-iestous\">Jésus</button> debout ; mais elle ne savait pas que c'était <button class=\"mot\" data-g=\"g-iestous\">Jésus</button>.</p><p><span class=\"s\">15</span> Jésus lui dit : Femme, pourquoi pleures-tu ? Qui cherches-tu ? Elle, pensant que c'était le jardinier, lui dit : Seigneur, si c'est toi qui l'as emporté, dis-moi où tu l'as mis, et j'irai le prendre.</p><p><span class=\"s\">16</span> Jésus lui dit : <button class=\"mot\" data-g=\"g-mariam\">Marie</button> ! Elle se retourna, et lui dit en hébreu : <button class=\"mot\" data-g=\"g-rabbouni\">Rabbouni</button> ! c'est-à-dire, Maître.</p><p><span class=\"s\">17</span> Jésus lui dit : Ne me retiens pas ; car je ne suis pas encore monté vers mon Père. Va trouver mes frères, et dis-leur que je monte vers mon Père et votre Père, vers mon Dieu et votre Dieu.</p><p><span class=\"s\">18</span> Marie de Magdala alla annoncer aux disciples qu'elle avait vu le Seigneur, et qu'il lui avait dit ces choses.</p>",
+      "gloses": [
+        {
+          "id": "g-skotia",
+          "lemme": "obscur",
+          "html": "<span class=\"gr\">skotía</span>, ténèbres actives, non simple absence de lumière mais principe qui résiste au jour. Segond traduit « obscur » en atténuant ; le grec dit la nuit persistante. Jean Chrysostome, dans sa <i>Homélie 85 sur Jean</i>, y voit le symbole de l'âme encore dans les ténèbres qui cherche sans comprendre : « la pierre est ôtée, et elle cherche le mort »."
+        },
+        {
+          "id": "g-iestous",
+          "lemme": "Jésus",
+          "html": "<span class=\"gr\">Iēsoûs</span>, forme hellénisée de Yéshoua, « Yahvé sauve ». Segond ne le glose pas, mais Jean répète deux fois le nom propre en 20,14 avec une insistance étrange : elle voit Jésus, elle ne sait pas que c'est Jésus. Le nom même est devenu méconnaissable parce que le cadre de la mort l'accommodait à un cadavre. Augustin, dans son <i>Tractatus in Ioannem</i> 121, écrit que « ses yeux étaient retenus par l'amour charnel, qui ne pouvait concevoir la vie »."
+        },
+        {
+          "id": "g-mariam",
+          "lemme": "Marie",
+          "html": "<span class=\"gr\">Mariám</span>, translittération de l'araméen <i>Miryam</i>, le nom propre prononcé par celui qui l'a porté dans sa chair. Segond ne note rien de particulier, mais le grec conserve l'appellation familière. Orige, dans son <i>Commentaire sur Jean</i>, livre X, souligne que le berger connaît le nom de sa brebis : « non pas le titre de femme, mais le nom propre, le secret de l'appartenance »."
+        },
+        {
+          "id": "g-rabbouni",
+          "lemme": "Rabbouni",
+          "html": "<span class=\"gr\">Rabbouní</span>, araméen emphatique, « mon grand maître », plus affectueux que le simple <i>Rabbi</i>. Segond glose « c'est-à-dire, Maître », en ramenant le terme à l'ordinaire du français biblique. Mais le mot araméen porte la reconnaissance d'une relation intacte malgré la mort. La <i>Peschitta</i> syriaque conserve ce mot comme mystère liturgique ; Cyrille d'Alexandrie, dans son <i>Commentaire sur Jean</i>, y lit l'acclamation de l'Église retrouvant sa tête."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le Cantique et le jardin",
+      "corps_html": "Le premier lecteur du Cantique des cantiques qui lit Jean 20 ne peut manquer l'écho : une femme qui cherche l'aimé dans la nuit, qui interroge les gardes, qui le trouve enfin et le saisit. Jean connaît ce texte, et ses premiers lecteurs le connaissaient. Mais le glissement est radical : au Cantique, l'aimée trouve l'aimé et l'entraîne dans la chambre nuptiale ; ici, Jésus dit « ne me retiens pas ». La chair même de la résurrection n'est pas la possession, elle est l'envoi. Origène, dans sa <i>Homélie I sur le Cantique</i>, avait déjà lu le texte comme trajectoire de l'âme vers le Verbe ; Jean donne à cette trajectoire son terme pascal : le Verbe rejoint ne se laisse plus attraper, il envoie. Le jardin de Marie n'est pas le jardin d'Éden restauré : c'est un jardin de départ, où l'on apprend à nommer autrement."
+    },
+    {
+      "titre": "Paul, ou la fin de la connaissance charnelle",
+      "corps_html": "La lettre aux Corinthiens dit ce que Marie vit : « si nous avons connu Christ selon la chair, maintenant nous ne le connaissons plus de cette manière ». Paul écrit cela vers 55-57, quinze ans avant l'Évangile de Jean, mais la communauté johannique le reçoit comme clé de sa propre narration. La chair de Jésus n'est ni niée ni figée : elle est transformée en condition de reconnaissance nouvelle. Calvin, dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i>, insiste sur ce point contre les « enthousiastes » de son temps : « il ne dit pas que Christ soit devenu esprit, mais que notre connaissance cesse d'être charnelle ». La chair du Ressuscité reste vraie, mais elle ne se donne plus au regard qui catalogue, au toucher qui constate. Elle se donne à l'oreille qui entend son nom."
+    }
+  ],
+  "analogie": {
+    "titre": "La reconnaissance après la nuit",
+    "variantes": [
+      "Tu as prié pendant des années en récitant des mots que tu ne sentais pas, la langue obéissant pendant que l'âme sommeillait. Ce n'était pas du faux, ce n'était pas de l'hypocrisie : c'était une semence mise en terre sans que tu saches si la terre était bonne. Puis un matin de rien, dans un hôpital, dans un train, au bord d'un réveil difficile, ces mêmes mots remontent avec une densité que tu ne leur avais jamais prêtée. Tu ne les as pas cultivés ; ils ont poussé dans l'obscurité où tu les avais laissés. C'est ainsi que Marie entend son nom : non pas une nouveauté qu'elle aurait conquise, mais une familiarité qui lui est rendue, changée.",
+      "Tu as perdu quelqu'un que tu croyais connaitre, et la mort t'a appris que ta connaissance s'arrêtait au visible, au palpable, au quotidien échangeable. Tu reviens sur les lieux, tu refais les gestes, tu cherches le corps dans les objets restés. Puis un jour quelqu'un prononce ton nom comme seul ce disparu le prononçait, avec cette intonation que tu croyais irrémédiablement perdue, et tu comprends que le rapport n'était pas dans la chair que tu pouvais toucher, mais dans l'appel qui te constituait. C'est ce décalage même que vit Marie : le jardinier qu'elle interroge porte déjà la voix de celui qu'elle pleure.",
+      "Tu as servi longtemps sans voir de fruit, donné sans retour, aimé sans que l'autre parût le recevoir. La nuit de cette obscurité t'a fait un jour douter du bien-fondé même de ton geste. Puis tu rencontres quelqu'un que tu n'as pas revu depuis des années, et il te dit que telle parole, telle présence, telle patience venue de toi a été le point de bascule d'une vie que tu ne soupçonnais pas. Tu n'as rien vu passer ; le grain est tombé dans une terre que tu ne contrôlais pas. Marie porte le myrrhe pour un mort et devient la première apôtre d'une vie qu'elle ne peut encore nommer : c'est ce dépassement de l'économie de la perte par l'économie de la grâce que le matin pascal inaugure."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Christ ressuscité ne se laisse pas retenir, mais il se laisse reconnaitre.",
+    "geste": "Lis à haute voix ton propre prénom, lentement, comme si quelqu'un qui t'aime le prononçait dans l'obscurité d'un jardin.",
+    "note": "Cette parole que tu entends, tu peux la porter aujourd'hui à quelqu'un qui cherche encore parmi les tombes."
+  },
+  "question": "Que cherches-tu quand tu cherches Dieu, et que devient cette quête quand celui que tu croyais mort t'appelle par ton nom ?",
+  "racines": [
+    {
+      "titre": "Chrysostome sur le retard de la foi",
+      "corps_html": "Jean Chrysostome, dans sa <i>Homélie 85 sur l'Évangile de Jean</i> (vers 390), ne ménage pas Marie : « Elle voit les anges, elle entend leurs paroles, et elle pleure encore ! ». Mais aussitôt il corrige son propre étonnement : car l'amour ne raisonne pas, l'amour a ses propres yeux, et ces yeux-là doivent être ouverts par celui qu'ils cherchent. La résurrection n'est pas un spectacle qui convainc, elle est une voix qui nomme.",
+      "attribution": "Jean Chrysostome, <i>Homélie 85 sur Jean</i>, PG 59, 461-464"
+    },
+    {
+      "titre": "Calvin sur la nouvelle créature",
+      "corps_html": "Calvin, commentant 2 Corinthiens 5,17 dans son <i>Commentaire sur la Seconde Épître aux Corinthiens</i> (1546), met en garde contre une lecture moralisante : « Ce n'est pas à dire que les fidèles soient parfaits, mais que le fondement est nouveau ». La nouveauté n'est pas un état acquis, c'est une orientation donnée. Et cette orientation vient de la mort et de la résurrection du Christ, non de notre effort. C'est pourquoi, ajoute-t-il, « Paul parle de tous en commun, pour ôter tout sujet de gloire ».",
+      "attribution": "Jean Calvin, <i>Commentaire sur 2 Co</i>, CO 50, 75-76"
+    },
+    {
+      "titre": "La réception rabbinique du Cantique",
+      "corps_html": "Le <i>Talmud de Babylone</i>, traité <i>Ta'anit</i> 4a, rapporte la controverse qui fit du Cantique un livre canonique : Rabbi Akiva (mort vers 135) trancha en sa faveur en déclarant que « tout l'univers n'est pas digne du jour où le Cantique des cantiques fut donné à Israël ». Pour les rabbins, le texte n'est pas allégorique au sens faible : il est le dialogue même entre Dieu et son peuple dans l'histoire, et particulièrement dans l'exil. Cette lecture fait du chapitre 3 une nuit de Pâque, où le séparé cherche le séparateur jusqu'à la reconnaissance.",
+      "attribution": "<i>Talmud de Babylone</i>, <i>Ta'anit</i> 4a ; Mishnah <i>Yadaim</i> 3,5"
+    }
+  ],
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 120 h300\"/><path d=\"M40 120 q15 -25 35 -40 q-10 15 -5 40\"/><path d=\"M100 120 q-5 -30 15 -55 q10 20 5 55\"/><path d=\"M130 65 q8 -5 12 2 q-5 8 -12 -2\"/><path d=\"M80 120 q20 -50 45 -70 q25 20 40 60\"/><path d=\"M200 50 q30 5 50 25 q-20 10 -40 5\"/><path d=\"M250 80 q15 15 10 40\"/><path d=\"M260 120 q5 -25 -5 -40\"/><path d=\"M180 120 q-10 -40 20 -70 q30 25 25 70\"/><path d=\"M220 55 q8 3 15 10\"/><path d=\"M60 40 q40 -15 80 -10 q40 5 70 25\"/><path d=\"M280 90 q15 5 25 30\"/><path d=\"M300 120 q-5 -20 -15 -25\"/></g><g class=\"trait-rubrique\"><path d=\"M145 75 q-8 12 -5 25 q3 -8 8 -5 q-3 -10 5 -18 q-5 5 -8 -2\"/></g><g class=\"trait-liturgie\"><path d=\"M250 55 q0 12 8 14 q8 -2 8 -14 z\"/><path d=\"M258 69 v8\"/><path d=\"M252 80 h12\"/></g></svg>"
+}
