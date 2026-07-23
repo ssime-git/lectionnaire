@@ -1,0 +1,122 @@
+{
+  "date": "2026-07-23",
+  "date_humaine": "jeudi",
+  "semaine": "16ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 2, 1-3.7-8.12-13 ; Mt 13, 10-17",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 125 h328\"/><path d=\"M6 125 q40 -8 80 -12 q50 -6 100 0 q50 6 100 12\"/><path d=\"M86 113 q30 -3 60 0 q30 3 60 -2\"/><path d=\"M40 125 q20 -25 35 -50 q8 -15 12 -28\"/><path d=\"M75 47 q-5 15 8 28 q12 10 22 8 q15 -5 18 -22\"/><path d=\"M68 58 q12 -5 22 -2\"/><path d=\"M105 53 l8 12 l-6 4\"/><path d=\"M78 78 q-8 12 -18 20\"/><path d=\"M95 83 q-5 15 -15 25\"/><path d=\"M240 125 q-15 -35 -25 -65 q-5 -12 -8 -20\"/><path d=\"M207 40 q15 -5 28 0 q15 5 28 0\"/><path d=\"M221 40 q-8 18 -5 35 q3 15 10 25\"/><path d=\"M242 40 q5 15 2 30 q-3 12 -8 22\"/><path d=\"M256 45 q8 5 12 12\"/><path d=\"M215 55 q-8 5 -12 10\"/></g><g class=\"trait-rubrique\"><path d=\"M60 95 q-5 -8 2 -15 q5 8 8 3 q-2 -10 5 -18 q6 10 2 20 q6 -2 8 -8 q2 10 -8 18\"/></g><g class=\"trait-liturgie\"><path d=\"M295 38 q-12 8 -8 22 q4 12 16 8 q10 -5 6 -18 q-4 -10 -14 -12 z\"/><path d=\"M299 68 v8\"/><path d=\"M292 80 h14\"/></g></svg>",
+  "titre": "Le secret",
+  "titre_html": "Le <span class=\"it\">secret</span>",
+  "sous_titre": "Pourquoi Jésus parle-t-il en paraboles, et pourquoi certaines choses demeurent cachées ?",
+  "suite_hier": null,
+  "gravure_alt": "Un paysan courbé vers un sillon fraîchement tracé, tenant dans sa main gauche des graines qu'il semble vouloir semer ; à droite, trois oiseaux posés sur une branche basse, l'observant. Gravure sur bois, style J.-B. de Champagnolles, 1867.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 2, 1-3.7-8.12-13",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> La parole de l'Éternel me fut adressée, en ces mots : <span class=\"s\">2</span> Va, crie aux oreilles de Jérusalem : Ainsi parle l'Éternel : Je me souviens de la <button class=\"mot\" data-g=\"g-affection\">affection</button> de ta jeunesse, de ton amour comme fiancée, quand tu me suivais au désert, dans une terre inculte. <span class=\"s\">3</span> Israël était consacré à l'Éternel, il était les prémices de son revenu ; tous ceux qui en mangeaient se rendaient coupables, et le malheur fondait sur eux, dit l'Éternel.</p><p><span class=\"s\">7</span> Je vous ai conduits dans un pays de vergers, pour que vous en mangiez les fruits et les meilleures productions ; mais vous êtes venus, et vous avez souillé mon pays, et vous avez fait de mon héritage une <button class=\"mot\" data-g=\"g-abomination\">abomination</button>. <span class=\"s\">8</span> Les sacrificateurs n'ont pas dit : Où est l'Éternel ? Les dépositaires de la loi ne m'ont pas connu, les bergers m'ont été infidèles, les prophètes ont prophétisé par Baal, et sont allés après ce qui n'est d'aucun profit.</p><p><span class=\"s\">12</span> Soyez étonnés de cela, cieux, frémissez, et soyez saisis d'horreur ! dit l'Éternel. <span class=\"s\">13</span> Car mon peuple a commis un double <button class=\"mot\" data-g=\"g-crime\">crime</button> : ils m'ont abandonné, moi qui suis une source d'eau vive, pour se creuser des citernes, des citernes crevassées, qui ne retiennent pas l'eau.</p>",
+      "gloses": [
+        {
+          "id": "g-affection",
+          "lemme": "affection",
+          "html": "L'hébreu <span class=\"gr\">chesed</span> porte ici le poids de toute l'alliance, non le sentiment vague que suggère « affection ». Segond hésite souvent devant ce terme : il le rend par « bonté », « miséricorde », « amour fidèle ». Ici, le contexte nuptial de Jérémie l'incline vers « affection », qui désamorce pourtant la force contractuelle du mot. Les rabbins du Midrash lisent dans ce <span class=\"gr\">chesed</span> la mémoire de l'alliance au Sinaï, qu'Israël a trahie ; la réception chrétienne, depuis Origène, y voit l'élan de l'Église vers son Époux."
+        },
+        {
+          "id": "g-abomination",
+          "lemme": "abomination",
+          "html": "L'hébreu <span class=\"gr\">to'evah</span>, de la racine signifiant « répugner », désigne ce qui provoque le vomissement rituel, l'inversion totale de l'ordre sacré. Segond emploie « abomination » sans trembler, mais le mot a perdu en français sa charge physique. Pour Jérémie, la terre promise devenue <span class=\"gr\">to'evah</span> n'est pas seulement impure : elle est méconnaissable, comme un corps transformé en cadavre. Calvin, commentant ce passage, parle de « profanation qui touche au blasphème »."
+        },
+        {
+          "id": "g-crime",
+          "lemme": "crime",
+          "html": "Le hébreu <span class=\"gr\">ra'ah</span> signifie d'abord « mal », « calamité », puis par extension l'acte qui la provoque. Segond choisit « crime », peut-être pour marquer la gravité, mais il aliène la polyvalence du terme. Le double <span class=\"gr\">ra'ah</span> d'Israël est à la fois faute et catastrophe qui s'ensuit. Chrysostome, dans ses Homélies sur Jérémie, insiste sur cette structure : le péché porte en lui-même son châtiment, comme la citerne crevassée porte sa propre stérilité."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 35, 6-7ab, 8-9, 10-11",
+      "traduction": "Louis Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">6</span> Tes jugements sont un grand <button class=\"mot\" data-g=\"g-abime\">abîme</button>, ô Éternel ! Tu gardes les hommes et les bêtes. <span class=\"s\">7</span> Quelle est ta bonté, ô Dieu ! A l'ombre de tes ailes les fils de l'homme cherchent un refuge.</p><p><span class=\"s\">8</span> Ils se rassasient de la graisse de ta maison, Et tu les abreuves au torrent de tes délices. <span class=\"s\">9</span> Car la vie est en toi, Et dans ta lumière nous voyons la lumière.</p><p><span class=\"s\">10</span> Étends ta bonté sur ceux qui te connaissent, Et ta justice sur ceux dont le cœur est droit ! <span class=\"s\">11</span> Que le pied de l'orgueil ne m'atteigne pas, Et que la main des méchants ne me fasse pas fuir !</p>",
+      "gloses": [
+        {
+          "id": "g-abime",
+          "lemme": "abîme",
+          "html": "L'hébreu <span class=\"gr\">tehom</span> évoque les eaux primordiales, l'océan sans fond sur lequel planait l'Esprit dans la Genèse. Segond traduit par « abîme », conservant l'écho cosmique que d'autres versions affaiblissent en « profondeur ». Le psalmiste ne dit pas que les jugements de Dieu sont obscurs, mais qu'ils sont insondables comme la création elle-même. La réception juive, dans le Talmud de Babylone (<span class=\"gr\">Berakhot</span> 10b), loue cette insondabilité comme la marque même de la sagesse divine ; Augustin, dans ses <span class=\"it\">Enarrationes in Psalmos</span>, la commente par l'incarnation : ce qui était abîme devient accessible dans le Verbe fait chair."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 10-17",
+      "traduction": "Louis Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">10</span> Les disciples s'approchèrent, et lui dirent : Pourquoi leur parles-tu en <button class=\"mot\" data-g=\"g-parabole\">paraboles</button> ? <span class=\"s\">11</span> Il leur répondit : C'est à vous qu'il est donné de connaître les <button class=\"mot\" data-g=\"g-mysteres\">mystères</button> du royaume des cieux, mais ce n'est pas donné à ceux-là. <span class=\"s\">12</span> Car on donnera à celui qui a, et il sera dans l'abondance ; mais à celui qui n'a pas, on ôtera même ce qu'il a. <span class=\"s\">13</span> C'est pourquoi je leur parle en paraboles, parce qu'ils voient et ne voient point, qu'ils entendent et n'entendent ni ne comprennent. <span class=\"s\">14</span> C'est en eux que s'accomplit la prophétie d'Ésaïe : Vous entendrez de vos oreilles, et vous ne comprendrez point ; Vous regarderez de vos yeux, et vous ne verrez point. <span class=\"s\">15</span> Car le cœur de ce peuple s'est épaissi ; Ils sont devenus durs d'oreille, et ils ont fermé leurs yeux, De peur que leurs yeux ne voient, que leurs oreilles n'entendent, Que leur cœur ne comprenne, Qu'ils ne se convertissent, Et que je ne les guérisse. <span class=\"s\">16</span> Mais heureux vos yeux, parce qu'ils voient, et vos oreilles, parce qu'elles entendent ! <span class=\"s\">17</span> En vérité, je vous le dis, beaucoup de prophètes et de justes ont désiré voir ce que vous voyez, et ne l'ont pas vu, entendre ce que vous entendez, et ne l'ont pas entendu.</p>",
+      "gloses": [
+        {
+          "id": "g-parabole",
+          "lemme": "parabole",
+          "html": "Le grec <span class=\"gr\">parabolē</span>, de <span class=\"gr\">paraballō</span>, signifie d'abord « juxtaposer », « mettre à côté ». Segond ne tranche pas la question débattue depuis l'Antiquité : la parabole est-elle voile ou révélation ? Jésus lui-même, en Matthieu 13, donne les deux réponses. Chrysostome, dans ses <span class=\"it\">Homélies sur Matthieu</span> (44, 1), insiste sur la pédagogie divine : Dieu ne force pas, il pose à côté de l'auditeur une image qu'il lui revient d'accueillir. La parabole est ainsi jugement avant d'être grâce : elle sépare celui qui s'arrête à la surface de celui qui interroge."
+        },
+        {
+          "id": "g-mysteres",
+          "lemme": "mystères",
+          "html": "Le grec <span class=\"gr\">mystēria</span> désigne ce qui était caché et que le dessein de Dieu dévoile. Segond traduit par « mystères », conservant le terme technique paulinien. Mais chez Matthieu, il ne s'agit pas d'un savoir ésotérique : les <span class=\"gr\">mystēria</span> sont donnés (<span class=\"gr\">dedotai</span>), passif divin qui souligne la gratuité. Calvin, dans son <span class=\"it\">Harmonie évangélique</span>, commente : « Ce n'est point l'érudition qui ouvre, c'est la grâce qui donne ». Le mystère n'est pas une énigme à résoudre, mais un don à recevoir dans l'humilité."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le scandale d'une parole cachée",
+      "corps_html": "<p>Le passage de Matthieu 13 a longtemps embarrassé les commentateurs, et pour cause : Jésus semble déclarer qu'il parle en paraboles pour empêcher la compréhension. Origenè, dans ses <span class=\"it\">Commentaires sur Matthieu</span> (X, 1), dut lutter contre les gnostiques qui en faisaient un argument pour leur élite initiée. Il répondit que le voile n'est pas sur la parole, mais sur les yeux de l'auditeur. Cette distinction demeure essentielle : la parabole n'est pas cryptogramme, elle est miroir — celui qui s'y reconnaît entre, celui qui se détourne s'enferme. L'exégèse moderne, depuis Joachim Jeremias (1888-1979), a montré que l'expression « afin que » en Matthieu 13,13 traduit un usage sémitique de finalité consécutive, non causale : Jésus ne parle pas en paraboles pour aveugler, mais l'aveuglement est le résultat constaté. La citation d'Ésaïe 6,9-10, que Matthieu place sur les lèvres de Jésus, était déjà en Marc 4,12 ; elle appartient à la strate la plus ancienne de la tradition. Le prophète, mandaté au seuil d'une catastrophe que son peuple refuse de voir, reçoit cette parole terrible : son ministère même durcira ceux qui rejettent l'appel. Matthieu la récupère pour dire que le refus d'Israël face à Jésus achève ce que le refus d'Israël face à Ésaïe avait commencé. Ce n'est pas l'élection d'un petit nombre contre une masse damnable : c'est la constatation tragique que la grâce offerte peut devenir jugement pour celui qui la repousse. Le « heureux vos yeux » du verset 16 n'est pas triomphalisme de caste, il est béatitude de ceux qui, dans la suite de Jésus, ont accepté que leur regard soit transformé.</p>"
+    },
+    {
+      "titre": "Jérémie et la citerne crevassée",
+      "corps_html": "<p>Le texte de Jérémie 2 juxtapose deux images que la tradition n'a cessé de relier : l'épouse des débuts, fidèle au désert, et la citerne crevassée, travail inutile des mains humaines. Le prophète ne dit pas simplement qu'Israël a changé d'objet d'amour : il dit qu'il a remplacé une source vivante par une construction artificielle, et que cette construction est fêlure même avant d'être usage. La métaphore de la citerne (<span class=\"gr\">bor</span> en hébreu, le même mot que pour la fosse où sera jeté Jérémie, 38,6) porte une charge politique précise : les citernes étaient des ouvrages d'ingénierie hydraulique que les rois d'Israël multiplièrent pour sécuriser leur approvisionnement. Confier son eau à une citerne, c'est déjà un geste d'autonomie face à l'aridité du pays, un refus de dépendance. Jérémie radicalise : cette autonomie est illusion, la fissure est structurelle. Calvin, dans ses <span class=\"it\">Prælectiones in Jeremiam</span> (1563), commente avec une sévérité qui se retourne contre lui-même : « Nous sommes tous bâtisseurs de citernes, et nous croyons que notre industrie supplée à ce que Dieu donnerait gratuitement ». La « double crime » du verset 13 n'est pas accumulation de fautes, c'est structure en miroir : abandonner la source, puis se fatiguer à l'ouvrage mort. Le prophète ne condamne pas l'effort, il dénonce l'effort qui fuit le don.</p>"
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui remonte sans qu'on l'ait cherché",
+    "variantes": [
+      "Une parole entendue dans l'enfance, récitée mécaniquement ou mémorisée sans la comprendre, peut dormir en toi des décennies sans que tu y penses jamais. Puis un jour de solitude absolue, ou de décision qui engage tout, elle remonte intacte, avec des mots que tu croyais oubliés, et elle porte ce qu'elle ne portait pas au moment où tu l'as reçue. Tu n'as rien fait pour la garder vivante : elle était là, ensevelie comme un grain. C'est cela peut-être que Jésus nomme quand il dit que le mystère est donné — non acquis, non mérité, mais donné à celui qui, sans le savoir, a laissé la parole faire son chemin en lui.",
+      "Il arrive que tu serves sans voir de fruit, que tu donnes sans retour, que tu pries sans que rien ne semble répondre — et que soudain, des années plus tard, quelqu'un te dise : c'est ce geste, ce mot, ce silence qui a tout changé pour moi. Tu ne savais pas. Tu étais simplement là, fidèle à ce qui t'avait été confié. La parabole agit ainsi : elle ne livre pas son sens à qui la jette, mais à qui la reçoit dans un temps qu'il ne maîtrise pas. Le secret du royaume n'est pas une énigme à résoudre, c'est une semence qui germe quand elle veut.",
+      "Parfois tu lis un texte, une même page, dix, vingt fois, sans qu'elle te touche. Puis un matin, sans raison apparente, elle s'ouvre — non que tu sois devenu plus intelligent ou plus saint, mais parce que quelque chose en toi, que tu ne nommerais pas, est devenu capable de l'entendre. Jésus dit : « Ils voient et ne voient point ». Ce n'est pas une malédiction jetée sur des gens de l'extérieur ; c'est la description de ce qui peut t'arriver à toi, aujourd'hui, si tu te contentes de regarder sans laisser le regard être transformé. La parabole est miroir : elle renvoie l'état de celui qui s'y penche."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Aujourd'hui, laisse une parole que tu croyais maîtrisée te surprendre.",
+    "geste": "Relis lentement le verset 15 de l'évangile, celui qui parle du cœur épaissi. Ne le fuis pas par interprétation rapide ; demande plutôt : qu'est-ce qui, en moi, s'épaissit quand la parole me parle ?",
+    "note": "Cette prière peut se faire à tout moment du jour ; elle ne demande pas de sentiment particulier, seulement l'attention de rester devant ce qui dérange."
+  },
+  "question": "Qu'est-ce qui, dans ta vie actuelle, fonctionne comme une « citerne crevassée » — effort répété qui ne retient pas ce que tu cherches vraiment ?",
+  "racines": [
+    {
+      "titre": "Origène sur le voile des Écritures",
+      "corps_html": "<p>Origène, dans le quatrième livre de son <span class=\"it\">Traité des principes</span>, développe une théorie des trois sens de l'Écriture qui marquera toute la tradition. Le sens littéral est pour les « simples », le sens moral pour ceux qui progressent, le sens spirituel pour les « parfaits ». Mais il insiste sur un point souvent oublié : ces trois sens ne sont pas trois Écritures, ils sont trois manières de recevoir la même parole. Le voile n'est pas mensonge du texte, il est adaptation pédagogique de Dieu à la capacité de chacun. C'est pourquoi, dit Origène, Jésus parle en paraboles : non pour exclure, mais pour que chacun puisse boire selon sa soif. Cette pensée, reprise par Grégoire le Grand dans ses <span class=\"it\">Moralia in Iob</span>, fonde l'exégèse médiévale.</p>",
+      "attribution": "Origène, <span class=\"it\">De principiis</span>, IV, 2, 4"
+    },
+    {
+      "titre": "Calvin sur le don des mystères",
+      "corps_html": "<p>Calvin, commentant Matthieu 13,11 dans son <span class=\"it\">Harmonie évangélique</span> (1555), refuse toute lecture fataliste du « c'est donné ». Il distingue soigneusement le don de la connaissance et le mérite de la réception : « Ce n'est point que Dieu ait tiré au sort quelques-uns pour les illuminer et laissé les autres dans les ténèbres, mais il faut remonter à la source de la foi qui est l'élection ». Pourtant, aussitôt, Calvin ramène le lecteur à l'expérience : « Chacun de nous doit examiner d'où lui vient de voir ce qu'il voit ». La grâce n'abolit pas la question personnelle, elle la rend urgente. Cette tension entre la souveraineté divine et la responsabilité humaine est caractéristique de la réforme calvinienne, et elle empêche toute assurance facile comme tout angoisse stérile.</p>",
+      "attribution": "Jean Calvin, <span class=\"it\">Harmonia ex tribus Evangelistis composita</span>, sur Mt 13,11"
+    },
+    {
+      "titre": "Chrysostome sur la parabole comme jugement",
+      "corps_html": "<p>Chrysostome, dans sa 44e homélie sur Matthieu, ne ménage pas ses auditeurs : « Tu veux savoir pourquoi il parle en paraboles ? Parce que tu es indigne du langage clair ». Mais aussitôt il retourne l'accusation : ce n'est pas Dieu qui refuse de parler, c'est l'homme qui refuse d'entendre. La parabole est ainsi « miséricorde dans le jugement » : elle laisse à l'auditeur le temps de se reconnaître, de se repentir, de demander la clé. Chrysostome rapporte cette pratique à l'Ancien Testament : Moïse lui-même, dit-il, a parlé au peuple « selon son endurance », non selon la plénitude de ce qu'il avait reçu. La parabole prolonge cette pédagogie de Dieu, qui ne force pas mais ne se résigne pas non plus à l'abandon.</p>",
+      "attribution": "Jean Chrysostome, <span class=\"it\">Homiliae in Matthaeum</span>, 44, 1-3"
+    }
+  ]
+}
