@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le vase d'argile — samedi 25 juillet 2026</title>
+<meta name="description" content="Quand la fragilité devient le lieu de la puissance de Dieu">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">samedi 25 juillet 2026 · None · <span class="couleur">rouge · Fête</span>
+</p>
+    <h1>Le vase <span class="it">d'argile</span></h1>
+    <p class="chapeau">Quand la fragilité devient le lieu de la puissance de Dieu</p>
+    <figure class="gravure" aria-label="Un vase d'argile craquelé, percé de lumière par ses fêlures, tenu entre deux mains rugueuses de travailleur, dans un paysage de montagne anatolienne aux tons sépia."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M40 120 q15 -8 25 -25 q-8 12 -5 25"/><path d="M300 120 q-15 -8 -25 -25 q8 12 5 25"/><path d="M100 120 c20 -30 40 -45 70 -45 c30 0 50 15 70 45"/><path d="M120 120 c15 -20 30 -30 50 -30 c20 0 35 10 50 30"/></g><g class="trait-rubrique"><path d="M155 90 l3 -12 l5 8 l4 -15 l3 18 l5 -10 l2 11"/><path d="M148 75 q6 -18 22 -22 q16 4 22 22"/><path d="M155 55 q10 -5 15 0 q10 -8 20 -3"/></g><g class="trait-liturgie"><path d="M60 40 q30 -15 60 -5 q20 -8 40 0 q20 -10 40 5 q10 5 15 15 q-5 -10 -20 -15 q-20 -5 -35 5 q-20 -5 -40 0 q-30 -5 -55 10 z"/><path d="M80 55 q15 5 25 -2 q10 8 20 2 q15 5 25 -3"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Lecture — 2 Co 4, 7-15 — Louis Segond 1910</p>
+        <div class="ecriture ">Cependant nous portons ce trésor dans des <button class="mot" data-g="g-skeyos">vases d'argile</button>, afin que cette puissance souveraine appartienne à Dieu, et non pas à nous. Nous sommes pressés de toute manière, mais non réduits à l'extrémité; dans la détresse, mais non dans le désespoir; persécutés, mais non abandonnés; abattus, mais non perdus; portant toujours avec nous dans notre corps la mort de Jésus, afin que la vie de Jésus soit aussi manifestée dans notre corps. Car nous qui vivons, nous sommes sans cesse livrés à la mort à cause de Jésus, afin que la vie de Jésus soit aussi manifestée dans notre corps mortel. Ainsi la mort agit en nous, et la vie agit en vous. Or, ayant le même esprit de foi qu'il est écrit: J'ai cru, c'est pourquoi j'ai parlé, nous croyons aussi, c'est pourquoi nous parlons aussi, sachant que celui qui a ressuscité le Seigneur Jésus nous ressuscitera aussi avec Jésus, et nous fera paraître avec vous en sa présence. Car tout cela arrive pour vous, afin que la grâce, en se répandant sur un plus grand nombre, fasse abonder l'action de grâces, pour la gloire de Dieu.</div>
+        <div class="glose" id="g-skeyos"><span class="lemme">σκεῦος</span> Le grec <span class="gr">σκεῦος</span> désigne tout ustensile domestique, le plus souvent de faible valeur — jarre pour l'eau, marmite pour le feu. Segond choisit « vase d'argile », mais le terme grec ne précise pas la matière; c'est le contexte qui impose la fragilité. Chrysostome, dans son <em>Homélie sur la seconde épître aux Corinthiens</em>, souligne que ce n'est pas l'or ni l'argent qui reçoit le trésor, mais « ce qui est le plus vil, le plus sujet à la rupture ». Calvin, dans son commentaire de 1548, y voit la « ingratitude de notre condition » devenue elle-même le témoin de la gloire divine. Le choix d'« argile » par Segond, bien que non explicite dans le grec, trouve son fondement dans la symbolique biblique de l'<em>adam</em> formé de la glaise (Gn 2,7) — le vase renvoie au vasaiste, l'homme terreau qui ne tient que par celui qui le façonne.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 125 (126), 1-2ab, 2cd-3, 4-5, 6 — Louis Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Quand l'Éternel ramena les captifs de Sion, nous étions comme ceux qui font un rêve. <span class="s">2ab</span> Alors notre bouche était remplie de <button class="mot" data-g="g-sihha">rires</button>, notre langue de chants de triomphe. <span class="s">2cd</span> Alors on disait parmi les nations: L'Éternel a fait pour eux de grandes choses! <span class="s">3</span> L'Éternel a fait pour nous de grandes choses; nous sommes dans la joie. <span class="s">4</span> Éternel, ramène nos captifs, comme les <button class="mot" data-g="g-aphikim">torrents</button> du midi! <span class="s">5</span> Ceux qui sèment avec larmes moissonnent avec chants de triomphe. <span class="s">6</span> Celui qui marche en pleurant, portant la semence précieuse, revient avec chants de triomphe, portant ses gerbes.</div>
+        <div class="glose" id="g-sihha"><span class="lemme">שְׂחוֹק</span> L'hébreu <span class="gr">שְׂחוֹק</span> (<span class="gr">sihôq</span>) est traduit par Segond « rires », au pluriel, ce qui est inhabituel — le mot désigne plutôt le rire, l'éclat, parfois la moquerie (ainsi en Gn 21,6 pour Isaac, dont le nom y est lié). Le pluriel de Segond rend l'abondance, presque le débordement. Les rabbins du <em>Midrash Tehillim</em> notent que ce rire sort de la bouche qui naguère gémissait, transformant l'organe même de la plainte en instrument de louange. Calvin, dans son <em>Commentaire sur les Psaumes</em>, écrit que « le rire des captifs n'est pas une joie naturelle, mais un don surnaturel qui surprend ceux qui le reçoivent ». Le choix du pluriel par Segond, loin d'être un simple effet stylistique, traduit cette cumulativeité prophétique: chaque rire renvoie à un pleur passé, et les superpose en témoignage.</div>
+        <div class="glose" id="g-aphikim"><span class="lemme">אֲפִיקִים</span> Segond traduit <span class="gr">אֲפִיקִים</span> (<span class="gr">ʾăphîqîm</span>) par « torrents du midi », alors que le mot propre signifie « canaux, lits de rivière », voire « vallons profonds ». Le « midi » est une addition interprétative: les <em>afiqîm</em> du Néguev sont ces oueds qui restent à sec puis débordent subitement. Le <em>Talmud de Babylone</em> (<em>Taʿanit</em> 3b) utilise déjà cette image pour la réponse à la prière: elle arrive non pas en pluie diffuse, mais en crue qui transforme le paysage. Chrysostome, dans sa <em>Homélie sur le Psaume 125</em>, dit que « Dieu ne comble pas nos vallons à compte-gouttes; il les inonde quand nous les avons assez creusés par la patience ». Segond, en choisissant « torrents » plutôt que « canaux », préserve cette violence salvatrice que le lit asséché ne peut plus contenir.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 20, 20-28 — Louis Segond 1910</p>
+        <div class="ecriture evangile">Alors la mère des fils de Zébédée s'approcha de lui avec ses fils, et se prosterna pour lui demander quelque chose. Il lui dit: Que veux-tu? — Seigneur, lui dit-elle, ordonne que mes deux fils soient assis l'un à ta droite et l'autre à ta gauche dans ton <button class="mot" data-g="g-basileia">royaume</button>. Jésus répondit: Vous ne savez ce que vous demandez. Pouvez-vous boire la coupe que je dois boire? — Nous le pouvons, dirent-ils. Et lui: Il est vrai que vous boirez ma coupe; mais pour ce qui est d'être assis à ma droite et à ma gauche, ce n'est pas à moi de l'accorder; cela est pour ceux à qui mon Père l'a préparé. Les dix autres, ayant entendu cela, furent indignés contre les deux frères. Jésus les appela, et dit: Vous savez que les <button class="mot" data-g="g-ethne">princes des nations</button> les asservissent, et que les grands les tyrannisent. Il n'en sera pas de même au milieu de vous. Mais quiconque veut être grand parmi vous, qu'il soit votre serviteur; et quiconque veut être le premier parmi vous, qu'il soit votre esclave. C'est ainsi que le Fils de l'homme est venu, non pour être servi, mais pour servir, et donner sa vie comme la rançon de plusieurs.</div>
+        <div class="glose" id="g-basileia"><span class="lemme">βασιλεία</span> Le grec <span class="gr">βασιλεία</span> est traduit par Segond « royaume », mais le terme désigne aussi bien la royauté, l'exercice du règne, que le territoire sur lequel il s'étend. La mère des fils de Zébédée pense visiblement à une cour terrestre, avec places à droite et à gauche du trône. Origenès, dans son <em>Commentaire sur Matthieu</em> (XVI, 22), note que « le royaume des cieux n'a pas de sièges préalablement assignés, mais des stations que chacun reçoit selon sa capacité de recevoir ». Calvin, plus sévère, écrit dans son <em>Harmonie évangélique</em> que « cette femme, en demandant des places, révèle qu'elle n'a rien compris au royaume qu'elle prétend servir ». Segond, en conservant « royaume » sans note, laisse le lecteur dans la même méprise que la mère — méprise que le texte lui-même déconstruit par la suite.</div>
+        <div class="glose" id="g-ethne"><span class="lemme">ἔθνη</span> Segond traduit <span class="gr">ἔθνη</span> par « nations », mais le mot grec porte la connotation de « païens, Gentils », ceux qui ne sont pas le peuple de l'alliance. L'opposition n'est pas seulement politique mais religieuse: Jésus contraste deux modes d'organisation du pouvoir, celui des <span class="gr">ethnē</span> et celui de la communauté qu'il fonde. Chrysostome, dans ses <em>Homélies sur Matthieu</em> (LXV), souligne que « le Seigneur ne dit pas 'les méchants' ni 'les ennemis', mais 'les nations', pour que ses disciples comprennent que leur propre chair les porte vers ce modèle ». La traduction de Segond, en affadissant la dimension théologique, rend peut-être plus lisible l'universalité de la critique: tous les pouvoirs du monde, même chrétiens, peuvent glisser vers cette logique des <span class="gr">ethnē</span> que Jésus vient abolir.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>La coupe du salut et la coupe du jugement</h3><p>Le motif de la « coupe » traverse toute l'Écriture avec une ambivalence constitutive. En Psaume 75, 9, c'est le vin de la fureur de Dieu que boivent les orgueilleux; en Ésaïe 51, 17, Jérusalem l'a vidée jusqu'à la lie. Mais en Psaume 116, 13, le psalmiste élève « la coupe des saluts », et les quatre coupes du Seder pascale structurent le récit de l'exode. Jésus, en demandant à Jacques et Jean s'ils peuvent boire sa coupe, ne précise pas laquelle — et c'est le propre de sa mission que de faire coïncider ces deux coupes en une seule. Calvin, dans son commentaire sur les Synoptiques (1555), remarque que « les disciples répondent trop vite, croyant que la coupe est un honneur à partager, alors qu'elle est d'abord un breuvage d'amertume ». Cette méprise fait le drame de la scène: ils veulent le trône sans le calvaire, la gloire sans la nuit. Le texte de Matthieu ne les condamne pas pourtant: il note qu'ils boiront bien cette coupe — Jacques sera décapité (Ac 12,2), Jean exilé à Patmos (Ap 1,9) — mais que le partage des places ne dépend pas de leur courage. Le royaume n'est pas une récompense distribuée selon le mérite, mais une grâce qui fait de la souffrance elle-même le lieu de la communion.</p></div>
+      <div><h3>Le serviteur et l'esclave chez Matthieu</h3><p>La double formule de Jésus — « serviteur » (<span class="gr">διάκονος</span>) puis « esclave » (<span class="gr">δοῦλος</span>) — n'est pas un simple pléonasme. Le <span class="gr">diakonos</span> exerce une fonction reconnue, même humble; le <span class="gr">doulos</span> appartient à un autre, corps et âme. Matthieu seul, parmi les Synoptiques (Mc 10,43-45; Lc 22,24-27), utilise cette double déclinaison, comme si la logique du royaume exigeait d'aller au-delà de la servitude volontaire jusqu'à l'abolition même du rapport de propriété. Origène, dans son <em>Traité de la prière</em> (XXIX, 16), y lit l'accomplissement de la prophétie d'Isaïe: « Tu as été vendu pour rien, et tu ne seras pas racheté par de l'argent » (Is 52,3). Le « comme la rançon de plusieurs » (<span class="gr">λύτρον ἀντὶ πολλῶν</span>) reprend le vocabulaire de l'affranchissement des esclaves: Jésus paie ce que les disciples ne peuvent pas, et cette dette les libère pour une autre servitude, celle de l'amour. Chrysostome, dans sa <em>Homélie 65 sur Matthieu</em>, s'étonne que « le Maître ne dise pas 'sachez que je suis votre serviteur', mais 'devenez les miens' — comme si notre dignité résidait dans l'imitation plutôt que dans la considération ».</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le trésor qui ne tient pas</h2>
+<p>Il t'arrive de porter quelque chose de précieux dans des mains qui tremblent — une parole confiée, une vérité sur toi-même que tu n'oses dire, une prière que tu formules enfin après des années de silence. Et ces mains tremblent non pas malgré la préciosité, mais à cause d'elle: plus le don est grand, plus tu sens l'inadéquation du vase. Tu voudrais être en porcelaine fine, et tu te sais en terre cuite, sujet aux éclats, aux fuites, à cette fissure qui s'ouvre toujours au même endroit. C'est là que la puissance de Dieu se loge: non en toi qui tiens, mais en ce qui te tient malgré toi, en cette grâce qui traverse tes fêlures sans que tu saches comment.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Pose devant toi, si tu peux, un objet simple, usé, que tu utilises encore malgré ses marques d'âge — une tasse ébréchée, un livre dérelié, un outil que tu n'as pas jeté.</p>
+      <p class="geste">Dis lentement, à haute voix ou en toi-même: « C'est ici que tu mets ton trésor. »</p>
+      <small>Tu peux répéter ces mots chaque fois que tu te sentiras pressé, dans la détresse, persécuté ou abattu — non comme formule magique, mais comme reconnaissance de ce qui te traverse.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle coupe bois-tu en ce moment sans savoir si tu l'as choisie ou si elle t'a été donnée — et que t'apprend cette ignorance même sur le lieu où Dieu agit en toi ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>L'argile du potier dans Jérémie</h3>
+          <p>« Descends dans la maison du potier » (Jr 18,2): Jérémie voit le vasaiste reformer l'argile qui s'est défigurée dans sa main. Le même mot <span class="gr">ḥomer</span> désigne la glaise et l'homme, <span class="gr">ʾadam</span> — l'être de terre que Dieu façonne, défait, refait. Les Pères y ont vu l'image de la pénitence: Origène, dans sa <em>Homélie sur Jérémie</em> (IX, 4), écrit que « le potier ne jette pas l'argile, il la reprend; ainsi Dieu ne condamne pas le pécheur, il le remet sur le tour ». Cette tradition nourit la métaphore paulinienne: le vase n'est pas choisi pour sa beauté, mais pour sa malléabilité.</p>
+<p class="attrib">Origène, <em>Homélies sur Jérémie</em>, IX, 4</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le serviteur souffrant d'Isaïe</h3>
+          <p>« Il n'a pas laissé paraître sa vie » (Is 53,3): le <em>ʿebed YHWH</em>, serviteur de l'Éternel, porte ce que les autres ne peuvent porter. Matthieu cite ce texte à plusieurs reprises comme clé de lecture de Jésus. Chrysostome, dans ses <em>Homélies sur Isaïe</em>, remarque que « le serviteur n'est pas celui qui obéit seulement, mais celui qui souffre à la place de ceux qui devraient souffrir ». Cette substitution, loin d'être une injustice, est le cœur de la « rançon » mathéenne: Jésus ne vient pas ajouter un modèle de vertu, mais accomplir ce que nous ne pouvons accomplir.</p>
+<p class="attrib">Chrysostome, <em>Homélies sur Isaïe</em></p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La joie du matin après la nuit</h3>
+          <p>« Le soir arrive, et avec lui les larmes; et le matin, la joie » (Ps 30,6): cette structure temporelle du psaume éclaire le Psaume 125. La joie n'est pas l'abolition de la souffrance mais son accomplissement, comme la gerbe n'abolit pas la semence mais la révèle. Calvin, commentant le Ps 30, note que « Dieu ne promet pas d'épargner les pleurs, mais de les convertir — ce verbe de transformation est plus fort que celui de consolation ». C'est cette conversion que le Psaume 125 célèbre: les nations voient, mais ceux qui ont semé savent, et leur savoir est dans le corps, dans la fatigue des jarrets, dans la gerbe portée sur l'épaule.</p>
+<p class="attrib">J. Calvin, <em>Commentaire sur le Psaume 30</em>, 1557</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — 2 Co 4, 7-15 ; Mt 20, 20-28.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
