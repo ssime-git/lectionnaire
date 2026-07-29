@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le potier et le filet — jeudi 30 juillet 2026</title>
+<meta name="description" content="Quand Dieu reprend l'argile de nos vies pour en refaire une forme nouvelle, et quand le Royaume vient à nous avant que nous sachions le discerner">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">jeudi 30 juillet 2026 · 17ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Le <span class="it">potier et le filet</span></h1>
+    <p class="chapeau">Quand Dieu reprend l'argile de nos vies pour en refaire une forme nouvelle, et quand le Royaume vient à nous avant que nous sachions le discerner</p>
+    <figure class="gravure" aria-label="Un potier assis à son tour, les mains dans l'argile qui s'affaisse et se relève ; à ses pieds, des tessons qu'il récupère ; au loin, des pêcheurs tirant un filet plein vers le rivage, où des hommes trient le poisson dans la lumière du soir"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M80 120 l15 -45 l12 45"/><path d="M87 85 h14"/><path d="M95 75 v10"/><path d="M85 95 q10 8 20 0"/><path d="M90 120 q5 -20 15 -5 q5 -15 10 5"/><path d="M70 120 l8 -15 l6 8"/><path d="M60 118 l4 -8 l5 5"/><path d="M280 120 q-15 -18 -5 -32 q-2 12 7 14 q6 -18 -2 -38 q12 20 2 38 q8 -5 5 -16 q7 17 -7 34"/><path d="M260 88 q-10 5 -8 18 q5 8 16 5"/><path d="M220 95 q15 -8 25 0"/><path d="M228 95 l-3 12 l8 -2"/><path d="M245 95 l3 10 l-6 -1"/><path d="M300 82 q8 4 6 14"/><path d="M310 78 q6 3 4 12"/></g><g class="trait-rubrique"><path d="M95 65 q-8 -12 0 -22 q8 10 0 22"/><path d="M95 43 v8"/></g><g class="trait-liturgie"><path d="M155 120 q-10 -25 5 -40 q15 15 5 40"/><path d="M148 88 q7 -5 14 0"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Jr 18, 1-6 — Segond 1910</p>
+        <div class="ecriture "><p><span class="s">1</span> La parole qui fut adressée à Jérémie de la part de l'Éternel, en ces mots : <span class="s">2</span> Lève-toi, et descends dans la maison du potier ; là, je te ferai entendre mes paroles. <span class="s">3</span> Je descendis dans la maison du potier, et voici, il travaillait sur son <button class="mot" data-g="g-tour">tour</button>. <span class="s">4</span> Le vase qu'il faisait d'argile fut gâté entre ses mains ; alors il en refit un autre vase, tel qu'il lui plut de le faire. <span class="s">5</span> Et la parole de l'Éternel me fut adressée, en ces mots : <span class="s">6</span> Ne puis-je pas agir envers vous comme ce potier, maison d'Israël ? dit l'Éternel. Voici, comme l'argile dans la main du potier, ainsi vous êtes dans ma main, maison d'Israël.</p></div>
+        <div class="glose" id="g-tour"><span class="lemme">tour</span> L'hébreu <span class="gr">ʾābənayim</span> désigne proprement les deux pierres du tour du potier, le double disque qui tourne. Segond simplifie en « tour », mais le mot original évoque la dualité du mouvement : la pierre fixe et la pierre mobile, l'axe immobile et la forme qui naît du geste répété. Jérémie ne voit pas une machine mais un corps en action, une technique du corps où la matière se plie à la patience. Origène, dans ses <em>Homélies sur Jérémie</em>, y lit déjà l'image de la conversion : non pas destruction mais reformation, le même argile qui redevient malléable entre des mains qui ne se lassent pas.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 145 (146), 1-2, 3-4, 5-6ab — Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">1</span> Loue l'Éternel, ô mon <button class="mot" data-g="g-ame">âme</button> ! Je louerai l'Éternel tant que je vivrai, Je célébrerai mon Dieu tant que j'existerai. <span class="s">2</span> Ne vous confiez pas aux grands, Aux fils de l'homme, qui ne peuvent sauver. <span class="s">3</span> Leur souffle s'en va, ils retournent à la terre, Et ce même jour leurs desseins périssent. <span class="s">4</span> Heureux celui qui a pour secours le Dieu de Jacob, Qui met son espoir en l'Éternel, son Dieu ! <span class="s">5</span> Il est le créateur des cieux et de la terre, De la mer et de tout ce qui s'y trouve. Il garde la <button class="mot" data-g="g-foi">foi</button> à toujours. <span class="s">6ab</span> Il fait droit aux opprimés ; Il donne du pain aux affamés.</p></div>
+        <div class="glose" id="g-ame"><span class="lemme">âme</span> Le hébreu <span class="gr">nep̄eš</span> ne désigne pas l'âme séparable du corps, comme le grec <span class="gr">psychē</span> le suggérera plus tard, mais le souffle vital, le soi entier dans sa respiration. Segond traduit par « âme » par fidélité à l'usage biblique français, mais le mot porte ici le poids de l'exhortation totale : louer Dieu de tout son être vivant, non d'une partie spiritualisée. Les rabbins du Talmud de Babylone (<em>Berakhot</em> 10a) rapportent que cette ouverture du psaume fut sur les lèvres de martyr juifs ; la prière du <span class="gr">nep̄eš</span> est la prière du corps menacé qui refuse de séparer sa louange de son sang.</div>
+        <div class="glose" id="g-foi"><span class="lemme">foi</span> Segond traduit ici <span class="gr">ʾĕmeṯ</span> par « foi », mais le mot hébreu signifie vérité, fidélité, constance dans le temps. C'est le même mot qui qualifie l'alliance de Dieu avec Abraham. Calvin, dans son commentaire des Psaumes, insiste sur ce point : « Ce n'est point une vérité speculative, mais une vérité qui tient et qui demeure. » Dieu garde la <span class="gr">ʾĕmeṯ</span> : il reste lui-même, il ne se dédit pas, il est le rocher où l'espérance s'appuie quand tout autre soutien s'effondre, comme le dit le verset précédent sur la mort des grands.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 13, 47-53 — Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">47</span> Le royaume des cieux est encore semblable à un filet jeté dans la mer, et qui a rassemblé des poissons de toute espèce. <span class="s">48</span> Quand il est rempli, les pêcheurs le tirent ; et, s'étant assis sur le <button class="mot" data-g="g-rivage">rivage</button>, ils mettent dans des vases ce qui est bon, et ils jettent ce qui est mauvais. <span class="s">49</span> Il en sera de même à la fin du monde. Les anges viendront, et sépareront les méchants d'avec les justes, <span class="s">50</span> et ils les jetteront dans la fournaise du feu, où il y aura des pleurs et des grincements de dents. <span class="s">51</span> Avez-vous compris toutes ces choses ? Ils lui répondirent : Oui. <span class="s">52</span> Et il leur dit : C'est pourquoi tout <button class="mot" data-g="g-scribe">scribe</button> devenu <button class="mot" data-g="g-disciple">disciple</button> du royaume des cieux est semblable à un père de famille qui tire de son trésor des choses nouvelles et des choses anciennes. <span class="s">53</span> Lorsque Jésus eut achevé ces paraboles, il partit de là.</p></div>
+        <div class="glose" id="g-rivage"><span class="lemme">rivage</span> Le grec <span class="gr">aigialos</span> désigne la ligne de plage battue par les flots, l'espace liminal entre la mer et la terre ferme. Segond traduit simplement « rivage », mais le mot évoque le lieu où le filet devient visible, où ce qui était caché dans les profondeurs est exposé à la lumière et au tri. Chrysostome, dans sa <em>Homélie XLVII sur Matthieu</em>, remarque que ce rivage est déjà le jugement : non pas un tribunal lointain, mais le moment où le filet de la grâce révèle ce qu'il contenait, où la vérité de chaque vie apparaît dans la clarté du jour qui vient.</div>
+        <div class="glose" id="g-scribe"><span class="lemme">scribe</span> Le mot grec <span class="gr">grammateus</span> désigne celui qui maîtrise les lettres, l'expert en Écriture, souvent opposé à Jésus dans les récits évangéliques. Ici, Matthieu retourne l'attente : le scribe devenu disciple n'abandonne pas son savoir, il le transforme. Calvin note dans son <em>Harmonie évangélique</em> : « Il ne dit pas que le scribe doit tout quitter, mais qu'il doit devenir disciple, c'est-à-dire qu'il doit apprendre de nouveau. » La conversion n'est pas l'effacement du passé mais son réajustement sous l'autorité du Maître.</div>
+        <div class="glose" id="g-disciple"><span class="lemme">disciple</span> Le grec <span class="gr">mathētēs</span> vient du verbe <span class="gr">manthanō</span>, apprendre, et désigne avant tout celui qui se tient près d'un maître pour recevoir de lui une formation de vie. Segond ne peut que translittérer par « disciple », car le français n'a pas de mot qui porte cette densité relationnelle. Le disciple n'est pas l'étudiant qui accumulate des connaissances, mais celui qui se laisse façonner, comme l'argile du potier, par la présence et la parole de celui qu'il suit. Origène, commentant ce verset, voit dans le scribe devenu disciple l'image même de l'Église : Israël qui reçoit l'Évangile, les nations qui accèdent aux Écritures, les deux trésors qui se mêlent dans une même main ouverte.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>La maison du potier, un lieu de contestation</h3><p>Jérémie reçoit l'ordre de descendre, non pas au temple ni au palais, mais dans l'atelier d'un artisan anonyme. Cette descente est déjà théologique : la parole de Dieu ne vient plus dans les lieux institutionnels où le peuple attend sa sécurité, mais dans l'humilité d'un travail manuel, dans l'odeur de l'argile et le bruit du tour. Le contexte historique est celui de la menace babylonienne, vers 605 avant notre ère, quand l'asservissement paraît inévitable et que les élites de Juda comptent encore sur les alliances égyptiennes. Jérémie 18 s'inscrit dans une série de signes-actes (le ceinturon pourri, la cruche brisée) où le prophète incarne par son corps ce que Dieu fait ou ce que le peuple subit. Le potier n'est pas métaphore décorative : il est le réel où Dieu se donne à voir. Calvin, dans son prêche sur ce texte, souligne que « Dieu se sert des choses basses et viles pour confondre la sagesse du monde » — le tour du potier devient le lieu d'une théologie de la grâce qui passe par l'échec reconnu.</p></div>
+      <div><h3>Le filet, dernière parabole du chapitre des secrets</h3><p>Matthieu 13 est le grand chapitre des paraboles du Royaume, et ce filet en est le dernier récit avant la conclusion didactique du verset 52. La structure est soigneusement orchestrée : le semeur, l'ivraie, le grain de sénevé, la pâte, le trésor, la perle, le filet — sept paraboles qui montent en intensité vers la réalité du jugement. Le filet rassemble « de toute espèce », le grec <span class="gr">pantos genous</span>, une formule qui évoque la mission universelle de l'Église mais aussi l'indistinction du mélange avant le tri. Chrysostome, dans ses homélies sur Matthieu, insiste sur cette patience de Dieu qui laisse cohabiter le bon et le mauvais poisson dans les mêmes eaux : « Le filet n'est pas brisé, il ne refuse rien, il accueille tout. » Le jugement n'est pas la violence d'une exclusion prematurée, mais la pleine lumière où chaque chose trouve sa place véritable. Le verset 52, sur le scribe devenu disciple, fonctionne comme clé herméneutique : celui qui a compris le filet sait que son trésor contient désormais les anciennes Écritures et la nouvelle réalité du Royaume, sans rupture ni simple juxtaposition.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>L'argile qui redevient malléable</h2>
+<p>Tu as vécu des saisons où ta prière s'est réduite à la répétition de formules que tu ne sentais plus, où le nom de Dieu passait sur tes lèvres sans toucher ce qui en toi était blessé ou fermé. Tu croyais que cette époque était perdue, que ces mots vides s'étaient accumulés comme un échec dont il fallait faire le deuil. Puis un matin, sans que tu aies rien préparé, une parole que tu avais lue dix fois sans la comprendre s'est soudain ouverte, portant exactement ce que ta vie était devenue entre-temps. Tu n'as rien fait pour mériter cette coïncidence : elle ressemble à ces mains du potier qui reprennent l'argile gâtée pour en faire autre chose, sans que l'argile ait à se justifier de son premier échec.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Dieu ne demande pas que tu te présentes à lui sous une forme achevée. Il descend dans l'atelier où tu es en train de t'effondrer, et ses mains reprennent l'argile.</p>
+      <p class="geste">Pose devant toi, sur la table ou dans ta paume, un objet sans valeur — un caillou, une coquille, une clef usée — et dis-lui : « Voici ce que je suis devenu. Fais-en ce qui te plaît. »</p>
+      <small>Ce geste n'est pas magique. Il est le signe que tu acceptes de ne plus être le potier de toi-même.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle « forme gâtée » de ta vie pourrais-tu, aujourd'hui, remettre entre les mains de Dieu sans lui imposer la forme qu'elle devrait reprendre ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Origène sur le potier qui refait</h3>
+          <p>Dans ses <em>Homélies sur Jérémie</em>, Origène (185-253) développe une lecture spirituelle de la maison du potier qui influencera toute la tradition. Il distingue soigneusement : le vase gâté n'est pas détruit, il est « refait », <span class="gr">aneplasen</span> en grec de la Septante, le même verbe que pour la création de l'homme dans la Genèse. La conversion n'est donc pas une seconde création ex nihilo, mais une re-formation de la même matière. Origène ajoute que le potier « fait ce qui lui plaît », ce qui signifie que la nouvelle forme dépend de la volonté libre de Dieu, non de nos mérites antérieurs. Cette lecture sera reprise par Jean Chrysostome et par la tradition monastique, où le tour du potier devient une image classique de l'<em>obéissance</em> comme abandon de sa propre forme.</p>
+<p class="attrib">Origène, <em>Homélies sur Jérémie</em>, II, 1-3</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin sur le scribe devenu disciple</h3>
+          <p>Dans son <em>Commentaire sur l'Harmonie évangélique</em> (1555), Calvin insiste sur le verset 52 comme programme herméneutique pour les ministres de sa Réforme. Il refuse deux écueils : celui des scribes qui restent enfermés dans la lettre ancienne sans recevoir le Christ, et celui des enthousiastes qui prétendent découvrir des « choses nouvelles » sans ancrage dans l'Écriture. « Il faut, dit Calvin, que le scribe soit <em>fait disciple</em>, c'est-à-dire qu'il apprenne de Christ ce qu'il n'avait point appris en l'école des hommes. » Le trésor du scribe converti contient donc les deux testaments, mais dans un ordre nouveau : les choses anciennes reçues à la lumière du Royaume, les choses nouvelles fondées sur l'autorité des prophètes. Cette double fidélité définira la prédication réformée.</p>
+<p class="attrib">Jean Calvin, <em>Commentaire sur l'Harmonie évangélique</em>, éd. 1555</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome sur la patience du filet</h3>
+          <p>Jean Chrysostome (344-407), dans sa <em>Quarante-septième homélie sur Matthieu</em>, médite longuement sur la parabole du filet pour répondre à ceux qui s'impatientent du mélange des bons et des méchants dans l'Église. Il oppose le filet à la faucille : le semeur avait interdit d'arracher l'ivraie avant le temps, et le filet prolonge cette patience divine. « Ne dis pas : Pourquoi le méchant est-il dans l'Église ? Le filet n'a pas encore été tiré. » Chrysostome met en garde contre l'illusion de pouvoir faire le tri soi-même : le pêcheur ne distingue pas les poissons dans les profondeurs, il les accueille tous. C'est seulement « sur le rivage », dans la lumière eschatologique, que le tri devient possible. Cette homélie fut prononcée à Antioche, où les tensions entre communautés juive et païenne convertie rendaient urgente une théologie de l'accueil indifférencié.</p>
+<p class="attrib">Jean Chrysostome, <em>Homélie XLVII sur Matthieu</em>, PG 58, 479-486</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 17ème Semaine du Temps Ordinaire — Jr 18, 1-6 ; Mt 13, 47-53.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
