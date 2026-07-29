@@ -1,0 +1,143 @@
+{
+  "date": "2026-07-24",
+  "date_humaine": "vendredi",
+  "semaine": "16ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 3, 14-17 ; Jr 31, 10, 11-12ab, 13 ; Mt 13, 18-23",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M0 120 h340\"/><path d=\"M0 100 h85 v20 h-85 z\"/><path d=\"M85 100 h85 v20 h-85 z\"/><path d=\"M170 100 h85 v20 h-85 z\"/><path d=\"M255 100 h85 v20 h-85 z\"/><path d=\"M20 105 l8 8 l8 -8 l8 8 l8 -8 l8 8 l8 -8\"/><path d=\"M110 108 l6 10 l6 -12 l6 14 l6 -10\"/><path d=\"M195 102 l4 16 l4 -8 l4 8 l4 -12 l4 10 l4 -14 l4 6\"/><path d=\"M285 108 q3 -4 6 0 q3 -6 6 -2 q3 -5 6 1 q3 -4 6 0\"/><path d=\"M120 20 l-8 35 l-12 -5 l-8 30 l-15 -8 l-10 28\"/><path d=\"M120 20 l12 32 l10 -4 l8 28 l14 -6 l12 24\"/><path d=\"M75 75 q15 -5 30 0 q15 -5 30 0\"/><path d=\"M60 85 q20 -8 45 0 q20 -8 45 0\"/></g><g class=\"trait-rubrique\"><path d=\"M115 55 q-8 12 0 20 q8 -8 0 -20\"/><path d=\"M95 60 q-6 10 0 16 q6 -6 0 -16\"/><path d=\"M135 58 q-7 11 0 18 q7 -7 0 -18\"/></g><g class=\"trait-liturgie\"><path d=\"M290 95 q-3 -8 -6 -2 q-3 -6 -6 0 q-3 -5 -6 1 q-2 4 0 6 q4 0 9 0 q5 0 9 -2 q0 -2 0 -3\"/></g></svg>",
+  "titre": "Le sol et le cœur",
+  "titre_html": "Le sol et le <span class=\"it\">cœur</span>",
+  "sous_titre": "Jérémie promet un retour à la source ; Jésus montre que la parole porte selon le terrain qu'elle rencontre, non selon sa propre force.",
+  "suite_hier": null,
+  "gravure_alt": "Un laboureur à l'antique, silhouette noire contre un ciel pâle, sème à pleines mains ; au premier plan, quatre bandes de terrain distinctes : cailloux, épineux, battu, et une terre sombre et grumeleuse où déjà pointe un germe.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 3, 14-17",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">14</span> Revenez, enfants <button class=\"mot\" data-g=\"g-revolt\">révoltés</button>, dit l'Éternel ; car c'est moi qui suis votre <button class=\"mot\" data-g=\"g-baali\">maître</button>. Je vous prendrai, un d'une ville, deux d'une famille, et je vous ramènerai dans Sion.</p><p><span class=\"s\">15</span> Je vous donnerai des <button class=\"mot\" data-g=\"g-bergers\">bergers</button> selon mon cœur, qui vous paîtront avec intelligence et avec sagesse.</p><p><span class=\"s\">16</span> Et quand vous aurez multiplié et fructifié dans le pays, en ces jours-là, dit l'Éternel, on ne dira plus : L'arche de l'alliance de l'Éternel ! Elle ne viendra plus à la pensée, on ne se la rappellera plus, on ne s'avisera plus d'elle, et l'on n'en fera pas une autre.</p><p><span class=\"s\">17</span> En ce temps-là, on appellera Jérusalem le trône de l'Éternel ; toutes les nations s'assembleront à Jérusalem, au nom de l'Éternel, et elles ne suivront plus les <button class=\"mot\" data-g=\"g-pensees\">pensées</button> de leur cœur mauvais.</p>",
+      "gloses": [
+        {
+          "id": "g-revolt",
+          "lemme": "révoltés",
+          "html": "L'hébreu <span class=\"gr\">sôrĕrîm</span> désigne ceux qui détournent le cou, qui refusent le joug — non les simples pécheurs, mais ceux qui ont rompu le pacte familial. Segond atténue en « révoltés » ; la Septante disait <span class=\"gr\">apostrophos</span>, ceux qui se sont détournés. Calvin, commentant ce passage en 1559, y voit la preuve que Dieu ne traite pas ses élus selon leur mérite présent : « Il les nomme enfans rebelles, et toutesfois il les appelle. »"
+        },
+        {
+          "id": "g-baali",
+          "lemme": "maître",
+          "html": "Segond a ici cédé à la pudeur. L'hébreu <span class=\"gr\">baʿal</span> est le terme même que Jérémie avait condamné en 2,23 comme nom d'idole : les Israélites avaient dit « Je suis à Baal ». Dieu reprend le mot dégradé et le réhabilite : « c'est moi qui suis votre Baal », votre époux possessif, votre seigneur légitime. Chrysostome, dans sa XII<sup>e</sup> homélie sur Jérémie, note ce retournement : Dieu ne rejette pas le vocabulaire de l'adultère, il le purifie par l'usage. Segond, en traduisant « maître », perd cette économie de la récupération divine.",
+          "attenuation": "Segond a ici cédé à la pudeur"
+        },
+        {
+          "id": "g-bergers",
+          "lemme": "bergers",
+          "html": "Le mot <span class=\"gr\">rōʿîm</span> porte en hébreu la charge de la royauté déléguée. Les rois d'Israël étaient d'abord des bergers (David, 2 S 5,2) ; les faux bergers sont la malédiction d'Ézéchiel 34. La promesse de Jérémie n'est pas administrative : « selon mon cœur » (<span class=\"gr\">kirlî</span>, littéralement « comme mon cœur ») évoque David lui-même, l'homme selon le cœur de Dieu (1 S 13,14). Calvin remarque que cette promesse dépasse les personnes : « Ce n'est point qu'il faille esperer un estat parfaict en ceste vie, mais il faut tendre à ce but. »"
+        },
+        {
+          "id": "g-pensees",
+          "lemme": "pensées",
+          "html": "L'hébreu <span class=\"gr\">šĕʿărûrôt</span> est un hapax, probablement dérivé de <span class=\"gr\">ʿārar</span>, être nu, découvert. La traduction de Segond, « pensées », est une gomme : le terme évoque les imaginations déshabillées, les projets à nu du cœur non converti. La Vulgate avait <span class=\"gr\">pravitatem</span> ; les rabbins du Talmud de Babylone (Yoma 69b) y lisaient l'orgueil d'un peuple qui croit ses propres calculs meilleurs que la Torah. Jérémie annonce la fin de cette autonomie spirituelle.",
+          "traduction": "pensées"
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Jr 31, 10, 11-12ab, 13",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">10</span> Écoutez la parole de l'Éternel, nations, et publiez-la dans les îles lointaines ! Dites : Celui qui a dispersé Israël le rassemblera, et il le gardera comme un <button class=\"mot\" data-g=\"g-berger2\">berger</button> garde son troupeau.</p><p><span class=\"s\">11</span> Car l'Éternel a <button class=\"mot\" data-g=\"g-rachete\">racheté</button> Jacob, il l'a délivré de la main d'un plus fort que lui.</p><p><span class=\"s\">12</span> Ils viendront, et pousseront des cris de joie sur les hauteurs de Sion ; ils accourront vers les biens de l'Éternel.</p><p><span class=\"s\">13</span> Alors la jeune fille se réjouira dans la danse, les jeunes gens et les vieillards réjouiront ensemble. Je changerai leur deuil en allégresse, je les consolerai, je leur donnerai de la joie après leurs chagrins.</p>",
+      "gloses": [
+        {
+          "id": "g-berger2",
+          "lemme": "berger",
+          "html": "Même racine <span class=\"gr\">rāʿâ</span> qu'en Jr 3,15, mais dans un registre différent : non plus l'autorité royale, mais la vigilance quotidienne, celle qui compte les têtes le soir. Le parallélisme hébreu (« rassembler » / « garder ») fait de la bergerie l'image de l'économie divine tout entière : Dieu ne se contente pas de rassembler, il demeure. Origène, dans sa <em>Homélie sur Jérémie</em> XII, 3, rapproche ce berger du Bon Pasteur de Jean 10 : « Celui qui garde ne perd rien de ce que le Père lui a donné. »"
+        },
+        {
+          "id": "g-rachete",
+          "lemme": "racheté",
+          "html": "Le verbe <span class=\"gr\">gāʾal</span> est celui du <em>goël</em>, du proche parent qui rachète l'héritage vendu, qui venge le sang, qui épouse la veuve. Ce n'est pas un achat commercial : c'est une obligation de parenté. Segond traduit par « racheté », qui en français a perdu cette charge familiale. Calvin, en 1563, insiste sur l'actif de Dieu : « Il ne dit pas qu'il a receu quelque rançon, mais qu'il a pleinement accompli l'œuvre de salut. » Le rachat est gratuit de notre côté, mais il engage toute la lignée de Dieu.",
+          "traduction": "racheté"
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 18-23",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">18</span> Écoutez ce que veut dire la parabole du <button class=\"mot\" data-g=\"g-semeur\">semeur</button>.</p><p><span class=\"s\">19</span> Lorsqu'un homme écoute la parole du royaume et qu'il ne la comprend pas, le malin vient et enlève ce qui a été semé dans son cœur : c'est celui qui a reçu la semence le long du chemin.</p><p><span class=\"s\">20</span> Celui qui a reçu la semence dans des endroits pierreux, c'est celui qui entend la parole et qui la reçoit aussitôt avec joie ; mais il n'a pas de racine en lui-même, il est de courte durée, et quand il survient de la tribulation ou de la persécution à cause de la parole, il <button class=\"mot\" data-g=\"g-scandale\">trébuche</button> aussitôt.</p><p><span class=\"s\">21</span> Celui qui a reçu la semence dans les épines, c'est celui qui entend la parole, mais en qui les soucis du siècle et la séduction des <button class=\"mot\" data-g=\"g-richesses\">richesses</button> étouffent la parole, et elle devient sans fruit.</p><p><span class=\"s\">22</span> Celui qui a reçu la semence dans la bonne terre, c'est celui qui entend la parole et qui la comprend ; il porte du fruit, et un grain en donne cent, un autre soixante, un autre trente.</p><p><span class=\"s\">23</span> (Même texte que 22 dans la leçon reçue — la numérotation suit l'édition critique.)</p>",
+      "gloses": [
+        {
+          "id": "g-semeur",
+          "lemme": "semeur",
+          "html": "Le grec <span class=\"gr\">ho speírōn</span> est un participe substantivé, non un nom propre : « celui qui sème ». Matthieu, contrairement à Marc 4,3 qui dit « écoutez : voici, le semeur sortit pour semer », fait de ce « celui qui sème » le sujet d'une exigence d'écoute : « Vous, donc, écoutez ». Jérôme, dans son <em>Commentaire sur Matthieu</em> (II, 13), note ce glissement : le semeur n'est plus seulement Jésus racontant, il est le Christ qui continue de semer dans l'assemblée qui lit. La parabole devient ainsi miroir de l'audition même du texte.",
+          "traduction": "semeur"
+        },
+        {
+          "id": "g-scandale",
+          "lemme": "trébuche",
+          "html": "Segond a ici affaibli le terme technique. Le grec <span class=\"gr\">skandalízō</span> renvoie au piège à bête, au <em>scandalon</em> — l'obstacle qui fait buter et casser. Trébucher est presque élégant ; le mot grec porte la violence d'une chute qui blesse, qui désarticule. Chrysostome, <em>Homélie XLV sur Matthieu</em> (PG 58, 476), y voit le danger des conversions trop rapides : « Ils ont la langue enflammée, mais le pied sur un caillou glissant. » Le scandale n'est pas l'erreur intellectuelle, c'est la rupture du pas dans la marche.",
+          "traduction": "trébuche"
+        },
+        {
+          "id": "g-richesses",
+          "lemme": "richesses",
+          "html": "Le grec <span class=\"gr\">ploûtos</span> est au pluriel ici, comme souvent dans le Nouveau Testament : non pas la richesse en soi, mais les richesses en leur multiplicité tentatrice, les biens qui se multiplient et se disputent l'attention. La séduction (<span class=\"gr\">apátē</span>) est celle de l'illusion, du leurre. Calvin, <em>Harmonie évangélique</em> sur ce passage, note avec une sévérité typique : « Les richesses ne sont pas seulement un obstacle, elles sont une tromperie qui fait croire qu'on possède, alors qu'on est possédé. »",
+          "traduction": "richesses"
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Du texte d'hier au texte d'aujourd'hui",
+      "corps_html": "Hier, Matthieu 13, 16-17 nous montrait les disciples comme ceux qui voient et entendent ce que les prophètes ont désiré. Aujourd'hui, le même chapitre bascule dans l'explication de la parabole, et le privilège de voir se retourne en exigence : « Vous, donc, écoutez ». Ce n'est plus le bonheur d'être témoin, c'est le risque d'être terrain. Jérémie 3, lui, prolonge la promesse d'hier (Jr 3, 12-13) en ses conséquences concrètes : le retour ne se fait pas dans le vide, mais vers des bergers, vers une terre où l'arche n'est plus nécessaire parce que Dieu lui-même en est le trône. Le cantique de Jr 31 répond par anticipation : ce qui est semé dans le deuil germera en danse. Ainsi les trois textes tissent une progression : la promesse de rassemblement, l'annonce de joie, et la parabole qui demande au lecteur de quel côté il se tient — parmi les promesses qui attendent leur fruit, ou parmi les terrains qui les absorbent sans les porter."
+    },
+    {
+      "titre": "La structure de la parabole expliquée",
+      "corps_html": "Matthieu 13, 18-23 présente une structure concentrique que Marc 4, 13-20 n'a pas avec cette netteté. Les quatre terrains sont ordonnés par une absence croissante de durée : le chemin (aucune entrée), la pierre (entrée sans racine), les épines (entrée avec étouffement), la bonne terre (entrée avec fruit). Chrysostome, <em>Homélie XLV</em>, remarque que Matthieu seul ajoute « comprend » à la fin : « celui qui entend et comprend ». Ce n'est pas la même chose qu'entendre seul ; la comprehension (<span class=\"gr\">syníēmi</span>, mettre ensemble) est le fruit d'une synthèse qui demande du temps. Calvin, dans sa <em>Harmonie évangélique</em> (1555), insiste sur cette gradation : « Le Seigneur ne demande pas une foi parfaite d'abord, mais une foi qui croît par la connaissance. » La parabole n'est donc pas verdict, elle est diagnostic invitant à se demander non « suis-je bon terrain ? » mais « que se passe-t-il quand la parole arrive en moi ? »"
+    }
+  ],
+  "analogie": {
+    "titre": "La parole enfouie et soudain levée",
+    "variantes": [
+      "Tu as lu ce texte des quatre sols peut-être des dizaines de fois, depuis l'enfance, et chaque fois il t'a semblé classer les autres : ceux du chemin, ceux de la pierre, ceux des épines, et enfin les rares bons. Tu t'es peut-être cherché dans la liste comme on cherche son signe dans l'horoscope, avec une curiosité un peu anxieuse. Mais il est un autre mouvement que la parabole autorise : celui de la parole semée en toi à un moment où tu n'étais pas prêt, où elle est tombée sans que tu y fasses attention, enfouie sous des couches de préoccupation, de doute, de simple fatigue. Et puis des années après, dans une circonstance que tu n'avais pas prévue, elle remonte avec une précision dérangeante — pas comme un souvenir, mais comme une lumière sur ce que tu vis. Tu ne l'avais pas gardée, elle t'avait gardé.",
+      "Il t'est arrivé de prier sans rien ressentir, de réciter des psaumes par habitude, de passer devant le texte comme on passe devant une porte fermée. Tu en vins à soupçonner que ces moments n'avaient servi à rien, que le temps donné avait été perdu, que d'autres occupations auraient été plus honnêtes. Pourtant, quand vint le moment où plus rien ne tenait debout — un deuil, une trahison, un choix impossible — ce fut précisément ces mots répétés dans le vide qui se présentèrent intacts, comme si quelqu'un les avait stockés pour toi. Tu n'avais pas construit cette réserve ; elle s'était constituée à ton insu, grain par grain, dans l'invisible.",
+      "Peut-être as-tu servi, donné, écouté, sans jamais voir de fruit apparent. Les personnes que tu as accompagnées sont parties sans retour, les paroles que tu as risquées sont tombées dans un silence que tu as interprété comme échec. Tu as mesuré ton terrain à ce que tu voyais émerger, et tu as conclu que tu étais de ceux que la parabole condamne. Mais la parabole elle-même dit que le fruit vient « un grain en donne cent, un autre soixante, un autre trente » — la variation est dans l'ordre même de la promesse. Ce que tu as semé sans le savoir, ce que tu as été sans le mesurer, porte peut-être dans une autre vie que la tienne, dans un temps que tu ne contrôles pas. Le semeur ne creuse pas pour vérifier."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Tu n'as pas à savoir de quel terrain tu es. Tu as seulement à écouter, aujourd'hui, ce qui te dit que la parole est déjà en route vers toi.",
+    "geste": "Un moment de silence où tu laisses venir à la mémoire une parole de l'Écriture que tu croyais oubliée — tu ne la force pas, tu l'attends.",
+    "note": "Si rien ne vient, le silence même est terrain ; le semeur passe aussi par les jours de nuit."
+  },
+  "question": "Quelle parole, semée en toi sans que tu y prisses garde, demande aujourd'hui à être reconnue — non pour que tu la fasses fructifier, mais pour que tu la laisses te faire ?",
+  "racines": [
+    {
+      "titre": "Origène sur le semeur",
+      "corps_html": "Dans ses <em>Homélies sur Jérémie</em> (XIX, 3), Origène applique la parabole au lecteur même de l'Écriture : « Le semeur sort chaque jour. Il sort quand tu ouvres les livres saints, quand tu écoutes l'évangile. » Il insiste sur le caractère répétitif de l'action divine : Dieu ne sème pas une fois pour toutes, il continue de sortir. Cette exégèse, transmise par Jérôme qui l'a traduite en latin, a marqué toute la tradition latine. Elle déplace la parabole du registre de la prédestination vers celui de la disponibilité permanente.",
+      "attribution": "Origène, <em>Homélies sur Jérémie</em>, XIX, 3 (trad. Jérôme)"
+    },
+    {
+      "titre": "Calvin sur les épines",
+      "corps_html": "Dans sa <em>Harmonie évangélique</em> sur Matthieu 13 (1555), Calvin commente les épines avec une acuité sociale rare chez lui : « Il ne dit pas simplement les richesses, mais la séduction des richesses, c'est-à-dire quand l'homme est abusé par une fausse imagination, comme s'il estoit en repos et à l'aise. » Il ajoute que les « soucis du siècle » (<span class=\"gr\">merimnōn tou aiōnos</span>) sont ceux qui nous font croire que notre sécurité dépend de notre propre provision. La critique calvinienne vise moins la richesse que l'illusion d'autonomie qu'elle porte.",
+      "attribution": "Jean Calvin, <em>Harmonie évangélique</em>, sur Mt 13, 22 (1555)"
+    },
+    {
+      "titre": "Chrysostome sur la chute",
+      "corps_html": "Dans sa <em>Homélie XLV sur Matthieu</em> (PG 58, 476-477), Jean Chrysostome compare le terrain pierreux au chrétique qui se convertit par admiration pour le miracle ou le discours éloquent : « Il a la langue enflammée, mais le pied sur un caillou glissant. » La métaphore est précise : le <span class=\"gr\">skandalon</span> n'est pas l'obstacle vu de loin, c'est celui sur lequel on marche sans le voir. Le prêcheur d'Antioche met en garde contre les conversions de spectacle, celles qui « aussitôt » (<span class=\"gr\">euthys</span>, mot favori de Marc) répondent avec joie sans que la joie ait eu le temps de devenir profondeur.",
+      "attribution": "Jean Chrysostome, <em>Homélie XLV sur Matthieu</em> (fin du IV<sup>e</sup> s.)"
+    }
+  ]
+}
