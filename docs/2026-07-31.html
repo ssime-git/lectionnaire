@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sans honneur — vendredi 31 juillet 2026</title>
+<meta name="description" content="Le prophète chez lui : Jérémie au Temple, Jésus à Nazareth">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">vendredi 31 juillet 2026 · 17ème Semaine du Temps Ordinaire · <span class="couleur">blanc · </span>
+</p>
+    <h1>Sans <span class="it">honneur</span></h1>
+    <p class="chapeau">Le prophète chez lui : Jérémie au Temple, Jésus à Nazareth</p>
+    <figure class="gravure" aria-label="Gravure sur bois en taille douce : un homme debout au centre d'un parvis dallé, les mains ouvertes et vides le long du corps, entouré de silhouettes tournées vers lui dont les visages restent dans l'ombre ; au fond, une porte basse ouverte sur une route qui sort du village."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M4 128 h332"/><path d="M14 128 l40 -6 M60 128 l38 -6 M270 128 l38 -6 M316 128 l20 -4"/><path d="M170 78 v34"/><path d="M170 78 q-8 -5 -8 -14 q0 -9 8 -9 q8 0 8 9 q0 9 -8 14"/><path d="M162 96 q-10 6 -10 16 v16 h36 v-16 q0 -10 -10 -16"/><path d="M155 128 v-14 M185 128 v-14"/><path d="M55 118 v-24 q0 -8 6 -8 q6 0 6 8 v24"/><path d="M52 128 h18"/><path d="M95 120 v-20 q0 -7 5 -7 q5 0 5 7 v20"/><path d="M92 128 h16"/><path d="M245 120 v-20 q0 -7 5 -7 q5 0 5 7 v20"/><path d="M242 128 h16"/><path d="M285 118 v-24 q0 -8 6 -8 q6 0 6 8 v24"/><path d="M282 128 h18"/><path d="M40 96 q15 -10 15 22"/><path d="M108 96 q-13 -10 -13 22"/><path d="M232 96 q13 -10 13 22"/><path d="M300 96 q-15 -10 -15 22"/><path d="M150 44 h40 v20 h-40 z"/><path d="M155 64 v-20"/><path d="M170 8 v6 M157 12 h26"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Jr 26, 1-9 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> Au commencement du règne de Jojakim, fils de Josias, roi de Juda, cette parole fut prononcée de la part de l'Éternel, en ces termes : <span class="s">2</span> Ainsi parle l'Éternel : Tiens-toi dans le parvis de la maison de l'Éternel, et dis à ceux qui viennent des villes de Juda pour se prosterner dans la maison de l'Éternel toutes les paroles que je t'ordonne de leur dire ; n'en retranche pas un mot. <span class="s">3</span> Peut-être écouteront-ils, et reviendront-ils chacun de leur mauvaise voie ; alors je me <button class="mot" data-g="g-niham">repentirai</button> du mal que je pense à leur faire à cause de la méchanceté de leurs actions. <span class="s">4</span> Tu leur diras : Ainsi parle l'Éternel : Si vous ne m'écoutez pas quand je vous ordonne de suivre ma loi que j'ai mise devant vous, <span class="s">5</span> d'écouter les paroles de mes serviteurs, les prophètes, que je vous envoie, que je vous ai envoyés dès le matin, et que vous n'avez pas écoutés, <span class="s">6</span> alors je traiterai cette maison comme <button class="mot" data-g="g-shilo">Silo</button>, et je ferai de cette ville un objet de malédiction pour toutes les nations de la terre. <span class="s">7</span> Les sacrificateurs, les prophètes, et tout le peuple, entendirent Jérémie prononcer ces paroles dans la maison de l'Éternel. <span class="s">8</span> Et comme Jérémie achevait de dire tout ce que l'Éternel lui avait ordonné de dire à tout le peuple, les sacrificateurs, les prophètes, et tout le peuple, se saisirent de lui, en disant : Tu mourras ! <span class="s">9</span> Pourquoi prophétises-tu au nom de l'Éternel, en disant : Cette maison sera comme Silo, et cette ville sera dévastée, privée d'habitants ? Tout le peuple s'assembla autour de Jérémie dans la maison de l'Éternel.</div>
+        <div class="glose" id="g-niham"><span class="lemme">niham</span> L'hébreu porte ici <span class="gr">niham</span>, verbe qui donnera aussi le nom de Noé (Genèse 5, 29) et qui dit moins un regret moral qu'un changement de disposition, un souffle qui se retourne. Segond traduit par « je me repentirai », ce qui prête à Dieu un vocabulaire de faute qu'il n'a pas en hébreu — l'idée est plutôt que la menace annoncée peut encore être suspendue, non que Dieu se soit trompé. Calvin, commentant des textes semblables où l'Écriture prête à Dieu ce langage humain (le déluge en Genèse 6, le repentir de Dieu au sujet de Saül en 1 Samuel 15), insiste : c'est un accommodement à notre faiblesse, pour que nous sentions le sérieux de l'appel, non une leçon sur l'humeur changeante de Dieu. Le verset ne dit donc pas une hésitation divine mais une offre réelle faite à un peuple encore libre de se détourner.</div>
+        <div class="glose" id="g-shilo"><span class="lemme">Silo</span> Silo, en hébreu <span class="gr">Shiloh</span>, est un nom propre que Segond laisse tel quel, faute de pouvoir le traduire sans trahir. C'était le sanctuaire d'Éphraïm où l'arche a séjourné avant Jérusalem (Josué 18, 1 ; 1 Samuel 1, 3), détruit — on le sait par les fouilles archéologiques qui datent une couche de destruction du XIe siècle avant notre ère, probablement lors des guerres contre les Philistins évoquées en 1 Samuel 4. Le Psaume 78, 60 et Jérémie 7, 12-14 s'en souviennent explicitement comme du lieu que Dieu a abandonné à cause de l'infidélité de ceux qui l'habitaient. En prononçant ce nom dans le parvis du Temple de Jérusalem, Jérémie ne fait pas une comparaison littéraire : il annonce que la présence de Dieu n'est garantie par aucun lieu, fût-il le plus saint, si ceux qui l'habitent trahissent l'alliance.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 68 (69), 2.5ab, 5cd.8, 9-10, 14 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Sauve-moi, ô Dieu ! car les eaux menacent ma vie. <span class="s">5</span> Ils sont plus nombreux que les cheveux de ma tête, ceux qui me haïssent sans cause ; ils sont puissants, ceux qui veulent me perdre, qui sont à tort mes ennemis ; ce que je n'ai pas dérobé, il faut que je le restitue. <span class="s">8</span> Car c'est pour toi que je porte l'<button class="mot" data-g="g-opprobre">opprobre</button>, que la honte couvre mon visage ; <span class="s">9</span> je suis devenu un étranger pour mes frères, un inconnu pour les fils de ma mère. <span class="s">10</span> Car le <button class="mot" data-g="g-zele">zèle</button> de ta maison me dévore, et les outrages de ceux qui t'insultent tombent sur moi. <span class="s">14</span> Et moi, je te prie, ô Éternel, quand tu seras favorable ; ô Dieu, dans la richesse de ta grâce, réponds-moi, selon la vérité de ton salut.</div>
+        <div class="glose" id="g-opprobre"><span class="lemme">cherpah</span> Le mot hébreu est <span class="gr">cherpah</span>, l'opprobre au sens fort : la honte publique, le déshonneur jeté sur quelqu'un devant témoins, bien plus lourd que la simple gêne. Segond garde le terme fort à raison — cherpah revient dans la bouche de Jérémie lui-même (Jérémie 15, 15) pour désigner ce qu'il endure à cause de la parole qu'il porte, un écho direct avec la première lecture de ce jour. Le psalmiste ne dit pas souffrir malgré Dieu mais « pour toi » : la honte n'est pas un accident, elle est la conséquence de la fidélité. Le Nouveau Testament reprendra ce verset (Romains 15, 3) pour le mettre dans la bouche du Christ, lisant dans cet opprobre immérité une préfiguration de la Passion.</div>
+        <div class="glose" id="g-zele"><span class="lemme">qin'ah</span> <span class="gr">Qin'ah</span> est le mot hébreu, celui-là même qui sert à dire la jalousie de Dieu pour son peuple (Exode 20, 5) — Segond choisit « zèle », plus doux, là où « jalousie » aurait mieux gardé la brûlure de l'image : un amour qui ne supporte pas d'être trahi par ce qu'il habite. Le verset sera repris presque mot pour mot en Jean 2, 17 à propos de Jésus purifiant le Temple, tissant un lien direct entre ce psaume, la maison de Dieu menacée en Jérémie 26, et le corps du Christ que Jean appelle lui-même « temple » quelques versets plus loin. Augustin, dans ses Enarrationes in Psalmos sur ce psaume, le lit comme une parole que le Christ prononce en son propre nom, faisant du zèle pour la maison de Dieu une souffrance christique avant la lettre.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 13, 54-58 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">54</span> S'étant rendu dans sa patrie, il enseignait dans la synagogue, de sorte que ceux qui l'entendirent étaient étonnés et disaient : D'où lui viennent cette sagesse et ces miracles ? <span class="s">55</span> N'est-ce pas le fils du charpentier ? N'est-ce pas Marie qui est sa mère ? Jacques, Joseph, Simon et Jude, ne sont-ils pas ses frères ? <span class="s">56</span> et ses sœurs ne sont-elles pas toutes parmi nous ? D'où lui viennent donc toutes ces choses ? <span class="s">57</span> Et il était pour eux une <button class="mot" data-g="g-skandale">occasion de chute</button>. Mais Jésus leur dit : Un prophète n'est <button class="mot" data-g="g-atimos">méprisé</button> que dans sa patrie et dans sa maison. <span class="s">58</span> Et il ne fit pas beaucoup de miracles là, à cause de leur incrédulité.</div>
+        <div class="glose" id="g-skandale"><span class="lemme">skandalon</span> Le grec est <span class="gr">eskandalizonto</span>, de la racine <span class="gr">skandalon</span> qui désignait à l'origine le bâton d'un piège, ce sur quoi on trébuche sans le voir venir. Segond traduit par « occasion de chute », choix juste qui évite le faux ami « scandale », au sens moderne d'indignation, pour garder l'idée d'un obstacle physique, une chose qui fait trébucher malgré soi. Chrysostome, dans ses homélies sur Matthieu, s'étonne de ce retournement : ce qui aurait dû élargir leur admiration — cette sagesse sortie d'un homme qu'ils croient connaître — devient précisément ce qui les fait buter. Ce n'est donc pas l'inconnu qui les scandalise, mais le trop-connu.</div>
+        <div class="glose" id="g-atimos"><span class="lemme">atimos</span> Le grec porte <span class="gr">atimos</span>, littéralement « privé d'honneur » — le préfixe privatif <span class="gr">a-</span> devant <span class="gr">timè</span>, l'honneur ou le prix qu'on accorde à quelqu'un, le même mot qui désignera plus loin le prix du sang de Judas (Matthieu 27, 6). Segond traduit par « méprisé », qui suggère un rejet actif, une hostilité ; le grec dit quelque chose de plus discret et peut-être de plus dur encore : on ne lui refuse pas l'honneur par colère, on ne pense simplement pas à le lui accorder, parce qu'on croit déjà savoir qui il est. Ce déficit silencieux de reconnaissance, plus que le mépris déclaré, est ce contre quoi Jésus met en garde — et ce qu'il vit lui-même, sans que Matthieu en fasse un drame : la phrase suivante dit simplement qu'il continue son chemin.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Jojakim, un roi sous influence</h3><p>Jojakim monte sur le trône de Juda en 609 avant notre ère, imposé par le pharaon Neko après la mort de son père Josias à Meguiddo. Vassal d'abord de l'Égypte puis de Babylone, il est le roi qui, selon Jérémie 36, brûlera au couteau le rouleau des oracles de Jérémie colonne après colonne, jetant les feuillets au feu du brasero. Le discours du parvis, au tout début de son règne, annonce déjà cette hostilité : un roi qui ne veut pas entendre gouvernera un peuple qui ne veut pas entendre non plus.</p></div>
+      <div><h3>Nazareth, une bourgade sans surprise</h3><p>Nazareth compte alors quelques centaines d'habitants tout au plus, un village sans renom de la Galilée que Nathanaël, en Jean 1, 46, juge d'avance incapable de rien produire de bon. Dans la synagogue, tout homme reconnu pouvait être invité à lire et commenter l'Écriture : Jésus y est donc chez lui, au sens le plus concret. Les « frères » nommés au verset 55 ont fait débat dès l'Antiquité — Jérôme y voyait des cousins — mais le texte ne s'y attarde pas : ce qui compte est que tous, de près, croient déjà savoir qui il est.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le trop-connu</h2>
+<p>Tu as pu remarquer combien il est plus facile d'être cru par un inconnu que par les tiens. Devant quelqu'un qui te découvre, ta parole a du poids ; devant ceux qui t'ont vu grandir, maladroit, en échec, elle glisse — on te renvoie à ce que tu étais, comme si rien n'avait pu changer depuis. Le texte de ce jour ne promet pas que cela cessera un jour : Jésus lui-même n'a pas fait beaucoup de miracles à Nazareth, à cause de l'incrédulité des siens. Il promet seulement que ce que tu portes ne vaut pas moins pour n'être pas reçu à la maison, et que Dieu, lui, continue de t'envoyer.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, laisse-toi rejoindre par le dernier mot du psaume : une prière simple, dite dans la certitude que Dieu répond « selon la vérité de son salut », et non selon ce que les tiens pensent savoir de toi.</p>
+      <p class="geste">Nomme, en silence ou à voix basse, un lieu précis — une personne, une communauté, une pièce de ta maison — où tu te sens trop connu pour être entendu ; dépose-le devant Dieu sans chercher à le résoudre.</p>
+      <small>Psaume 68 (69), 14, à relire lentement plusieurs fois.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qui, autour de toi, croit te connaître assez pour ne plus vraiment t'écouter — et qu'est-ce que cela te coûterait de rester fidèle à ce qui t'a été confié, même là ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : le trop-connu qui aveugle</h3>
+          <p>Jean Chrysostome, commentant ce passage, s'étonne que les habitants de Nazareth tirent de la sagesse même de Jésus un motif de refus plutôt que d'accueil : ils raisonnent, dit-il, comme si la grandeur ne pouvait sortir que de l'inconnu, jamais du familier. Il y voit un avertissement pour tout croyant : la familiarité avec les choses saintes — un texte lu cent fois, un visage vu chaque dimanche — peut endormir l'étonnement au lieu de le nourrir.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 49</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : une menace qui cherche encore la conversion</h3>
+          <p>Calvin note que si Dieu voulait perdre son peuple sans retour, il n'aurait nul besoin de lui envoyer des prophètes ni de préciser depuis quand il les envoie « dès le matin » : cette insistance dit la patience, non la sentence déjà arrêtée. La menace de Silo, pour Calvin, reste encore un appel — la dernière forme que peut prendre l'amour de Dieu quand la douceur n'a pas suffi.</p>
+<p class="attrib">Jean Calvin, Praelectiones in Jeremiam, sur Jérémie 26</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Augustin : le psaume mis dans la bouche du Christ</h3>
+          <p>Augustin lit ce psaume comme une parole que le Christ prononce en sa propre passion, prêtant sa voix à tout croyant persécuté pour la vérité qu'il porte : l'opprobre du verset 8 devient alors la honte de la croix elle-même, et le zèle du verset 10 la cause précise pour laquelle il meurt. Ce n'est pas une allégorie forcée : le Nouveau Testament cite lui-même ce psaume à propos du Christ (Jean 2, 17 ; Romains 15, 3), et Augustin ne fait que suivre ce fil déjà tendu par les évangélistes.</p>
+<p class="attrib">Augustin, Enarrationes in Psalmos, sur le psaume 68</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 17ème Semaine du Temps Ordinaire — Jr 26, 1-9 ; Mt 13, 54-58.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
