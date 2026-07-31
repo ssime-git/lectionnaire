@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le prix de la vérité — samedi 1 août 2026</title>
+<meta name="description" content="Jérémie échappe à la mort pour avoir parlé ; Jean-Baptiste, pour la même fidélité, ne lui échappe pas.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">samedi 1 août 2026 · 17ème Semaine du Temps Ordinaire · <span class="couleur">blanc · </span>
+</p>
+    <h1>Le prix de la <span class="it">vérité</span></h1>
+    <p class="chapeau">Jérémie échappe à la mort pour avoir parlé ; Jean-Baptiste, pour la même fidélité, ne lui échappe pas.</p>
+    <figure class="gravure" aria-label="Jérémie debout sur le parvis du Temple, entouré de sacrificateurs et de chefs dont les visages se penchent vers lui, hostiles ; au bord de la foule, une main se détache déjà, celle d'Achikam, esquissant un geste de protection avant même que la sentence ne soit rendue."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h328"/><path d="M74 38 q6 -10 12 0 q-6 10 -12 0 z"/><path d="M80 50 v55 M80 64 l-16 12 M80 64 l14 8"/><path d="M62 118 q18 10 36 0"/><path d="M150 34 q6 -9 12 0 q-6 9 -12 0 z M154 38 l-6 48"/><path d="M195 30 q6 -9 12 0 q-6 9 -12 0 z M199 34 l-8 50"/><path d="M248 36 q6 -9 12 0 q-6 9 -12 0 z M252 40 l-10 48"/><path d="M298 32 q6 -9 12 0 q-6 9 -12 0 z M302 36 v50"/><path d="M158 33 l-4 -2 M203 29 l-4 -2 M256 35 l-4 -2"/></g><g class="trait-rubrique"><path d="M318 128 v-28 q-2 -10 8 -14 M322 88 l6 -10 M318 90 l3 -12 M312 92 l-1 -12 M308 96 l-6 -10"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Jr 26, 11-16.24 — Segond 1910</p>
+        <div class="ecriture "><span class="s">11</span> Alors les sacrificateurs et les prophètes parlèrent ainsi aux chefs et à tout le peuple : Cet homme mérite la mort ; car il a <button class="mot" data-g="g-naba">prophétisé</button> contre cette ville, comme vous l'avez entendu de vos oreilles. <span class="s">12</span> Jérémie dit à tous les chefs et à tout le peuple : L'Éternel m'a envoyé pour prophétiser contre cette maison et contre cette ville, toutes les choses que vous avez entendues. <span class="s">13</span> Maintenant réformez vos voies et vos œuvres, écoutez la voix de l'Éternel, votre Dieu, et l'Éternel se <button class="mot" data-g="g-yinnahem">repentira</button> du mal qu'il a prononcé contre vous. <span class="s">14</span> Pour moi, me voici entre vos mains ; traitez-moi comme il vous semblera bon et juste. <span class="s">15</span> Seulement sachez que, si vous me faites mourir, vous vous chargez du <button class="mot" data-g="g-dam-naqi">sang innocent</button>, vous, cette ville, et ses habitants ; car l'Éternel m'a véritablement envoyé vers vous pour prononcer à vos oreilles toutes ces paroles. <span class="s">16</span> Les chefs et tout le peuple dirent aux sacrificateurs et aux prophètes : Cet homme ne mérite point la mort ; car c'est au nom de l'Éternel, notre Dieu, qu'il nous a parlé. <span class="s">24</span> Cependant la <button class="mot" data-g="g-yad">main</button> d'Achikam, fils de Schaphan, fut avec Jérémie, et empêcha qu'il ne fût livré au peuple pour être mis à mort.</div>
+        <div class="glose" id="g-naba"><span class="lemme">nibba</span> Le verbe hébreu <span class="gr">nibba</span> désigne l'action de parler sous la contrainte d'un souffle qui n'est pas le sien : le prophète ne parle pas depuis lui-même, il est parlé. Segond traduit uniformément par « prophétiser », ce qui aplanit une nuance : le mot partage sa racine avec <span class="gr">nabî</span>, celui qui est appelé, presque malgré lui, comme Jérémie l'avait été enfant (Jr 1, 6-7). Calvin, dans son commentaire sur ce chapitre, insiste sur le fait que les sacrificateurs traitent comme un crime ce qui est en réalité une obéissance : ils jugent la forme du message sans jamais interroger sa source.</div>
+        <div class="glose" id="g-yinnahem"><span class="lemme">niham</span> L'hébreu <span class="gr">niham</span>, ici au futur, ne signifie pas que Dieu change d'avis comme un homme inconstant, mais qu'il se détourne d'un jugement annoncé lorsque les conditions qui le motivaient ont changé — le même verbe décrit le regret de Dieu avant le déluge (Gn 6, 6). Segond traduit par « se repentira », ce qui prête à Dieu un vocabulaire moral humain que Calvin juge nécessaire par accommodation : Dieu, dit-il dans son commentaire sur Jérémie, « parle à notre manière » pour que nous comprenions qu'aucune sentence n'est fermée tant que la conversion est possible. Le mot porte ainsi tout le suspens du chapitre : la mort de Jérémie n'est pas jouée d'avance.</div>
+        <div class="glose" id="g-dam-naqi"><span class="lemme">dam naqi</span> L'expression <span class="gr">dam naqi</span>, littéralement « sang innocent », appartient au vocabulaire juridique du Deutéronome (Dt 19, 10.13) : verser ce sang rend coupable, de façon quasi automatique, la ville entière et pas seulement la main qui frappe. Segond garde la litote hébraïque presque mot à mot, sans l'adoucir. Jérémie ne plaide pas son innocence par sentiment, il invoque une catégorie de droit sacré que ses juges connaissent par cœur — c'est ce qui retourne l'assemblée au verset suivant.</div>
+        <div class="glose" id="g-yad"><span class="lemme">yad</span> La <span class="gr">yad</span>, la main, désigne dans l'hébreu biblique bien plus que le membre : c'est l'instrument du pouvoir agissant, celle qui protège ou qui frappe. Achikam, fils de Schaphan, appartient à une famille de hauts fonctionnaires déjà associée à la découverte du livre de la Loi sous Josias (2 R 22, 12) : sa main n'est pas un geste isolé mais celle d'un homme dont l'autorité pèse à la cour de Jojakim. Le texte ne dit rien du motif d'Achikam ; il note seulement que la main a suffi — Dieu se sert ici d'un fonctionnaire, non d'un miracle.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 68 (69), 15, 16, 30-31, 33-34 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">15</span> Retire-moi de la <button class="mot" data-g="g-boue">boue</button>, et que je n'enfonce plus ! Que je sois délivré de mes ennemis et du gouffre des eaux ! <span class="s">16</span> Que les flots ne m'inondent plus, Que l'abîme ne m'engloutisse pas, Et que la fosse ne se ferme pas sur moi ! <span class="s">30</span> Moi, je suis malheureux et souffrant : Que ton secours, ô Dieu, me relève ! <span class="s">31</span> Je célébrerai le nom de Dieu par des cantiques, Je l'exalterai par des louanges. <span class="s">33</span> Les <button class="mot" data-g="g-anawim">malheureux</button> le voient et se réjouissent ; Vous qui cherchez Dieu, que votre cœur vive ! <span class="s">34</span> Car l'Éternel écoute les pauvres, Et il ne méprise point ses <button class="mot" data-g="g-captifs">captifs</button>.</div>
+        <div class="glose" id="g-boue"><span class="lemme">tit</span> Le mot hébreu <span class="gr">tit</span> désigne la boue du fond des puits ou des citernes désaffectées — celle-là même où Jérémie sera plus tard enfoncé par ses accusateurs (Jr 38, 6), jusqu'aux aisselles, sans pouvoir s'en sortir seul. Segond traduit simplement par « boue », terme neutre qui ne rend pas le caractère carcéral de l'image : ce n'est pas la boue d'un chemin mais celle d'une fosse dont on ne remonte pas par ses propres forces. Les Pères ont lu ce psaume comme la voix du juste innocent enfoncé par la calomnie plutôt que par le péché, lecture qu'Augustin développe longuement dans ses Enarrationes in Psalmos.</div>
+        <div class="glose" id="g-anawim"><span class="lemme">anawim</span> Le mot traduit ici par « malheureux » est <span class="gr">anawim</span>, terme central du Psautier qui désigne moins la pauvreté matérielle que la condition de celui qui n'a plus d'appui que Dieu, ployé et sans recours humain. Segond varie ses traductions selon les psaumes — ici « malheureux », ailleurs « humbles » ou « pauvres » — ce qui disperse en français un mot que l'hébreu garde comme une catégorie stable, presque un titre pour les fidèles sans pouvoir. C'est ce même mot qui nourrit les Béatitudes, où les « pauvres en esprit » reçoivent le royaume (Mt 5, 3).</div>
+        <div class="glose" id="g-captifs"><span class="lemme">asirim</span> Ses <span class="gr">asirim</span>, littéralement ceux qui sont liés, enchaînés — le mot renvoie très concrètement à la prison, non à une image spirituelle vague. Segond traduit par « captifs », ce qui garde la dureté du terme sans l'édulcorer en simple infortune. Dans le contexte de ce samedi, le mot résonne durement : c'est un homme enchaîné dans une forteresse, Jean dans la prison de Machéronte, que ce verset semble déjà décrire d'avance.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 14, 1-12 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span> En ce temps-là, Hérode le <button class="mot" data-g="g-tetrarque">tétrarque</button>, ayant entendu parler de Jésus, <span class="s">2</span> dit à ses serviteurs : C'est Jean-Baptiste ! Il est ressuscité des morts, et c'est pour cela qu'il se fait par lui des miracles. <span class="s">3</span> Car Hérode, qui avait fait arrêter Jean, l'avait lié et mis en prison, à cause d'Hérodias, femme de Philippe, son frère, <span class="s">4</span> parce que Jean lui disait : Il ne t'est pas permis de l'avoir pour femme. <span class="s">5</span> Hérode voulait le faire mourir, mais il craignait la foule, parce qu'elle regardait Jean comme un prophète. <span class="s">6</span> Or, lorsqu'on célébra l'anniversaire de la naissance d'Hérode, la fille d'Hérodias dansa au milieu des convives, et plut à Hérode, <span class="s">7</span> de sorte qu'il promit avec <button class="mot" data-g="g-serment">serment</button> de lui donner ce qu'elle demanderait. <span class="s">8</span> Elle, sur l'instigation de sa mère, dit : Donne-moi ici, sur un plat, la tête de Jean-Baptiste. <span class="s">9</span> Le roi fut attristé ; mais, à cause de ses serments et des convives, il commanda qu'on la lui donne, <span class="s">10</span> et il envoya <button class="mot" data-g="g-decapiter">décapiter</button> Jean dans la prison. <span class="s">11</span> Sa tête fut apportée sur un plat, et donnée à la jeune fille, qui la porta à sa mère. <span class="s">12</span> Les disciples de Jean vinrent prendre son corps, et l'ensevelirent. Puis ils allèrent l'annoncer à Jésus.</div>
+        <div class="glose" id="g-tetrarque"><span class="lemme">tetrarchēs</span> Le grec <span class="gr">tetrarchēs</span> désigne littéralement celui qui gouverne un quart d'un territoire : à la mort d'Hérode le Grand, son royaume fut partagé entre ses fils, et Hérode Antipas ne reçut que la Galilée et la Pérée, sans jamais recevoir le titre de roi (comparer Mc 6, 14, qui l'appelle pourtant « roi » par usage populaire). Segond garde le terme technique plutôt que de le franciser, ce qui est plus exact mais efface la nuance d'usurpation que le peuple lui prêtait déjà. Flavius Josèphe, dans les Antiquités judaïques (XVIII, 5, 2), confirme ce titre et situe la prison de Jean à la forteresse de Machéronte, à l'est de la mer Morte.</div>
+        <div class="glose" id="g-serment"><span class="lemme">horkos</span> Le mot grec <span class="gr">horkos</span> désigne un serment prêté devant témoins, donc juridiquement contraignant aux yeux de l'assemblée, même s'il engage à un mal. Segond traduit simplement « serment », sans pouvoir rendre le pluriel de reprise au verset 9 qui insiste : ce ne sont pas un mais plusieurs serments qui lient Hérode. Chrysostome, dans son homélie sur ce passage, s'arrête précisément là : un serment qui engage au crime ne doit jamais être tenu, et le vrai courage aurait été de le rompre plutôt que de tuer un juste pour ne pas paraître inconstant devant ses convives.</div>
+        <div class="glose" id="g-decapiter"><span class="lemme">apekephalisen</span> Le verbe grec <span class="gr">apekephalisen</span>, à l'aoriste, note la rapidité froide de l'exécution — un ordre donné et exécuté dans l'instant, sans procès ni délai, à l'intérieur même de la forteresse où Jean était enfermé. Segond traduit par « décapiter », fidèle au sens, mais le grec inclut dans le seul verbe ce que le français doit dire en deux mots. Ce moment silencieux, sans parole rapportée de Jean, contraste avec toute la place que l'évangéliste lui avait donnée jusque-là comme voix qui crie et qui dérange — la voix se tait d'un coup, dans la phrase même qui la nomme.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le prophète Urie, l'autre issue</h3><p>Le chapitre 26 ne s'arrête pas à Jérémie : entre les versets 16 et 24, que la liturgie saute, se trouve l'histoire d'Urie, fils de Shemaya, qui prophétisa les mêmes menaces contre Jérusalem. Poursuivi par le roi Jojakim jusqu'en Égypte où il s'était réfugié, il fut ramené, exécuté et jeté dans la fosse commune du peuple (Jr 26, 20-23). Le texte place ainsi côte à côte deux prophètes qui ont dit exactement la même chose : l'un meurt, l'autre est sauvé par une main humaine, sans qu'aucune différence de foi ou de mérite ne l'explique.</p></div>
+      <div><h3>Hérode Antipas selon Flavius Josèphe</h3><p>L'historien juif Flavius Josèphe raconte lui aussi la mort de Jean-Baptiste (Antiquités judaïques, XVIII, 5, 2), mais il en donne une autre raison : Hérode craignait qu'un prédicateur si populaire ne soulève le peuple contre lui, et non l'humiliation d'un reproche sur son mariage. Les deux récits ne se contredisent pas nécessairement, ils datent l'événement vers 28-30 après Jésus-Christ, dans la forteresse de Machéronte. Matthieu, en retenant la version morale, inscrit la mort de Jean dans la lignée des prophètes tués pour avoir dit une parole que le pouvoir ne supportait pas — la même lignée que Jérémie.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Parler sans filet</h2>
+<p>Tu as déjà retenu une parole que tu savais juste, dans une pièce où la prononcer aurait suffi à te rendre suspect — un repas de famille, une réunion, un silence collectif que rompre t'aurait coûté l'approbation de ceux qui t'entourent. Tu sais alors, avant même d'ouvrir la bouche, que dire vrai ne te vaudra ni remerciement ni protection, seulement l'isolement immédiat de ceux qui préféraient ne pas entendre. Jérémie se tient dans cette solitude exacte devant les chefs et les prêtres, sans une seule voix pour le défendre avant qu'il n'ait fini de parler — et c'est seulement après, jamais avant, que le silence se retourne.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Ce texte ne promet pas que dire vrai te protégera. Avant de refermer cette page, tu peux simplement nommer devant Dieu une parole que tu retiens depuis longtemps, sans savoir encore si elle sera entendue, protégée, ou si elle te coûtera quelque chose.</p>
+      <p class="geste">Reste un instant en silence avec cette question : quelle parole vraie est-ce que je retiens aujourd'hui, par prudence plus que par sagesse ? Ne cherche pas à la dire encore — dépose-la seulement devant Dieu.</p>
+      <small>Le psaume que nous avons lu est l'un de ceux que le Nouveau Testament applique le plus souvent au Christ souffrant (Jn 2, 17 ; Jn 19, 28-29) : la prière du juste abandonné n'est donc jamais loin de la sienne.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, en toi, continuerait de dire vrai même si tu savais que, cette fois, personne ne viendrait te protéger ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Un serment qui n'aurait pas dû être tenu</h3>
+          <p>Chrysostome s'attarde sur la logique perverse d'Hérode : il redoute de passer pour un homme de parole inconstante devant ses convives, et préfère pour cela devenir un meurtrier. Le Père d'Antioche note qu'un serment qui engage au mal n'oblige jamais moralement à être tenu — la vraie fidélité aurait été de le rompre. Il voit dans ce texte un avertissement pour tout chrétien tenté de sacrifier une vie, ou une vérité, à la seule crainte du regard des autres.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de saint Matthieu, homélie XLVIII</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La voix du juste souffrant</h3>
+          <p>Augustin lit ce psaume comme la voix du Christ parlant par avance dans la bouche de son juste souffrant, en s'appuyant sur les versets que le Nouveau Testament lui-même applique à la Passion — le zèle qui dévore (Jn 2, 17), le fiel et le vinaigre offerts sur la croix (Jn 19, 28-29 ; Ps 68, 22). Pour lui, chaque fidèle qui crie depuis sa propre boue peut reconnaître dans ce psaume une prière qui l'a précédé et qui continue de porter sa plainte jusqu'à Dieu. Ce n'est donc pas seulement David, ni seulement Jérémie ou Jean, qui parlent ici, mais le Christ lui-même, dans tous ceux qui souffrent pour avoir dit vrai.</p>
+<p class="attrib">Augustin, Enarrationes in Psalmos, sur le Psaume 68</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La liberté de la parole prophétique devant les puissants</h3>
+          <p>Calvin insiste sur le fait que Jérémie ne rétracte rien de son message pour sauver sa vie : il répète devant l'assemblée exactement ce qu'il avait dit dans le Temple, et fonde sa défense non sur la prudence mais sur l'origine divine de sa parole. Pour Calvin, ce texte enseigne que les ministres de la Parole doivent parler avec la même liberté devant les grands que devant le peuple, quitte à s'en remettre entièrement, comme Jérémie, entre les mains de ceux qui les jugent. Il note aussi que la délivrance de Jérémie par les chefs eux-mêmes montre que Dieu peut fléchir les cœurs les plus hostiles sans que le prophète n'ait rien négocié.</p>
+<p class="attrib">Calvin, Commentaires sur le prophète Jérémie, sur Jr 26</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 17ème Semaine du Temps Ordinaire — Jr 26, 11-16.24 ; Mt 14, 1-12.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
