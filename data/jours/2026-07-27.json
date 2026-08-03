@@ -1,0 +1,162 @@
+{
+  "date": "2026-07-27",
+  "date_humaine": "lundi",
+  "semaine": "17ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 13, 1-11 ; Dt 32, 18-19, 20, 21 ; Mt 13, 31-35",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M0 120 h340\"/><path d=\"M0 120 q30 -8 60 0 q40 -12 80 0 q50 -15 100 0 q40 -10 80 0 q20 -6 40 0\"/><path d=\"M20 110 l15 -8 l-3 12 l12 -6 l-5 10\"/><path d=\"M280 115 l10 -5 l-2 8 l8 -4 l-3 6\"/><path d=\"M140 120 q-5 -25 15 -45 q10 -15 8 -30\"/><path d=\"M145 75 q12 -5 20 2\"/><path d=\"M148 62 l-3 -8 l6 2 l-2 -7\"/><path d=\"M155 80 l-8 15 l12 -5 l-5 12\"/><path d=\"M162 95 q-3 8 2 15 q-5 -3 -8 5\"/><path d=\"M158 102 l-12 8 l5 5\"/><path d=\"M250 120 q5 -20 25 -35 q15 -10 20 -5\"/><path d=\"M275 85 q8 -3 12 2 q-5 5 -10 8\"/><path d=\"M280 80 l3 -6 l4 4 l-2 -5\"/></g><g class=\"trait-rubrique\"><path d=\"M150 110 q8 -15 20 -20 q-5 10 2 18 q-8 2 -12 8 q-5 -3 -10 -6 z\"/></g><g class=\"trait-liturgie\"><path d=\"M270 90 q3 -2 6 0 q-2 3 -5 2 z\"/></g></svg>",
+  "titre": "Le mystère",
+  "titre_html": "Le <span class=\"it\">mystère</span>",
+  "sous_titre": "Quand Dieu enfouit son dessein dans l'obscurité du quotidien",
+  "suite_hier": null,
+  "gravure_alt": "Un prophète en train d'enterrer un vêtement dans la terre craquelée d'un ravin, la ceinture à peine visible sous une couche de sédiments ; à l'horizon, une graine minuscule dans un champ labouré.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 13, 1-11",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Ainsi m'a parlé l'Éternel : Va, achète-toi une <button class=\"mot\" data-g=\"g-ezora\">ceinture</button>, et mets-la sur tes reins; mais ne la mets pas dans l'eau.</p><p><span class=\"s\">2</span> J'achetai la ceinture, selon la parole de l'Éternel, et je la mis sur mes reins.</p><p><span class=\"s\">3</span> La parole de l'Éternel me fut adressée une seconde fois, en ces mots :</p><p><span class=\"s\">4</span> Prends la ceinture que tu as achetée et que tu portes sur les reins; lève-toi, va vers l'<button class=\"mot\" data-g=\"g-euphrate\">Euphrate</button>, et là, cache-la dans la fente d'un rocher.</p><p><span class=\"s\">5</span> J'allai, et je la cachai près de l'Euphrate, comme l'Éternel me l'avait ordonné.</p><p><span class=\"s\">6</span> Plusieurs jours après, l'Éternel me dit : Lève-toi, va vers l'Euphrate, et là, retire la ceinture que je t'avais ordonné d'y cacher.</p><p><span class=\"s\">7</span> J'allai vers l'Euphrate, je fouillai, et je pris la ceinture dans l'endroit où je l'avais cachée; et voici, la ceinture était <button class=\"mot\" data-g=\"g-pourri\">gâtée</button>, elle n'était plus bonne à rien.</p><p><span class=\"s\">8</span> Alors la parole de l'Éternel me fut adressée, en ces mots :</p><p><span class=\"s\">9</span> Ainsi parle l'Éternel : C'est ainsi que je <button class=\"mot\" data-g=\"g-gaterai\">gâterai</button> l'<button class=\"mot\" data-g=\"g-orgueil\">orgueil</button> de Juda et le grand orgueil de Jérusalem.</p><p><span class=\"s\">10</span> Ce peuple méchant, qui refuse d'écouter mes paroles, qui suit les penchants de son cœur et va après d'autres dieux pour les servir et se prosterner devant eux, qu'il devienne comme cette ceinture, qui n'est plus bonne à rien!</p><p><span class=\"s\">11</span> Car comme on attache la ceinture aux reins d'un homme, ainsi je m'étais attaché toute la maison d'Israël et toute la maison de Juda, dit l'Éternel, afin qu'elles fussent mon peuple, mon nom, ma louange et ma gloire. Mais ils n'ont point écouté.</p>",
+      "gloses": [
+        {
+          "id": "g-ezora",
+          "lemme": "ceinture",
+          "html": "Le mot hébreu est <span class=\"gr\">ʾezôr</span>, une ceinture de lin portée directement sur la peau, proche du corps, symbole d'intimité et d'appartenance. Segond traduit par « ceinture », mais le terme désigne plutôt un pagne ou linge de reins, vêtement de base qui couvre la nudité. Le Targum y voit déjà le signe de l'alliance serrée contre le peuple ; le prophète porte sur lui ce que Dieu porte sur lui-même, et le fait pourrir dans la terre est une blessure faite au corps même du Seigneur."
+        },
+        {
+          "id": "g-euphrate",
+          "lemme": "Euphrate",
+          "html": "Segond garde le nom grec, mais l'hébreu <span class=\"gr\">pərāt</span> évoque aussi « celui qui fait fructifier ». Le choix topographique n'est pas anodin : au-delà de l'Euphrate commence l'exil, la Babylone qui ravit et qui juge. Certains commentateurs, suivant une glose midrashique, ont noté que ce voyage supposé de Jérusalem à l'Euphrate dépasse la vraisemblance géographique d'un aller-retour rapide ; d'où une tradition qui y lit un lieu proche de Jérusalem, ou un appel à l'obéissance absurde, prophétique par son caractère même d'injonition déraisonnable."
+        },
+        {
+          "id": "g-pourri",
+          "lemme": "gâtée",
+          "html": "Le hébreu <span class=\"gr\">nišḥat</span> est le même verbe que pour le fer qui rouille, le bois qui pourrit, le pain qui moisit. Segond dit « gâtée », qui adoucit ; mais le terme hébreu porte la corruption organique, la décomposition lente et visible. Origène, dans ses <em>Homélies sur Jérémie</em>, y voit la figure de l'âme abandonnée à elle-même : ce qui était fait pour être porté contre la peau devient chose morte, rebut de la terre."
+        },
+        {
+          "id": "g-gaterai",
+          "lemme": "gâterai",
+          "html": "L'hébreu <span class=\"gr\">ʾašḥît</span> est plus fort : détruire, corrompre, rendre caduc. Segond atténue en « gâter », peut-être par pudeur devant la violence divine. Calvin, dans son <em>Commentaire sur Jérémie</em>, insiste sur ce verbe actif de Dieu : ce n'est pas l'abandon passif, c'est un jugement qui opère, Dieu lui-même défaisant ce qu'il avait tissé d'intimité avec son peuple."
+        },
+        {
+          "id": "g-orgueil",
+          "lemme": "orgueil",
+          "html": "Le hébreu <span class=\"gr\">gāʾôn</span> est l'éclat, la majesté, puis par glissement l'orgueil qui s'en réclame. Segond traduit « orgueil », mais le mot porte aussi la gloire, la fierté légitime de Jérusalem comme de l'orgueil coupable. La polysémie est voulue : ce que le peuple tenait pour sa splendeur, Dieu le gâte comme on gâte une ceinture, révélant que cette gloire n'était soutenue que par l'alliance désormais rompue."
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Dt 32, 18-19, 20, 21",
+      "traduction": "Louis Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">18</span> Tu as oublié le <button class=\"mot\" data-g=\"g-tsur\">Rocher</button> qui t'a engendrée, Tu as oublié le Dieu qui t'a fait naître.</p><p><span class=\"s\">19</span> L'Éternel l'a vu, et il a été irrité, Indigné contre ses fils et ses filles.</p><p><span class=\"s\">20</span> Il a dit : Je leur cacherai ma face, Je verrai quelle sera leur fin; Car c'est une <button class=\"mot\" data-g=\"g-tochekha\">race</button> perverse, Ce sont des enfants infidèles.</p><p><span class=\"s\">21</span> Ils ont <button class=\"mot\" data-g=\"g-qineu\">émigré</button> envers moi par ce qui n'est point Dieu, Ils m'ont irrité par leurs idoles. Et moi, j'émigrerai envers eux par ce qui n'est point peuple, Je les irriterai par une nation insensée.</p>",
+      "gloses": [
+        {
+          "id": "g-tsur",
+          "lemme": "Rocher",
+          "html": "Le hébreu <span class=\"gr\">ṣûr</span> est le lieu refuge, la paroi où l'on se blottit contre l'ennemi, mais aussi le roc stérile d'où jaillit pourtant l'eau en Exode 17. Segond capitalise « Rocher », reconnaissant le titre divin. Les Pères, notamment Augustin dans les <em>Enarrationes in Psalmos</em> sur le <em>Deus meus es tu</em>, y lisent le Christ lui-même, le roc frappé qui donne l'eau vive, et l'oubli de ce roc comme la forme première de tout péché."
+        },
+        {
+          "id": "g-tochekha",
+          "lemme": "race",
+          "html": "Segond traduit « race » pour <span class=\"gr\">tôḵēḥa</span>, mais le mot hébreu est plus exactement « contestation », « dispute », voire « récrimination ». La forme massorétique ici est débattue ; plusieurs manuscrits lisent un terme proche de « génération ». La Septante a traduit par <span class=\"gr\">geneá</span>, d'où le « race » de Segond. Cependant le sens profond est celle d'une génération qui ne cesse de contredire, de répliquer, dont l'existence même est procès contre Dieu."
+        },
+        {
+          "id": "g-qineu",
+          "lemme": "émigré",
+          "html": "Le verbe hébreu <span class=\"gr\">qinnəʾûnî</span> est normalement « exciter à la jalousie », « provoquer par l'idolâtrie ». Segond choisit « émigré », mot surprenant qui rend le <span class=\"gr\">qinnāʾ</span> comme un déplacement, un abandon de patrie. C'est une traduction audacieuse, presque incompréhensible, qui pourtant capte quelque chose : l'idolâtrie comme expatriation de l'âme, le fait de quitter le lieu natal de Dieu pour une terre étrangère. Paul reprend ce verset en Romains 10,19 pour parler de la vocation des nations, montrant que cette « émigration » devient paradoxalement le chemin par où Dieu rejoint ceux qui l'ont quitté."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 31-35",
+      "traduction": "Louis Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">31</span> Il leur proposa encore une autre parabole, et il dit : Le <button class=\"mot\" data-g=\"g-basileia\">royaume</button> des cieux est semblable à un <button class=\"mot\" data-g=\"g-kokko\">grain</button> de <button class=\"mot\" data-g=\"g-sinape\">moutarde</button> qu'un homme a pris et semé dans son champ.</p><p><span class=\"s\">32</span> C'est la plus petite de toutes les semences; mais, quand il a poussé, il est plus grand que les légumes, et il devient un arbre, de sorte que les oiseaux du ciel viennent et se logent dans ses branches.</p><p><span class=\"s\">33</span> Il leur dit encore une autre parabole : Le royaume des cieux est semblable à du <button class=\"mot\" data-g=\"g-zume\">levain</button> qu'une femme a pris et <button class=\"mot\" data-g=\"g-ene-krypsen\">mêlé</button> dans trois mesures de farine, jusqu'à ce que le tout soit levé.</p><p><span class=\"s\">34</span> Jésus dit aux foules toutes ces choses en paraboles, et il ne leur disait rien sans parabole,</p><p><span class=\"s\">35</span> afin que s'accomplît ce qui avait été annoncé par le prophète : J'ouvrirai ma bouche en paraboles, je publierai des choses cachées <button class=\"mot\" data-g=\"g-katabole\">depuis la fondation</button> du monde.</p>",
+      "gloses": [
+        {
+          "id": "g-basileia",
+          "lemme": "royaume",
+          "html": "Le grec <span class=\"gr\">basileía</span> n'est pas d'abord un territoire mais une royauté active, l'exercice du règne. Segond dit « royaume », qui fige en lieu ce qui est dynamique. Jérôme, dans la Vulgate, hésitait entre <em>regnum</em> et l'adjectif verbal ; la réforme protestante a hérité de cette ambiguïté. Le « royaume » de Matthieu n'est pas le ciel comme espace, c'est la manière dont le ciel commence de régner ici, dans le secret d'un grain ou d'une pâte."
+        },
+        {
+          "id": "g-kokko",
+          "lemme": "grain",
+          "html": "Le grec <span class=\"gr\">kókkos</span> est le grain isolé, le corps minuscule et rond. Segond dit « grain », mais le mot grec insiste sur la petitesse absolue, la réduction à l'unité. Origène, dans ses <em>Homélies sur l'Exode</em>, avait déjà médité sur le <span class=\"gr\">kókkos</span> de la grenade comme image de l'unité multipliée ; ici, c'est l'inverse : l'unité qui devient multiplicité, mais seulement parce qu'elle a d'abord accepté d'être enfouie et morte."
+        },
+        {
+          "id": "g-sinape",
+          "lemme": "moutarde",
+          "html": "Le <span class=\"gr\">sínapi</span> n'est pas la moutarde domestique mais une plante sauvage, invasive, aux graines si fines qu'on les méprise. Les rabbins l'utilisaient déjà comme image de ce qui dépasse sa mesure : le précepte minuscule dont les fruits sont immenses. Segond dit simplement « moutarde », sans noter que cette plante n'est pas un arbre noble mais une broussaille que les oiseaux viennent habiter, signe dans l'Ancien Testament des nations païennes recueillies dans l'ombre d'Israël élargi."
+        },
+        {
+          "id": "g-zume",
+          "lemme": "levain",
+          "html": "Le grec <span class=\"gr\">zýmē</span> est le levain ferment, souvent négatif dans les Évangiles (le levain des pharisiens), mais ici réhabilité comme force secrète de transformation. Segond garde « levain », qui en français porte aussi la suspicion (on « lève » la pâte, mais on « lève » aussi la corruption). Chrysostome, dans ses <em>Homélies sur Matthieu</em>, note cette réversibilité : le même levain qui gâte peut sauver, selon qu'il est mêlé à quoi. Le royaume opère comme cette force invisible dont on ne voit pas l'origine mais dont on mesure l'effet."
+        },
+        {
+          "id": "g-ene-krypsen",
+          "lemme": "mêlé",
+          "html": "Segond traduit « mêlé », mais le grec <span class=\"gr\">enékrypsen</span> est plus fort : enfouir, cacher à l'intérieur. Le verbe <span class=\"gr\">kryptō</span> est celui du mystère, de ce qui est voilé. La femme cache le levain dans la farine, comme Dieu cache le royaume dans le monde. Calvin, dans son <em>Harmonie évangélique</em>, remarque que cette action féminine et domestique est élevée au rang de parabole du Fils : le mystère passe par les mains invisibles de celles qu'on ne compte pas."
+        },
+        {
+          "id": "g-katabole",
+          "lemme": "depuis la fondation",
+          "html": "Le grec <span class=\"gr\">katabolḗ</span> est proprement le jet en bas, le moment où les fondements sont posés, l'acte fondateur d'un édifice. Segond dit « depuis la fondation », qui rend l'idée mais perd l'image du jet, de la chute volontaire. Les Pères, notamment Grégoire de Nysse dans son <em>Traité de la création de l'homme</em>, y lisaient le <span class=\"gr\">katabolḗ</span> comme l'acte par lequel Dieu, jetant les fondements, avait déjà enfoui dans la trame du monde le mystère du Christ. Ce que les paraboles dévoilent n'est pas une nouveauté mais une antiquité plus profonde que le temps."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La ceinture et le prophète : un théâtre de l'absurde",
+      "corps_html": "Jérémie est le prophète des signes corporels, de ceux qu'il faut porter sur soi jusqu'à la limite du supportable. La ceinture pourrie n'est pas métaphore à distance : il a fallu qu'il l'achète, qu'il la porte, qu'il voyage, qu'il creuse, qu'il attend. Chrysostome, dans ses <em>Homélies sur les prophètes</em>, admire cette obéissance qui ne demande pas le sens de l'ordre : le prophète est celui qui fait ce qu'on lui dit avant de comprendre pourquoi. Calvin y voit une leçon pour les ministres eux-mêmes, tenus de porter sur leur corps la honte d'un peuple qui refuse de porter son Dieu. Le rite n'est pas pédagogique au sens moderne : il opère quelque chose dans le réel, il fait advenir le jugement par la patience même de celui qui obéit sans voir."
+    },
+    {
+      "titre": "Les paraboles comme mode du caché",
+      "corps_html": "Matthieu 13 est le chapitre des paraboles, et Jésus y parle en paraboles « afin que » (c'est la formulation choquante) les foules ne comprennent pas. Segond atténue en « afin que s'accomplît », mais le grec porte cette finalité troublante. Origène, dans ses <em>Homélies sur Luc</em>, avait déjà médité cette obscurité volontaire : le mystère n'est pas pour tous de la même manière, il faut être initié par le désir, par la demeure auprès du Maître, pour que la parole s'ouvre. La parabole du grain de moutarde et celle du levain sont jumelles : l'une montre l'extériorité grandissante, l'autre l'intériorité invisible. Ce que Jérémie faisait dans la terre de l'Euphrate, Jésus le fait dans la terre des cœurs. La parabole n'est pas explication mais germination : elle ne démontre pas, elle s'enfouit et attend."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui grandit sans qu'on ait vu le moment",
+    "variantes": [
+      "Tu as prié des années sans rien ressentir, récité des psaumes comme on respire, sans que le sens te parvienne, et tu as cru parfois que cette parole retournait au néant d'où tu la tirais. Puis un soir de solitude, ou dans l'attente d'une nouvelle qui ne venait pas, un verset remonte avec une clarté qui n'était pas en lui quand tu le lisais, et tu comprends que le levain travaillait dans la farine obscure de ton absence à toi-même. Tu n'as pas fait cela ; c'est le royaume qui passe là où tu ne le cherchais plus.",
+      "Tu as semé quelque chose de bon dans une vie qui ne te remercia pas, une patience, un pardon, une vérité dite au risque de tout perdre, et les années ont fait de ce geste un souvenir sans fruit apparent. Tu ne sais pas si cela a porté, si quelqu'un s'en souvient, si le grain n'a pas pourri sous la terre sans jamais lever. Mais la parabole dit que le royaume est précisément ce qui échappe au bilan que tu voudrais en dresser : il pousse dans l'inventaire de Dieu, pas dans le tien. Ta tâche n'est pas de voir pousser, mais d'avoir semé en sachant que la terre est déjà travaillée d'une autre main.",
+      "Tu as porté longtemps une parole de Dieu comme on porte une ceinture gênante, trop serrée, qui gêne le mouvement et rappelle sans cesse une présence que tu aurais préférée plus discrète. Il y a eu des moments où tu l'as voulu ôter, la cacher, la laisser pourrir quelque part dans un ravin de ta vie. Mais cette parole obstinée est restée là, contre ta peau, dans les replis de ce que tu vis, et elle a fini par faire de toi une forme que tu n'avais pas prévue. Ce n'est pas toi qui la portes plus ; c'est elle qui t'a porté jusqu'à ce que tu deviennes quelqu'un qui peut la porter sans la sentir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Christ t'invite aujourd'hui à cesser de mesurer ta vie spirituelle à ce que tu vois pousser.",
+    "geste": "Prends un moment pour nommer devant lui un geste de foi, de pardon ou de vérité que tu as fait dans l'obscurité, dont tu n'as jamais su le fruit. Confie-le au Seigneur comme on confie une semence à la terre, sans exiger d'en voir l'arbre.",
+    "note": "Ce geste n'est pas un exercice de gratitude forcée ; c'est l'acte de reconnaître que le royaume passe aussi par ce que tu as oublié de compter."
+  },
+  "question": "Quelle parole de Dieu, portée longtemps sans la comprendre, exiges-tu aujourd'hui qu'elle te donne enfin du fruit visible — et que signifie-t-il de lui permettre de rester cachée encore, travaillant dans ce que tu ne vois pas ?",
+  "racines": [
+    {
+      "titre": "Origène sur le mystère enfoui",
+      "corps_html": "Dans ses <em>Homélies sur Jérémie</em>, Origène médite la ceinture pourrie comme l'image de l'âme qui s'éloigne de Dieu : « Ce qui était fait pour serrer le corps du prophète contre sa peau devient chose de rebut, et c'est ainsi que l'âme qui s'éloigne de la parole divine se fait elle-même rebut. » Il insiste sur le caractère actif de cette corruption : ce n'est pas le temps qui use, c'est l'absence de Dieu dans le lieu où il avait ordonné d'aller.",
+      "attribution": "Origène, <em>Homélies sur Jérémie</em>, hom. IX, 4 (traduction latine de Jérôme)"
+    },
+    {
+      "titre": "Calvin sur l'obéissance du prophète",
+      "corps_html": "Calvin, dans son <em>Commentaire sur Jérémie</em> (1563), admire que le prophète « n'objecte rien, ne demande point la raison de ce commandement qui semble frivole », et y voit la règle de tout ministère : « Il nous faut ainsi porter sur nos reins, non point ce qui nous plaît, mais ce que Dieu ordonne, fût-ce pour la honte et la ruine apparente. » Le prophète n'est pas spectateur du jugement ; il en est le corps vivant, la ceinture même que Dieu salit pour montrer ce que le peuple fait de son alliance.",
+      "attribution": "Jean Calvin, <em>Commentaire sur le livre de Jérémie</em>, 1563, sur Jr 13,1-11"
+    },
+    {
+      "titre": "Chrysostome sur le levain caché",
+      "corps_html": "Chrysostome, dans sa 46e <em>Homélie sur Matthieu</em>, note que la femme « cache » le levain, et que ce verbe est le même que celui du trésor caché dans le champ : « Tu vois que le royaume n'est pas pour celui qui cherche à le voir, mais pour celui qui le cache en lui-même, qui le mêle à sa vie obscure jusqu'à ce que tout soit transformé. » Il ajoute que les trois mesures de farine sont le corps, l'âme et l'esprit, ou selon une autre lecture, la loi, les prophètes et l'Évangile, le levain étant ce qui les pénètre tous trois sans se montrer.",
+      "attribution": "Jean Chrysostome, <em>Homélies sur Matthieu</em>, hom. XLVI, 2-3"
+    }
+  ]
+}

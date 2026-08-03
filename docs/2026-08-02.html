@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sans argent — dimanche 2 août 2026</title>
+<meta name="description" content="Isaïe 55, le psaume 144 (145), Romains 8 et Matthieu 14 : ce que Dieu donne ne s'achète pas.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 2 août 2026 · 18ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Sans <span class="it">argent</span></h1>
+    <p class="chapeau">Isaïe 55, le psaume 144 (145), Romains 8 et Matthieu 14 : ce que Dieu donne ne s'achète pas.</p>
+    <figure class="gravure" aria-label="Gravure sur bois : deux mains ouvertes tendant cinq pains et deux poissons vers une source qui jaillit en arrière-plan, traits épais et ombres croisées, dans le style sobre d'une gravure du XVIe siècle."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 134 h328"/><path d="M18 146 C46 118 72 104 104 100 C118 98 130 96 140 92"/><path d="M112 99 C108 88 110 80 118 74 M126 96 L122 76 M136 93 L134 74 M146 90 L146 72"/><path d="M322 146 C294 118 268 104 236 100 C222 98 210 96 200 92"/><path d="M228 99 C232 88 230 80 222 74 M214 96 L218 76 M204 93 L206 74 M194 90 L194 72"/><path d="M100 108 L112 116 M120 106 L132 114 M140 104 L152 112 M160 104 L172 112 M180 104 L192 112 M200 106 L212 114 M220 108 L232 116"/><path d="M30 140 L46 128 M310 140 L294 128"/></g><g class="trait-liturgie"><path d="M138 96 q32 16 64 0"/><path d="M170 94 C166 68 176 46 170 22"/><path d="M168 88 C142 64 118 50 96 40 M172 88 C198 64 222 50 244 40"/></g><g class="trait-rubrique"><path d="M128 96 q7 -14 14 0 M144 94 q8 -16 16 0 M160 92 q10 -18 20 0 M182 94 q8 -16 16 0 M200 96 q7 -14 14 0"/><path d="M132 92 l4 -4 M148 90 l4 -5 M168 86 l4 -6 M190 90 l4 -5 M204 92 l4 -4"/><path d="M112 108 q14 -10 28 0 q-14 10 -28 0 M112 108 l-8 -5 M112 108 l-8 5 M228 108 q-14 -10 -28 0 q14 10 28 0 M228 108 l8 -5 M228 108 l8 5"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 55, 1-3 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Vous tous qui avez soif, venez aux eaux, Même celui qui n'a pas d'argent! Venez, achetez et mangez, Venez, achetez du vin et du lait, <button class="mot" data-g="g-sansargent">sans argent, sans rien payer</button>! <span class="s">2</span> Pourquoi pesez-vous de l'argent pour ce qui ne nourrit pas? Pourquoi travaillez-vous pour ce qui ne rassasie pas? Écoutez-moi donc, et vous mangerez ce qui est bon, Et votre âme se délectera de mets succulents. <span class="s">3</span> Prêtez l'oreille, et venez à moi, Écoutez, et votre âme vivra: Je traiterai avec vous une alliance éternelle, Pour rendre durables mes <button class="mot" data-g="g-faveurs">faveurs</button> envers David.</div>
+        <div class="glose" id="g-sansargent"><span class="lemme">belo kèsèph</span> Segond traduit fidèlement la formule hébraïque <span class="gr">בְּלוֹא כֶסֶף</span>, littéralement « sans qu'il y ait argent » — répétée deux fois dans le verset comme pour marteler l'impossible : on ne peut pas acheter ce que Dieu offre. Calvin, dans son commentaire sur Ésaïe, s'appuie sur ce verset contre toute religion du mérite : la nourriture promise ici ne se reçoit que par une foi qui accueille gratuitement, jamais par un travail qui l'achète. Le texte vise l'économie de Babylone où tout se monnaie, et lui oppose l'économie de Dieu où tout se reçoit.</div>
+        <div class="glose" id="g-faveurs"><span class="lemme">hasdei David</span> L'hébreu porte <span class="gr">חַסְדֵי דָוִד</span>, « les hesed de David » ; Segond traduit par « faveurs », un mot bien pâle pour un terme qui désigne ailleurs la fidélité indéfectible de Dieu à son alliance, souvent rendu par « bonté » ou « miséricorde ». Paul reprend ce verset presque mot pour mot dans son discours d'Antioche (Actes 13, 34), pour l'appliquer à la résurrection du Christ : les promesses faites à David y trouvent leur accomplissement irrévocable. Ce que le texte annonce n'est donc pas une faveur royale ponctuelle, mais un engagement fidèle tenu à travers les générations.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 144 (145), 8-9, 15-16, 17-18 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">8</span> L'Éternel est <button class="mot" data-g="g-misericordieux">miséricordieux et compatissant</button>, Lent à la colère et plein de bonté. <span class="s">9</span> L'Éternel est bon envers tous, Et ses compassions s'étendent sur toutes ses oeuvres. <span class="s">15</span> Les yeux de tous espèrent en toi, Et tu leur donnes la nourriture en son temps. <span class="s">16</span> Tu <button class="mot" data-g="g-main">ouvres ta main</button>, Et tu rassasies à souhait tout ce qui a vie. <span class="s">17</span> L'Éternel est juste dans toutes ses voies, Et miséricordieux dans toutes ses oeuvres. <span class="s">18</span> L'Éternel est près de tous ceux qui l'invoquent, De tous ceux qui l'invoquent avec sincérité.</div>
+        <div class="glose" id="g-misericordieux"><span class="lemme">rachum vechannun</span> Cette paire de mots, <span class="gr">רַחוּם וְחַנּוּן</span>, reprend presque mot pour mot la formule que Dieu prononce lui-même devant Moïse en Exode 34, 6, texte que la tradition juive appelle les « treize attributs de miséricorde » et que le Talmud (Roch ha-Chana 17b) recommande de réciter dans la prière de pénitence. Segond traduit rachum par « miséricordieux » et channun par « compatissant » ; ce second mot vient d'une racine qui évoque une grâce accordée sans condition, comme un supérieur qui se penche sur un inférieur sans qu'aucune dette ne soit due. Le psaume 145, en reprenant cette formule, fait de tout croyant qui le récite l'héritier direct de la révélation faite à Moïse.</div>
+        <div class="glose" id="g-main"><span class="lemme">potéa'h yadékha</span> L'hébreu <span class="gr">פּוֹתֵחַ אֶת־יָדֶךָ</span>, « tu ouvres ta main », est devenu dans la liturgie juive l'un des versets centraux de la prière après le repas, la birkat hamazon ; Maïmonide rappelle qu'il doit être récité avec une attention particulière du cœur, comme une profession de foi que toute nourriture vient de Dieu et non du seul travail. Le geste de la main ouverte s'oppose, dans l'image, au poing fermé de l'avarice : Dieu n'a pas besoin de refermer la sienne, sa provision ne s'épuise pas. Le mot rendu par « à souhait », <span class="gr">רָצוֹן</span> ratson, désigne un accomplissement du désir lui-même, non une simple suffisance.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — Rm 8, 35.37-39 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">35</span> Qui nous <button class="mot" data-g="g-separera">séparera</button> de l'amour de Christ? Sera-ce la tribulation, ou l'angoisse, ou la persécution, ou la faim, ou la nudité, ou le péril, ou l'épée? <span class="s">37</span> Mais dans toutes ces choses nous sommes <button class="mot" data-g="g-vainqueurs">plus que vainqueurs</button> par celui qui nous a aimés. <span class="s">38</span> Car j'ai l'assurance que ni la mort ni la vie, ni les anges ni les dominations, ni les choses présentes ni les choses à venir, ni les puissances, <span class="s">39</span> ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l'amour de Dieu manifesté en Jésus Christ notre Seigneur.</div>
+        <div class="glose" id="g-separera"><span class="lemme">chōrisai</span> Le verbe grec <span class="gr">χωρίσαι</span>, de chōrizō, est le terme technique que Paul emploie ailleurs pour la séparation conjugale, notamment en 1 Corinthiens 7, 10-15 à propos du divorce. En l'employant ici, il construit une image nuptiale implicite : rien ne peut prononcer le divorce entre le croyant et l'amour du Christ, pas même la mort. Segond traduit simplement par « séparer », ce qui est juste mais efface la connotation juridique et affective très concrète que le mot porte dans l'usage paulinien.</div>
+        <div class="glose" id="g-vainqueurs"><span class="lemme">hypernikōmen</span> Le verbe simple <span class="gr">νικάω</span>, « vaincre », est ici renforcé par le préfixe hyper, « au-dessus, au-delà » : Paul forge presque un mot, <span class="gr">ὑπερνικῶμεν</span>, pour dire que la victoire promise dépasse la victoire ordinaire. Segond rend cela par « plus que vainqueurs », traduction heureuse qui garde la surenchère du grec. Jean Chrysostome, dans ses homélies sur l'épître aux Romains, note que Paul ne dit pas que les épreuves sont supprimées, mais que la victoire se remporte à travers elles, non malgré leur absence.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 14, 13-21 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">13</span> A cette nouvelle, Jésus partit de là dans une barque, pour se retirer à l'écart dans un lieu désert; et la foule, l'ayant su, sortit des villes et le suivit à pied. <span class="s">14</span> Quand il sortit de la barque, il vit une grande foule, et <button class="mot" data-g="g-compassion">fut ému de compassion</button> pour elle, et il guérit les malades. <span class="s">15</span> Le soir étant venu, les disciples s'approchèrent de lui, et dirent: Ce lieu est désert, et l'heure est déjà avancée; renvoie la foule, afin qu'elle aille dans les villages, pour s'acheter des vivres. <span class="s">16</span> Jésus leur répondit: Ils n'ont pas besoin de s'en aller; donnez-leur vous-mêmes à manger. <span class="s">17</span> Mais ils lui dirent: Nous n'avons ici que cinq pains et deux poissons. <span class="s">18</span> Et il dit: Apportez-les-moi. <span class="s">19</span> Il donna ordre à la foule de s'asseoir sur l'herbe, prit les cinq pains et les deux poissons, et, levant les yeux vers le ciel, il <button class="mot" data-g="g-graces">rendit grâces</button>. Puis, il rompit les pains et les donna aux disciples, qui les distribuèrent à la foule. <span class="s">20</span> Tous mangèrent et furent rassasiés, et l'on emporta douze paniers pleins des morceaux qui restaient. <span class="s">21</span> Ceux qui avaient mangé étaient environ cinq mille hommes, sans les femmes et les enfants.</div>
+        <div class="glose" id="g-compassion"><span class="lemme">esplanchnisthē</span> Le verbe grec <span class="gr">ἐσπλαγχνίσθη</span> vient de splanchna, les entrailles, le lieu que les Anciens situaient les émotions les plus profondes ; Segond traduit prudemment par « fut ému de compassion », en-deçà de la violence physique du mot grec, plus proche d'un bouleversement viscéral que d'une émotion tranquille. Le même verbe revient pour le père du fils prodigue qui voit revenir son fils (Luc 15, 20) et pour Jésus devant les foules « sans berger » (Matthieu 9, 36). Jean Chrysostome, dans son homélie 49 sur Matthieu, souligne que cette compassion précède toute demande : la foule n'a rien réclamé, Jésus voit et agit avant qu'on ne l'interroge.</div>
+        <div class="glose" id="g-graces"><span class="lemme">eucharistēsen</span> Ce verbe, <span class="gr">εὐχαρίστησεν</span>, qui donnera son nom à l'eucharistie, désigne une action de grâces prononcée avant de rompre le pain — le même geste et presque le même mot reviendront au soir de la Cène (Matthieu 26, 27). Justin Martyr, dès le milieu du IIe siècle, emploie déjà le mot eucharistia pour désigner le repas du Seigneur (Première Apologie, 66), signe que l'Église primitive a lu ce geste de multiplication comme une préfiguration du repas eucharistique. Segond traduit fidèlement par « rendit grâces », mais le lecteur français perd le lien immédiat que l'original tisse avec le nom même du sacrement.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Isaïe 55, l'exil qui s'achève</h3><p>Isaïe 55 clôt ce que les commentateurs appellent le Livre de la consolation (Is 40-55), adressé aux exilés de Babylone vers 538 avant Jésus-Christ, au moment où l'édit de Cyrus rend le retour possible. Contre l'économie de l'empire, où tout se monnaie, le prophète annonce un marché sans argent : la libération que Dieu offre ne s'achète pas plus que le retour au pays ne se mérite.</p></div>
+      <div><h3>Matthieu 14, après la mort de Jean</h3><p>Ce récit suit immédiatement l'annonce de la décapitation de Jean-Baptiste par Hérode (Matthieu 14, 1-12). Jésus se retire, mais la foule le rejoint jusque dans le désert. Le geste des cinq pains rappelle 2 Rois 4, 42-44, où Élisée nourrit cent hommes avec vingt pains d'orge malgré l'incrédulité de son serviteur — Matthieu construit son récit en écho conscient à ce miracle prophétique plus modeste.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que tu peux donner</h2>
+<p>Il y a des jours où tu pries pour quelqu'un et où tu sens que tu n'as presque rien à offrir — ni les mots justes, ni la foi assez forte, ni même l'énergie de persévérer jusqu'au bout de la prière. Tu regardes ce que tu tiens dans les mains : une intercession fatiguée, une confiance à moitié rongée par le doute. Et pourtant tu la déposes, telle quelle, sans attendre d'abord de l'avoir rendue suffisante. Ce n'est pas ta prière qui nourrit qui que ce soit — c'est ce qui se passe entre tes mains ouvertes et celles de Dieu, quand le peu que tu apportes cesse de t'appartenir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, laisse ces textes te rejoindre encore un instant.</p>
+      <p class="geste">Ouvre les mains, à plat sur tes genoux, et nomme silencieusement ce que tu crois ne pas avoir assez de pour aujourd'hui — puis reste ainsi, sans les refermer, une minute entière.</p>
+      <small>Ce geste ne produit rien par lui-même : il ne fait que consentir à recevoir avant même d'avoir donné.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'as-tu, dans le creux de tes mains, que tu n'as encore jamais osé remettre à Dieu tel quel, sans l'avoir d'abord rendu suffisant ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La compassion qui précède la demande</h3>
+          <p>Jean Chrysostome remarque que la foule, en Matthieu 14, ne demande rien : elle suit Jésus par simple désir de sa présence, et c'est lui qui, le premier, voit sa faim et sa maladie. Pour Chrysostome, cet ordre — la compassion avant la requête — révèle un Dieu qui prévient les besoins de ceux qu'il aime, plutôt qu'un Dieu qui attend d'être sollicité.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 49</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Ashrei, la prière trois fois par jour</h3>
+          <p>Le Talmud enseigne que quiconque récite le psaume 145 trois fois par jour, avec un cœur attentif, a part au monde à venir. Ce psaume, appelé Ashrei d'après son premier mot, structure encore aujourd'hui la prière juive quotidienne. Les versets sur la main ouverte et la nourriture donnée en son temps y occupent une place centrale, récités avant chaque repas.</p>
+<p class="attrib">Talmud de Babylone, Berakhot 4b</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le marché sans monnaie</h3>
+          <p>Calvin lit Ésaïe 55 comme une préfiguration de la prédication de l'Évangile : Dieu y invite à un marché où il n'y a rien à payer, parce que le salaire de la grâce serait une contradiction dans les termes. Il insiste sur le fait que même la faim et la soif requises — s'approcher, écouter — ne sont pas des mérites mais des dispositions que Dieu suscite lui-même chez ceux qu'il appelle.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre d'Ésaïe</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 18ème Semaine du Temps Ordinaire — Is 55, 1-3 ; Rm 8, 35.37-39 ; Mt 14, 13-21.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
