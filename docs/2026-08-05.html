@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amour éternel — mercredi 5 août 2026</title>
+<meta name="description" content="Jérémie 31 et Matthieu 15 : la promesse qui déborde les frontières d'Israël">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 5 août 2026 · 18ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Amour <span class="it">éternel</span></h1>
+    <p class="chapeau">Jérémie 31 et Matthieu 15 : la promesse qui déborde les frontières d'Israël</p>
+    <figure class="gravure" aria-label="Une femme agenouillée, le visage levé, tend les mains vers une table haute où quelques miettes tombent ; à l'arrière-plan, des collines plantées de vignes et une silhouette dansant au tambourin, comme deux temps d'une même promesse."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 132 h90"/><path d="M50 132 v-16 q0 -8 8 -8 q8 0 8 8 v16"/><path d="M58 108 q-2 -10 4 -16 q7 8 3 18"/><path d="M20 132 q22 -4 30 -22"/><path d="M20 132 q26 2 38 -10"/><path d="M95 70 h48 v4 h-48 z"/><path d="M99 74 v10"/><path d="M139 74 v10"/></g><g class="trait-rubrique"><path d="M100 84 q3 10 -2 16"/><path d="M112 84 q2 8 -3 14"/><path d="M124 84 q3 9 -1 15"/></g><g class="trait-liturgie"><path d="M210 132 q40 -50 100 -60"/><path d="M228 118 q6 -10 2 -20"/><path d="M248 108 q6 -9 2 -19"/><path d="M268 99 q6 -9 1 -18"/><path d="M286 93 q5 -8 1 -16"/><path d="M255 60 v22"/><path d="M247 68 q8 -8 16 0"/><path d="M250 66 q-9 6 -3 16"/><path d="M260 66 q9 6 3 16"/><path d="M255 82 q-4 8 -12 10"/><path d="M255 82 q4 8 12 10"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Jr 31, 1-7 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> En ce temps-là, dit l'Éternel, je serai le Dieu de toutes les familles d'Israël, et ils seront mon peuple. <span class="s">2</span> Ainsi parle l'Éternel : il a trouvé grâce dans le désert, le peuple de ceux qui ont échappé au glaive ; Israël marche vers son lieu de repos. <span class="s">3</span> De loin l'Éternel se montre à moi : Je t'aime d'un <button class="mot" data-g="g-ahava">amour éternel</button> ; c'est pourquoi je te conserve ma bonté. <span class="s">4</span> Je te rétablirai encore, et tu seras rétablie, <button class="mot" data-g="g-vierge">vierge d'Israël</button> ! Tu auras encore tes tambourins pour parure, et tu sortiras au milieu des danses joyeuses. <span class="s">5</span> Tu planteras encore des vignes sur les montagnes de Samarie ; les planteurs planteront, et cueilleront les fruits. <span class="s">6</span> Car le jour vient où les gardes crieront sur la montagne d'Éphraïm : Levez-vous, montons à Sion, vers l'Éternel, notre Dieu ! <span class="s">7</span> Car ainsi parle l'Éternel : Poussez des cris de joie sur Jacob, éclatez d'allégresse à la tête des nations ! Élevez vos voix, chantez des louanges, et dites : Éternel, délivre ton peuple, le <button class="mot" data-g="g-reste">reste</button> d'Israël !</div>
+        <div class="glose" id="g-ahava"><span class="lemme">ahavat ‘olam</span> En hébreu, <span class="gr">ahavat ‘olam</span>, littéralement « amour de la durée sans terme visible ». Segond traduit par « amour éternel », ce qui est juste mais risque de faire entendre l'éternité philosophique, l'intemporalité, alors que <span class="gr">‘olam</span> désigne plutôt une durée qui dépasse l'horizon qu'on peut voir — un amour qui a toujours été là et dont on n'aperçoit pas la fin. Calvin, commentant ce verset, insiste sur le fait que cet amour ne se fonde sur aucun mérite d'Israël : il précède et il demeure, alors même que le peuple a rompu l'alliance.</div>
+        <div class="glose" id="g-vierge"><span class="lemme">betoulat Israël</span> L'hébreu porte <span class="gr">betoulat Israël</span>, « vierge d'Israël », une expression que Jérémie avait déjà employée pour désigner le peuple comme une jeune fille qu'on va reconduire à la danse. Le choix est frappant si l'on se souvient que quelques chapitres plus tôt, le même prophète décrit Israël comme une épouse infidèle, livrée à l'adultère envers son Dieu (Jr 3, 1-10). Segond garde le mot tel quel, sans l'adoucir : la restauration promise n'efface pas la faute en la niant, elle la traverse et rend neuf ce qui était souillé.</div>
+        <div class="glose" id="g-reste"><span class="lemme">she'erit</span> <span class="gr">She'erit</span>, « le reste » — l'un des mots théologiques les plus chargés de la prophétie hébraïque, qu'on retrouve chez Ésaïe et Michée : non pas la totalité du peuple, mais une part qui échappe au jugement et porte seule la promesse plus loin. Segond traduit sobrement par « reste ». Paul reprendra l'idée presque mot pour mot en Romains 11, 5, parlant d'« un reste, selon l'élection de la grâce » : la même logique traverse les deux Testaments.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Cantique — Jr 31, 10, 11-12ab, 13 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">10</span> Nations, écoutez la parole de l'Éternel, et publiez-la dans les îles lointaines ! Dites : Celui qui a dispersé Israël le <button class="mot" data-g="g-rassembler">rassemblera</button>, et il le gardera comme le berger garde son troupeau. <span class="s">11</span> Car l'Éternel <button class="mot" data-g="g-rachete">rachète</button> Jacob, il le délivre de la main d'un plus fort que lui. <span class="s">12</span> Ils viendront, et pousseront des cris de joie sur les hauteurs de Sion ; ils accourront vers les biens de l'Éternel, le blé, le moût, l'huile, les brebis et les bœufs. <span class="s">13</span> Alors les jeunes filles se réjouiront à la danse, les jeunes hommes et les vieillards se réjouiront aussi ; je changerai leur <button class="mot" data-g="g-deuil">deuil</button> en allégresse, et je les consolerai, je leur donnerai de la joie après leurs souffrances.</div>
+        <div class="glose" id="g-rassembler"><span class="lemme">qibbets</span> Le verbe hébreu est <span class="gr">qibbets</span>, « rassembler », choisi en écho exact au verbe qui précède, « disperser » (<span class="gr">hephits</span>) : celui qui a dispersé est celui-là même qui rassemble, ce n'est pas une main étrangère qui répare ce qu'une autre aurait brisé. Segond rend bien ce balancement en français. L'image du berger qui suit reprend un vocabulaire qu'Ézéchiel 34 développera longuement contre les mauvais bergers d'Israël.</div>
+        <div class="glose" id="g-rachete"><span class="lemme">ga'al</span> <span class="gr">Ga'al</span>, « racheter », est un terme de droit familial avant d'être un terme religieux : c'est l'acte du <span class="gr">go'el</span>, le proche parent qui a le devoir de racheter le champ, la personne ou la dette d'un membre de sa famille tombé dans le malheur, comme Boaz pour Ruth. En l'appliquant à lui-même, l'Éternel se déclare parent le plus proche de Jacob, engagé par le sang et non par un contrat extérieur. Segond traduit fidèlement, mais le mot français « racheter » a perdu cette chaleur de parenté que l'hébreu garde intacte.</div>
+        <div class="glose" id="g-deuil"><span class="lemme">'evel</span> « Deuil », <span class="gr">'evel</span>, s'oppose dans la phrase à la joie qui suit, exactement comme au Psaume 30, 12 : « tu as changé mon deuil en allégresse ». Ce n'est pas une consolation qui viendrait s'ajouter au deuil pour l'alléger, mais un renversement du mot lui-même, la même situation nommée autrement parce que Dieu y est entré. Segond garde ce contraste net, sans l'affaiblir par une paraphrase.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 15, 21-28 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">21</span> Jésus, étant parti de là, se retira dans le territoire de Tyr et de Sidon. <span class="s">22</span> Et voici, une femme <button class="mot" data-g="g-cananeenne">cananéenne</button>, qui venait de ces contrées, lui cria : Aie pitié de moi, Seigneur, Fils de David ! Ma fille est cruellement tourmentée par le démon. <span class="s">23</span> Il ne lui répondit pas un mot, et ses disciples s'approchèrent, et lui dirent avec insistance : Renvoie-la, car elle crie derrière nous. <span class="s">24</span> Il répondit : Je n'ai été envoyé qu'aux <button class="mot" data-g="g-brebis">brebis perdues</button> de la maison d'Israël. <span class="s">25</span> Mais elle vint se prosterner devant lui, disant : Seigneur, secours-moi ! <span class="s">26</span> Il répondit : Il n'est pas bien de prendre le pain des enfants, et de le jeter aux <button class="mot" data-g="g-chiens">petits chiens</button>. <span class="s">27</span> Oui, Seigneur, dit-elle, mais les petits chiens mangent les miettes qui tombent de la table de leurs maîtres. <span class="s">28</span> Alors Jésus lui dit : Femme, ta <button class="mot" data-g="g-foi">foi</button> est grande ; qu'il te soit fait comme tu veux. Et, à l'heure même, sa fille fut guérie.</div>
+        <div class="glose" id="g-cananeenne"><span class="lemme">Chananaia</span> Matthieu écrit <span class="gr">Chananaia</span>, « Cananéenne », un terme archaïque qu'on n'employait plus au premier siècle pour désigner les habitants de la région — Marc, racontant le même épisode, dit plus simplement « Syrophénicienne » (Mc 7, 26). En choisissant ce mot vieilli, Matthieu convoque le souvenir des peuples de Canaan, les ennemis ancestraux d'Israël depuis la conquête de Josué : c'est cette femme-là, l'étrangère par excellence, qui vient réclamer le Messie d'Israël. Segond conserve le mot sans l'expliquer, laissant au lecteur la charge de reconnaître l'écart.</div>
+        <div class="glose" id="g-brebis"><span class="lemme">probata apolôlota</span> « Brebis perdues », en grec <span class="gr">ta probata ta apolôlota</span>, reprend une expression prophétique bien connue, celle d'Ézéchiel 34 et de Jérémie 50, 6, où le peuple dispersé est comparé à un troupeau sans berger. Jésus ne nie pas sa mission première envers Israël ; il la rappelle, presque comme une objection qu'il se fait à lui-même avant de la dépasser. Chrysostome note que cette réponse, en apparence un refus, sert en réalité à faire monter la foi de la femme, non à la décourager.</div>
+        <div class="glose" id="g-chiens"><span class="lemme">kynaria</span> Le grec porte <span class="gr">kynaria</span>, diminutif de « chien » — les petits chiens de la maison, presque des animaux domestiques, et non les chiens errants et méprisés des rues (<span class="gr">kynes</span>) que l'insulte visait d'ordinaire. Segond traduit « petits chiens », gardant le diminutif, ce qui adoucit sensiblement la dureté apparente du mot. Chrysostome lit toute la scène comme une épreuve pédagogique : Jésus teste la femme pour révéler aux disciples une foi qu'ils n'auraient pas soupçonnée chez une étrangère.</div>
+        <div class="glose" id="g-foi"><span class="lemme">pistis megalê</span> « Ta foi est grande » — en grec <span class="gr">megalê sou hê pistis</span> — est l'une des deux seules fois, dans tout l'Évangile de Matthieu, où Jésus qualifie une foi de « grande » : l'autre est celle du centurion romain, en Matthieu 8, 10. Les deux fois, c'est un païen, quelqu'un d'extérieur à Israël, qui reçoit cet éloge qu'aucun disciple ne recevra dans l'Évangile. Ce rapprochement n'est sans doute pas un hasard de composition chez Matthieu, très attentif à ces échos internes.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le Livre de la consolation</h3><p>Les chapitres 30 et 31 de Jérémie forment un ensemble que les commentateurs appellent depuis longtemps le « Livre de la consolation », tranchant nettement avec les oracles de jugement qui les entourent. Le texte s'adresse d'abord à Éphraïm, le royaume du Nord déporté par l'Assyrie dès 722 avant J.-C., bien avant la chute de Juda : la promesse de retour précède donc de plus d'un siècle sa propre réalisation partielle, adressée à un peuple qui, humainement, avait toute raison de croire l'espérance close.</p></div>
+      <div><h3>Juste avant, la controverse sur le pur et l'impur</h3><p>L'épisode de la Cananéenne suit immédiatement, dans l'Évangile de Matthieu, une dispute avec les pharisiens sur le pur et l'impur : Jésus vient de déclarer que rien de ce qui entre par la bouche ne souille l'homme, mais ce qui sort du cœur (Mt 15, 1-20). Il part aussitôt après vers Tyr et Sidon, terre païenne entre toutes, et c'est là qu'une femme, étrangère et donc rituellement « impure » selon les catégories qu'il vient de discuter, devient l'occasion concrète de vérifier sa propre parole.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce qui ne se mérite pas</h2>
+<p>Tu as prié pour quelque chose d'urgent, avec des mots précis, et il ne s'est rien passé — pas de refus net, pas de porte fermée, juste ce silence qui est pire qu'un non parce qu'il ne dit rien du tout. Tu as continué quand même, sans savoir si c'était de la foi ou de l'entêtement, et c'est souvent à ce moment-là, quand tu ne t'y attendais plus, qu'une réponse est venue, différente de ce que tu avais demandé mais plus juste. Ce silence-là n'était pas un jugement sur toi : c'était l'espace où ta prière devenait vraiment tienne.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Rejoins, pour un instant, la scène : ni tout à fait dedans, ni tout à fait dehors, une main tendue vers une table qui n'est pas la tienne.</p>
+      <p class="geste">Nomme devant Dieu, en silence, un endroit précis où tu te sens sans titre à réclamer sa bonté — et demande-lui, comme la Cananéenne, sans détour ni argument.</p>
+      <small>Il n'est pas nécessaire d'avoir la bonne formule : la femme de l'Évangile n'a que son insistance et son manque.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Où, dans ta vie, attends-tu encore la permission de croire que cet amour te concerne, toi aussi ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : un silence qui instruit</h3>
+          <p>Dans son homélie sur ce passage, Jean Chrysostome refuse de lire le silence de Jésus puis sa réponse rude comme un mépris : il y voit une pédagogie, un moyen de faire apparaître au grand jour une foi que personne, pas même les disciples, n'aurait devinée chez une étrangère. La dureté apparente sert la femme elle-même, en la faisant persévérer jusqu'à une confession de foi plus profonde que celle de bien des fils d'Israël.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'Évangile de Matthieu, homélie LII</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : un amour sans condition antérieure</h3>
+          <p>Commentant Jérémie 31, 3, Calvin insiste sur le fait que l'amour de Dieu pour Israël n'a jamais été la récompense d'une fidélité du peuple : il précède toute alliance et la fonde, ce qui seul explique qu'il puisse survivre à une rupture aussi grave que celle qu'a décrite tout le livre. C'est, écrit-il en substance, la seule raison pour laquelle Dieu revient vers un peuple qui n'avait rien mérité que le jugement.</p>
+<p class="attrib">Jean Calvin, Commentaires sur le livre de Jérémie</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Paul reprend le mot « reste »</h3>
+          <p>En Romains 11, 5, Paul écrit qu'« il y a aussi maintenant un reste, selon l'élection de la grâce », reprenant presque littéralement le vocabulaire de Jérémie et d'Ésaïe pour penser la place d'Israël au moment où l'Évangile s'ouvre aux nations. Le même mot traverse ainsi les deux Testaments pour dire une seule chose : la fidélité de Dieu ne dépend jamais du nombre de ceux qui répondent.</p>
+<p class="attrib">Romains 11, 5 (verset parallèle)</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 18ème Semaine du Temps Ordinaire — Jr 31, 1-7 ; Jr 31, 10, 11-12ab, 13 ; Mt 15, 21-28.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
