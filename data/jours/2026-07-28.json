@@ -1,0 +1,111 @@
+{
+  "date": "2026-07-28",
+  "date_humaine": "mardi",
+  "semaine": "17ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 14, 17-22 ; Mt 13, 36-43",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 125 h320\"/><path d=\"M10 125 q40 -15 80 -10 q50 8 100 -5 q60 -10 100 5\"/><path d=\"M30 125 l10 -35 l8 35\"/><path d=\"M55 125 l12 -45 l10 45\"/><path d=\"M85 125 l-5 -28 l12 28\"/><path d=\"M110 125 l15 -50 l10 50\"/><path d=\"M140 125 l-8 -32 l14 32\"/><path d=\"M170 125 l18 -55 l8 55\"/><path d=\"M200 125 l-6 -25 l12 25\"/><path d=\"M230 125 l20 -48 l6 48\"/><path d=\"M260 125 l-4 -30 l10 30\"/><path d=\"M290 125 l14 -42 l8 42\"/><path d=\"M315 125 l-6 -20 l10 20\"/><path d=\"M40 90 l-4 -8\"/><path d=\"M62 80 l5 -10\"/><path d=\"M165 70 l-3 -12\"/><path d=\"M248 77 l4 -10\"/></g><g class=\"trait-rubrique\"><path d=\"M270 125 l-6 -55 q-3 -8 -12 -10 q-9 2 -12 10 l-6 55\"/><path d=\"M252 72 q6 -3 12 0\"/><path d=\"M264 60 l-4 -25\"/><path d=\"M258 35 l12 0\"/></g><g class=\"trait-liturgie\"><path d=\"M270 60 l-2 -15\"/><path d=\"M260 40 q10 -5 20 0\"/></g></svg>",
+  "titre": "L'ivraie et le blé",
+  "titre_html": "L'ivraie et <span class=\"it\">le blé</span>",
+  "sous_titre": "Quand Dieu laisse croître ensemble ce que l'homme voudrait arracher",
+  "suite_hier": null,
+  "gravure_alt": "Un champ au crépuscule où des épis mûrs et des herbes folles se dressent ensemble, indiscernables dans la même lumière dorée ; au fond, un silhouette de faucheur patiente, faux baissée.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 14, 17-22",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "Tu leur diras cette parole : Mes yeux <button class=\"mot\" data-g=\"g-deversent\">déversent</button> des larmes nuit et jour, et ils ne s'arrêtent pas ; car la vierge, fille de mon peuple, a été frappée d'un grand coup, d'une plaie très douloureuse. Si je sors dans les champs, voici des gens tués par l'épée ! Si j'entre dans la ville, voici des gens consumés par la faim ! Le prophète et le prêtre vont par le pays, et ils n'ont aucune connaissance. N'as-Tu donc entièrement rejeté Juda ? Ton âme a-t-elle pris Sion en aversion ? Pourquoi nous frappes-Tu sans qu'il y ait pour nous de guérison ? On attend la paix, et il n'y a rien de bon ; un temps de guérison, et voici la terreur ! Éternel, nous reconnaissons notre <button class=\"mot\" data-g=\"g-wickedness\">méchanceté</button>, l'iniquité de nos pères ; car nous avons péché contre Toi. Ne nous repousse pas, à cause de Ton nom ; n'avilis pas le trône de Ta gloire ! Souviens-Toi, ne romps pas Ton alliance avec nous. Y a-t-il parmi les <button class=\"mot\" data-g=\"g-vanites\">vanités</button> des nations des dieux qui fassent pleuvoir ? Les ciels, par eux-mêmes, envoient-ils l'abondance des eaux ? N'est-ce pas Toi, Éternel, notre Dieu ? Nous espérons en Toi, car c'est Toi qui fais toutes ces choses.",
+      "gloses": [
+        {
+          "id": "g-deversent",
+          "lemme": "déversent",
+          "html": "Le <span class=\"gr\">yārad</span> hébreu, littéralement « descendent », porte l'idée d'un flot qui s'écoule vers le bas, irrépressible. Segond choisit « déversent », plus fort que la simple larme qui coule : c'est le torrent du deuil prophétique, celui que Jérémie nomme ailleurs « la source perpétuelle ». Origène, dans ses <em>Homélies sur Jérémie</em>, y voyait le pleur du Christ sur Jérusalem anticipé : les yeux du prophète deviennent ceux du Fils de Dieu. Calvin, plus sobre, note que ce verbe marque l'impuissance de l'intercesseur face au jugement déjà ordonné."
+        },
+        {
+          "id": "g-wickedness",
+          "lemme": "méchanceté",
+          "html": "<span class=\"gr\">raʿ</span> en hébreu, mot étrangement polysémique : le mal, le malheur, le mauvais. Segond traduit « méchanceté », choix moral qui oriente le sens. Les rabbins du <em>Talmud</em> (Bérakhot 31b) soulignaient pourtant que ce même <span class=\"gr\">raʿ</span> désigne aussi le châtiment lui-même : reconnaître son <span class=\"gr\">raʿ</span>, c'est peut-être admettre que le malheur venu de Dieu est juste, sans pour autant nommer le péché avec la précision que Segond impose. La confession demeure donc ambiguë, entre culpabilité et reconnaissance d'un ordre qu'on ne comprend pas."
+        },
+        {
+          "id": "g-vanites",
+          "lemme": "vanités",
+          "html": "<span class=\"gr\">heḇlîm</span>, pluruel de <span class=\"gr\">heḇel</span>, « souffle », « vapeur » — le même mot que Qohelet déploie. Segond opte pour « vanités », qui garde l'écho ecclésiastique. Les Pères, Grégoire le Grand en tête (<em>Moralia in Iob</em>), y lisaient l'insubstantialité des idoles comparée à la présence de Yahvé. Mais la force du pluruel hébreu est collective : ce ne sont pas des néant individuels, c'est tout un système de nations et de leurs dieux qui se dissout en fumée, face à l'unicité du Dieu d'Israël qui fait pleuvoir."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 78 (79), 5a.8, 9, 11.13ab",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "Jusqu'à quand, Éternel, <button class=\"mot\" data-g=\"g-furor\">T'irriteras-Tu</button> sans cesse, et Ta jalousie s'embrasera-t-elle comme le feu ? Ne Te souviens pas de nos iniquités passées ; que Tes compassions viennent en hâte au-devant de nous ! Car nous sommes fort abattus. Aide-nous, Dieu de notre salut ! Pour la gloire de Ton nom, Délivre-nous, pardonne nos péchés ! Que les gémissements des prisonniers parviennent devant Toi ! Selon la grandeur de Ton bras, conserve les enfants de la mort ; et nous, Ton peuple, le troupeau de Ton pâturage, nous Te célébrerons à toujours, de génération en génération nous publierons Tes louanges.",
+      "gloses": [
+        {
+          "id": "g-furor",
+          "lemme": "T'irriteras-Tu",
+          "html": "<span class=\"gr\">qāṣap̱</span>, le verbe de la colère divine, est ici au <span class=\"gr\">qal</span> inaccompli : une action inachevée, qui se prolonge. Segond rend par « T'irriteras-Tu », conservant l'interrogation dramatique du <span class=\"gr\">ʿad-mātay</span>, « jusqu'à quand ? ». Chrysostome, dans ses <em>Homélies sur les Psaumes</em>, insistait sur ce point : le psalmiste ne nie pas la colère de Dieu, il lui <em>demande une fin</em>, convertissant l'accusation en prière. C'est l'art de la supplication biblique : nommer le jugement pour ouvrir l'espérance."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 36-43",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "Alors Jésus renvoya les foules, et entra dans la maison. Ses disciples s'approchèrent de Lui, et dirent : Explique-nous la parabole de l'ivraie du champ. Il répondit : Celui qui sème la bonne semence, c'est le Fils de l'homme ; le champ, c'est le monde ; la bonne semence, ce sont les fils du royaume ; l'ivraie, ce sont les fils du malin ; l'ennemi qui l'a semée, c'est le diable ; la moisson, c'est la fin du monde ; et les moissonneurs, ce sont les anges. De même que l'on arrache l'ivraie et qu'on la jette au feu, il en sera de même à la fin du monde. Le Fils de l'homme enverra Ses anges, qui ôteront de Son royaume tous les scandales et ceux qui commettent l'iniquité, et ils les jetteront dans la fournaise ardente, où il y aura des pleurs et des grincements de dents. Alors les justes resplendiront comme le soleil dans le royaume de leur Père. Que celui qui a des oreilles pour entendre entende !",
+      "gloses": []
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le secret des paraboles",
+      "corps_html": "Matthieu 13 forme un chapitre structuré, le troisième grand discours de l'évangile, consacré aux « paraboles du royaume ». Hier, Jésus avait raconté l'ivraie au grand jour ; aujourd'hui, en privé, il l'explique. Cette double audition — public puis disciples — reprend le schéma prophétique d'Is 6, 9-10 : parler pour que certains n'entendent pas, puis dévoiler pour ceux qui restent. Chrysostome, dans sa 47e homélie sur Matthieu, y voyait la pédagogie divine elle-même : la vérité n'est pas cachée par malice, mais offerte selon la capacité de réception. Calvin, dans son <em>Harmonie</em>, insistait sur le caractère terrifiant de cette explication : ce n'est plus l'image douce du semeur, c'est le jugement dernier qui entre en scène, et le Christ lui-même qui en parle."
+    },
+    {
+      "titre": "Jérémie et l'attente impossible",
+      "corps_html": "La première lecture prolonge le chapitre 14 de Jérémie, que nous lisions hier. Le prophète, après avoir intercédé sans succès, reçoit l'ordre de « ne plus prier pour ce peuple » — ordre qu'il désobéit en pleurant. Cette désobéissance prophétique fait écho à Moïse refusant l'abandon d'Israël (Ex 32, 32). Le midrash <em>Eikha Rabbah</em> rapporte que les larmes de Jérémie furent si abondantes qu'on les mesura au <em>seah</em>. La liturgie romaine, en juxtaposant ce pleur incessant à la patience du Dieu qui laisse croître l'ivraie, construit une théologie de l'attente : Dieu diffère le jugement, non par indifférence, mais parce que sa colère même est traversée d'une compassion que le prophète, en pleurant, incarne."
+    }
+  ],
+  "analogie": {
+    "titre": "La patience du champ intérieur",
+    "variantes": [
+      "Il y a en toi des semences que tu n'as pas plantées : une méfiance venue d'une trahison ancienne, une colère que tu croyais rangée et qui repousse au printemps, une façon de juger les autres née de ton propre échec. Tu les as repérées, tu as voulu les arracher d'un seul coup, convaincu que la vie spirituelle consiste à purifier le terrain. Mais chaque fois que tu creuses pour extirper l'ivraie, le blé voisin jaunit ; la racine du bien et celle du mal se tordent sous terre, indiscernables. Tu apprends alors que certaines batailles ne se gagnent pas à la main, mais à la patience de celui qui sait attendre la moisson, quand le fruit sera mur et que le Fils de l'homme enverra ses anges. Ce n'est pas ta passivité : c'est ta confiance dans un jugement qui ne sera pas le tien.",
+      "Tu as prié pour quelqu'un que tu aimais et qui ne changeait pas ; tu as prié si longtemps que tu en es venu à douter de l'utilité même de la prière. Puis un jour, sans que tu l'aies vu venir, cette personne a parlé d'un événement, d'une rencontre, d'un mot entendu — et tu as reconnu, avec un retard de dix ou vingt ans, une graine que tu avais semée dans l'obscurité. L'ivraie avait croît autour, tu avais failli tout labourer, et pourtant le blé était là, tapi, attendant sa saison. C'est cette expérience que le texte invite à généraliser : le royaume ne se construit pas à la mesure de ton impatience, mais à celle d'une récolte que seul le Père connaît.",
+      "Il t'arrive de te réveiller avec le sentiment net que quelque chose en toi n'a pas changé, que les mêmes pensées, les mêmes réflexes, les mêmes fuites habitent encore le champ. Tu as voulu être bon blé, tu t'es donné les moyens, et pourtant l'ivraie repousse, mélangée, indiscernable. La tentation est forte de te déclarer toi-même moissonneur, de faire le tri dans ta vie, dans celle des autres, de purifier l'Église, le monde, ton entourage. Mais le texte dit que ce discernement appartient aux anges, non à toi. Ta tâche est de rester dans le champ, d'accepter que le jugement sur toi-même et sur les autres ne soit pas entre tes mains. C'est une humiliation salutaire, celle qui fait de toi un disciple plutôt qu'un juge."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Christ explique aujourd'hui ce qu'il avait semé en obscurité. Laisse-le faire de même en toi.",
+    "geste": "Écris sur un papier une seule chose en toi que tu voudrais arracher d'un coup — puis déchire le papier sans y revenir, confiant le jugement au Fils de l'homme.",
+    "note": "Ce geste n'est pas une magie : il est le signe concret d'une patience que tu ne peux pas te donner toi-même."
+  },
+  "question": "Si le Fils de l'homme laisse croître ensemble le blé et l'ivraie jusqu'à la fin, qu'est-ce que cette attente change à la façon dont tu portes aujourd'hui ton propre inachevé ?",
+  "racines": [
+    {
+      "titre": "Origène sur le feu purificateur",
+      "corps_html": "Dans ses <em>Homélies sur Jérémie</em>, Origène (185-253) reliait les pleurs du prophète à ceux du Christ sur Jérusalem : « Jésus pleure lui aussi, et ses larmes ne sont pas moins abondantes ». Il voyait dans le feu de la moisson non la destruction mais la purification, « car le feu du jugement brûle ce qui est combustible en l'homme, et ce qui est or demeure ». Cette interprétation, qui influença Grégoire de Nysse et toute la tradition de l'apocatastase, offre une lecture du texte évangélique où la fournaise n'est pas le triomphe de la haine mais le terme de l'amour qui refuse le mal.",
+      "attribution": "Origène, <em>Homélies sur Jérémie</em>, hom. XIV, 9"
+    },
+    {
+      "titre": "Calvin sur le temps de la patience",
+      "corps_html": "Calvin, dans son <em>Commentaire sur l'Harmonie évangélique</em> (1555), insiste sur le caractère présent du royaume malgré l'ivraie : « Le champ est le monde, non l'Église seule ; le Fils de l'homme sème en plein monde, et son royaume s'étend plus loin que nos yeux ne voient ». Il refuse toute lecture sectaire qui ferait de l'Église un champ déjà pur, et rappelle que la séparation finale « nous est cachée pour que nous ne jugions point avant le temps, mais que nous espérions avec patience ». Cette réserve calvinienne contre l'enthousiasme puritain garde toute sa force.",
+      "attribution": "J. Calvin, <em>Commentaire sur l'Harmonie évangélique</em>, éd. 1555, sur Mt 13, 36-43"
+    },
+    {
+      "titre": "Chrysostome sur les oreilles qui entendent",
+      "corps_html": "Jean Chrysostome, dans sa 47e homélie sur Matthieu, s'attarde sur la formule finale : « Que celui qui a des oreilles pour entendre entende ! » Il y voit non une conclusion banale, mais une provocation : « Le Seigneur ne dit pas 'que celui qui a des oreilles entende', mais 'que celui qui a des oreilles <em>pour entendre</em>' — car beaucoup ont des oreilles physiques et n'entendent pas spirituellement ». Cette distinction entre l'audition et l'écoute, entre le bruit et la Parole, structure toute sa catéchèse : la parabole expliquée reste parabole, exigeant du disciple une attention qui n'est pas donnée d'avance.",
+      "attribution": "Jean Chrysostome, <em>Homélies sur Matthieu</em>, hom. XLVII, 3"
+    }
+  ]
+}

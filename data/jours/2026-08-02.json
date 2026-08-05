@@ -1,0 +1,141 @@
+{
+  "date": "2026-08-02",
+  "date_humaine": "dimanche",
+  "semaine": "18ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 55, 1-3 ; Rm 8, 35.37-39 ; Mt 14, 13-21",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 134 h328\"/><path d=\"M18 146 C46 118 72 104 104 100 C118 98 130 96 140 92\"/><path d=\"M112 99 C108 88 110 80 118 74 M126 96 L122 76 M136 93 L134 74 M146 90 L146 72\"/><path d=\"M322 146 C294 118 268 104 236 100 C222 98 210 96 200 92\"/><path d=\"M228 99 C232 88 230 80 222 74 M214 96 L218 76 M204 93 L206 74 M194 90 L194 72\"/><path d=\"M100 108 L112 116 M120 106 L132 114 M140 104 L152 112 M160 104 L172 112 M180 104 L192 112 M200 106 L212 114 M220 108 L232 116\"/><path d=\"M30 140 L46 128 M310 140 L294 128\"/></g><g class=\"trait-liturgie\"><path d=\"M138 96 q32 16 64 0\"/><path d=\"M170 94 C166 68 176 46 170 22\"/><path d=\"M168 88 C142 64 118 50 96 40 M172 88 C198 64 222 50 244 40\"/></g><g class=\"trait-rubrique\"><path d=\"M128 96 q7 -14 14 0 M144 94 q8 -16 16 0 M160 92 q10 -18 20 0 M182 94 q8 -16 16 0 M200 96 q7 -14 14 0\"/><path d=\"M132 92 l4 -4 M148 90 l4 -5 M168 86 l4 -6 M190 90 l4 -5 M204 92 l4 -4\"/><path d=\"M112 108 q14 -10 28 0 q-14 10 -28 0 M112 108 l-8 -5 M112 108 l-8 5 M228 108 q-14 -10 -28 0 q14 10 28 0 M228 108 l8 -5 M228 108 l8 5\"/></g></svg>",
+  "titre": "Sans argent",
+  "titre_html": "Sans <span class=\"it\">argent</span>",
+  "sous_titre": "Isaïe 55, le psaume 144 (145), Romains 8 et Matthieu 14 : ce que Dieu donne ne s'achète pas.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : deux mains ouvertes tendant cinq pains et deux poissons vers une source qui jaillit en arrière-plan, traits épais et ombres croisées, dans le style sobre d'une gravure du XVIe siècle.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 55, 1-3",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Vous tous qui avez soif, venez aux eaux, Même celui qui n'a pas d'argent! Venez, achetez et mangez, Venez, achetez du vin et du lait, <button class=\"mot\" data-g=\"g-sansargent\">sans argent, sans rien payer</button>! <span class=\"s\">2</span> Pourquoi pesez-vous de l'argent pour ce qui ne nourrit pas? Pourquoi travaillez-vous pour ce qui ne rassasie pas? Écoutez-moi donc, et vous mangerez ce qui est bon, Et votre âme se délectera de mets succulents. <span class=\"s\">3</span> Prêtez l'oreille, et venez à moi, Écoutez, et votre âme vivra: Je traiterai avec vous une alliance éternelle, Pour rendre durables mes <button class=\"mot\" data-g=\"g-faveurs\">faveurs</button> envers David.",
+      "gloses": [
+        {
+          "id": "g-sansargent",
+          "lemme": "belo kèsèph",
+          "html": "Segond traduit fidèlement la formule hébraïque <span class=\"gr\">בְּלוֹא כֶסֶף</span>, littéralement « sans qu'il y ait argent » — répétée deux fois dans le verset comme pour marteler l'impossible : on ne peut pas acheter ce que Dieu offre. Calvin, dans son commentaire sur Ésaïe, s'appuie sur ce verset contre toute religion du mérite : la nourriture promise ici ne se reçoit que par une foi qui accueille gratuitement, jamais par un travail qui l'achète. Le texte vise l'économie de Babylone où tout se monnaie, et lui oppose l'économie de Dieu où tout se reçoit."
+        },
+        {
+          "id": "g-faveurs",
+          "lemme": "hasdei David",
+          "html": "L'hébreu porte <span class=\"gr\">חַסְדֵי דָוִד</span>, « les hesed de David » ; Segond traduit par « faveurs », un mot bien pâle pour un terme qui désigne ailleurs la fidélité indéfectible de Dieu à son alliance, souvent rendu par « bonté » ou « miséricorde ». Paul reprend ce verset presque mot pour mot dans son discours d'Antioche (Actes 13, 34), pour l'appliquer à la résurrection du Christ : les promesses faites à David y trouvent leur accomplissement irrévocable. Ce que le texte annonce n'est donc pas une faveur royale ponctuelle, mais un engagement fidèle tenu à travers les générations."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 144 (145), 8-9, 15-16, 17-18",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">8</span> L'Éternel est <button class=\"mot\" data-g=\"g-misericordieux\">miséricordieux et compatissant</button>, Lent à la colère et plein de bonté. <span class=\"s\">9</span> L'Éternel est bon envers tous, Et ses compassions s'étendent sur toutes ses oeuvres. <span class=\"s\">15</span> Les yeux de tous espèrent en toi, Et tu leur donnes la nourriture en son temps. <span class=\"s\">16</span> Tu <button class=\"mot\" data-g=\"g-main\">ouvres ta main</button>, Et tu rassasies à souhait tout ce qui a vie. <span class=\"s\">17</span> L'Éternel est juste dans toutes ses voies, Et miséricordieux dans toutes ses oeuvres. <span class=\"s\">18</span> L'Éternel est près de tous ceux qui l'invoquent, De tous ceux qui l'invoquent avec sincérité.",
+      "gloses": [
+        {
+          "id": "g-misericordieux",
+          "lemme": "rachum vechannun",
+          "html": "Cette paire de mots, <span class=\"gr\">רַחוּם וְחַנּוּן</span>, reprend presque mot pour mot la formule que Dieu prononce lui-même devant Moïse en Exode 34, 6, texte que la tradition juive appelle les « treize attributs de miséricorde » et que le Talmud (Roch ha-Chana 17b) recommande de réciter dans la prière de pénitence. Segond traduit rachum par « miséricordieux » et channun par « compatissant » ; ce second mot vient d'une racine qui évoque une grâce accordée sans condition, comme un supérieur qui se penche sur un inférieur sans qu'aucune dette ne soit due. Le psaume 145, en reprenant cette formule, fait de tout croyant qui le récite l'héritier direct de la révélation faite à Moïse."
+        },
+        {
+          "id": "g-main",
+          "lemme": "potéa'h yadékha",
+          "html": "L'hébreu <span class=\"gr\">פּוֹתֵחַ אֶת־יָדֶךָ</span>, « tu ouvres ta main », est devenu dans la liturgie juive l'un des versets centraux de la prière après le repas, la birkat hamazon ; Maïmonide rappelle qu'il doit être récité avec une attention particulière du cœur, comme une profession de foi que toute nourriture vient de Dieu et non du seul travail. Le geste de la main ouverte s'oppose, dans l'image, au poing fermé de l'avarice : Dieu n'a pas besoin de refermer la sienne, sa provision ne s'épuise pas. Le mot rendu par « à souhait », <span class=\"gr\">רָצוֹן</span> ratson, désigne un accomplissement du désir lui-même, non une simple suffisance."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Rm 8, 35.37-39",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">35</span> Qui nous <button class=\"mot\" data-g=\"g-separera\">séparera</button> de l'amour de Christ? Sera-ce la tribulation, ou l'angoisse, ou la persécution, ou la faim, ou la nudité, ou le péril, ou l'épée? <span class=\"s\">37</span> Mais dans toutes ces choses nous sommes <button class=\"mot\" data-g=\"g-vainqueurs\">plus que vainqueurs</button> par celui qui nous a aimés. <span class=\"s\">38</span> Car j'ai l'assurance que ni la mort ni la vie, ni les anges ni les dominations, ni les choses présentes ni les choses à venir, ni les puissances, <span class=\"s\">39</span> ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l'amour de Dieu manifesté en Jésus Christ notre Seigneur.",
+      "gloses": [
+        {
+          "id": "g-separera",
+          "lemme": "chōrisai",
+          "html": "Le verbe grec <span class=\"gr\">χωρίσαι</span>, de chōrizō, est le terme technique que Paul emploie ailleurs pour la séparation conjugale, notamment en 1 Corinthiens 7, 10-15 à propos du divorce. En l'employant ici, il construit une image nuptiale implicite : rien ne peut prononcer le divorce entre le croyant et l'amour du Christ, pas même la mort. Segond traduit simplement par « séparer », ce qui est juste mais efface la connotation juridique et affective très concrète que le mot porte dans l'usage paulinien."
+        },
+        {
+          "id": "g-vainqueurs",
+          "lemme": "hypernikōmen",
+          "html": "Le verbe simple <span class=\"gr\">νικάω</span>, « vaincre », est ici renforcé par le préfixe hyper, « au-dessus, au-delà » : Paul forge presque un mot, <span class=\"gr\">ὑπερνικῶμεν</span>, pour dire que la victoire promise dépasse la victoire ordinaire. Segond rend cela par « plus que vainqueurs », traduction heureuse qui garde la surenchère du grec. Jean Chrysostome, dans ses homélies sur l'épître aux Romains, note que Paul ne dit pas que les épreuves sont supprimées, mais que la victoire se remporte à travers elles, non malgré leur absence."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 14, 13-21",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">13</span> A cette nouvelle, Jésus partit de là dans une barque, pour se retirer à l'écart dans un lieu désert; et la foule, l'ayant su, sortit des villes et le suivit à pied. <span class=\"s\">14</span> Quand il sortit de la barque, il vit une grande foule, et <button class=\"mot\" data-g=\"g-compassion\">fut ému de compassion</button> pour elle, et il guérit les malades. <span class=\"s\">15</span> Le soir étant venu, les disciples s'approchèrent de lui, et dirent: Ce lieu est désert, et l'heure est déjà avancée; renvoie la foule, afin qu'elle aille dans les villages, pour s'acheter des vivres. <span class=\"s\">16</span> Jésus leur répondit: Ils n'ont pas besoin de s'en aller; donnez-leur vous-mêmes à manger. <span class=\"s\">17</span> Mais ils lui dirent: Nous n'avons ici que cinq pains et deux poissons. <span class=\"s\">18</span> Et il dit: Apportez-les-moi. <span class=\"s\">19</span> Il donna ordre à la foule de s'asseoir sur l'herbe, prit les cinq pains et les deux poissons, et, levant les yeux vers le ciel, il <button class=\"mot\" data-g=\"g-graces\">rendit grâces</button>. Puis, il rompit les pains et les donna aux disciples, qui les distribuèrent à la foule. <span class=\"s\">20</span> Tous mangèrent et furent rassasiés, et l'on emporta douze paniers pleins des morceaux qui restaient. <span class=\"s\">21</span> Ceux qui avaient mangé étaient environ cinq mille hommes, sans les femmes et les enfants.",
+      "gloses": [
+        {
+          "id": "g-compassion",
+          "lemme": "esplanchnisthē",
+          "html": "Le verbe grec <span class=\"gr\">ἐσπλαγχνίσθη</span> vient de splanchna, les entrailles, le lieu que les Anciens situaient les émotions les plus profondes ; Segond traduit prudemment par « fut ému de compassion », en-deçà de la violence physique du mot grec, plus proche d'un bouleversement viscéral que d'une émotion tranquille. Le même verbe revient pour le père du fils prodigue qui voit revenir son fils (Luc 15, 20) et pour Jésus devant les foules « sans berger » (Matthieu 9, 36). Jean Chrysostome, dans son homélie 49 sur Matthieu, souligne que cette compassion précède toute demande : la foule n'a rien réclamé, Jésus voit et agit avant qu'on ne l'interroge."
+        },
+        {
+          "id": "g-graces",
+          "lemme": "eucharistēsen",
+          "html": "Ce verbe, <span class=\"gr\">εὐχαρίστησεν</span>, qui donnera son nom à l'eucharistie, désigne une action de grâces prononcée avant de rompre le pain — le même geste et presque le même mot reviendront au soir de la Cène (Matthieu 26, 27). Justin Martyr, dès le milieu du IIe siècle, emploie déjà le mot eucharistia pour désigner le repas du Seigneur (Première Apologie, 66), signe que l'Église primitive a lu ce geste de multiplication comme une préfiguration du repas eucharistique. Segond traduit fidèlement par « rendit grâces », mais le lecteur français perd le lien immédiat que l'original tisse avec le nom même du sacrement."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Isaïe 55, l'exil qui s'achève",
+      "corps_html": "Isaïe 55 clôt ce que les commentateurs appellent le Livre de la consolation (Is 40-55), adressé aux exilés de Babylone vers 538 avant Jésus-Christ, au moment où l'édit de Cyrus rend le retour possible. Contre l'économie de l'empire, où tout se monnaie, le prophète annonce un marché sans argent : la libération que Dieu offre ne s'achète pas plus que le retour au pays ne se mérite."
+    },
+    {
+      "titre": "Matthieu 14, après la mort de Jean",
+      "corps_html": "Ce récit suit immédiatement l'annonce de la décapitation de Jean-Baptiste par Hérode (Matthieu 14, 1-12). Jésus se retire, mais la foule le rejoint jusque dans le désert. Le geste des cinq pains rappelle 2 Rois 4, 42-44, où Élisée nourrit cent hommes avec vingt pains d'orge malgré l'incrédulité de son serviteur — Matthieu construit son récit en écho conscient à ce miracle prophétique plus modeste."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu peux donner",
+    "variantes": [
+      "Il y a des jours où tu pries pour quelqu'un et où tu sens que tu n'as presque rien à offrir — ni les mots justes, ni la foi assez forte, ni même l'énergie de persévérer jusqu'au bout de la prière. Tu regardes ce que tu tiens dans les mains : une intercession fatiguée, une confiance à moitié rongée par le doute. Et pourtant tu la déposes, telle quelle, sans attendre d'abord de l'avoir rendue suffisante. Ce n'est pas ta prière qui nourrit qui que ce soit — c'est ce qui se passe entre tes mains ouvertes et celles de Dieu, quand le peu que tu apportes cesse de t'appartenir.",
+      "Tu connais peut-être ce moment où quelqu'un t'accueille, te pardonne ou t'aime alors que tu sais, au fond, n'avoir rien fait pour le mériter — pas assez présent, pas assez fidèle, pas assez digne d'être choisi encore une fois. Ta première réaction est de vouloir rembourser, de chercher comment égaliser la dette, comme si l'amour reçu devait toujours se compenser par un effort. Mais il arrive que la grâce résiste à ce calcul, qu'elle continue de se donner sans qu'aucune monnaie ne soit exigée en retour. C'est cette gratuité-là, refusée par ton instinct et pourtant offerte sans condition, qui te met devant Dieu les mains enfin vides.",
+      "Il y a une différence entre croire que rien ne peut te séparer de l'amour de Dieu et l'avoir vérifié, un jour, dans une épreuve où tu étais certain que cette fois, ce serait trop — trop de peur, trop de perte, trop de silence de sa part. Tu as traversé ce moment sans certitude, presque à tâtons, et pourtant, de l'autre côté, l'amour était encore là, intact, comme s'il n'avait jamais cessé de te tenir alors même que tu ne le sentais plus. Ce n'est pas ta résistance qui a tenu bon : c'est ce qui te tenait, toi, sans que tu puisses te l'attribuer."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse ces textes te rejoindre encore un instant.",
+    "geste": "Ouvre les mains, à plat sur tes genoux, et nomme silencieusement ce que tu crois ne pas avoir assez de pour aujourd'hui — puis reste ainsi, sans les refermer, une minute entière.",
+    "note": "Ce geste ne produit rien par lui-même : il ne fait que consentir à recevoir avant même d'avoir donné."
+  },
+  "question": "Qu'as-tu, dans le creux de tes mains, que tu n'as encore jamais osé remettre à Dieu tel quel, sans l'avoir d'abord rendu suffisant ?",
+  "racines": [
+    {
+      "titre": "La compassion qui précède la demande",
+      "corps_html": "Jean Chrysostome remarque que la foule, en Matthieu 14, ne demande rien : elle suit Jésus par simple désir de sa présence, et c'est lui qui, le premier, voit sa faim et sa maladie. Pour Chrysostome, cet ordre — la compassion avant la requête — révèle un Dieu qui prévient les besoins de ceux qu'il aime, plutôt qu'un Dieu qui attend d'être sollicité.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 49"
+    },
+    {
+      "titre": "Ashrei, la prière trois fois par jour",
+      "corps_html": "Le Talmud enseigne que quiconque récite le psaume 145 trois fois par jour, avec un cœur attentif, a part au monde à venir. Ce psaume, appelé Ashrei d'après son premier mot, structure encore aujourd'hui la prière juive quotidienne. Les versets sur la main ouverte et la nourriture donnée en son temps y occupent une place centrale, récités avant chaque repas.",
+      "attribution": "Talmud de Babylone, Berakhot 4b"
+    },
+    {
+      "titre": "Le marché sans monnaie",
+      "corps_html": "Calvin lit Ésaïe 55 comme une préfiguration de la prédication de l'Évangile : Dieu y invite à un marché où il n'y a rien à payer, parce que le salaire de la grâce serait une contradiction dans les termes. Il insiste sur le fait que même la faim et la soif requises — s'approcher, écouter — ne sont pas des mérites mais des dispositions que Dieu suscite lui-même chez ceux qu'il appelle.",
+      "attribution": "Jean Calvin, Commentaire sur le livre d'Ésaïe"
+    }
+  ]
+}
