@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visage transfiguré — jeudi 6 août 2026</title>
+<meta name="description" content="Fête de la Transfiguration du Seigneur">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">jeudi 6 août 2026 · None · <span class="couleur">blanc · Fête du Seigneur</span>
+</p>
+    <h1>Visage <span class="it">transfiguré</span></h1>
+    <p class="chapeau">Fête de la Transfiguration du Seigneur</p>
+    <figure class="gravure" aria-label="Gravure sur bois : le Christ debout au sommet d'une montagne, le visage rayonnant traversé de larges faisceaux de lumière, les vêtements striés de blanc. À sa droite et à sa gauche, Moïse tenant les tables de la Loi et Élie enveloppé d'un manteau, tous deux tournés vers lui. En contrebas, Pierre, Jacques et Jean tombés à terre, un bras levé devant leurs yeux, au milieu de rochers taillés à grands traits ; au-dessus de la scène, une nuée dense et sombre encadrée d'un mince trait de lumière."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M30 132 L170 44 L310 132"/><path d="M55 132 L72 114 L88 132"/><path d="M252 132 L268 112 L286 132"/><path d="M45 18 q125 -26 250 0 q-8 12 -22 9 q-101 15 -206 0 q-14 3 -22 -9 z"/><path d="M164 38 q6 -8 12 0 q-6 8 -12 0"/><path d="M170 44 v20 M158 64 l-8 24 M170 64 l0 24 M182 64 l8 24"/><path d="M170 48 l-12 10 M170 48 l12 10"/><path d="M107 62 q5 -7 10 0 q-5 7 -10 0"/><path d="M112 68 v34 M112 102 l-8 16 M112 102 l8 16"/><path d="M223 62 q5 -7 10 0 q-5 7 -10 0"/><path d="M228 68 v34 M218 74 q-14 14 -6 34 M238 74 q14 14 6 34 M228 102 l-8 16 M228 102 l8 16"/><path d="M138 130 l18 -8 M138 130 l-10 6 M150 118 l10 -10"/><path d="M168 134 l20 -6 M182 122 l8 -12"/><path d="M198 130 l-18 -8 M198 130 l10 6 M188 118 l-10 -10"/></g><g class="trait-rubrique"><path d="M104 76 h12 v20 h-12 z M110 76 v20"/></g><g class="trait-liturgie"><path d="M170 38 l-22 -20 M170 38 l22 -20 M170 34 l-30 -6 M170 34 l30 -6 M170 30 l-10 -26 M170 30 l10 -26"/><path d="M50 24 q120 -20 240 0"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Daniel 7, 9-10.13-14 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">9</span> Je regardais, pendant que l'on plaçait des trônes. Et l'<button class="mot" data-g="g-atiq">ancien des jours</button> s'assit. Son vêtement était blanc comme la neige, et les cheveux de sa tête étaient comme de la laine pure ; son trône était comme des flammes de feu, et les roues comme un feu ardent. <span class="s">10</span> Un fleuve de feu coulait et sortait de devant lui. Mille milliers le servaient, et dix mille millions se tenaient en sa présence. Les juges s'assirent, et les livres furent ouverts. <span class="s">13</span> Je regardais pendant mes visions de la nuit, et voici, sur les nuées des cieux arriva quelqu'un de semblable à un <button class="mot" data-g="g-benash">fils de l'homme</button> ; il s'avança vers l'ancien des jours, et on le fit approcher de lui. <span class="s">14</span> On lui donna la domination, la gloire et le règne ; et tous les peuples, les nations, et les hommes de toutes langues le servirent. Sa domination est une domination éternelle qui ne passera point, et son règne ne sera jamais détruit.</div>
+        <div class="glose" id="g-atiq"><span class="lemme">Atiq Yomin</span> L'expression araméenne <span class="gr">עַתִּיק יוֹמִין</span>, atiq yomin, ne désigne pas simplement un vieillard mais celui qui est antérieur aux jours, la source même du temps. Segond traduit par « ancien des jours », choix fidèle mais qui risque de faire entendre un aïeul plutôt que l'Éternel hors du temps. Les lecteurs juifs anciens y ont vu une désignation de Dieu lui-même, siégeant en juge ; Hippolyte de Rome, dans son commentaire sur Daniel, rapproche cette vision du Père glorieux que le Fils de l'homme vient rejoindre. La Septante rend l'expression par παλαιὸς ἡμερῶν, qui garde la même tension entre l'ancienneté et l'éternité.</div>
+        <div class="glose" id="g-benash"><span class="lemme">Bar Enash</span> <span class="gr">בַּר אֱנָשׁ</span>, bar enash, signifie littéralement « fils d'homme », c'est-à-dire un être humain, un mortel — l'expression est d'une grande banalité en araméen, employée ailleurs pour dire simplement « un homme ». Segond garde « fils de l'homme », suivant la Septante υἱὸς ἀνθρώπου, et c'est précisément cette platitude apparente qui rend la scène bouleversante : celui qui reçoit domination et gloire éternelles a d'abord la figure d'un mortel ordinaire. Jésus reprendra ce titre pour lui-même dans les évangiles, juste avant et après la Transfiguration chez Matthieu, où il annonce que le Fils de l'homme doit souffrir puis ressusciter.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 2 Pierre 1, 16-19 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">16</span> Ce n'est pas, en effet, en suivant des fables habilement conçues, que nous vous avons fait connaître la puissance et l'avènement de notre Seigneur Jésus Christ, mais c'est comme ayant été <button class="mot" data-g="g-epoptai">témoins oculaires</button> de sa majesté. <span class="s">17</span> Car il reçut de Dieu le Père honneur et gloire, quand la gloire magnifique lui fit entendre une voix qui disait : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection. <span class="s">18</span> Et nous avons entendu cette voix venant du ciel, lorsque nous étions avec lui sur la sainte montagne. <span class="s">19</span> Et nous tenons pour d'autant plus certaine la <button class="mot" data-g="g-logos">parole prophétique</button>, à laquelle vous faites bien de prêter attention, comme à une lampe qui brille dans un lieu obscur, jusqu'à ce que le jour vienne à paraître et que l'étoile du matin se lève dans vos cœurs.</div>
+        <div class="glose" id="g-epoptai"><span class="lemme">epoptai</span> Le grec <span class="gr">ἐπόπται</span>, epoptai, est un mot rare et choisi avec soin : il désigne, dans le vocabulaire des mystères d'Éleusis, celui qui a atteint le degré ultime de l'initiation et contemplé de ses yeux ce qui restait caché aux autres. Segond traduit prudemment par « témoins oculaires », ce qui est juste mais efface la résonance presque technique du terme grec, qui dit une vision reçue, pas seulement constatée. Pierre choisit délibérément ce mot pour opposer l'expérience réelle de la montagne aux « fables habilement conçues ». Jean Chrysostome, dans ses homélies sur cette épître, appuie sur ce contraste entre la fable et le témoignage oculaire comme fondement de l'autorité apostolique.</div>
+        <div class="glose" id="g-logos"><span class="lemme">logos prophétique</span> <span class="gr">προφητικὸν λόγον</span>, ho prophētikos logos, désigne la parole prophétique tout entière, l'ensemble des Écritures d'Israël qui annoncent le Christ. Segond traduit littéralement, mais l'enjeu du verset tient au mot « plus certaine » qui précède : Pierre affirme que la parole des prophètes, confirmée par la vision de la montagne, est plus sûre encore que sa propre expérience visuelle. C'est un renversement presque paradoxal pour un témoin oculaire, et Calvin le souligne dans son commentaire sur cette épître : l'Écriture demeure la lampe qui éclaire même les visions les plus éclatantes, jusqu'à ce que le jour se lève.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Psaume 96, 1-2, 4-5, 6.9 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Chantez à l'Éternel un <button class="mot" data-g="g-shir">cantique nouveau</button> ! Chantez à l'Éternel, vous tous, habitants de la terre ! <span class="s">2</span> Chantez à l'Éternel, bénissez son nom, annoncez de jour en jour son salut ! <span class="s">4</span> Car l'Éternel est grand et très digne de louange, il est <button class="mot" data-g="g-nora">redoutable</button> par-dessus tous les dieux ; <span class="s">5</span> car tous les dieux des peuples sont des idoles, et l'Éternel a fait les cieux. <span class="s">6</span> La splendeur et la magnificence sont devant sa face, la gloire et la majesté sont dans son sanctuaire. <span class="s">9</span> Prosternez-vous devant l'Éternel avec des ornements sacrés, tremblez devant lui, vous tous, habitants de la terre !</div>
+        <div class="glose" id="g-shir"><span class="lemme">shir chadash</span> <span class="gr">שִׁיר חָדָשׁ</span>, shir chadash, revient plusieurs fois dans le psautier pour introduire un chant de louange devant une action nouvelle de Dieu — souvent après une délivrance ou devant l'annonce de son règne universel. Segond traduit fidèlement « cantique nouveau », mais l'adjectif chadash porte en hébreu l'idée d'un renouvellement radical, pas d'une simple nouveauté chronologique. Les rabbins ont associé ce psaume au chant qu'entonneront les nations à la venue du Messie, lecture que les premiers chrétiens reprendront pour l'appliquer à la gloire du Christ manifestée sur la montagne.</div>
+        <div class="glose" id="g-nora"><span class="lemme">nora</span> <span class="gr">נוֹרָא</span>, nora, vient de la racine yare, craindre, et dit littéralement « celui devant qui l'on doit trembler ». Segond choisit « redoutable », traduction forte et juste, mais qui en français moderne penche vers l'effroi plutôt que vers cette crainte révérencielle, mélange d'admiration et de tremblement, que porte l'hébreu biblique. Calvin, commentant ce psaume, rappelle que cette crainte n'exclut pas la louange qui l'entoure de toutes parts dans le texte : on tremble devant l'Éternel précisément parce qu'on chante sa gloire, non malgré elle.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Matthieu 17, 1-9 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span> Six jours après, Jésus prit avec lui Pierre, Jacques, et Jean, son frère, et il les conduisit à l'écart sur une haute montagne. <span class="s">2</span> Il fut <button class="mot" data-g="g-metemorphothe">transfiguré</button> devant eux ; son visage resplendit comme le soleil, et ses vêtements devinrent blancs comme la lumière. <span class="s">3</span> Et voici, Moïse et Élie leur apparurent, s'entretenant avec lui. <span class="s">4</span> Pierre, prenant la parole, dit à Jésus : Seigneur, il est bon que nous soyons ici ; si tu le veux, je dresserai ici trois <button class="mot" data-g="g-skenas">tentes</button>, une pour toi, une pour Moïse, et une pour Élie. <span class="s">5</span> Comme il parlait encore, une <button class="mot" data-g="g-nephele">nuée lumineuse</button> les couvrit. Et voici, une voix fit entendre de la nuée ces paroles : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection : écoutez-le ! <span class="s">6</span> Lorsqu'ils entendirent cette voix, les disciples tombèrent sur leur face, et furent saisis d'une grande frayeur. <span class="s">7</span> Mais Jésus, s'approchant, les toucha, et dit : Levez-vous, n'ayez pas peur ! <span class="s">8</span> Ils levèrent les yeux, et ne virent que Jésus seul. <span class="s">9</span> Comme ils descendaient de la montagne, Jésus leur donna cet ordre : Ne parlez à personne de cette vision, jusqu'à ce que le Fils de l'homme soit ressuscité des morts.</div>
+        <div class="glose" id="g-metemorphothe"><span class="lemme">metemorphothe</span> <span class="gr">μετεμορφώθη</span>, metemorphōthē, vient du même verbe que notre mot métamorphose ; Segond traduit par « transfiguré », un néologisme théologique forgé sur le latin transfigurare pour éviter toute confusion avec les métamorphoses des dieux grecs en animaux ou en éléments. Paul emploie exactement le même verbe en Romains 12,2, quand il exhorte les croyants à être transformés par le renouvellement de l'intelligence — signe que ce qui arrive au visage du Christ est destiné, d'une certaine manière, à advenir aussi en ceux qui le contemplent. Origène, dans son commentaire sur Matthieu, insiste sur le fait que le Christ ne change pas de nature dans cet épisode : c'est le regard des disciples qui est momentanément ouvert à ce qu'il est déjà.</div>
+        <div class="glose" id="g-skenas"><span class="lemme">skenas</span> <span class="gr">σκηνάς</span>, skēnas, désigne les tentes ou tabernacles, et le mot renvoie directement à la tente de la rencontre du désert et à la fête des Tentes, Souccot, qui commémorait la présence de Dieu marchant avec son peuple. La proposition de Pierre de dresser trois tentes n'est donc pas une idée naïve mais un geste théologique précis : il veut fixer la présence divine dans un lieu, comme au désert. Le texte ne dit jamais que Jésus accepte cette proposition — la voix du Père l'interrompt aussitôt, comme pour indiquer que cette gloire ne se laisse pas enclore dans une tente mais doit redescendre vers la croix.</div>
+        <div class="glose" id="g-nephele"><span class="lemme">nephele photeine</span> <span class="gr">νεφέλη φωτεινή</span>, nephelē phōteinē, la nuée lumineuse, reprend un motif constant de l'Exode : la nuée qui couvre la montagne du Sinaï et le tabernacle, signe visible de la présence de Dieu, la Shekina dont parlent les rabbins. Segond traduit littéralement, gardant le paradoxe d'une nuée qui, loin d'obscurcir, illumine — figure de la présence divine qui se donne à voir sans se laisser saisir. Grégoire de Nazianze, dans son discours sur la Transfiguration, relève que cette nuée enveloppe les disciples eux-mêmes, non seulement Jésus : ils entrent, un instant, dans la gloire qu'ils contemplent.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une fête tardive, une scène ancienne</h3><p>La fête de la Transfiguration n'entre dans le calendrier romain qu'en 1456, sous le pape Callixte III, en action de grâce pour la levée du siège de Belgrade — mais la scène elle-même est bien plus ancienne, lue dès les premiers siècles comme la clé de voûte des évangiles synoptiques, au centre exact du récit de Matthieu, entre l'annonce de la passion et la montée vers Jérusalem.</p></div>
+      <div><h3>Moïse, Élie, et la Loi accomplie</h3><p>Moïse représente la Loi, reçue sur une montagne dans la nuée ; Élie représente les prophètes, qui entendit Dieu non dans le vent ni le feu mais dans le silence, sur l'Horeb. Leur présence aux côtés du Christ transfiguré, relevée dès Origène, dit que la Loi et les Prophètes ne s'effacent pas devant lui : ils trouvent en lui leur accomplissement et s'entretiennent avec lui de son exode à venir, selon Luc 9,31.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Une lumière qui ne se répète pas</h2>
+<p>Il t'est peut-être arrivé, une fois, dans une prière ou un chant, de sentir sans discuter que Dieu était là — non comme une conviction raisonnée mais comme une évidence brève, presque physique, qui a duré le temps d'un instant puis s'est refermée. Tu n'as pas pu la provoquer de nouveau ensuite, ni la retenir plus longtemps qu'elle ne s'est donnée, et les jours suivants, revenus à leur grisaille ordinaire, ont pu te faire douter d'avoir vraiment vécu cela. Pierre, Jacques et Jean redescendent eux aussi de la montagne vers la plaine, vers un enfant qu'ils ne sauront pas guérir, vers la route qui monte à Jérusalem — mais ce qu'ils ont vu ne leur est pas retiré : il travaille en eux, silencieusement, jusqu'à ce qu'ils comprennent, bien plus tard, ce qu'ils avaient contemplé sans le savoir encore.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Aujourd'hui, l'Église contemple un visage transformé sans qu'aucune prière ne puisse provoquer pareille clarté à volonté. Ce qui est demandé n'est pas de revivre l'éblouissement des trois disciples, mais d'entendre ce que la nuée a dit une fois pour toutes.</p>
+      <p class="geste">Reprends aujourd'hui une seule phrase de l'évangile — écoutez-le — et porte-la, en silence, dans un moment ordinaire de ta journée, sans chercher à ressentir quoi que ce soit de particulier.</p>
+      <small>La tradition protestante se méfie à raison des extases recherchées pour elles-mêmes ; elle retient de ce texte l'ordre final, sobre et suffisant : écouter la parole du Christ, plutôt que poursuivre la vision.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle parole du Christ continues-tu d'écouter aujourd'hui, longtemps après qu'elle t'a été donnée, sans qu'aucun signe nouveau ne soit venu la confirmer ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Pourquoi seulement trois ?</h3>
+          <p>Jean Chrysostome demande pourquoi Jésus n'emmène que Pierre, Jacques et Jean, et répond que ce sont les trois qui se montreront les plus faibles à Gethsémané : ceux qui verront la gloire sont aussi ceux qui verront l'agonie, afin que la mémoire de la montagne les retienne au jardin, quand tout semblera perdu.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur Matthieu, LVI</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Écoutez-le</h3>
+          <p>Calvin, commentant cet évangile, insiste sur le dernier mot de la voix céleste : après avoir désigné Jésus comme Fils bien-aimé, le Père ajoute un impératif qui vaut pour toute l'Église — écoutez-le — signe que la gloire manifestée sur la montagne n'a pas d'autre fin que d'accréditer la parole du Christ reçue plus bas, dans la plaine, au milieu des foules et des malades.</p>
+<p class="attrib">Jean Calvin, Commentaire sur l'Harmonie évangélique</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le trône entrevu</h3>
+          <p>Le choix de Daniel 7 comme première lecture n'est pas arbitraire : Hippolyte de Rome, dans son commentaire sur Daniel, lit dans le Fils de l'homme s'avançant vers l'Ancien des jours l'annonce même de ce que trois disciples verront sur la montagne, la gloire promise au terme des temps déjà entrouverte un instant dans le visage d'un homme de Galilée.</p>
+<p class="attrib">Hippolyte de Rome, Commentaire sur Daniel</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Dn 7, 9-10.13-14 ; 2 P 1, 16-19 ; Mt 17, 1-9.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
