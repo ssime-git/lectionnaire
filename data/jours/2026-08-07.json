@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-07",
+  "date_humaine": "vendredi",
+  "semaine": "18ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Na 2, 1.3 ; 3, 1-3.6-7 ; Dt 32, 35cd-36ab, 39abcd, 41 ; Mt 16, 24-28",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h150\"/><path d=\"M18 128 v-12 h10 v-8 h10 v8 h10 v-12 h10 v12 h10 v-8 h10 v8 h10 v-12 h10 v12\"/><path d=\"M28 108 v-18\"/><path d=\"M58 108 v-24\"/><path d=\"M88 108 v-18\"/><path d=\"M40 90 l6 -14 l6 14\"/><path d=\"M70 84 l7 -16 l7 16\"/><path d=\"M100 90 l-14 10 q10 6 4 16\"/><path d=\"M120 96 l-10 12 q8 4 2 14\"/><path d=\"M228 118 l32 -16\"/><path d=\"M232 112 l6 8\"/><path d=\"M254 108 l6 8\"/><path d=\"M215 130 q6 -10 16 -8\"/></g><g class=\"trait-rubrique\"><path d=\"M170 30 v88\"/><path d=\"M150 46 h40\"/><path d=\"M170 118 l-9 10 h18 z\"/></g></svg>",
+  "titre": "L'épée et la croix",
+  "titre_html": "L'épée <span class=\"it\">et la croix</span>",
+  "sous_titre": "Quand la vengeance et le don de soi se disputent le même mot : rendre.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois en taille douce : une épée fichée en terre devant les murailles crénelées et embrasées d'une ville qui s'écroule, sa garde barrée à l'horizontale comme une croix ; au loin, une silhouette courbée porte une poutre sur l'épaule, dans le même axe que la lame.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Na 2, 1.3 ; 3, 1-3.6-7",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Voici sur les montagnes les pieds du <button class=\"mot\" data-g=\"g-mebasser\">messager qui annonce la paix</button> ! Célèbre tes fêtes, Juda, accomplis tes vœux ! Car le méchant ne passera plus au milieu de toi, il est entièrement exterminé. <span class=\"s\">3</span> Car l'Éternel rétablit la gloire de Jacob et la gloire d'Israël, parce que les pillards ont pillé ces peuples et ravagé leurs <button class=\"mot\" data-g=\"g-zemorah\">sarments</button>.<br><br><span class=\"s\">1</span> Malheur à la ville <button class=\"mot\" data-g=\"g-damim\">sanguinaire</button>, pleine de mensonge, pleine de violence, et qui ne cesse de se livrer à la rapine ! <span class=\"s\">2</span> On entend le bruit du fouet, le bruit des roues, le galop des chevaux, le roulement des chars. <span class=\"s\">3</span> Les cavaliers s'élancent, l'épée étincelle, la lance brille... Une multitude de blessés !... une foule de cadavres !... Des morts à l'infini !... On tombe sur les morts !... <span class=\"s\">6</span> Je jetterai sur toi des impuretés, je t'avilirai, et je te donnerai en spectacle. <span class=\"s\">7</span> Tous ceux qui te verront fuiront loin de toi, et diront : Ninive est détruite ! Qui la plaindra ? Où te chercherai-je des consolateurs ?",
+      "gloses": [
+        {
+          "id": "g-mebasser",
+          "lemme": "mevasser",
+          "html": "Le participe hébreu <span class=\"gr\">mevasser</span>, « celui qui annonce », vient de la racine <span class=\"gr\">bāśar</span> qui donnera plus tard, en grec, l'<span class=\"gr\">euangelion</span>, l'évangile. Segond traduit par « le messager qui annonce la paix », mais la formule est presque un décalque d'Ésaïe 52, 7 : « Voici sur les montagnes les pieds de celui qui apporte de bonnes nouvelles ». Nahum reprend mot pour mot le cri de la délivrance d'Israël pour l'appliquer, à rebours, à la chute de l'empire qui l'opprimait. La bonne nouvelle ne change pas de forme selon qu'elle console ou qu'elle juge — elle vient toujours à pied, par les montagnes, avant qu'on l'attende."
+        },
+        {
+          "id": "g-zemorah",
+          "lemme": "zemorah",
+          "html": "L'hébreu <span class=\"gr\">zemorah</span> désigne le sarment de vigne, le rameau que l'on taille après la vendange. Segond garde l'image agricole : les pillards « ravagent les sarments » d'Israël comme on saccage une vigne. C'est la même image qu'en Ésaïe 5 ou au Psaume 80, où Israël est la vigne que Dieu a plantée puis livrée aux passants — ici le mouvement s'inverse, la vigne pillée sera vengée, et ceux qui l'ont taillée seront eux-mêmes coupés."
+        },
+        {
+          "id": "g-damim",
+          "lemme": "damim",
+          "html": "L'hébreu ne dit pas « la ville sanguinaire » au singulier abstrait mais <span class=\"gr\">'ir damim</span>, littéralement « la ville des sangs » — un pluriel qui ne désigne pas plusieurs couleurs de sang mais le sang versé à répétition, crime après crime. Segond lisse en un adjectif ce que le texte accumule en substantifs bruts. Ézéchiel emploie l'expression exacte pour Jérusalem elle-même, en 24, 6 et 9 : le prophète ne vise donc pas seulement l'étranger assyrien, il laisse entendre que ce nom peut aussi désigner la ville de son propre peuple."
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Dt 32, 35cd-36ab, 39abcd, 41",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">35</span> Car le jour de leur malheur est proche, et ce qui les attend ne tardera pas. <span class=\"s\">36</span> L'Éternel jugera son peuple ; mais il aura pitié de ses serviteurs, <span class=\"s\">39</span> <button class=\"mot\" data-g=\"g-anihu\">Sachez donc que c'est moi qui suis Dieu</button>, et qu'il n'y a point de dieu près de moi ; je fais vivre et je fais mourir, je blesse et je guéris, <span class=\"s\">41</span> si j'aiguise mon <button class=\"mot\" data-g=\"g-baraq\">épée fulgurante</button> et si ma main saisit la justice, <button class=\"mot\" data-g=\"g-naqam\">je me vengerai</button> de mes adversaires et je punirai ceux qui me haïssent.",
+      "gloses": [
+        {
+          "id": "g-anihu",
+          "lemme": "ani hu",
+          "html": "Le texte hébreu ne dit pas simplement « c'est moi qui suis Dieu » mais redouble le pronom : <span class=\"gr\">ani ani hu</span>, « moi, moi, lui ». Cette formule de reconnaissance, unique dans le Pentateuque, annonce le <span class=\"gr\">ani hu</span> des oracles d'Ésaïe (43, 10 ; 46, 4) où Dieu affirme seul son identité contre les idoles muettes de Babylone. Segond lisse le redoublement pour la clarté française, mais perd l'insistance presque liturgique de l'original — un Dieu qui doit se nommer deux fois pour qu'on l'entende enfin."
+        },
+        {
+          "id": "g-baraq",
+          "lemme": "baraq",
+          "html": "« Épée fulgurante » traduit l'hébreu <span class=\"gr\">baraq charbi</span>, littéralement « l'éclair de mon épée » — <span class=\"gr\">baraq</span> est le mot de l'éclair et de la foudre, associé ailleurs à la théophanie du Sinaï. Segond choisit l'adjectif « fulgurante » pour garder l'éclat sans alourdir la phrase d'une métaphore filée. L'image rejoint, par contraste, celle de l'évangile de ce jour : ici l'épée de Dieu qui juge, chez Matthieu la croix que le disciple porte à sa place."
+        },
+        {
+          "id": "g-naqam",
+          "lemme": "naqam",
+          "html": "Le verbe que Segond traduit ici par « je me vengerai » vient de la racine hébraïque <span class=\"gr\">naqam</span>, celle-là même que ce chant emploie quelques lignes plus haut : « A moi la vengeance et la rétribution » (Dt 32, 35). Ce n'est pas un sentiment mais un acte de justice réservé à celui qui a autorité sur l'histoire entière. Paul cite ce verset presque mot pour mot en Romains 12, 19 pour interdire aux chrétiens de se faire justice eux-mêmes : « Ne vous vengez point vous-mêmes... car il est écrit : A moi la vengeance, à moi la rétribution, dit le Seigneur. » Calvin, commentant ce chant, y voit la seule limite qui retienne l'homme de s'ériger en juge de son frère."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 16, 24-28",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">24</span> Alors Jésus dit à ses disciples : Si quelqu'un veut venir après moi, qu'il <button class=\"mot\" data-g=\"g-aparneomai\">renonce à lui-même</button>, qu'il se charge de sa croix, et qu'il me suive. <span class=\"s\">25</span> Car celui qui voudra sauver sa <button class=\"mot\" data-g=\"g-psyche\">vie</button> la perdra, mais celui qui perdra sa vie à cause de moi la trouvera. <span class=\"s\">26</span> Et que servirait-il à un homme de gagner tout le monde, s'il perdait son âme ? ou, que donnerait un homme en échange de son âme ? <span class=\"s\">27</span> Car le Fils de l'homme doit venir dans la gloire de son Père, avec ses anges ; et alors il <button class=\"mot\" data-g=\"g-apodidomi\">rendra à chacun selon ses œuvres</button>. <span class=\"s\">28</span> Je vous le dis en vérité, quelques-uns de ceux qui sont ici ne mourront point, qu'ils n'aient vu le Fils de l'homme venir dans son règne.",
+      "gloses": [
+        {
+          "id": "g-aparneomai",
+          "lemme": "aparneomai",
+          "html": "Le verbe grec <span class=\"gr\">aparnēsasthō</span>, « qu'il renonce », est exactement celui que Matthieu emploiera pour le triple reniement de Pierre : « avant que le coq chante, tu m'auras renié trois fois » (Mt 26, 34.75). Segond traduit ici « renoncer à soi-même » et là « renier » — c'est pourtant le même mot grec dans les deux passages. Chrysostome, dans ses homélies sur Matthieu, note que Jésus demande au disciple de faire à son propre moi ce que Pierre, par faiblesse, fera plus tard à son Seigneur : une rupture nette, sans retour possible."
+        },
+        {
+          "id": "g-psyche",
+          "lemme": "psychē",
+          "html": "Le grec <span class=\"gr\">psychē</span>, que Segond traduit tour à tour par « vie » et par « âme » dans ces mêmes versets, est un seul et même mot — le grec ne distingue pas ici ce que le français sépare. Celui qui veut sauver sa <span class=\"gr\">psychē</span> la perdra ; celui qui gagnerait le monde entier y perdrait sa <span class=\"gr\">psychē</span> : c'est la vie tout entière de la personne qui est en jeu, non une part immatérielle qu'on pourrait mettre à l'abri pendant que le reste risque tout. Origène, méditant ce texte, y voit la totalité de l'être livrée, non un renoncement partiel."
+        },
+        {
+          "id": "g-apodidomi",
+          "lemme": "apodidōmi",
+          "html": "Le verbe grec <span class=\"gr\">apodōsei</span>, « il rendra », vient d'<span class=\"gr\">apodidōmi</span>, qui signifie restituer ce qui est dû, régler un compte — le même geste que le maître qui règle ses comptes dans les paraboles voisines (Mt 18, 23-35 ; 25, 19). Segond traduit « il rendra à chacun selon ses œuvres », formule qui reprend presque le vocabulaire même de la rétribution divine que chante le Deutéronome lu aujourd'hui. Le Fils de l'homme qui vient juger n'invente rien : il accomplit ce que Moïse avait déjà annoncé, que la rétribution appartient à Dieu seul."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Nahum après Jonas",
+      "corps_html": "Nahum écrit dans les dernières décennies du VIIe siècle avant notre ère, entre la chute de Thèbes (663) qu'il évoque en 3, 8-10 et celle de Ninive elle-même, en 612, sous les coups conjugués des Mèdes et des Babyloniens. Un siècle et demi plus tôt, Jonas avait annoncé la même ville, et Dieu s'était repenti du mal qu'il voulait lui faire ; Nahum ferme ce cycle : la miséricorde différée n'a pas changé le cœur de l'empire assyrien, resté « ville de sangs » jusqu'à sa ruine."
+    },
+    {
+      "titre": "Le cantique de Moïse",
+      "corps_html": "Ce chant occupe le chapitre 32 du Deutéronome, juste avant la mort de Moïse : c'est son testament chanté, non plus légiféré. La liturgie byzantine en a fait la deuxième des neuf Odes bibliques des Matines — mais elle ne la chante qu'en Carême, tant son thème du jugement et de la vengeance divine pesait sur les fidèles le reste de l'année. Il annonce, avant les prophètes eux-mêmes, que Dieu seul juge et que nul homme ne peut se faire justice à sa place."
+    }
+  ],
+  "analogie": {
+    "titre": "Perdre pour trouver",
+    "variantes": [
+      "Tu as pu donner du temps, de l'attention, une part de toi-même à quelqu'un ou à quelque chose sans qu'aucun résultat visible ne vienne jamais te le rendre — un service tenu dans l'ombre, une fidélité gardée sans témoin, une année entière donnée à un travail dont tu ne verras peut-être jamais l'aboutissement. Ce n'est pas la perte au sens où tu l'entends d'abord : rien ne s'est évaporé, rien n'a été jeté. C'est cette expérience-là, précisément, que le Christ nomme quand il dit que perdre sa vie, c'est la trouver — un dépôt confié à une main que tu ne vois pas encore agir. Devant Dieu, ce que tu croyais avoir perdu n'a jamais cessé d'être compté.",
+      "Il y a des jours où continuer — rester, tenir un engagement, ne pas fuir une situation qui te coûte — ne ressemble à aucune victoire : c'est un poids que tu portes parce qu'il n'y a personne d'autre pour le porter à ta place, et que partir serait plus facile que rester. Tu ne le portes pas parce que tu l'as choisi comme on choisit ce qui plaît, mais parce que quelque chose en toi a déjà dit oui avant même que tu en mesures le prix. C'est cela, porter sa croix : non un exploit spectaculaire, mais une fidélité qui, vue de l'extérieur, ne ressemble qu'à de l'entêtement. Devant Dieu seul, ce poids a un nom et un sens que personne d'autre ne peut te donner.",
+      "Tu as peut-être connu ce moment où, ayant tout perdu de ce sur quoi tu t'appuyais — une certitude, une relation, une image de toi-même que tu croyais solide — tu t'es retrouvé plus vivant, plus vrai, que lorsque tu possédais encore tout cela intact. Ce n'est pas que la perte soit bonne en elle-même ; c'est qu'elle a mis à nu ce qui, en toi, ne dépendait d'aucune possession. Jésus ne promet pas d'épargner cette traversée à ceux qui le suivent, il en fait la condition même de trouver sa vie. Ce que tu croyais être toi n'était peut-être que ce que tu tenais dans tes mains ; ce que Dieu appelle ta vie est ce qui reste quand elles s'ouvrent."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Relis lentement Matthieu 16, 25 — non comme une formule à comprendre, mais comme une phrase à laisser résonner dans ce que tu es en train de porter ou de perdre en ce moment.",
+    "geste": "Nomme devant Dieu, en silence, une chose que tu crois avoir perdue sans retour. Demande-lui simplement de te montrer si elle est vraiment perdue, ou seulement confiée.",
+    "note": "Rien à ressentir, rien à constater tout de suite : le texte parle d'un mouvement qui se joue souvent hors de notre vue."
+  },
+  "question": "Y a-t-il, dans ce que tu tiens le plus fermement aujourd'hui, quelque chose que tu n'as encore jamais osé remettre entre les mains de Dieu ?",
+  "racines": [
+    {
+      "titre": "Porter sa croix chaque jour",
+      "corps_html": "Jean Chrysostome, dans son homélie sur ce passage, remarque que Jésus ne dit pas « qu'il porte sa croix » une fois, mais construit une gradation : se renoncer, se charger, suivre — trois gestes continus, non un sacrifice ponctuel. Il souligne que le Christ n'impose rien qu'il n'ait porté lui-même le premier, et que la croix demandée au disciple n'est jamais plus lourde que celle que le maître a portée devant lui.",
+      "attribution": "Jean Chrysostome, Homélies sur Matthieu"
+    },
+    {
+      "titre": "La vengeance rendue à Dieu seul",
+      "corps_html": "Calvin, commentant le Deutéronome, insiste sur le fait que Moïse ôte ici toute légitimité à la justice privée : se venger soi-même, c'est empiéter sur l'office de Dieu. Il relie ce verset à l'exhortation de Paul en Romains 12 et fait de la patience du croyant devant l'offense non une faiblesse, mais un acte de foi — croire que Dieu jugera vraiment, et qu'il n'est donc pas besoin de le devancer.",
+      "attribution": "Jean Calvin, Commentaires sur le Pentateuque"
+    },
+    {
+      "titre": "Ninive, figure du mal qui se détruit",
+      "corps_html": "Jérôme, dans son commentaire sur Nahum — l'un des rares que l'Antiquité chrétienne ait consacrés à ce petit livre — lit la ville sanguinaire non seulement comme l'empire assyrien historique, mais comme figure de toute puissance bâtie sur la violence : elle porte en elle-même le principe de sa ruine. Le prophète, dit-il, ne fait qu'annoncer ce que le péché accomplit déjà en secret contre lui-même.",
+      "attribution": "Jérôme, Commentaire sur Nahum"
+    }
+  ]
+}
