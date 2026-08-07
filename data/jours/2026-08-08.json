@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-08",
+  "date_humaine": "samedi",
+  "semaine": "18ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ha 1, 12 – 2, 4 ; Mt 17, 14-20",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M40 130 v-70 h20 v70\"/><path d=\"M40 90 h20\"/><path d=\"M40 105 h20\"/><path d=\"M44 60 h12 v-10 h-12 z\"/><path d=\"M50 40 v10\"/><path d=\"M50 40 q10 -6 16 2\"/><path d=\"M50 50 q-9 3 -3 14 q4 8 12 3\"/><path d=\"M62 55 l10 -6\"/><path d=\"M60 60 l14 2\"/></g><g class=\"trait-rubrique\"><path d=\"M210 130 q0 -14 10 -20\"/><path d=\"M220 110 q6 -4 10 0\"/><path d=\"M210 130 l14 -4\"/><path d=\"M224 126 q6 -18 -2 -30 q6 6 4 16 q-2 8 -2 14\"/></g><g class=\"trait-liturgie\"><path d=\"M270 100 q6 -14 20 -14\"/><path d=\"M290 86 v12\"/><path d=\"M270 100 q0 16 12 22 q10 4 20 -2\"/><path d=\"M296 96 l16 -10\"/></g></svg>",
+  "titre": "Le juste vivra",
+  "titre_html": "Le juste <span class=\"it\">vivra</span>",
+  "sous_titre": "Habacuc à son poste, un père à genoux, un grain de foi qui suffit.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : un veilleur debout sur une tour de guet, une tablette entaillée à la main, le regard tourné vers un horizon vide ; en contrebas, un homme agenouillé présente un enfant secoué de convulsions vers une silhouette qui étend la main.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ha 1, 12 – 2, 4",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> N'es-tu pas de toute éternité, Éternel, mon Dieu, mon Saint ? Nous ne mourrons pas ! Éternel, tu as établi ce peuple pour exercer tes jugements ; ô mon <button class=\"mot\" data-g=\"g-rocher\">rocher</button>, tu l'as suscité pour infliger tes châtiments. <span class=\"s\">13</span> Tes yeux sont trop purs pour voir le mal, et tu ne peux pas regarder l'iniquité. Pourquoi regarderais-tu les perfides, et te tairais-tu, quand le méchant dévore celui qui est plus juste que lui ? <span class=\"s\">14</span> Traiterais-tu l'homme comme les poissons de la mer, comme le reptile qui n'a point de maître ? <span class=\"s\">15</span> Il les fait tous monter avec l'hameçon, il les tire dans son filet, il les assemble dans ses rets : aussi est-il dans la joie et dans l'allégresse. <span class=\"s\">16</span> C'est pourquoi il sacrifie à son filet, il offre de l'encens à ses rets ; car par eux sa portion est grasse, et sa nourriture succulente. <span class=\"s\">17</span> Videra-t-il pour cela son filet, et toujours égorgera-t-il sans pitié les nations ? <span class=\"s\">2,1</span> J'étais à mon poste, et je me tenais sur la tour ; je veillais, pour voir ce que l'Éternel me dirait, et ce que je répliquerais après ma plainte. <span class=\"s\">2</span> L'Éternel m'adressa la parole, et il dit : Écris la prophétie, grave-la sur des tables, afin qu'on la lise <button class=\"mot\" data-g=\"g-courir\">couramment</button>. <span class=\"s\">3</span> Car c'est une prophétie dont le temps est déjà fixé, elle marche vers son terme, et elle <button class=\"mot\" data-g=\"g-kazav\">ne mentira pas</button> ; si elle tarde, attends-la, car elle s'accomplira, elle s'accomplira certainement. <span class=\"s\">4</span> Voici, son âme s'est enflée, elle n'est pas droite en lui ; mais le juste <button class=\"mot\" data-g=\"g-emouna\">vivra par sa foi</button>.",
+      "gloses": [
+        {
+          "id": "g-rocher",
+          "lemme": "rocher",
+          "html": "En hébreu <span class=\"gr\">tsour</span>, le rocher, une des épithètes les plus anciennes de Dieu comme abri inébranlable, déjà présente dans le Cantique de Moïse : « Il est le Rocher, son œuvre est parfaite » (Deutéronome 32,4). Segond garde l'image telle quelle, sans l'affaiblir en un vague « refuge », et c'est heureux : Habacuc s'adresse ainsi à Dieu au moment même où il conteste sa conduite, preuve que la plainte, chez lui, ne rompt pas la relation. Calvin, commentant ce verset, note cette audace familière du prophète, qui garde le titre de confiance jusque dans la contestation la plus vive."
+        },
+        {
+          "id": "g-courir",
+          "lemme": "couramment",
+          "html": "Le texte hébreu dit littéralement <span class=\"gr\">yarouts qore vo</span>, « que celui qui lit y coure » — une formule ambiguë que les traducteurs ont longtemps hésité à trancher : est-ce l'écriture qui doit être assez grande pour qu'un passant pressé la lise en courant, ou le lecteur qui doit ensuite courir annoncer ce qu'il a lu ? Segond choisit la première option avec « qu'on la lise couramment », au risque de perdre l'image du messager en mouvement. Calvin, dans son commentaire sur Habacuc, retient plutôt l'idée d'un texte gravé si nettement que même le passant pressé puisse le déchiffrer sans s'arrêter."
+        },
+        {
+          "id": "g-kazav",
+          "lemme": "ne mentira pas",
+          "html": "Le verbe hébreu <span class=\"gr\">kazav</span> signifie mentir, tromper, se révéler faux — c'est le même mot qui, ailleurs, dénonce les faux dieux et les hommes menteurs (« tout homme est menteur », Psaume 116,11). En affirmant que la vision « ne mentira pas », le texte personnifie presque la parole promise comme un témoin dont la fidélité est mise en jeu, à l'inverse de tout ce qui, dans le chapitre précédent, trompe et déçoit. Ce vocabulaire rejoint celui des Nombres (23,19) : « Dieu n'est point un homme pour mentir. »"
+        },
+        {
+          "id": "g-emouna",
+          "lemme": "sa foi",
+          "html": "Le mot hébreu <span class=\"gr\">émouna</span> vient de la racine <span class=\"gr\">aman</span>, être ferme, stable — la même que dans « amen ». Segond traduit « sa foi », mais le terme désigne moins une conviction intérieure qu'une fidélité tenue dans la durée, une constance éprouvée plus qu'un sentiment. Paul reprend ce verset, via le grec <span class=\"gr\">pistis</span> de la Septante, pour fonder toute son argumentation sur la justification en Romains 1,17 et Galates 3,11 ; le Talmud, de son côté, rapporte que le rabbin Simlaï y a vu le résumé de toute la Loi (Makkot 24a)."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 9A, 8-9, 10-11, 12-13",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">8</span> L'Éternel règne à jamais, il a dressé son trône pour le jugement ; <span class=\"s\">9</span> il juge le monde avec justice, il juge les peuples avec droiture. <span class=\"s\">10</span> L'Éternel est un <button class=\"mot\" data-g=\"g-refuge\">refuge</button> pour l'opprimé, un refuge au temps de la détresse. <span class=\"s\">11</span> Ceux qui connaissent ton nom se confient en toi. Car tu n'abandonnes pas ceux qui te cherchent, ô Éternel ! <span class=\"s\">12</span> Chantez à l'Éternel, qui réside en Sion, publiez parmi les peuples ses <button class=\"mot\" data-g=\"g-hautsfaits\">hauts faits</button> ! <span class=\"s\">13</span> Car il venge le sang et se souvient des malheureux, il n'oublie pas leurs cris.",
+      "gloses": [
+        {
+          "id": "g-refuge",
+          "lemme": "refuge",
+          "html": "L'hébreu <span class=\"gr\">misgav</span> désigne une hauteur inaccessible, une forteresse dressée sur un rocher plutôt qu'un simple abri au ras du sol. Segond traduit « refuge », ce qui est juste mais adoucit l'image d'élévation : le psalmiste ne dit pas seulement que Dieu protège, mais qu'il élève hors d'atteinte, comme dans le Psaume 18,3 où le même mot décrit la « haute retraite » de David poursuivi. C'est un Dieu qu'on ne peut assiéger."
+        },
+        {
+          "id": "g-hautsfaits",
+          "lemme": "hauts faits",
+          "html": "Le mot hébreu <span class=\"gr\">alilah</span>, au pluriel ici, signifie « actions » ou « agissements » de façon neutre — il sert aussi bien à décrire de mauvaises œuvres ailleurs dans l'Écriture. Segond choisit « hauts faits », qui oriente déjà la lecture vers la louange, alors que l'hébreu laisse le lecteur qualifier lui-même ce que Dieu a fait. Le psalmiste, après avoir décrit le jugement des méchants, choisit délibérément d'appeler ces actes-là un motif de chant."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 17, 14-20",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">14</span> Lorsqu'ils furent arrivés près de la foule, un homme vint se jeter à genoux devant Jésus, et dit : <span class=\"s\">15</span> Seigneur, aie pitié de mon fils, qui est <button class=\"mot\" data-g=\"g-lunatique\">lunatique</button>, et qui souffre cruellement ; il tombe souvent dans le feu, et souvent dans l'eau. <span class=\"s\">16</span> Je l'ai amené à tes disciples, et ils n'ont pas pu le guérir. <span class=\"s\">17</span> Race incrédule et perverse, répondit Jésus, jusques à quand serai-je avec vous ? jusques à quand vous supporterai-je ? Amenez-le-moi ici. <span class=\"s\">18</span> Jésus parla sévèrement au démon, qui sortit de cet enfant, et à l'heure même l'enfant fut guéri. <span class=\"s\">19</span> Alors les disciples s'approchèrent de Jésus, et lui dirent en particulier : Pourquoi n'avons-nous pu chasser ce démon ? <span class=\"s\">20</span> C'est à cause de votre <button class=\"mot\" data-g=\"g-incredulite\">incrédulité</button>, leur dit Jésus. Je vous le dis en vérité, si vous aviez de la foi comme un <button class=\"mot\" data-g=\"g-seneve\">grain de sénevé</button>, vous diriez à cette montagne : Transporte-toi d'ici là, et elle se transporterait ; rien ne vous serait impossible.",
+      "gloses": [
+        {
+          "id": "g-lunatique",
+          "lemme": "lunatique",
+          "html": "Le grec <span class=\"gr\">selēniazetai</span> vient de <span class=\"gr\">selēnē</span>, la lune — Segond garde le mot à la lettre, « lunatique », plutôt que de moderniser en « épileptique ». Le vocabulaire reflète une croyance ancienne qui liait certaines crises aux phases de la lune, sans que Matthieu tranche lui-même la cause médicale : le récit affirme seulement, au verset suivant, qu'un démon en est chassé. Chrysostome, dans son homélie sur ce passage, s'attarde moins sur la cause du mal que sur la détresse du père, venu après l'échec des disciples."
+        },
+        {
+          "id": "g-incredulite",
+          "lemme": "incrédulité",
+          "html": "Le grec <span class=\"gr\">apistia</span> est formé du privatif <span class=\"gr\">a-</span> et de <span class=\"gr\">pistis</span>, la foi ou la confiance : ce n'est pas d'abord une erreur de doctrine que Jésus reproche à ses disciples, mais un manque de confiance vécue. Segond traduit justement « incrédulité », un mot que l'on retrouve pour la foule de Nazareth (Marc 6,6) et pour Thomas devant les plaies du Christ (Jean 20,27) — trois scènes où la puissance de Dieu se heurte à une confiance qui ne s'engage pas."
+        },
+        {
+          "id": "g-seneve",
+          "lemme": "grain de sénevé",
+          "html": "Le grec <span class=\"gr\">kokkos sinapeōs</span> désigne le grain de moutarde sauvage, proverbial en Palestine pour sa petitesse extrême et sa croissance rapide en un arbuste robuste (cf. Matthieu 13,31-32). Segond traduit par « sénevé », un mot vieilli qui désigne la même plante. Jésus ne demande donc pas une foi plus grande en quantité, mais une foi de cette nature-là : petite et pourtant vivante, capable de croître et d'agir, à l'inverse d'une confiance qui reste inerte même si elle paraît solide."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Habacuc, un prophète qui discute",
+      "corps_html": "Habacuc écrit sans doute peu avant 605 avant notre ère, quand la menace babylonienne (les « Chaldéens » du chapitre 1) devient visible à l'horizon de Juda. Le livre est unique parmi les prophètes : il n'est pas un oracle adressé au peuple, mais un dialogue où le prophète interroge Dieu sur le mal et la violence, et où Dieu répond — structure proche des psaumes de plainte."
+    },
+    {
+      "titre": "Après la Transfiguration",
+      "corps_html": "Cet épisode suit immédiatement la Transfiguration (17,1-13) : Pierre voulait dresser trois tentes sur la montagne pour prolonger la gloire entrevue. Jésus et les trois disciples redescendent aussitôt vers la foule et vers un échec — les autres disciples n'ont pas pu guérir l'enfant. Chrysostome y voit le rythme même de la vie chrétienne, entre vision et service."
+    }
+  ],
+  "analogie": {
+    "titre": "Le poids d'un grain",
+    "variantes": [
+      "Tu as posé une question à Dieu — pour un proche qui s'éloigne, pour un mal qui ne guérit pas, pour un sens que tu ne trouves plus — et tu es resté sans réponse, parfois pendant des années. Tu n'as pas cessé de la poser, mais tu as cessé d'attendre une réponse immédiate : elle est devenue une présence tenue debout, plus une veille qu'une attente active. Puis un jour, sans bruit, quelque chose s'est éclairci — pas toujours la réponse espérée, mais une clarté suffisante pour continuer. C'est cette tenue-là, ce poste gardé sans certitude du moment, que Habacuc appelle vivre par la foi.",
+      "Tu as un jour épuisé toutes tes ressources pour aider quelqu'un — les mots justes, la patience, les efforts répétés — et rien n'a changé ; pire, tu t'es senti impuissant devant une souffrance que tu croyais pouvoir résoudre à force de bonne volonté. Ce n'est pas un manque d'amour qui t'a manqué alors, mais une remise entre des mains plus grandes que les tiennes, une confiance que tu n'avais pas encore laissée agir en toi. Les disciples, eux aussi, avaient déjà guéri des malades ; ce jour-là, leur méthode ne suffisait plus, et Jésus ne leur reproche pas leur échec technique mais l'étroitesse de leur confiance.",
+      "Il t'est arrivé de dire, ou de faire, un geste de confiance minuscule, presque gêné de sa petitesse — une prière brève avant une décision, un mot d'espérance lâché sans y croire vraiment toi-même — et de voir, longtemps après, que ce geste avait déplacé quelque chose que des années d'efforts n'avaient pas bougé. Tu n'avais pas besoin d'une foi immense, seulement d'une foi vivante, comme une graine qui ne pèse presque rien mais qui pousse parce qu'elle est vivante. C'est cette qualité-là, non la quantité, que Jésus cherche dans les mains vides de ses disciples devant la montagne."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de prier pour ce qui te préoccupe, commence par te taire un instant — non pour vider ta demande, mais pour te tenir, comme Habacuc, à ton poste.",
+    "geste": "Tiens-toi debout, ou assis bien droit, deux minutes, sans formuler encore ta demande — regarde simplement, comme un veilleur sur sa tour.",
+    "note": "Si une inquiétude précise t'habite, tu peux ensuite la nommer en une phrase courte, sans la développer — un grain, pas un discours."
+  },
+  "question": "Qu'est-ce que tu attends encore, sans trop y croire, depuis si longtemps que tu as presque cessé de l'espérer ?",
+  "racines": [
+    {
+      "titre": "Le juste vivra par sa foi, chez Paul",
+      "corps_html": "Habacuc 2,4 devient le verset-pivot de la théologie paulinienne : Paul l'inscrit en tête de l'épître aux Romains (1,17) pour annoncer l'Évangile, puis le retourne contre les partisans des œuvres de la loi en Galates (3,11). L'épître aux Hébreux (10,38) le cite à son tour, selon la Septante, où l'émouna hébraïque devient le pistis grec — la fidélité se lit alors comme la foi.",
+      "attribution": "Romains 1,17 ; Galates 3,11 ; Hébreux 10,38"
+    },
+    {
+      "titre": "Résumé de la Torah",
+      "corps_html": "Le Talmud raconte que le rabbin Simlaï, au IIIe siècle, entreprit de réduire les six cent treize commandements donnés à Moïse à leur plus simple expression. Après plusieurs étapes, il s'arrête à un verset unique, celui d'Habacuc : le juste vivra par sa fidélité. Toute la Torah, selon cette tradition, tient dans cette tenue continuée, cette confiance qui dure.",
+      "attribution": "Talmud de Babylone, traité Makkot 24a"
+    },
+    {
+      "titre": "Descendre de la montagne",
+      "corps_html": "Chrysostome, commentant cet épisode dans ses homélies sur Matthieu, relève que les disciples avaient déjà reçu, avant ce jour, le pouvoir de guérir et de chasser les démons (Matthieu 10,1). Leur échec ne vient donc pas d'une absence de don, mais d'une confiance qu'il fallait renouveler à chaque combat : la puissance reçue une fois ne dispense jamais de la persévérance de la foi.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 57"
+    }
+  ]
+}
