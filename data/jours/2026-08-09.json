@@ -1,0 +1,141 @@
+{
+  "date": "2026-08-09",
+  "date_humaine": "dimanche",
+  "semaine": "19ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 R 19, 9a.11-13a ; Rm 9, 1-5 ; Mt 14, 22-33",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M0 100 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 -2\"/><path d=\"M6 112 q30 -8 55 3 q28 12 58 -2 q26 -12 54 2 q30 14 60 -3 q28 -14 57 1 q28 14 44 4\"/><path d=\"M0 128 q40 -6 80 2 q45 9 90 -3 q45 -11 90 4 q40 12 80 -4\"/><path d=\"M158 96 q-10 22 -6 46\"/><path d=\"M158 96 l14 20\"/><path d=\"M172 116 l10 -8\"/><path d=\"M186 30 q-4 20 0 38 q4 15 -2 30\"/><path d=\"M172 46 q10 -10 16 -18\"/><path d=\"M186 44 q6 -8 4 -18\"/></g><g class=\"trait-rubrique\"><path d=\"M186 30 q10 6 8 16 q-2 8 -10 8\"/></g></svg>",
+  "titre": "Le murmure",
+  "titre_html": "Le <span class=\"it\">murmure</span>",
+  "sous_titre": "Ce que le vent, le feu et la tempête ne disaient pas",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une main jaillit des flots et saisit un poignet qui s'enfonce ; au-dessus des vagues démontées, une silhouette se tient debout, sans nimbe, seule sa main tendue capte un peu de lumière dans la nuit.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Rois 19, 9a.11-13a",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">9</span>Et là, il entra dans la caverne, et il y passa la nuit. <span class=\"s\">11</span>Il dit : Sors, et tiens-toi dans la montagne devant l'Éternel. Et voici, l'Éternel <button class=\"mot\" data-g=\"g-passa\">passa</button>. Et devant l'Éternel, il y eut un vent fort et violent qui déchirait les montagnes et brisait les rochers ; l'Éternel n'était pas dans le vent. Et après le vent, ce fut un tremblement de terre : l'Éternel n'était pas dans le tremblement de terre. <span class=\"s\">12</span>Et après le tremblement de terre, un feu : l'Éternel n'était pas dans le feu. Et après le feu, un <button class=\"mot\" data-g=\"g-demama\">murmure doux et léger</button>. <span class=\"s\">13</span>Quand Élie l'entendit, il s'enveloppa le visage de son manteau, il sortit et se tint à l'entrée de la caverne.",
+      "gloses": [
+        {
+          "id": "g-passa",
+          "lemme": "passa",
+          "html": "Le verbe hébreu <span class=\"gr\">avar</span> désigne un passage, un franchissement. Segond traduit sobrement par « passa », mais c'est le mot même qu'emploie l'Exode lorsque Dieu fait passer devant Moïse toute sa bonté sur cette même montagne (Ex 33, 19.22). Le rédacteur veut que l'auditeur reconnaisse ici une seconde théophanie du Sinaï-Horeb, non une nouveauté : Élie reçoit ce que Moïse a reçu, la gloire qui passe sans se laisser saisir."
+        },
+        {
+          "id": "g-demama",
+          "lemme": "murmure doux et léger",
+          "html": "L'hébreu porte <span class=\"gr\">qol demamah daqqah</span>, littéralement « une voix de silence ténu » — une expression presque contradictoire, une voix faite de silence. Segond choisit « murmure doux et léger », qui sonne bien mais efface la tension entre <span class=\"gr\">qol</span> (la voix, qui suppose une parole) et <span class=\"gr\">demamah</span> (le silence, l'absence de bruit). La tradition rabbinique y a beaucoup médité, lisant que Dieu se retire du fracas pour habiter ce qui n'a presque plus de consistance sonore ; les Pères grecs y ont vu une figure de la connaissance de Dieu qui dépasse les sens."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 84 (85), 9ab-10.11-12.13-14",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">9</span>J'écouterai ce que dit Dieu, l'Éternel ; car il parle de paix à son peuple et à ses fidèles, pourvu qu'ils ne retombent pas dans la folie. <span class=\"s\">10</span>Oui, son salut est près de ceux qui le craignent, afin que la gloire habite dans notre pays. <span class=\"s\">11</span>La <button class=\"mot\" data-g=\"g-hesed\">bonté</button> et la fidélité se rencontrent, la justice et la paix <button class=\"mot\" data-g=\"g-nashaq\">s'embrassent</button>. <span class=\"s\">12</span>La fidélité germe de la terre, et la justice regarde du haut des cieux. <span class=\"s\">13</span>L'Éternel aussi accordera le bonheur, et notre terre donnera ses fruits. <span class=\"s\">14</span>La justice marchera devant lui, et imprimera ses pas sur le chemin.",
+      "gloses": [
+        {
+          "id": "g-hesed",
+          "lemme": "bonté",
+          "html": "L'hébreu est <span class=\"gr\">hesed</span>, mot que Segond rend tantôt par « bonté », tantôt par « grâce » ou « miséricorde » selon les psaumes, faute d'équivalent français unique. Il désigne la fidélité active d'un Dieu lié par alliance, plus proche d'un attachement qui tient ses engagements que d'un simple sentiment. Calvin, dans son commentaire sur les Psaumes, insiste sur ce point : ce n'est pas une bonté vague, mais celle que Dieu doit à son peuple parce qu'il s'y est lui-même engagé."
+        },
+        {
+          "id": "g-nashaq",
+          "lemme": "s'embrassent",
+          "html": "Le verbe hébreu <span class=\"gr\">nashaq</span> signifie proprement « baiser », embrasser au sens du contact des lèvres — Segond adoucit en « s'embrassent », qui garde l'image sans sa crudité. L'image est audacieuse : justice et paix, deux réalités que l'expérience humaine tient souvent séparées, sont représentées comme deux personnes qui se donnent un baiser de réconciliation. Calvin y voit l'annonce que le salut promis ne sera pas un compromis entre exigence et clémence, mais leur union parfaite dans l'œuvre de Dieu."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Romains 9, 1-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span>Je dis la vérité en Christ, je ne mens point, ma conscience m'en rend témoignage par le Saint-Esprit : <span class=\"s\">2</span>j'éprouve une grande tristesse, et j'ai dans le cœur un chagrin continuel. <span class=\"s\">3</span>Car je voudrais moi-même être <button class=\"mot\" data-g=\"g-anathema\">anathème</button> et séparé de Christ pour mes frères, mes parents selon la chair, <span class=\"s\">4</span>qui sont Israélites, à qui appartiennent l'adoption, et la gloire, et les alliances, et la loi, et le culte, et les promesses, <span class=\"s\">5</span>et les patriarches, et de qui est issu, selon la chair, le Christ, qui est au-dessus de toutes choses, <button class=\"mot\" data-g=\"g-eulogetos\">Dieu béni éternellement</button>. Amen !",
+      "gloses": [
+        {
+          "id": "g-anathema",
+          "lemme": "anathème",
+          "html": "Le grec <span class=\"gr\">anathema</span> désigne ce qui est voué, séparé pour être détruit — un objet ou une personne retranchée de la communauté et livrée à la malédiction. Segond garde le mot grec tel quel, faute de terme français qui porte à la fois l'idée de rupture et de consécration inversée. La formule reprend presque mot pour mot la prière de Moïse en Exode 32, 32, quand il demande à être effacé du livre de Dieu plutôt que de voir périr son peuple : Paul se tient dans cette même lignée d'intercesseurs prêts à l'échange."
+        },
+        {
+          "id": "g-eulogetos",
+          "lemme": "Dieu béni éternellement",
+          "html": "Le grec porte <span class=\"gr\">eulogetos</span>, « béni », appliqué directement au Christ dans une construction que beaucoup de commentateurs, dont Calvin dans son commentaire sur l'épître aux Romains, lisent comme une affirmation nette de la divinité du Christ — « au-dessus de toutes choses, Dieu béni éternellement ». La ponctuation grecque ancienne ne portant pas de virgules, certains ont proposé de couper la phrase autrement pour éviter cette lecture ; Calvin rejette cette esquive et y voit une confession explicite, décisive dans un texte tout occupé par ailleurs du chagrin de Paul pour son peuple."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Matthieu 14, 22-33",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">22</span>Aussitôt après, il obligea les disciples à monter dans la barque et à passer avant lui de l'autre côté, pendant qu'il renverrait la foule. <span class=\"s\">23</span>Quand il l'eut renvoyée, il monta sur la montagne, pour prier à l'écart ; et, comme le soir était venu, il était là seul. <span class=\"s\">24</span>La barque, déjà au milieu de la mer, était battue par les flots ; car le vent était contraire. <span class=\"s\">25</span>À la quatrième veille de la nuit, Jésus alla vers eux, marchant sur la mer. <span class=\"s\">26</span>Quand les disciples le virent marcher sur la mer, ils furent troublés, et dirent : C'est un fantôme ! Et, dans leur frayeur, ils poussèrent des cris. <span class=\"s\">27</span>Jésus leur dit aussitôt : Rassurez-vous, <button class=\"mot\" data-g=\"g-egoeimi\">c'est moi</button> ; n'ayez pas peur ! <span class=\"s\">28</span>Pierre lui répondit : Seigneur, si c'est toi, ordonne que j'aille vers toi sur les eaux. <span class=\"s\">29</span>Et il dit : Viens ! Pierre sortit de la barque, et marcha sur les eaux, pour aller vers Jésus. <span class=\"s\">30</span>Mais, voyant que le vent était fort, il eut peur ; et, comme il commençait à enfoncer, il s'écria : Seigneur, sauve-moi ! <span class=\"s\">31</span>Aussitôt Jésus étendit la main, le saisit, et lui dit : <button class=\"mot\" data-g=\"g-oligopistos\">Homme de peu de foi</button>, pourquoi as-tu douté ? <span class=\"s\">32</span>Et ils montèrent dans la barque, et le vent cessa. <span class=\"s\">33</span>Ceux qui étaient dans la barque vinrent se prosterner devant Jésus, et dirent : Tu es véritablement le Fils de Dieu.",
+      "gloses": [
+        {
+          "id": "g-egoeimi",
+          "lemme": "c'est moi",
+          "html": "Le grec est <span class=\"gr\">ego eimi</span>, « je suis », formule qui traverse tout l'Évangile de Jean et qui traduit en Exode 3, 14 (LXX) le nom même que Dieu donne à Moïse au buisson ardent. Segond aplatit en « c'est moi », traduction naturelle pour désigner quelqu'un qu'on identifie dans le noir, mais qui masque au lecteur français l'écho que tout auditeur formé à la synagogue aurait entendu. Chrysostome, dans ses homélies sur Matthieu, relève que Jésus ne dit pas seulement « n'ayez pas peur » comme un homme rassurerait des amis, mais qu'il parle avec l'autorité de celui qui marche sur la mer que le Psaume 77 réserve au seul Dieu."
+        },
+        {
+          "id": "g-oligopistos",
+          "lemme": "Homme de peu de foi",
+          "html": "Le grec forge un seul mot, <span class=\"gr\">oligopistos</span>, « petit-croyant », que Segond déplie en « homme de peu de foi ». Matthieu est le seul évangéliste à employer ce terme, et il le réserve à ses propres disciples, jamais à des étrangers à la foi : c'est un mot pour l'intérieur de la communauté, pas une insulte pour l'extérieur. Chrysostome note que le reproche ne porte pas sur l'absence de foi mais sur son peu — Pierre a cru assez pour sortir de la barque, ce que nul autre n'a fait ; c'est cette foi véritable mais petite que le Christ vient saisir, non remplacer par une preuve."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Élie au Horeb",
+      "corps_html": "Élie fuit après le Carmel la vengeance de Jézabel et marche quarante jours jusqu'à l'Horeb (1 R 19, 8), reprenant la durée du séjour de Moïse sur cette même montagne (Ex 24, 18). Le récit deutéronomiste, composé ou remanié à l'époque de l'exil babylonien, relit ainsi la crise du prophète à la lumière du Sinaï : ce que Moïse avait reçu dans le feu et la nuée, Élie le reçoit épuisé, découragé, presque suicidaire (1 R 19, 4)."
+    },
+    {
+      "titre": "La quatrième veille",
+      "corps_html": "Le miracle suit immédiatement la multiplication des pains : Matthieu construit un diptyque eucharistique et théophanique. La « quatrième veille », d'après le découpage romain de la nuit, désigne les heures entre trois et six heures du matin — le moment le plus sombre avant l'aube. La traversée de la mer, dans l'Ancien Testament, est toujours le lieu où Dieu seul a pouvoir (Ps 77, 20 ; Jb 9, 8) : Matthieu situe donc la scène au cœur même du domaine réservé à l'Éternel."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui reste après le vent",
+    "variantes": [
+      "Il t'est arrivé de prier longtemps sans qu'il se passe rien de sensible — pas de paix qui descend, pas de mot qui s'impose, rien que le silence de ta propre voix qui se répète. Tu attendais peut-être, sans te l'avouer, un signe qui ressemble à ceux qu'on raconte : une émotion forte, une certitude soudaine, quelque chose comme un vent ou un feu. Et c'est souvent bien après, en repensant à cette prière aride, que tu reconnais qu'elle t'a changé — non par ce qu'elle t'a donné à sentir, mais par ce qu'elle a déposé sans bruit, comme ce murmure ténu qu'Élie n'a entendu qu'en sortant de la caverne, le visage couvert.",
+      "Tu as un jour pris une décision parce que tu croyais y être appelé — quitter quelque chose, t'engager, dire une vérité qu'il fallait dire — et pendant un instant tu as marché avec une assurance qui ne venait pas de toi. Puis la peur est revenue, non pas parce que l'appel était faux, mais parce que tu t'es mis à mesurer la force du vent plutôt que la voix qui t'avait fait sortir. Ce moment où tu commences à couler n'annule pas le premier pas ; il est le lieu précis où une main te cherche, et où ta petite foi, mêlée de doute, se laisse enfin saisir plutôt que prouver.",
+      "Il y a peut-être quelqu'un pour qui tu pries depuis des années sans qu'il en sache rien, quelqu'un que tu aimes et qui ne partage pas ce qui, pour toi, donne sens à tout — et cette prière n'a rien de tranquille, elle te coûte, elle revient te tordre le cœur à des moments que tu ne choisis pas. Tu voudrais parfois porter à sa place ce qui lui manque, donner ce que tu as reçu sans pouvoir le transmettre par la seule volonté. C'est ce déchirement précis, sans solution immédiate, que Paul nomme quand il dit vouloir être lui-même retranché pour les siens : une intercession qui ne moralise personne, qui reste devant Dieu sans réponse, et qui est déjà, en elle-même, une forme d'amour reçu avant d'être donné."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer cette page, laisse-toi rejoindre là où, précisément, tu n'attendais pas de signe.",
+    "geste": "Reste une minute sans rien demander à Dieu — ni paix, ni réponse, ni ressenti. Laisse seulement le silence être la forme de ta prière, comme Élie à l'entrée de la caverne.",
+    "note": "Rien à réussir dans cet exercice : le silence n'est pas une performance de recueillement, il est l'espace laissé libre pour une parole qui n'est pas la tienne."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore un vent, un feu ou un tremblement de terre pour croire que Dieu est passé — et pourrais-tu reconnaître sa voix dans ce qui n'a fait aucun bruit ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la mer sous les pieds",
+      "corps_html": "Jean Chrysostome, dans son homélie 50 sur l'Évangile de Matthieu, remarque que le Christ ne commence pas par apaiser la tempête : il laisse ses disciples y ramer une bonne partie de la nuit avant de venir. La présence précède la délivrance ; le Seigneur forme leur patience avant de calmer leur mer, afin qu'ils apprennent à le reconnaître dans l'épreuve elle-même, non seulement après qu'elle a cessé.",
+      "attribution": "Jean Chrysostome, Homélies sur l'Évangile de Matthieu, homélie 50"
+    },
+    {
+      "titre": "Calvin : une foi petite mais réelle",
+      "corps_html": "Calvin, commentant ce passage dans son Harmonie des trois évangélistes, refuse d'opposer la foi et le doute de Pierre comme deux états successifs et étrangers l'un à l'autre : le même mouvement qui le fait sortir de la barque le fait ensuite regarder le vent. La foi, écrit-il, n'est jamais chez l'homme un bloc achevé ; elle subsiste sous le doute qui l'assaille, et c'est cette foi-là, mêlée, que le Christ vient saisir de sa main.",
+      "attribution": "Jean Calvin, Harmonie des trois évangélistes, sur Matthieu 14"
+    },
+    {
+      "titre": "Les rabbins et la voix de silence",
+      "corps_html": "La tradition rabbinique a longuement médité l'expression de 1 Rois 19, 12, y lisant que la révélation elle-même se donne davantage dans le retrait que dans l'éclat — un enseignement repris plus tard par les maîtres hassidiques, pour qui le vrai service de Dieu commence où cesse le vacarme religieux. Ce texte devient ainsi, dans la lecture juive comme chrétienne, une école du silence intérieur préalable à toute écoute véritable.",
+      "attribution": "Tradition rabbinique sur 1 Rois 19"
+    }
+  ]
+}
