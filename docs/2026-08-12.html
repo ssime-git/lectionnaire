@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La marque — mercredi 12 août 2026</title>
+<meta name="description" content="Le jour où la gloire quitte le Temple pierre par pierre, et où le Christ promet d'habiter, lui, au milieu de deux ou trois.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 12 août 2026 · 19ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>La <span class="it">marque</span></h1>
+    <p class="chapeau">Le jour où la gloire quitte le Temple pierre par pierre, et où le Christ promet d'habiter, lui, au milieu de deux ou trois.</p>
+    <figure class="gravure" aria-label="Un homme vêtu de lin trace un signe sur le front d'une silhouette inclinée, au premier plan ; derrière eux, six figures armées se tiennent immobiles, l'instrument au poing ; au-dessus, des ailes de chérubins se soulèvent du seuil du Temple vers une porte ouverte à l'orient, dans le trait sec d'une gravure sur bois."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 132 h60"/><path d="M55 132 q0 -34 12 -46 q10 -10 4 -22"/><path d="M71 64 q6 4 2 12"/><path d="M67 132 v-30 q0 -14 -8 -20"/><path d="M63 82 h16"/><path d="M52 108 q10 -18 22 0"/><path d="M14 132 q2 -30 -3 -46"/><path d="M11 86 q-4 -6 2 -12"/><path d="M8 132 v-32"/><path d="M2 100 h18"/><path d="M4 132 q6 -14 0 -30"/><path d="M96 132 q1 -28 -4 -44"/><path d="M92 88 q-5 -6 1 -12"/><path d="M89 132 v-30"/><path d="M83 98 h18"/><path d="M85 132 q6 -12 0 -28"/><path d="M132 132 q1 -28 -4 -44"/><path d="M128 88 q-5 -6 1 -12"/><path d="M125 132 v-30"/><path d="M119 98 h18"/><path d="M121 132 q6 -12 0 -28"/><path d="M168 132 q1 -28 -4 -44"/><path d="M164 88 q-5 -6 1 -12"/><path d="M161 132 v-30"/><path d="M155 98 h18"/><path d="M157 132 q6 -12 0 -28"/><path d="M204 132 q1 -28 -4 -44"/><path d="M200 88 q-5 -6 1 -12"/><path d="M197 132 v-30"/><path d="M191 98 h18"/><path d="M193 132 q6 -12 0 -28"/><path d="M240 132 q1 -28 -4 -44"/><path d="M236 88 q-5 -6 1 -12"/><path d="M233 132 v-30"/><path d="M227 98 h18"/><path d="M229 132 q6 -12 0 -28"/><path d="M6 132 h316"/></g><g class="trait-rubrique"><path d="M266 30 q20 -10 44 4"/><path d="M270 34 q18 -6 36 4"/><path d="M282 22 q4 6 0 12"/><path d="M296 22 q4 6 0 12"/></g><g class="trait-liturgie"><path d="M300 10 v34"/><path d="M300 10 q14 4 16 16"/><path d="M300 22 q10 3 12 12"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ez 9, 1-7 ; 10, 18-22 — Segond, 1910</p>
+        <div class="ecriture "><p><span class="s">1</span> Puis il cria d'une voix forte à mes oreilles : Approchez, vous qui devez châtier la ville. Que chacun tienne en main son instrument de destruction.</p><p><span class="s">2</span> Et voici, six hommes arrivèrent par le chemin de la porte supérieure qui regarde le septentrion, chacun avec son instrument de destruction dans la main. Il y avait au milieu d'eux un homme <button class="mot" data-g="g-lin">vêtu de lin</button>, portant une <button class="mot" data-g="g-ecritoire">écritoire</button> à la ceinture. Ils vinrent se placer près de l'autel d'airain.</p><p><span class="s">3</span> La <button class="mot" data-g="g-gloire">gloire</button> du Dieu d'Israël s'éleva du chérubin sur lequel elle était, et se dirigea vers le seuil de la maison ; et il appela l'homme vêtu de lin, et portant une écritoire à la ceinture.</p><p><span class="s">4</span> L'Éternel lui dit : Passe au milieu de la ville, au milieu de Jérusalem, et fais une <button class="mot" data-g="g-marque">marque</button> sur le front des hommes qui <button class="mot" data-g="g-gemissent">soupirent et qui gémissent</button> à cause de toutes les abominations qui s'y commettent.</p><p><span class="s">5</span> Et, à mes oreilles, il dit aux autres : Passez après lui dans la ville, et frappez ; que votre œil soit sans pitié, et n'ayez point de miséricorde.</p><p><span class="s">6</span> Tuez, détruisez les vieillards, les jeunes hommes, les vierges, les enfants et les femmes ; mais n'approchez pas de quiconque aura sur lui la marque ; et commencez par mon sanctuaire ! Ils commencèrent par les anciens qui étaient devant la maison.</p><p><span class="s">7</span> Il leur dit : Souillez la maison, et remplissez de morts les parvis !... Sortez !... Ils sortirent, et ils frappèrent dans la ville.</p><p class="charniere"><em>(Entre les deux scènes, la gloire achève sa sortie : du chérubin au seuil, du seuil à la porte orientale.)</em></p><p><span class="s">18</span> La gloire de l'Éternel se retira du seuil de la maison, et se plaça sur les chérubins.</p><p><span class="s">19</span> Les chérubins déployèrent leurs ailes, et s'élevèrent de terre sous mes yeux quand ils partirent, accompagnés des roues ; et ils se posèrent à l'entrée de la porte orientale de la maison de l'Éternel, et la gloire du Dieu d'Israël était sur eux, en haut.</p><p><span class="s">20</span> C'étaient les animaux que j'avais vus sous le Dieu d'Israël près du fleuve du Kebar, et je reconnus que c'étaient des <button class="mot" data-g="g-cherubins">chérubins</button>.</p><p><span class="s">21</span> Chacun avait quatre faces, chacun avait quatre ailes, et une forme de main d'homme était sous leurs ailes.</p><p><span class="s">22</span> La ressemblance de leurs faces, c'était les faces que j'avais vues près du fleuve du Kebar, leur aspect et elles-mêmes. Ils allaient chacun droit devant soi.</p></div>
+        <div class="glose" id="g-lin"><span class="lemme">baddim</span> L'hébreu <span class="gr">baddim</span> désigne le lin porté par les prêtres, notamment le grand prêtre au jour des expiations (Lv 16,4). Segond traduit platement « vêtu de lin », effaçant le registre sacerdotal du terme : cet ange scribe n'est pas un simple messager, il agit comme un médiateur cultuel entre le sanctuaire et la ville. Origène voyait déjà dans cette figure un intercesseur céleste, revêtu comme pour officier.</div>
+        <div class="glose" id="g-ecritoire"><span class="lemme">qeset</span> Le mot hébreu <span class="gr">qeset</span> est un emprunt à l'égyptien, désignant la palette de scribe avec son godet d'encre, attesté dans les papyrus administratifs d'Égypte. Segond garde « écritoire », traduction correcte mais qui masque l'exotisme du terme : Ézéchiel, en exil à Babylone, emprunte une image égyptienne de comptabilité pour figurer le compte que Dieu tient des vivants et des morts. Jérôme, dans son commentaire sur Ézéchiel, relevait déjà l'étrangeté du vocabulaire technique.</div>
+        <div class="glose" id="g-gloire"><span class="lemme">kavod</span> Le <span class="gr">kavod</span> hébreu vient d'une racine qui signifie « être lourd, peser » : la gloire de Dieu est d'abord un poids, une masse qui a du corps, non une abstraction d'honneur. Segond traduit « gloire », ce qui aplatit la charge sensorielle du mot. Calvin, commentant ce texte, insiste : ce kavod n'est pas un titre mais la présence même de Dieu, sur le point de quitter sa maison comme un époux quitte le foyer qu'il a aimé.</div>
+        <div class="glose" id="g-marque"><span class="lemme">tav</span> L'hébreu <span class="gr">tav</span> signifie simplement « un signe », mais tav est aussi la dernière lettre de l'alphabet hébreu, tracée en paléo-hébreu sous la forme d'une croix. Segond traduit sobrement « marque », perdant le jeu de mots : le signe qui épargne du jugement a, dans son tracé même, la forme d'une croix avant la lettre. Tertullien lira ce tav comme la préfiguration du signe tracé sur le front des baptisés.</div>
+        <div class="glose" id="g-gemissent"><span class="lemme">ne'enachim</span> L'hébreu emploie deux verbes, <span class="gr">ne'enachim</span> et <span class="gr">ne'enaqim</span>, qui décrivent un gémissement viscéral, sous le poids d'un fardeau ou d'une douleur, plutôt qu'une simple désapprobation morale. Segond traduit « soupirent et... gémissent », fidèle mais plus doux que la répétition gutturale de l'hébreu, qui imite presque le bruit de la souffrance. Ce que Dieu marque pour le salut n'est pas l'indignation vertueuse, mais le chagrin mis à nu par le mal environnant.</div>
+        <div class="glose" id="g-cherubins"><span class="lemme">keruvim</span> Les <span class="gr">keruvim</span> de la Torah ne sont pas de tendres angelots mais des gardiens composites, postés à la porte d'Éden (Gn 3,24) et flanquant l'arche : des sentinelles de la sainteté, non des figures décoratives. Segond conserve la translittération « chérubins », mais le lecteur doit entendre « garde », non « enfant ailé ». Leur départ avec la gloire signifie que le mobilier même chargé de garder la présence de Dieu abandonne Jérusalem, seuil après seuil, porte après porte.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 112 (113), 1-2, 3-4, 5-6 — Segond, 1910</p>
+        <div class="ecriture psaume"><p><span class="s">1</span> <button class="mot" data-g="g-louez">Louez</button> l'Éternel ! Serviteurs de l'Éternel, louez, Louez le nom de l'Éternel !</p><p><span class="s">2</span> Que le nom de l'Éternel soit béni, Dès maintenant et à jamais !</p><p><span class="s">3</span> Du lever du soleil jusqu'à son couchant, Que le nom de l'Éternel soit célébré !</p><p><span class="s">4</span> L'Éternel est élevé au-dessus de toutes les nations, Sa gloire est au-dessus des cieux.</p><p><span class="s">5</span> Qui est semblable à l'Éternel, notre Dieu, Qui a sa demeure en haut,</p><p><span class="s">6</span> Qui <button class="mot" data-g="g-abaisse">s'abaisse</button> pour regarder Ce qui est en haut et en bas ?</p></div>
+        <div class="glose" id="g-louez"><span class="lemme">halelu</span> L'impératif pluriel <span class="gr">halelu</span>, de la racine hillel, ouvre trois fois le premier verset : ce n'est pas une simple invitation mais un appel incantatoire, martelé. Segond traduit exactement « louez », mais l'oreille française perd la répétition rythmique de l'hébreu, qui forme d'ailleurs le mot même de « hallelu-Yah ». La tradition rabbinique place ce psaume en tête du Hallel récité à Pâque — le psaume même que Jésus a pu chanter avec ses disciples avant Gethsémani.</div>
+        <div class="glose" id="g-abaisse"><span class="lemme">hamashpili</span> Le participe hébreu <span class="gr">hamashpili</span>, de la racine shafel, « être bas », signifie littéralement « celui qui s'abaisse », accolé sans transition à « qui a sa demeure en haut ». Segond traduit fidèlement « s'abaisse », mais la sobriété française atténue le choc de l'hébreu, qui tient dans un même souffle la transcendance et la condescendance de Dieu, le ciel et la poussière. Calvin note que cet abaissement n'est pas faiblesse mais la forme même de la majesté divine, qui « s'abaisse pour regarder », c'est-à-dire pour agir en faveur de ce qui est en bas.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 18, 15-20 — Segond, 1910</p>
+        <div class="ecriture evangile"><p><span class="s">15</span> Si ton frère a péché contre toi, va et <button class="mot" data-g="g-reprends">reprends-le</button> entre toi et lui seul. S'il t'écoute, tu as gagné ton frère.</p><p><span class="s">16</span> Mais, s'il ne t'écoute pas, prends avec toi une ou deux personnes, afin que toute l'affaire se règle sur la déposition de deux ou de trois témoins.</p><p><span class="s">17</span> S'il refuse de les écouter, dis-le à l'<button class="mot" data-g="g-eglise">Église</button> ; et s'il refuse aussi d'écouter l'Église, qu'il soit pour toi comme un païen et un publicain.</p><p><span class="s">18</span> Je vous le dis en vérité, tout ce que vous <button class="mot" data-g="g-lierdelier">lierez</button> sur la terre sera lié dans le ciel, et tout ce que vous délierez sur la terre sera délié dans le ciel.</p><p><span class="s">19</span> Je vous dis encore que, si deux d'entre vous s'accordent sur la terre pour demander une chose quelconque, elle leur sera accordée par mon Père qui est dans les cieux.</p><p><span class="s">20</span> Car là où deux ou trois sont <button class="mot" data-g="g-assembles">assemblés</button> en mon nom, je suis au milieu d'eux.</p></div>
+        <div class="glose" id="g-reprends"><span class="lemme">elenxon</span> Le grec <span class="gr">elenxon</span> vient d'elenchō, « démasquer, réfuter, mettre en pleine lumière » : un terme de procédure judiciaire ou rhétorique, employé de l'Esprit qui « convainc » le monde (Jn 16,8) ou de l'évêque qui doit « réfuter » les contradicteurs (Tt 1,9). Segond traduit « reprends-le », plus doux que l'âpreté forensique du grec. Chrysostome insiste : cet elenchos doit avoir lieu « entre toi et lui seul », précisément pour éviter que la faute ne devienne honte publique plutôt que vérité rétablie.</div>
+        <div class="glose" id="g-eglise"><span class="lemme">ekklesia</span> Le grec <span class="gr">ekklesia</span>, « assemblée convoquée », traduit dans la Septante la convocation d'Israël et n'apparaît que deux fois dans les évangiles, toutes deux chez Matthieu. Segond traduit « Église », ce qui fait déjà entendre une institution que les premiers auditeurs de Matthieu n'y percevaient pas encore ; ils y entendaient plutôt la communauté locale rassemblée. Origène note que l'ekklesia ici désigne le lieu où les croyants se réunissent pour juger dans la charité, non un tribunal lointain.</div>
+        <div class="glose" id="g-lierdelier"><span class="lemme">deo-luo</span> Les verbes grecs <span class="gr">dēsēte</span> et <span class="gr">lysēte</span>, « lier » et « délier », traduisent un vocabulaire juridique rabbinique technique : déclarer une pratique « liée », c'est-à-dire interdite, ou « déliée », c'est-à-dire permise. Déjà confié à Pierre seul en Mt 16,19, ce pouvoir est ici étendu à la communauté rassemblée pour corriger. Segond traduit littéralement « lierez... délierez », sans faire entendre qu'il s'agit d'un discernement autorisé et non d'un pouvoir magique — lecture déjà présente dans les pratiques pénitentielles anciennes.</div>
+        <div class="glose" id="g-assembles"><span class="lemme">synegmenoi</span> Le grec <span class="gr">synēgmenoi</span> est un participe passif parfait, « ayant été rassemblés » — de la même racine que synagōgē. La voix passive compte : ce ne sont pas eux qui se réunissent, ils ont été rassemblés par une action qui ne vient pas d'eux. Segond garde « assemblés », mais une oreille moderne peut manquer que Matthieu nomme ainsi, par avance, ce que deviendra l'Église : un rassemblement divin, non une simple convocation humaine. C'est le verset le plus cité par les Pères, dont Tertullien, pour affirmer que la présence du Christ n'attend ni le nombre ni la hiérarchie.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une vision datée, avant la ruine réelle</h3><p><p>La vision des chapitres 8 à 11 d'Ézéchiel se date, selon le texte lui-même, du sixième mois de la sixième année de l'exil, vers septembre 592 avant notre ère (Ez 8,1) — cinq ans avant la destruction effective du Temple en 587. Ézéchiel, prêtre déporté à Babylone, voit par avance ce que Jérusalem refuse encore de croire : la gloire quitte les lieux saints avant même que l'ennemi n'y entre.</p></p></div>
+      <div><h3>Un discours encadré par la miséricorde</h3><p><p>Ce passage appartient au quatrième des cinq grands discours de Matthieu, le « discours ecclésial » (ch. 18). Il suit la parabole de la brebis perdue, qui refuse qu'un seul se perde, et précède celle du serviteur impitoyable, qui refuse qu'un pardon reçu reste sans suite : la correction fraternelle est ainsi encadrée, en amont et en aval, par l'exigence de la miséricorde.</p></p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Une présence qui change d'adresse</h2>
+<p>Tu as pu, dans un lieu où tu avais l'habitude de prier, sentir un jour que quelque chose s'était retiré — les mêmes mots, le même banc, mais plus personne en face de toi, comme si le lieu avait été vidé sans bruit. Tu as continué par fidélité, sans rien sentir, parfois pendant des mois. Puis, un soir, ce n'est pas dans ce lieu que la présence est revenue, mais dans une parole vraie échangée avec une seule personne, à deux, sans public — et tu as compris que Dieu n'avait pas déserté : il avait changé d'adresse.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de refermer cette page, laisse venir ce que tu tais habituellement — un chagrin que tu n'oses pas nommer, ou une personne que tu évites plutôt que d'aller lui parler en face.</p>
+      <p class="geste">Nomme, en silence devant Dieu, une personne que tu évites de rencontrer seul à seul — et demande la force d'aller lui parler, avant d'en parler à quiconque d'autre.</p>
+      <small>Ce n'est pas d'avoir raison qui est promis dans ce texte, mais une présence, au milieu de deux ou trois, quand la démarche coûte.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu tais aujourd'hui — un chagrin inavoué, ou une parole à quelqu'un que tu n'as jamais osé rencontrer seul à seul ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le tav et la croix</h3>
+          <p><p>Tertullien, expliquant contre Marcion pourquoi la lettre grecque tau et la lettre hébraïque tav préfigurent le signe du Christ, s'appuie sur ce texte d'Ézéchiel : la marque tracée sur le front des affligés a, dans l'écriture paléo-hébraïque, la forme d'une croix. Ce que le prophète voit comme un signe de survie au jugement, l'Église y a lu par avance le signe même qui sauve.</p></p>
+<p class="attrib">Tertullien, Contre Marcion, III, 22</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une gloire qui ne s'en va pas sans se retourner</h3>
+          <p><p>Dans ses leçons inachevées sur Ézéchiel, Calvin insiste sur la lenteur du départ : la gloire ne bondit pas hors du Temple, elle se retire du chérubin au seuil, puis du seuil à la porte, comme un époux qui hésite à quitter une maison qu'il a aimée. Ce n'est pas l'indifférence qui chasse Dieu, dit Calvin, c'est la sainteté qui ne peut plus habiter ce que le péché a rendu inhabitable.</p></p>
+<p class="attrib">Calvin, Leçons sur le prophète Ézéchiel</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Corriger seul à seul, pour ne pas juger en public</h3>
+          <p><p>Chrysostome remarque que Jésus ne dit pas d'abord « dis-le à l'Église » mais « entre toi et lui seul » : la première démarche protège le frère fautif de la honte publique, elle vise sa guérison, non sa condamnation. Ce n'est que devant le refus obstiné que le cercle s'élargit — et encore, pour établir la vérité, non pour exposer la faute.</p></p>
+<p class="attrib">Chrysostome, Homélies sur l'évangile de Matthieu, homélie LX</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 19ème Semaine du Temps Ordinaire — Ez 9, 1-7 ; 10, 18-22 ; Mt 18, 15-20.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
