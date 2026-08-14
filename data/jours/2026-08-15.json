@@ -1,0 +1,146 @@
+{
+  "date": "2026-08-15",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Solennité de la Vierge Marie",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Ch 15, 3-4.15-16 ; 16, 1-2 ; 1 Co 15, 54b-57 ; Lc 11, 27-28",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M175 55 l45 40 h60 l20 25 h-140 l20 -25 h60 z\"/><path d=\"M195 55 v-14 h6 v14\"/><path d=\"M235 55 v-20 h6 v20\"/><path d=\"M175 95 v33 M215 95 v33 M255 95 v33\"/><path d=\"M120 128 q60 -20 78 -18\"/><path d=\"M198 108 h64 v18 h-64 z\"/><path d=\"M198 108 l10 -8 h44 l10 8\"/><path d=\"M212 108 v18 M226 108 v18 M240 108 v18 M254 108 v18\"/><path d=\"M100 100 l-14 22 M158 100 l14 22\"/></g><g class=\"trait-liturgie\"><path d=\"M50 128 q-2 -20 6 -28 q3 10 -1 16 q6 -14 -2 -30 q9 15 3 30 q5 -4 3 -11 q5 13 -9 23\"/></g><g class=\"trait-rubrique\"><path d=\"M46 92 q4 -10 10 -6\"/><path d=\"M38 100 q6 -8 20 -8\"/></g></svg>",
+  "titre": "Le lieu du repos",
+  "titre_html": "Le lieu <span class=\"it\">du repos</span>",
+  "sous_titre": "Vigile de l'Assomption de la Vierge Marie",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une procession d'hommes portant sur leurs épaules, au moyen de longues barres, un coffre sacré orné de motifs simples, montant vers une ville fortifiée sur une colline ; au premier plan, une femme se tient à l'écart, les mains jointes, le visage tourné non vers le cortège mais vers le ciel.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Ch 15, 3-4.15-16 ; 16, 1-2",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">3</span> David assembla tout Israël à Jérusalem, pour faire monter l'<button class=\"mot\" data-g=\"g-arche\">arche</button> de l'Éternel à la place qu'il lui avait préparée. <span class=\"s\">4</span> Et David assembla les fils d'Aaron et les Lévites.</p><p><span class=\"s\">15</span> Les fils des Lévites portèrent l'arche de Dieu sur les <button class=\"mot\" data-g=\"g-epaules\">épaules</button>, avec des barres, comme Moïse l'avait ordonné suivant la parole de l'Éternel. <span class=\"s\">16</span> David dit aux chefs des Lévites de disposer leurs frères les <button class=\"mot\" data-g=\"g-chantres\">chantres</button> avec des instruments de musique, des luths, des harpes et des cymbales, pour faire retentir avec éclat des sons de réjouissance.</p><p>Chapitre seize. <span class=\"s\">1</span> Après qu'on eut amené l'arche de Dieu, on la plaça au milieu de la tente que David avait dressée pour elle, et l'on offrit devant Dieu des holocaustes et des sacrifices d'actions de grâces. <span class=\"s\">2</span> Quand David eut achevé d'offrir les holocaustes et les sacrifices d'actions de grâces, il bénit le peuple au nom de l'Éternel.</p>",
+      "gloses": [
+        {
+          "id": "g-arche",
+          "lemme": "arche",
+          "html": "En hébreu אָרוֹן, aron — le mot désigne simplement un coffre, une caisse ; c'est celui qu'on emploie aussi pour le cercueil de Joseph en Égypte (Genèse 50,26). Segond le traduit par « arche », du latin arca, un choix qui a fini par sacraliser un mot très ordinaire et qui masque, pour le lecteur français, la nudité concrète de l'objet : une boîte de bois portée par des hommes. Ce coffre très simple contient pourtant les tables de la Loi et devient, dans tout le récit, le lieu où Dieu se rend présent à son peuple — au point que sa manutention correcte ou incorrecte engage la vie de ceux qui la touchent (1 Chroniques 13,9-10)."
+        },
+        {
+          "id": "g-epaules",
+          "lemme": "épaules",
+          "html": "L'hébreu כָּתֵף, katheph, l'épaule, apparaît ici en écho délibéré à la loi de Moïse : les fils de Kehath devaient porter les objets sacrés « sur l'épaule », jamais sur un chariot, sous peine de mort (Nombres 4,15 ; 7,9). Or au chapitre précédent, David avait justement fait transporter l'arche sur un « char neuf », à la manière philistine, et Uzza en était mort en la retenant de la main (1 Chroniques 13,7-10). Le texte souligne donc que ce n'est pas la ferveur de David qui manquait la première fois, mais l'obéissance à la forme prescrite — d'où sa propre reconnaissance en 15,13 : « nous ne l'avons pas cherché selon ce qui est ordonné »."
+        },
+        {
+          "id": "g-chantres",
+          "lemme": "chantres",
+          "html": "Le texte hébreu énumère des instruments dont l'identification exacte reste débattue par les traducteurs : נְבָלִים (nebalim) et כִּנֹּרוֹת (kinnorot), que Segond rend par « luths » et « harpes », et מְצִלְתַּיִם (metsiltayim), les cymbales. Calvin, peu suspect de goût pour le faste liturgique, note dans sa préface au Commentaire sur les Psaumes que ces instruments appartenaient à la pédagogie de l'ancienne alliance, adaptée à l'enfance du peuple, et que leur usage n'oblige en rien l'Église chrétienne devenue adulte dans la louange spirituelle. La question reste ouverte, mais elle rappelle que la joie d'Israël devant l'arche s'exprimait à pleine voix et à plein corps, sans retenue."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 131, 7-8, 9-10, 13-14",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">7</span> Allons à sa demeure, prosternons-nous devant son <button class=\"mot\" data-g=\"g-marchepied\">marchepied</button> ! <span class=\"s\">8</span> Lève-toi, Éternel, viens à ton <button class=\"mot\" data-g=\"g-repos\">lieu de repos</button>, toi et l'arche de ta majesté !</p><p><span class=\"s\">9</span> Que tes sacrificateurs soient revêtus de justice, et que tes bien-aimés poussent des cris de joie ! <span class=\"s\">10</span> A cause de David, ton serviteur, ne repousse pas ton oint !</p><p><span class=\"s\">13</span> Car l'Éternel a choisi Sion, il l'a désirée pour sa demeure : <span class=\"s\">14</span> C'est mon lieu de repos à toujours ; j'y habiterai, car je l'ai désirée.</p>",
+      "gloses": [
+        {
+          "id": "g-marchepied",
+          "lemme": "marchepied",
+          "html": "L'hébreu הֲדֹם רַגְלָיו, hadom raglav, le tabouret ou l'escabeau de ses pieds, désigne ailleurs l'arche elle-même (1 Chroniques 28,2 : « l'arche de l'alliance de l'Éternel, qui sert de marchepied à notre Dieu »). Segond garde l'image concrète plutôt que de l'estomper en un vague « présence » ou « sanctuaire ». Augustin, commentant ce même psaume dans ses Enarrationes in Psalmos, s'arrête sur ce verset et l'entend de la chair assumée par le Christ : adorer là où ses pieds se sont tenus, c'est adorer Dieu devenu accessible dans un corps véritable, pris d'une femme. Le marchepied, humble et matériel, devient ainsi la figure de l'incarnation elle-même."
+        },
+        {
+          "id": "g-repos",
+          "lemme": "repos",
+          "html": "מְנוּחָה, menuchah, vient de la racine נוח, se reposer — la même qui donne son nom à Noé. Segond traduit fidèlement « lieu de repos », mais le mot porte dans toute la Bible un poids qui dépasse le simple arrêt : c'est le repos que cherche l'arche de Noé sur l'Ararat (Genèse 8,4), celui que Dieu promet à Israël dans le pays (Deutéronome 12,9-10), celui enfin que l'épître aux Hébreux relit comme un repos qui demeure ouvert au peuple de Dieu (Hébreux 4,9). Ici, c'est Dieu lui-même qu'on invite à venir se reposer parmi les siens — inversion frappante d'un verbe presque toujours adressé à l'homme."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Co 15, 54b-57",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">54</span> ...la mort a été engloutie dans la <button class=\"mot\" data-g=\"g-victoire\">victoire</button>. <span class=\"s\">55</span> O mort, où est ta victoire ? O mort, où est ton <button class=\"mot\" data-g=\"g-aiguillon\">aiguillon</button> ? <span class=\"s\">56</span> L'aiguillon de la mort, c'est le péché ; et la puissance du péché, c'est la loi. <span class=\"s\">57</span> Mais grâces soient rendues à Dieu, qui nous donne la victoire par notre Seigneur Jésus-Christ !</p>",
+      "gloses": [
+        {
+          "id": "g-victoire",
+          "lemme": "victoire",
+          "html": "Le grec de Paul, νῖκος, nikos, traduit ici un texte qu'il cite librement d'après la version grecque d'Osée 13,14 : là où l'hébreu du prophète parle de « peste » et de « destruction » envoyées contre la mort, la Septante avait déjà glissé vers « victoire » — et c'est cette formulation que Paul reprend et proclame accomplie. Segond traduit « victoire » sans indiquer au lecteur français ce déplacement, qui montre pourtant comment l'apôtre relit l'Écriture d'Israël à la lumière de la résurrection déjà survenue. Ce que le prophète annonçait comme une menace de Dieu contre le séjour des morts devient, en Christ, une promesse tenue pour tout croyant."
+        },
+        {
+          "id": "g-aiguillon",
+          "lemme": "aiguillon",
+          "html": "κέντρον, kentron, c'est le dard qui pique — celui du scorpion, ou l'aiguillon dont on pousse les bœufs récalcitrants, l'image même qu'emploie Luc pour Saul sur le chemin de Damas (Actes 26,14 : « il te serait dur de regimber contre les aiguillons »). Segond garde le mot concret plutôt que de l'abstraire en « puissance » de la mort. Chrysostome, dans ses homélies sur cette épître, insiste sur le fait que Paul ne nie pas que la mort continue de piquer le corps des croyants, mais que son venin — le péché qui l'armait — lui a été retiré : elle reste un dard, mais un dard désarmé."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 27-28",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">27</span> Tandis que Jésus parlait ainsi, une femme, élevant la voix du milieu de la foule, lui dit : <button class=\"mot\" data-g=\"g-heureux\">Heureux</button> le sein qui t'a porté ! heureuses les mamelles qui t'ont allaité ! <span class=\"s\">28</span> Et il répondit : Heureux plutôt ceux qui écoutent la parole de Dieu, et qui la <button class=\"mot\" data-g=\"g-garder\">gardent</button> !</p>",
+      "gloses": [
+        {
+          "id": "g-heureux",
+          "lemme": "heureux",
+          "html": "μακάριος, makarios, est le mot même des Béatitudes de Matthieu 5 : ce n'est pas un simple constat de chance, mais la déclaration solennelle d'un état conforme au dessein de Dieu. La femme de la foule l'emploie selon un usage courant — bienheureuse la mère d'un grand homme — qui honore Marie pour un fait biologique dont elle n'est en rien l'auteur. Jésus reprend exactement le même mot, mais déplace son objet : ce n'est plus la chair qui porte, c'est l'oreille qui écoute et la volonté qui obéit — un déplacement qui, loin d'exclure Marie, l'inclut désormais pour de bonnes raisons."
+        },
+        {
+          "id": "g-garder",
+          "lemme": "gardent",
+          "html": "Le grec φυλάσσοντες, de φυλάσσω, garder, veiller sur, est presque le même verbe que Luc emploie deux fois pour Marie elle-même, qui « gardait toutes ces choses dans son cœur » (Luc 2,19 et 2,51, συνετήρει). Le rapprochement n'est pas fortuit : Luc construit son évangile pour que Marie soit elle-même la première à vivre la béatitude que son fils énonce ici. Augustin le formule sans détour dans son traité De la sainte virginité : « Marie est plus bienheureuse d'avoir reçu la foi du Christ que d'avoir conçu la chair du Christ » — heureuse d'abord parce qu'elle a gardé la parole, non parce qu'elle a porté un corps."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une leçon retenue",
+      "corps_html": "Le récit de 1 Chroniques 15 ne se comprend qu'en regard de l'échec du chapitre précédent : une première tentative de transporter l'arche sur un chariot avait coûté la vie à Uzza (13,9-10) et David, effrayé, avait renoncé pendant trois mois (13,12-14). Le Chroniste, qui écrit après l'exil pour une communauté soucieuse de reconstruire un culte fidèle, insiste sur cette reprise en main : ce que la ferveur seule ne pouvait obtenir, l'obéissance précise à la Loi de Moïse le permet. Le texte enseigne ainsi que la proximité de Dieu ne se force pas, elle se reçoit selon l'ordre qu'il a lui-même fixé."
+    },
+    {
+      "titre": "Pourquoi ces quatre textes ensemble",
+      "corps_html": "Ces lectures forment la messe de la vigile du 15 août, jour où l'Église catholique romaine célèbre l'Assomption de Marie — fête ancienne, attestée en Orient dès le sixième siècle, et dont le contenu dogmatique fut précisé par Pie XII en 1950. Le lectionnaire tresse ensemble l'arche portée vers sa demeure, la victoire sur la mort proclamée par Paul et la parole de Jésus sur la vraie béatitude, pour orienter le regard non vers un privilège physique mais vers l'écoute obéissante — une lecture qu'un protestant peut recevoir sans en partager le dogme, en s'attachant au texte de Luc lui-même."
+    }
+  ],
+  "analogie": {
+    "titre": "Porter, garder",
+    "variantes": [
+      "Il y a des années où tu pries, où tu lis, où tu obéis à ce que tu crois juste, sans qu'aucun signe ne vienne te dire que cela sert à quelque chose. Tu continues pourtant, non par vertu spéciale, mais parce qu'il n'y a rien d'autre à faire de sincère avec ce que tu crois. Puis un jour — une décision difficile, une tentation ancienne qui ne mord plus, une parole juste qui sort de ta bouche sans que tu l'aies préparée — tu comprends que quelque chose s'est formé en toi pendant tout ce temps où tu ne voyais rien. Ce n'est pas la ferveur du moment qui t'a changé, c'est la fidélité répétée d'une écoute que tu croyais stérile : c'est cela, très exactement, que Jésus appelle heureux.",
+      "Il y a une manière de porter un souci — un proche malade, une responsabilité qu'on ne t'a pas vraiment demandée, une culpabilité ancienne — qui consiste à le tenir serré, à le retenir de la main comme si tout allait s'effondrer si tu relâchais un instant ta prise. Cette manière-là épuise, et souvent elle échoue quand même. Puis, parfois, tu apprends à le porter autrement — remis sur tes épaules plutôt que crispé entre tes doigts, confié à un ordre que tu n'as pas inventé, une prière régulière, un conseil reçu, un rythme qui n'est pas de ton invention. Le poids ne change pas, mais toi tu cesses de le retenir de force — et c'est alors seulement qu'il devient supportable, qu'un lieu de repos s'ouvre au milieu du fardeau.",
+      "Il y a une peur de la mort qui ne se discute pas, qui revient au détour d'une phrase entendue à un enterrement, d'une date anniversaire, d'un examen médical qu'on attend — une morsure brève mais réelle, même chez qui croit fermement à la résurrection. Tu ne la fais pas taire en te raisonnant. Mais il arrive qu'au milieu d'une prière ordinaire, sans que rien n'ait changé dans ta situation, cette morsure perde soudain sa force — non parce que la mort a disparu de l'horizon, mais parce qu'un autre horizon, plus loin, s'est rendu réel pour toi l'espace d'un instant. Ce déplacement-là, aussi bref soit-il, c'est déjà la victoire dont parle Paul se frayant un chemin en toi."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte de ce jour ne demande pas d'imiter un privilège que tu n'as pas, mais d'exercer une écoute que tu peux exercer aujourd'hui même.",
+    "geste": "Choisis une phrase parmi les lectures de ce jour — « heureux ceux qui écoutent la parole de Dieu et qui la gardent », ou « où est ton aiguillon, ô mort » — et porte-la, écrite sur un papier ou simplement redite en marchant, jusqu'au soir.",
+    "note": "Ne cherche pas à ressentir quelque chose en la portant : c'est la fidélité à la garder, non l'émotion qu'elle produit, que le texte appelle bienheureuse."
+  },
+  "question": "Quelle parole reçue il y a longtemps portes-tu encore, sans bien savoir ce qui, en toi, continue de la garder ?",
+  "racines": [
+    {
+      "titre": "Le marchepied de Dieu",
+      "corps_html": "Commentant le psaume 131 (132 dans l'hébreu), Augustin s'arrête sur l'invitation à se prosterner « devant son marchepied » et y voit une allusion voilée à la chair assumée par le Fils : Dieu invisible s'est rendu accessible en prenant un corps réel, pris d'une femme, sur une terre où l'on peut se tenir et adorer. Le marchepied, image très humble, devient chez lui le signe que l'incarnation n'est pas un déguisement mais une prise de corps véritable.",
+      "attribution": "Augustin d'Hippone, Enarrationes in Psalmos, sur le Psaume 131"
+    },
+    {
+      "titre": "Un dard sans venin",
+      "corps_html": "Jean Chrysostome, prêchant sur ce passage, refuse de faire dire à Paul que les croyants ne meurent plus : ils meurent, et la mort continue de les piquer. Mais il insiste sur ce que l'apôtre proclame réellement, la disparition non de la piqûre mais de son venin, le péché, qui seul rendait la mort mortelle. La victoire chantée par Paul n'est donc pas l'absence de mort, mais sa neutralisation intérieure.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens"
+    },
+    {
+      "titre": "Plus heureuse par la foi que par la chair",
+      "corps_html": "Répondant à ceux qui exalteraient en Marie la seule maternité biologique, Augustin écrit dans son traité sur la virginité consacrée que sa vraie grandeur tient à son obéissance de croyante, non à son lien de sang avec Jésus. La formule, devenue classique dans la théologie mariale, éclaire directement la réponse de Jésus à la femme de la foule en Luc 11 : la même parole vaut pour Marie et pour quiconque écoute et garde.",
+      "attribution": "Augustin d'Hippone, De la sainte virginité, 3"
+    }
+  ]
+}
