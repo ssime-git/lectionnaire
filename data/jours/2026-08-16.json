@@ -1,0 +1,141 @@
+{
+  "date": "2026-08-16",
+  "date_humaine": "dimanche",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 56, 1.6-7 ; Rm 11, 13-15.29-32 ; Mt 15, 21-28",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h150\"/><path d=\"M18 128 v-16 l10 -8 l10 8 v16\"/><path d=\"M23 128 v-14 h10 v14\"/><path d=\"M60 100 h64\"/><path d=\"M64 100 v28\"/><path d=\"M120 100 v28\"/><path d=\"M64 128 h56\"/><path d=\"M75 96 l3 4 4 -6\"/><path d=\"M95 96 l3 5 4 -7\"/><path d=\"M70 132 q6 8 14 4 q6 6 13 -1\"/></g><g class=\"trait-rubrique\"><path d=\"M46 96 q10 -14 4 -26 q10 8 20 24 q-11 10 -24 2\"/></g><g class=\"trait-liturgie\"><path d=\"M180 30 l70 90 l70 -20\"/><path d=\"M250 120 l0 -20\"/><path d=\"M180 30 v98 h140\"/><path d=\"M182 128 v-40 h20 v40\"/><path d=\"M270 128 l14 -20 l14 20\"/><path d=\"M296 128 l14 -20 l14 20\"/></g></svg>",
+  "titre": "Miettes de la table",
+  "titre_html": "Miettes <span class=\"it\">de la table</span>",
+  "sous_titre": "Ce qui reste ouvert quand tout semblait fermé",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une femme agenouillée au bord d'une table dressée, la main tendue vers des miettes tombées ; à l'arrière-plan, une porte de maison ouverte sur une montagne, vers laquelle marchent quelques figures venues de loin.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 56, 1.6-7",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Ainsi parle l'Éternel : Observez ce qui est <button class=\"mot\" data-g=\"g-mishpat\">droit</button>, et pratiquez ce qui est juste ; car mon salut ne tardera pas à venir, et ma justice à se manifester. <span class=\"s\">6</span> Et les étrangers qui s'attacheront à l'Éternel pour le servir, pour aimer le nom de l'Éternel, pour être ses serviteurs, tous ceux qui garderont le sabbat, en ne le profanant point, et qui persévéreront dans son alliance, <span class=\"s\">7</span> je les amènerai sur ma montagne sainte, et je les réjouirai dans ma <button class=\"mot\" data-g=\"g-beittefila\">maison de prière</button> ; leurs holocaustes et leurs sacrifices seront agréés sur mon autel ; car ma maison sera appelée une maison de prière pour tous les peuples.",
+      "gloses": [
+        {
+          "id": "g-mishpat",
+          "lemme": "mishpat",
+          "html": "En hébreu <span class=\"gr\">מִשְׁפָּט</span> (michpat), que Segond traduit ici par « ce qui est droit ». Le mot ne désigne pas d'abord un sentiment intérieur de justice mais un jugement rendu, une décision de droit exécutée aux portes de la ville — ce que l'on tranchait concrètement entre les parties. Traduire par « droit » risque d'aplatir en notion morale ce qui, chez les prophètes, reste un acte social et juridique, indissociable de la tsedaqah, la justice qui répare. Les rabbins liront volontiers la paire mishpat-tsedaqah comme les deux jambes sur lesquelles marche l'alliance."
+        },
+        {
+          "id": "g-beittefila",
+          "lemme": "beit tefillah",
+          "html": "L'hébreu <span class=\"gr\">בֵּית תְּפִלָּה</span> (beit tefillah), « maison de prière », que Segond rend littéralement. Cette expression n'est pas anodine : elle réapparaît telle quelle dans la bouche de Jésus purifiant le Temple, lorsqu'il cite Ésaïe 56 contre ceux qui en avaient fait une caverne de voleurs (Mt 21,13). Isaïe promet que cette maison, censée appartenir à un seul peuple, sera dite maison de prière « pour tous les peuples » — formule que l'évangile de ce jour met précisément à l'épreuve dans la rencontre avec une femme étrangère à la table d'Israël."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 66 (67), 2-3, 5, 7-8",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Que Dieu ait pitié de nous et qu'il nous <button class=\"mot\" data-g=\"g-barak\">bénisse</button>, qu'il fasse luire sur nous sa face, <span class=\"s\">3</span> afin que l'on connaisse sur la terre ta voie, et parmi toutes les nations ton salut ! <span class=\"s\">5</span> Les nations se réjouissent et sont dans l'allégresse ; car tu juges les peuples avec droiture, et tu conduis les nations sur la terre. <span class=\"s\">7</span> La terre donne ses produits ; Dieu, notre Dieu, nous bénit. <span class=\"s\">8</span> Dieu, nous bénit, et toutes les extrémités de la terre le craignent.",
+      "gloses": [
+        {
+          "id": "g-barak",
+          "lemme": "barakh",
+          "html": "Le verbe hébreu <span class=\"gr\">בָּרַךְ</span> (barakh), bénir, ouvre le psaume et le referme : Dieu bénit son peuple pour que, par lui, toute la terre le connaisse et le craigne. Segond garde le mot usuel « bénir », mais la bénédiction biblique n'est jamais une formule pieuse : elle désigne une fécondité transmise, un bien qui déborde nécessairement celui qui le reçoit vers ceux qui l'entourent. Calvin, commentant ce psaume, insiste sur ce mouvement : la bénédiction reçue par Israël n'a de sens que si elle se répand jusqu'aux extrémités de la terre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Rm 11, 13-15.29-32",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">13</span> Je vous le dis à vous, païens : en tant que je suis apôtre des païens, je glorifie mon ministère, <span class=\"s\">14</span> afin, s'il est possible, d'exciter l'émulation de ceux de ma race, et d'en sauver quelques-uns. <span class=\"s\">15</span> Car si leur rejet a été la réconciliation du monde, que sera leur réintégration, sinon une vie d'entre les morts ? <span class=\"s\">29</span> Car les dons et l'appel de Dieu sont <button class=\"mot\" data-g=\"g-irrevocable\">irrévocables</button>. <span class=\"s\">30</span> De même que vous avez autrefois désobéi à Dieu et que par leur désobéissance vous avez maintenant obtenu miséricorde, <span class=\"s\">31</span> de même ils ont maintenant désobéi, afin que, par la miséricorde qui vous a été faite, ils obtiennent aussi miséricorde. <span class=\"s\">32</span> Car Dieu a <button class=\"mot\" data-g=\"g-renferme\">renfermé</button> tous les hommes dans la désobéissance, pour faire miséricorde à tous.",
+      "gloses": [
+        {
+          "id": "g-irrevocable",
+          "lemme": "ametamelēta",
+          "html": "Le grec <span class=\"gr\">ἀμεταμέλητα</span> (ametamelēta), littéralement « sans repentir », que Segond traduit par « irrévocables ». Le mot ne dit pas seulement que Dieu ne change pas de décision par caprice, mais qu'il ne se ravise pas comme on regrette un choix devenu gênant — l'inverse exact de la metanoia qu'il demande aux hommes. Segond choisit un terme juridique, plus froid que l'original, qui parle d'un cœur ne se repentant pas d'avoir aimé. Origène y voyait déjà la garantie que le rejet d'Israël, si réel dans l'histoire, ne pouvait être la dernière parole de Dieu sur son peuple."
+        },
+        {
+          "id": "g-renferme",
+          "lemme": "synekleisen",
+          "html": "Le grec <span class=\"gr\">συνέκλεισεν</span> (synekleisen), que Segond traduit par « a renfermé », évoque littéralement l'action de refermer un filet ou d'enclore un troupeau — le même verbe que pour la pêche miraculeuse de Luc 5. Paul décrit Dieu resserrant tous les hommes, juifs et païens, dans le même enclos de la désobéissance, non pour les y abandonner mais afin de pouvoir, du même geste, faire miséricorde à tous ensemble. Chrysostome, dans ses homélies sur l'épître aux Romains, souligne ce paradoxe : l'enfermement commun devient la condition de la grâce commune, là où l'on attendrait une condamnation."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 15, 21-28",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">21</span> Jésus, étant parti de là, se retira dans le territoire de Tyr et de Sidon. <span class=\"s\">22</span> Et voici, une femme <button class=\"mot\" data-g=\"g-cananeenne\">cananéenne</button>, qui venait de ces contrées, lui cria : Aie pitié de moi, Seigneur, Fils de David ! Ma fille est cruellement tourmentée par le démon. <span class=\"s\">23</span> Il ne lui répondit pas un mot, et ses disciples s'approchèrent, et lui dirent avec instance : Renvoie-la, car elle crie derrière nous. <span class=\"s\">24</span> Il répondit : Je n'ai été envoyé qu'aux brebis perdues de la maison d'Israël. <span class=\"s\">25</span> Mais elle vint se prosterner devant lui, disant : Seigneur, secours-moi ! <span class=\"s\">26</span> Il répondit : Il n'est pas bien de prendre le pain des enfants, et de le jeter aux <button class=\"mot\" data-g=\"g-kynaria\">petits chiens</button>. <span class=\"s\">27</span> Oui, Seigneur, dit-elle, mais les petits chiens mangent les miettes qui tombent de la table de leurs maîtres. <span class=\"s\">28</span> Alors Jésus lui dit : Femme, ta <button class=\"mot\" data-g=\"g-pistis\">foi</button> est grande ; qu'il te soit fait comme tu veux. Et, à l'heure même, sa fille fut guérie.",
+      "gloses": [
+        {
+          "id": "g-cananeenne",
+          "lemme": "Chananaia",
+          "html": "Matthieu choisit délibérément le mot archaïque « cananéenne » — <span class=\"gr\">Χαναναία</span> — plutôt que « syro-phénicienne », qu'emploie Marc pour la même femme (Mc 7,26). Ce choix réveille tout le passé d'Israël : les Cananéens sont le peuple que Josué devait déposséder de la terre promise, l'ennemi par excellence de l'élection. En faisant surgir cette femme précisément sous ce nom, Matthieu met en scène, dans le corps même du récit, la question que pose toute la péricope : que devient l'ancienne frontière entre peuple élu et nations, maintenant que le Messie est là ?"
+        },
+        {
+          "id": "g-kynaria",
+          "lemme": "kynaria",
+          "html": "Le grec <span class=\"gr\">κυνάρια</span> (kynaria) est un diminutif : non pas « chiens », animaux impurs et méprisés, mais « petits chiens », ceux qu'on garde à la maison, sous la table. Segond traduit fidèlement « petits chiens », gardant la nuance que Jésus introduit lui-même — une parole dure, mais qui laisse un espace, une table où l'on est du moins présent, fût-ce en dessous. La femme reprend exactement ce diminutif dans sa réponse : elle ne conteste pas l'image, elle en tire, avec une intelligence de foi remarquable, la seule issue qu'elle contient."
+        },
+        {
+          "id": "g-pistis",
+          "lemme": "pistis",
+          "html": "Le grec <span class=\"gr\">πίστις</span> (pistis), la foi, que Segond rend par « foi » — mais le texte porte <span class=\"gr\">μεγάλη σου ἡ πίστις</span>, littéralement « grande, ta foi », l'adjectif placé en tête, presque une exclamation. C'est la seule fois dans Matthieu où Jésus qualifie une foi de « grande » ; ailleurs il parle plutôt de « petite foi » à l'adresse de ses propres disciples (Mt 8,26 ; 14,31). Jean Chrysostome relève ce contraste avec insistance : la foi la plus large que Jésus rencontre dans les évangiles n'est pas celle d'un fils d'Israël, mais celle d'une femme venue d'un peuple exclu."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le troisième Ésaïe, après l'exil",
+      "corps_html": "Les chapitres 56 à 66 du livre d'Ésaïe sont attribués par la critique historique à un disciple des exilés revenus de Babylone, écrivant après 538 avant notre ère, quand le second Temple se reconstruit dans la controverse. La question qui traverse ces pages n'est plus celle de l'exil mais celle des frontières de la communauté restaurée : qui a droit d'entrer dans la maison relevée de ses ruines ? Contre les scrupules de pureté qui voudraient fermer l'accès, le texte ouvre délibérément la porte à l'eunuque et à l'étranger."
+    },
+    {
+      "titre": "Une frontière déjà mise à l'épreuve",
+      "corps_html": "Matthieu place cet épisode juste après la controverse sur le pur et l'impur (Mt 15,1-20), où Jésus vient de déclarer que rien de ce qui entre dans la bouche ne souille l'homme. Le récit suivant met aussitôt cette parole à l'épreuve : une étrangère, doublement impure aux yeux d'un scribe, obtient ce que des fils d'Israël réclament ailleurs en vain. Jean Chrysostome notait déjà que l'ordre des scènes, chez Matthieu, n'est jamais un hasard mais une démonstration en acte."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui tombe de la table",
+    "variantes": [
+      "Il y a des prières que tu formules depuis des années sans qu'aucune réponse ne semble venir — un silence si total qu'il ressemble parfois à un refus. Tu continues pourtant, non par obstination aveugle, mais parce que quelque chose en toi sait que ce silence n'est pas la dernière parole de Dieu. Et un jour, sans que tu saches pourquoi ce jour-là précisément, la réponse arrive, non comme une explication du silence mais comme s'il n'avait jamais vraiment existé — et tu comprends alors que ta persévérance elle-même faisait déjà partie du dialogue que tu croyais rompu.",
+      "Il t'est arrivé de traverser une période où tu n'espérais plus de Dieu qu'un signe minuscule, presque rien — pas une consolation entière, seulement de quoi tenir un jour de plus. Et ce peu, quand il est venu, ne t'a pas semblé une aumône méprisable mais une nourriture réelle, suffisante précisément parce qu'elle venait de lui et non parce qu'elle était abondante. Tu as appris ce jour-là que la mesure de la grâce n'est pas sa quantité mais sa source, et que Dieu peut tenir tout entier dans ce qui, pour d'autres, ressemblerait à une miette.",
+      "Tu as pu te sentir, dans une communauté croyante ou même dans ta propre prière, comme quelqu'un qui n'a pas vraiment le droit d'être là — trop en retard, trop étranger à ce que les autres semblent recevoir sans effort. Et pourtant, à l'instant où tu t'y attendais le moins, une parole ou un geste t'a fait entrer, non parce que tu avais enfin mérité ta place, mais parce que la miséricorde qui t'a rejoint ne demandait justement pas cela. Ce jour-là, ce n'est pas toi qui as forcé une porte fermée ; c'est une maison plus grande que tu ne l'imaginais qui s'est révélée déjà ouverte."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec la femme cananéenne à l'instant précis où elle n'a encore reçu aucune réponse, et où elle parle quand même.",
+    "geste": "Nomme devant Dieu, sans les adoucir, une prière restée sans réponse, et une seule des miettes que tu as pourtant déjà reçues.",
+    "note": "Il n'est pas nécessaire d'attendre d'être digne de la table pour s'en approcher."
+  },
+  "question": "Où, dans ta vie, continues-tu de crier vers Dieu alors qu'il semble ne pas répondre — et qu'est-ce que cette persévérance dit déjà de ce que tu crois de lui ?",
+  "racines": [
+    {
+      "titre": "La persévérance qui n'est pas indiscrétion",
+      "corps_html": "Chrysostome refuse de lire le silence de Jésus, puis sa dureté apparente, comme un mépris. Il y voit au contraire une pédagogie : le Christ retient sa grâce non pour la refuser mais pour révéler, aux yeux des disciples eux-mêmes, la mesure de la foi qui l'obtient. Ce n'est pas Dieu qui recule devant la femme, dit-il, mais la femme qui, en insistant, découvre elle-même jusqu'où va sa propre foi.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, LII"
+    },
+    {
+      "titre": "Un rejet qui n'a pas le dernier mot",
+      "corps_html": "Calvin, commentant l'endurcissement partiel d'Israël en Romains 11, refuse toute lecture qui ferait du rejet une sentence définitive. Il rappelle que Paul écrit en apôtre des païens mais aussi en fils d'Israël, et que son espérance pour son peuple repose sur la fidélité de Dieu à sa promesse plus que sur les mérites d'aucun homme. L'élection, dit-il, demeure ferme même quand la désobéissance humaine semble l'annuler.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Romains, ch. 11"
+    },
+    {
+      "titre": "La cour des nations",
+      "corps_html": "Le second Temple comportait une vaste cour extérieure, dite des nations, où tout étranger pouvait s'approcher pour prier sans franchir la barrière réservée à Israël. Flavius Josèphe atteste l'inscription qui en interdisait l'accès au-delà sous peine de mort — frontière concrète que la promesse d'Ésaïe 56 vise déjà à dépasser. La tradition rabbinique elle-même gardera le souvenir de sacrifices offerts au nom des nations dans ce Temple, trace d'une hospitalité que le texte prophétique annonce plus largement encore.",
+      "attribution": "Flavius Josèphe, Guerre des Juifs, V ; tradition rabbinique du second Temple"
+    }
+  ]
+}
