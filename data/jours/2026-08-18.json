@@ -1,0 +1,132 @@
+{
+  "date": "2026-08-18",
+  "date_humaine": "mardi",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 28, 1-10 ; Dt 32, 26-27ab, 27cd.28, 30, 35cd-36ab ; Mt 19, 23-30",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M70 128 q4 -10 12 -10 q8 0 12 10\"/><path d=\"M78 118 v-18\"/><path d=\"M84 100 a3 3 0 1 1 0 -0.2\"/><path d=\"M40 128 q6 -30 22 -38 q10 -5 20 -3 q14 3 20 -6 q6 8 -2 16 q-8 7 -18 5 q4 8 -2 16 q8 -2 10 6 q-10 8 -22 2 q-8 -4 -10 6 q-6 -4 -8 -4\"/><path d=\"M40 128 q0 -5 4 -5\"/></g><g class=\"trait-liturgie\"><path d=\"M210 128 q40 -6 80 -1\"/><path d=\"M215 128 v-18 h10 v-10 h14 v10 h12 v-14 h14 v14 h10 v-10 h12 v10 h9 v18\"/><path d=\"M225 128 v-14\"/><path d=\"M245 128 v-14\"/><path d=\"M263 128 v-18\"/><path d=\"M280 128 v-14\"/></g><g class=\"trait-rubrique\"><path d=\"M198 132 q10 -6 22 -2\"/><path d=\"M230 136 q14 -8 30 -2\"/><path d=\"M266 132 q12 -6 24 -1\"/><path d=\"M292 138 q8 -5 16 -1\"/></g></svg>",
+  "titre": "Le chas",
+  "titre_html": "Le <span class=\"it\">chas</span>",
+  "sous_titre": "Ce que la main ne peut pas forcer",
+  "suite_hier": null,
+  "gravure_alt": "Un chameau agenouillé devant le chas minuscule d'une aiguille plantée dans le sol, et à l'arrière-plan, sur une mer houleuse, une cité fortifiée bâtie comme un trône que les vagues commencent à submerger.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 28, 1-10",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> La parole de l'Éternel me fut adressée, en ces mots: <span class=\"s\">2</span> Fils de l'homme, dis au prince de Tyr: Ainsi parle le Seigneur, l'Éternel: Ton <button class=\"mot\" data-g=\"g-lev\">cœur</button> s'est élevé, et tu as dit: Je suis <button class=\"mot\" data-g=\"g-el\">Dieu</button>, je suis assis sur le siège de Dieu, au sein des mers! Toi, tu es homme et non Dieu, et tu prends ta volonté pour la volonté de Dieu. <span class=\"s\">3</span> Voici, tu es plus sage que Daniel, rien de secret n'est caché pour toi; <span class=\"s\">4</span> par ta <button class=\"mot\" data-g=\"g-hokhma\">sagesse</button> et par ton intelligence tu t'es fait une fortune, tu as amassé de l'or et de l'argent dans tes trésors; <span class=\"s\">5</span> par ta grande sagesse et par ton commerce tu as accru ta fortune, et par ta fortune ton cœur s'est élevé. <span class=\"s\">6</span> C'est pourquoi ainsi parle le Seigneur, l'Éternel: Parce que tu prends ta volonté pour la volonté de Dieu, <span class=\"s\">7</span> voici, je ferai venir contre toi des étrangers, les plus violents d'entre les peuples; ils tireront l'épée contre ton éclatante sagesse, et ils souilleront ta beauté. <span class=\"s\">8</span> Ils te précipiteront dans la fosse, et tu mourras comme ceux qui tombent percés de coups, au sein des mers. <span class=\"s\">9</span> En face de ton meurtrier, diras-tu: Je suis Dieu? Tu seras homme et non Dieu sous la main de celui qui te tuera. <span class=\"s\">10</span> Tu mourras de la mort des incirconcis, par la main des étrangers. Car moi, j'ai parlé, dit le Seigneur, l'Éternel.",
+      "gloses": [
+        {
+          "id": "g-lev",
+          "lemme": "לֵב, lev",
+          "html": "Segond traduit לֵב, lev, par « cœur », mais l'hébreu biblique ne loge pas d'abord le sentiment dans ce mot : le lev est le siège de la volonté, du calcul, du projet — plus proche de ce que nous appellerions l'esprit délibérant que de l'affectivité. Dire que le cœur du prince « s'est élevé » ne décrit donc pas un émoi, mais une décision entretenue, une orientation choisie et reconduite jour après jour. Jérôme, dans son Commentaire sur Ézéchiel, lit dans cette élévation du cœur la matrice de tout péché d'orgueil, et rattache cet oracle à la suite du chapitre (Ez 28,11-19) où, depuis Origène, la tradition a reconnu la figure de la chute de l'ange."
+        },
+        {
+          "id": "g-el",
+          "lemme": "אֵל, el",
+          "html": "Le prince ne dit pas qu'il est יהוה, le Nom du Dieu de l'alliance, mais אֵל, el, le terme générique de la puissance divine que partageaient les panthéons voisins de Tyr. Segond aplatit la nuance en traduisant simplement « Dieu » dans les deux cas, alors que le texte hébreu distingue l'usurpation d'un statut de puissance et la profanation du Nom propre. La prétention du prince n'est donc pas d'être le Dieu d'Israël, mais de revendiquer pour lui-même la catégorie même du divin — geste que la suite de l'oracle démonte en le renvoyant, deux fois, à sa condition d'homme."
+        },
+        {
+          "id": "g-hokhma",
+          "lemme": "חָכְמָה, hokhmah",
+          "html": "Le même mot, hokhmah, désigne dans l'Écriture la sagesse que Dieu donne à Salomon pour gouverner et celle, toute mercantile, par laquelle le prince de Tyr a rempli ses trésors : le texte joue délibérément sur cette homonymie pour dénoncer une contrefaçon. Segond conserve « sagesse » dans les deux emplois des versets 4 et 5, ce qui laisse affleurer l'ironie hébraïque sans la souligner. La sagesse véritable, dans la littérature sapientielle (Pr 8), se reçoit d'en haut et engendre la justice ; celle de Tyr s'est fabriquée elle-même par le commerce, et c'est cette auto-fabrication que l'oracle met en accusation."
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Dt 32, 26-27ab, 27cd.28, 30, 35cd-36ab",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">26</span> J'ai dit: Je voudrais les emporter d'un souffle, faire disparaître leur mémoire d'entre les hommes; <span class=\"s\">27</span> mais je crains les insultes de l'ennemi, je crains que leurs adversaires ne se méprennent, et qu'ils ne disent: Notre <button class=\"mot\" data-g=\"g-main\">main</button> a été puissante, et ce n'est pas l'Éternel qui a fait toutes ces choses. <span class=\"s\">28</span> C'est une nation qui a perdu le bon sens, et il n'y a point en eux d'intelligence. <span class=\"s\">30</span> Comment un seul en poursuivrait-il mille, et deux en mettraient-ils dix mille en fuite, si leur <button class=\"mot\" data-g=\"g-tsur\">Rocher</button> ne les avait vendus, si l'Éternel ne les avait livrés? <span class=\"s\">35</span> Car le jour de leur malheur est proche, et ce qui les attend ne tardera pas. <span class=\"s\">36</span> L'Éternel jugera son peuple; mais il aura pitié de ses serviteurs.",
+      "gloses": [
+        {
+          "id": "g-main",
+          "lemme": "יָד, yad",
+          "html": "Yad, la main, est dans l'Écriture le symbole même de la puissance agissante — la « main forte » par laquelle Dieu a fait sortir Israël d'Égypte revient comme un refrain dans le Deutéronome. En prêtant ce vocabulaire précis à l'orgueil du peuple qui s'attribue sa propre victoire, le Cantique de Moïse construit une parodie théologique délibérée : Israël se met à parler de sa propre main exactement comme l'Écriture parle ailleurs de la main de Dieu. Segond traduit sobrement « notre main a été puissante », sans pouvoir restituer dans le français ce clin d'œil intertextuel que l'hébreu adresse à son lecteur averti."
+        },
+        {
+          "id": "g-tsur",
+          "lemme": "צוּר, tsur",
+          "html": "Tsur, le Rocher, est l'une des désignations les plus anciennes et les plus rugueuses de Dieu dans le Cantique de Moïse, revenant sept fois au long du chapitre 32. L'image ne dit pas la douceur mais la stabilité d'un appui qu'on ne façonne pas : un rocher ne se négocie pas, il porte ou il ne porte pas. Paul reprendra ce mot pour l'appliquer au Christ lui-même, « car ils buvaient à un rocher spirituel qui les suivait, et ce rocher était Christ » (1 Co 10,4), inaugurant une lecture que la tradition patristique poursuivra."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 19, 23-30",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">23</span> Jésus dit à ses disciples: Je vous le dis en vérité, un riche entrera difficilement dans le royaume des cieux. <span class=\"s\">24</span> Je vous le dis encore, il est plus facile à un <button class=\"mot\" data-g=\"g-chameau\">chameau</button> de passer par le trou d'une aiguille qu'à un riche d'entrer dans le royaume de Dieu. <span class=\"s\">25</span> Les disciples, ayant entendu cela, furent très étonnés, et dirent: Qui peut donc être sauvé? <span class=\"s\">26</span> Jésus les regarda, et leur dit: Cela est impossible aux hommes, mais tout est possible à Dieu. <span class=\"s\">27</span> Pierre, prenant alors la parole, lui dit: Voici, nous avons tout quitté, et nous t'avons suivi; qu'en sera-t-il pour nous? <span class=\"s\">28</span> Jésus leur répondit: Je vous le dis en vérité, quand le Fils de l'homme, au <button class=\"mot\" data-g=\"g-palin\">renouvellement</button> de toutes choses, sera assis sur le trône de sa gloire, vous qui m'avez suivi, vous serez de même assis sur douze trônes, et vous jugerez les douze tribus d'Israël. <span class=\"s\">29</span> Et quiconque aura quitté, à cause de mon nom, ses maisons, ou ses frères, ou ses sœurs, ou son père, ou sa mère, ou sa femme, ou ses enfants, ou ses terres, recevra le <button class=\"mot\" data-g=\"g-centuple\">centuple</button>, et héritera la vie éternelle. <span class=\"s\">30</span> Plusieurs des premiers seront les derniers, et plusieurs des derniers seront les premiers.",
+      "gloses": [
+        {
+          "id": "g-chameau",
+          "lemme": "κάμηλος, kamēlos",
+          "html": "Certains manuscrits grecs anciens portent, au lieu de κάμηλος (kamēlos, chameau), la variante κάμιλος (kamilos, câble de marine) — une leçon déjà relevée par des commentateurs byzantins comme Théophylacte, et qui adoucirait l'image en la rendant seulement très difficile plutôt que proprement impossible. Segond, comme la quasi-totalité de la tradition manuscrite, retient « chameau ». Il faut aussi écarter une légende tardive et sans fondement historique attesté, celle d'une petite porte de Jérusalem surnommée « le chas de l'aiguille » : aucune source ancienne ne l'atteste, et Jean Chrysostome, dans ses Homélies sur Matthieu (Homélie 63), commente au contraire le verset comme une hyperbole voulue, une impossibilité totale."
+        },
+        {
+          "id": "g-palin",
+          "lemme": "παλιγγενεσία, palingenesia",
+          "html": "Palingenesia, que Segond rend par « renouvellement de toutes choses », est un mot rare dans le Nouveau Testament : on ne le retrouve qu'en Tite 3,5, où il désigne le bain de la régénération baptismale. Emprunté au vocabulaire de la philosophie stoïcienne, où il nommait le retour cyclique du cosmos après sa conflagration, il est ici transposé par Matthieu pour désigner, non un cycle, mais l'achèvement définitif de toutes choses lors du jugement. Jean Chrysostome, dans son Homélie 64 sur Matthieu, y voit l'annonce de la résurrection générale plutôt qu'une simple restauration morale."
+        },
+        {
+          "id": "g-centuple",
+          "lemme": "ἑκατονταπλασίονα, hekatontaplasiona",
+          "html": "Le grec hekatontaplasiona, « au centuple », est un intensif rare qui ne mesure rien littéralement : il dit une disproportion, non un calcul. Il est frappant que Segond, suivant ici le texte de Matthieu, ne porte pas la précision que Marc ajoute au même logion — « avec des persécutions » (Mc 10,30) — rappel que la promesse ne dispense pas de la traversée. Cette divergence entre les deux évangélistes, l'un plus sobre, l'autre plus réaliste sur le prix du don, mérite d'être tenue ensemble plutôt que résolue."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le contexte historique de l'oracle contre Tyr",
+      "corps_html": "Cet oracle appartient à la série des oracles contre les nations (Ez 25-32), prononcés durant le siège babylonien de Tyr entamé par Nabuchodonosor II vers 587-586 avant notre ère, siège qui devait durer treize années sans emporter la cité, protégée par son assise insulaire. Tyr était alors l'une des plus grandes puissances commerciales de la Méditerranée, tirant sa richesse de la pourpre, du bois du Liban et d'un réseau de comptoirs. C'est cette réussite précisément que le prophète retourne en accusation."
+    },
+    {
+      "titre": "Ha'azinou, un chant écrit pour accuser d'avance",
+      "corps_html": "Le Cantique de Moïse (Dt 32), que la tradition juive appelle Ha'azinou, « Prêtez l'oreille », sur son premier mot, n'est pas un simple poème liturgique : Dt 31,19-21 raconte que Dieu le dicte à Moïse pour qu'il devienne un témoin contre Israël, chanté par le peuple lui-même de génération en génération, afin qu'aucune infidélité future ne puisse prétendre n'avoir pas été avertie. Le verset 27, où le peuple attribue sa victoire à « notre main », est précisément le moment que ce chant prévoyait et dénonçait d'avance."
+    }
+  ],
+  "analogie": {
+    "titre": "Le chas",
+    "variantes": [
+      "Tu as peut-être déjà tenté de renoncer, par ta seule volonté, à ce qui te tenait — une réputation à défendre, une compétence dont tu tirais ta valeur, une sécurité que tu avais mis des années à bâtir — et tu as découvert que vouloir lâcher ne suffit pas à lâcher : la main reste crispée précisément au moment où tu voudrais l'ouvrir. Ce blocage n'est pas une faiblesse morale que tu pourrais corriger par plus d'effort ; c'est la mesure exacte de ce que le Christ nomme impossible aux hommes. Ce n'est que lorsque tu cesses de t'acharner à te dépouiller toi-même, et que tu laisses cela se faire en toi plutôt que par toi, que quelque chose cède — non par ta force, mais par celle qui, seule, rend possible ce qui ne l'était pas.",
+      "Il y a des combats intérieurs que tu mènes depuis si longtemps sans en voir l'issue — une rancune que tu voudrais déposer, une peur qui gouverne encore tes choix, une dépendance à l'estime des autres que tu as beau nommer, sans jamais réussir à t'en défaire par la seule décision d'y renoncer. Tu finis par comprendre qu'aucune résolution, si sincère soit-elle, ne fera à ta place ce passage : la volonté peut désigner la porte étroite, elle ne peut pas s'y faufiler elle-même. Et c'est exactement au point où tu cesses d'attendre cela de toi que la promesse du Christ à ses disciples cesse d'être une parole de consolation vague pour devenir une adresse précise : ce qui t'est impossible ne l'est pas à Dieu.",
+      "Tu as peut-être un jour renoncé à quelque chose que tu tenais pour acquis — un chemin tout tracé, une sécurité, une place que tu aurais pu garder — parce qu'une fidélité plus profonde te le demandait, et tu t'es retrouvé ensuite à te demander, comme Pierre, ce qu'il en resterait pour toi, sans oser vraiment poser la question à voix haute. Cette arrière-pensée n'est pas une trahison de ton geste : elle est le lieu exact où le texte vient te rejoindre, car le Christ ne réprimande pas la question de Pierre, il y répond. Ce que tu as quitté sans retour visible, la promesse ne le nie pas ; elle affirme seulement qu'aucun abandon fait pour lui ne se perd, même quand tu n'en verras jamais la centuple mesure de ce côté-ci du renouvellement."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le prince de Tyr s'est enfermé dans ce qu'il avait construit ; les disciples, eux, ont tout laissé sans savoir ce qui les attendait. Entre ces deux gestes se tient toute la différence entre une vie qui se scelle elle-même et une vie qui s'ouvre à ce qu'elle ne maîtrise pas.",
+    "geste": "Nomme, en une phrase silencieuse, ce que tu tiens aujourd'hui comme ta propre réussite — puis dépose-le devant Dieu sans chercher à le justifier ni à le minimiser.",
+    "note": "Il ne s'agit pas de mépriser ce que tu as reçu ou construit, mais de cesser d'y loger, en secret, ta sécurité dernière : Mt 6,21, « Là où est ton trésor, là aussi sera ton cœur »."
+  },
+  "question": "Quelle certitude, construite par toi seul, en es-tu venu à prendre pour la volonté de Dieu ?",
+  "racines": [
+    {
+      "titre": "Jérôme et la double figure de Tyr",
+      "corps_html": "Commentant Ézéchiel au tournant du Ve siècle depuis Bethléem, Jérôme distingue le « prince » de Tyr, homme réel puni pour son orgueil commercial, du « roi » de Tyr évoqué au chapitre suivant, dont il reprend la lecture qu'Origène avait proposée un siècle plus tôt : une figure de la chute angélique elle-même. Les deux oracles, lus ensemble, font du péché d'un marchand phénicien le miroir agrandi du plus ancien des péchés.",
+      "attribution": "Jérôme, Commentariorum in Hiezechielem, sur Ez 28"
+    },
+    {
+      "titre": "Ha'azinou, le chant témoin",
+      "corps_html": "La tradition rabbinique a retenu de Dt 31-32 que ce cantique fut confié à Moïse pour être appris par cœur à tout Israël, afin qu'il demeure, selon les mots du texte lui-même, un témoin contre le peuple lorsque viendrait l'infidélité. Le Talmud, traité Sanhedrin, rattache à ce chant l'idée que la Torah elle-même parle par la bouche du peuple qui la chante, jusque dans son propre péché annoncé d'avance.",
+      "attribution": "Tradition rabbinique, Talmud de Babylone, Sanhedrin"
+    },
+    {
+      "titre": "Chrysostome et l'impossible rendu possible",
+      "corps_html": "Prêchant sur ce passage à Antioche puis à Constantinople, Jean Chrysostome refuse d'atténuer la dureté de l'image du chameau : il y voit une impossibilité voulue comme telle, afin que nul ne s'illustre lui-même dans le salut. Ce n'est pas la richesse en tant que telle qu'il vise, précise-t-il, mais l'attachement du cœur qui en fait sa sécurité dernière — reprenant ainsi, sans le savoir, l'accusation même portée contre le prince de Tyr.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de saint Matthieu, Homélie 63"
+    }
+  ]
+}
