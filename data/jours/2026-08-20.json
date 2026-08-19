@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-20",
+  "date_humaine": "jeudi",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 36, 23-28 ; Mt 22, 1-14",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 145 H334\"/><path d=\"M40 30 v-10 h8 v10 M56 30 v-10 h8 v10 M72 30 v-10 h8 v10\"/><path d=\"M40 30 L26 95 L94 95 L80 30 Z\"/><path d=\"M94 55 L130 50\"/><path d=\"M170 95 H320\"/><path d=\"M180 95 V125\"/><path d=\"M310 95 V125\"/><path d=\"M232 78 H248 L242 90 H238 Z M240 90 V95\"/><path d=\"M50 145 C20 120 20 95 50 105 C80 95 80 120 50 145 Z\"/><path d=\"M50 100 L44 112 L54 122 L46 132 L50 145\"/></g><g class=\"trait-rubrique\"><path d=\"M130 40 H165 V70 H130 Z\"/><path d=\"M130 50 H165 M130 60 H165\"/></g><g class=\"trait-liturgie\"><path d=\"M50 142 C36 128 36 116 50 122 C64 116 64 128 50 142 Z\"/></g></svg>",
+  "titre": "Cœur nouveau",
+  "titre_html": "Cœur <span class=\"it\">nouveau</span>",
+  "sous_titre": "Le don qui précède ce qu'il demande",
+  "suite_hier": null,
+  "gravure_alt": "Un roi tendant un vêtement de noces vers une table dressée, tandis qu'au premier plan un cœur de pierre se fend pour laisser paraître, en dessous, un cœur de chair — dans le style sobre d'un bois gravé du XVIe siècle.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 36, 23-28",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">23</span> Je <button class=\"mot\" data-g=\"g-qadash\">sanctifierai</button> mon grand nom, qui a été profané parmi les nations, que vous avez profané au milieu d'elles. Et les nations sauront que je suis l'Éternel, dit le Seigneur, l'Éternel, quand je serai sanctifié par vous sous leurs yeux.</p><p><span class=\"s\">24</span> Je vous retirerai d'entre les nations, je vous rassemblerai de tous les pays, et je vous ramènerai dans votre pays.</p><p><span class=\"s\">25</span> Je répandrai sur vous une eau pure, et vous serez purifiés; je vous purifierai de toutes vos souillures et de toutes vos idoles.</p><p><span class=\"s\">26</span> Je vous donnerai un nouveau cœur, et je mettrai en vous un esprit nouveau; j'ôterai de votre corps le cœur de pierre, et je vous donnerai un <button class=\"mot\" data-g=\"g-coeurdechair\">cœur de chair</button>.</p><p><span class=\"s\">27</span> Je mettrai mon <button class=\"mot\" data-g=\"g-ruach\">Esprit</button> en vous, et je ferai en sorte que vous suiviez mes ordonnances, et que vous observiez et pratiquiez mes lois.</p><p><span class=\"s\">28</span> Vous habiterez le pays que j'ai donné à vos pères; vous serez mon peuple, et je serai votre Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-qadash",
+          "lemme": "qadash",
+          "html": "Le verbe hébreu <span class=\"gr\">qadash</span> (קדש) signifie mettre à part, rendre saint, et Segond traduit fidèlement par « sanctifier » — mais le sujet grammatical surprend: ce n'est pas Israël qui sanctifie Dieu, c'est Dieu qui sanctifie lui-même son propre nom, malgré et à travers l'infidélité de son peuple. Les commentateurs juifs médiévaux, Rachi en tête, lisent ici la restauration comme une affaire d'honneur divin avant d'être une affaire de mérite humain: Dieu agit « non à cause de vous » (v. 22), mais pour son nom. Calvin, dans son commentaire sur Ézéchiel, insiste sur ce renversement: la grâce précède toujours la conversion, elle ne la récompense pas."
+        },
+        {
+          "id": "g-coeurdechair",
+          "lemme": "lev basar",
+          "html": "L'hébreu oppose <span class=\"gr\">lev even</span>, cœur de pierre, à <span class=\"gr\">lev basar</span>, cœur de chair — Segond garde l'image sans l'expliquer, ce qui est juste, car la force du texte tient à ce contraste physique et non à une métaphore abstraite de la volonté. La pierre ne sent rien et ne se laisse pas entamer; la chair, elle, est vulnérable, capable d'être blessée et donc d'être touchée. Jean Chrysostome reprendra cette image pour dire que la conversion est une opération que Dieu seul peut mener, puisqu'un cœur de pierre ne peut littéralement pas se changer lui-même en chair."
+        },
+        {
+          "id": "g-ruach",
+          "lemme": "ruach",
+          "html": "<span class=\"gr\">Ruach</span> (רוּחַ) désigne à la fois le souffle, le vent et l'esprit — Segond choisit « Esprit » avec majuscule, anticipant une lecture que le texte hébreu pris seul n'impose pas nécessairement, mais que toute la tradition chrétienne, dès les Pères grecs, a reconnue ici comme préfigurant la Pentecôte. Le même mot ouvre la Genèse, où le ruach de Dieu plane sur les eaux: recevoir cet Esprit, c'est être retraversé par le souffle même de la création."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 50 (51), 12-13, 14-15, 18-19",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">12</span> O Dieu! <button class=\"mot\" data-g=\"g-bara\">crée</button> en moi un cœur pur, Renouvelle en moi un esprit bien disposé.</p><p><span class=\"s\">13</span> Ne me rejette pas loin de ta face, Ne me retire pas ton esprit saint.</p><p><span class=\"s\">14</span> Rends-moi la <button class=\"mot\" data-g=\"g-yeshua\">joie de ton salut</button>, Et qu'un esprit de bonne volonté me soutienne!</p><p><span class=\"s\">15</span> J'enseignerai tes voies à ceux qui les transgressent, Et les pécheurs reviendront à toi.</p><p><span class=\"s\">18</span> Si tu eusses voulu des sacrifices, je t'en aurais offert; Mais tu ne prends point plaisir aux holocaustes.</p><p><span class=\"s\">19</span> Les sacrifices qui sont agréables à Dieu, c'est un <button class=\"mot\" data-g=\"g-espritbrise\">esprit brisé</button>: O Dieu! tu ne dédaignes pas un cœur brisé et contrit.</p>",
+      "gloses": [
+        {
+          "id": "g-bara",
+          "lemme": "bara",
+          "html": "Le verbe <span class=\"gr\">bara</span> (ברא) n'a dans toute la Bible hébraïque qu'un seul sujet possible: Dieu. Segond traduit justement par « crée » et non par « répare » ou « refais », car le priant ne demande pas une amélioration de ce qui existe, mais un acte de création à partir de rien, comme au premier jour. Calvin, dans son commentaire sur les Psaumes, note que David, en employant ce mot, confesse que son cœur est à ce point corrompu qu'aucune réforme partielle ne suffit — seule une nouvelle création peut y remédier."
+        },
+        {
+          "id": "g-yeshua",
+          "lemme": "yeshua",
+          "html": "Le mot traduit par « salut » est <span class=\"gr\">yeshua</span> (יְשׁוּעָה), de la même racine que le nom Josué, et, en grec, Jésus. Segond ne pouvait pas faire entendre ce jeu de mots dans sa traduction, mais Jérôme, dans ses travaux sur les noms hébreux, rappelle ce lien: demander la joie du yeshua, c'est déjà, sans le savoir pleinement, appeler celui qui portera ce nom. Le psalmiste ne demande pas d'être sauvé une seconde fois, mais que la joie de ce salut déjà reçu lui soit rendue — la faute n'a pas ôté le salut, elle en a voilé la joie."
+        },
+        {
+          "id": "g-espritbrise",
+          "lemme": "ruach nishbara",
+          "html": "L'hébreu <span class=\"gr\">ruach nishbara</span>, esprit brisé, forme avec « cœur brisé et contrit » le sommet théologique du psaume: le seul sacrifice que Dieu n'a jamais dédaigné n'est pas d'origine rituelle mais existentielle. Les rabbins ont souvent lu ce verset contre toute instrumentalisation du repentir: on ne brise pas son cœur pour obtenir quelque chose, le cœur est brisé, et c'est cette brisure elle-même, sans arrière-pensée, que Dieu reçoit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 22, 1-14",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Jésus, prenant la parole, leur parla de nouveau en paraboles, et il dit:</p><p><span class=\"s\">2</span> Le royaume des cieux est semblable à un roi qui fit des <button class=\"mot\" data-g=\"g-gamos\">noces</button> pour son fils.</p><p><span class=\"s\">3</span> Il envoya ses serviteurs appeler ceux qui étaient invités aux noces; mais ils ne voulurent pas venir.</p><p><span class=\"s\">4</span> Il envoya encore d'autres serviteurs, en disant: Dites aux conviés: Voici, j'ai préparé mon festin; mes bœufs et mes bêtes grasses sont tués, tout est prêt, venez aux noces.</p><p><span class=\"s\">5</span> Mais, sans s'inquiéter de l'invitation, ils s'en allèrent, celui-ci à son champ, celui-là à son trafic;</p><p><span class=\"s\">6</span> et les autres se saisirent des serviteurs, les outragèrent et les tuèrent.</p><p><span class=\"s\">7</span> Le roi fut irrité; il envoya ses troupes, fit périr ces meurtriers, et brûla leur ville.</p><p><span class=\"s\">8</span> Alors il dit à ses serviteurs: Les noces sont prêtes; mais les conviés n'en étaient pas dignes.</p><p><span class=\"s\">9</span> Allez donc dans les carrefours des chemins, et appelez aux noces tous ceux que vous trouverez.</p><p><span class=\"s\">10</span> Ces serviteurs allèrent dans les chemins, rassemblèrent tous ceux qu'ils trouvèrent, méchants et bons, et la salle des noces fut remplie de convives.</p><p><span class=\"s\">11</span> Le roi entra pour voir ceux qui étaient à table, et il aperçut là un homme qui n'avait pas revêtu un <button class=\"mot\" data-g=\"g-endyma\">habit de noces</button>.</p><p><span class=\"s\">12</span> Il lui dit: Mon ami, comment es-tu entré ici sans avoir un habit de noces? Cet homme eut la bouche fermée.</p><p><span class=\"s\">13</span> Alors le roi dit aux serviteurs: Liez-lui les pieds et les mains, et jetez-le dans les ténèbres du dehors, où il y aura des pleurs et des grincements de dents.</p><p><span class=\"s\">14</span> Car il y a beaucoup d'appelés, mais peu d'<button class=\"mot\" data-g=\"g-eklektoi\">élus</button>.</p>",
+      "gloses": [
+        {
+          "id": "g-gamos",
+          "lemme": "gamos",
+          "html": "Le grec <span class=\"gr\">gamos</span> désigne aussi bien les noces que le festin nuptial lui-même, et Segond traduit tantôt par « noces », tantôt par « festin », selon le contexte immédiat — fidèle à l'usage grec, mais qui peut effacer en français la continuité de l'image. L'image du royaume comme noces traverse l'Ancien Testament, d'Osée à Ésaïe (61, 10; 62, 5), où Dieu épouse son peuple; Origène et, après lui, Grégoire de Nysse liront le Cantique des cantiques dans cette même clef nuptiale."
+        },
+        {
+          "id": "g-endyma",
+          "lemme": "endyma gamou",
+          "html": "<span class=\"gr\">Endyma gamou</span>, l'habit de noces, ne désigne dans l'usage de l'époque aucun vêtement rituel obligatoire connu — ce qui a conduit plusieurs commentateurs anciens à supposer que le roi lui-même le fournissait à l'entrée, selon la coutume orientale de l'habit offert par l'hôte. Jean Chrysostome, dans son homélie sur ce passage, y voit une vie juste et charitable, don de la grâce que l'homme doit ensuite revêtir et garder: on est invité gratuitement, mais on ne reste pas sans se laisser vêtir. Cette lecture rejoint Ésaïe 61, 10, « il m'a revêtu des vêtements du salut », que Segond traduit avec le même verbe « revêtir » qu'ici, tissant un lien que le grec ne nomme pas mais que la tradition chrétienne a constamment reconnu."
+        },
+        {
+          "id": "g-eklektoi",
+          "lemme": "eklektoi",
+          "html": "Le grec oppose <span class=\"gr\">klētoi</span>, les appelés, à <span class=\"gr\">eklektoi</span>, les élus — littéralement les « choisis-hors-de ». Segond garde la distinction, essentielle: tous sont appelés sans exception, la salle se remplit de « méchants et bons » (v. 10), mais l'élection se joue ensuite, dans la réponse donnée à l'appel. Augustin, dans plusieurs pages de la Cité de Dieu, revient sur ce verset pour distinguer l'appel universel de l'Église visible et le petit nombre de ceux qui persévèrent jusqu'au bout."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "L'exil et la promesse",
+      "corps_html": "Ézéchiel prophétise depuis Babylone, où il a été déporté en 597 avant notre ère avec l'élite de Juda. Le chapitre 36 précède immédiatement la vision des ossements desséchés (ch. 37): le peuple est comme mort, sa terre profanée, son nom même déshonoré parmi les nations qui raillent un Dieu incapable, croit-on, de garder les siens. C'est dans cette déréliction que la promesse d'un cœur nouveau est prononcée — non comme consolation abstraite, mais comme réponse précise à un désastre daté."
+    },
+    {
+      "titre": "Une parabole adressée au Temple",
+      "corps_html": "Cette parabole appartient à une série de trois (Mt 21, 28–22, 14) adressées aux grands prêtres et aux pharisiens dans le Temple, juste avant la Passion. Le détail du roi qui « brûla leur ville » (v. 7), absent de la version parallèle de Luc (14, 15-24), est lu par de nombreux commentateurs comme un écho, après coup, de la destruction de Jérusalem en 70 — Matthieu écrivant probablement dans la décennie qui suit. La parabole vise donc directement les chefs religieux qui refusent l'invitation de Dieu."
+    }
+  ],
+  "analogie": {
+    "titre": "Le vêtement qu'on n'a pas tissé soi-même",
+    "variantes": [
+      "Tu as pu, un jour, essayer de forcer en toi un repentir que tu ne sentais pas — te répéter les mots justes, vouloir être désolé assez fort pour que cela compte, et sentir que rien ne venait, que le cœur restait sec sous l'effort. Ce n'est pas en serrant plus fort la volonté que la pierre devient chair: à un moment, souvent sans que tu saches dire quand, quelque chose a cédé en toi qui n'était pas ton œuvre, une tendresse ou une tristesse vraie a remplacé l'exercice, et tu as compris après coup que tu n'avais rien produit — tu avais seulement cessé de résister à ce qui se donnait. C'est devant ce Dieu-là, qui crée quand tu ne peux que demander, que le texte de ce jour te place.",
+      "Il t'est arrivé d'être accueilli quelque part — une table, une communauté, une amitié — sans avoir rien fait pour mériter cette place, et de sentir, une fois assis, que l'accueil lui-même te changeait la manière de te tenir: tu ne pouvais plus rester tout à fait le même au milieu de ce qui t'était offert sans mérite. L'hospitalité reçue finit toujours par demander quelque chose, non par condition posée à l'entrée, mais par la logique intérieure du don: on ne reste pas vêtu de soi-même longtemps devant une générosité pareille. C'est cette place à la fois gratuite et exigeante que le texte de ce jour te fait reconnaître devant Dieu.",
+      "Tu as peut-être connu ce moment où prier ne consistait plus à demander quelque chose, mais simplement à rester là, sans mot juste, avec ce qui en toi était cassé et que tu ne cherchais même plus à réparer toi-même. Et c'est précisément là, dans cet aveu sans arrangement, que quelque chose a commencé à se déplacer — non parce que tu avais enfin trouvé la bonne prière, mais parce que la brisure elle-même, offerte telle quelle, semblait déjà être reçue. Le texte de ce jour te dit que ce n'est pas une étape avant la vraie rencontre avec Dieu: c'est déjà, pour lui, un sacrifice qu'il n'a jamais dédaigné."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte de ce jour ne demande pas d'abord un effort, mais un consentement: laisser Dieu faire en toi ce que la pierre ne peut pas faire d'elle-même.",
+    "geste": "Reprends aujourd'hui, lentement, les mots du psaume — « crée en moi un cœur pur » — sans rien ajouter, sans les justifier ni les expliquer. Dis-les comme une demande nue, puis reste un instant dans le silence qui suit, sans chercher à sentir quoi que ce soit.",
+    "note": "Ce geste ne se mesure à aucun résultat immédiat: la création, dans l'Écriture, prend le temps qu'elle prend."
+  },
+  "question": "De quel vêtement continues-tu de t'habiller toi-même, à la table où tu as pourtant déjà été reçu sans condition ?",
+  "racines": [
+    {
+      "titre": "L'habit qu'on refuse de revêtir",
+      "corps_html": "Jean Chrysostome, dans sa 69e homélie sur Matthieu, s'étonne que l'homme sans habit de noces ait pu entrer alors que tous les autres, ramassés au hasard des chemins, portaient le même vêtement offert par le roi. S'il n'avait pas eu le temps de se changer, dit-il, comment les autres l'ont-ils eu? La faute n'est donc pas de ne pas s'être préparé à temps, mais d'avoir méprisé, une fois entré, le don qui lui était fait — d'être resté vêtu de lui-même au milieu de la grâce reçue.",
+      "attribution": "Jean Chrysostome, Homélies sur Matthieu, LXIX"
+    },
+    {
+      "titre": "Une création, non une réparation",
+      "corps_html": "Calvin, commentant Ézéchiel 36, refuse toute lecture qui ferait du cœur nouveau une simple amélioration morale obtenue par l'effort humain. Pour lui, le cœur de pierre désigne une incapacité radicale, et seul le Dieu qui a créé du néant peut créer de nouveau au-dedans de l'homme. Il rapproche ce passage du Psaume 51, où David use du même verbe — bara —, signe que l'Ancien Testament tout entier atteste déjà, avant l'Évangile, que le salut commence toujours par un acte de Dieu seul.",
+      "attribution": "Jean Calvin, Commentaires sur Ézéchiel"
+    },
+    {
+      "titre": "Le sacrifice qui n'en est pas un",
+      "corps_html": "La tradition rabbinique a beaucoup médité ce verset après la destruction du Temple en 70, quand les sacrifices matériels devinrent impossibles. Le Talmud de Babylone enseigne, en s'appuyant précisément sur ce psaume, que quiconque s'humilie est considéré comme s'il avait offert tous les sacrifices prescrits par la Loi. Ce que le Temple ne pouvait plus offrir, le cœur brisé continuait de l'offrir — la prière du pénitent devenait alors, littéralement, le seul autel qui reste.",
+      "attribution": "Talmud de Babylone, Sanhédrin 43b (tradition rabbinique)"
+    }
+  ]
+}
