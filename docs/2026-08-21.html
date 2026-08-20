@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ossements vivants — vendredi 21 août 2026</title>
+<meta name="description" content="Le souffle qui relève les morts, le commandement qui résume la loi.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">vendredi 21 août 2026 · 20ème Semaine du Temps Ordinaire · <span class="couleur">blanc · </span>
+</p>
+    <h1>Ossements <span class="it">vivants</span></h1>
+    <p class="chapeau">Le souffle qui relève les morts, le commandement qui résume la loi.</p>
+    <figure class="gravure" aria-label="Gravure sur bois représentant une vallée jonchée d'ossements que traverse un souffle de vent suggéré par de longues hachures obliques, avec au loin une silhouette prophétique aux bras levés face à des os qui se redressent."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M20 128 q30 -8 55 0"/><path d="M100 128 q28 -10 60 0"/><path d="M185 128 q30 -9 58 0"/><path d="M40 118 l10 -10 m-4 10 l9 -13 m8 13 l6 -14 m5 14 l8 -12"/><path d="M120 116 l9 -11 m6 11 l7 -13 m9 13 l5 -12"/><path d="M210 118 l9 -10 m7 10 l6 -13 m8 13 l6 -11"/><path d="M255 12 l30 20 M258 18 l27 17 M262 24 l24 15 M266 30 l20 13"/><path d="M295 44 l26 18 M298 50 l23 15 M301 56 l20 13"/><path d="M270 65 v50"/><path d="M258 78 q12 -14 24 0"/><path d="M255 96 h30"/></g><g class="trait-liturgie"><path d="M74 108 q3 -14 0 -22"/><path d="M62 100 v14"/><path d="M86 100 v14"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ézéchiel 37, 1-14 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> La main de l'Éternel fut sur moi, et l'Éternel me transporta en <button class="mot" data-g="g-ruah">esprit</button>, et me déposa dans le milieu d'une vallée pleine d'ossements. <span class="s">2</span> Il me fit passer auprès d'eux, tout autour; et voici, ils étaient fort nombreux, à la surface de la vallée, et fort secs. <span class="s">3</span> Il me dit: <button class="mot" data-g="g-benadam">Fils de l'homme</button>, ces os pourront-ils revivre? Je répondis: Seigneur Éternel, tu le sais. <span class="s">4</span> Il me dit: Prophétise sur ces os, et dis-leur: <button class="mot" data-g="g-atsamot">Ossements desséchés</button>, écoutez la parole de l'Éternel! <span class="s">5</span> Ainsi parle le Seigneur, l'Éternel, à ces os: Voici, je vais faire entrer en vous un esprit, et vous vivrez. <span class="s">6</span> Je vous donnerai des nerfs, et je ferai croître sur vous de la chair, je vous couvrirai de peau, je mettrai en vous un esprit, et vous vivrez; et vous saurez que je suis l'Éternel. <span class="s">7</span> Je prophétisai, selon l'ordre que j'avais reçu. Et comme je prophétisais, il y eut un bruit, et voici, il se fit un mouvement, et les os s'approchèrent les uns des autres. <span class="s">8</span> Je regardai, et voici, il leur vint des nerfs, la chair crût, et la peau les couvrit par-dessus; mais il n'y avait point en eux d'esprit. <span class="s">9</span> Il me dit: Prophétise, et parle à l'esprit! prophétise, fils de l'homme, et dis à l'esprit: Ainsi parle le Seigneur, l'Éternel: Esprit, viens des quatre vents, souffle sur ces morts, et qu'ils revivent! <span class="s">10</span> Je prophétisai, selon l'ordre qu'il m'avait donné. Et l'esprit entra en eux, et ils reprirent vie, et ils se tinrent sur leurs pieds: c'était une armée nombreuse, très nombreuse. <span class="s">11</span> Il me dit: Fils de l'homme, ces os, c'est toute la maison d'Israël. Voici, ils disent: Nos os sont desséchés, notre espérance est détruite, nous sommes anéantis! <span class="s">12</span> Prophétise donc, et dis-leur: Ainsi parle le Seigneur, l'Éternel: Voici, j'ouvrirai vos <button class="mot" data-g="g-qevarim">sépulcres</button>, je vous ferai sortir de vos sépulcres, ô mon peuple, et je vous ramènerai dans le pays d'Israël. <span class="s">13</span> Et vous saurez que je suis l'Éternel, lorsque j'ouvrirai vos sépulcres, et que je vous ferai sortir de vos sépulcres, ô mon peuple! <span class="s">14</span> Je mettrai mon esprit en vous, et vous vivrez, je vous rétablirai dans votre pays, et vous saurez que j'ai parlé et exécuté, dit l'Éternel.</div>
+        <div class="glose" id="g-ruah"><span class="lemme">ruah</span> Le mot hébreu <span class="gr">ruah</span> traverse tout le chapitre et change de sens à chaque verset sans jamais changer de lettres : c'est le vent qui balaie la vallée, le souffle qui anime la poitrine, et l'Esprit de Dieu lui-même. Segond doit choisir un mot français à chaque occurrence — « esprit » au verset 1, « souffle » au verset 9 — alors que l'hébreu joue précisément sur cette unité que la traduction brise. Les Pères grecs, en rendant ruah par <span class="gr">pneuma</span>, ont lu ce chapitre comme une préfiguration de la Pentecôte. Calvin, dans son commentaire sur Ézéchiel, rappelle pourtant que la vision décrit d'abord le rétablissement du peuple exilé, non une résurrection individuelle.</div>
+        <div class="glose" id="g-benadam"><span class="lemme">fils de l'homme</span> L'expression hébraïque <span class="gr">ben-adam</span>, « fils d'homme », est le titre que Dieu donne systématiquement à Ézéchiel dans tout le livre, plus de quatre-vingt-dix fois. Elle ne désigne rien de messianique ici : elle souligne au contraire la simple humanité, la créature de poussière, face à la majesté divine qui parle. Segond traduit littéralement, gardant le contraste voulu par le texte entre la fragilité de celui qui reçoit la vision et la puissance de celui qui l'envoie. Le même titre reviendra dans la bouche de Jésus, mais chargé d'un sens nouveau que le grec des évangiles, <span class="gr">huios tou anthropou</span>, ne recouvre pas exactement.</div>
+        <div class="glose" id="g-atsamot"><span class="lemme">ossements desséchés</span> L'hébreu <span class="gr">atsamot yeveshot</span>, littéralement « des os asséchés », insiste sur un dessèchement total : non des cadavres récents, mais des ossements exposés depuis longtemps, vidés de toute humidité et de toute vie possible. Segond traduit sobrement « ossements desséchés », gardant la répétition qui structure la vision. Les rabbins du Talmud (Sanhédrin 92b) ont discuté si cette vallée décrivait un événement réel ou une parabole ; la majorité y a vu une image, sans que cela n'enlève rien à sa force. C'est précisément cette extrémité, l'os sec sans chair ni souffle, que le texte choisit comme lieu de la parole de Dieu.</div>
+        <div class="glose" id="g-qevarim"><span class="lemme">sépulcres</span> Le mot <span class="gr">qevarim</span>, « sépulcres » ou « tombeaux », déplace la vision : après l'image des os épars dans la vallée, le texte parle de tombes que Dieu va ouvrir, ce qui suggère un second niveau de lecture, celui de l'exil comme mort collective et du retour comme sortie du tombeau national. Segond garde « sépulcres », terme concret qui annonce, sans le vouloir directement, le vocabulaire évangélique du tombeau ouvert. Origène et les Pères latins liront ce verset en écho à la résurrection de Lazare, sans que le texte d'Ézéchiel vise lui-même autre chose que le retour de Babylone.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Psaume 106 (107), 2-3, 4-5, 6-7, 8-9 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Qu'ainsi disent les <button class="mot" data-g="g-gaal">rachetés</button> de l'Éternel, Ceux qu'il a délivrés de la main de l'ennemi, <span class="s">3</span> Et qu'il a rassemblés de tous les pays, De l'orient et de l'occident, du nord et de la mer! <span class="s">4</span> Ils erraient dans le désert, ils marchaient dans la solitude, Sans trouver une ville où ils pussent habiter. <span class="s">5</span> Ils souffraient de la faim et de la soif; Leur <button class="mot" data-g="g-nephesh">âme</button> était languissante. <span class="s">6</span> Dans leur détresse, ils crièrent à l'Éternel, Et il les délivra de leurs angoisses; <span class="s">7</span> Il les conduisit par un chemin droit, Pour aller dans une ville habitable. <span class="s">8</span> Qu'ils louent l'Éternel pour sa bonté, Et pour ses merveilles en faveur des fils de l'homme! <span class="s">9</span> Car il a satisfait l'âme altérée, Il a comblé de biens l'âme affamée.</div>
+        <div class="glose" id="g-gaal"><span class="lemme">ga'al</span> Le verbe hébreu <span class="gr">ga'al</span>, « racheter », désigne à l'origine le geste du proche parent qui rachète un membre de sa famille tombé en esclavage ou dépossédé de sa terre, vocabulaire du lévirat et de la loi du rachat en Lévitique 25. Segond traduit « rachetés », gardant la métaphore juridique et familiale : Dieu se comporte envers Israël comme le parent le plus proche, le <span class="gr">go'el</span>. Les rabbins ont vu dans ce psaume un chant de pèlerins revenus d'exil, avant qu'Augustin n'y entende un rachat plus large de toute âme errante. Le mot porte donc à la fois une histoire précise, celle du retour de Babylone, et une capacité d'élargissement que le culte n'a cessé d'exploiter.</div>
+        <div class="glose" id="g-nephesh"><span class="lemme">nephesh</span> L'hébreu <span class="gr">nephesh</span>, traduit ici par « âme », ne désigne pas une partie immatérielle opposée au corps mais l'être vivant tout entier, y compris sa faim et sa soif, c'est le mot qui, en Genèse 2, décrit l'homme devenu « âme vivante » par le souffle de Dieu. Segond, en traduisant « leur âme était languissante » puis « il a satisfait l'âme altérée », emploie un mot français chargé de dualisme grec que l'hébreu ignore. Ce même terme reviendra sous une autre forme dans la vision d'Ézéchiel, quand les os reprennent vie et se tiennent debout sur leurs pieds : la vie biblique est toujours corporelle avant d'être intérieure.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Matthieu 22, 34-40 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">34</span> Les pharisiens, ayant appris qu'il avait réduit au silence les sadducéens, se rassemblèrent, <span class="s">35</span> et l'un d'eux, docteur de la loi, lui fit cette question, pour l'éprouver: <span class="s">36</span> Maître, quel est le plus grand commandement de la loi? <span class="s">37</span> Jésus lui répondit: <button class="mot" data-g="g-agapao">Tu aimeras</button> le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, et de toute ta <button class="mot" data-g="g-dianoia">pensée</button>. <span class="s">38</span> C'est le premier et le plus grand commandement. <span class="s">39</span> Et voici le second, qui lui est semblable: Tu aimeras ton <button class="mot" data-g="g-plesion">prochain</button> comme toi-même. <span class="s">40</span> De ces deux commandements dépendent toute la loi et les prophètes.</div>
+        <div class="glose" id="g-agapao"><span class="lemme">agapaō</span> Le grec emploie ici <span class="gr">agapēseis</span>, futur du verbe <span class="gr">agapaō</span>, et non <span class="gr">phileō</span> : ce n'est pas un sentiment spontané d'affection mais un attachement voulu, orienté, qui engage la volonté autant que le cœur. Segond traduit uniformément par « aimer », effaçant une distinction que le grec du Nouveau Testament maintient ailleurs, par exemple dans le dialogue entre Jésus et Pierre en Jean 21. Jésus cite ici Deutéronome 6, 5 selon la Septante, qui employait déjà agapaō pour traduire l'hébreu <span class="gr">ahav</span> du Shema. Chrysostome, dans ses homélies sur Matthieu, souligne que ce commandement n'est pas nouveau mais rappelé comme fondement de tout le reste.</div>
+        <div class="glose" id="g-dianoia"><span class="lemme">dianoia</span> Là où Deutéronome 6, 5 énumère le cœur, l'âme et la force (<span class="gr">me'od</span> en hébreu, rendu par <span class="gr">dynamis</span> dans la Septante), Matthieu fait dire à Jésus cœur, âme et <span class="gr">dianoia</span>, « pensée » ou « intelligence », un terme que ni l'hébreu ni la Septante du Deutéronome ne portaient à cette place. Segond traduit fidèlement ce déplacement par « pensée », sans le signaler comme une variante. Les commentateurs anciens y ont vu un souci propre à Matthieu d'inclure l'intellect dans l'amour dû à Dieu, contre toute piété purement affective ou seulement obéissante.</div>
+        <div class="glose" id="g-plesion"><span class="lemme">plēsion</span> Le grec <span class="gr">plēsion</span>, « le proche », traduit l'hébreu <span class="gr">rea</span> de Lévitique 19, 18, un mot dont le sens premier visait dans son contexte le compatriote, le membre du même peuple. Segond traduit « prochain », mot français qui a fini par désigner, dans l'usage courant, n'importe quel être humain rencontré, élargissement que le texte de la loi ne portait pas nécessairement à l'origine. C'est la parabole du bon Samaritain, un peu plus loin dans les évangiles, qui viendra explicitement forcer cet élargissement. Ici, Jésus ne redéfinit pas le mot : il fait de son commandement l'égal du premier.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une vision au creux de l'exil</h3><p>La vision de la vallée des ossements appartient à la seconde partie du livre d'Ézéchiel (chapitres 33 à 39), écrite après l'annonce de la chute de Jérusalem en 587 avant notre ère, quand le prophète, déporté à Babylone dès 597, doit désormais annoncer non plus le jugement mais la restauration. Le peuple exilé se vit comme mort — « nos os sont desséchés » — et c'est à ce désespoir précis que la vision répond, juste avant l'oracle des deux bâtons réunis qui suit au verset 15.</p></div>
+      <div><h3>La dernière des controverses du temple</h3><p>Cette question sur le plus grand commandement forme, chez Matthieu, la troisième d'une série de controverses posées à Jésus dans le temple de Jérusalem durant la semaine qui précède sa mort, après celle des sadducéens sur la résurrection. Marc (12, 28-34) et Luc (10, 25-28) rapportent une scène proche, mais Luc la déplace plus tôt et la fait déboucher sur la parabole du bon Samaritain. Le fait que Jésus lie ensemble Deutéronome 6,5 et Lévitique 19,18 est reçu, chez certains maîtres juifs contemporains comme Hillel, dans un esprit voisin de synthèse de la loi.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le souffle qui manquait</h2>
+<p>Il y a des saisons où prier ressemble à parler dans une pièce vide : les mots sortent, la posture est juste, mais rien ne répond en toi, aucune chaleur, aucune certitude que quelqu'un écoute. Tu continues pourtant, par habitude ou par fidélité nue, sans savoir si cela sert à quelque chose. C'est exactement la position des os de la vallée avant le verset 9 : la chair est revenue, la forme est là, mais aucun souffle. Le texte ne dit pas que tu dois produire ce souffle par ta ferveur ; il dit qu'il vient d'ailleurs, appelé par une parole qui n'est pas la tienne, et qu'il vient sur ce qui semblait définitivement sec.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le texte ne demande pas d'abord de comprendre comment des os peuvent revivre, ni de vérifier que ton amour est assez grand : il demande de te tenir, un instant, à l'endroit où tu te crois trop sec ou trop tiède pour que quoi que ce soit change.</p>
+      <p class="geste">Reste en silence quelques minutes et redis lentement, sans les commenter, les mots : « Tu aimeras le Seigneur ton Dieu de tout ton cœur » — laisse-les rejoindre l'endroit précis où tu te sens aujourd'hui le plus desséché.</p>
+      <small>Rien n'oblige à ressentir quoi que ce soit pendant ce temps ; le texte du jour promet le souffle, pas l'émotion qui l'accompagnerait.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quel endroit de ta vie ressemble aujourd'hui le plus à cette vallée d'ossements desséchés, et qu'est-ce que cela changerait de croire que la parole de Dieu peut encore s'y adresser ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le commandement qui contient tous les autres</h3>
+          <p>Jean Chrysostome, commentant ce passage dans ses homélies sur Matthieu, note que Jésus ne juxtapose pas deux commandements séparés mais montre que le second procède du premier : qui aime vraiment Dieu ne peut mépriser celui que Dieu a créé à son image. Pour lui, la loi et les prophètes ne sont pas abolis mais rassemblés dans ce double mouvement, comme des rayons qui reviennent à leur centre.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, LXXI</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une vision pour un peuple, pas pour un individu</h3>
+          <p>Calvin, dans ses leçons sur Ézéchiel, insiste sur le fait que la vision de la vallée ne parle pas d'abord de la résurrection des corps après la mort, mais du relèvement politique et spirituel d'Israël exilé, réduit à rien aux yeux des nations. Il met en garde contre une lecture qui isolerait ce texte de son objet premier, le retour de la captivité, tout en reconnaissant qu'il annonce ensuite une espérance plus vaste.</p>
+<p class="attrib">Jean Calvin, Leçons sur le prophète Ézéchiel</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une image, pas un fait, disent les maîtres</h3>
+          <p>Le Talmud de Babylone (traité Sanhédrin 92b) rapporte un débat entre rabbins sur la vision d'Ézéchiel : Rabbi Eliézer soutient que les morts ressuscités ont chanté un cantique puis sont remontés dans leur tombe, tandis que Rabbi Yehoushoua ben Qorha estime que la scène entière n'est qu'une parabole, <span class="gr">mashal</span>, destinée à enseigner l'espérance et non un événement littéral. Cette discussion montre que le texte a, très tôt, résisté à une lecture uniquement biographique.</p>
+<p class="attrib">Talmud de Babylone, Sanhédrin 92b</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 20ème Semaine du Temps Ordinaire — Ez 37, 1-14 ; Mt 22, 34-40.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
