@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-22",
+  "date_humaine": "samedi",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 43, 1-7a ; Mt 23, 1-12",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M20 128 v-90 h70 v90\"/><path d=\"M20 38 h70\"/><path d=\"M250 128 q-6 -20 8 -34 q12 12 8 34\"/><path d=\"M254 128 v-16\"/><path d=\"M262 128 v-16\"/><path d=\"M244 128 h24\"/><path d=\"M244 116 h24\"/></g><g class=\"trait-rubrique\"><path d=\"M24 42 v82 h62 v-82 z\"/><path d=\"M55 42 v82\"/></g><g class=\"trait-liturgie\"><path d=\"M55 42 v-8\"/><path d=\"M40 44 l15 -12 l15 12\"/></g></svg>",
+  "titre": "Ce qui remplit",
+  "titre_html": "Ce qui <span class=\"it\">remplit</span>",
+  "sous_titre": "La gloire qui revient par la porte de l'orient, et le Christ qui démasque ce qui gonfle sans remplir.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une porte massive ouverte à l'orient, par laquelle un flot de lumière entre dans une nef obscure et en occupe tout l'espace jusqu'au sol dallé, tandis qu'au premier plan un siège vide, sculpté mais inoccupé, reste dans la pénombre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 43, 1-7a",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Il me conduisit à la porte, à la porte qui était du côté de l'<button class=\"mot\" data-g=\"g-qedem\">orient</button>.</p><p><span class=\"s\">2</span> Et voici, la <button class=\"mot\" data-g=\"g-kabod\">gloire</button> du Dieu d'Israël s'avançait de l'orient. Sa voix retentissait comme celle des grandes eaux, et la terre resplendissait de sa gloire.</p><p><span class=\"s\">3</span> Cette vision était semblable à celle que j'avais eue lorsque j'étais venu pour détruire la ville, et ces visions étaient semblables à celle que j'avais eue près du fleuve du Kebar. Et je tombai sur ma face.</p><p><span class=\"s\">4</span> La gloire de l'Éternel entra dans la maison par la porte qui était du côté de l'orient.</p><p><span class=\"s\">5</span> Alors, l'esprit m'enleva et me transporta dans le parvis intérieur. Et voici, la gloire de l'Éternel remplissait la maison.</p><p><span class=\"s\">6</span> J'entendis quelqu'un qui me parlait depuis la maison, et un homme se tenait près de moi.</p><p><span class=\"s\">7</span> Il me dit : Fils de l'homme, c'est ici le lieu de mon trône, le lieu où je poserai <button class=\"mot\" data-g=\"g-merglat\">la plante de mes pieds</button> ; j'y habiterai éternellement au milieu des enfants d'Israël.</p>",
+      "gloses": [
+        {
+          "id": "g-qedem",
+          "lemme": "qédem",
+          "html": "L'hébreu קָדִים (qadim) et קֶדֶם (qédem) désignent à la fois l'est et l'avant, le commencement — la même racine donne l'idée de « ce qui précède ». Ce n'est pas un hasard si la gloire revient par où elle était partie : en Ézéchiel 10, 19 et 11, 23, elle avait quitté le temple par la porte orientale pour se tenir sur la montagne à l'est de la ville. Segond garde simplement « orient », sans rendre le jeu hébreu entre le lieu du retour et l'origine à laquelle on revient."
+        },
+        {
+          "id": "g-kabod",
+          "lemme": "kabôd",
+          "html": "Segond traduit כָּבוֹד (kabôd) par « gloire », mais le mot dit d'abord le poids, la lourdeur qui impose sa présence — la même racine sert à dire qu'un fils doit « honorer », littéralement donner du poids à son père. Traduire par « gloire » emprunte au grec δόξα des Septante, qui déplace le sens vers l'éclat visible plutôt que vers la densité d'une présence. Grégoire le Grand, dans ses Homélies sur Ézéchiel, lit ce kabôd qui remplit la maison comme une présence qui ne se contente plus d'apparaître, mais qui pèse et occupe tout l'espace laissé vide depuis le chapitre 10."
+        },
+        {
+          "id": "g-merglat",
+          "lemme": "kappot raglaï",
+          "html": "L'expression hébraïque כַּפּוֹת רַגְלַי (kappot raglaï), « les paumes de mes pieds », est rendue par Segond en « la plante de mes pieds ». Elle appartient au vocabulaire du repos définitif : ailleurs Dieu déclare n'avoir pas de lieu où poser ses pieds tant que le temple n'est pas bâti, ou faire de ses ennemis son marchepied. Ici, pour la première fois depuis le désert, Dieu ne dit plus se déplacer avec son peuple mais habiter, sans reprise possible, « éternellement »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 84 (85), 9ab-10, 11-12, 13-14",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">9</span> J'écouterai ce que dit Dieu, l'Éternel ; car il parle de paix à son peuple et à ses fidèles, pourvu qu'ils ne retombent pas dans la folie. <span class=\"s\">10</span> Oui, son salut est proche de ceux qui le craignent, afin que la <button class=\"mot\" data-g=\"g-kabod-ps\">gloire</button> habite dans notre pays.</p><p><span class=\"s\">11</span> La <button class=\"mot\" data-g=\"g-hesed\">bonté</button> et la fidélité se rencontrent, la <button class=\"mot\" data-g=\"g-tsedeq\">justice</button> et la paix s'embrassent ; <span class=\"s\">12</span> la fidélité germe de la terre, et la justice regarde du haut des cieux.</p><p><span class=\"s\">13</span> L'Éternel accordera le bonheur, et notre terre donnera ses fruits. <span class=\"s\">14</span> La justice marchera devant lui, et imprimera ses pas sur le chemin.</p>",
+      "gloses": [
+        {
+          "id": "g-kabod-ps",
+          "lemme": "kabôd",
+          "html": "Le même כָּבוֹד (kabôd) qu'en Ézéchiel revient ici, mais tourné vers l'avenir : non plus la gloire qui rentre dans un temple après une absence, mais celle qui « habite » tout le pays, du même radical que shekina. Segond traduit par « gloire » comme en Ézéchiel, effaçant ainsi le lien qu'un lecteur hébreu percevait entre les deux textes. Calvin, commentant ce psaume, y voit moins une gloire spectaculaire qu'une présence de Dieu rendue sensible par la paix et la justice effectivement vécues dans le peuple."
+        },
+        {
+          "id": "g-hesed",
+          "lemme": "hésèd",
+          "html": "חֶסֶד (hésèd) est un des mots les plus riches de l'hébreu biblique, et Segond hésite tout au long des psaumes entre « bonté », « grâce » et « fidélité », signe que le français n'a pas d'équivalent stable pour cette fidélité active, ce loyalisme d'alliance qui va au-delà du droit strict. Calvin, dans son commentaire sur ce psaume, insiste sur le fait que ce hésèd n'est pas un sentiment mais un engagement que Dieu tient contre toute défaillance de son peuple. Le verset le fait rencontrer la vérité (émèt), comme si la fidélité de Dieu et sa fiabilité ne pouvaient plus être séparées."
+        },
+        {
+          "id": "g-tsedeq",
+          "lemme": "tsédèq",
+          "html": "צֶדֶק (tsédèq), que Segond rend par « justice », ne désigne pas d'abord une sanction mais une conformité, un ordre juste rétabli — proche de la justice qui sauve plutôt que de celle qui condamne. En s'embrassant avec la paix (shalôm), cette justice cesse d'être une exigence qui s'oppose à la miséricorde : un midrash ancien (Bereshit Rabba 8, 5) lit ce verset comme la scène où les anges débattent de la création de l'homme, la vérité elle-même consentant à fléchir devant la grâce sans se renier."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 23, 1-12",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Alors Jésus, parlant à la foule et à ses disciples, dit : <span class=\"s\">2</span> Les scribes et les pharisiens sont assis dans la chaire de Moïse. <span class=\"s\">3</span> Faites donc et observez tout ce qu'ils vous disent ; mais n'agissez pas selon leurs œuvres. Car ils disent, et ne font pas.</p><p><span class=\"s\">4</span> Ils lient des fardeaux pesants, et les mettent sur les épaules des hommes, mais ils ne veulent pas les remuer du doigt. <span class=\"s\">5</span> Ils font toutes leurs actions pour être vus des hommes. Ainsi, ils portent de larges <button class=\"mot\" data-g=\"g-phylacteres\">phylactères</button>, et ils ont de longues franges à leurs vêtements ; <span class=\"s\">6</span> ils aiment la première place dans les festins, les premiers sièges dans les synagogues, <span class=\"s\">7</span> les salutations dans les places publiques, et à être appelés par les hommes <button class=\"mot\" data-g=\"g-rabbi\">Rabbi</button>, Rabbi.</p><p><span class=\"s\">8</span> Mais vous, ne vous faites pas appeler Rabbi ; car un seul est votre maître, et vous êtes tous frères. <span class=\"s\">9</span> Et n'appelez personne sur la terre votre père ; car un seul est votre Père, celui qui est dans les cieux. <span class=\"s\">10</span> Ne vous faites pas non plus appeler docteurs ; car un seul est votre docteur, le Christ.</p><p><span class=\"s\">11</span> Le plus grand parmi vous sera votre serviteur. <span class=\"s\">12</span> Quiconque s'<button class=\"mot\" data-g=\"g-tapeinoo\">élèvera</button> sera abaissé, et quiconque s'abaissera sera élevé.</p>",
+      "gloses": [
+        {
+          "id": "g-phylacteres",
+          "lemme": "phylaktêrion",
+          "html": "Le grec φυλακτήριον (phylaktêrion) vient de φυλάσσω, garder, protéger — ce sont des « objets qui gardent », que Segond transpose en « phylactères » plutôt que de les nommer par leur nom hébreu, tefillin. Ces boîtiers de cuir contenant des versets du Deutéronome (6, 8 : « tu les lieras sur ta main ») étaient portés au front et au bras gauche ; Jésus ne critique pas la pratique, prescrite par la Torah elle-même, mais le fait de les élargir pour qu'on les remarque davantage. Le mot grec, par sa racine, trahit involontairement le glissement dénoncé : ce qui devait garder la Parole en mémoire devient une parure qui garde les regards."
+        },
+        {
+          "id": "g-rabbi",
+          "lemme": "rabbi",
+          "html": "רַבִּי (rabbi) vient de rab, « grand », et signifie littéralement « mon grand », « mon maître » — un titre d'honneur qui ne s'était pas encore figé en fonction officielle du temps de Jésus, mais qui commençait à structurer l'autorité des docteurs de la Loi. Segond garde le mot translittéré plutôt que de le rendre par « maître », gardant la trace d'un usage spécifiquement juif que le grec de Matthieu conserve lui-même sans le traduire. Chrysostome note que Jésus ne condamne pas le titre en lui-même mais le redoublement recherché — « Rabbi, Rabbi » —, signe d'une reconnaissance qu'on réclame plutôt qu'on reçoit."
+        },
+        {
+          "id": "g-tapeinoo",
+          "lemme": "tapéinoô",
+          "html": "Le verbe grec ταπεινόω (tapéinoô), que Segond rend par « abaisser », signifiait à l'origine rendre bas, humilier au sens social le plus concret — un mot pour la défaite, la ruine. Il est associé ici à ὑψόω (hypsoô), « élever », dans un renversement que l'on retrouve presque à l'identique dans le Magnificat, en Luc 1, 52. Chrysostome fait de ce verset la clé de toute la finale du discours : ce n'est pas l'humilité qui abaisse l'homme, c'est l'orgueil qui, cherchant à s'élever, prépare sa propre chute."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le retour par la porte de l'orient",
+      "corps_html": "En Ézéchiel 10 et 11, la gloire de Dieu avait quitté le temple par la porte orientale avant sa destruction en 587 avant notre ère, s'arrêtant sur la montagne à l'est de Jérusalem — signe que Dieu abandonnait un sanctuaire souillé. La vision du chapitre 43 est datée du vingt-cinquième an de l'exil (Éz 40, 1), soit vers 573 : vingt ans après le départ, la gloire revient par la même porte, dans un temple encore inexistant, purement décrit. Le texte ne relate donc pas un événement passé mais une promesse anticipée à un peuple sans temple ni terre."
+    },
+    {
+      "titre": "Une parole qui commence par reconnaître une autorité",
+      "corps_html": "Matthieu 23 ouvre le dernier grand discours avant la Passion, adressé « à la foule et à ses disciples », non aux seuls scribes. Jésus commence par affirmer l'autorité d'enseignement des pharisiens, assis « dans la chaire de Moïse » — une fonction, non une trahison — avant de dénoncer l'écart entre leur parole et leurs actes. Ce discours précède immédiatement les sept malédictions (23, 13-36) puis la lamentation sur Jérusalem (23, 37-39) : la sévérité naît d'un amour déçu, non d'un rejet préalable."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui remplit sans se montrer",
+    "variantes": [
+      "Il y a des services que tu rends sans que personne ne les voie jamais — un appel passé tard le soir à quelqu'un qui traverse une nuit que lui seul connaît, une tâche reprise en silence pour épargner à un autre l'humiliation d'avoir failli, une prière portée pour quelqu'un qui ne saura jamais qu'elle a été dite. Rien de cela ne t'apporte de reconnaissance, et c'est précisément là, dans ce lieu sans spectateur, que tu sens quelque chose s'accomplir en vérité — non pas gonflé, mais rempli. Ce que tu ne montres à personne est peut-être la seule part de toi où Dieu trouve la place de s'installer sans devoir d'abord déloger ton besoin d'être vu.",
+      "Tu as peut-être connu ce moment où un titre, une fonction, une place reconnue de tous t'a semblé enfin te donner du poids — et où, l'ayant obtenue, tu as senti au contraire un vide se creuser, comme si le poste pesait sans que toi, tu pèses davantage. Ce décalage entre ce qu'on te reconnaît au dehors et ce que tu portes vraiment au-dedans ne trompe personne longtemps, et le plus souvent c'est toi qu'il épuise le premier, à devoir tenir un rôle plus grand que ce que tu es. Il arrive alors qu'en renonçant à tenir ce rang, en acceptant d'être simplement utile sans qu'on le remarque, quelque chose de plus stable que la reconnaissance se mette enfin à t'habiter.",
+      "Il y a des saisons où prier ne produit plus rien de sensible, où tu continues par habitude ou par fidélité nue, sans qu'aucune présence ne se laisse deviner — et tu en viens à te demander si quelque chose s'est retiré de toi pour de bon. Puis un jour, sans annonce ni changement d'intensité dans ce que tu fais, la même prière répétée, le même geste tenu dans le vide, se remplit à nouveau d'un poids que tu ne t'expliques pas et que tu n'as pas provoqué. Ce qui revient ne passe jamais par une porte nouvelle et spectaculaire : il repasse par la porte étroite et discrète que tu n'avais pas quittée, celle de ce que tu continuais de faire quand tu ne sentais plus rien."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer cette page, laisse le mot d'Ézéchiel et celui de Matthieu se répondre : l'un dit que la gloire remplit sans qu'on l'ait fabriquée, l'autre que la grandeur se reçoit en s'abaissant. Les deux désignent un même lieu, celui que personne ne regarde.",
+    "geste": "Choisis aujourd'hui un service que tu accompliras sans le dire à personne, et laisse-le rester sans témoin jusqu'au soir.",
+    "note": "Ce jour n'a pas de fête propre au calendrier romain ordinaire ; il se lit dans la continuité de la semaine, sans éclat particulier — ce qui convient assez bien à son propos."
+  },
+  "question": "Qu'est-ce qui, en toi, cherche encore à être vu — et qu'est-ce qui, plus profondément, n'attend que d'être habité ?",
+  "racines": [
+    {
+      "titre": "La chaire de Moïse, un siège qu'on retrouve en pierre",
+      "corps_html": "L'expression grecque καθέδρα Μωϋσέως, que Segond traduit par « chaire de Moïse », désignait une fonction d'enseignement reconnue dans le judaïsme du premier siècle. Des sièges de pierre portant ce nom ont été mis au jour dans plusieurs synagogues antiques, notamment à Chorazin en Galilée et à Délos ; on y installait celui qui lisait et commentait la Torah. Jésus ne conteste pas l'institution, mais l'écart entre ce que l'on enseigne depuis ce siège et ce que l'on vit hors de lui.",
+      "attribution": "note historique — archéologie synagogale"
+    },
+    {
+      "titre": "Le baiser de la justice et de la paix",
+      "corps_html": "Calvin, commentant ce psaume, refuse d'y voir une simple figure poétique : il lit dans la rencontre de la bonté et de la vérité, de la justice et de la paix, l'annonce d'un règne où Dieu ne sacrifie ni son exigence ni sa clémence l'une à l'autre. C'est, écrit-il, la restauration même que le peuple attend depuis l'exil, où la fidélité de Dieu précède et rend possible toute justice humaine. La tradition rabbinique associera plus tard ce même verset au débat des anges sur la création de l'homme.",
+      "attribution": "Jean Calvin, Commentaire sur les Psaumes, Ps 85"
+    },
+    {
+      "titre": "Le service comme seule grandeur",
+      "corps_html": "Chrysostome, dans son homélie sur ce passage, insiste sur le fait que Jésus ne renverse pas la hiérarchie mais la définition même de la grandeur : le premier n'est pas celui qui domine mais celui qui sert, à l'image du Christ lui-même qui, dit-il, n'a pas eu honte de laver les pieds de ses disciples. Il note aussi que l'orgueil dénoncé ici n'est pas propre aux pharisiens : c'est un piège qui guette quiconque enseigne ou dirige au nom de Dieu.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 72"
+    }
+  ]
+}
