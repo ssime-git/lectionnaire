@@ -1,0 +1,161 @@
+{
+  "date": "2026-08-23",
+  "date_humaine": "dimanche",
+  "semaine": "21ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 22, 19-23 ; Rm 11, 33-36 ; Mt 16, 13-20",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M40 55 q22 -14 44 0 q4 30 -4 62 q-18 8 -36 0 q-8 -32 -4 -62 z\"/><path d=\"M108 62 l52 -18\"/><path d=\"M160 44 q9 -3 15 4 q3 8 -6 12 l-11 4\"/><path d=\"M169 48 l6 10\"/><path d=\"M158 60 l6 9\"/><path d=\"M230 30 v70\"/><path d=\"M230 30 q30 -6 46 14\"/><path d=\"M276 44 v56\"/><path d=\"M276 100 q-16 18 -46 10\"/><path d=\"M254 46 v46\"/><path d=\"M254 46 q12 -3 18 6\"/><path d=\"M272 52 v34\"/><path d=\"M272 86 q-8 8 -18 4\"/></g><g class=\"trait-rubrique\"><path d=\"M60 100 q-2 20 6 34\"/><path d=\"M40 128 q30 12 60 0\"/><path d=\"M50 118 q20 8 40 0\"/></g><g class=\"trait-liturgie\"><path d=\"M150 132 q-14 -16 2 -30 q16 14 2 30 z\"/><path d=\"M152 116 v-10\"/><path d=\"M138 138 h28\"/><path d=\"M186 138 l16 -14 l24 4 l30 -6 l40 10\"/></g></svg>",
+  "titre": "La clef",
+  "titre_html": "La <span class=\"it\">clef</span>",
+  "sous_titre": "Ésaïe, le psaume, Paul et Matthieu : une autorité reçue, jamais possédée.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une lourde clé antique posée sur une épaule nue, suspendue au-dessus du seuil d'une porte voûtée entrouverte sur l'ombre ; en contrebas, un rocher fendu soutient les premières pierres d'un édifice inachevé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 22, 19-23",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">19</span> Je te précipiterai de ta place, l'Éternel t'arrachera de ton poste. <span class=\"s\">20</span> En ce jour-là, j'appellerai mon <button class=\"mot\" data-g=\"g-ebed\">serviteur</button> Éliakim, fils de Hilkija ; <span class=\"s\">21</span> je le revêtirai de ta tunique, je le ceindrai de ta ceinture, et je remettrai ton pouvoir entre ses mains ; il sera un père pour les habitants de Jérusalem et pour la maison de Juda. <span class=\"s\">22</span> Je mettrai la <button class=\"mot\" data-g=\"g-maphteach\">clé</button> de la maison de David sur son épaule ; quand il ouvrira, nul ne fermera ; quand il fermera, nul n'ouvrira. <span class=\"s\">23</span> Je l'enfoncerai comme un <button class=\"mot\" data-g=\"g-yathed\">clou</button> dans un lieu solide ; et il sera un trône de gloire pour la maison de son père.",
+      "gloses": [
+        {
+          "id": "g-ebed",
+          "lemme": "serviteur",
+          "html": "L'hébreu עֶבֶד (<span class=\"gr\">ébed</span>) désigne aussi bien l'esclave que le haut fonctionnaire au service du roi — c'est le même mot qui qualifiera Moïse, David, puis le Serviteur souffrant d'Ésaïe 53. Segond traduit uniformément par « serviteur », ce qui aplatit cette amplitude mais garde l'essentiel : une fonction reçue, jamais une position conquise. Calvin, commentant Ésaïe, insiste sur ce point : Éliakim n'est rien par lui-même, il est établi."
+        },
+        {
+          "id": "g-maphteach",
+          "lemme": "clé",
+          "html": "Le מַפְתֵּחַ (<span class=\"gr\">maphtéah</span>) est une lourde clé de fer que l'on portait littéralement sur l'épaule, signe visible d'une charge publique plutôt qu'objet discret comme nos clés modernes. Jérôme, dans son commentaire sur Ésaïe, rapproche explicitement cette clé de celles promises à Pierre en Matthieu 16 : deux hommes reçoivent sur leurs épaules une autorité de maison qu'ils n'ont pas fondée."
+        },
+        {
+          "id": "g-yathed",
+          "lemme": "clou",
+          "html": "Le hébreu יָתֵד (<span class=\"gr\">yathed</span>) est le piquet de tente que l'on enfonce pour tenir toute la structure — image de stabilité, mais Segond traduit par « clou », plus domestique que l'original nomade. La suite du chapitre, hors de la lecture de ce jour, précise que ce piquet cédera (Is 22,25) : même l'autorité la plus solidement établie reste un dépôt, jamais une propriété acquise pour toujours."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 137 (138), 1-2a, 2bc-3, 6.8bc",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> De David. Je te loue de tout mon cœur, je chante tes louanges en la présence de Dieu. <span class=\"s\">2</span> Je me prosterne dans ton saint temple, et je célèbre ton nom, à cause de ta <button class=\"mot\" data-g=\"g-hesed-emet\">bonté</button> et de ta <button class=\"mot\" data-g=\"g-hesed-emet\">fidélité</button>, car tu as glorifié ta promesse au-dessus de toute ta renommée. <span class=\"s\">3</span> Le jour où je t'ai invoqué, tu m'as exaucé, tu m'as rassuré, tu as fortifié mon âme. <span class=\"s\">6</span> L'Éternel est <button class=\"mot\" data-g=\"g-ram\">élevé</button> : il voit les humbles, et il reconnaît de loin les orgueilleux. <span class=\"s\">8</span> L'Éternel agira en ma faveur. Éternel, ta bonté dure toujours, n'abandonne pas les œuvres de tes mains.",
+      "gloses": [
+        {
+          "id": "g-hesed-emet",
+          "lemme": "bonté / fidélité",
+          "html": "חֶסֶד וֶאֱמֶת (<span class=\"gr\">hessed we'émèt</span>) forme un couple fixe du vocabulaire de l'alliance, déjà cité en Exode 34,6 lorsque Dieu se révèle à Moïse. Segond traduit par « bonté et fidélité », ce qui évoque des qualités morales, alors que le hessed nomme surtout la fidélité concrète à un engagement pris — plus proche de « loyauté indéfectible » que de simple gentillesse. Calvin note que ce couple dit une seule chose : que la promesse de Dieu et son acte ne se séparent jamais l'un de l'autre."
+        },
+        {
+          "id": "g-ram",
+          "lemme": "élevé",
+          "html": "רָם (<span class=\"gr\">ram</span>) dit la hauteur, la majesté — Segond traduit « élevé », qui peut suggérer la distance, alors que la logique du verset est inverse : c'est précisément parce qu'il est haut que le Seigneur voit l'humble de près et l'orgueilleux seulement de loin. La hauteur, ici, ne sépare pas ; elle rend capable d'attention."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Rm 11, 33-36",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">33</span> Ô <button class=\"mot\" data-g=\"g-bathos\">profondeur</button> de la richesse, de la sagesse et de la science de Dieu ! Que ses jugements sont <button class=\"mot\" data-g=\"g-anexichniaston\">insondables</button>, et ses voies incompréhensibles ! <span class=\"s\">34</span> Car qui a connu la pensée du Seigneur, ou qui a été son conseiller ? <span class=\"s\">35</span> Qui lui a donné le premier, pour qu'il ait à recevoir en retour ? <span class=\"s\">36</span> C'est <button class=\"mot\" data-g=\"g-ex-auto\">de lui, par lui, et pour lui</button> que sont toutes choses. A lui la gloire dans tous les siècles ! Amen !",
+      "gloses": [
+        {
+          "id": "g-bathos",
+          "lemme": "profondeur",
+          "html": "Le grec βάθος (<span class=\"gr\">bathos</span>) est le mot que Paul emploie aussi en Romains 8,39 pour les profondeurs qui ne peuvent nous séparer de l'amour de Dieu. La phrase grecque n'a pas de verbe : « ô profondeur » est une exclamation pure, plus proche d'un cri que d'une description — ce que la traduction, obligée de faire une phrase, ne peut pas restituer telle quelle."
+        },
+        {
+          "id": "g-anexichniaston",
+          "lemme": "insondables",
+          "html": "ἀνεξιχνίαστοι (<span class=\"gr\">anexichniastoi</span>) est bâti sur ichnos, la trace de pas que suit un chasseur ou un pisteur — littéralement « impossibles à pister ». Segond traduit « insondables », image du puits que l'on sonde, alors que le grec parle de poursuite et de piste perdue. Chrysostome, dans ses homélies sur les Romains, souligne que Paul ne dit pas que les voies de Dieu sont absentes, mais qu'elles dépassent toute poursuite — ce qui invite à l'adoration plutôt qu'à la résignation."
+        },
+        {
+          "id": "g-ex-auto",
+          "lemme": "de lui, par lui, pour lui",
+          "html": "ἐξ αὐτοῦ καὶ δι' αὐτοῦ καὶ εἰς αὐτόν (<span class=\"gr\">ex autou kai di' autou kai eis auton</span>) emploie trois prépositions distinctes pour nommer trois relations réelles : origine, moyen, finalité. Calvin, dans son commentaire sur les Romains, y lit une grammaire déjà trinitaire avant même que Nicée ne la formule ; la même triple préposition revient, partagée entre le Père et le Fils, en 1 Corinthiens 8,6."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 16, 13-20",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">13</span> Jésus, étant arrivé dans le territoire de Césarée de Philippe, demanda à ses disciples : Qui dit-on que je suis, moi, le Fils de l'homme ? <span class=\"s\">14</span> Ils répondirent : Les uns disent que tu es Jean-Baptiste ; les autres, Élie ; les autres, Jérémie, ou l'un des prophètes. <span class=\"s\">15</span> Et vous, leur dit-il, qui dites-vous que je suis ? <span class=\"s\">16</span> Simon Pierre répondit : Tu es le Christ, le Fils du Dieu vivant. <span class=\"s\">17</span> Jésus, reprenant la parole, lui dit : Tu es heureux, Simon, fils de Jonas ; car ce ne sont pas la <button class=\"mot\" data-g=\"g-sarx-haima\">chair et le sang</button> qui t'ont révélé cela, mais mon Père qui est dans les cieux. <span class=\"s\">18</span> Et moi, je te dis que tu es <button class=\"mot\" data-g=\"g-petros-petra\">Pierre</button>, et que sur cette <button class=\"mot\" data-g=\"g-petros-petra\">pierre</button> je bâtirai mon Église, et que les portes du séjour des morts ne prévaudront point contre elle. <span class=\"s\">19</span> Je te donnerai les <button class=\"mot\" data-g=\"g-kleis\">clefs</button> du royaume des cieux : ce que tu <button class=\"mot\" data-g=\"g-deo-luo\">lieras</button> sur la terre sera lié dans les cieux, et ce que tu <button class=\"mot\" data-g=\"g-deo-luo\">délieras</button> sur la terre sera délié dans les cieux. <span class=\"s\">20</span> Alors il recommanda aux disciples de ne dire à personne qu'il était le Christ.",
+      "gloses": [
+        {
+          "id": "g-sarx-haima",
+          "lemme": "chair et sang",
+          "html": "σὰρξ καὶ αἷμα (<span class=\"gr\">sarx kai haima</span>) est un idiome sémitique, déjà présent chez Paul en Galates 1,16, qui signifie simplement « l'être humain laissé à ses seules ressources » — non une dévalorisation du corps. Segond traduit littéralement, ce qui est juste, mais on peut manquer que Jésus n'oppose pas ici l'esprit à la matière : il oppose la révélation reçue au raisonnement humain. Simon n'a rien déduit ; cela lui a été donné."
+        },
+        {
+          "id": "g-petros-petra",
+          "lemme": "Pierre / pierre",
+          "html": "Πέτρος / πέτρα (<span class=\"gr\">Pétros / pétra</span>) est un jeu de mots qui ne fonctionne pleinement qu'en araméen, où Jésus a vraisemblablement prononcé deux fois le même mot, Kepha — jeu que le grec doit briser en distinguant un nom propre masculin et un nom commun féminin pour le rocher. Chrysostome, dans ses homélies sur Matthieu, lit le roc comme la confession que Pierre vient de prononcer, non sa personne ; Augustin, dans ses Retractationes, révise une lecture antérieure pour finalement préférer la même interprétation. Calvin, dans son commentaire sur l'Harmonie des évangiles, suit cette ligne contre la lecture romaine qui fonde directement sur la personne de Pierre une primauté perpétuelle."
+        },
+        {
+          "id": "g-kleis",
+          "lemme": "clefs",
+          "html": "κλεῖδας (<span class=\"gr\">kleidas</span>) reprend l'image même d'Ésaïe 22,22, où Dieu remet à Éliakim la clé de la maison de David posée sur l'épaule — un texte que l'Église a très tôt lu comme préfigurant ce verset. Une clé n'est pas une propriété : elle ouvre ce qui appartient à un autre, et peut être reprise, comme Éliakim lui-même sera plus tard un piquet arraché du mur (Is 22,25)."
+        },
+        {
+          "id": "g-deo-luo",
+          "lemme": "lier / délier",
+          "html": "δέω / λύω (<span class=\"gr\">déô / luô</span>) est le vocabulaire juridique des tribunaux rabbiniques, qui déclaraient un acte permis ou interdit, une obligation valide ou levée — une autorité déjà exercée par les scribes. Segond traduit littéralement « lier » et « délier », fidèle au grec ; mais le même pouvoir sera redonné à l'ensemble des disciples réunis en Matthieu 18,18, ce qui tempère toute lecture qui l'isolerait dans la seule personne de Pierre."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Césarée de Philippe",
+      "corps_html": "Césarée de Philippe se trouve au pied du mont Hermon, près d'une grotte consacrée depuis l'époque grecque au dieu Pan, et où Hérode le Grand avait fait bâtir un temple à Auguste divinisé. C'est devant ce lieu saturé de cultes rivaux, aux sources du Jourdain, que Jésus interroge ses disciples sur son identité — la confession de Pierre est prononcée à la frontière du monde païen, loin de Jérusalem."
+    },
+    {
+      "titre": "Éliakim, une fonction datée",
+      "corps_html": "Éliakim reparaît en 2 Rois 18, lors du siège de Jérusalem par Sennachérib, où il porte effectivement le titre de maître du palais annoncé ici. L'oracle contre Shebna, fonctionnaire déchu pour s'être taillé un tombeau trop somptueux (Is 22,16), date probablement du règne d'Ézéchias, vers 705-701 avant notre ère : la fonction n'est pas une image intemporelle, mais un titre daté, exercé puis retiré."
+    }
+  ],
+  "analogie": {
+    "titre": "Reçu, non fabriqué",
+    "variantes": [
+      "Il t'est arrivé de répondre à une question qui te dépassait — sur ta vie, sur ce que tu crois, sur quelqu'un que tu aimais — et de t'entendre dire une phrase juste que tu n'avais pas préparée, que tu n'aurais pas su construire si on t'avait demandé de la rédiger à l'avance. Tu n'as pas cherché ces mots dans ta mémoire comme on cherche une citation : ils sont montés, et en les prononçant tu as su, avant même de comprendre pourquoi, qu'ils étaient vrais. C'est cette part de toi qui ne s'invente pas, qui reçoit avant de savoir, que Dieu vient rejoindre quand il te fait dire, sans que tu l'aies mérité, une parole plus grande que toi.",
+      "Quelqu'un t'a confié un jour une responsabilité, une confiance, un secret ou une charge que tu n'avais pas demandée et que tu savais ne pas mériter entièrement — et tu as senti, en la portant, qu'elle pesait sur toi sans t'appartenir, qu'elle resterait toujours celle d'un autre déposée dans tes mains. Tu ouvrais ce qu'il fallait ouvrir, tu fermais ce qu'il fallait fermer, sans jamais devenir propriétaire de ce que tu gérais, sachant que si tu trahissais cette charge, elle te serait retirée et confiée à un autre. C'est dans cette fragilité du dépositaire, non dans la certitude du propriétaire, que Dieu établit ceux à qui il remet quelque chose de son royaume.",
+      "Il y a des nuits où tu as cherché à comprendre pourquoi ta vie prenait ce chemin-là plutôt qu'un autre, où tu as aligné les raisons, les torts, les hasards, sans jamais parvenir à un point où tout s'éclaire enfin. Et puis, épuisé d'expliquer, tu as cessé de chercher la clef de l'énigme pour simplement rester devant Dieu les mains vides, sans réponse, mais en paix — non parce que tu avais compris, mais parce que tu avais renoncé à devoir comprendre pour continuer à croire. C'est au bout de cet abandon-là, jamais au bout d'une démonstration, que le cœur peut enfin dire : à lui la gloire, dans tous les siècles."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Relis lentement la question de Jésus : « Et vous, qui dites-vous que je suis ? » Elle t'est adressée aussi, aujourd'hui, et pas seulement à Pierre.",
+    "geste": "Écris, sans les corriger, les mots qui te viennent en réponse — puis reste un instant en silence avant de les relire, pour voir ce qui, dans ta réponse, ne vient pas seulement de toi.",
+    "note": "Ce dimanche referme le grand développement de Paul sur Israël et les nations (Romains 9 à 11), qui s'achève par une louange plutôt que par une conclusion."
+  },
+  "question": "Qu'est-ce qui, en toi, t'a été confié — et que tu portes sans en être le propriétaire ?",
+  "racines": [
+    {
+      "titre": "La pierre, c'est la foi confessée",
+      "corps_html": "Ce n'est pas Pierre qui porte l'Église, dit Chrysostome dans ses homélies sur Matthieu, mais la foi que Pierre vient de confesser : le nom même de Pierre lui est donné après cette confession, et à cause d'elle, non l'inverse. L'Église est bâtie sur le roc de ce que Pierre vient de dire, non sur l'homme qui, quelques versets plus loin dans le même chapitre, sera repris sévèrement par ce même Jésus.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, LIV"
+    },
+    {
+      "titre": "L'adoration au bout de la démonstration",
+      "corps_html": "Calvin remarque que Paul, après trois chapitres d'argumentation serrée sur le sort d'Israël, ne conclut pas par une thèse mais par un cri : la théologie la mieux conduite doit finir en louange et non en système clos, sous peine de prétendre épuiser ce qu'elle décrit elle-même comme insondable. La doxologie n'est pas un ornement final ; elle est l'aveu que l'argument a atteint sa limite.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Romains, ch. 11"
+    },
+    {
+      "titre": "La clé d'Éliakim, figure des clés du royaume",
+      "corps_html": "Jérôme, commentant Ésaïe, rapproche explicitement la clé posée sur l'épaule d'Éliakim des clefs promises à Pierre : dans les deux cas, une fonction de gouvernement est remise à un homme qui n'en est pas l'origine, et qui devra en répondre. La tradition chrétienne a lu très tôt Ésaïe 22 comme préfigurant Matthieu 16, sans que cela efface la fragilité du dépositaire, rappelée quelques versets plus loin par le clou qui cède.",
+      "attribution": "Jérôme, Commentaire sur Isaïe, livre VII"
+    }
+  ]
+}
