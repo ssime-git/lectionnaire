@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sépulcres blanchis — mercredi 26 août 2026</title>
+<meta name="description" content="Ce que le regard voit, ce que Dieu pèse">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 26 août 2026 · 21ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Sépulcres <span class="it">blanchis</span></h1>
+    <p class="chapeau">Ce que le regard voit, ce que Dieu pèse</p>
+    <figure class="gravure" aria-label="Un sépulcre de pierre à la façade fraîchement blanchie à la chaux, fendue d'une ouverture sombre où se devinent des ossements ; au premier plan, une main calleuse tient quelques épis de blé mûrs, seule tache de vie dans la gravure."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M100 128 v-70 l30 -25 h60 l30 25 v70 z"/><path d="M150 65 l7 -10 l-5 -9 l8 -7"/><path d="M195 90 l-8 8 l5 8"/><path d="M140 128 v-35 q30 -32 60 0 v35"/><path d="M150 120 l30 -20 M148 123 l5 -5 M148 117 l5 5 M178 103 l5 -5 M178 97 l5 5"/><path d="M180 120 l-30 -20 M182 123 l-5 -5 M182 117 l-5 5 M152 103 l-5 -5 M152 97 l-5 5"/></g><g class="trait-liturgie"><path d="M44 150 q-9 -16 -1 -28 q3 -8 12 -7 q6 -7 14 -2 q9 -4 13 4 q7 5 2 14 q5 8 -4 14 q-3 6 -12 6 q-9 1 -15 -4 q-6 -2 -9 3 z"/><path d="M55 122 q3 -4 7 0 M67 118 q3 -4 7 0"/><path d="M58 118 q1 -25 3 -48 M68 120 q1 -28 2 -55 M78 119 q1 -22 4 -42"/><path d="M61 70 l-6 8 M61 70 l6 8 M61 80 l-5 7 M61 80 l5 7 M70 65 l-6 8 M70 65 l6 8 M70 75 l-5 7 M70 75 l5 7 M82 77 l-5 7 M82 77 l5 7 M82 87 l-5 6 M82 87 l5 6"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Lecture — 2 Th 3, 6-10.16-18 — Segond</p>
+        <div class="ecriture "><span class="s">6</span> Nous vous recommandons, frères, au nom de notre Seigneur Jésus-Christ, de vous éloigner de tout frère qui vit dans le <button class="mot" data-g="g-ataktos">désordre</button>, et non selon les instructions que vous avez reçues de nous. <span class="s">7</span> Vous savez vous-mêmes comment il faut nous imiter, car nous n'avons pas vécu parmi vous dans le désordre. <span class="s">8</span> Nous n'avons mangé gratuitement le pain de personne ; mais, dans le travail et dans la peine, nous avons été nuit et jour à l'œuvre, pour n'être à charge à aucun de vous. <span class="s">9</span> Ce n'est pas que nous n'en eussions le droit, mais nous avons voulu vous donner en nous-mêmes un <button class="mot" data-g="g-typos">modèle</button> à imiter. <span class="s">10</span> Car, lorsque nous étions chez vous, nous vous disions expressément : Si quelqu'un ne veut pas travailler, qu'il ne mange pas non plus. <span class="s">16</span> Que le Seigneur de la paix vous donne lui-même la paix en tout temps, de toute manière ! Que le Seigneur soit avec vous tous ! <span class="s">17</span> Je vous salue, moi Paul, de ma propre main, ce qui est un signe dans chaque lettre ; c'est ainsi que j'écris. <span class="s">18</span> Que la grâce de notre Seigneur Jésus-Christ soit avec vous tous !</div>
+        <div class="glose" id="g-ataktos"><span class="lemme">ataktōs</span> Le grec <span class="gr">ataktōs</span> est un terme militaire : il désigne le soldat qui rompt les rangs, sort de sa <span class="gr">taxis</span>, son ordre de marche. Segond traduit par « désordre », ce qui garde l'idée d'un chaos moral, mais efface l'image concrète du rang rompu que les Thessaloniciens, habitués aux garnisons romaines, auraient immédiatement reconnue. Jean Chrysostome, dans ses homélies sur cette épître, insiste sur ce sens : il ne s'agit pas d'un simple désordre intérieur, mais d'un abandon du poste assigné par le Christ, chef d'armée. Le même mot reviendra au verset 11 pour désigner ceux qui, précisément, n'ont plus de tâche et se mêlent de tout.</div>
+        <div class="glose" id="g-typos"><span class="lemme">typos</span> <span class="gr">typos</span> désigne d'abord la marque laissée par un coup, l'empreinte du sceau dans la cire — c'est le mot que Jean emploiera pour les marques des clous dans les mains du Christ ressuscité. Segond le traduit ici par « modèle », traduction juste mais qui perd la dimension physique de l'empreinte : Paul ne propose pas une doctrine à admirer mais un corps, sa propre fatigue, dans lequel les Thessaloniciens doivent venir se couler comme le métal dans le moule. Calvin note que Paul choisit délibérément l'exemple plutôt que le seul précepte, parce qu'une vie regardée instruit plus sûrement qu'une parole entendue.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 127 (128), 1-2, 4-5 — Segond</p>
+        <div class="ecriture psaume"><span class="s">1</span> <button class="mot" data-g="g-ashrei">Heureux</button> tout homme qui <button class="mot" data-g="g-yare">craint</button> l'Éternel, Qui marche dans ses voies ! <span class="s">2</span> Tu jouis alors du travail de tes mains, Tu es heureux, tu prospères. <span class="s">4</span> C'est ainsi qu'est béni L'homme qui craint l'Éternel. <span class="s">5</span> L'Éternel te bénira de Sion, Et tu verras le bonheur de Jérusalem Tous les jours de ta vie ;</div>
+        <div class="glose" id="g-ashrei"><span class="lemme">’ashrei</span> <span class="gr">’ashrei</span> n'est pas un adjectif mais un pluriel construit qui ouvre nombre de psaumes (1, 32, 41…) : littéralement « ô bonheurs de… », une exclamation plus qu'une constatation. Segond le rend par « Heureux », alignant le psaume sur les béatitudes évangéliques, ce qui est juste mais aplanit l'émerveillement du pluriel hébreu, comme si le bonheur promis débordait toute mesure singulière. Les rabbins y ont lu une bénédiction qui ne dépend d'aucune circonstance extérieure, puisqu'elle est prononcée avant même que le texte ne décrive ce que fait cet homme.</div>
+        <div class="glose" id="g-yare"><span class="lemme">yare’</span> Le verbe <span class="gr">yare’</span> couvre en hébreu un spectre qui va de la terreur pure à la révérence la plus intime ; Segond choisit uniformément « craindre », ce qui en français moderne penche vers la peur et masque l'autre pôle du mot, celui de l'homme qui se tient devant Dieu avec un respect qui ne fuit pas mais s'approche. Calvin, commentant ce psaume, insiste sur le fait que cette crainte n'est jamais servile chez le fidèle : elle est la racine d'où sort le travail même de ses mains, évoqué au verset suivant.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 23, 27-32 — Segond</p>
+        <div class="ecriture evangile"><span class="s">27</span> Malheur à vous, scribes et pharisiens <button class="mot" data-g="g-hypocrites">hypocrites</button> ! parce que vous ressemblez à des <button class="mot" data-g="g-sepulcres">sépulcres blanchis</button>, qui paraissent beaux au dehors, et qui, au dedans, sont pleins d'ossements de morts et de toute espèce d'impuretés. <span class="s">28</span> Vous de même, au dehors, vous paraissez justes aux hommes, mais, au dedans, vous êtes remplis d'hypocrisie et d'iniquité. <span class="s">29</span> Malheur à vous, scribes et pharisiens hypocrites ! parce que vous bâtissez les tombeaux des prophètes et ornez les sépulcres des justes, <span class="s">30</span> et que vous dites : Si nous avions vécu du temps de nos pères, nous ne nous serions pas joints à eux pour répandre le sang des prophètes. <span class="s">31</span> Vous témoignez ainsi contre vous-mêmes que vous êtes les fils de ceux qui ont tué les prophètes. <span class="s">32</span> Vous aussi, <button class="mot" data-g="g-combler">comblez la mesure</button> de vos pères.</div>
+        <div class="glose" id="g-hypocrites"><span class="lemme">hypokritēs</span> <span class="gr">hypokritēs</span> désigne au théâtre grec l'acteur qui répond depuis son masque, celui dont la voix vient d'un visage qui n'est pas le sien. Segond garde tel quel le mot « hypocrites », déjà passé dans l'usage français, mais on perd ainsi l'image scénique que les auditeurs de Jésus, habitués aux théâtres hellénistiques de Galilée, saisissaient d'emblée : le scribe ne ment pas seulement, il joue un rôle écrit par un autre que lui. Jean Chrysostome relève que Jésus ne les accuse pas d'ignorer la Loi, mais de la réciter comme un texte appris, sans que leur propre voix s'y engage.</div>
+        <div class="glose" id="g-sepulcres"><span class="lemme">kekoniamenois</span> Le participe <span class="gr">kekoniamenois</span> vient de <span class="gr">konia</span>, la chaux : on blanchissait les tombeaux au printemps, avant la Pâque, précisément pour que nul pèlerin ne les touche sans le savoir et ne se rende impur par contact avec la mort. Segond traduit littéralement « blanchis », gardant intacte l'image, mais un lecteur du dix-neuvième siècle n'a plus la clef rituelle : ce blanchiment n'était pas un ornement, c'était un avertissement peint. Jésus retourne l'avertissement contre ceux qui le peignaient : le signal qui protégeait les autres de la mort devient la description exacte de leur propre intérieur.</div>
+        <div class="glose" id="g-combler"><span class="lemme">plērōsate to metron</span> <span class="gr">plēroō</span>, remplir, achever, est le même verbe que Matthieu emploie pour dire que l'Écriture s'« accomplit » en Jésus. Segond traduit ici « comblez la mesure », formule presque commerciale, celle du grain qu'on tasse dans le boisseau jusqu'au bord. L'ironie est amère : le mot de l'accomplissement, réservé ailleurs aux promesses de Dieu qui se réalisent en Christ, sert ici à dire l'achèvement d'une faute, comme si l'iniquité elle-même avait sa plénitude et son heure.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une lettre écrite contre l'attente immobile</h3><p>La seconde lettre aux Thessaloniciens, écrite depuis Corinthe vers 50-51, répond à une communauté troublée par l'attente du Jour du Seigneur : certains, croyant la Parousie imminente, avaient cessé de travailler, vivant aux crochets des autres (cf. 3, 11, « qui ne travaillent pas du tout, mais s'occupent des choses vaines »). Paul ne condamne pas l'espérance mais l'oisiveté qu'elle a produite, et il oppose à ce désordre le souvenir très concret de ses propres nuits de labeur chez eux.</p></div>
+      <div><h3>Le dernier affrontement dans le Temple</h3><p>Matthieu 23 rassemble sept « malheurs » prononcés dans le Temple, juste avant le discours sur la fin des temps et la Passion : c'est le dernier affrontement public de Jésus avec les autorités religieuses. La Mishna (Shekalim 1, 1) atteste qu'on blanchissait effectivement les tombeaux à la chaux chaque année, un mois avant la Pâque, pour avertir les pèlerins et leur éviter une impureté rituelle involontaire — détail que Jésus retourne en accusation contre ceux qui l'appliquaient.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que personne ne voit</h2>
+<p>Il t'est arrivé de prier de longues semaines sans qu'il ne se passe rien en toi que tu puisses nommer — les mots sortent, corrects, presque appris, et tu te demandes si quelqu'un les entend seulement de l'autre côté, ou si tu es en train de blanchir toi-même une façade que tu sais creuse. Tu continues pourtant, non par performance mais parce que tu sais que l'absence de sentiment n'est pas l'absence de Dieu, et qu'il regarde ailleurs que là où tu regardes toi-même. C'est cette différence-là, entre ce qui se voit et ce qui se pèse, que le Christ vient rejoindre en toi, jusque dans les prières les plus sèches.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de refermer cette page, laisse la question du jour descendre plus bas que les idées : pas d'abord ce que tu dois changer, mais ce que Dieu voit déjà en toi sans que tu le lui montres.</p>
+      <p class="geste">Nomme, en silence, une chose que tu fais sans que personne ne la voie — puis demande simplement à Dieu de la bénir, sans chercher à savoir si elle portera un jour du fruit visible.</p>
+      <small>Ce geste n'a pas besoin de mots longs ; une phrase suffit, dite ou seulement pensée.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, en toi, ressemble encore à une façade blanchie — et qu'est-ce qui, sous elle, attend d'être rejoint ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : l'exemple plus fort que le précepte</h3>
+          <p>Dans son Homélie X sur la seconde épître aux Thessaloniciens, Jean Chrysostome s'étonne que Paul, apôtre nourri par les Églises de son plein droit, ait choisi de fabriquer des tentes plutôt que d'user de ce droit : « Il travaillait de ses mains, lui qui aurait pu vivre de l'Évangile, afin que nul ne pût dire qu'il prêchait par intérêt. » Pour Chrysostome, cette abstention volontaire est elle-même une prédication, plus persuasive que n'importe quel discours sur le travail.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la Seconde épître aux Thessaloniciens, X</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : une crainte qui ne trouble pas</h3>
+          <p>Calvin, commentant le Psaume 128, refuse d'opposer crainte et joie : « La vraie crainte de Dieu n'engendre pas la tristesse, mais elle est la racine d'où sort tout le fruit de notre vie. » Il relève que la bénédiction promise — manger du travail de ses mains — n'est pas récompense marchande, mais signe : Dieu approuve une existence tout entière tournée vers lui jusque dans ses gestes les plus ordinaires, le pain gagné chaque jour.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre des Psaumes, Ps 128</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Jérôme : la loi de la chaux</h3>
+          <p>Commentant ce passage, Jérôme rappelle l'usage juif de blanchir les sépulcres à l'approche de la Pâque, afin que personne, marchant dessus sans le voir, ne contracte une impureté involontaire : « Ils avaient coutume de blanchir les tombeaux, afin que ceux qui passaient par là, les voyant briller de loin, s'en écartent. » Il en tire que Jésus ne critique pas un simple maquillage esthétique, mais retourne contre les pharisiens une loi qu'ils connaissaient par cœur.</p>
+<p class="attrib">Jérôme, Commentaire sur l'évangile de Matthieu, IV, 23</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 21ème Semaine du Temps Ordinaire — 2 Th 3, 6-10.16-18 ; Mt 23, 27-32.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
