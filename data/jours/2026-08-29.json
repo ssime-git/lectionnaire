@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-29",
+  "date_humaine": "samedi",
+  "semaine": "21ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 1, 26-31 ; Mc 6, 17, 29",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M40 118 h120\"/><path d=\"M60 118 q40 -14 80 0\"/><path d=\"M75 118 q25 -6 50 0\"/><path d=\"M270 40 v20\"/><path d=\"M270 76 v20\"/><path d=\"M258 62 h-20\"/><path d=\"M294 62 h20\"/><path d=\"M280 50 l14 -14\"/><path d=\"M260 74 l-14 14\"/><path d=\"M280 74 l14 14\"/><path d=\"M260 50 l-14 -14\"/><path d=\"M230 130 h60\"/><path d=\"M234 130 v-24 q26 -14 52 0 v24\"/><path d=\"M246 130 v-18\"/><path d=\"M258 130 v-22\"/><path d=\"M270 130 v-24\"/></g><g class=\"trait-rubrique\"><path d=\"M170 18 l4 10 l10 1 l-8 7 l3 10 l-9 -6 l-9 6 l3 -10 l-8 -7 l10 -1 z\"/></g></svg>",
+  "titre": "Ce qui n'est point",
+  "titre_html": "Ce qui <span class=\"it\">n'est point</span>",
+  "sous_titre": "Un prophète décapité, un plat sur une table de fête, et l'Apôtre qui refuse toute gloire hors de Dieu",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : un plat vide posé sur une table de banquet ; au-dessus, une étoile unique perce l'obscurité ; à l'arrière-plan, les barreaux ouverts d'une prison et, à peine esquissé, un tombeau.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 1, 26-31",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">26</span> Considérez, frères, que parmi vous qui avez été <button class=\"mot\" data-g=\"g-appeles\">appelés</button> il n'y a ni beaucoup de sages selon la chair, ni beaucoup de puissants, ni beaucoup de nobles. <span class=\"s\">27</span> Mais Dieu a choisi les choses <button class=\"mot\" data-g=\"g-folles\">folles</button> du monde pour confondre les sages ; Dieu a choisi les choses faibles du monde pour confondre les fortes ; <span class=\"s\">28</span> et Dieu a choisi les choses <button class=\"mot\" data-g=\"g-viles\">viles</button> du monde et celles qu'on méprise, celles qui ne sont point, pour réduire à néant celles qui sont, <span class=\"s\">29</span> afin que nulle chair ne se glorifie devant Dieu. <span class=\"s\">30</span> Or, c'est par lui que vous êtes en Jésus-Christ, lequel, de par Dieu, a été fait pour nous sagesse, justice et sanctification et rédemption, <span class=\"s\">31</span> afin, comme il est écrit : Que celui qui <button class=\"mot\" data-g=\"g-glorifie\">se glorifie</button> se glorifie dans le Seigneur.",
+      "gloses": [
+        {
+          "id": "g-appeles",
+          "lemme": "klētoi",
+          "html": "Paul emploie <span class=\"gr\">klētoi</span>, « appelés », le même mot qu'en Romains 1,7 pour désigner les saints de Rome. Segond traduit fidèlement, mais le grec porte l'idée d'un appel reçu passivement, non mérité — on n'est pas de soi-même « appelant ». Chrysostome, dans ses Homélies sur la Première épître aux Corinthiens (IIIe homélie), insiste : l'appel précède toute qualité du sujet appelé, il ne récompense rien. Calvin y voit la preuve que l'élection ne se fonde jamais sur un mérite antérieur, mais sur la seule volonté de Dieu."
+        },
+        {
+          "id": "g-folles",
+          "lemme": "mōra",
+          "html": "Segond rend <span class=\"gr\">mōra</span> par « folles », gardant la racine qui donnera « moron » en français moderne — un choix heureux, car le mot ne désigne pas une folie pathologique mais une inintelligence méprisée par les cercles savants de Corinthe, ville qui cultivait la rhétorique. Le même mot revient en 1,18 pour qualifier « la parole de la croix ». Chrysostome note que Paul retourne ainsi contre les sages eux-mêmes le mot dont ils se servaient pour mépriser l'Évangile."
+        },
+        {
+          "id": "g-viles",
+          "lemme": "agenē",
+          "html": "Le grec <span class=\"gr\">agenē</span> signifie littéralement « sans naissance », « sans lignage » — l'a-privatif nie le mot genos, la race ou la famille. Segond traduit par « viles », ce qui déplace le sens d'une catégorie sociale précise vers un simple jugement moral, et affaiblit la portée du mot pour des lecteurs de Corinthe, ville où le statut de naissance déterminait l'accès à tout honneur public. C'est un rappel très concret, non une généralité sur le mépris."
+        },
+        {
+          "id": "g-glorifie",
+          "lemme": "kauchasthō",
+          "html": "Le verbe <span class=\"gr\">kauchaomai</span>, « se glorifier » ou « se vanter », est un mot-clé paulinien qui revient plus de trente fois dans son œuvre. Segond garde la répétition voulue par Paul — « que celui qui se glorifie se glorifie » — qui cite Jérémie 9,23-24 selon la Septante. Calvin y voit le sommet du passage : toute la doctrine de la justification par grâce seule s'y résume, puisqu'elle interdit à l'homme toute gloire qui ne remonterait pas jusqu'à Dieu."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 32 (33), 12-13, 18-19, 20-21",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">12</span> Heureuse la nation dont l'Éternel est le Dieu ! Heureux le peuple qu'il choisit pour son héritage ! <span class=\"s\">13</span> L'Éternel regarde du haut des cieux, Il voit tous les fils de l'homme ; <span class=\"s\">18</span> Voici, l'œil de l'Éternel est sur ceux qui le <button class=\"mot\" data-g=\"g-craignent\">craignent</button>, Sur ceux qui espèrent en sa <button class=\"mot\" data-g=\"g-bonte\">bonté</button>, <span class=\"s\">19</span> Afin d'arracher leur âme à la mort Et de les faire vivre au milieu de la famine. <span class=\"s\">20</span> Notre âme <button class=\"mot\" data-g=\"g-espere\">espère</button> en l'Éternel ; Il est notre secours et notre bouclier. <span class=\"s\">21</span> Car notre cœur met en lui sa joie, Car nous avons confiance en son saint nom.",
+      "gloses": [
+        {
+          "id": "g-craignent",
+          "lemme": "yare'",
+          "html": "L'hébreu <span class=\"gr\">yare'</span> ne désigne pas la peur qui fait fuir, mais la crainte révérencielle propre au culte, celle qui tient debout devant la sainteté sans se dérober. Segond traduit « craignent », au risque de laisser entendre une terreur servile que le mot ne porte pas ; les rabbins distinguaient la crainte du châtiment de la crainte devant la grandeur de Dieu, et c'est cette seconde crainte que vise le psaume. Augustin, dans ses Enarrationes in Psalmos, y voit la disposition même de l'humilité qui rend l'âme capable de recevoir le regard de Dieu."
+        },
+        {
+          "id": "g-bonte",
+          "lemme": "chesed",
+          "html": "Le mot <span class=\"gr\">chesed</span> résiste à toute traduction unique — Segond choisit « bonté », d'autres rendront par « grâce », « fidélité » ou « amour indéfectible ». Il désigne l'attachement loyal de Dieu à son alliance, un amour qui tient ses promesses au-delà de ce que mériterait le partenaire humain. La Septante le traduit par éléos, miséricorde, ce qui a orienté toute la lecture chrétienne vers la clémence plutôt que vers la fidélité contractuelle qu'évoque l'hébreu."
+        },
+        {
+          "id": "g-espere",
+          "lemme": "chikketah",
+          "html": "Le verbe <span class=\"gr\">chakah</span> signifie attendre avec tension, comme on guette un événement dont on ne connaît pas l'heure — il n'a rien de la résignation passive que le français « espérer » peut suggérer. Segond traduit « espère », ce qui est juste mais adoucit l'image du guet actif. Le même verbe se retrouve en Ésaïe 30,18, où c'est Dieu lui-même qui « attend » pour faire grâce — un rare passage où Dieu occupe la place habituellement réservée au fidèle."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mc 6, 17-29",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">17</span> Car Hérode lui-même avait fait arrêter Jean, et l'avait fait <button class=\"mot\" data-g=\"g-lie\">lier</button> en prison, à cause d'Hérodias, femme de Philippe, son frère, parce qu'il l'avait épousée, <span class=\"s\">18</span> et que Jean lui disait : Il ne t'est pas permis d'avoir la femme de ton frère. <span class=\"s\">19</span> Hérodias était irritée contre Jean, et voulait le faire mourir. Mais elle ne le pouvait ; <span class=\"s\">20</span> car Hérode craignait Jean, le connaissant pour un homme <button class=\"mot\" data-g=\"g-juste\">juste et saint</button> ; il le protégeait, et, après l'avoir entendu, il était <button class=\"mot\" data-g=\"g-perplexe\">perplexe</button>, et l'écoutait avec plaisir. <span class=\"s\">21</span> Cependant, un jour propice arriva, lorsque Hérode, à l'anniversaire de sa naissance, donna un festin à ses grands, aux chefs militaires et aux principaux de la Galilée. <span class=\"s\">22</span> La fille d'Hérodias entra dans la salle ; elle dansa, et plut à Hérode et à ses convives. Le roi dit à la jeune fille : Demande-moi ce que tu voudras, et je te le donnerai. <span class=\"s\">23</span> Il ajouta avec serment : Ce que tu me demanderas, je te le donnerai, fût-ce la moitié de mon royaume. <span class=\"s\">24</span> Étant sortie, elle dit à sa mère : Que demanderai-je ? Et sa mère répondit : La tête de Jean-Baptiste. <span class=\"s\">25</span> Elle s'empressa de rentrer aussitôt vers le roi, et lui fit cette demande : Je veux que tu me donnes à l'instant, sur un plat, la tête de Jean-Baptiste. <span class=\"s\">26</span> Le roi fut attristé ; mais, à cause de ses serments et des convives, il ne voulut pas lui faire un refus. <span class=\"s\">27</span> Il envoya sur-le-champ un garde, avec ordre d'apporter la tête de Jean-Baptiste. <span class=\"s\">28</span> Le garde alla décapiter Jean dans la prison, et apporta la tête sur un plat. Il la donna à la jeune fille, et la jeune fille la donna à sa mère. <span class=\"s\">29</span> Les disciples de Jean, ayant appris cela, vinrent prendre son <button class=\"mot\" data-g=\"g-corps\">corps</button>, et le mirent dans un <button class=\"mot\" data-g=\"g-tombeau\">tombeau</button>.",
+      "gloses": [
+        {
+          "id": "g-lie",
+          "lemme": "deō",
+          "html": "Le verbe <span class=\"gr\">deō</span>, « lier », est le même que Jésus emploie en Matthieu 16,19 pour le pouvoir de « lier et délier » confié à Pierre — Marc l'utilise ici au sens le plus concret, celui des chaînes d'une prison. Segond traduit littéralement, sans atténuer l'image physique. Le rapprochement n'est pas indifférent : le prophète que le roi enchaîne est celui dont la parole, elle, ne peut être liée — écho involontaire de 2 Timothée 2,9, « la parole de Dieu n'est pas liée »."
+        },
+        {
+          "id": "g-juste",
+          "lemme": "dikaios",
+          "html": "Marc qualifie Jean de <span class=\"gr\">dikaios kai hagios</span>, « juste et saint » — Segond conserve les deux adjectifs, mais dikaios porte d'abord le sens d'une conformité à la justice de Dieu, plus proche de l'hébreu tsaddiq que d'une vertu abstraite et générale. Chrysostome, évoquant la Passion de Jean-Baptiste, souligne que même Hérode, dans sa conscience trouble, ne peut nier cette justice qu'il redoute sans pouvoir s'y soumettre."
+        },
+        {
+          "id": "g-perplexe",
+          "lemme": "ēporei",
+          "html": "Le verbe <span class=\"gr\">aporeō</span> décrit littéralement celui qui ne trouve plus de passage — a-privatif et poros, « passage », « gué » — l'image d'un homme arrêté devant une impasse, incapable d'avancer. Segond traduit par « perplexe », terme juste mais qui perd la spatialité de l'original : Hérode est un homme sans issue, pris entre la parole qui le juge et le désir qui le tient captif. Le même verbe décrira en 2 Corinthiens 4,8 l'apôtre « dans la détresse » sans être broyé."
+        },
+        {
+          "id": "g-corps",
+          "lemme": "ptōma",
+          "html": "Le grec ne dit pas sōma, « corps », mais <span class=\"gr\">ptōma</span>, littéralement « ce qui est tombé » — un mot que le Nouveau Testament réserve presque toujours à un cadavre déchu, jamais à un corps vivant. Segond adoucit en traduisant « corps ». Le choix de Marc insiste au contraire sur la chute, l'anéantissement physique du prophète — dernier écho, dans une chair réelle, du « ce qui ne sont point » dont parle Paul."
+        },
+        {
+          "id": "g-tombeau",
+          "lemme": "mnēmeion",
+          "html": "Le mot <span class=\"gr\">mnēmeion</span> vient de mnēmē, « mémoire » : un tombeau est d'abord, en grec, un lieu qui fait mémoire, non un simple lieu d'ensevelissement. Segond traduit « tombeau », ce qui est exact mais efface cette racine mémorielle. C'est le même mot qui désignera plus loin, dans la tradition évangélique, le tombeau du Christ (Marc 15,46) : les disciples de Jean accomplissent pour leur maître le geste que Joseph d'Arimathée accomplira plus tard pour Jésus."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Hérode Antipas et la forteresse de Machéronte",
+      "corps_html": "L'historien juif Flavius Josèphe (Antiquités judaïques, XVIII, 5, 2) situe l'emprisonnement de Jean dans la forteresse de Machéronte, à l'est de la mer Morte — un détail que Marc ne donne pas, mais que l'archéologie confirme. Josèphe attribue l'exécution à la crainte politique d'Hérode Antipas devant l'influence populaire du prophète, tandis que Marc en fait le prix d'un serment de banquet : les deux récits, loin de se contredire, éclairent la même scène sous deux lumières différentes."
+    },
+    {
+      "titre": "Corinthe, ville de la rhétorique et du statut",
+      "corps_html": "Corinthe, détruite puis refondée par Rome en 44 avant J.-C., était une cité de nouveaux riches et d'affranchis avides de reconnaissance sociale, où des sophistes itinérants monnayaient leur éloquence. Paul y fonde une Église composée pour l'essentiel de gens de condition modeste (Actes 18,1-3), mais travaillée par les mêmes rivalités de statut que la ville — d'où les divisions dénoncées dès 1,10-12, que ce passage vient directement contredire."
+    }
+  ],
+  "analogie": {
+    "titre": "Le service sans reste",
+    "variantes": [
+      "Tu as servi longtemps sans qu'il en reste rien de visible — une présence tenue des années auprès d'un malade qui ne t'a jamais remercié, une tâche discrète dans une communauté qui ne saura jamais qui l'a portée. Tu voudrais parfois qu'il en reste une trace, un fruit qu'on puisse montrer, une preuve que cela a compté. Mais c'est précisément là, dans ce service qui ne laisse rien à ton nom, que Dieu choisit d'agir : ce que le monde n'inscrit dans aucun registre, c'est cela même qu'il retient pour lui, et qu'il fait, sans que tu le voies, porter du fruit ailleurs.",
+      "Il y a eu ce jour où tu as dû te taire alors que tu avais raison, où l'on a préféré la parole la plus commode à la tienne, où tu es sorti d'une pièce en sachant que ta voix ne pesait rien face aux intérêts en jeu. Cette impuissance-là ne te quitte pas facilement — elle laisse la sensation d'avoir été rayé, réduit à ce qu'on peut ignorer sans conséquence. Et pourtant c'est depuis ce lieu précis, celui où tu ne pèses rien selon les calculs du monde, que Dieu commence à parler ; il n'a jamais eu besoin que tu pèses pour te faire porter sa parole.",
+      "Tu as porté une conviction, une fidélité, jusqu'au bout, et elle s'est heurtée à un mur sans qu'il en sorte la moindre victoire visible — une prière portée des années qui semble n'avoir rien changé, un engagement achevé sans qu'on t'ait jamais entendu. Il t'a fallu accepter que rien, dans l'immédiat, ne vienne justifier ce que tu avais tenu. C'est cette fidélité-là, apparemment vaincue, que Dieu ne classe jamais parmi les choses qui ne sont point ; il la garde, et c'est elle qu'il choisit pour confondre, en son temps, ce qui semblait avoir gagné."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Aujourd'hui, l'Église fait mémoire de la Passion de saint Jean-Baptiste — non de sa naissance glorieuse, mais de sa mort obscure, décidée dans l'ivresse d'un festin. Rien, dans ce récit, ne ressemble à une victoire. C'est pourtant depuis ce lieu vaincu que Dieu choisit d'agir, comme le rappelle Paul aux Corinthiens.",
+    "geste": "Nomme devant Dieu, en silence, un service ou une fidélité qui ne t'a rapporté aucune reconnaissance — et remets-le, sans rien y ajouter, entre ses mains.",
+    "note": "Il ne s'agit pas de chercher la défaite pour elle-même, mais de reconnaître que Dieu n'attend pas ta réussite pour agir par toi."
+  },
+  "question": "Qu'est-ce que tu tiens aujourd'hui pour trop faible, trop obscur ou trop vain pour que Dieu puisse s'en servir ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : le retournement de la sagesse",
+      "corps_html": "Dans son Homélie III sur la Première épître aux Corinthiens, Jean Chrysostome souligne que Paul ne condamne pas la sagesse en elle-même, mais l'orgueil qui s'en sert pour mépriser la croix. Il note que Dieu aurait pu choisir des sages pour les convertir ; le fait de choisir des faibles rend la victoire de l'Évangile plus manifeste, puisque nul ne peut alors l'attribuer à l'habileté humaine des messagers.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, IIIe homélie"
+    },
+    {
+      "titre": "Calvin : nulle gloire hors de Dieu",
+      "corps_html": "Calvin, commentant le verset 29, écrit que Dieu abaisse volontairement ce que le monde tient pour grand afin qu'aucune chair ne puisse revendiquer devant lui la moindre part de mérite. Pour lui, ce passage résume par avance toute la doctrine de la justification : l'homme ne reçoit rien de Dieu qu'il puisse ensuite retourner en éloge de lui-même, et c'est cela, précisément, qui constitue la grâce.",
+      "attribution": "Jean Calvin, Commentaire sur la Première épître aux Corinthiens"
+    },
+    {
+      "titre": "La Décollation, une fête très ancienne",
+      "corps_html": "La fête de la Décollation de saint Jean-Baptiste est attestée dès le Ve siècle en Palestine, associée à la dédicace d'une basilique élevée à Sébaste, en Samarie, sur le lieu que la tradition ancienne désignait comme celui de son tombeau. Le calendrier romain la fixe au 29 août, faisant mémoire non de la naissance du prophète — célébrée en juin — mais de sa mort violente, l'une des plus anciennes fêtes à porter le nom d'une Passion avant celle du Christ lui-même.",
+      "attribution": "Martyrologe romain ; tradition topographique de Sébaste"
+    }
+  ]
+}
