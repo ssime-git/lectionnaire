@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-03",
+  "date_humaine": "jeudi",
+  "semaine": "22ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 3, 18-23 ; Lc 5, 1-11",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 100 h30\"/><path d=\"M60 108 h50\"/><path d=\"M180 112 h60\"/><path d=\"M250 106 h50\"/><path d=\"M290 100 h30\"/><path d=\"M50 118 q60 26 150 10 q30 -5 45 -22\"/><path d=\"M50 118 l-6 -34 l14 4 l3 24\"/><path d=\"M245 106 l10 -30 l-14 2 l-2 22\"/><path d=\"M55 100 q30 22 20 46\"/><path d=\"M75 146 q30 -16 55 -6\"/><path d=\"M60 96 q25 26 12 50\"/><path d=\"M105 92 q10 30 -8 54\"/><path d=\"M85 88 v56\"/><path d=\"M96 118 h-30\"/><path d=\"M96 100 q-16 10 -30 0\"/><path d=\"M96 136 q-16 8 -30 0\"/></g><g class=\"trait-liturgie\"><path d=\"M75 92 q6 -18 0 -30\"/><path d=\"M75 62 q-6 6 -3 14\"/><path d=\"M75 62 q6 6 3 14\"/><path d=\"M65 92 h20\"/></g><g class=\"trait-rubrique\"><path d=\"M225 60 q4 -12 14 -12 q10 0 14 12 q3 14 -14 30 q-17 -16 -14 -30\"/><path d=\"M239 90 v20\"/><path d=\"M229 110 h20\"/></g></svg>",
+  "titre": "Sur ta parole",
+  "titre_html": "Sur ta <span class=\"it\">parole</span>",
+  "sous_titre": "Quand la sagesse du monde s'incline devant une obéissance sans preuve",
+  "suite_hier": null,
+  "gravure_alt": "Une barque penchée sous le poids d'un filet qui se rompt, sur un lac strié de traits gravés ; à la proue, un homme agenouillé, les mains vides tournées vers une silhouette debout.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 3, 18-23",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">18</span> Que nul ne s'abuse lui-même : si quelqu'un parmi vous pense être sage selon ce siècle, qu'il devienne <button class=\"mot\" data-g=\"g-moros\">fou</button>, afin de devenir sage. <span class=\"s\">19</span> Car la sagesse de ce monde est une folie devant Dieu. Aussi est-il écrit : Il prend les sages dans leur <button class=\"mot\" data-g=\"g-panourgia\">ruse</button>. <span class=\"s\">20</span> Et encore : Le Seigneur connaît les pensées des sages, il sait qu'elles sont vaines. <span class=\"s\">21</span> Que personne donc ne mette sa gloire dans les hommes, car tout est à vous, <span class=\"s\">22</span> soit Paul, soit Apollos, soit Céphas, soit le monde, soit la vie, soit la mort, soit les choses présentes, soit les choses à venir. Tout est à vous ; <span class=\"s\">23</span> et vous êtes à <button class=\"mot\" data-g=\"g-christos\">Christ</button>, et Christ est à Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-moros",
+          "lemme": "moros",
+          "html": "Le grec <span class=\"gr\">μωρός</span> (mōros) désigne proprement l'insensé, celui qui manque de discernement — la racine dont vient notre mot « moron ». Segond traduit fidèlement par « fou », mais le mot grec est plus radical que la simple niaiserie : c'est une inversion volontaire du jugement du monde que Paul demande, non une bêtise réelle. Chrysostome, dans ses homélies sur cette épître, insiste sur ce paradoxe : se faire « fou » aux yeux du monde est la condition pour recevoir la vraie sagesse, celle de la croix déjà nommée folie en 1 Co 1,18."
+        },
+        {
+          "id": "g-panourgia",
+          "lemme": "panourgia",
+          "html": "<span class=\"gr\">πανουργία</span> (panourgia), littéralement « qui fait tout » (pan + ergon), désigne l'habileté retorse, la capacité à réussir par tous les moyens. Paul cite ici Job 5,13 selon la Septante ; Segond traduit « ruse », terme plus neutre que le grec, qui connote la malice calculatrice. Calvin, dans son commentaire sur cette épître, y voit la condamnation de l'intelligence humaine repliée sur elle-même, non de l'intelligence en soi."
+        },
+        {
+          "id": "g-christos",
+          "lemme": "Christos",
+          "html": "<span class=\"gr\">Χριστός</span> traduit l'hébreu <span class=\"gr\">מָשִׁיחַ</span> (mashiah), « l'oint ». Segond garde le mot grec francisé plutôt que « l'Oint » ou « le Messie », suivant un usage déjà fixé par les traductions antérieures. Paul referme ainsi la chaîne ouverte au verset 22 : après avoir dit que tout appartient aux croyants, il inverse le mouvement — les croyants appartiennent au Christ, qui appartient à Dieu, échelle descendante de la gloire que Chrysostome commente longuement."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 23 (24), 1-2, 3-4ab, 5-6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> À l'<button class=\"mot\" data-g=\"g-adonai\">Éternel</button> la terre et ce qu'elle renferme, le monde et ceux qui l'habitent. <span class=\"s\">2</span> Car il l'a fondée sur les mers, et affermie sur les fleuves.</p><p><span class=\"s\">3</span> Qui pourra monter à la montagne de l'Éternel ? Qui s'élèvera jusqu'à son lieu saint ? <span class=\"s\">4</span> Celui qui a les <button class=\"mot\" data-g=\"g-naqi\">mains innocentes</button> et le cœur pur.</p><p><span class=\"s\">5</span> Il obtiendra la bénédiction de l'Éternel, la miséricorde du Dieu de son salut. <span class=\"s\">6</span> Voilà le partage de la génération qui l'invoque, de ceux qui cherchent ta <button class=\"mot\" data-g=\"g-panim\">face</button>, de Jacob !</p>",
+      "gloses": [
+        {
+          "id": "g-adonai",
+          "lemme": "YHWH",
+          "html": "Le texte hébreu porte <span class=\"gr\">יהוה</span> (YHWH), le nom imprononcé que la tradition juive remplace à la lecture par <span class=\"gr\">אֲדֹנָי</span> (Adonaï, « Seigneur »). Segond suit l'usage protestant issu de Luther et transcrit « l'Éternel », traduction du nom révélé en Exode 3,14, plutôt que le simple « Seigneur » des versions catholiques. Ce choix, propre aux Bibles réformées, veut faire entendre l'existence en acte du Dieu qui se nomme lui-même, non un titre de dignité parmi d'autres."
+        },
+        {
+          "id": "g-naqi",
+          "lemme": "naqi kappayim",
+          "html": "<span class=\"gr\">נָקִי</span> (naqi) signifie « net », « exempt de faute », et kappayim désigne les paumes des mains, l'instrument même de l'action. Segond traduit « mains innocentes », ce qui rend le sens mais efface l'image concrète des paumes ouvertes, vides de tout bien mal acquis. Les rabbins ont lu ce verset comme une condition d'accès au Temple, exigeant des mains qui n'ont ni pris ni retenu ce qui appartenait à autrui."
+        },
+        {
+          "id": "g-panim",
+          "lemme": "panim",
+          "html": "<span class=\"gr\">פָּנִים</span> (panim), « face » ou « visage », est un pluriel en hébreu, comme s'il fallait plusieurs mots pour dire un seul visage tourné vers quelqu'un. Segond traduit « face », fidèle au texte, là où d'autres versions préfèrent « présence » pour rendre cet usage idiomatique. Calvin, dans son commentaire sur les psaumes, note que « chercher la face » de Dieu ne désigne pas une vision mais une quête de communion, le désir d'être reconnu par celui qu'on cherche."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 5, 1-11",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Comme Jésus se trouvait sur le bord du lac de Génésareth, et que la foule se pressait autour de lui pour entendre la parole de Dieu, <span class=\"s\">2</span> il vit au bord du lac deux barques, d'où les pêcheurs étaient descendus pour laver leurs filets. <span class=\"s\">3</span> Il monta dans l'une de ces barques, qui était à Simon, et il le pria de s'éloigner un peu de terre. Puis il s'assit, et de la barque il enseignait la foule. <span class=\"s\">4</span> Lorsqu'il eut cessé de parler, il dit à Simon : <button class=\"mot\" data-g=\"g-bathos\">Avance en pleine eau</button>, et jetez vos filets pour pêcher. <span class=\"s\">5</span> Simon lui répondit : Maître, nous avons travaillé toute la nuit sans rien prendre ; mais, <button class=\"mot\" data-g=\"g-rhema\">sur ta parole</button>, je jetterai le filet. <span class=\"s\">6</span> L'ayant jeté, ils prirent une grande quantité de poissons, et leur filet se rompait. <span class=\"s\">7</span> Ils firent signe à leurs compagnons qui étaient dans l'autre barque de venir les aider. Ils vinrent et remplirent les deux barques, au point qu'elles enfonçaient. <span class=\"s\">8</span> Quand il vit cela, Simon Pierre tomba aux genoux de Jésus, et dit : Seigneur, retire-toi de moi, parce que je suis un homme pécheur. <span class=\"s\">9</span> Car l'épouvante l'avait saisi, lui et tous ceux qui étaient avec lui, à cause de la pêche qu'ils venaient de faire. <span class=\"s\">10</span> Il en était de même de Jacques et de Jean, fils de Zébédée, les associés de Simon. Alors Jésus dit à Simon : Ne crains point ; désormais tu seras <button class=\"mot\" data-g=\"g-zogron\">pêcheur d'hommes</button>. <span class=\"s\">11</span> Et, ayant ramené les barques à terre, ils laissèrent tout, et le suivirent.</p>",
+      "gloses": [
+        {
+          "id": "g-bathos",
+          "lemme": "bathos",
+          "html": "Le grec porte <span class=\"gr\">βάθος</span> (bathos), « la profondeur » : l'ordre littéral est de conduire la barque vers le profond. Segond traduit « avance en pleine eau », expression plus courante mais qui perd l'insistance grecque sur la verticalité, le lieu où l'on ne prend plus pied ni ne maîtrise rien. Calvin, dans son Harmonie des évangélistes, relève que Jésus fait délibérément quitter le rivage à Simon avant d'agir, pour qu'on ne puisse attribuer la pêche à un lieu particulièrement poissonneux plutôt qu'à sa parole."
+        },
+        {
+          "id": "g-rhema",
+          "lemme": "rhema",
+          "html": "Luc emploie <span class=\"gr\">ῥῆμα</span> (rhēma) et non <span class=\"gr\">λόγος</span> (logos), deux mots que le grec distingue et que le français rend indifféremment par « parole ». Le rhēma désigne la parole prononcée, ponctuelle, adressée ici et maintenant à Simon, non le discours ou la raison universelle que porte logos. Segond traduit « ta parole » sans pouvoir garder cette nuance ; c'est pourtant elle qui fait la force de la réponse de Simon, qui obéit non à un principe mais à une voix qui vient de lui parler."
+        },
+        {
+          "id": "g-zogron",
+          "lemme": "zogron",
+          "html": "<span class=\"gr\">ζωγρῶν</span>, du verbe zōgreō, signifie littéralement « capturer vivant », terme employé à l'origine pour les prisonniers de guerre épargnés plutôt que tués. Segond traduit par la formule devenue proverbiale « pêcheur d'hommes », qui garde l'image de la pêche mais efface ce que le verbe grec ajoutait : non prendre pour tuer, comme le poisson tiré de l'eau meurt, mais prendre pour faire vivre. Chrysostome, commentant la même parole dans sa forme parallèle chez Matthieu, relève ce renversement : la pêche de Simon nourrissait la mort du poisson, celle que Jésus lui confie donne la vie à ceux qu'elle attrape."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une Église divisée par ses sages",
+      "corps_html": "Corinthe, au milieu du premier siècle, est une ville cosmopolite et un port de commerce où la rhétorique et la philosophie font autorité sociale. Les chrétiens de la communauté se réclament de maîtres rivaux — Paul, Apollos, Céphas — jugeant leur foi à l'aune de l'éloquence de celui qui les a formés. Paul écrit cette lettre vers 54-55, depuis Éphèse, pour dénoncer ce critère mondain appliqué à l'annonce de l'Évangile."
+    },
+    {
+      "titre": "Une vocation sur l'eau, non dans le désert",
+      "corps_html": "Le récit de la pêche miraculeuse est propre à Luc : Marc et Matthieu situent l'appel de Simon dans la sobriété d'un ordre bref, sans prodige préalable. Luc, historien soucieux d'enchaînement, fait culminer l'enseignement donné depuis la barque en un signe qui bouleverse Simon avant qu'il ne reçoive sa mission, selon un schéma proche des vocations prophétiques d'Ésaïe 6 ou de Jérémie 1, où la rencontre précède et fonde l'envoi."
+    }
+  ],
+  "analogie": {
+    "titre": "Jeter le filet une fois de plus",
+    "variantes": [
+      "Tu as pu prier de longues années sans qu'aucune émotion ne vienne confirmer que quelqu'un t'écoutait, répétant les mêmes mots dans le silence apparent d'une absence. Rien ne te garantissait, à l'instant où tu ouvrais la bouche, qu'il y avait une prise possible au bout de cette parole lancée dans le vide. Et pourtant, si tu as continué, ce n'est pas parce que tu avais des raisons de croire au résultat, mais parce qu'une parole reçue plus tôt te tenait encore debout — c'est cette obéissance-là, antérieure à toute preuve, que Simon met dans son filet quand il dit : sur ta parole.",
+      "Tu as pu donner des années à un service discret, un accompagnement, une tâche répétée dans une communauté, sans qu'aucun signe ne vienne t'assurer que cela portait du fruit — les mêmes gestes, la même fatigue, et rien à montrer en retour. Cette nuit de travail sans prise n'est pas un échec caché avant la réussite : elle est le lieu même où une parole peut se faire entendre, parce que tu n'as plus, pour t'y tenir, que la confiance que quelqu'un a parlé. C'est depuis cet épuisement précis, non après qu'il a cessé, que vient l'ordre de jeter encore le filet.",
+      "Il t'est arrivé de savoir, avec la certitude que donnent l'expérience et le métier, qu'une chose ne marcherait pas — et de la faire quand même, parce qu'une voix qui n'avait aucune autorité dans ton domaine te l'a demandé. Ce pas-là ne se prend pas sur une preuve, mais sur une confiance qui déplace le lieu même où tu situais ta compétence, ta nuit sans prise devenant le seul terrain où cette parole pouvait se vérifier. Simon le pêcheur ne cède pas à un meilleur pêcheur que lui ; il cède à celui dont la parole vaut plus que son propre savoir, et c'est cela, précisément, qui rejoint le malgré-tout de ta propre obéissance."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, reste un instant avec la phrase de Simon.",
+    "geste": "Redis lentement, à voix basse, « sur ta parole, je jetterai le filet » — en pensant à ce que tu portes aujourd'hui sans certitude d'y voir du fruit.",
+    "note": "Le psaume peut se prier debout, comme le faisaient les pèlerins montant à Jérusalem : il porte en lui la question de qui peut se tenir devant Dieu."
+  },
+  "question": "Quelle nuit sans prise portes-tu aujourd'hui, et qu'est-ce qui te ferait encore jeter le filet ?",
+  "racines": [
+    {
+      "titre": "La sagesse folle, un scandale grec",
+      "corps_html": "Pour un auditeur grec du premier siècle, dire que la sagesse divine passe par la folie était une provocation directe : la paideia grecque plaçait le discours rhétorique au sommet des valeurs sociales. Chrysostome, dans ses homélies sur cette épître, insiste sur le fait que Paul ne méprise pas l'intelligence mais son usage comme critère d'appartenance à Dieu, retournant contre les sages de Corinthe leur propre vocabulaire.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens"
+    },
+    {
+      "titre": "Un psaume des portes du Temple",
+      "corps_html": "Les versets suivants, non lus aujourd'hui, interpellent les portes de la ville — « Portes, élevez vos linteaux » — signe que ce psaume accompagnait une procession, peut-être celle qui fit monter l'arche à Jérusalem sous David selon 2 Samuel 6. La question « qui pourra monter » prend alors un sens concret : elle s'adresse à des pèlerins massés au pied du Temple, avant de devenir, dans la tradition chrétienne, une interrogation sur l'accès à Dieu lui-même.",
+      "attribution": "Note historique, liturgie de procession au second Temple"
+    },
+    {
+      "titre": "Une image d'abord menaçante",
+      "corps_html": "Dans l'Ancien Testament, l'image du pêcheur d'hommes est presque toujours négative : en Amos 4,2 et Jérémie 16,16, Dieu envoie des pêcheurs pour saisir un peuple infidèle en vue du jugement. En reprenant cette image pour l'appliquer à Simon, Jésus la retourne complètement : le filet qui capturait pour perdre devient un filet qui rassemble pour sauver, inversion que plusieurs Pères ont relevée comme un signe propre au renversement de l'Évangile.",
+      "attribution": "Cf. Amos 4,2 ; Jérémie 16,16"
+    }
+  ]
+}
