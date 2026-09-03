@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-04",
+  "date_humaine": "vendredi",
+  "semaine": "22ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 4, 1-5 ; Lc 5, 33-39",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M150 30 q-14 4 -16 20 q9 -3 10 3\"/><path d=\"M148 33 q6 8 4 20\"/><path d=\"M140 40 q-4 6 0 12\"/><path d=\"M156 40 q5 5 2 12\"/><path d=\"M160 25 q4 6 0 13\"/><path d=\"M170 20 v14\"/><path d=\"M160 27 h20\"/><path d=\"M150 27 l10 -12 l10 12\"/><path d=\"M110 30 q-30 8 -35 45 q-3 30 20 48 q22 15 45 3 q20 -12 18 -38 q-2 -32 -25 -50 q-12 -9 -23 -8 z\"/><path d=\"M115 33 q-25 22 -22 55 q2 22 20 33\"/><path d=\"M96 76 h38\"/><path d=\"M40 88 h260\"/><path d=\"M40 88 v-8\"/><path d=\"M300 88 v-8\"/></g><g class=\"trait-liturgie\"><path d=\"M40 80 q-9 6 -9 15 q9 -3 9 -15 z\"/><path d=\"M40 95 v10\"/><path d=\"M30 105 h20\"/></g><g class=\"trait-rubrique\"><path d=\"M300 80 q9 6 9 15 q-9 -3 -9 -15 z\"/><path d=\"M300 95 v10\"/><path d=\"M290 105 h20\"/></g></svg>",
+  "titre": "Avant le jour",
+  "titre_html": "Avant <span class=\"it\">le jour</span>",
+  "sous_titre": "Vendredi — sur le jugement remis, la confiance qui attend, et le vin qui n'a pas fini de travailler",
+  "suite_hier": null,
+  "gravure_alt": "Une outre de cuir tendue à craquer, posée sur une balance dont les deux plateaux restent vides et dans l'ombre, sous un pampre de vigne aux grappes encore fermes.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 4, 1-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Ainsi, qu'on nous regarde comme des <button class=\"mot\" data-g=\"g-hyperetas\">serviteurs</button> de Christ, et des <button class=\"mot\" data-g=\"g-oikonomos\">dispensateurs</button> des <button class=\"mot\" data-g=\"g-mysterion\">mystères</button> de Dieu. <span class=\"s\">2</span> Du reste, ce qu'on demande des dispensateurs, c'est que chacun soit trouvé fidèle.</p><p><span class=\"s\">3</span> Pour moi, il m'importe fort peu d'être jugé par vous, ou par un <button class=\"mot\" data-g=\"g-hemera\">tribunal humain</button>; je ne me juge pas non plus moi-même, <span class=\"s\">4</span> car je ne me sens coupable de rien; mais ce n'est pas pour cela que je suis justifié. Celui qui me juge, c'est le Seigneur. <span class=\"s\">5</span> C'est pourquoi ne jugez de rien avant le temps, jusqu'à ce que vienne le Seigneur, qui <button class=\"mot\" data-g=\"g-phaneroo\">mettra en lumière</button> ce qui est caché dans les ténèbres, et qui manifestera les desseins des cœurs. Alors chacun recevra de Dieu la louange qui lui sera due.</p>",
+      "gloses": [
+        {
+          "id": "g-hyperetas",
+          "lemme": "hypêrétès",
+          "html": "Paul n'emploie pas ici <span class=\"gr\">diakonos</span>, le mot ordinaire du service d'où vient « diacre », mais <span class=\"gr\">hypêrétès</span>, qui désignait à l'origine le rameur du dernier rang sur une trirème, celui que personne ne voit et qui règle son geste sur le tambour du maître de nage. Segond traduit uniformément par « serviteurs », ce qui est juste mais efface l'image concrète du corps courbé, invisible, cadencé sur un ordre qui n'est pas le sien. Chrysostome, commentant ce passage, insiste sur ce sens : le ministre de l'Évangile ne choisit pas sa course."
+        },
+        {
+          "id": "g-oikonomos",
+          "lemme": "oikonomos",
+          "html": "Le mot grec <span class=\"gr\">oikonomos</span> désigne l'intendant chargé de la maison (<span class=\"gr\">oikos</span>) d'un autre, souvent un esclave affranchi à qui le maître confiait les clés, les provisions et les comptes. Segond choisit « dispensateurs », qui garde l'idée de distribution mais perd celle de la maison et de la reddition de comptes annoncée au verset suivant. Calvin note dans son commentaire sur cette épître que l'intendant n'est jamais propriétaire de ce qu'il distribue : sa fidélité se mesure à l'exactitude avec laquelle il rend ce qui lui a été confié, non à son génie personnel."
+        },
+        {
+          "id": "g-mysterion",
+          "lemme": "mystèrion",
+          "html": "<span class=\"gr\">Mystèrion</span> désigne ce qui restait scellé aux non-initiés et que Dieu a résolu de dévoiler en Christ, comme le rappelle Éphésiens 3,3-4. Segond garde le mot tel quel, choix fidèle, mais qui risque de faire entendre en français l'énigme insoluble plutôt que le dessein enfin ouvert. Chez Paul le mystère n'est pas ce qu'on ne comprendra jamais, mais ce qui restait caché et se donne désormais à la prédication — d'où l'image de l'intendant qui distribue, et non du gardien qui verrouille."
+        },
+        {
+          "id": "g-hemera",
+          "lemme": "hèméra anthrôpinè",
+          "html": "L'expression grecque signifie littéralement « jour humain », que Segond rend par « tribunal humain ». Paul la choisit exprès pour la faire résonner avec le jour du Seigneur qui vient au verset 5 : il existe deux calendriers de jugement, celui des hommes qui siège dès maintenant, et celui de Dieu qui n'est pas encore ouvert. En traduisant par « tribunal », Segond rend le sens juridique mais efface le jeu sur le mot jour, que le lecteur français ne peut plus entendre."
+        },
+        {
+          "id": "g-phaneroo",
+          "lemme": "phaneroô",
+          "html": "Le verbe <span class=\"gr\">phaneroô</span> signifie rendre manifeste, faire apparaître au grand jour ce qui était voilé ; il ne contient pas en lui-même l'image de la lumière, empruntée au contexte des ténèbres qui précèdent. Segond traduit par « mettra en lumière », interprétation plus que traduction littérale. Ce même verbe désigne chez Paul la manifestation eschatologique du Christ, en Colossiens 3,4 : le jugement dernier n'est pas d'abord condamnation, mais dévoilement de ce que la vie avait caché, parfois même à celui qui l'a vécue."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 36 (37), 3-4, 5-6, 27-28ab, 39-40ac",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">3</span> <button class=\"mot\" data-g=\"g-batah\">Confie-toi</button> en l'Éternel, et pratique le bien; Aie le pays pour demeure et la fidélité pour pâture. <span class=\"s\">4</span> Fais de l'Éternel tes <button class=\"mot\" data-g=\"g-anog\">délices</button>, Et il te donnera ce que ton cœur désire.</p><p><span class=\"s\">5</span> <button class=\"mot\" data-g=\"g-gol\">Recommande ton sort</button> à l'Éternel, Mets en lui ta confiance, et il agira. <span class=\"s\">6</span> Il fera paraître ta justice comme la lumière, Et ton droit comme le soleil à son midi.</p><p><span class=\"s\">27</span> Détourne-toi du mal, fais le bien, Et possède à jamais ta demeure. <span class=\"s\">28</span> Car l'Éternel aime la justice, Et il n'abandonne pas ses fidèles.</p><p><span class=\"s\">39</span> Le <button class=\"mot\" data-g=\"g-teshuah\">salut</button> des justes vient de l'Éternel; Il est leur protecteur au temps de la détresse. <span class=\"s\">40</span> L'Éternel les secourt et les délivre; il les sauve, parce qu'ils cherchent en lui leur refuge.</p>",
+      "gloses": [
+        {
+          "id": "g-batah",
+          "lemme": "batah",
+          "html": "<span class=\"gr\">batah</span> décrit l'action de poser tout son poids sur quelque chose, comme on s'appuie de tout son corps sur un mur ou un bâton pour ne pas tomber. Segond traduit « confie-toi », qui garde l'idée de remise de soi mais perd la dimension presque charnelle de l'hébreu : ce n'est pas d'abord une disposition intérieure, c'est un geste du corps entier qui cesse de se tenir par ses propres forces. Les lecteurs juifs anciens rapprochaient ce verbe de l'enfant qui s'endort contre sa mère sans vérifier si elle va le laisser tomber."
+        },
+        {
+          "id": "g-anog",
+          "lemme": "'anog",
+          "html": "La racine <span class=\"gr\">'anog</span> donne en hébreu le vocabulaire de la délicatesse et du raffinement du plaisir, employé ailleurs pour le luxe ou la volupté. Segond traduit « fais tes délices », choix heureux qui garde la saveur du terme : il ne s'agit pas d'un devoir austère, mais d'un goût, presque d'une gourmandise pour Dieu lui-même — à l'exact opposé de l'envie amère envers les méchants dont parle l'ouverture du psaume."
+        },
+        {
+          "id": "g-gol",
+          "lemme": "gol",
+          "html": "<span class=\"gr\">gol</span> est l'impératif de la racine <span class=\"gr\">galal</span>, « rouler ». L'image concrète est celle d'un fardeau ou d'une pierre qu'on fait rouler d'un point à un autre : littéralement « roule ta voie sur l'Éternel ». Segond adoucit en « recommande ton sort », traduction juste quant au sens mais qui perd le geste physique de transfert : on ne confie pas seulement un avenir, on s'en décharge activement, comme on pousse un poids qu'on ne peut plus porter vers des épaules plus fortes que les siennes."
+        },
+        {
+          "id": "g-teshuah",
+          "lemme": "teshu'ah",
+          "html": "<span class=\"gr\">teshu'ah</span> vient de la racine <span class=\"gr\">yasha</span>, « sauver, délivrer », qui donne aussi le nom Josué et, par le grec, Jésus. Segond traduit sobrement « salut » ; le mot hébreu porte pourtant une connotation plus concrète d'élargissement, de sortie d'un espace resserré vers le large. Le psalmiste n'annonce pas un secours ponctuel, il inscrit le salut des justes dans le nom même que portera plus tard celui en qui l'Église a reconnu l'accomplissement de cette promesse."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 5, 33-39",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">33</span> Ils lui dirent: Les disciples de Jean, comme ceux des pharisiens, <button class=\"mot\" data-g=\"g-nesteuo\">jeûnent</button> fréquemment et font des prières, tandis que les tiens mangent et boivent. <span class=\"s\">34</span> Il leur répondit: Pouvez-vous faire jeûner les amis de l'<button class=\"mot\" data-g=\"g-nymphios\">époux</button> pendant que l'époux est avec eux? <span class=\"s\">35</span> Les jours viendront où l'époux leur sera enlevé, alors ils jeûneront en ces jours-là.</p><p><span class=\"s\">36</span> Il leur dit aussi une parabole: Personne ne déchire d'un habit neuf un morceau pour le mettre à un vieil habit; autrement, il déchire l'habit neuf, et le morceau qu'il en a pris ne s'accorde pas avec le vieux. <span class=\"s\">37</span> Et personne ne met du <button class=\"mot\" data-g=\"g-oinos\">vin nouveau</button> dans de vieilles <button class=\"mot\" data-g=\"g-askos\">outres</button>; autrement, le vin nouveau fait rompre les outres, il se répand, et les outres sont perdues; <span class=\"s\">38</span> mais il faut mettre le vin nouveau dans des outres neuves. <span class=\"s\">39</span> Et personne, après avoir bu du vin vieux, ne veut du nouveau, car il dit: Le vieux est bon.</p>",
+      "gloses": [
+        {
+          "id": "g-nesteuo",
+          "lemme": "nêsteuô",
+          "html": "<span class=\"gr\">nêsteuô</span>, s'abstenir de nourriture, était une pratique de deuil ou de supplication déjà ancienne dans le judaïsme du second Temple, que les pharisiens avaient réglée en jours fixes. Segond traduit simplement « jeûnent », ce qui est exact, mais le grec souligne par l'adverbe qui l'accompagne une pratique répétée et codifiée, à laquelle Jésus n'oppose pas le refus du jeûne mais son déplacement dans le temps."
+        },
+        {
+          "id": "g-nymphios",
+          "lemme": "numphios",
+          "html": "<span class=\"gr\">numphios</span>, l'époux, est un terme que les prophètes appliquaient déjà à Dieu lui-même dans sa relation à Israël, chez Osée comme chez Ésaïe. En se désignant ainsi sans le dire explicitement, Jésus reprend à son compte cette image nuptiale de l'Alliance : la noce a commencé, et il serait absurde de pleurer un deuil pendant la fête. Chrysostome relève que Jean-Baptiste lui-même s'était déjà nommé « l'ami de l'époux » en Jean 3,29 — la question de Jésus renvoie les disciples de Jean à ce que leur propre maître avait annoncé."
+        },
+        {
+          "id": "g-oinos",
+          "lemme": "oinos neos",
+          "html": "<span class=\"gr\">oinos neos</span> est le vin qui vient d'être pressé et qui fermente encore, par opposition au vin vieux, stabilisé et reposé. Segond traduit littéralement « vin nouveau », sans perte notable, mais le grec insiste sur un état de fermentation active : ce vin dégage encore du gaz, il travaille, il n'a pas fini de devenir ce qu'il sera. C'est cette énergie non maîtrisée que les vieilles outres ne peuvent contenir."
+        },
+        {
+          "id": "g-askos",
+          "lemme": "askos",
+          "html": "<span class=\"gr\">askos</span> désigne l'outre de peau, souvent de chèvre, qui durcit et perd son élasticité avec l'âge et les usages successifs. Segond traduit fidèlement par « outres » ; l'image parlait à tout auditeur du premier siècle, qui savait qu'une vieille outre, devenue rigide, ne pouvait plus se dilater sous la pression du gaz de fermentation et se fendait net. La parabole ne dit pas que l'ancien est mauvais, mais qu'il n'a plus la capacité de se laisser distendre par ce qui est vivant."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, vers 54-55 : la fin des clans",
+      "corps_html": "<p>Paul écrit depuis Éphèse à une Église déchirée par les partis : « je suis de Paul, moi d'Apollos, moi de Céphas » (1 Co 1,12). Il vient de comparer les prédicateurs à des jardiniers qui plantent et arrosent sans rien posséder du champ (ch. 3) ; ici il pousse l'image plus loin : même les apôtres ne sont que des intendants dans une maison qui appartient à un autre, et juger un intendant à la place du maître, c'est usurper une place qui n'appartient à personne avant le jour fixé.</p>"
+    },
+    {
+      "titre": "Après le repas de Lévi",
+      "corps_html": "<p>La question du jeûne suit immédiatement le festin donné par Lévi le publicain, où Jésus mangeait « avec des publicains et des gens de mauvaise vie » (5,29-30), déjà reproché par les pharisiens. La controverse sur le jeûne prolonge donc celle sur la table : ce n'est pas seulement la fréquentation de Jésus qui choque, c'est le climat de noces qu'il installe, incompatible avec le deuil rituel que Jean-Baptiste avait fait pratiquer à ses disciples.</p>"
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui travaille encore",
+    "variantes": [
+      "Il y a des soirs où tu repasses une journée, un choix, une parole que tu as dite, et où tu te déclares toi-même coupable ou tu t'absous, selon l'humeur plus que selon la vérité. Ce tribunal intérieur, tu le tiens toi-même, juge et accusé à la fois, et il ne te donne jamais un verdict qui tienne au matin suivant. Ce que le texte te promet n'est pas une meilleure sentence de ta part, mais un jour où ce jugement te sera enfin ôté des mains, remis à celui qui voit sans se tromper — et ce jour-là seulement, tu pourras cesser de te juger toi-même.",
+      "Tu connais ce moment où tu as fait ce qu'il fallait faire, où tu as tenu ta parole, ajusté ta conduite, et où pourtant rien ne change, rien ne se voit, personne ne remarque ; tu attends une reconnaissance ou une réparation qui ne vient pas, et tu sens la tentation de forcer les choses, de te faire justice toi-même. Le psaume ne te demande pas d'être patient par vertu, mais de rouler ce poids précis — vouloir un résultat visible tout de suite — sur quelqu'un dont tu n'as jamais vérifié la fidélité par toi-même. Ce déplacement, tu ne le sens pas comme un soulagement immédiat, mais comme une décharge lente, presque physique, de ce que tu portais seul.",
+      "Il y a en toi des commencements que tu voudrais déjà voir aboutis, une conversion, une réconciliation, une compréhension d'un texte ou d'une personne, et tu t'irrites de sentir que cela travaille encore sans avoir pris sa forme définitive. Tu voudrais verser tout de suite ce qui bouillonne encore dans le vieux récipient de tes habitudes, pour en finir, pour que ce soit rangé. Mais ce que Dieu fait naître en toi a son propre temps de fermentation, et le presser trop tôt dans une forme ancienne ne l'achève pas, cela le perd — la promesse n'est pas d'accélérer, mais de devenir toi-même cette outre neuve qui peut porter ce qui n'est pas encore fini."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec cette phrase de Paul : « je ne me sens coupable de rien, mais ce n'est pas pour cela que je suis justifié ». Elle désarme aussi bien l'auto-accusation que l'auto-satisfaction.",
+    "geste": "Nomme, en silence, une chose que tu attends de voir aboutir — en toi ou chez quelqu'un d'autre — et confie-la, sans date ni condition, à la garde de Dieu.",
+    "note": "Ce geste ne cherche pas à faire disparaître l'attente, mais à cesser de la porter seul."
+  },
+  "question": "Qu'est-ce que tu essaies de faire mûrir plus vite qu'il ne le peut, en toi ou chez un autre, faute de savoir attendre le jour de Dieu ?",
+  "racines": [
+    {
+      "titre": "L'intendant ne compte pas ses propres mérites",
+      "corps_html": "<p>Chrysostome s'arrête longuement sur le verset 4 : Paul dit n'avoir rien sur la conscience, et ajoute pourtant que cela ne le justifie pas. Pour Chrysostome, c'est le sommet de l'humilité chrétienne — non pas douter de sa sincérité, mais refuser de faire de son propre examen le tribunal dernier. L'intendant fidèle ne se félicite pas d'avoir bien tenu les comptes ; il attend que le maître les vérifie.</p>",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, XI"
+    },
+    {
+      "titre": "Rouler son fardeau, non le traîner",
+      "corps_html": "<p>Calvin, commentant le psaume 37, rappelle que David l'écrit en un temps où les méchants prospèrent visiblement et où les fidèles n'ont, pour toute réponse, qu'une promesse non vérifiable dans l'instant. Recommander son sort, note-t-il, n'est pas la résignation du faible qui n'a plus de force, mais l'acte délibéré de celui qui pourrait se venger ou s'agiter, et qui choisit de remettre la cause à un juge plus sûr que lui-même.</p>",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, Ps 37"
+    },
+    {
+      "titre": "Deux calendriers de jeûne",
+      "corps_html": "<p>La Didachè, catéchisme chrétien de la fin du premier siècle, ordonne aux disciples de ne pas jeûner « avec les hypocrites », qui jeûnent le lundi et le jeudi, mais de choisir le mercredi et le vendredi. Le geste rituel de Luc 5 n'est donc pas resté une image : l'Église naissante a effectivement changé de calendrier, signe que le vin nouveau avait bien demandé une outre neuve, jusque dans le rythme du temps liturgique.</p>",
+      "attribution": "Didachè, VIII, 1 (fin du Ier siècle)"
+    }
+  ]
+}
