@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-07",
+  "date_humaine": "lundi",
+  "semaine": "23ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 5, 1-8 ; Lc 6, 6-11",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 60 h300\"/><path d=\"M40 60 v-22 l30 -20 h140 l30 20 v22\"/><path d=\"M90 60 v-30\"/><path d=\"M170 60 v-30\"/><path d=\"M250 60 v-30\"/><path d=\"M120 60 l40 -36 l40 36\"/></g><g class=\"trait-liturgie\"><path d=\"M120 100 q20 -22 44 -6 q10 -8 22 2 q8 -6 16 3 v20 q-40 10 -82 -2 z\"/><path d=\"M140 96 v18\"/><path d=\"M168 92 v22\"/></g><g class=\"trait-rubrique\"><path d=\"M235 118 q6 -14 20 -14 q14 0 20 14 q-4 8 -20 8 q-16 0 -20 -8 z\"/><path d=\"M255 104 v22\"/></g><g class=\"trait-encre\"><path d=\"M250 118 l14 -20\"/><path d=\"M262 122 l16 -26\"/><path d=\"M270 120 l14 -22\"/></g></svg>",
+  "titre": "Main",
+  "titre_html": "Main <span class=\"it\">tendue</span>",
+  "sous_titre": "Un levain caché, une main figée : ce que Dieu vient déloger.",
+  "suite_hier": null,
+  "gravure_alt": "Sous le linteau bas d'une synagogue, un bras se tend hors d'une manche, la paume ouverte vers le haut ; à l'arrière-plan, une miche de pain fendue et quelques épis, traités en lignes sèches et anguleuses comme une gravure sur bois ancienne, sans ombre portée ni couleur.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 5, 1-8",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> On entend dire généralement qu'il y a parmi vous de l'<button class=\"mot\" data-g=\"g-impudicite\">impudicité</button>, et une impudicité telle qu'elle ne se rencontre pas même chez les païens ; c'est au point que l'un de vous a la femme de son père. <span class=\"s\">2</span> Et vous êtes enflés d'orgueil ! Et vous n'avez pas été plutôt dans l'affliction, afin que celui qui a commis cet acte fût ôté du milieu de vous ! <span class=\"s\">3</span> Pour moi, absent de corps, mais présent d'esprit, j'ai déjà jugé, comme si j'étais présent, celui qui a commis un tel acte. <span class=\"s\">4</span> Au nom du Seigneur Jésus, vous et mon esprit étant assemblés avec la puissance de notre Seigneur Jésus, <span class=\"s\">5</span> qu'un tel homme soit <button class=\"mot\" data-g=\"g-livre-satan\">livré à Satan</button> pour la destruction de la chair, afin que l'esprit soit sauvé au jour du Seigneur Jésus. <span class=\"s\">6</span> C'est bien à tort que vous vous glorifiez. Ne savez-vous pas qu'un peu de <button class=\"mot\" data-g=\"g-levain\">levain</button> fait lever toute la pâte ? <span class=\"s\">7</span> Faites disparaître le vieux levain, afin que vous soyez une pâte nouvelle, comme vous êtes sans levain, car Christ, notre Pâque, a été <button class=\"mot\" data-g=\"g-immole\">immolé</button>. <span class=\"s\">8</span> Célébrons donc la fête, non avec du vieux levain, non avec un levain de malice et de méchanceté, mais avec les pains sans levain de la pureté et de la vérité.",
+      "gloses": [
+        {
+          "id": "g-impudicite",
+          "lemme": "porneia",
+          "html": "Le mot grec est <span class=\"gr\">porneia</span>, d'où vient « pornographie » : il désigne toute union sexuelle hors de l'ordre voulu par Dieu, ici un inceste que même le droit romain réprouvait. Segond traduit par « impudicité », un mot aujourd'hui vieilli qui édulcore la violence du terme grec — Paul ne parle pas d'une gêne de bienséance mais d'une souillure qui menace toute la communauté. Jean Chrysostome, dans ses Homélies sur la première épître aux Corinthiens (homélie 15), s'étonne que les Corinthiens aient pu s'enorgueillir pendant que ce mal rongeait leur assemblée : pour lui, le silence complice est aussi grave que la faute elle-même."
+        },
+        {
+          "id": "g-livre-satan",
+          "lemme": "paradounai",
+          "html": "L'expression grecque est <span class=\"gr\">paradounai to Satana</span>, littéralement « remettre, livrer à Satan » — un vocabulaire juridique, celui d'une remise de coupable entre des mains adverses. Segond traduit sans l'adoucir par « livré », gardant la dureté d'une formule qui a longtemps embarrassé les commentateurs. Calvin, dans son commentaire sur cette épître, insiste sur le fait que cette remise n'est pas une malédiction définitive mais une mesure disciplinaire à visée médicinale, tournée vers « le salut de l'esprit au jour du Seigneur » et non vers la perte de l'homme."
+        },
+        {
+          "id": "g-levain",
+          "lemme": "zymē",
+          "html": "<span class=\"gr\">zymē</span>, le levain, est l'image qui porte tout le passage : une quantité infime suffit à transformer la pâte entière. Segond garde le mot tel quel, fidèle à l'arrière-plan de la Pâque juive où, selon Exode 12, il fallait faire disparaître tout levain de la maison avant la fête. Paul déplace cette purification rituelle vers l'intérieur : ce n'est plus la maison qu'il faut nettoyer, mais la communauté elle-même, atteinte par la tolérance d'un mal qu'on a cessé de voir."
+        },
+        {
+          "id": "g-immole",
+          "lemme": "etythē",
+          "html": "Le verbe grec est <span class=\"gr\">etythē</span>, de <span class=\"gr\">thyō</span>, terme technique du sacrifice cultuel, celui-là même qu'emploie la Septante pour l'égorgement de l'agneau pascal en Exode 12. Segond traduit par « immolé » et non par « mort » ou « sacrifié », conservant volontairement une résonance sacrificielle que des versions plus récentes atténuent. Ce choix identifie le Christ à l'agneau pascal lui-même, ce que reprendra bientôt Méliton de Sardes dans son Homélie sur la Pâque."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 5, 2-3, 5-6ab, 6c-7, 12",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Prête l'oreille à mes paroles, ô Éternel ! Écoute mes <button class=\"mot\" data-g=\"g-gemissements\">gémissements</button> ! <span class=\"s\">3</span> Sois attentif à mes cris, mon roi et mon Dieu ! C'est à toi que j'adresse ma prière. <span class=\"s\">5</span> Car tu n'es point un Dieu qui prenne plaisir au mal ; Le <button class=\"mot\" data-g=\"g-mechant\">méchant</button> n'a pas sa demeure auprès de toi. Les insensés ne subsistent pas devant tes yeux ; <span class=\"s\">6</span> Tu hais tous ceux qui commettent l'iniquité. Tu fais périr les menteurs ; <span class=\"s\">7</span> L'Éternel abhorre les hommes de sang et de fraude. <span class=\"s\">12</span> Alors se réjouiront tous ceux qui se confient en toi, ils auront de perpétuels sujets d'allégresse, et tu les protégeras ; tu seras un sujet de joie pour ceux qui aiment ton nom.",
+      "gloses": [
+        {
+          "id": "g-gemissements",
+          "lemme": "hagig",
+          "html": "Le mot hébreu est <span class=\"gr\">hagig</span>, de la racine <span class=\"gr\">hagah</span>, murmurer, gronder à voix basse — le même verbe qui décrit, au Psaume 1, celui qui « médite » la loi jour et nuit. Segond traduit par « gémissements », ce qui capte la plainte mais perd le lien avec la méditation : le psalmiste ne se contente pas de se lamenter, il rumine sa détresse comme on rumine la Torah. Les commentateurs juifs ont relevé cette parenté pour souligner que la prière vraie ressemble davantage à un ressassement intérieur qu'à un discours construit."
+        },
+        {
+          "id": "g-mechant",
+          "lemme": "rasha",
+          "html": "<span class=\"gr\">rasha</span> est le terme hébreu constant pour désigner le méchant dans les Psaumes, toujours en vis-à-vis du <span class=\"gr\">tsaddiq</span>, le juste, qui reparaît au verset 13. Segond garde la traduction usuelle « méchant », qui rend bien l'opposition binaire du psaume mais estompe la nuance juridique du mot hébreu, plus proche de « coupable devant un tribunal » que d'une méchanceté morale diffuse. Calvin, commentant ce psaume, rappelle que David ne vise pas une abstraction mais des ennemis réels, ce qui donne à toute la prière sa tension concrète."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 6, 6-11",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">6</span> Il arriva, un autre jour de sabbat, que Jésus entra dans la synagogue, et qu'il enseignait. Il s'y trouvait un homme dont la main droite était <button class=\"mot\" data-g=\"g-seche\">sèche</button>. <span class=\"s\">7</span> Les scribes et les pharisiens observaient Jésus, pour voir s'il ferait une guérison le jour du sabbat : c'était afin d'avoir sujet de l'accuser. <span class=\"s\">8</span> Mais il connaissait leurs <button class=\"mot\" data-g=\"g-pensees\">pensées</button>, et il dit à l'homme qui avait la main sèche : Lève-toi, et tiens-toi là au milieu. Il se leva, et se tint debout. <span class=\"s\">9</span> Et Jésus leur dit : Je vous demande s'il est <button class=\"mot\" data-g=\"g-permis\">permis</button>, le jour du sabbat, de faire du bien ou de faire du mal, de sauver une personne ou de la tuer. <span class=\"s\">10</span> Puis, ayant porté ses regards sur tous ceux qui l'entouraient, il dit à l'homme : Étends ta main. Il le fit, et sa main fut guérie. <span class=\"s\">11</span> Ils furent remplis de fureur, et ils se consultèrent pour savoir ce qu'ils feraient à Jésus.",
+      "gloses": [
+        {
+          "id": "g-seche",
+          "lemme": "xēra",
+          "html": "Le grec dit <span class=\"gr\">xēra</span>, sèche, desséchée — le mot même qu'emploie la Septante en 1 Rois 13, 4 pour la main de Jéroboam figée en plein geste contre l'homme de Dieu. Segond traduit littéralement par « sèche », gardant l'image d'un membre coupé de la sève qui devrait le faire vivre. Jean Chrysostome, dans ses Homélies sur Matthieu (homélie 40, sur le récit parallèle), voit dans cette main desséchée l'image d'une volonté paralysée par l'habitude du mal, incapable de produire aucune œuvre bonne tant qu'elle n'est pas touchée par la parole du Christ."
+        },
+        {
+          "id": "g-pensees",
+          "lemme": "dialogismous",
+          "html": "Le mot grec est <span class=\"gr\">dialogismous</span>, les raisonnements, terme que Luc emploie ailleurs (5, 22) pour les calculs intérieurs des scribes contre Jésus, et que Paul reprend pour les « murmures et contestations » de Philippiens 2, 14. Segond traduit simplement par « pensées », ce qui est exact mais efface la nuance de délibération retorse que porte le mot grec. Jésus ne lit donc pas de simples idées, mais un piège déjà en cours de construction."
+        },
+        {
+          "id": "g-permis",
+          "lemme": "exestin",
+          "html": "<span class=\"gr\">exestin</span> est le vocabulaire technique du licite, celui des débats sur ce que la loi autorise ou non le jour du sabbat. Segond traduit justement par « permis », terme juridique qui restitue l'enjeu réel : la question de Jésus n'est pas une pieuse méditation, elle interpelle directement les catégories que ses adversaires manient eux-mêmes. Le principe selon lequel la vie sauvée l'emporte sur le repos sabbatique sera plus tard formulé par les rabbins sous le nom de pikou'ah néfesh (Mishna Yoma 8, 6) ; Jésus l'énonce ici en acte, avant toute codification écrite."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, une Église en formation",
+      "corps_html": "Paul a fondé l'Église de Corinthe vers 50-51, dans un port cosmopolite où se croisaient cultes à mystères et mœurs très libres ; la lettre est écrite depuis Éphèse quelques années plus tard, alors que remontent à lui des nouvelles inquiétantes. Le cas dénoncé ici, un homme vivant avec la femme de son père, choquait jusqu'aux auteurs païens comme Cicéron : ce n'est donc pas un simple désaccord moral, mais un scandale reconnu comme tel bien au-delà du cercle chrétien."
+    },
+    {
+      "titre": "Une controverse qui s'aggrave",
+      "corps_html": "Luc place cette guérison juste après celle des épis arrachés un jour de sabbat (6, 1-5) : c'est la seconde d'une paire de conflits sur le repos sabbatique, et elle referme le dossier de façon plus grave, puisqu'elle se conclut par un projet hostile des pharisiens. Le récit précède immédiatement le choix des douze apôtres (6, 12-16) : littérairement, Luc fait naître l'Église au moment même où l'opposition à Jésus se durcit."
+    }
+  ],
+  "analogie": {
+    "titre": "La main qu'on n'osait plus tendre",
+    "variantes": [
+      "Il y a peut-être en toi un accommodement que tu as fait un jour sans y prêter grande attention — une parole que tu t'es autorisée, une justification préparée d'avance pour un renoncement précis. Tu n'as rien changé d'autre, et pourtant, des mois plus tard, tu remarques que cet accommodement s'est glissé ailleurs, qu'il a coloré ta manière de prier, de juger les autres, de te juger toi-même, sans qu'aucun événement ne l'ait annoncé. Ce n'est pas la faute elle-même qui te trouble alors, mais sa discrétion, sa manière d'avoir tout envahi sans bruit — et c'est cela que le Christ vient nommer en toi, non pour te condamner, mais pour te rendre entière.",
+      "Il y a en toi un geste que tu as cessé de faire depuis si longtemps que tu as fini par croire ne plus pouvoir le faire — un pardon jamais formulé, une parole de vérité jamais prononcée devant qui l'aurait fallu, une confiance jamais réengagée après avoir été trahie. Ce n'est pas que le geste soit devenu impossible ; c'est que tu as cessé d'essayer, et l'habitude de ne pas essayer a fini par ressembler à une incapacité réelle. Et voici que devant Dieu, au milieu de tous ceux qui regardent pour voir si tu vas encore te dérober, une parole vient te dire : étends-la — non parce que tu en es soudain capable, mais parce que c'est en obéissant que la force revient.",
+      "Il t'est arrivé de sentir un regard posé sur toi non pour t'aider mais pour vérifier si tu allais trébucher, un regard qui espérait presque ta faute pour se sentir justifié dans son propre jugement. Tu as alors connu cette tentation précise : céder à la peur de ce regard, remettre le bien à plus tard, par prudence, par calcul, pour ne donner prise à rien. Mais il y a un moment où continuer de faire le bien devant ce regard-là devient lui-même une prière silencieuse, un acte qui ne cherche plus l'approbation de personne sinon celle de Dieu, qui voit ce que les autres attendaient de voir autrement."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, reste un instant avec ces deux images : la pâte qui lève sans bruit, et la main qui reste tendue malgré les regards.",
+    "geste": "Nomme devant Dieu, en silence, une chose que tu tolères en toi sans presque plus t'en apercevoir, et confie-la-lui sans chercher à te justifier.",
+    "note": "Il n'est pas nécessaire de tout résoudre aujourd'hui ; il suffit de ne plus se taire devant Dieu."
+  },
+  "question": "Quel accommodement discret laisses-tu, sans t'en apercevoir, lever peu à peu en toi ?",
+  "racines": [
+    {
+      "titre": "Le mal qu'on tolère par fierté",
+      "corps_html": "Chrysostome s'arrête longuement sur l'orgueil des Corinthiens plutôt que sur la faute elle-même : à ses yeux, une Église qui s'enorgueillit de sa liberté au point de ne plus voir le mal en son sein est plus malade que le pécheur qu'elle abrite. Il invite ses auditeurs à l'affliction plutôt qu'à la fierté, seule attitude qui permette de retrouver la lucidité.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens, homélie 15"
+    },
+    {
+      "titre": "Une discipline qui vise le salut",
+      "corps_html": "Calvin refuse de lire la remise « à Satan » comme une vengeance ecclésiale : il y voit une médecine sévère, comparable à une amputation qui sauve le corps entier. La discipline d'Église, écrit-il, perd son sens biblique dès qu'elle cesse de viser le salut de celui qu'elle corrige.",
+      "attribution": "Jean Calvin, Commentaire sur la première épître aux Corinthiens"
+    },
+    {
+      "titre": "Sauver une vie avant la règle",
+      "corps_html": "La tradition rabbinique formulera plus tard, dans la Mishna, le principe selon lequel presque tout précepte cède devant le sauvetage d'une vie humaine — le pikou'ah néfesh. Jésus, dans la synagogue, agit selon ce principe avant même sa formulation écrite, montrant qu'il n'invente pas contre la loi mais révèle ce vers quoi elle tendait déjà.",
+      "attribution": "Note historique — Mishna Yoma 8, 6"
+    }
+  ]
+}
