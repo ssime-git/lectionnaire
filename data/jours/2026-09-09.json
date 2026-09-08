@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-09",
+  "date_humaine": "mercredi",
+  "semaine": "23ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 7, 25-31 ; Lc 6, 20-26",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M40 130 q35 -6 60 -30 q6 -6 14 -4 q-6 8 -16 16\"/><path d=\"M40 130 q10 -22 34 -34 q10 -5 18 -2\"/><path d=\"M92 96 q10 -4 18 2 q-8 2 -14 8\"/><path d=\"M285 15 h35\"/><path d=\"M285 15 v55\"/><path d=\"M285 70 h35\"/><path d=\"M320 15 v55\"/><path d=\"M296 24 q6 20 -3 32\"/><path d=\"M310 24 q-6 20 3 32\"/><path d=\"M180 128 h60\"/><path d=\"M150 68 h20 v6 h-20 z\"/><path d=\"M150 100 h20 v6 h-20 z\"/><path d=\"M152 74 q8 12 0 20\"/><path d=\"M168 74 q-8 12 0 20\"/><path d=\"M160 62 h12\"/><path d=\"M154 106 h12\"/></g><g class=\"trait-rubrique\"><path d=\"M108 108 q-2 -12 8 -18 q3 10 -1 15 q6 -3 6 -12 q5 12 -6 19\"/><path d=\"M114 92 q1 -9 9 -12\"/></g><g class=\"trait-liturgie\"><path d=\"M296 40 q4 -10 12 -12 q-3 8 2 10 q-6 8 -14 2\"/></g></svg>",
+  "titre": "Le temps qui reste",
+  "titre_html": "Le temps <span class=\"it\">qui reste</span>",
+  "sous_titre": "User du monde sans s'y perdre, pleurer sans désespérer",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une main ouverte tenant à peine une grappe de raisin et un pain, les doigts ne se refermant pas dessus ; au second plan, un sablier renversé sur une table nue, et par une fenêtre étroite, une aube naissante fendant un ciel encore sombre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 7, 25-31",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">25</span> Pour ce qui est des <button class=\"mot\" data-g=\"g-parthene\">vierges</button>, je n'ai point d'ordre du Seigneur; mais je donne un avis, comme ayant obtenu du Seigneur miséricorde d'être fidèle. <span class=\"s\">26</span> Voici donc ce que j'estime bon, à cause des <button class=\"mot\" data-g=\"g-anagke\">temps difficiles</button> présents, savoir, qu'il est bon à un homme d'être ainsi. <span class=\"s\">27</span> Es-tu lié à une femme, ne cherche pas à rompre ce lien; n'es-tu pas lié à une femme, ne cherche pas une femme. <span class=\"s\">28</span> Si tu t'es marié, tu n'as point péché; et si la vierge s'est mariée, elle n'a point péché; mais ces personnes auront des tribulations dans la chair, et je voudrais vous les épargner. <span class=\"s\">29</span> Voici ce que je dis, frères, c'est que le <button class=\"mot\" data-g=\"g-kairos\">temps</button> est court; que désormais ceux qui ont des femmes soient comme n'en ayant pas, <span class=\"s\">30</span> ceux qui pleurent comme ne pleurant pas, ceux qui se réjouissent comme ne se réjouissant pas, ceux qui achètent comme ne possédant pas, <span class=\"s\">31</span> et ceux qui usent du monde comme n'en usant pas, car la <button class=\"mot\" data-g=\"g-schema\">figure</button> de ce monde passe.",
+      "gloses": [
+        {
+          "id": "g-parthene",
+          "lemme": "parthenos",
+          "html": "Le grec porte <span class=\"gr\">parthenos</span>, qui désigne la vierge mais aussi, plus largement, la jeune fille non mariée engagée dans une continence choisie. Segond traduit simplement « vierges », suivant la Vulgate <span class=\"gr\">virgines</span>, sans rendre l'ambiguïté d'un état qui est autant physique que spirituel. Chrysostome, dans son traité sur la virginité, insiste sur le fait que Paul ne légifère pas mais conseille, distinguant nettement le précepte du Seigneur de son propre discernement d'apôtre. Calvin y voit un exemple de liberté chrétienne, où l'état de vie n'est ni commandé ni interdit mais mis au service du Royaume."
+        },
+        {
+          "id": "g-anagke",
+          "lemme": "anankē",
+          "html": "Le mot grec est <span class=\"gr\">anankē</span>, la nécessité, la contrainte, parfois la détresse imminente — un terme dur, presque celui d'un étau qui se resserre. Segond adoucit en « temps difficiles présents », ce qui est juste sur le fond mais efface l'idée de pression que porte le mot grec. Certains commentateurs anciens y ont vu une allusion aux troubles eschatologiques attendus avant la fin, d'autres simplement aux persécutions déjà réelles à Corinthe. Dans les deux cas, Paul ne décrit pas un malaise diffus mais une urgence qui presse la vie chrétienne dans ses choix les plus concrets."
+        },
+        {
+          "id": "g-kairos",
+          "lemme": "kairos",
+          "html": "Paul emploie <span class=\"gr\">kairos</span> et non <span class=\"gr\">chronos</span> — non la durée qui s'écoule, mais l'instant favorable, le temps qualifié qui appelle une décision. Segond traduit uniformément par « temps », comme le fait souvent le français, au risque de perdre une distinction que le grec biblique tient pour essentielle des évangiles à l'Apocalypse. Le verbe qui l'accompagne, <span class=\"gr\">synestalmenos</span>, image ce temps comme une voile qu'on recueille avant la tempête. Chrysostome commente que Paul ne parle pas ici de la brièveté de la vie en général, mais de la proximité du jugement, qui doit dégager le croyant de tout attachement encombrant."
+        },
+        {
+          "id": "g-schema",
+          "lemme": "schēma",
+          "html": "Le grec dit <span class=\"gr\">schēma</span>, la forme extérieure, l'apparence, le décor changeant d'une scène — et non <span class=\"gr\">kosmos</span>, le monde comme création bonne de Dieu. Segond traduit par « figure », ce qui garde heureusement cette nuance de représentation passagère plutôt que de substance durable. Ce distinguo permet de comprendre que Paul ne méprise pas le monde créé, mais le théâtre des situations où l'on s'attache comme si elles duraient toujours. Calvin note que cette image du décor qui change devrait rendre le chrétien comme un voyageur, usant des choses présentes sans y planter sa tente."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 44 (45), 11a.12, 14-15a, 15b-16, 17a.18",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">11a</span> Écoute, ma fille, vois, et prête l'oreille; <span class=\"s\">12</span> le roi porte ses désirs sur ta beauté; puisqu'il est ton seigneur, <button class=\"mot\" data-g=\"g-hishtahavah\">rends-lui tes hommages</button>. <span class=\"s\">14</span> Toute <button class=\"mot\" data-g=\"g-kevudah\">resplendissante</button> est la fille du roi dans l'intérieur du palais; elle porte un vêtement tissu d'or. <span class=\"s\">15a</span> Elle est présentée au roi, vêtue de ses habits brodés, <span class=\"s\">15b</span> et suivie des jeunes filles, ses compagnes, qui sont amenées auprès de toi; <span class=\"s\">16</span> on les introduit au milieu des réjouissances et de l'allégresse, elles entrent dans le palais du roi. <span class=\"s\">17a</span> Tes enfants prendront la place de tes pères; <span class=\"s\">18</span> je rappellerai ton nom dans tous les âges: aussi les peuples te loueront éternellement et à jamais.",
+      "gloses": [
+        {
+          "id": "g-hishtahavah",
+          "lemme": "hishtahavi",
+          "html": "L'hébreu emploie <span class=\"gr\">hishtahavi</span>, impératif du verbe qui signifie littéralement se prosterner, plier les genoux jusqu'à terre — le même verbe qui décrit ailleurs l'adoration due à Dieu seul. Segond traduit par l'expression neutre « rends-lui tes hommages », qui convient à un chant de mariage royal mais estompe la gravité du geste demandé. C'est précisément ce glissement entre l'hommage dû à un roi terrestre et l'adoration due à Dieu qui a très tôt permis une lecture messianique du psaume: le roi dont il est question dépasse tout roi d'Israël. Les rabbins eux-mêmes ont parfois lu ce psaume comme messianique, avant que des auteurs chrétiens n'y voient une figure du Christ-Époux."
+        },
+        {
+          "id": "g-kevudah",
+          "lemme": "kevudah / penimah",
+          "html": "Le texte hébreu dit <span class=\"gr\">kol-kevudah</span>, « toute sa gloire », <span class=\"gr\">kevudah</span> désignant le poids, l'honneur, la splendeur — la même racine que la <span class=\"gr\">kavod</span> qui remplit le Temple. Segond traduit par « resplendissante », ce qui garde l'éclat mais perd la racine du poids que le mot porte en hébreu. Le mot suivant, <span class=\"gr\">penimah</span>, signifie simplement « au-dedans »; Segond précise « dans l'intérieur du palais », alors que le texte permet aussi d'entendre que la gloire de cette fille de roi est d'abord intérieure, cachée, avant d'être montrée. Cette lecture d'une gloire intériorisée a nourri, chez des commentateurs chrétiens, une méditation sur l'âme ou sur l'Église comme épouse parée du dedans."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 6, 20-26",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">20</span> Alors Jésus, levant les yeux sur ses disciples, dit: Heureux vous qui êtes <button class=\"mot\" data-g=\"g-ptochoi\">pauvres</button>, car le royaume de Dieu est à vous! <span class=\"s\">21</span> Heureux vous qui avez faim maintenant, car vous serez rassasiés! Heureux vous qui pleurez maintenant, car vous serez dans la joie! <span class=\"s\">22</span> Heureux serez-vous, lorsque les hommes vous haïront, lorsqu'on vous chassera, vous outragera, et qu'on rejettera votre nom comme <button class=\"mot\" data-g=\"g-poneron\">infâme</button>, à cause du Fils de l'homme! <span class=\"s\">23</span> Réjouissez-vous en ce jour-là et tressaillez d'allégresse, parce que votre récompense sera grande dans le ciel; car c'est ainsi que leurs pères traitaient les prophètes. <span class=\"s\">24</span> Mais, malheur à vous, riches, car vous avez votre <button class=\"mot\" data-g=\"g-paraklesis\">consolation</button>! <span class=\"s\">25</span> Malheur à vous qui êtes rassasiés, car vous aurez faim! Malheur à vous qui riez maintenant, car vous serez dans le deuil et dans les larmes! <span class=\"s\">26</span> Malheur, lorsque tous les hommes diront du bien de vous, car c'est ainsi qu'agissaient leurs pères à l'égard des faux prophètes!",
+      "gloses": [
+        {
+          "id": "g-ptochoi",
+          "lemme": "ptōchos",
+          "html": "Le grec dit <span class=\"gr\">ptōchoi</span>, non le pauvre qui travaille durement (<span class=\"gr\">penēs</span>) mais celui qui n'a plus rien, le mendiant courbé qui tend la main. Segond traduit simplement « pauvres », ce que le français ne peut guère nuancer davantage, mais il faut savoir que Luc, à la différence de Matthieu, ne dit pas « pauvres en esprit »: il vise une pauvreté réelle, sociale, matérielle. Ambroise de Milan, dans son commentaire sur Luc, refuse d'opposer les deux évangélistes et lit la pauvreté économique comme le lieu concret où se vérifie la pauvreté du cœur. Chez Luc, le bonheur promis n'est donc pas d'abord une disposition intérieure à acquérir, mais un état que Dieu vient retourner."
+        },
+        {
+          "id": "g-poneron",
+          "lemme": "ponēron",
+          "html": "L'expression grecque est <span class=\"gr\">to onoma hymōn hōs ponēron</span>, littéralement « rejeter votre nom comme mauvais », <span class=\"gr\">ponēron</span> étant l'adjectif le plus fort pour dire le mal, celui-là même qui qualifie le mal dans le Notre Père. Segond choisit « infâme », qui rend bien l'idée d'un nom traîné dans la boue, mais atténue le lien avec ce vocabulaire du mal actif que le grec biblique réserve souvent à des forces plus grandes qu'une simple rumeur. Comprendre ce mot aide à mesurer que Jésus ne parle pas d'une simple impopularité, mais d'une exclusion assimilée, dans le langage même, au mal qu'on combat."
+        },
+        {
+          "id": "g-paraklesis",
+          "lemme": "paraklēsis",
+          "html": "Le mot grec est <span class=\"gr\">paraklēsis</span>, la consolation, mais aussi l'exhortation, l'appel auprès de soi — la même racine que <span class=\"gr\">paraklētos</span>, celui qu'on appelle à ses côtés, titre que l'évangile de Jean donnera à l'Esprit Saint. Segond traduit justement par « consolation », mais l'ironie du verset se perçoit mieux si l'on entend que les riches ont déjà reçu, en plein, ce que d'autres attendent de Dieu seul. Chrysostome, prêchant sur ce texte, note que le malheur n'est pas la richesse en soi, mais le fait de clore son espérance sur une consolation qui ne dépasse pas ce monde."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, entre urgence et liberté",
+      "corps_html": "Nous sommes vers 54-55, quelques années à peine après la fondation de l'Église de Corinthe. Les chrétiens y interrogent Paul par lettre sur le mariage et la virginité, dans un climat où beaucoup attendent un retour proche du Christ. Paul répond sans trancher en légiste: il distingue son avis de l'ordre du Seigneur, et pose une éthique du provisoire, non du renoncement pour lui-même."
+    },
+    {
+      "titre": "Le sermon dans la plaine, non sur la montagne",
+      "corps_html": "Luc situe ce discours non sur une montagne, comme Matthieu, mais sur un lieu uni, une plaine, entouré d'une foule mêlée de disciples et de malades venus de toute la Judée. À la différence de Matthieu, Luc interpelle directement au « vous » et ajoute aux béatitudes quatre malédictions symétriques, absentes du premier évangile — un trait propre à sa théologie du renversement, déjà annoncée dans le Magnificat."
+    }
+  ],
+  "analogie": {
+    "titre": "La main desserrée",
+    "variantes": [
+      "Il y a des moments où tu t'investis entièrement dans quelque chose — un travail, un amour, un projet que tu crois durable — et où soudain, par une perte, une maladie, ou simplement le passage des années, cette chose se vide de l'éternité que tu lui avais prêtée sans pour autant devenir mensongère. Tu continues de l'aimer, de t'en occuper, mais autrement: sans plus t'y agripper comme à ce qui te sauve. C'est cette main desserrée, cette manière d'user des choses sans en dépendre, que Paul appelle de ses vœux — non par mépris du monde, mais parce qu'il sait devant qui il se tient, et que rien de ce qu'il tient ne le tient en retour.",
+      "Tu as connu ces jours pleins où rien ne manquait en apparence — le travail avançait, les proches allaient bien, le rire venait facilement — et pourtant, au fond, une gêne discrète persistait, comme si cette plénitude n'était pas tout à fait la bonne, comme si elle ne rassasiait pas ce qu'elle prétendait combler. Ce malaise-là n'est pas de l'ingratitude: c'est peut-être la trace, en toi, d'un rassasiement que le monde ne peut pas donner, et que le Christ nomme sans détour quand il dit malheur à qui rit maintenant — non pour éteindre la joie, mais pour t'empêcher de t'arrêter à une joie trop petite pour toi.",
+      "Il y a eu une saison où tu pleurais et où personne, pas même toi, ne voyait comment cela pourrait finir autrement que par le deuil — et puis une parole, une présence, un geste que tu n'avais pas organisé est venu, sans que tu l'aies mérité ni prévu, et a changé la couleur de ces jours sans en effacer la peine. Tu n'as pas fabriqué cette consolation: elle t'a été donnée, de l'extérieur, comme une chose qu'on ne peut que recevoir. C'est cela que promet Jésus à qui pleure maintenant — non l'oubli de la larme, mais une joie qui vient d'ailleurs que de toi, et qui ne se laisse pas mesurer par ce que tu avais perdu."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec cette phrase de Paul, « ceux qui usent du monde comme n'en usant pas », ou avec celle de Jésus, « heureux vous qui pleurez maintenant ».",
+    "geste": "Nomme, en silence, une chose que tu tiens aujourd'hui comme si elle devait durer toujours — un bien, un lien, une réussite — et confie-la à Dieu telle qu'elle est, sans la lâcher ni t'y agripper.",
+    "note": "Ce n'est pas un exercice de détachement stoïcien: c'est reconnaître, devant Dieu, à qui appartient réellement ce que tu tiens."
+  },
+  "question": "Qu'est-ce qui, dans ta vie aujourd'hui, ressemble à une consolation trop petite pour l'espérance que Dieu te promet ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : conseil, non commandement",
+      "corps_html": "Jean Chrysostome consacre plusieurs pages de son traité Sur la virginité à ce chapitre, insistant sur la liberté que Paul respecte scrupuleusement: il ne veut pas jeter un filet sur les fidèles, dit-il, mais leur indiquer ce qui allège la marche vers Dieu. Le mérite de la continence, pour Chrysostome, ne vient pas de la chair épargnée, mais du cœur rendu plus disponible.",
+      "attribution": "Jean Chrysostome, Sur la virginité"
+    },
+    {
+      "titre": "Calvin et le temps qui se retire",
+      "corps_html": "Commentant le verset 29, Calvin note que Paul n'enseigne pas le mépris du mariage ou des affaires humaines, mais leur usage détaché: le monde, dit-il, doit être traversé comme par des voyageurs qui ne s'arrêtent nulle part. C'est la proximité du jugement, non la fuite du monde, qui commande cette liberté intérieure à l'égard des choses possédées.",
+      "attribution": "Jean Calvin, Commentaire sur la première épître aux Corinthiens"
+    },
+    {
+      "titre": "Ambroise et la pauvreté qui n'est pas une vertu de circonstance",
+      "corps_html": "Ambroise de Milan, commentant l'évangile de Luc, refuse de réduire les béatitudes à une simple compensation future: le pauvre est déjà, dit-il, dans une disposition d'accueil que la richesse referme souvent. Il met en garde contre une lecture qui ferait des malédictions une condamnation de l'argent en soi, plutôt que du cœur qui s'y repose comme en une consolation suffisante.",
+      "attribution": "Ambroise de Milan, Exposition de l'évangile selon saint Luc"
+    }
+  ]
+}
