@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-12",
+  "date_humaine": "samedi",
+  "semaine": "23ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 10, 14-22 ; Lc 6, 43-49",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 12 l10 10 M45 10 l10 10 M285 10 l10 10 M310 12 l10 10\"/><path d=\"M4 128 l26 -8 l22 10 l28 -14 l30 10 l32 -8 l36 6 l34 -10 l38 8 l40 -6 l30 6 l20 -4\"/><path d=\"M100 92 h140 M104 98 h132\"/><path d=\"M118 98 l-4 22 h24 l-2 -22 z M198 98 l2 22 h24 l-4 -22 z\"/><path d=\"M170 92 q-40 -30 -30 -67 M170 92 q40 -30 30 -67\"/><path d=\"M140 25 q-14 -6 -22 0 M200 25 q14 -6 22 0 M140 25 q4 -14 14 -18 M200 25 q-4 -14 -14 -18\"/><path d=\"M170 92 q-16 4 -22 14 M170 92 q-6 8 -4 16 M170 92 q6 8 4 16 M170 92 q16 4 22 14\"/></g><g class=\"trait-liturgie\"><path d=\"M154 50 q16 -8 32 0 q3 16 -16 22 q-19 -6 -16 -22 z\"/><path d=\"M170 72 v18 M160 90 q10 5 20 0\"/></g><g class=\"trait-rubrique\"><path d=\"M118 25 q-4 4 0 8 q4 -4 0 -8 M222 25 q4 4 0 8 q-4 -4 0 -8 M154 7 q-4 3 0 7 q4 -3 0 -7 M186 7 q4 3 0 7 q-4 -3 0 -7\"/></g></svg>",
+  "titre": "Une seule coupe",
+  "titre_html": "Une seule <span class=\"it\">coupe</span>",
+  "sous_titre": "1 Corinthiens 10, 14-22 — la coupe qui engage tout entier",
+  "suite_hier": null,
+  "gravure_alt": "Une coupe posée au centre d'une table de pierre, son pied confondu avec les racines noueuses d'un arbre chargé de fruits mûrs qui pousse juste derrière, l'ensemble planté à même un rocher affleurant, sous un ciel gravé de hachures fines.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 10, 14-22",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">14</span> C'est pourquoi, mes bien-aimés, fuyez l'<button class=\"mot\" data-g=\"g-eidololatria\">idolâtrie</button>. <span class=\"s\">15</span> Je parle comme à des personnes intelligentes; jugez vous-mêmes de ce que je dis. <span class=\"s\">16</span> La coupe de bénédiction que nous bénissons, n'est-elle pas la <button class=\"mot\" data-g=\"g-koinonia\">communion</button> au sang de Christ? Le pain que nous rompons, n'est-il pas la communion au corps de Christ? <span class=\"s\">17</span> Puisqu'il y a un seul pain, nous qui sommes plusieurs, nous formons un seul corps; car nous participons tous à un même pain. <span class=\"s\">18</span> Voyez les Israélites selon la chair: ceux qui mangent les victimes ne sont-ils pas en communion avec l'autel? <span class=\"s\">19</span> Que dis-je donc? Que la viande sacrifiée aux idoles soit quelque chose, ou qu'une idole soit quelque chose? Nullement. <span class=\"s\">20</span> Je dis que ce qu'on sacrifie, on le sacrifie à des <button class=\"mot\" data-g=\"g-daimonia\">démons</button>, et non à Dieu; or, je ne veux pas que vous soyez en communion avec les démons. <span class=\"s\">21</span> Vous ne pouvez boire la coupe du Seigneur, et la coupe des démons; vous ne pouvez participer à la <button class=\"mot\" data-g=\"g-trapeza\">table</button> du Seigneur, et à la table des démons. <span class=\"s\">22</span> Voulons-nous provoquer la jalousie du Seigneur? Sommes-nous plus forts que lui?",
+      "gloses": [
+        {
+          "id": "g-eidololatria",
+          "lemme": "eidololatria",
+          "html": "Grec <span class=\"gr\">εἰδωλολατρία</span>, composé de <span class=\"gr\">εἴδωλον</span> (l'image, le simulacre) et de <span class=\"gr\">λατρεία</span>, le service cultuel dû à Dieu seul. Segond rend le mot en un seul terme, « idolâtrie », ce qui masque la structure du grec: il ne s'agit pas d'abord d'adorer une statue, mais de rendre à une créature le service réservé au Créateur. Chrysostome, dans son commentaire de ce passage, insiste sur ce déplacement: Paul ne vise pas la pierre sculptée, mais l'acte même de servir ce qui n'est pas Dieu."
+        },
+        {
+          "id": "g-koinonia",
+          "lemme": "koinônia",
+          "html": "Grec <span class=\"gr\">κοινωνία</span>, de <span class=\"gr\">κοινός</span>, ce qui est commun. Segond hésite ailleurs entre « communion », « communication » et « association » (comparer Ac 2, 42 et 2 Co 13, 13); ici « communion » est juste mais adoucit un mot qui désigne une mise en commun réelle, presque une fusion d'existence, non un sentiment partagé. Chrysostome dit que par la coupe nous sommes mêlés au sang du Christ comme le vin à l'eau; Calvin y voit la preuve la plus forte d'une présence réellement donnée dans la cène, sans qu'il faille pour cela une transformation de la substance du pain."
+        },
+        {
+          "id": "g-daimonia",
+          "lemme": "daimonia",
+          "html": "Grec <span class=\"gr\">δαιμόνια</span>, diminutif de <span class=\"gr\">δαίμων</span>, qui chez les Grecs désignait des puissances intermédiaires neutres, parfois bienveillantes. Segond traduit « démons » en suivant tout le Nouveau Testament, qui retourne le mot contre son sens profane pour nommer les puissances derrière les idoles, comme le fait déjà la Septante en Ps 96, 5 et Dt 32, 17. Augustin, dans la Cité de Dieu, reprend cette lecture: les cultes païens ne sont pas de pures fictions, mais des pactes qui atteignent réellement quelque chose."
+        },
+        {
+          "id": "g-trapeza",
+          "lemme": "trapeza",
+          "html": "Grec <span class=\"gr\">τράπεζα</span>, le mot ordinaire pour « table », employé aussi pour la table des changeurs (Mt 21, 12) et pour un autel sacrificiel dans le monde grec. Segond garde « table », fidèle au mot, mais le lecteur français peut n'y entendre qu'un meuble, alors que trapeza porte ici le poids d'une appartenance: manger à une table scellait une alliance avec celui qui la dressait. Chrysostome souligne que Paul oppose deux tables, non deux plats, parce que c'est une allégeance qui se joue, non un aliment."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 115 (116b), 12-13, 17-18",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">12</span> Comment rendrai-je à l'Éternel Tous ses bienfaits envers moi? <span class=\"s\">13</span> J'élèverai la <button class=\"mot\" data-g=\"g-coupe-ps\">coupe</button> des délivrances, Et j'invoquerai le nom de l'Éternel; <span class=\"s\">17</span> Je t'offrirai un <button class=\"mot\" data-g=\"g-todah\">sacrifice d'actions de grâces</button>, Et j'invoquerai le nom de l'Éternel; <span class=\"s\">18</span> J'accomplirai mes vœux envers l'Éternel, En présence de tout son peuple,",
+      "gloses": [
+        {
+          "id": "g-coupe-ps",
+          "lemme": "kos",
+          "html": "Hébreu <span class=\"gr\">כוֹס</span> (kos), la coupe. Segond traduit « coupe des délivrances », rendant le pluriel intensif de yeshu'ot, un salut plein et répété; la coupe est vraisemblablement celle qu'on levait dans le culte après un sacrifice de paix. Les rabbins ont rapproché ce verset des quatre coupes du seder pascal, et c'est sans doute cette même coupe, ou son écho, que Jésus reprend au soir de la Pâque. Le psaume ne demande rien: il répond, il lève une coupe déjà remplie par un salut reçu."
+        },
+        {
+          "id": "g-todah",
+          "lemme": "todah",
+          "html": "Hébreu <span class=\"gr\">תּוֹדָה</span> (todah), de la racine ידה, reconnaître, confesser, rendu par Segond « sacrifice d'actions de grâces ». Le todah n'est jamais offert pour obtenir quelque chose mais pour répondre à un salut déjà accompli, et il suppose toujours un péril traversé. Des commentateurs juifs anciens notent que le todah, seul parmi les sacrifices, subsistera au temps messianique, la reconnaissance ne s'épuisant jamais; Calvin y voit la matrice de toute vraie prière, qui commence par la mémoire d'un bienfait reçu."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 6, 43-49",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">43</span> Ce n'est pas un bon <button class=\"mot\" data-g=\"g-dendron\">arbre</button> qui produit du mauvais fruit, ni un mauvais arbre qui produit du bon fruit. <span class=\"s\">44</span> Car chaque arbre se connaît à son fruit. On ne cueille pas des figues sur des épines, et l'on ne vendange pas des raisins sur des ronces. <span class=\"s\">45</span> L'homme bon tire de bonnes choses du bon <button class=\"mot\" data-g=\"g-thesauros\">trésor</button> de son cœur, et le méchant tire de mauvaises choses de son mauvais trésor: car c'est de l'abondance du cœur que la bouche parle. <span class=\"s\">46</span> Pourquoi m'appelez-vous Seigneur, Seigneur! et ne faites-vous pas ce que je dis? <span class=\"s\">47</span> Je vous montrerai à qui est semblable tout homme qui vient à moi, entend mes paroles, et les met en pratique. <span class=\"s\">48</span> Il est semblable à un homme qui, bâtissant une maison, a creusé, creusé profondément, et a posé le fondement sur le <button class=\"mot\" data-g=\"g-petra\">roc</button>. Une inondation est venue, et le torrent s'est jeté contre cette maison, sans pouvoir l'ébranler, parce qu'elle était bien bâtie. <span class=\"s\">49</span> Mais celui qui entend, et ne met pas en pratique, est semblable à un homme qui a bâti une maison sur la terre, sans fondement. Le torrent s'est jeté contre elle, et aussitôt elle est tombée, et la ruine de cette maison a été grande.",
+      "gloses": [
+        {
+          "id": "g-dendron",
+          "lemme": "dendron",
+          "html": "Grec <span class=\"gr\">δένδρον</span>, l'arbre. Segond traduit simplement « arbre », ce qui est exact, mais efface l'écho du Psaume 1, où le fidèle est comparé à un arbre planté près des eaux, portant du fruit en son temps. Chrysostome lit ce verset avec le parallèle de Mt 7, 15-20 sur les faux prophètes: l'arbre n'est jamais jugé sur son écorce ni sur ses feuilles, mais sur ce qu'il donne à qui a faim."
+        },
+        {
+          "id": "g-thesauros",
+          "lemme": "thesauros",
+          "html": "Grec <span class=\"gr\">θησαυρός</span>, le trésor, le lieu où l'on dépose ce qu'on a de plus précieux, d'où notre « thésauriser ». Segond garde « trésor », fidèle au mot, mais il faut entendre un dépôt accumulé dans la durée, non un sentiment du moment: ce que la bouche dit un jour de crise vient de ce qui a été amassé longtemps avant. Augustin, dans les Confessions, revient sur cette image pour expliquer pourquoi ses propres paroles le trahissaient avant sa conversion: elles disaient ce que son cœur thésaurisait encore."
+        },
+        {
+          "id": "g-petra",
+          "lemme": "petra",
+          "html": "Grec <span class=\"gr\">πέτρα</span>, le roc massif, la roche-mère, à distinguer de <span class=\"gr\">πέτρος</span>, un simple caillou détaché. Segond traduit « roc », ce qui rend bien la différence: on ne bâtit pas sur un fragment mais sur l'assise elle-même. Le mot reviendra en Mt 16, 18 pour désigner ce sur quoi l'Église est bâtie, ce qui suggère que le roc de Luc n'est pas d'abord une morale de la solidité, mais la personne même à qui l'on vient, selon le verset 47 qui précède."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe et les viandes sacrifiées",
+      "corps_html": "À Corinthe, la viande vendue au marché provenait souvent des temples païens, où seule une part de la victime était consommée sur place, le reste étant écoulé dans le commerce ordinaire. Manger chez un ami païen exposait donc le converti à consommer, sciemment ou non, une chair offerte aux idoles. Paul, aux chapitres 8 à 10, ne tranche pas d'abord sur la nourriture mais sur l'appartenance qu'elle scelle: on ne peut s'asseoir des deux côtés d'une même alliance."
+    },
+    {
+      "titre": "La coupe de bénédiction, un rite déjà juif",
+      "corps_html": "La « coupe de bénédiction » du verset 16 (grec <span class=\"gr\">potērion tēs eulogias</span>) désigne précisément la troisième coupe du repas pascal juif, celle sur laquelle on prononçait la grande action de grâces après le repas — c'est vraisemblablement cette coupe que Jésus reprend à la Cène. Chrysostome insiste: en la nommant ainsi, Paul rattache le repas chrétien à la mémoire même de la libération d'Égypte, sans rupture avec elle."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce à quoi tu t'attables",
+    "variantes": [
+      "Il existe des attachements que tu n'as jamais choisis d'un coup de volonté, mais auxquels tu t'es peu à peu assis, repas après repas, compromis après compromis, sans qu'aucun moment n'ait paru grave. Puis vient un jour où il faut trancher, dire non à une table pour rester fidèle à une autre, et tu découvres alors que ton corps entier s'était déjà rangé, avant ta conscience, du côté de ce qui te nourrissait le plus souvent. C'est devant cela que le Christ t'attend à sa table: non pour juger ce que tu as mangé, mais pour te redemander, une fois encore, à qui tu appartiens réellement.",
+      "Il y a des mots qui sortent de toi dans l'urgence, sans que tu aies eu le temps de les choisir — une phrase dure au réveil d'une mauvaise nuit, une parole de tendresse imprévue au chevet d'un mourant — et ces mots-là, plus que ceux que tu prépares, disent ce que tu portes vraiment depuis longtemps. Tu ne maîtrises pas ce réservoir: il s'est rempli goutte à goutte, par ce que tu as fréquenté, prié, laissé infuser, ou au contraire négligé. Devant Dieu, ce n'est pas ta dernière bonne intention qui compte, mais ce trésor lentement amassé, qu'il connaît déjà et qu'il veut, patiemment, purifier de l'intérieur.",
+      "Tu as peut-être déjà prié sans qu'aucune émotion ne vienne, une prière sèche, répétée par habitude, dont tu doutais qu'elle serve à quelque chose. Puis un jour où le sol a manqué sous toi — une nouvelle, une perte, une nuit sans réponse — c'est cette prière-là, faite sans rien ressentir, qui a tenu, alors que tu n'en attendais rien. Ce que tu ne voyais pas se creuser s'était creusé quand même, profondément, jusqu'au roc, et c'est cette part invisible de ta foi que Dieu avait déjà reçue comme une offrande, bien avant que tu ne la sentes porter du fruit."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Demande-toi aujourd'hui, sans te presser vers une réponse, à quelle table tu t'assois le plus souvent en vérité — celle qui te nourrit de reconnaissance, ou celle qui te nourrit de rivalité et de peur.",
+    "geste": "Avant ton prochain repas partagé, prends un instant de silence pour nommer devant Dieu une seule chose reçue, et non méritée, dont tu veux lui rendre grâce.",
+    "note": "Ce geste ne remplace pas la cène ni ne l'imite: il prépare simplement le cœur à reconnaître, dans le pain ordinaire, la même logique que dans le pain rompu."
+  },
+  "question": "À quelle table t'assois-tu le plus souvent sans t'en rendre compte, et qu'est-ce que cela dit de ce que tu attends vraiment pour vivre ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la coupe qui mélange",
+      "corps_html": "Jean Chrysostome, dans sa neuvième homélie sur la première épître aux Corinthiens, explique que le mot grec traduit par « communion » au verset 16 signifie que nous sommes mêlés au corps du Christ comme le vin l'est à l'eau dans la coupe: non une image, mais une union réelle qui rend absurde toute participation simultanée à la table des démons.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, IXe homélie (IVe siècle)"
+    },
+    {
+      "titre": "Calvin : le sacrifice qui répond",
+      "corps_html": "Calvin, commentant le Psaume 116, remarque que le sacrifice d'actions de grâces ne précède jamais la délivrance mais y répond toujours: le fidèle ne verse pas la coupe pour obtenir la faveur de Dieu, il la lève parce qu'il l'a déjà reçue. C'est, selon lui, le modèle de toute prière chrétienne authentique, qui part de la mémoire et non du calcul.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, Ps 116"
+    },
+    {
+      "titre": "Augustin : la maison bâtie sur l'écoute",
+      "corps_html": "Augustin, commentant ce passage en écho au Sermon sur la montagne, note que Luc ne distingue pas deux façons de bâtir mais deux façons d'entendre: le sable et le roc reçoivent la même pluie, une maison presque identique s'y élève, et rien ne les sépare avant l'épreuve du torrent, qui seule révèle ce que l'écoute avait vraiment mis en pratique.",
+      "attribution": "Augustin d'Hippone, De sermone Domini in monte, II"
+    }
+  ]
+}
