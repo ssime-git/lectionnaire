@@ -1,0 +1,151 @@
+{
+  "date": "2026-09-13",
+  "date_humaine": "dimanche",
+  "semaine": "24ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": true,
+  "references_brutes": "Si 27, 30 – 28, 7 ; Rm 14, 7-9 ; Mt 18, 21-35",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M133 26 q6 -8 12 0 q-6 8 -12 0 z\"/><path d=\"M139 40 v36\"/><path d=\"M123 42 h32\"/><path d=\"M120 80 q19 16 38 0 l-6 48 h-26 z\"/><path d=\"M123 44 l-22 -30\"/><path d=\"M155 44 l22 -30\"/><path d=\"M82 6 l24 -3 l3 27 l-9 9 l-18 -15 z\"/><path d=\"M88 12 h11 M89 18 h9 M90 24 h7\"/><path d=\"M178 4 l24 5 l-5 27 l-19 -11 l0 -13 z\"/><path d=\"M188 12 h9 M190 18 h9 M186 24 h11\"/><path d=\"M205 92 q22 8 18 36\"/><path d=\"M198 88 q5 -7 10 0 q-5 7 -10 0 z\"/><path d=\"M213 122 v6 h14\"/><path d=\"M218 108 q16 4 20 16\"/></g><g class=\"trait-liturgie\"><path d=\"M236 120 q5 -5 9 0 q-5 6 -9 0 z\"/></g></svg>",
+  "titre": "La dette remise",
+  "titre_html": "La dette <span class=\"it\">remise</span>",
+  "sous_titre": "Le pardon sans mesure",
+  "suite_hier": null,
+  "gravure_alt": "Un roi debout déchire une tablette couverte de chiffres, tandis qu'à ses pieds un serviteur agenouillé referme le poing sur une pièce unique.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Si 27, 30 – 28, 7",
+      "traduction": "Crampon",
+      "classe": "",
+      "corps_html": "<span class=\"s\">30</span>Rancune et colère, voilà encore des choses abominables, et le pécheur les possède toutes deux. <span class=\"s\">1</span>Celui qui se venge éprouvera la vengeance du Seigneur, qui tient un compte exact des péchés. <span class=\"s\">2</span>Pardonne à ton prochain le tort qu'il t'a fait, et alors, quand tu prieras, tes péchés te seront remis. <span class=\"s\">3</span>L'homme qui garde sa <button class=\"mot\" data-g=\"g-rancune\">rancune</button> contre un autre homme, et qui demande à Dieu la guérison, comment le peut-il ? <span class=\"s\">4</span>Il n'a pas de miséricorde pour un homme semblable à lui, et il prie pour ses propres péchés ! <span class=\"s\">5</span>Lui-même, qui n'est que chair, garde rancune ; qui donc apaisera ses péchés ? <span class=\"s\">6</span>Souviens-toi de la fin, et cesse ta haine ; souviens-toi de la corruption et de la mort, et observe les commandements. <span class=\"s\">7</span>Souviens-toi des commandements, et ne garde pas de rancune contre le prochain ; souviens-toi de l'<button class=\"mot\" data-g=\"g-alliance\">alliance</button> du Très-Haut, et pardonne l'offense.",
+      "gloses": [
+        {
+          "id": "g-rancune",
+          "lemme": "natar",
+          "html": "Le texte hébreu de Ben Sira, conservé dans les fragments de la Guenizah du Caire, emploie ici <span class=\"gr\">natar</span> (נָטַר), « garder, épier », le même verbe que Lévitique 19,18 emploie pour interdire de « garder rancune contre les fils de ton peuple ». Le traducteur grec choisit <span class=\"gr\">mēnis</span> (μῆνις), le mot même par lequel l'Iliade ouvre le récit de la colère d'Achille, une rancune qui couve sans s'éteindre. Crampon rend cela par « rancune », plus doux que la violence couvée du verbe hébreu ; la tradition rabbinique y voit la racine de toute vengeance différée, celle qui attend patiemment son heure."
+        },
+        {
+          "id": "g-alliance",
+          "lemme": "berith",
+          "html": "Le mot que Crampon rend par « alliance » traduit le grec <span class=\"gr\">diathēkē</span> (διαθήκη), lui-même écho de l'hébreu berith (בְּרִית), le lien scellé entre Dieu et son peuple depuis Abraham et le Sinaï. Diathēkē désigne aussi, en grec profane, un testament — l'engagement irrévocable d'un mourant envers ses héritiers, sens que les auteurs du Nouveau Testament reprendront pour parler de la mort du Christ. Se souvenir de l'alliance, ici, n'est pas se remémorer une clause juridique : c'est se rappeler qu'on a soi-même été objet d'un pardon avant d'être appelé à pardonner. Calvin, commentant Lévitique, tient le même lien : nul ne peut invoquer l'alliance pour soi et la refuser à son frère."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 102 (103), 1-2, 3-4, 9-10, 11-12",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span><button class=\"mot\" data-g=\"g-benis\">Mon âme, bénis</button> l'Éternel! Que tout ce qui est en moi bénisse son saint nom! <span class=\"s\">2</span>Mon âme, bénis l'Éternel, Et n'oublie aucun de ses bienfaits! <span class=\"s\">3</span>C'est lui qui pardonne toutes tes iniquités, Qui te guérit de toutes tes maladies; <span class=\"s\">4</span>C'est lui qui délivre ta vie de la fosse, Qui te couronne de <button class=\"mot\" data-g=\"g-bonte\">bonté</button> et de miséricorde; <span class=\"s\">9</span>Il ne conteste pas sans cesse, Il ne garde pas sa colère à toujours; <span class=\"s\">10</span>Il ne nous traite pas selon nos péchés, Il ne nous punit pas selon nos iniquités. <span class=\"s\">11</span>Mais autant les cieux sont élevés au-dessus de la terre, Autant sa bonté est grande pour ceux qui le craignent; <span class=\"s\">12</span>Autant l'orient est éloigné de l'occident, Autant il éloigne de nous nos transgressions.",
+      "gloses": [
+        {
+          "id": "g-benis",
+          "lemme": "barekh",
+          "html": "Le verbe hébreu <span class=\"gr\">barekh</span> (בָּרֵךְ) partage sa racine avec berekh (בֶּרֶךְ), le genou : bénir, étymologiquement, c'est fléchir le genou devant quelqu'un, reconnaître une grandeur qui dépasse la sienne. Segond traduit « bénis », qui en français s'est affaibli en formule de politesse, alors que le texte appelle l'âme entière, nèphèsh (נֶפֶש), à ce geste de tout le corps. Les rabbins liront ce psaume comme celui où l'âme s'adresse à elle-même l'ordre qu'elle ne parvient pas toujours à se donner spontanément : bénir n'est pas un sentiment mais un acte de volonté renouvelé chaque matin."
+        },
+        {
+          "id": "g-bonte",
+          "lemme": "chesed",
+          "html": "Le mot que Segond rend par « bonté » est ici <span class=\"gr\">chesed</span> (חֶסֶד), terme central de tout l'Ancien Testament, que les traducteurs ont rendu tour à tour par « miséricorde », « grâce » ou « fidélité », sans qu'aucun mot français ne l'épuise. Le chesed n'est pas un sentiment mais un engagement : la loyauté que Dieu maintient envers son alliance, même quand son partenaire humain y a failli. Calvin, commentant ce psaume, insiste sur le fait que cette bonté n'est pas seulement un pardon ponctuel mais une couronne — une royauté même de la grâce, posée sur la tête de qui n'avait rien mérité."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Rm 14, 7-9",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">7</span>Car nul de nous ne vit pour lui-même, et nul ne meurt pour lui-même. <span class=\"s\">8</span>Si nous vivons, nous vivons pour le <button class=\"mot\" data-g=\"g-seigneur\">Seigneur</button>; et si nous mourons, nous mourons pour le Seigneur. Soit donc que nous vivions, soit que nous mourions, nous sommes du Seigneur. <span class=\"s\">9</span>Car Christ est mort et il a vécu, afin de <button class=\"mot\" data-g=\"g-dominer\">dominer</button> sur les morts et sur les vivants.",
+      "gloses": [
+        {
+          "id": "g-seigneur",
+          "lemme": "kurios",
+          "html": "Le mot grec <span class=\"gr\">kurios</span> (κύριος), « Seigneur », traduit dans la Septante le tétragramme divin YHWH : l'appliquer à Christ, comme Paul le fait ici sans transition, revient à lui attribuer le nom même que l'Ancien Testament réservait à Dieu seul. Segond garde « Seigneur » avec une majuscule, choix théologique plus que grammatical, puisque le grec ne distingue pas la casse. Toute la phrase de Paul — vivre pour lui, mourir pour lui, lui appartenir — repose sur cette identification silencieuse, que les conciles mettront des siècles à formuler mais que le texte tient déjà pour acquise."
+        },
+        {
+          "id": "g-dominer",
+          "lemme": "kurieusē",
+          "html": "Le verbe grec <span class=\"gr\">kurieusē</span> (κυριεύσῃ), « afin de dominer », partage sa racine avec kurios, « Seigneur », deux versets plus haut : littéralement, le Christ meurt et revit pour « seigneurier » sur les morts et les vivants, pour être Seigneur en acte et non seulement en titre. Segond traduit par « dominer », qui rend le sens mais perd le jeu de mots que l'oreille grecque percevait aussitôt. Chrysostome, dans son homélie sur ce chapitre, note que cette seigneurie s'exerce par la mort même du Seigneur, et non malgré elle : la Pâque du Christ fonde son autorité sur les vivants et les morts au lieu de la lui retirer."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 18, 21-35",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">21</span>Alors Pierre, s'étant approché, lui dit: Seigneur, combien de fois <button class=\"mot\" data-g=\"g-pardonnerai\">pardonnerai-je</button> à mon frère, lorsqu'il péchera contre moi? Sera-ce jusqu'à sept fois? <span class=\"s\">22</span>Jésus lui dit: Je te dis, non pas jusqu'à sept fois, mais jusqu'à septante fois sept fois. <span class=\"s\">23</span>C'est pourquoi, le royaume des cieux est semblable à un roi qui voulut faire rendre compte à ses serviteurs. <span class=\"s\">24</span>Quand il se mit à compter, on lui en amena un qui devait dix mille <button class=\"mot\" data-g=\"g-talents\">talents</button>. <span class=\"s\">25</span>Comme il n'avait pas de quoi payer, son maître ordonna qu'il fût vendu, lui, sa femme, ses enfants, et tout ce qu'il avait, et que la dette fût acquittée. <span class=\"s\">26</span>Le serviteur, se jetant à terre, se prosterna devant lui, et dit: Seigneur, aie patience envers moi, et je te paierai tout. <span class=\"s\">27</span>Ému de <button class=\"mot\" data-g=\"g-compassion\">compassion</button>, le maître de ce serviteur le laissa aller, et lui remit la dette. <span class=\"s\">28</span>Après qu'il fut sorti, ce serviteur rencontra un de ses compagnons qui lui devait cent deniers. Il le saisit et le serra à la gorge, en disant: Paie ce que tu me dois. <span class=\"s\">29</span>Son compagnon, se jetant à terre, le suppliait, disant: Aie patience envers moi, et je te paierai. <span class=\"s\">30</span>Mais l'autre ne voulut pas, et il alla le jeter en prison, jusqu'à ce qu'il eût payé ce qu'il devait. <span class=\"s\">31</span>Ses compagnons, ayant vu ce qui était arrivé, furent profondément attristés, et ils allèrent raconter à leur maître tout ce qui s'était passé. <span class=\"s\">32</span>Alors son maître le fit appeler, et lui dit: Méchant serviteur, je t'avais remis en entier ta dette, parce que tu m'en avais supplié; <span class=\"s\">33</span>ne devais-tu pas aussi avoir pitié de ton compagnon, comme j'ai eu pitié de toi? <span class=\"s\">34</span>Et son maître, irrité, le livra aux bourreaux, jusqu'à ce qu'il eût payé tout ce qu'il devait. <span class=\"s\">35</span>C'est ainsi que mon Père céleste vous traitera, si chacun de vous ne pardonne pas à son frère de <button class=\"mot\" data-g=\"g-coeur\">tout son cœur</button>.",
+      "gloses": [
+        {
+          "id": "g-pardonnerai",
+          "lemme": "aphēsō",
+          "html": "Le verbe grec <span class=\"gr\">aphēsō</span> (ἀφήσω), que Segond traduit par « pardonnerai-je », est le même mot que la parabole emploiera pour dire que le maître « remit la dette » au verset 27 : en grec, pardonner un péché et remettre une dette financière se disent avec le même verbe, aphiēmi (ἀφίημι), « relâcher, laisser aller ». La question de Pierre porte donc, sans qu'il le sache encore, sur une comptabilité : combien de fois faut-il annuler une créance ? Chrysostome, dans son homélie sur ce passage, note que Pierre croit déjà être généreux en proposant sept fois, alors que l'usage rabbinique de son temps n'exigeait qu'un pardon répété trois fois."
+        },
+        {
+          "id": "g-talents",
+          "lemme": "talanton",
+          "html": "Le mot grec <span class=\"gr\">talanton</span> (τάλαντον), « talent », désigne à l'origine un poids avant de devenir la plus grande unité monétaire du monde antique : un seul talent d'argent valait environ six mille deniers, soit près de vingt années de salaire d'un ouvrier. Dix mille talents représentent donc une somme proprement inimaginable, plusieurs fois le budget annuel d'une province romaine entière — un chiffre que l'auditoire de Jésus ne pouvait qu'entendre comme une hyperbole délibérée, impossible à rembourser en une vie entière. Segond garde le mot tel quel, faute d'équivalent, ce qui masque à l'oreille moderne l'énormité que percevait aussitôt l'auditeur du premier siècle. C'est cette disproportion, entre la dette remise et les cent deniers réclamés au compagnon quelques versets plus loin, qui porte tout le poids de la parabole."
+        },
+        {
+          "id": "g-compassion",
+          "lemme": "splagchnistheis",
+          "html": "Le verbe grec <span class=\"gr\">splagchnistheis</span> (σπλαγχνισθείς), « ému de compassion », vient de splagchna (σπλάγχνα), les entrailles, siège physique de l'émotion la plus intense dans l'anthropologie grecque et hébraïque. Ce n'est pas une pitié polie mais un bouleversement viscéral, le même mot qui décrit Jésus devant la foule affamée ou devant le lépreux. Segond traduit « ému de compassion », ce qui garde la force du geste sans pouvoir rendre l'image organique de l'original grec. Le maître de la parabole n'est donc pas seulement bienveillant : il est retourné au plus profond de lui-même, comme on l'est devant un enfant ou un mourant."
+        },
+        {
+          "id": "g-coeur",
+          "lemme": "kardia",
+          "html": "Le texte grec dit littéralement <span class=\"gr\">apo tōn kardiōn hymōn</span> (ἀπὸ τῶν καρδιῶν ὑμῶν), « du fond de vos cœurs » au pluriel, comme si chaque cœur portait sa propre part de résistance à vaincre. Segond unifie en « de tout son cœur », au singulier, ce qui lisse une nuance : Jésus ne demande pas un sentiment uniforme mais un travail intérieur propre à chacun, mené jusqu'au bout. La kardia hébraïque et grecque n'est pas le siège du sentiment mais celui de la décision et de l'intelligence pratique. Pardonner de tout cœur, ce n'est donc pas ressentir quelque chose, mais vouloir jusqu'au bout ce que la volonté seule peut soutenir dans la durée."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un livre entre deux canons",
+      "corps_html": "L'Ecclésiastique, ou Siracide, a été composé en hébreu vers 190 avant notre ère par Ben Sira, un sage de Jérusalem, puis traduit en grec par son petit-fils vers 132 avant notre ère, comme le rappelle le prologue du traducteur. Les Églises de la Réforme, suivant le canon hébreu palestinien, l'ont classé parmi les apocryphes ; l'Église catholique, suivant la Septante et le concile de Trente (1546), le tient pour deutérocanonique. Segond ne l'a donc jamais traduit ; c'est la version du chanoine Crampon, publiée en 1923, qui sert ici de texte."
+    },
+    {
+      "titre": "Le discours communautaire",
+      "corps_html": "Le chapitre 18 de Matthieu forme le quatrième des cinq grands discours de l'évangile, celui que les commentateurs nomment « discours ecclésial » : il traite du petit enfant en modèle (18,1-5), de la brebis perdue (18,10-14), puis de la correction fraternelle (18,15-20) juste avant la question de Pierre. La parabole du serviteur impitoyable n'est donc pas un enseignement isolé sur le pardon individuel, mais la clé de voûte d'un enseignement entier sur la vie de la communauté naissante, où le pardon reçu doit structurer les rapports entre frères."
+    }
+  ],
+  "analogie": {
+    "titre": "La rancune qu'on croit garder pour soi",
+    "variantes": [
+      "Tu as récité le Notre Père des centaines de fois, et la phrase « comme nous pardonnons aussi à ceux qui nous ont offensés » a longtemps glissé sur toi sans peser, une clause parmi d'autres dans une prière apprise avant l'âge de la comprendre. Puis un jour, en la prononçant, elle s'est arrêtée dans ta bouche, parce que tu savais exactement, avec un nom et un visage, à qui tu refusais encore ce pardon-là. Tu n'as pas pu continuer la prière comme si de rien n'était : la phrase t'avait rattrapé, elle qui te semblait si anodine, et tu as compris qu'elle n'était pas une formule mais une dette. C'est devant cette même mesure que le texte de ce dimanche te place, non pas pour t'accuser, mais pour que tu voies enfin ce qui t'a déjà été remis, avant de te demander ce que tu dois toi-même relâcher.",
+      "Il y a eu un jour où quelqu'un t'a pardonné une faute que tu jugeais toi-même impardonnable, sans marchander, sans même te faire sentir le poids de ce qu'il te fallait rendre. Tu t'attendais à une froideur, à une dette qu'on te rappellerait discrètement pendant des années, et il n'y eut rien de tel : la chose fut simplement effacée, comme si elle n'avait jamais existé entre vous. Ce n'est que plus tard, en repensant à ce moment, que tu as mesuré ce que ce pardon avait dû coûter à celui qui te l'accordait, et à quel point tu l'avais reçu sans jamais en avoir payé le prix. C'est cette gratuité-là, reçue sans l'avoir méritée, que le texte de ce dimanche te demande de reconnaître avant de savoir si toi, à ton tour, tu sauras la transmettre à quelqu'un d'autre.",
+      "Tu portes peut-être encore, sans t'en rendre bien compte, une rancune ancienne contre quelqu'un qui t'a blessé et qui, lui, a depuis longtemps oublié l'incident ou même la relation. Tu crois la garder par justice, pour ne pas oublier ce qui s'est passé, mais elle ne pèse en réalité que sur toi seul : elle t'occupe l'esprit dans les moments de silence, elle ressurgit sans qu'on te la rappelle, elle t'empêche de prier tranquillement certains soirs. L'autre, pendant ce temps, vit sa vie sans y penser — c'est toi, et toi seul, qui restes enfermé dans une dette que tu refuses de considérer comme réglée. Le texte de ce dimanche ne te demande pas d'oublier ce qui s'est passé : il te demande de reconnaître que cette prison-là n'a qu'une clé, et qu'elle est déjà dans ta main, la même main qui a déjà reçu, elle, un pardon bien plus grand."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer ce texte, prends un instant pour laisser remonter, sans le juger tout de suite, le nom de quelqu'un à qui tu n'as pas encore tout à fait pardonné.",
+    "geste": "Nomme cette personne devant Dieu, en silence, sans rien Lui demander pour l'instant — dis seulement son nom, et laisse-le regarder avec toi ce que tu portes encore.",
+    "note": "Le pardon n'est pas un sentiment qu'on convoque sur commande ; c'est un chemin qu'on accepte de commencer, un jour après l'autre."
+  },
+  "question": "Qu'est-ce qui, en toi, préfère parfois garder la dette plutôt que de la voir effacée ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la mesure du don reçu",
+      "corps_html": "Jean Chrysostome, commentant cette parabole, insiste sur la disproportion volontaire du récit : dix mille talents contre cent deniers, une distance que Jésus grossit à dessein pour que nul auditeur ne puisse s'y reconnaître à moitié. Il y voit un avertissement contre l'orgueil qui suit trop vite le pardon reçu : le serviteur, à peine délié de sa dette immense, se croit fondé à exiger jusqu'au dernier denier. Pour Chrysostome, l'oubli du don reçu est le péché le plus rapide à commettre, et le plus grave.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de saint Matthieu, homélie LXI"
+    },
+    {
+      "titre": "Calvin : appartenir, vivre et mourir",
+      "corps_html": "Calvin, commentant ce passage de Romains, souligne que Paul ne dit pas seulement que le croyant doit servir le Seigneur, mais qu'il lui appartient déjà, corps et existence entière, « soit en vivant soit en mourant ». Il y voit le fondement de toute charité fraternelle : nul ne juge son frère avec justice s'il ne se rappelle d'abord que ce frère, comme lui, est la propriété d'un même maître. Le jugement que les Romains portaient les uns sur les autres, dit Calvin, oublie cette appartenance commune avant de juger la conduite d'autrui.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Romains, ch. 14"
+    },
+    {
+      "titre": "Écho inversé de Lamek",
+      "corps_html": "Le chiffre « septante fois sept fois » que prononce Jésus reprend presque mot pour mot Genèse 4,24, où Lamek se vante que sa vengeance sera « septante fois sept fois » plus terrible que celle de Caïn. Les commentateurs anciens ont noté ce renversement délibéré : là où la première violence humaine s'enorgueillissait d'une démesure vengeresse, Jésus reprend le même chiffre pour fonder une démesure inverse, celle du pardon sans mesure. Le texte ne cite pas Lamek par hasard : il retourne son cantique de haine en promesse de grâce.",
+      "attribution": "Genèse 4, 24 ; note de réception exégétique"
+    }
+  ]
+}
