@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un seul corps — mardi 15 septembre 2026</title>
+<meta name="description" content="Membres d'un même corps, au pied de la croix">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mardi 15 septembre 2026 · 24ème Semaine du Temps Ordinaire · <span class="couleur">blanc · </span>
+</p>
+    <h1>Un seul <span class="it">corps</span></h1>
+    <p class="chapeau">Membres d'un même corps, au pied de la croix</p>
+    <figure class="gravure" aria-label="Gravure sur bois : le Christ en croix, la tête inclinée vers sa mère debout à ses pieds et le disciple bien-aimé de l'autre côté, leurs trois silhouettes reliées par les lignes tendues du bois, dans le style dépouillé des gravures de la Passion."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M170 15 v105"/><path d="M138 45 h64"/><path d="M162 28 q8 -10 16 0 q-2 10 -8 10 q-6 0 -8 -10"/><path d="M141 45 v8"/><path d="M199 45 v8"/><path d="M170 45 v40"/><path d="M170 85 l-8 30"/><path d="M170 85 l8 30"/><path d="M163 115 h14"/><path d="M160 32 L96 58"/><path d="M180 32 L246 58"/><path d="M244 55 q6 -8 12 0 q-3 8 -6 8 q-3 0 -6 -8"/><path d="M236 120 q0 -38 14 -54 q14 16 14 54 z"/><path d="M238 92 q-14 -4 -24 6"/></g><g class="trait-rubrique"><path d="M86 55 q6 -8 12 0 q-3 8 -6 8 q-3 0 -6 -8"/><path d="M78 120 q0 -38 14 -54 q14 16 14 54 z"/><path d="M92 92 v12"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — 1 Co 12, 12-14.27-31a — Segond 1910</p>
+        <div class="ecriture "><span class="s">12</span> Car, comme le <button class="mot" data-g="g-soma">corps</button> est un et a plusieurs <button class="mot" data-g="g-melos">membres</button>, et comme tous les membres du corps, malgré leur nombre, ne forment qu'un seul corps, ainsi en est-il de Christ. <span class="s">13</span> Nous avons tous, en effet, été <button class="mot" data-g="g-baptizo">baptisés</button> dans un seul Esprit, pour former un seul corps, soit Juifs, soit Grecs, soit esclaves, soit libres, et nous avons tous été abreuvés d'un seul Esprit. <span class="s">14</span> Ainsi le corps n'est pas un seul membre, mais il est formé de plusieurs membres. <span class="s">27</span> Vous êtes le corps de Christ, et vous êtes ses membres, chacun en particulier. <span class="s">28</span> Et Dieu a établi dans l'Église premièrement des apôtres, secondement des prophètes, troisièmement des docteurs, ensuite ceux qui ont le don des miracles, puis ceux qui ont les dons de guérir, de secourir, de gouverner, de parler diverses langues. <span class="s">29</span> Tous sont-ils apôtres? Tous sont-ils prophètes? Tous sont-ils docteurs? Tous ont-ils le don des miracles? <span class="s">30</span> Tous ont-ils le don des guérisons? Tous parlent-ils en langues? Tous interprètent-ils? <span class="s">31</span> Aspirez aux dons les meilleurs. Et je vais encore vous montrer une <button class="mot" data-g="g-hodos">voie</button> par excellence.</div>
+        <div class="glose" id="g-soma"><span class="lemme">sôma</span> Le grec <span class="gr">sôma</span> désigne le corps organique, non un simple assemblage de parties mais une unité vivante que Paul applique directement à l'Église — ce n'est pas une comparaison qu'il file, il dit « ainsi en est-il de Christ », sans même écrire « ainsi en est-il de l'Église ». Segond traduit fidèlement par « corps », mais le français perd la charge physiologique du mot grec, familier dans le vocabulaire médical de l'époque, où Hippocrate et Galien l'emploient pour la solidarité des organes entre eux. Jean Chrysostome, dans ses homélies sur cette épître, insiste sur ce glissement : Paul ne dit pas que l'Église ressemble à un corps, il dit qu'elle est le corps du Christ. Calvin y voit le fondement de toute vie ecclésiale : nul chrétien n'existe pour lui-même, car il est organe d'un corps qui n'est pas le sien.</div>
+        <div class="glose" id="g-melos"><span class="lemme">melos</span> <span class="gr">Melos</span> signifie le membre articulé, la partie du corps dotée d'une fonction propre — le mot donnera plus tard « mélodie », l'accord des parties dans un tout. Segond garde « membres », traduction naturelle, mais elle n'a plus en français l'écho organique qu'a le grec, où chaque melos est indispensable précisément parce qu'il est différent des autres. Chrysostome relève que Paul choisit cette image contre toute tentation de hiérarchie spirituelle dans l'Église de Corinthe, où certains se vantaient de dons plus spectaculaires que d'autres. L'œil ne peut dire à la main qu'il n'a pas besoin d'elle : la diversité n'est pas un défaut à corriger mais la condition même de l'unité.</div>
+        <div class="glose" id="g-baptizo"><span class="lemme">baptizô</span> <span class="gr">Baptizô</span> signifie plonger, immerger complètement — le mot est emprunté au vocabulaire de la teinturerie, où l'étoffe plongée dans le bain change de couleur en profondeur. Segond traduit par « baptisés », translittération plus que traduction, ce qui est juste mais masque pour le lecteur français l'image concrète d'une immersion totale. Paul associe ici le baptême non à un rite individuel mais à une incorporation : on est baptisé « dans un seul Esprit », littéralement plongé dans lui, pour devenir un seul corps au-delà des clivages que Corinthe connaissait bien. Calvin y voit la preuve que le baptême n'unit pas seulement à Christ mais, par lui, à tous ceux qui portent le même signe.</div>
+        <div class="glose" id="g-hodos"><span class="lemme">hodos</span> <span class="gr">Hodos</span> désigne le chemin, la route qu'on parcourt — Paul l'emploie ici pour annoncer ce que le chapitre suivant va déployer, l'hymne à l'amour. Segond traduit « voie par excellence », rendant l'expression grecque <span class="gr">kath' hyperbolên</span>, littéralement « selon un excès », un dépassement de toute mesure. Le choix est heureux : il indique que ce qui suit n'est pas un charisme de plus dans la liste qui précède, mais ce qui les traverse et les excède tous. Chrysostome note que Paul, après avoir énuméré des dons hiérarchisés, refuse d'en faire un classement définitif et ouvre une route que chacun peut suivre, quels que soient ses dons reçus.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 99 (100), 1-2, 3, 4, 5 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Poussez vers l'Éternel des <button class="mot" data-g="g-teruah">cris de joie</button>, Vous tous, habitants de la terre! <span class="s">2</span> Servez l'Éternel, avec joie, Venez avec allégresse en sa présence! <span class="s">3</span> <button class="mot" data-g="g-yada">Sachez</button> que l'Éternel est Dieu! C'est lui qui nous a faits, et nous lui appartenons; Nous sommes son peuple, et le troupeau de son pâturage. <span class="s">4</span> Entrez dans ses portes avec des louanges, Dans ses parvis avec des cantiques! Célébrez-le, bénissez son nom! <span class="s">5</span> Car l'Éternel est bon; sa <button class="mot" data-g="g-hesed">bonté</button> dure toujours, Et sa <button class="mot" data-g="g-emunah">fidélité</button> de génération en génération.</div>
+        <div class="glose" id="g-teruah"><span class="lemme">teruah</span> L'hébreu <span class="gr">teruah</span> n'est pas un simple cri : c'est le mot des trompettes du Jubilé, de l'acclamation royale à l'intronisation d'un roi, du cri de guerre aussi bien que de fête. Segond traduit par « cris de joie », ce qui restitue la dimension festive mais perd l'écho cultuel précis — teruah est le son du chofar qui proclame un règne qui commence. Les rabbins associent ce mot au Nouvel An juif, Roch ha-Chana, où le son du chofar rappelle à la fois le jugement et la royauté de Dieu sur toute la terre, exactement le thème de ce psaume.</div>
+        <div class="glose" id="g-yada"><span class="lemme">yada</span> <span class="gr">Yada</span>, « connaître » en hébreu, ne désigne pas un savoir théorique mais une connaissance expérimentale, la même racine que pour l'union conjugale dans la Genèse. Segond traduit par « sachez », qui est juste mais atténue la force du mot : il ne s'agit pas d'apprendre une information sur Dieu, mais d'entrer dans une relation où l'on se reconnaît son ouvrage. Calvin, commentant ce psaume, insiste sur ce lien entre connaissance et appartenance : reconnaître que Dieu nous a faits, c'est déjà se savoir son peuple, non par mérite mais par création.</div>
+        <div class="glose" id="g-hesed"><span class="lemme">hesed</span> <span class="gr">Hesed</span> est l'un des mots les plus riches de l'hébreu biblique, traduit tour à tour par bonté, grâce, fidélité, amour indéfectible selon les contextes — aucun mot français ne l'épuise. Segond choisit « bonté », option défendable mais insuffisante, car hesed implique un engagement, une loyauté d'alliance et non une simple bienveillance de tempérament. Les rabbins en font l'attribut par excellence de Dieu envers Israël, celui qui dépasse la stricte justice ; les Pères latins, traduisant par misericordia, y entendent déjà l'annonce de la miséricorde évangélique.</div>
+        <div class="glose" id="g-emunah"><span class="lemme">emunah</span> <span class="gr">Emunah</span> vient de la même racine que « amen » — elle désigne la solidité, ce sur quoi on peut s'appuyer sans vaciller, plus que la fidélité au sens moderne d'une promesse tenue. Segond traduit « fidélité », ce qui est correct mais laisse dans l'ombre l'image physique de l'étai ou de la colonne portante que suggère la racine hébraïque. Dire amen à une parole, c'est reconnaître en elle cette même solidité — le psalmiste affirme donc que Dieu lui-même est le sol stable sur lequel les générations se succèdent sans qu'il cède.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Stabat Mater. Jn 19, 25-27 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">25</span> Près de la croix de Jésus se tenaient sa mère et la sœur de sa mère, Marie, femme de Clopas, et Marie de Magdala. <span class="s">26</span> Jésus, voyant sa mère, et auprès d'elle le disciple qu'il <button class="mot" data-g="g-agapa">aimait</button>, dit à sa mère: <button class="mot" data-g="g-gynai">Femme</button>, <button class="mot" data-g="g-ide">voilà</button> ton fils. <span class="s">27</span> Puis il dit au disciple: Voilà ta mère. Et, dès ce moment, le disciple la <button class="mot" data-g="g-idia">prit chez lui</button>.</div>
+        <div class="glose" id="g-agapa"><span class="lemme">agapaô</span> Le verbe grec est <span class="gr">agapaô</span>, celui de l'amour que Jean réserve d'ordinaire pour désigner l'amour de Dieu ou l'amour du Christ pour les siens, et non <span class="gr">phileô</span>, l'affection plus commune. Segond traduit simplement « qu'il aimait », ce qui est fidèle mais efface la précision du choix lexical johannique : ce disciple, resté anonyme dans tout le quatrième évangile, est désigné par le même verbe que celui qui dit « Dieu a tant aimé le monde ». Origène et, après lui, plusieurs Pères y voient une invitation à ce que tout disciple se reconnaisse à cette place, aimé de ce même amour, au pied de la croix.</div>
+        <div class="glose" id="g-gynai"><span class="lemme">gynai</span> <span class="gr">Gynai</span>, « femme », est le même mot que Jésus emploie déjà aux noces de Cana, en Jean 2, quand il dit à sa mère « femme, qu'y a-t-il entre moi et toi ». Segond garde « Femme » sans adoucir, ce qui peut surprendre en français où l'appellation semble froide, alors qu'en grec elle n'a rien d'irrespectueux — c'est une adresse solennelle, presque officielle. Augustin note que Jésus évite délibérément le mot « mère » à cet instant précis, comme si, du haut de la croix, il instituait une maternité nouvelle qui déborde le seul lien de chair.</div>
+        <div class="glose" id="g-ide"><span class="lemme">ide</span> <span class="gr">Ide</span>, « voilà » ou « voici », est un impératif qui commande de regarder, presque de contempler — le même mot que Jean-Baptiste emploie en désignant Jésus : « voici l'Agneau de Dieu ». Segond traduit par « voilà », qui rend le geste de désignation mais perd la force de commandement du grec, plus proche d'un « regarde, vois » que d'une simple présentation. La scène acquiert ainsi la solennité d'une déclaration : ce n'est pas une consolation en passant, c'est un acte de fondation que Jésus prononce et que la mère et le disciple sont sommés de regarder en face.</div>
+        <div class="glose" id="g-idia"><span class="lemme">eis ta idia</span> L'expression grecque est <span class="gr">eis ta idia</span>, littéralement « dans ses propres choses », la même expression que Jean emploie au prologue pour dire que le Verbe « vint chez les siens ». Segond traduit « la prit chez lui », choix naturel qui perd cependant l'écho voulu par l'évangéliste entre les deux passages : le disciple accueille Marie exactement comme le Verbe était venu chez les siens, dans un mouvement de réciprocité. Les Pères latins traduiront par in sua, dans le sien propre, gardant cette résonance : recevoir Marie, c'est faire d'elle ce qui est déjà sien, l'intégrer dans son foyer le plus intime.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Corinthe et la rivalité des dons</h3><p>Vers 54-55, Paul écrit depuis Éphèse à une Église de Corinthe déchirée par la hiérarchie des dons spirituels : certains valorisaient le parler en langues comme preuve suprême de l'Esprit, au détriment des services plus discrets. Chrysostome, dans sa trentième homélie sur cette épître, rappelle que Paul construit l'image du corps précisément pour désamorcer cet orgueil spirituel qui menaçait de fracturer la communauté naissante.</p></div>
+      <div><h3>Le testament du crucifié</h3><p>La scène se situe au terme du procès romain, sur le lieu dit Golgotha, hors les murs de Jérusalem selon Jean 19,17. La tradition patristique, dès Origène au IIIe siècle, lit ces paroles comme un testament : dans l'Antiquité juive, confier sa mère à quelqu'un au moment de mourir engageait une responsabilité filiale réelle, non un geste symbolique. Le poème latin Stabat Mater, composé au XIIIe siècle, en gardera la mémoire liturgique jusqu'à aujourd'hui.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Une parole qui t'assigne une place</h2>
+<p>Tu as pu vivre ceci : arriver dans une communauté, une famille par alliance, un lieu de service, sans rien y avoir mérité ni construit, et t'apercevoir peu à peu qu'une place t'y était faite que tu n'avais pas demandée. Ce n'est pas toi qui as choisi ce rôle ni négocié ton rang parmi les autres ; il t'a été donné, comme on reçoit un membre du corps, sans en discuter l'utilité ni la comparer aux autres. Ce texte te dit que devant Dieu, ta place dans le corps n'attend pas ta validation — elle t'attend, toi.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Reste un instant devant cette double scène : un corps aux membres innombrables, et une mère confiée à un fils qu'elle n'avait pas mis au monde.</p>
+      <p class="geste">Nomme, en silence, une personne que Dieu semble t'avoir confiée sans que tu l'aies choisie — et confie-la à ton tour dans ta prière.</p>
+      <small>Ce texte peut se prier debout, comme Marie et le disciple se tenaient debout au pied de la croix — la position même du psaume d'aujourd'hui, qui invite à entrer, non à se prosterner d'abord.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle place, dans le corps du Christ ou dans une famille que tu n'as pas choisie, t'a été donnée sans que tu l'aies demandée — et que ferais-tu si tu cessais de la mesurer à son éclat ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome et le corps solidaire</h3>
+          <p>Dans sa trentième homélie sur la première épître aux Corinthiens, Jean Chrysostome insiste sur le fait que Paul ne classe jamais les membres du corps selon leur éclat apparent : l'œil n'est pas supérieur au pied, il lui est seulement différent. Pour l'évêque d'Antioche, cette page vise directement l'orgueil de ceux qui, dans l'Église de son temps comme dans celle de Corinthe, mesuraient leur valeur à la visibilité de leur charisme plutôt qu'à leur service réel.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la première épître aux Corinthiens, IVe siècle</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin, l'unité qui oblige</h3>
+          <p>Calvin commente ce chapitre en rappelant que nul membre du corps ne s'appartient à lui-même : l'œil voit pour la main autant que pour lui-même, et la main travaille pour tout le corps. Il en tire une conséquence concrète pour l'Église de Genève, où il insiste sur le devoir de chaque fidèle de mettre ses dons, même modestes, au service commun plutôt que de les jalouser ou de les cacher par fausse humilité.</p>
+<p class="attrib">Jean Calvin, Commentaire sur la première épître aux Corinthiens, 1546</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Augustin et la mère de tous les vivants</h3>
+          <p>Augustin, méditant sur cette scène johannique, y voit l'image de l'Église elle-même confiée au disciple bien-aimé, et le disciple confié à Marie comme à une mère. Il rapproche ce geste de celui d'Ève, appelée mère de tous les vivants en Genèse 3, pour faire de Marie, au pied de l'arbre de la croix, une nouvelle mère donnée à l'humanité rachetée — lecture reprise ensuite par une large tradition mariale.</p>
+<p class="attrib">Augustin, Traités sur l'évangile de Jean, tractat 119, Ve siècle</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 24ème Semaine du Temps Ordinaire — 1 Co 12, 12-14.27-31a ; Stabat Mater. Jn 19, 25-27.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
