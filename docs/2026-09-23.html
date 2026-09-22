@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le pain du jour — mercredi 23 septembre 2026</title>
+<meta name="description" content="La prière d'un sage et l'envoi des Douze : ce que Dieu donne ne se thésaurise pas.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 23 septembre 2026 · 25ème Semaine du Temps Ordinaire · <span class="couleur">blanc · </span>
+</p>
+    <h1>Le pain <span class="it">du jour</span></h1>
+    <p class="chapeau">La prière d'un sage et l'envoi des Douze : ce que Dieu donne ne se thésaurise pas.</p>
+    <figure class="gravure" aria-label="Gravure sur bois : un chemin de terre entre deux haies, un homme y marche les mains vides, une besace vide pendant à son épaule ; au loin, une maison ouvre sa porte et une fumée monte du toit — le pain n'est pas dans le sac, il attend dans la maison qui accueille."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M30 122 L240 100"/><path d="M290 122 L258 100"/><path d="M15 115 q8 -12 16 -4 q8 -10 16 -4 q7 -9 14 -4 q6 -7 12 -3 q5 -5 9 -2"/><path d="M325 115 q-8 -12 -16 -4 q-8 -10 -16 -4 q-7 -9 -14 -4 q-6 -7 -12 -3 q-5 -5 -9 -2"/><path d="M90.5 92 a4.5 4.5 0 1 0 9 0 a4.5 4.5 0 1 0 -9 0"/><path d="M95 96.5 L95 111"/><path d="M95 100 L88 109 M95 100 L102 110"/><path d="M95 111 L88 120 M95 111 L103 119"/><path d="M245 118 v-20 h26 v20"/><path d="M242 98 L258 82 L274 98"/></g><g class="trait-rubrique"><path d="M96 99 L101 105 M101 105 q-6 1 -6 7 q0 6 6 6 q5 0 5 -6 q0 -6 -5 -7 z"/></g><g class="trait-liturgie"><path d="M255 118 L264 106"/><path d="M258 82 q5 -7 0 -13 q-5 -6 1 -12 q5 -5 0 -11"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Pr 30, 5-9 — Segond 1910</p>
+        <div class="ecriture "><p><span class="s">5</span> Toute parole de Dieu est <button class="mot" data-g="g-eprouvee">éprouvée</button>. Il est un bouclier pour ceux qui cherchent en lui un refuge. <span class="s">6</span> N'ajoute rien à ses paroles, de peur qu'il ne te reprenne et que tu ne sois trouvé menteur.</p><p><span class="s">7</span> Je te demande deux choses : ne me les refuse pas, avant que je meure ! <span class="s">8</span> Éloigne de moi la fausseté et la parole mensongère ; ne me donne ni pauvreté ni richesse, accorde-moi <button class="mot" data-g="g-pain">le pain qui m'est nécessaire</button>. <span class="s">9</span> De peur que, dans l'abondance, je ne te renie et ne dise : Qui est l'Éternel ? Ou que, dans la pauvreté, je ne dérobe, et ne profane le nom de mon Dieu.</p></div>
+        <div class="glose" id="g-eprouvee"><span class="lemme">éprouvée</span> Le mot hébreu est <span class="gr">tserufa</span>, participe du verbe tsaraf : fondre le métal au feu jusqu'à ce que l'écume remonte et que seul le métal pur demeure. Segond traduit par « éprouvée », ce qui garde l'idée d'épreuve mais efface l'image du creuset : ce n'est pas un examen extérieur, c'est une purification qui retire les scories. Le verset le plus proche est le Psaume 12,7 (11,7 dans la Vulgate), « un argent épuré sur terre au creuset, sept fois épuré » — une image qu'Augustin commente longuement dans ses Enarrationes in Psalmos comme figure de la parole divine et de l'âme éprouvée.</div>
+        <div class="glose" id="g-pain"><span class="lemme">le pain qui m'est nécessaire</span> L'hébreu porte <span class="gr">lechem choqi</span>, littéralement « le pain de mon choq » — un mot qui désigne ailleurs la part fixée, la ration décrétée, la même racine que les « ordonnances » du Psaume 119. Segond choisit « le pain qui m'est nécessaire », juste mais qui efface la nuance juridique : Agour ne demande pas de quoi manger en général, il demande la portion exactement fixée, ni plus ni moins, comme la manne que chacun ramassait « selon ce que chacun en mange » (Exode 16,16-18), sans qu'il en reste rien le lendemain. C'est ce même resserrement que retrouvera la prière donnée aux disciples : « donne-nous aujourd'hui notre pain de ce jour » (Matthieu 6,11).</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 118 (119), 29.72, 89.101, 104.163 — Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">29</span> Éloigne de moi la voie du <button class="mot" data-g="g-sheqer">mensonge</button>, et accorde-moi la grâce de suivre ta loi ! <span class="s">72</span> Mieux vaut pour moi la loi de ta bouche que mille objets d'or et d'argent.</p><p><span class="s">89</span> A toujours, ô Éternel, ta parole subsiste dans les cieux. <span class="s">101</span> Je retiens mon pied loin de tout mauvais chemin, afin de garder ta parole.</p><p><span class="s">104</span> Par tes ordonnances je deviens intelligent, aussi je hais toute voie de mensonge. <span class="s">163</span> Je hais, je déteste le mensonge, j'aime ta loi.</p></div>
+        <div class="glose" id="g-sheqer"><span class="lemme">mensonge</span> Le mot hébreu <span class="gr">sheqer</span> revient comme un refrain dans ce psaume immense consacré à la torah : il désigne moins le mensonge d'un discours que la trahison d'une alliance, la parole qui déçoit ce qu'elle promettait. Segond traduit uniformément par « mensonge », ce qui est exact mais uniformise un mot que l'hébreu associe souvent au faux témoignage (Exode 20,16) plutôt qu'à l'erreur involontaire. Calvin, commentant ce psaume, insiste sur le fait que la haine du sheqer n'est pas une vertu morale isolée mais la conséquence nécessaire de l'amour de la loi : on ne peut aimer une parole vraie sans détester tout ce qui la contrefait.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 9, 1-6 — Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">1</span> Jésus, ayant assemblé les douze, leur donna <button class="mot" data-g="g-exousia">force et pouvoir</button> sur tous les démons, avec le pouvoir de guérir les maladies. <span class="s">2</span> Il les envoya prêcher le royaume de Dieu, et guérir les malades.</p><p><span class="s">3</span> Ne prenez rien pour le voyage, leur dit-il, ni bâton, ni sac, ni pain, ni argent, et n'ayez pas deux tuniques. <span class="s">4</span> Dans quelque maison que vous entriez, restez-y jusqu'à ce que vous partiez de ce lieu.</p><p><span class="s">5</span> Et, si les gens ne vous reçoivent pas, sortez de cette ville, et <button class="mot" data-g="g-poussiere">secouez la poussière</button> de vos pieds, en témoignage contre eux. <span class="s">6</span> Ils partirent, et ils allèrent de village en village, annonçant la bonne nouvelle et opérant partout des guérisons.</p></div>
+        <div class="glose" id="g-exousia"><span class="lemme">force et pouvoir</span> Le grec distingue deux mots que le français confond souvent : <span class="gr">dynamin</span>, la force, la capacité d'agir, d'où notre « dynamique », et <span class="gr">exousian</span>, le droit reconnu, l'autorité déléguée. Segond les traduit respectivement par « force » et « pouvoir », gardant la distinction que Luc pose avec soin : Jésus ne donne pas seulement aux Douze une puissance brute sur les démons, il leur délègue une autorité, comme un envoyé reçoit mandat de celui qui l'envoie. Chrysostome, prêchant sur l'envoi des disciples, insiste sur ce point : la force sans le mandat serait présomption, le mandat sans la force serait impuissance.</div>
+        <div class="glose" id="g-poussiere"><span class="lemme">secouez la poussière</span> Le geste que Jésus prescrit appartient à une pratique attestée dans le judaïsme du premier siècle : le pieux Israélite qui revenait d'un territoire païen secouait la poussière étrangère avant de rentrer en terre sainte, pour ne rien emporter de son impureté. En le demandant à ses envoyés à l'intérieur même d'Israël, Jésus retourne le geste contre ceux qui refusent l'accueil : ce ne sont plus les nations qui sont étrangères, mais la maison qui ferme sa porte. Luc précise que ce geste vaut « en témoignage », <span class="gr">martyrion</span> — le même mot que celui du martyre ; on retrouve le geste accompli littéralement par Paul et Barnabas en Actes 13,51.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Agour, la voix qui doute</h3><p>Le chapitre 30 des Proverbes s'ouvre sur une signature inhabituelle : « Paroles d'Agour, fils de Jaké. Sentence » — en hébreu massa, un mot qui désigne ailleurs un oracle pesant, une charge prophétique. Contrairement à Salomon, Agour commence par avouer son ignorance : « Je suis plus stupide que personne » (Pr 30,2). La tradition rabbinique, reprise par Rashi, a voulu voir dans ce nom un pseudonyme de Salomon lui-même, celui qui « rassemble » la sagesse ; mais le texte reçu se présente comme la voix d'un sage étranger au cercle royal, dont la prière qui suit (v. 7-9) est d'une sobriété rare dans tout le livre.</p></div>
+      <div><h3>Le plus long poème de la Bible</h3><p>Le Psaume 119 (118 dans la numérotation grecque et latine reprise par la liturgie) est un acrostiche parfait : vingt-deux strophes de huit versets, une pour chaque lettre de l'alphabet hébreu, où presque chaque verset nomme la loi de Dieu par un synonyme différent — torah, mishpat, choq, piqqudim, mitzvah, edut. Calvin, dans son Commentaire sur les Psaumes, note que cette accumulation n'est pas de la rhétorique : elle dit l'impossibilité d'épuiser en un seul mot ce que signifie recevoir une parole qui vient de Dieu. Les versets retenus aujourd'hui reviennent tous, par des chemins différents, à l'opposition entre la parole vraie et le sheqer, le mensonge.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La part exacte</h2>
+<p>Il y a des jours où tu pries en demandant très précisément ce qu'il te faut pour tenir, rien de plus, et tu sens presque de la gêne à formuler une demande aussi modeste — comme si la foi méritait une requête plus ample, plus généreuse envers toi-même. Puis vient un jour où l'on te retire, sans préavis, ce que tu avais mis de côté par précaution plus que par besoin, cette petite réserve que tu appelais prudence et qui était peut-être de la défiance déguisée. Tu t'attends à la panique ; ce qui vient, à la place, c'est une paix étrange, parce qu'il te reste exactement ce qu'il te faut pour aujourd'hui, ni plus, et que cela suffit — tu découvres alors que ce que tu appelais manque n'était que l'absence du trop.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de fermer cette page, laisse la prière d'Agour reformuler la tienne : non pas demander plus, mais demander juste.</p>
+      <p class="geste">Aujourd'hui, nomme une seule chose dont tu as vraiment besoin — pas dont tu as envie — et demande-la, sans l'entourer de garanties pour demain.</p>
+      <small>Ce n'est pas un exercice de sobriété : c'est une manière de laisser Dieu être celui qui donne, jour après jour.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu accumules aujourd'hui, par prudence ou par manque de confiance, que le Christ te demanderait de laisser à la porte avant d'entrer ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : la pauvreté qui prêche</h3>
+          <p>Commentant l'envoi des Douze chez Matthieu, section parallèle à celle de Luc, Jean Chrysostome s'arrête sur l'ordre de ne rien emporter : ni bâton, ni sac, ni pain, ni argent. Il y voit une pédagogie plus qu'une règle absolue — le Christ veut que ses envoyés apprennent, dès le premier pas, à ne pas confondre l'autorité qu'ils reçoivent avec une assurance matérielle, et à se laisser porter par ceux-là mêmes à qui ils annoncent la bonne nouvelle. Le dépouillement n'est pas un exploit ascétique : c'est la condition pour que la guérison donnée ne paraisse pas achetée.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 32</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : aimer la loi, détester le mensonge</h3>
+          <p>Pour Calvin, l'insistance du Psaume 119 sur la haine du mensonge n'est pas un excès rhétorique : elle traduit la logique même de la foi. On ne reçoit pas la parole de Dieu comme une information parmi d'autres ; on l'aime, ou on ne l'a pas reçue. Calvin rappelle que le psalmiste ne dit jamais haïr les hommes qui mentent, mais la voie du mensonge elle-même — distinction qu'il juge essentielle pour ne pas transformer la piété en amertume contre autrui, alors qu'elle doit rester un combat intérieur pour la vérité.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre des Psaumes, sur Ps 119</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le style numérique du sage</h3>
+          <p>La suite du chapitre 30 des Proverbes multiplie un procédé bien attesté dans la sagesse proche-orientale : le dicton numérique gradué, « trois choses... et même quatre ». On le retrouve dans les oracles d'Amos (1,3-2,6) et dans des textes ougaritiques antérieurs de plusieurs siècles à la rédaction des Proverbes. La demande d'Agour, « je te demande deux choses », inaugure discrètement ce procédé : deux requêtes seulement, la vérité et la juste mesure du pain, avant que le chapitre ne s'amuse avec des séries plus longues et plus énigmatiques.</p>
+<p class="attrib">note de critique littéraire sur la forme sapientielle du dicton numérique</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 25ème Semaine du Temps Ordinaire — Pr 30, 5-9 ; Lc 9, 1-6.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
