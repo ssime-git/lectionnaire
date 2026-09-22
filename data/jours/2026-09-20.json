@@ -1,0 +1,166 @@
+{
+  "date": "2026-09-20",
+  "date_humaine": "dimanche",
+  "semaine": "25ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 55, 6-9 ; Ph 1, 20c-24.27a ; Mt 20, 1-16",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M270 38 v82 M310 38 v82 M266 38 h48\"/><path d=\"M282 52 a7 7 0 1 0 14 0 a7 7 0 1 0 -14 0\"/><path d=\"M289 59 v28 M289 87 l-7 18 M289 87 l7 18 M289 66 l-38 10\"/><path d=\"M227 66 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0\"/><path d=\"M233 72 v26 M233 98 l-6 16 M233 98 l6 16 M233 80 l18 -4\"/><path d=\"M20 120 l18 -38 M50 120 l18 -38 M80 120 l18 -38 M110 120 l18 -38 M140 120 l18 -38\"/><path d=\"M41 92 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M91 87 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0\"/><path d=\"M45 96 v20 M95 91 v22\"/><path d=\"M49 90 l6 1 M99 85 l6 1\"/></g><g class=\"trait-rubrique\"><path d=\"M276 120 a14 14 0 0 1 28 0\"/></g><g class=\"trait-liturgie\"><path d=\"M247 76 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0\"/></g></svg>",
+  "titre": "Le denier",
+  "titre_html": "Le <span class=\"it\">denier</span>",
+  "sous_titre": "Quand la justice de Dieu déborde le calcul des hommes",
+  "suite_hier": null,
+  "gravure_alt": "Un maître de vigne, debout à la porte au soleil couchant, tend une pièce à un ouvrier arrivé à la onzième heure ; en retrait, dans l'ombre des rangs de vigne, d'autres ouvriers arrivés dès l'aube regardent la scène, le visage tourné vers la main qui paie.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 55, 6-9",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">6</span> Cherchez l'Éternel pendant qu'il se <button class=\"mot\" data-g=\"g-matsa\">trouve</button>&nbsp;; invoquez-le, tandis qu'il est près. <span class=\"s\">7</span> Que le méchant abandonne sa voie, et l'homme d'iniquité ses pensées&nbsp;; qu'il retourne à l'Éternel, qui aura pitié de lui, à notre Dieu, qui <button class=\"mot\" data-g=\"g-pardonne\">pardonne abondamment</button>. <span class=\"s\">8</span> Car mes <button class=\"mot\" data-g=\"g-pensees\">pensées</button> ne sont pas vos pensées, et vos voies ne sont pas mes voies, dit l'Éternel. <span class=\"s\">9</span> Autant les cieux sont élevés au-dessus de la terre, autant mes voies sont élevées au-dessus de vos voies, et mes pensées au-dessus de vos pensées.",
+      "gloses": [
+        {
+          "id": "g-matsa",
+          "lemme": "matsa",
+          "html": "Le verbe hébreu <span class=\"gr\">matsa</span>, employé ici à la forme réfléchie, signifie littéralement « se laisser trouver », « être atteignable » — ce n'est pas d'abord un verbe de présence statique mais d'accessibilité offerte. Segond traduit par un sobre « il se trouve », qui efface cette nuance active : Dieu ne se contente pas d'être quelque part, il se rend trouvable, comme on ouvre une porte à celui qui frappe. Les rabbins ont rattaché ce verset aux dix jours de pénitence entre Roch ha-Chana et Yom Kippour, temps où la miséricorde serait spécialement proche. Calvin insiste pour sa part que Dieu ne se dérobe jamais le premier : c'est l'homme qui, en tardant, risque de laisser passer l'heure où il se donne à trouver."
+        },
+        {
+          "id": "g-pardonne",
+          "lemme": "yarbeh lislo'ach",
+          "html": "L'hébreu ne dit pas seulement « pardonner » mais <span class=\"gr\">yarbeh lislo'ach</span>, littéralement « il multipliera à pardonner » — un verbe de surabondance appliqué directement au pardon, comme s'il en existait une réserve sans mesure. Segond lisse cela en « pardonne abondamment », adverbe qui affaiblit l'image d'une multiplication en cours, jamais achevée. Chrysostome, prêchant sur la pénitence, cite ce type de verset pour dire que Dieu ne compte pas les fautes pardonnées comme l'homme compte les offenses reçues. C'est exactement la logique qui explique, dans l'évangile de ce jour, le denier égal donné aux derniers venus."
+        },
+        {
+          "id": "g-pensees",
+          "lemme": "mahashabot",
+          "html": "Les <span class=\"gr\">mahashabot</span>, les pensées ou desseins, s'opposent ici aux <span class=\"gr\">derakim</span>, les voies ou chemins concrets : la première paire dit l'intention, la seconde l'action qui en découle. Segond garde le parallélisme hébraïque presque mot à mot, fidélité rare et heureuse. La tradition rabbinique médiévale lit ce verset comme un avertissement contre l'anthropomorphisme facile : on ne juge pas Dieu à l'aune de sa propre justice distributive — précisément le piège où tombent les ouvriers de la première heure chez Matthieu."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 144 (145), 2-3, 8-9, 17-18",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Chaque jour je te bénirai, et je célébrerai ton nom à toujours et à perpétuité. <span class=\"s\">3</span> L'Éternel est grand et très digne de louange, et sa grandeur est <button class=\"mot\" data-g=\"g-insondable\">insondable</button>. <span class=\"s\">8</span> L'Éternel est miséricordieux et <button class=\"mot\" data-g=\"g-compatissant\">compatissant</button>, lent à la colère et plein de bonté. <span class=\"s\">9</span> L'Éternel est bon envers tous, et ses compassions s'étendent sur toutes ses œuvres. <span class=\"s\">17</span> L'Éternel est juste dans toutes ses voies, et miséricordieux dans toutes ses œuvres. <span class=\"s\">18</span> L'Éternel est près de tous ceux qui l'invoquent, de tous ceux qui l'invoquent avec <button class=\"mot\" data-g=\"g-verite\">sincérité</button>.",
+      "gloses": [
+        {
+          "id": "g-insondable",
+          "lemme": "ein cheqer",
+          "html": "L'hébreu dit <span class=\"gr\">ein cheqer</span>, littéralement « il n'y a pas de recherche », comme on dirait d'un puits qu'on ne peut sonder jusqu'au fond. Segond traduit par « insondable », qui garde bien l'image du sondage impossible mais perd le mot <span class=\"gr\">cheqer</span> lui-même, terme technique de l'instruction judiciaire dans l'Ancien Testament. Dire que la grandeur de Dieu échappe au <span class=\"gr\">cheqer</span>, c'est dire qu'aucune enquête humaine ne peut clore le dossier de qui il est. Chrysostome s'appuie sur ce type de verset pour avertir ceux qui prétendent mesurer la justice divine à leurs propres critères — exactement le geste des ouvriers de la première heure dans l'évangile de ce jour."
+        },
+        {
+          "id": "g-compatissant",
+          "lemme": "rachum",
+          "html": "<span class=\"gr\">Rachum</span> vient de la racine <span class=\"gr\">rechem</span>, la matrice, le sein maternel : la compassion divine est ici littéralement une tendresse d'entrailles, celle d'une mère pour l'enfant qu'elle a porté. Segond choisit « compatissant », mot plus froid, qui dit la sympathie mais perd l'image corporelle et maternelle du texte hébreu. C'est le même mot qui qualifie Dieu en Exode 34,6, dans la grande proclamation de son nom à Moïse après la faute du veau d'or — la miséricorde n'y est jamais une option seconde, mais le fond même du caractère divin."
+        },
+        {
+          "id": "g-verite",
+          "lemme": "be'emet",
+          "html": "« Avec sincérité » traduit l'hébreu <span class=\"gr\">be'emet</span>, littéralement « dans la vérité » ou « en fermeté » — le même mot qui qualifie ailleurs la fidélité de Dieu lui-même. Segond choisit un mot de disposition intérieure, la sincérité, quand le texte parle plutôt d'une manière d'invoquer qui tient, qui ne vacille pas, comme un pied posé sur un sol ferme. Calvin, commentant les psaumes, insiste que cette fermeté n'est pas une vertu que le priant apporterait de lui-même, mais un accord avec la fidélité de Dieu qui, le premier, ne varie pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Ph 1, 20c-24.27a",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">20</span> ... et que maintenant encore, comme toujours, Christ sera glorifié dans mon corps, soit par ma vie, soit par ma mort. <span class=\"s\">21</span> Car Christ est ma vie, et la mort m'est un <button class=\"mot\" data-g=\"g-kerdos\">gain</button>. <span class=\"s\">22</span> Mais s'il est utile pour mon œuvre que je vive dans la chair, je ne saurais dire ce que je dois préférer. <span class=\"s\">23</span> Je suis <button class=\"mot\" data-g=\"g-presse\">pressé</button> des deux côtés&nbsp;: j'ai le désir de m'en aller et d'être avec Christ, ce qui de beaucoup est le meilleur&nbsp;; <span class=\"s\">24</span> mais à cause de vous il est plus nécessaire que je demeure dans la chair. <span class=\"s\">27</span> Seulement, <button class=\"mot\" data-g=\"g-politeuesthe\">conduisez-vous</button> d'une manière digne de l'Évangile de Christ.",
+      "gloses": [
+        {
+          "id": "g-kerdos",
+          "lemme": "kerdos",
+          "html": "Le grec <span class=\"gr\">kerdos</span> est un mot de la place du marché : le profit, le bénéfice net d'une transaction, celui qu'on inscrit du bon côté du livre de comptes. Segond traduit fidèlement par « gain », mais il faut entendre la provocation du terme dans la bouche de Paul enchaîné : mourir devient une opération avantageuse, un bilan positif, quand toute logique humaine y verrait la perte absolue. Cette inversion du calcul rejoint le scandale de la parabole des ouvriers de la dernière heure — Dieu ne compte pas comme comptent les hommes."
+        },
+        {
+          "id": "g-presse",
+          "lemme": "synechomai",
+          "html": "<span class=\"gr\">Synechomai</span> décrit littéralement le fait d'être tenu serré des deux côtés à la fois, comme une ville assiégée — le même verbe sert ailleurs dans le Nouveau Testament pour une fièvre qui terrasse ou une foule qui presse de toutes parts. Segond choisit « pressé », qui garde l'idée de contrainte mais perd la double direction du verbe grec : Paul n'est pas poussé d'un seul côté vers un seul désir, il est tiré simultanément vers deux biens réels. Chrysostome, commentant cette épître, y voit la marque d'un amour authentique, à la fois pour le Christ et pour l'Église qu'il sert encore."
+        },
+        {
+          "id": "g-politeuesthe",
+          "lemme": "politeuesthe",
+          "html": "Le verbe grec <span class=\"gr\">politeuesthe</span> vient de <span class=\"gr\">polis</span>, la cité : il ne signifie pas simplement « se conduire » mais « vivre en citoyen », exercer une citoyenneté active, mot chargé de sens dans une colonie romaine comme Philippes où le titre de citoyen était un privilège convoité. Segond dilue cela en un vague « conduisez-vous », perdant la dimension civique et communautaire que Paul vise précisément. C'est le même champ lexical qui reparaît en Philippiens 3,20 pour dire que « notre cité (<span class=\"gr\">politeuma</span>) est dans les cieux »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 20, 1-16",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Car le royaume des cieux est semblable à un maître de maison qui sortit dès le matin, afin de louer des ouvriers pour sa vigne. <span class=\"s\">2</span> Il convint avec eux d'un <button class=\"mot\" data-g=\"g-denier\">denier</button> par jour, et il les envoya à sa vigne. <span class=\"s\">3</span> Il sortit vers la troisième heure, et il en vit d'autres qui étaient sur la place sans rien faire. <span class=\"s\">4</span> Il leur dit&nbsp;: Allez aussi à ma vigne, et je vous donnerai ce qui sera <button class=\"mot\" data-g=\"g-raisonnable\">raisonnable</button>. Et ils y allèrent. <span class=\"s\">5</span> Il sortit de nouveau vers la sixième heure et vers la neuvième, et fit de même. <span class=\"s\">6</span> Étant sorti vers la onzième heure, il en trouva d'autres qui étaient sur la place, et il leur dit&nbsp;: Pourquoi vous tenez-vous ici toute la journée sans rien faire&nbsp;? <span class=\"s\">7</span> Ils lui répondirent&nbsp;: C'est que personne ne nous a loués. Allez aussi à ma vigne, leur dit-il. <span class=\"s\">8</span> Quand le soir fut venu, le maître de la vigne dit à son intendant&nbsp;: Appelle les ouvriers, et paie-leur le salaire, en allant des derniers aux premiers. <span class=\"s\">9</span> Ceux de la onzième heure vinrent, et reçurent chacun un denier. <span class=\"s\">10</span> Les premiers vinrent ensuite, croyant recevoir davantage&nbsp;; mais ils reçurent aussi chacun un denier. <span class=\"s\">11</span> En le recevant, ils <button class=\"mot\" data-g=\"g-murmurerent\">murmurèrent</button> contre le maître de la maison, <span class=\"s\">12</span> et dirent&nbsp;: Ces derniers n'ont travaillé qu'une heure, et tu les traites à l'égal de nous, qui avons supporté la fatigue du jour et la chaleur. <span class=\"s\">13</span> Il répondit à l'un d'eux&nbsp;: Mon ami, je ne te fais pas tort&nbsp;; n'es-tu pas convenu avec moi d'un denier&nbsp;? <span class=\"s\">14</span> Prends ce qui te revient, et va-t'en. Je veux donner à ce dernier autant qu'à toi. <span class=\"s\">15</span> Ne m'est-il pas permis de faire de mon bien ce que je veux&nbsp;? Ou <button class=\"mot\" data-g=\"g-oeilmauvais\">ton œil est-il mauvais</button>, parce que je suis bon&nbsp;? <span class=\"s\">16</span> Ainsi les derniers seront les premiers, et les premiers seront les derniers. Car il y a beaucoup d'appelés, mais peu d'élus.",
+      "gloses": [
+        {
+          "id": "g-denier",
+          "lemme": "dēnarion",
+          "html": "Le <span class=\"gr\">dēnarion</span> est la pièce d'argent romaine qui correspond au salaire d'une journée de travail — un ouvrier agricole du Ier siècle ne négocie pas au-delà, c'est le taux courant, ni généreux ni maigre. Segond garde le mot latin francisé « denier », ce qui évite de moderniser le montant en une somme qui perdrait son évidence économique pour les premiers lecteurs. Le terme revient identique pour chaque groupe d'ouvriers aux versets 9 et 10 : c'est la répétition du même mot, plus que son montant, qui porte tout le scandale de la parabole."
+        },
+        {
+          "id": "g-raisonnable",
+          "lemme": "dikaion",
+          "html": "Le grec ne dit pas « raisonnable » mais <span class=\"gr\">dikaion</span>, littéralement « ce qui sera juste » — le même mot que celui de la justice de Dieu proclamée par Isaïe. Segond adoucit en « raisonnable », terme de bon sens commercial, quand le texte pose déjà la question de la justice qui structurera tout le récit jusqu'au verset 15. Ce déplacement n'est pas neutre : le maître ne promet pas seulement d'être équitable selon un calcul, il laisse ouvert ce qui, de sa part, sera juste — et la suite révèle que sa justice déborde toute mesure proportionnelle attendue par les ouvriers."
+        },
+        {
+          "id": "g-murmurerent",
+          "lemme": "egogyzon",
+          "html": "Le verbe grec <span class=\"gr\">egogyzon</span>, murmurer, gronder à voix basse, est précisément celui que la Septante emploie pour le peuple d'Israël au désert, murmurant contre Moïse à propos de la manne et de l'eau. Segond traduit littéralement « murmurèrent », gardant heureusement l'écho scripturaire qu'un lecteur familier de l'Exode percevrait aussitôt. Chrysostome relève cette résonance : les ouvriers de la première heure, comme les Hébreux au désert, reçoivent exactement ce qui leur avait été promis et trouvent malgré tout à se plaindre — le murmure n'est jamais provoqué par un manque réel, mais par le regard porté sur ce que l'autre reçoit."
+        },
+        {
+          "id": "g-oeilmauvais",
+          "lemme": "ophthalmos ponēros",
+          "html": "« Ton œil est-il mauvais » traduit l'expression grecque <span class=\"gr\">ophthalmos ponēros</span>, calquée sur un idiome hébreu et araméen bien attesté où « avoir le mauvais œil » signifie être envieux, regarder de travers la générosité faite à autrui — l'expression contraire, « l'œil simple », désigne ailleurs chez Matthieu (6,22-23) un regard généreux et sans partage. Segond conserve l'image littérale, ce qui est heureux, mais un lecteur français risque d'y entendre une allusion à la superstition, alors que le texte vise très précisément l'envie qui compare et qui jauge. Le maître ne dispute pas le calcul des ouvriers ; il déplace la question, de la justice distributive vers la qualité du regard porté sur la bonté reçue par un autre."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le second Isaïe et l'exil qui s'achève",
+      "corps_html": "Ces versets appartiennent au Deutéro-Isaïe, écrit vers 538 avant notre ère pour des exilés à Babylone à qui l'on annonce un retour imminent. Le prophète doit convaincre un peuple découragé, habitué à mesurer Dieu à l'aune de son silence pendant soixante-dix ans, que la miséricorde divine agit selon une mesure qui n'est justement pas celle du calcul humain. L'appel « cherchez l'Éternel » précède immédiatement les grandes promesses de restauration des chapitres suivants."
+    },
+    {
+      "titre": "La question de Pierre, juste avant",
+      "corps_html": "La parabole vient immédiatement après l'échange où Pierre demande à Jésus : « Voici, nous avons tout quitté... qu'en sera-t-il pour nous ? » (Mt 19,27). Jésus répond d'abord par la promesse des trônes et du centuple, puis raconte cette parabole qui referme la question sur elle-même : le royaume ne se négocie pas au mérite comparé, il se reçoit d'un maître dont la bonté déborde tout calcul de préséance entre premiers et derniers appelés."
+    }
+  ],
+  "analogie": {
+    "titre": "Le compte qu'on tient sans le savoir",
+    "variantes": [
+      "Tu as tenu ferme des années durant, prié dans des nuits où rien ne répondait, servi sans qu'on te remarque, et sans t'en apercevoir tu as commencé à tenir un compte : tant d'années, tant d'efforts, une créance silencieuse inscrite quelque part en toi. Puis un jour quelqu'un arrive tard, presque sans rien avoir porté, et reçoit pourtant la même paix que celle qu'il t'a fallu tant d'années à obtenir. Ce qui se lève alors en toi n'est pas d'abord la colère contre cet autre, mais la découverte stupéfaite que tu espérais, sans le savoir, être payé de retour — et devant Dieu, ce compte que tu croyais juste se révèle être celui que tu dois déposer.",
+      "Il y a des années où tu sers sans rien voir pousser, où le fruit attendu ne vient pas, où tu continues par une fidélité qui ne se nourrit d'aucun signe. Et puis tu observes, non sans un pincement que tu voudrais taire, la vie de quelqu'un qui semble avoir tout reçu sans avoir traversé cette longue attente — une paix, une évidence de la foi qui te paraît immérité au regard de ce qu'il t'en a coûté à toi. Mais si tu remontes à l'instant où tout a commencé pour toi, tu retrouves la même chose : un don reçu avant tout mérite, une grâce première qui excédait déjà, dès le premier jour, ce que tu pouvais revendiquer.",
+      "Il arrive, dans la prière, un instant de franchise où tu cesses de te raconter ta propre histoire de fidélité et où tu regardes simplement ce qui reste : rien que tu puisses présenter comme un dû, rien qui t'autorise à réclamer davantage qu'un autre parce que tu aurais commencé plus tôt ou tenu plus longtemps. Ce moment est d'abord un dépouillement, presque un vertige, avant d'être un repos — car c'est seulement quand tu renonces à compter que tu peux enfin recevoir sans mesurer, comme on reçoit ce qu'on n'a pas produit soi-même. C'est devant ce Dieu-là, qui donne avant qu'on ait fini de calculer, que tu es appelé aujourd'hui à te tenir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Relire ce texte, ce n'est pas d'abord comprendre une règle de rémunération divine, mais accepter de se laisser déplacer du calcul vers le don.",
+    "geste": "Prends un moment, seul, pour repérer un endroit précis où tu tiens encore un compte devant Dieu — une fidélité que tu voudrais voir reconnue, un service que tu voudrais voir récompensé plus qu'un autre — et nomme-le simplement, sans te juger, devant lui.",
+    "note": "Ce dimanche est le vingt-cinquième du temps ordinaire ; les trois lectures convergent sur un seul point, l'écart entre les pensées de Dieu et les nôtres, qu'Isaïe énonce et que la parabole met en scène."
+  },
+  "question": "Qu'est-ce, en toi, que tu comptes encore comme un dû devant Dieu ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la plainte des premiers",
+      "corps_html": "Jean Chrysostome, dans son homélie sur ce passage, note que les ouvriers de la première heure ne sont pas lésés — ils reçoivent exactement ce qui leur avait été promis — mais que leur regard s'est déplacé du contrat reçu vers le don fait à autrui. Il y voit un avertissement contre l'envie qui ronge jusque dans le service rendu à Dieu, la reléguant au rang d'une comptabilité de mérites plutôt que d'un don reçu.",
+      "attribution": "Jean Chrysostome, Homélies sur l'Évangile de Matthieu, homélie 64"
+    },
+    {
+      "titre": "Calvin : des pensées qui ne se mesurent pas",
+      "corps_html": "Calvin, commentant Ésaïe 55, souligne que l'écart entre les pensées de Dieu et celles des hommes n'est pas d'abord une distance de degré, comme si Dieu pensait seulement « plus » que nous, mais une différence de nature : sa miséricorde procède d'une liberté souveraine qui ne doit rien à nos calculs de mérite. C'est pourquoi, ajoute-t-il, l'homme le plus sûr de sa propre justice est souvent celui qui comprend le moins la grâce.",
+      "attribution": "Jean Calvin, Commentaire sur le livre d'Ésaïe, ch. 55"
+    },
+    {
+      "titre": "Augustin : un denier pour tous",
+      "corps_html": "Augustin voit dans le denier unique versé à tous les ouvriers une figure de la vie éternelle elle-même, bien commun qui ne se partage pas en portions inégales comme un salaire terrestre : on ne peut pas être « plus » vivant éternellement qu'un autre. Ce que Dieu distingue, selon lui, ce sont les récompenses particulières à l'intérieur de cette même vie donnée à tous — mais la vie elle-même, le don premier, reste un denier identique offert sans mesure comparative.",
+      "attribution": "Augustin, Sermon 87 sur l'Évangile de Matthieu"
+    }
+  ]
+}
