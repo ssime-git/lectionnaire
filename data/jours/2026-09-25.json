@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-25",
+  "date_humaine": "vendredi",
+  "semaine": "25ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Qo 3, 1-11 ; Lc 9, 18-22",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 121 h328\"/><path d=\"M64 50 q7 -8 13 0 q-6 8 -13 0 z\"/><path d=\"M66 58 q-14 6 -17 28 q-2 18 8 30\"/><path d=\"M60 80 q10 4 20 2 q10 -1 14 8\"/><path d=\"M50 118 q2 -14 20 -18 q14 -3 22 6\"/><path d=\"M92 106 q6 8 2 15\"/><path d=\"M116 121 L124 110 L168 110 L176 121 Z\"/><path d=\"M140 88 h28\"/><path d=\"M140 110 h28\"/><path d=\"M140 88 L168 110\"/><path d=\"M168 88 L140 110\"/><path d=\"M255 121 Q283 86 320 121\"/></g><g class=\"trait-rubrique\"><path d=\"M235 121 q10 -12 20 0\"/></g><g class=\"trait-liturgie\"><path d=\"M283 62 v38\"/><path d=\"M270 75 h26\"/></g></svg>",
+  "titre": "L'heure",
+  "titre_html": "L'heure <span class=\"it\">qui vient</span>",
+  "sous_titre": "Qohélet et la confession de Pierre, aux deux versants du même temps",
+  "suite_hier": null,
+  "gravure_alt": "Un vieillard assis contemplant un sablier posé sur une pierre plate, tandis qu'au loin, sur la colline, se profile une croix dans la lumière déclinante du soir.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Qo 3, 1-11",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Il y a un <button class=\"mot\" data-g=\"g-eth\">temps</button> pour tout, un temps pour toute chose sous les cieux : <span class=\"s\">2</span> un temps pour naître, et un temps pour mourir ; un temps pour planter, et un temps pour arracher ce qui a été planté ; <span class=\"s\">3</span> un temps pour tuer, et un temps pour guérir ; un temps pour abattre, et un temps pour bâtir ; <span class=\"s\">4</span> un temps pour pleurer, et un temps pour rire ; un temps pour se lamenter, et un temps pour danser ; <span class=\"s\">5</span> un temps pour lancer des pierres, et un temps pour ramasser des pierres ; un temps pour embrasser, et un temps pour s'éloigner des embrassements ; <span class=\"s\">6</span> un temps pour chercher, et un temps pour perdre ; un temps pour garder, et un temps pour jeter ; <span class=\"s\">7</span> un temps pour déchirer, et un temps pour coudre ; un temps pour se taire, et un temps pour parler ; <span class=\"s\">8</span> un temps pour aimer, et un temps pour haïr ; un temps pour la guerre, et un temps pour la paix. <span class=\"s\">9</span> Quel avantage celui qui travaille retire-t-il de sa <button class=\"mot\" data-g=\"g-amal\">peine</button> ? <span class=\"s\">10</span> J'ai vu à quelle occupation Dieu soumet les fils de l'homme. <span class=\"s\">11</span> Il fait toute chose bonne en son temps ; même il a mis dans leur cœur la pensée de l'<button class=\"mot\" data-g=\"g-olam\">éternité</button>, bien que l'homme ne puisse pas saisir l'œuvre que Dieu fait, du commencement jusqu'à la fin.",
+      "gloses": [
+        {
+          "id": "g-eth",
+          "lemme": "‘eth",
+          "html": "Le mot hébreu <span class=\"gr\">‘eth</span> revient une trentaine de fois dans ce poème, comme un battement. Segond le traduit uniformément par « temps », mais l'hébreu ne distingue pas ici la durée qui s'écoule (ce que le grec nommerait <span class=\"gr\">chronos</span>) du moment qui convient et qu'il faut saisir (<span class=\"gr\">kairos</span>) — c'est pourtant ce second sens qui domine : chaque geste a son heure propre, non négociable. Le petit-fils de Ben Sira, traduisant ce livre en grec pour la Septante, choisit précisément <span class=\"gr\">kairos</span>, orientant la lecture vers l'occasion à discerner plutôt que vers le temps qui défile. Calvin, dans l'Institution de la religion chrétienne, y retrouve sa doctrine de la providence : rien n'arrive par hasard, chaque heure porte la marque d'une disposition qui nous dépasse, même quand elle nous échappe entièrement."
+        },
+        {
+          "id": "g-amal",
+          "lemme": "‘amal",
+          "html": "Le mot <span class=\"gr\">‘amal</span> désigne le labeur qui épuise plus qu'il ne construit, la peine sans profit assuré — l'un des termes les plus fréquents de tout le livre. Segond le rend par « peine », traduction juste mais qui efface la nuance économique de l'hébreu : il ne s'agit pas d'abord d'une souffrance mais d'un travail dont on ne maîtrise pas le fruit. Jérôme, qui commenta ce livre à Bethléem pour la jeune Blésilla, y entendait un avertissement contre l'illusion de posséder ce que l'on produit. Le Midrash Qohélet Rabba rapproche ce mot du sort d'Adam condamné à manger son pain à la sueur de son visage."
+        },
+        {
+          "id": "g-olam",
+          "lemme": "‘olam",
+          "html": "<span class=\"gr\">‘olam</span> est un mot qui déborde toute traduction unique : il signifie tantôt la durée cachée aux extrémités du temps, tantôt le monde lui-même dans son étendue. Segond choisit « l'éternité », suivant une tradition ancienne, mais le mot pourrait tout aussi bien désigner l'horizon insaisissable du temps que Dieu seul embrasse. Jérôme, dans son commentaire sur l'Ecclésiaste, relevait déjà cette difficulté et proposait « le monde » comme traduction alternative, plus proche du texte hébreu que l'« éternité » de la Vulgate. Les commentateurs juifs médiévaux, tel Rachi, y voient la faculté que Dieu a mise dans le cœur humain de pressentir ce qui dépasse le temps présent, sans jamais pouvoir le circonscrire."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 143 (144), 1a.2abc, 3-4",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Béni soit l'Éternel, mon rocher, <span class=\"s\">2</span> mon bienfaiteur et ma forteresse, ma haute retraite et mon libérateur, mon bouclier, celui qui est mon refuge, <span class=\"s\">3</span> Éternel, qu'est-ce que l'homme, pour que tu le connaisses ? Le fils de l'homme, pour que tu prennes garde à lui ? <span class=\"s\">4</span> L'homme est semblable à un <button class=\"mot\" data-g=\"g-hebel\">souffle</button>, ses jours sont comme l'ombre qui passe.",
+      "gloses": [
+        {
+          "id": "g-hebel",
+          "lemme": "hebel",
+          "html": "Le mot que le psaume emploie pour « souffle », <span class=\"gr\">hebel</span>, est exactement celui que l'Ecclésiaste martèle au singulier et au pluriel dans sa formule fameuse, « vanité des vanités » — littéralement une buée, un souffle qui se dissipe. Segond traduit ici par « souffle » et là par « vanité », dissimulant en français un mot identique qui relie les deux livres lus aujourd'hui. Le psalmiste ne dit pas que l'homme est mauvais mais qu'il est fugace, fragile comme l'haleine visible un matin d'hiver, qui disparaît dès qu'on la regarde. Augustin, commentant les psaumes, y entend moins un mépris de l'homme qu'un appel à ne pas placer sa confiance dans ce qui passe."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 9, 18-22",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">18</span> Un jour que Jésus priait à l'écart, ayant avec lui ses disciples, il leur posa cette question : Qui dit-on que je suis ? <span class=\"s\">19</span> Ils répondirent : Jean Baptiste ; les autres, Élie ; les autres, qu'un des anciens prophètes est ressuscité. <span class=\"s\">20</span> Mais, leur dit-il, vous, qui dites-vous que je suis ? Pierre répondit : Le <button class=\"mot\" data-g=\"g-christos\">Christ</button> de Dieu. <span class=\"s\">21</span> Jésus leur recommanda sévèrement de ne le dire à personne. <span class=\"s\">22</span> Il ajouta qu'il <button class=\"mot\" data-g=\"g-dei\">fallait</button> que le Fils de l'homme souffrît beaucoup, qu'il fût rejeté par les anciens, par les principaux sacrificateurs et par les scribes, qu'il fût mis à mort, et qu'il ressuscitât le troisième jour.",
+      "gloses": [
+        {
+          "id": "g-christos",
+          "lemme": "ho christos",
+          "html": "« Le Christ de Dieu » traduit le grec <span class=\"gr\">ho christos tou theou</span>, littéralement « l'oint de Dieu » — rendu du titre hébreu « Mashiah ». Pierre ne prononce pas un simple titre honorifique : il reconnaît en Jésus celui que l'onction royale et prophétique d'Israël attendait depuis des siècles. Mais Luc place cette confession juste avant l'annonce de la Passion, comme pour empêcher toute lecture triomphale du mot. Chrysostome remarque, sur la scène parallèle de Matthieu, que Pierre confesse avant de comprendre, et que la pleine intelligence de ce titre n'adviendra qu'après la croix."
+        },
+        {
+          "id": "g-dei",
+          "lemme": "dei",
+          "html": "Le verbe grec <span class=\"gr\">dei</span>, « il faut », est l'un des mots les plus chargés de l'évangile de Luc : il revient à chaque annonce de la Passion et dit une nécessité qui n'est ni le hasard ni la fatalité, mais l'accomplissement d'un dessein. Segond traduit sobrement par « il fallait », ce qui est juste, mais le français ordinaire risque d'aplatir en contrainte extérieure ce que le grec désigne comme la cohérence intime du plan de Dieu inscrit dans l'Écriture. Chrysostome insiste, commentant ce même « il faut » chez Matthieu : cette nécessité n'ôte rien à la liberté de ceux qui rejettent le Christ, elle dit seulement que la croix n'est pas un accident survenu à un dessein contrarié."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un sage face au temps qui ne cède pas",
+      "corps_html": "L'Ecclésiaste (en hébreu Qohélet, « celui qui rassemble l'assemblée ») a probablement été composé aux alentours du III<sup>e</sup> siècle avant notre ère, dans un judaïsme déjà en contact avec la pensée grecque hellénistique. Ce poème des temps, unique dans toute la Bible par sa forme répétitive, ne cherche pas à consoler mais à décrire avec une lucidité rare l'ordre que Dieu impose sans jamais le livrer entièrement à l'intelligence humaine — Jérôme y voyait déjà, au IV<sup>e</sup> siècle, un remède contre l'illusion de maîtriser sa propre vie."
+    },
+    {
+      "titre": "La prière, avant la question qui décide",
+      "corps_html": "Luc est le seul évangéliste à situer cette scène après un temps de prière solitaire de Jésus — trait qu'il répète à chaque tournant décisif du récit : baptême, choix des Douze, transfiguration, Gethsémani. La confession de Pierre marque ainsi la charnière exacte de l'évangile : dès les versets suivants commence, selon la plupart des commentateurs, la longue montée vers Jérusalem où l'enseignement de Jésus se tourne résolument vers la croix."
+    }
+  ],
+  "analogie": {
+    "titre": "Répondre avant de comprendre",
+    "variantes": [
+      "Il y a des moments où tu voudrais que le deuil s'arrête parce que tu es fatigué de pleurer, et d'autres où tu voudrais que la joie dure alors qu'elle s'en va déjà. Tu as beau vouloir avancer l'heure ou la retenir, elle ne t'appartient pas — tu ne fais qu'y entrer, comme on entre dans une pièce déjà éclairée. Ce que Qohélet appelle un temps pour chaque chose n'est pas une case où ranger ta vie, mais l'aveu que ce n'est pas toi qui tiens l'horloge. Devant Dieu, tu peux déposer cette prétention-là : non pas savoir quand vient l'heure, mais savoir à qui elle appartient.",
+      "Il t'est arrivé de répondre juste à une question avant même de savoir pourquoi tu répondais ainsi — un mot sorti de toi plus vite que ta réflexion, et qui pourtant disait vrai. Tu l'as prononcé sans mesurer ce qu'il engageait, et ce n'est que plus tard, parfois bien plus tard, que tu as compris tout ce que cette parole allait te coûter. Pierre dit « le Christ de Dieu » sans savoir encore que ce Christ marche vers la croix. Devant Dieu, la foi commence souvent ainsi : par une confession qui te dépasse, que tu n'as pas fini de comprendre, et qu'il te faudra toute une vie pour habiter vraiment.",
+      "Tu as pu travailler des années à quelque chose — élever un enfant, soigner une amitié, tenir une communauté — sans jamais voir clairement ce que cela produisait, sans certitude que la peine valait la peine. Cette question sourde, Qohélet la pose sans la farder : quel avantage retires-tu de ton labeur ? Elle ne trouve pas de réponse qui rassure d'un coup, mais elle te tourne vers celui qui, seul, voit la totalité de ce que ton travail dessine. Devant Dieu, tu n'as pas besoin de connaître le bilan de ta peine pour la lui remettre telle qu'elle est, inachevée."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Christ pose sa question à l'heure qu'il a choisie, après avoir prié seul. Elle attend, aujourd'hui encore, une réponse qui n'a pas besoin d'être achevée pour être vraie.",
+    "geste": "Redis pour toi-même la question de Jésus — non pas ce qu'on dit de lui, mais ce que toi tu en dis — et laisse la réponse venir même incomplète, même balbutiante.",
+    "note": "Le psaume 144 apprend à nommer Dieu avant de se nommer soi-même : rocher, refuge, force — puis seulement, fils de l'homme, souffle."
+  },
+  "question": "Si la question de Jésus t'atteignait aujourd'hui, avant que tu aies eu le temps de la préparer, quelle réponse monterait en toi ?",
+  "racines": [
+    {
+      "titre": "Le dépouillement selon Jérôme",
+      "corps_html": "Jérôme rédigea son commentaire sur l'Ecclésiaste à Bethléem, vers 389, pour la jeune Blésilla qui venait de perdre son mari et se destinait à la vie ascétique. Il y lit le poème des temps non comme un éloge de la résignation, mais comme un dépouillement progressif : chaque « temps pour » retire à l'homme une prétention, jusqu'à ce qu'il ne reste que la confiance dans le Dieu qui dispose de toute chose en son heure.",
+      "attribution": "Jérôme, Commentaire sur l'Ecclésiaste"
+    },
+    {
+      "titre": "Un livre dont la canonicité fut discutée",
+      "corps_html": "La Mishna (traité Yadayim 3,5) rapporte que les maisons de Shammaï et de Hillel s'opposèrent sur la canonicité de l'Ecclésiaste, jugé par certains trop proche du désespoir pour compter parmi les Écritures qui « rendent les mains impures ». Le débat se referma en faveur de son inclusion, mais la trace de cette hésitation ancienne rappelle combien ce livre a toujours dérangé avant d'être reçu comme parole inspirée.",
+      "attribution": "Mishna, traité Yadayim 3,5"
+    },
+    {
+      "titre": "Pourquoi imposer le silence ?",
+      "corps_html": "Commentant la scène parallèle de Matthieu, Chrysostome s'interroge sur l'ordre de silence qui suit la confession de Pierre : pourquoi taire ce qui vient d'être si justement reconnu ? Il répond que la foule, façonnée par l'attente d'un messie politique, aurait entendu le mot « Christ » à contresens ; il fallait que la croix vienne d'abord requalifier le titre, sous peine de le faire dérailler vers une gloire que Jésus refuse.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'heure — vendredi 25 septembre 2026</title>
+<meta name="description" content="Qohélet et la confession de Pierre, aux deux versants du même temps">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">vendredi 25 septembre 2026 · 25ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>L'heure <span class="it">qui vient</span></h1>
+    <p class="chapeau">Qohélet et la confession de Pierre, aux deux versants du même temps</p>
+    <figure class="gravure" aria-label="Un vieillard assis contemplant un sablier posé sur une pierre plate, tandis qu'au loin, sur la colline, se profile une croix dans la lumière déclinante du soir."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 121 h328"/><path d="M64 50 q7 -8 13 0 q-6 8 -13 0 z"/><path d="M66 58 q-14 6 -17 28 q-2 18 8 30"/><path d="M60 80 q10 4 20 2 q10 -1 14 8"/><path d="M50 118 q2 -14 20 -18 q14 -3 22 6"/><path d="M92 106 q6 8 2 15"/><path d="M116 121 L124 110 L168 110 L176 121 Z"/><path d="M140 88 h28"/><path d="M140 110 h28"/><path d="M140 88 L168 110"/><path d="M168 88 L140 110"/><path d="M255 121 Q283 86 320 121"/></g><g class="trait-rubrique"><path d="M235 121 q10 -12 20 0"/></g><g class="trait-liturgie"><path d="M283 62 v38"/><path d="M270 75 h26"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Qo 3, 1-11 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> Il y a un <button class="mot" data-g="g-eth">temps</button> pour tout, un temps pour toute chose sous les cieux : <span class="s">2</span> un temps pour naître, et un temps pour mourir ; un temps pour planter, et un temps pour arracher ce qui a été planté ; <span class="s">3</span> un temps pour tuer, et un temps pour guérir ; un temps pour abattre, et un temps pour bâtir ; <span class="s">4</span> un temps pour pleurer, et un temps pour rire ; un temps pour se lamenter, et un temps pour danser ; <span class="s">5</span> un temps pour lancer des pierres, et un temps pour ramasser des pierres ; un temps pour embrasser, et un temps pour s'éloigner des embrassements ; <span class="s">6</span> un temps pour chercher, et un temps pour perdre ; un temps pour garder, et un temps pour jeter ; <span class="s">7</span> un temps pour déchirer, et un temps pour coudre ; un temps pour se taire, et un temps pour parler ; <span class="s">8</span> un temps pour aimer, et un temps pour haïr ; un temps pour la guerre, et un temps pour la paix. <span class="s">9</span> Quel avantage celui qui travaille retire-t-il de sa <button class="mot" data-g="g-amal">peine</button> ? <span class="s">10</span> J'ai vu à quelle occupation Dieu soumet les fils de l'homme. <span class="s">11</span> Il fait toute chose bonne en son temps ; même il a mis dans leur cœur la pensée de l'<button class="mot" data-g="g-olam">éternité</button>, bien que l'homme ne puisse pas saisir l'œuvre que Dieu fait, du commencement jusqu'à la fin.</div>
+        <div class="glose" id="g-eth"><span class="lemme">‘eth</span> Le mot hébreu <span class="gr">‘eth</span> revient une trentaine de fois dans ce poème, comme un battement. Segond le traduit uniformément par « temps », mais l'hébreu ne distingue pas ici la durée qui s'écoule (ce que le grec nommerait <span class="gr">chronos</span>) du moment qui convient et qu'il faut saisir (<span class="gr">kairos</span>) — c'est pourtant ce second sens qui domine : chaque geste a son heure propre, non négociable. Le petit-fils de Ben Sira, traduisant ce livre en grec pour la Septante, choisit précisément <span class="gr">kairos</span>, orientant la lecture vers l'occasion à discerner plutôt que vers le temps qui défile. Calvin, dans l'Institution de la religion chrétienne, y retrouve sa doctrine de la providence : rien n'arrive par hasard, chaque heure porte la marque d'une disposition qui nous dépasse, même quand elle nous échappe entièrement.</div>
+        <div class="glose" id="g-amal"><span class="lemme">‘amal</span> Le mot <span class="gr">‘amal</span> désigne le labeur qui épuise plus qu'il ne construit, la peine sans profit assuré — l'un des termes les plus fréquents de tout le livre. Segond le rend par « peine », traduction juste mais qui efface la nuance économique de l'hébreu : il ne s'agit pas d'abord d'une souffrance mais d'un travail dont on ne maîtrise pas le fruit. Jérôme, qui commenta ce livre à Bethléem pour la jeune Blésilla, y entendait un avertissement contre l'illusion de posséder ce que l'on produit. Le Midrash Qohélet Rabba rapproche ce mot du sort d'Adam condamné à manger son pain à la sueur de son visage.</div>
+        <div class="glose" id="g-olam"><span class="lemme">‘olam</span> <span class="gr">‘olam</span> est un mot qui déborde toute traduction unique : il signifie tantôt la durée cachée aux extrémités du temps, tantôt le monde lui-même dans son étendue. Segond choisit « l'éternité », suivant une tradition ancienne, mais le mot pourrait tout aussi bien désigner l'horizon insaisissable du temps que Dieu seul embrasse. Jérôme, dans son commentaire sur l'Ecclésiaste, relevait déjà cette difficulté et proposait « le monde » comme traduction alternative, plus proche du texte hébreu que l'« éternité » de la Vulgate. Les commentateurs juifs médiévaux, tel Rachi, y voient la faculté que Dieu a mise dans le cœur humain de pressentir ce qui dépasse le temps présent, sans jamais pouvoir le circonscrire.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 143 (144), 1a.2abc, 3-4 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Béni soit l'Éternel, mon rocher, <span class="s">2</span> mon bienfaiteur et ma forteresse, ma haute retraite et mon libérateur, mon bouclier, celui qui est mon refuge, <span class="s">3</span> Éternel, qu'est-ce que l'homme, pour que tu le connaisses ? Le fils de l'homme, pour que tu prennes garde à lui ? <span class="s">4</span> L'homme est semblable à un <button class="mot" data-g="g-hebel">souffle</button>, ses jours sont comme l'ombre qui passe.</div>
+        <div class="glose" id="g-hebel"><span class="lemme">hebel</span> Le mot que le psaume emploie pour « souffle », <span class="gr">hebel</span>, est exactement celui que l'Ecclésiaste martèle au singulier et au pluriel dans sa formule fameuse, « vanité des vanités » — littéralement une buée, un souffle qui se dissipe. Segond traduit ici par « souffle » et là par « vanité », dissimulant en français un mot identique qui relie les deux livres lus aujourd'hui. Le psalmiste ne dit pas que l'homme est mauvais mais qu'il est fugace, fragile comme l'haleine visible un matin d'hiver, qui disparaît dès qu'on la regarde. Augustin, commentant les psaumes, y entend moins un mépris de l'homme qu'un appel à ne pas placer sa confiance dans ce qui passe.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 9, 18-22 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">18</span> Un jour que Jésus priait à l'écart, ayant avec lui ses disciples, il leur posa cette question : Qui dit-on que je suis ? <span class="s">19</span> Ils répondirent : Jean Baptiste ; les autres, Élie ; les autres, qu'un des anciens prophètes est ressuscité. <span class="s">20</span> Mais, leur dit-il, vous, qui dites-vous que je suis ? Pierre répondit : Le <button class="mot" data-g="g-christos">Christ</button> de Dieu. <span class="s">21</span> Jésus leur recommanda sévèrement de ne le dire à personne. <span class="s">22</span> Il ajouta qu'il <button class="mot" data-g="g-dei">fallait</button> que le Fils de l'homme souffrît beaucoup, qu'il fût rejeté par les anciens, par les principaux sacrificateurs et par les scribes, qu'il fût mis à mort, et qu'il ressuscitât le troisième jour.</div>
+        <div class="glose" id="g-christos"><span class="lemme">ho christos</span> « Le Christ de Dieu » traduit le grec <span class="gr">ho christos tou theou</span>, littéralement « l'oint de Dieu » — rendu du titre hébreu « Mashiah ». Pierre ne prononce pas un simple titre honorifique : il reconnaît en Jésus celui que l'onction royale et prophétique d'Israël attendait depuis des siècles. Mais Luc place cette confession juste avant l'annonce de la Passion, comme pour empêcher toute lecture triomphale du mot. Chrysostome remarque, sur la scène parallèle de Matthieu, que Pierre confesse avant de comprendre, et que la pleine intelligence de ce titre n'adviendra qu'après la croix.</div>
+        <div class="glose" id="g-dei"><span class="lemme">dei</span> Le verbe grec <span class="gr">dei</span>, « il faut », est l'un des mots les plus chargés de l'évangile de Luc : il revient à chaque annonce de la Passion et dit une nécessité qui n'est ni le hasard ni la fatalité, mais l'accomplissement d'un dessein. Segond traduit sobrement par « il fallait », ce qui est juste, mais le français ordinaire risque d'aplatir en contrainte extérieure ce que le grec désigne comme la cohérence intime du plan de Dieu inscrit dans l'Écriture. Chrysostome insiste, commentant ce même « il faut » chez Matthieu : cette nécessité n'ôte rien à la liberté de ceux qui rejettent le Christ, elle dit seulement que la croix n'est pas un accident survenu à un dessein contrarié.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Un sage face au temps qui ne cède pas</h3><p>L'Ecclésiaste (en hébreu Qohélet, « celui qui rassemble l'assemblée ») a probablement été composé aux alentours du III<sup>e</sup> siècle avant notre ère, dans un judaïsme déjà en contact avec la pensée grecque hellénistique. Ce poème des temps, unique dans toute la Bible par sa forme répétitive, ne cherche pas à consoler mais à décrire avec une lucidité rare l'ordre que Dieu impose sans jamais le livrer entièrement à l'intelligence humaine — Jérôme y voyait déjà, au IV<sup>e</sup> siècle, un remède contre l'illusion de maîtriser sa propre vie.</p></div>
+      <div><h3>La prière, avant la question qui décide</h3><p>Luc est le seul évangéliste à situer cette scène après un temps de prière solitaire de Jésus — trait qu'il répète à chaque tournant décisif du récit : baptême, choix des Douze, transfiguration, Gethsémani. La confession de Pierre marque ainsi la charnière exacte de l'évangile : dès les versets suivants commence, selon la plupart des commentateurs, la longue montée vers Jérusalem où l'enseignement de Jésus se tourne résolument vers la croix.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Répondre avant de comprendre</h2>
+<p>Il y a des moments où tu voudrais que le deuil s'arrête parce que tu es fatigué de pleurer, et d'autres où tu voudrais que la joie dure alors qu'elle s'en va déjà. Tu as beau vouloir avancer l'heure ou la retenir, elle ne t'appartient pas — tu ne fais qu'y entrer, comme on entre dans une pièce déjà éclairée. Ce que Qohélet appelle un temps pour chaque chose n'est pas une case où ranger ta vie, mais l'aveu que ce n'est pas toi qui tiens l'horloge. Devant Dieu, tu peux déposer cette prétention-là : non pas savoir quand vient l'heure, mais savoir à qui elle appartient.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le Christ pose sa question à l'heure qu'il a choisie, après avoir prié seul. Elle attend, aujourd'hui encore, une réponse qui n'a pas besoin d'être achevée pour être vraie.</p>
+      <p class="geste">Redis pour toi-même la question de Jésus — non pas ce qu'on dit de lui, mais ce que toi tu en dis — et laisse la réponse venir même incomplète, même balbutiante.</p>
+      <small>Le psaume 144 apprend à nommer Dieu avant de se nommer soi-même : rocher, refuge, force — puis seulement, fils de l'homme, souffle.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Si la question de Jésus t'atteignait aujourd'hui, avant que tu aies eu le temps de la préparer, quelle réponse monterait en toi ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le dépouillement selon Jérôme</h3>
+          <p>Jérôme rédigea son commentaire sur l'Ecclésiaste à Bethléem, vers 389, pour la jeune Blésilla qui venait de perdre son mari et se destinait à la vie ascétique. Il y lit le poème des temps non comme un éloge de la résignation, mais comme un dépouillement progressif : chaque « temps pour » retire à l'homme une prétention, jusqu'à ce qu'il ne reste que la confiance dans le Dieu qui dispose de toute chose en son heure.</p>
+<p class="attrib">Jérôme, Commentaire sur l'Ecclésiaste</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Un livre dont la canonicité fut discutée</h3>
+          <p>La Mishna (traité Yadayim 3,5) rapporte que les maisons de Shammaï et de Hillel s'opposèrent sur la canonicité de l'Ecclésiaste, jugé par certains trop proche du désespoir pour compter parmi les Écritures qui « rendent les mains impures ». Le débat se referma en faveur de son inclusion, mais la trace de cette hésitation ancienne rappelle combien ce livre a toujours dérangé avant d'être reçu comme parole inspirée.</p>
+<p class="attrib">Mishna, traité Yadayim 3,5</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Pourquoi imposer le silence ?</h3>
+          <p>Commentant la scène parallèle de Matthieu, Chrysostome s'interroge sur l'ordre de silence qui suit la confession de Pierre : pourquoi taire ce qui vient d'être si justement reconnu ? Il répond que la foule, façonnée par l'attente d'un messie politique, aurait entendu le mot « Christ » à contresens ; il fallait que la croix vienne d'abord requalifier le titre, sous peine de le faire dérailler vers une gloire que Jésus refuse.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 25ème Semaine du Temps Ordinaire — Qo 3, 1-11 ; Lc 9, 18-22.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
