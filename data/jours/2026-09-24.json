@@ -1,0 +1,132 @@
+{
+  "date": "2026-09-24",
+  "date_humaine": "jeudi",
+  "semaine": "25ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Qo 1, 2-11 ; Lc 9, 7-9",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M0 118 A600 600 0 0 1 340 118 A600 600 0 1 1 0 118 Z\"/><path d=\"M148 93 A22 22 0 0 1 192 93\"/><path d=\"M170 71 v-16 M154 76 l-9 -12 M186 76 l9 -12\"/><path d=\"M40 118 h72\"/><path d=\"M46 118 v-42\"/><path d=\"M106 118 v-42\"/><path d=\"M46 76 h60\"/><path d=\"M50 118 v14 M100 118 v14\"/></g><g class=\"trait-liturgie\"><path d=\"M55 118 l7 -15 l6 8 l7 -17 l6 8 l7 -14 l5 7\"/><path d=\"M55 118 q20 12 38 -6\"/></g><g class=\"trait-rubrique\"><path d=\"M255 128 q-9 -13 -1 -24 q7 -9 -1 -19 q-7 -8 1 -17 q6 -7 -2 -13\"/><path d=\"M250 46 q3 -3 6 -1 M255 34 q2 -3 5 0\"/></g></svg>",
+  "titre": "Buée et brèche",
+  "titre_html": "Buée <span class=\"it\">et brèche</span>",
+  "sous_titre": "Ecclésiaste, un psaume de Moïse, et la question d'un roi inquiet",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : un soleil à demi levé sur une ligne d'horizon circulaire sans début ni fin, une mince volute de fumée qui monte et se dissout dans l'air, et au premier plan une couronne posée de travers sur un trône vide.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Qo 1, 2-11",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">2</span> <button class=\"mot\" data-g=\"g-hevel\">Vanité</button> des vanités, dit l'<button class=\"mot\" data-g=\"g-qohelet\">Ecclésiaste</button>, vanité des vanités, tout est vanité. <span class=\"s\">3</span> Quel avantage revient-il à l'homme de toute la peine qu'il se donne sous le soleil ? <span class=\"s\">4</span> Une génération s'en va, une autre vient, et la terre subsiste toujours. <span class=\"s\">5</span> Le soleil se lève, le soleil se couche ; il soupire après le lieu d'où il se lève de nouveau. <span class=\"s\">6</span> Le <button class=\"mot\" data-g=\"g-ruach\">vent</button> se dirige vers le midi, tourne vers le nord ; puis il tourne encore, et reprend les mêmes circuits. <span class=\"s\">7</span> Tous les fleuves vont à la mer, et la mer n'est point remplie ; ils continuent à aller vers le lieu où ils se dirigent. <span class=\"s\">8</span> Toutes choses sont en travail au delà de ce qu'on peut dire ; l'œil ne se rassasie pas de voir, et l'oreille ne se lasse pas d'entendre. <span class=\"s\">9</span> Ce qui a été, c'est ce qui sera, et ce qui s'est fait, c'est ce qui se fera ; il n'y a rien de nouveau sous le soleil. <span class=\"s\">10</span> S'il est une chose dont on dise : Vois ceci, c'est nouveau ! cette chose existait déjà dans les siècles qui nous ont précédés. <span class=\"s\">11</span> On ne se souvient pas de ce qui est ancien ; et ce qui arrivera dans la suite ne laissera pas de souvenir chez ceux qui vivront plus tard.</p>",
+      "gloses": [
+        {
+          "id": "g-hevel",
+          "lemme": "hevel",
+          "html": "L'hébreu <span class=\"gr\">hevel</span> désigne d'abord la buée, le souffle qu'on voit un instant se former devant la bouche en hiver avant qu'il ne se dissipe — c'est le nom même donné à Abel (Genèse 4, 2), dont la vie s'éteint sans laisser de trace. Segond traduit par « vanité », suivant la Vulgate de Jérôme (vanitas), elle-même héritière du grec des Septante (<span class=\"gr\">mataiotès</span>) : le latin insiste sur le vide moral, quand l'hébreu insiste sur l'évanescence physique. Paul reprend ce même mot grec en Romains 8, 20 pour dire que la création est « soumise à la vanité » — inscrivant Qoheleth dans une attente qui dépasse le livre lui-même. Perdre l'image concrète du souffle qui se dissipe, c'est risquer de lire ce texte comme un simple pessimisme moral, alors qu'il décrit d'abord une expérience sensible du temps."
+        },
+        {
+          "id": "g-qohelet",
+          "lemme": "Qohélet",
+          "html": "Le titre hébreu <span class=\"gr\">Qohélet</span> vient de la racine qahal, l'assemblée : c'est, littéralement, « celui qui rassemble » ou « qui parle à l'assemblée », un participe féminin employé comme titre de fonction. Le grec le traduit par <span class=\"gr\">ekklèsiastès</span>, d'où viennent à la fois notre « Ecclésiaste » et le mot « Église » (ekklèsia), les deux désignant une assemblée convoquée. Jérôme, dans son Commentaire sur l'Ecclésiaste, garde le mot grec plutôt que de le traduire, estimant qu'aucun terme latin n'en rendait la fonction ; Segond fait le même choix de prudence. La tradition a longtemps identifié cette voix à Salomon, « fils de David, roi à Jérusalem » (1, 1), sans que le texte lui-même use jamais ce nom dans le corps du livre."
+        },
+        {
+          "id": "g-ruach",
+          "lemme": "ruach",
+          "html": "Le mot hébreu <span class=\"gr\">ruach</span>, traduit ici par « vent », est le même qui désigne le souffle de l'homme, l'esprit, et l'Esprit de Dieu planant sur les eaux en Genèse 1, 2. Les Septante ne distinguent pas les deux emplois et traduisent chaque fois par <span class=\"gr\">pneuma</span> : le lecteur grec de l'Ecclésiaste lisait donc, à la lettre, que « le pneuma va vers le midi, tourne vers le nord », avec le vertige que cela suppose. Le français, en séparant nettement « vent » et « Esprit », referme une ambiguïté que le texte original tenait ouverte. Qoheleth décrit ici un mouvement sans but apparent ; mais le mot qu'il choisit porte déjà, en germe, la possibilité d'un tout autre usage."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 89 (90), 3-4, 5-6, 12-13, 14.17abc",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">3</span> Tu fais rentrer les hommes dans la poussière, et tu dis : <button class=\"mot\" data-g=\"g-adam\">Fils de l'homme</button>, retournez ! <span class=\"s\">4</span> Car mille ans sont, à tes yeux, comme le jour d'hier, quand il n'est plus, et comme une <button class=\"mot\" data-g=\"g-veille\">veille de la nuit</button>. <span class=\"s\">5</span> Tu les emportes, semblables à un songe, qui, le matin, passe comme l'herbe : <span class=\"s\">6</span> elle fleurit le matin, et elle passe ; on la coupe le soir, et elle sèche. <span class=\"s\">12</span> Enseigne-nous à bien compter nos jours, afin que nous appliquions notre cœur à la sagesse. <span class=\"s\">13</span> Reviens, Éternel ! Jusques à quand ?... Aie pitié de tes serviteurs ! <span class=\"s\">14</span> Rassasie-nous chaque matin de ta <button class=\"mot\" data-g=\"g-hessed\">bonté</button>, et nous serons toute notre vie dans la joie et l'allégresse. <span class=\"s\">17</span> Que la grâce de l'Éternel, notre Dieu, soit sur nous ! Affermis l'ouvrage de nos mains, affermis l'ouvrage de nos mains.</p>",
+      "gloses": [
+        {
+          "id": "g-adam",
+          "lemme": "benei adam",
+          "html": "« Fils de l'homme » traduit l'hébreu <span class=\"gr\">benei adam</span>, littéralement « fils d'Adam » — et le verset joue sur la parenté sonore entre adam (l'homme) et adamah (la terre, l'humus) que le français ne peut pas garder. Dieu venant de dire qu'il fait « rentrer les hommes dans la poussière », l'ordre « retournez ! » renvoie l'homme à la matière même dont il fut tiré en Genèse 2, 7, et que la sentence de Genèse 3, 19 lui rappelle après la faute : « tu retourneras dans la poussière ». Ce n'est donc pas une formule générale sur la condition humaine, mais le rappel précis d'un nom qui contient déjà sa propre origine et sa fin."
+        },
+        {
+          "id": "g-veille",
+          "lemme": "ashmurah",
+          "html": "Une « veille de la nuit » (<span class=\"gr\">ashmurah</span> en hébreu) est une durée de garde militaire ou de surveillance : à l'époque du psaume, la nuit se divisait en trois veilles, plus tard en quatre sous l'influence romaine, comme en témoigne encore Marc 13, 35 (« le soir, ou à minuit, ou au chant du coq, ou le matin »). Une veille est le temps le plus fugace qu'on puisse mesurer — on s'y tient éveillé sans voir passer les heures, on la remarque à peine une fois finie. En comparant mille ans, aux yeux de Dieu, à une veille déjà écoulée, le psaume dit que l'immensité du temps humain est, pour lui, plus ténue encore qu'un quart de nuit qu'on n'a pas su retenir."
+        },
+        {
+          "id": "g-hessed",
+          "lemme": "hessed",
+          "html": "Le mot hébreu <span class=\"gr\">hessed</span>, que Segond rend ici par « bonté », est l'un des termes les plus riches et les plus disputés de l'Ancien Testament : il désigne moins un sentiment qu'une fidélité agissante, l'attachement que Dieu se doit à lui-même dans l'alliance. Les Septante le traduisent le plus souvent par <span class=\"gr\">éléos</span> (la miséricorde), d'où la Vulgate misericordia — un choix qui insiste sur la compassion là où l'hébreu insiste sur la constance. Calvin, dans son Commentaire sur les Psaumes, relève que demander cette bonté « chaque matin » suppose de reconnaître qu'on ne la possède jamais d'avance, qu'elle doit être redemandée comme le pain du jour. Aucun mot français ne rassemble à la fois la fidélité, la grâce et la tendresse que porte l'hébreu en un seul terme."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 9, 7-9",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">7</span> Hérode le <button class=\"mot\" data-g=\"g-tetrarque\">tétrarque</button> entendit parler de tout ce qui se passait, et il <button class=\"mot\" data-g=\"g-aporeo\">ne savait que penser</button>. Car les uns disaient que Jean était ressuscité des morts ; <span class=\"s\">8</span> d'autres, qu'Élie était apparu ; et d'autres, qu'un des anciens prophètes était ressuscité. <span class=\"s\">9</span> Mais Hérode disait : J'ai fait décapiter Jean ; qui donc est celui-ci, dont j'entends dire de telles choses ? Et il cherchait à le voir.</p>",
+      "gloses": [
+        {
+          "id": "g-tetrarque",
+          "lemme": "tétrarchès",
+          "html": "Le grec <span class=\"gr\">tétrarchès</span> désigne, à la lettre, celui qui gouverne un quart de territoire : à la mort d'Hérode le Grand, en l'an 4 avant notre ère, son royaume fut partagé par Rome entre ses fils, et Hérode Antipas reçut la Galilée et la Pérée avec ce titre subalterne, non celui de roi. Flavius Josèphe, dans ses Antiquités judaïques, détaille ce partage et le statut précaire de ces princes vassaux, entièrement dépendants du bon vouloir de l'empereur. Segond garde le mot technique plutôt que de le franciser en « prince » : rappel discret que l'homme troublé par la rumeur sur Jésus n'est pas un souverain libre, mais un pouvoir de seconde main, nerveux de tout ce qui pourrait lui échapper."
+        },
+        {
+          "id": "g-aporeo",
+          "lemme": "diêporei",
+          "html": "« Il ne savait que penser » traduit le grec <span class=\"gr\">diêporei</span>, un verbe composé et intensifié (dia-) à partir d'aporos, « sans passage, sans issue » : Hérode n'est pas seulement perplexe, il est littéralement dans une impasse, incapable de trouver un chemin de pensée qui tienne. Luc emploie la même racine en Actes 2, 12, pour décrire la foule bouleversée à la Pentecôte, ne sachant que dire devant ce qui lui échappe — un écho que seul l'auteur des deux livres pouvait tisser. Le mot dit donc bien plus qu'une curiosité de cour : une inquiétude qui ne trouve nulle part où se poser, jusqu'à pousser Hérode à vouloir voir de ses yeux celui qui la cause."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un livre de sagesse, un psaume de Moïse",
+      "corps_html": "L'Ecclésiaste appartient à la littérature de sagesse, aux côtés de Job et des Proverbes, et la tradition l'a rattaché à Salomon (1, 1), sans que le nom soit jamais repris dans le corps du livre. Le psaume 90 porte quant à lui un titre unique dans tout le psautier : « Prière de Moïse, homme de Dieu » — seul texte attribué au législateur d'Israël parmi les cent cinquante psaumes. Les deux textes, l'un tardif, l'autre placé sous le nom du plus ancien des prophètes, se rejoignent pour interroger la même question : que reste-t-il, devant Dieu, de la durée d'une vie humaine ?"
+    },
+    {
+      "titre": "Une question qui traverse tout le chapitre",
+      "corps_html": "Ce court épisode se situe entre l'envoi des Douze en mission (9, 1-6) et la multiplication des pains (9, 10-17) : Luc ne raconte jamais, à la différence de Marc (6, 17-29), le banquet et la décapitation de Jean-Baptiste — il n'y fait allusion qu'ici, dans la bouche inquiète d'Hérode. La question qu'il pose, « qui donc est celui-ci ? », annonce celle que Jésus posera lui-même à ses disciples treize versets plus loin : « Mais vous, qui dites-vous que je suis ? » (9, 20). Le trouble d'un roi ouvre ainsi, par contraste, la place d'une confession de foi."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui revient, ce qui s'ouvre",
+    "variantes": [
+      "Il y a des saisons où prier ressemble à ce vent de Qoheleth qui tourne vers le nord, puis vers le midi, puis recommence : tu dis les mêmes mots, tu reviens aux mêmes demandes, et rien ne semble se déposer nulle part, comme ces fleuves qui vont à la mer sans jamais la remplir. Tu pourrais conclure que ce mouvement ne mène à rien, qu'il n'y a, comme dit le texte, rien de nouveau sous ton soleil à toi. Mais c'est précisément dans ce cercle sans issue apparente que quelque chose, un jour, se met à t'attendre — non pas au bout du chemin, mais depuis toujours à l'intérieur de lui, comme si Dieu s'était tenu depuis le début à l'endroit même où tu tournais en rond sans le savoir.",
+      "Tu as sans doute connu ce moment où, sans raison précise, tu comptes : le nombre d'années depuis un départ, depuis une naissance, depuis un mot que tu n'as pas dit à temps, et ce calcul te tombe dessus avec un poids que tu ne lui connaissais pas la veille. Ce n'est pas de la nostalgie, c'est plus sec que cela : une évidence brève que le temps que tu croyais posséder t'a en réalité toujours échappé, comme l'herbe du psaume qui fleurit le matin et sèche avant le soir. Ce chiffre qui te traverse n'est pas donné pour t'accabler ; il est la première phrase d'une prière que tu n'as pas encore su adresser, et qui ne trouve son répondant que devant celui qui, lui, n'a pas d'âge.",
+      "Il y a des questions qu'on croit avoir refermées et qui reviennent frapper, des années plus tard, sans qu'on les ait convoquées — au détour d'une phrase entendue, d'un deuil, d'un silence trop long dans une prière. Tu peux les occuper, comme Hérode occupe la sienne en cherchant seulement à voir de ses yeux, mais l'inquiétude qu'elles creusent en toi ne se calme pas par la curiosité. Ce qui remonte alors n'est pas une énigme à résoudre mais une adresse déjà commencée, celle d'un Dieu qui, avant même que tu formules la question, se tient devant toi et attend, non ta réponse toute faite, mais que tu la lui rapportes enfin en face."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer ce jour, laisse remonter, sans la forcer, la question qui t'a le plus dérangé dans ces lectures — pas celle que tu attendais, mais celle que le texte a fait bouger en toi.",
+    "geste": "Écris-la en une phrase, telle quelle, même incomplète, et dépose-la devant Dieu sans chercher tout de suite à la refermer par une réponse.",
+    "note": "Ni Qoheleth ni Hérode ne reçoivent, dans ces versets, de réponse close : le texte ne promet pas une consolation immédiate, mais la certitude qu'il existe, devant ta question, quelqu'un qui ne se dérobe pas."
+  },
+  "question": "Qu'est-ce qui, en toi, tourne depuis longtemps sans jamais trouver d'issue — et oses-tu vraiment le déposer devant Dieu, ou préfères-tu, comme Hérode, seulement chercher à voir ?",
+  "racines": [
+    {
+      "titre": "Grégoire de Nysse : au-delà de ce qui passe",
+      "corps_html": "Dans ses Homélies sur l'Ecclésiaste, Grégoire de Nysse lit le mot « vanité » non comme une condamnation du monde mais comme une pédagogie : en multipliant les images de choses qui passent, Qoheleth voudrait détacher le désir humain de tout ce qui, en ce monde, ne peut le combler, pour le tourner vers le seul bien qui ne se dissipe pas. Le vide n'est pas la dernière parole du livre, mais la voie négative par laquelle il conduit son lecteur.",
+      "attribution": "Grégoire de Nysse, Homélies sur l'Ecclésiaste, IVe siècle"
+    },
+    {
+      "titre": "Jérôme et le nom qu'on garde",
+      "corps_html": "Jérôme, qui traduisit et commenta l'Ecclésiaste à Bethléem à la fin du IVe siècle, choisit de conserver le mot grec ekklèsiastès plutôt que de le traduire, estimant qu'aucun mot latin n'en rendait la fonction de rassembleur d'assemblée. Ce choix de prudence, que Segond reprend à son tour en français, rappelle que certains mots bibliques résistent volontairement à la traduction, et que cette résistance elle-même porte un sens.",
+      "attribution": "Jérôme, Commentaire sur l'Ecclésiaste, vers 389"
+    },
+    {
+      "titre": "Chrysostome : la peur d'une conscience",
+      "corps_html": "Commentant l'épisode parallèle chez Matthieu, Jean Chrysostome lit dans le trouble d'Hérode moins une curiosité pieuse qu'une panique de conscience coupable : celui qui a fait taire une voix par la violence ne peut plus, ensuite, entendre parler d'aucune voix sans y reconnaître, malgré lui, celle qu'il a fait taire. Chercher à voir Jésus, chez Hérode, est encore une manière de fuir ce qu'il sait déjà de lui-même.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 48"
+    }
+  ]
+}
