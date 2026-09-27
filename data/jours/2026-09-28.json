@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-28",
+  "date_humaine": "lundi",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jb 1, 6-22 ; Lc 9, 46-50",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M148 42 Q150 20 170 18 Q190 20 192 42\"/><path d=\"M156 20 L154 6 M164 17 L163 3 M171 16 L171 2 M179 17 L180 3 M187 20 L189 6\"/><path d=\"M170 42 V58\"/><path d=\"M152 58 H188\"/><path d=\"M152 58 L146 70 Q152 76 158 70 Z\"/><path d=\"M188 58 L182 70 Q188 76 194 70 Z\"/><path d=\"M55 100 L95 62 L138 98\"/><path d=\"M62 100 V118 M128 96 L134 120\"/><path d=\"M70 122 L80 116 M95 124 L103 117\"/><path d=\"M14 128 H326\"/><path d=\"M95 128 L90 97 M235 128 L241 96 M285 128 L280 98\"/><path d=\"M84 97 Q90 87 96 97 M235 96 Q241 86 247 96 M274 98 Q280 88 286 98\"/><path d=\"M84 92 L76 89 M247 91 L255 88 M286 93 L294 90\"/><path d=\"M159 110 Q165 100 171 110 M161 111 L157 128 M169 111 L173 128 M157 122 L173 122\"/></g><g class=\"trait-rubrique\"><path d=\"M8 55 Q50 40 95 52 Q130 60 150 48\"/><path d=\"M15 75 Q55 62 100 72 Q135 80 155 66\"/><path d=\"M20 92 Q60 82 105 90 Q138 96 158 84\"/></g></svg>",
+  "titre": "La main qui donne",
+  "titre_html": "La main <span class=\"it\">qui donne</span>",
+  "sous_titre": "Job dépouillé de tout ; les disciples disputant de la grandeur",
+  "suite_hier": null,
+  "gravure_alt": "Une main ouverte tenant une petite balance vide, suspendue au-dessus d'une maison qui s'effondre sous un vent noir ; au premier plan, un enfant assis parmi des hommes qui détournent les yeux les uns des autres.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jb 1, 6-22",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">6</span> Or, les fils de Dieu vinrent se présenter devant l'Éternel, et <button class=\"mot\" data-g=\"g-satan\">Satan</button> vint aussi au milieu d'eux. <span class=\"s\">7</span> L'Éternel dit à Satan: D'où viens-tu? Et Satan répondit à l'Éternel: De parcourir la terre et de m'y promener. <span class=\"s\">8</span> L'Éternel dit à Satan: As-tu remarqué mon serviteur Job? Il n'y a personne comme lui sur la terre; c'est un homme <button class=\"mot\" data-g=\"g-tam\">intègre</button> et droit, craignant Dieu, et se détournant du mal. <span class=\"s\">9</span> Et Satan répondit à l'Éternel: Est-ce d'une manière désintéressée que Job craint Dieu? <span class=\"s\">10</span> Ne l'as-tu pas protégé, lui, sa maison, et tout ce qui lui appartient? Tu as béni l'oeuvre de ses mains, et ses troupeaux couvrent le pays. <span class=\"s\">11</span> Mais étends ta main, touche à tout ce qui lui appartient, et je suis sûr qu'il te <button class=\"mot\" data-g=\"g-maudit\">maudit</button> en face. <span class=\"s\">12</span> L'Éternel dit à Satan: Voici, tout ce qui lui appartient, je te le livre; seulement, ne porte pas la main sur lui. Et Satan se retira de devant la face de l'Éternel. <span class=\"s\">13</span> Un jour que les fils et les filles de Job mangeaient et buvaient du vin dans la maison de leur frère aîné, <span class=\"s\">14</span> il arriva auprès de Job un messager qui dit: Les boeufs labouraient et les ânesses paissaient à côté d'eux; <span class=\"s\">15</span> des Sabéens se sont jetés sur eux, les ont enlevés, et ont passé les serviteurs au fil de l'épée. Et je me suis échappé moi seul, pour t'en apporter la nouvelle. <span class=\"s\">16</span> Il parlait encore, lorsqu'un autre vint et dit: Le feu de Dieu est tombé du ciel, a embrasé les brebis et les serviteurs, et les a consumés. Et je me suis échappé moi seul, pour t'en apporter la nouvelle. <span class=\"s\">17</span> Il parlait encore, lorsqu'un autre vint et dit: Des Chaldéens, formés en trois bandes, se sont jetés sur les chameaux, les ont enlevés, et ont passé les serviteurs au fil de l'épée. Et je me suis échappé moi seul, pour t'en apporter la nouvelle. <span class=\"s\">18</span> Il parlait encore, lorsqu'un autre vint et dit: Tes fils et tes filles mangeaient et buvaient du vin dans la maison de leur frère aîné; <span class=\"s\">19</span> et voici, un grand vent est venu de l'autre côté du désert, et a frappé les quatre coins de la maison; elle est tombée sur les jeunes gens, et ils sont morts; et je me suis échappé moi seul, pour t'en apporter la nouvelle. <span class=\"s\">20</span> Alors Job se leva, déchira son manteau, et se rasa la tête; puis, se jetant par terre, il se prosterna, <span class=\"s\">21</span> et dit: Je suis sorti <button class=\"mot\" data-g=\"g-nu\">nu</button> du sein de ma mère, et nu je retournerai dans le sein de la terre. L'Éternel a donné, et l'Éternel a ôté; que le nom de l'Éternel soit <button class=\"mot\" data-g=\"g-beni\">béni</button>! <span class=\"s\">22</span> En tout cela, Job ne pécha point, et il n'attribua rien d'injuste à Dieu.",
+      "gloses": [
+        {
+          "id": "g-satan",
+          "lemme": "satan",
+          "html": "hébreu <span class=\"gr\">satan</span> — pas encore un nom propre dans Job, mais un titre, presque une fonction de cour : « l'adversaire », celui qui accuse ou qui met à l'épreuve. Segond garde le mot hébreu tel quel, ce qui est fidèle : le texte porte l'article, « ha-satan », « l'Adversaire », comme un rôle et non une personne déjà identifiée. Ce n'est que dans la littérature intertestamentaire, puis dans le Nouveau Testament, que le mot devient le nom du diable. Grégoire le Grand, dans ses Moralia in Job, insiste : il se tient parmi les fils de Dieu, il ne peut rien faire sans une permission expressément accordée."
+        },
+        {
+          "id": "g-tam",
+          "lemme": "tam",
+          "html": "hébreu <span class=\"gr\">tam</span>, que Segond traduit « intègre ». Le mot ne dit pas une perfection morale absolue mais une cohérence, une unité entre le dedans et le dehors — on pourrait dire « sans faille », « d'une seule pièce ». Calvin, dans ses sermons sur Job, prend soin de préciser que ce n'est pas l'innocence totale que Dieu loue en son serviteur, mais une droiture réelle, non feinte, qui n'exclut pas l'épreuve à venir."
+        },
+        {
+          "id": "g-maudit",
+          "lemme": "maudit",
+          "html": "le verbe traduit ici par « maudire » est en hébreu <span class=\"gr\">barak</span>, qui signifie très exactement « bénir ». Les scribes juifs, jugeant le blasphème trop grave pour être écrit noir sur blanc, ont substitué par euphémisme « bénir » à « maudire » chaque fois que le sujet du verbe risquait d'être Dieu lui-même — la tradition rabbinique appelle ce procédé un « tiqqoun sofrim », une correction des scribes. Segond traduit donc l'intention réelle du texte, « maudire », mais efface ainsi la trace du scandale que le mot hébreu portait encore visiblement."
+        },
+        {
+          "id": "g-nu",
+          "lemme": "'arom",
+          "html": "hébreu <span class=\"gr\">'arom</span>, « nu », le mot même qui décrit Adam et Ève avant la faute en Genèse 2 et 3. Job, dépouillé de tout, revient au dénuement originel, antérieur à toute possession — non pas déchu, mais rendu à sa condition première devant Dieu. Jean Chrysostome, dans ses homélies sur Job, voit dans ce retour à la nudité la vraie mesure de l'homme : ce qu'il possède n'a jamais été à lui."
+        },
+        {
+          "id": "g-beni",
+          "lemme": "barouk",
+          "html": "hébreu <span class=\"gr\">barouk</span>, « béni », de la même racine que le verbe employé plus haut par euphémisme pour « maudire » — le texte referme ainsi la blessure du verset 11 en y opposant, dans la bouche même de Job, la bénédiction vraie. Cette formule, « béni soit le Nom », est devenue dans la liturgie synagogale une réponse rituelle, le « baroukh Hashem » que prononce encore aujourd'hui tout croyant juif à l'annonce d'un deuil."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 16 (17), 1, 3, 4b-5, 7",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Éternel! écoute la <button class=\"mot\" data-g=\"g-tsedeq\">droiture</button>, sois attentif à mes cris, prête l'oreille à ma prière faite avec des lèvres sans tromperie! <span class=\"s\">3</span> Si tu <button class=\"mot\" data-g=\"g-bachan\">sondes</button> mon coeur, si tu le visites la nuit, si tu m'éprouves, tu ne trouveras rien : ma pensée n'est pas autre que ce qui sort de ma bouche. <span class=\"s\">4b</span> fidèle à la parole de tes lèvres, je me tiens en garde contre la voie des violents. <span class=\"s\">5</span> Mes pas sont fermes dans tes sentiers, mes pieds ne chancellent point. <span class=\"s\">7</span> Signale ta <button class=\"mot\" data-g=\"g-chesed\">bonté</button>, toi qui sauves ceux qui cherchent un refuge, et qui par ta droite les délivres de leurs adversaires.",
+      "gloses": [
+        {
+          "id": "g-tsedeq",
+          "lemme": "tsedeq",
+          "html": "hébreu <span class=\"gr\">tsedeq</span>, que Segond rend par « droiture » — le mot couvre tout un champ que le français découpe en plusieurs termes : justice, conformité à une norme, ce qui est droit devant un critère extérieur à soi. Le psalmiste ne revendique pas une vertu privée mais demande que Dieu regarde sa cause selon cette norme commune, celle de l'alliance. Les targums araméens gardent la même racine pour désigner la justification finale de l'innocent devant son juge."
+        },
+        {
+          "id": "g-bachan",
+          "lemme": "bachan",
+          "html": "hébreu <span class=\"gr\">bachan</span>, « sonder », est le verbe technique de l'épreuve des métaux : on éprouve l'or au feu pour vérifier qu'il ne contient pas d'alliage. Le psalmiste demande donc à Dieu un examen de cette précision-là, jusqu'à la nuit, jusqu'au rêve, là où l'homme ne contrôle plus son discours. Le Midrash Tehillim rapproche ce verset de l'épreuve d'Abraham, dont le coeur fut « sondé » sans qu'il le sache d'avance."
+        },
+        {
+          "id": "g-chesed",
+          "lemme": "chesed",
+          "html": "hébreu <span class=\"gr\">chesed</span>, un des mots les plus riches de l'Ancien Testament, que Segond traduit ici par « bonté » alors qu'ailleurs il choisit « grâce » ou « miséricorde » — aucun mot français ne suffit, car le chesed désigne la fidélité d'un lien d'alliance, une bonté qui a fait promesse et qui s'y tient. Calvin, commentant les psaumes, insiste : ce n'est pas une bonté générale envers toute créature, mais celle que Dieu réserve à qui s'est réfugié en lui."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 9, 46-50",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">46</span> Or, une pensée leur vint à l'esprit, savoir lequel d'entre eux était le plus grand. <span class=\"s\">47</span> Jésus, voyant la pensée de leur coeur, prit un <button class=\"mot\" data-g=\"g-paidion\">petit enfant</button>, le plaça à côté de lui, <span class=\"s\">48</span> et leur dit: Quiconque <button class=\"mot\" data-g=\"g-dechomai\">reçoit</button> en mon nom ce petit enfant me reçoit moi-même; et quiconque me reçoit reçoit celui qui m'a envoyé. Car celui qui est le plus <button class=\"mot\" data-g=\"g-mikroteros\">petit</button> parmi vous tous, c'est celui-là qui est grand. <span class=\"s\">49</span> Jean prit la parole, et dit: Maître, nous avons vu un homme qui chasse des démons en ton nom; et nous l'en avons <button class=\"mot\" data-g=\"g-koluo\">empêché</button>, parce qu'il ne nous suit pas. <span class=\"s\">50</span> Jésus lui répondit: Ne l'en empêchez pas; car qui n'est pas contre vous est pour vous.",
+      "gloses": [
+        {
+          "id": "g-paidion",
+          "lemme": "paidion",
+          "html": "grec <span class=\"gr\">paidion</span>, diminutif de <span class=\"gr\">pais</span>, « enfant » — un tout petit enfant, sans statut juridique ni voix dans l'assemblée, ce que la société antique plaçait au dernier rang, non par cruauté mais parce que l'enfant ne pouvait encore rien apporter, rien échanger. Jésus ne le prend pas comme exemple de pureté ou d'innocence — idée plus tardive — mais comme figure du sans-titre, de celui qu'on peut recevoir ou négliger sans conséquence sociale. Chrysostome, dans son homélie sur ce passage, note que Jésus choisit précisément ce qui, dans le monde, ne compte pour rien."
+        },
+        {
+          "id": "g-dechomai",
+          "lemme": "dechomai",
+          "html": "grec <span class=\"gr\">dechomai</span>, « recevoir », « accueillir » — le mot de l'hospitalité, celui qu'on emploie pour un hôte qu'on loge et qu'on nourrit, non celui d'une simple tolérance. Segond traduit fidèlement, mais le français « recevoir » a perdu la chaleur concrète du geste d'accueil sous un toit que porte encore le grec. La chaîne que trace Jésus — recevoir l'enfant, c'est recevoir le Fils, c'est recevoir le Père — repose entièrement sur ce verbe d'hospitalité."
+        },
+        {
+          "id": "g-mikroteros",
+          "lemme": "mikroteros",
+          "html": "grec <span class=\"gr\">mikroteros</span>, comparatif de « petit » — littéralement « le plus petit », que Segond rend sans forcer le sens, mais l'inversion qui suit (« c'est celui-là qui est grand ») retourne toute l'échelle que les disciples venaient de dresser entre eux au verset 46. Augustin, dans ses Confessions, revient sur ce renversement pour dire que l'humilité n'est pas une vertu parmi d'autres mais la porte par laquelle toutes les autres entrent."
+        },
+        {
+          "id": "g-koluo",
+          "lemme": "kôluô",
+          "html": "grec <span class=\"gr\">ekôluomen</span>, de <span class=\"gr\">kôluô</span>, « empêcher », « faire obstacle » — le même verbe revient dans les Actes des Apôtres à propos du baptême des païens, « qui peut empêcher (kôluô) qu'ils soient baptisés ? » (Ac 10, 47), toujours pour être levé. Jean parle au nom du groupe, « nous l'en avons empêché » : la question du verset 46, qui est le plus grand, n'a pas disparu, elle s'est seulement déplacée sur la frontière de qui a le droit d'agir en ce nom."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La cour céleste",
+      "corps_html": "Le prologue de Job (ch. 1-2) est écrit en prose, alors que le corps du livre — les dialogues avec les trois amis — est un long poème : deux mains, deux genres, réunis très tôt dans la tradition, avant l'exil selon la plupart des critiques. La scène où des « fils de Dieu » se présentent devant l'Éternel reprend une image répandue dans tout le Proche-Orient ancien, celle d'une assemblée divine délibérante, attestée dans les textes d'Ougarit. L'auteur biblique la reprend pour la subordonner entièrement : Satan y siège, mais il n'agit jamais sans permission expresse."
+    },
+    {
+      "titre": "Juste après l'annonce de la Passion",
+      "corps_html": "Cette dispute sur la grandeur suit immédiatement, dans Luc, la seconde annonce de la passion (9, 44-45) : « le Fils de l'homme sera livré aux mains des hommes ». Les disciples ne comprennent pas cette parole et ils ont peur de l'interroger — et c'est à cet instant précis qu'ils se demandent lequel d'entre eux est le plus grand. Le contraste est voulu par l'évangéliste : au moment où Jésus s'annonce livré, les Douze discutent des places. Origène, dans ses homélies sur Luc, y voit la preuve que la gloire selon Dieu et la gloire selon les hommes n'ont rien de commun."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui reste quand tout est repris",
+    "variantes": [
+      "Il y a des jours où tu perds quelque chose que tu croyais être à toi depuis toujours — une certitude, une personne, une part de ta santé — et où, contre toute logique, la prière qui monte en toi n'est pas la révolte mais un apaisement que tu ne t'expliques pas. Tu ne l'as pas fabriqué, tu ne l'as pas mérité par ta foi ; il est simplement là, comme un sol qui tenait sous la maison avant même que tu saches qu'elle pouvait s'effondrer. C'est ce sol-là que Job trouve sous ses pieds nus, et c'est devant lui, jamais devant sa propre force, qu'il se prosterne.",
+      "Tu as déjà senti, en apprenant qu'un autre faisait sans toi le bien que tu croyais être ta tâche, un mouvement intérieur qui n'était pas de la joie — un pincement, presque une contrariété, avant même que tu aies eu le temps de le juger. Ce mouvement ne dit rien de l'autre ; il dit ce que tu avais discrètement mis de toi-même dans ce que tu pensais faire pour Dieu seul. Reconnaître ce pincement, sans le nier ni s'y complaire, c'est déjà se tenir au bord de la question que Jésus pose à ses disciples, et se laisser déplacer par elle.",
+      "Il t'est arrivé de te retrouver, après un échec ou une mise à l'écart, sans plus rien à faire valoir devant personne — plus de titre, plus de rôle qui te rende utile aux yeux des autres. Dans cet instant précis, dépouillé de tout ce par quoi tu comptais, une présence a pu se faire sentir qui ne demandait de toi aucune preuve, aucune fonction, seulement que tu sois là. C'est cette présence-là, offerte sans condition à qui n'a plus rien à échanger, que Jésus place au milieu des disciples sous les traits d'un enfant."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Prends aujourd'hui un moment pour repasser, sans les juger, deux ou trois choses que tu tiens pour acquises — une relation, une santé, une place reconnue.",
+    "geste": "Nomme-les intérieurement une à une, puis dis simplement, à voix basse ou en silence : L'Éternel a donné. Laisse le reste de la phrase venir, ou ne pas venir.",
+    "note": "Ce n'est pas un exercice de détachement stoïcien : c'est reconnaître, devant Dieu, que tout ce que tu tiens t'a d'abord été confié."
+  },
+  "question": "Qu'est-ce qui, en toi, mesure encore la grandeur autrement que Dieu ne la mesure ?",
+  "racines": [
+    {
+      "titre": "Le procureur soumis",
+      "corps_html": "Grégoire le Grand consacre les premiers livres de ses Moralia in Job (vers 590) au prologue : il s'arrête longuement sur le fait que Satan doive demander, obtenir, puis à nouveau demander une extension de son pouvoir sur Job. Rien, selon lui, n'échappe à cette économie de la permission — pas même le mal le plus violent. La souffrance de Job devient ainsi, malgré son horreur, un espace strictement circonscrit par la volonté divine, jamais abandonné au hasard.",
+      "attribution": "Grégoire le Grand, Moralia in Job, livres I-III, fin du VIe siècle"
+    },
+    {
+      "titre": "L'ordre des deux verbes",
+      "corps_html": "Calvin, dans ses sermons sur le livre de Job prêchés à Genève dans les années 1550, s'arrête sur l'ordre des deux verbes : Job dit d'abord « l'Éternel a donné » avant de dire « l'Éternel a ôté », alors que dans son épreuve présente c'est la perte qui frappe en premier. Pour Calvin, cet ordre n'est pas rhétorique : il oblige le fidèle à se souvenir que tout don a précédé toute perte, que rien n'a jamais été sa propriété au sens strict. Bénir Dieu pour ce qu'il ôte suppose de l'avoir d'abord béni pour ce qu'il avait donné.",
+      "attribution": "Jean Calvin, Sermons sur le livre de Job, Genève, v. 1554-1555"
+    },
+    {
+      "titre": "Le geste avant la parole",
+      "corps_html": "Jean Chrysostome, dans son homélie sur ce passage (proche du parallèle de Matthieu 18), remarque que Jésus ne réprimande pas d'abord les disciples : il place un enfant au milieu d'eux, silencieusement, avant de parler. Le geste précède l'enseignement, comme si aucune parole seule ne pouvait défaire l'orgueil qui vient de se manifester. Recevoir ce que le monde méprise devient, dans cette homélie, la seule porte d'entrée vérifiable dans le royaume.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 58, fin du IVe siècle"
+    }
+  ]
+}
