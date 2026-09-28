@@ -1,0 +1,170 @@
+{
+  "date": "2026-09-27",
+  "date_humaine": "dimanche",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 18, 25-28 ; Ph 2, 1-11 ; Ph 2, 1-5 ; Mt 21, 28-32",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M49 80 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0\"/><path d=\"M55 86 v18\"/><path d=\"M55 104 l-6 12 M55 104 l6 12\"/><path d=\"M55 90 q20 -8 34 -2\"/><path d=\"M77 84 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0\"/><path d=\"M82 89 v16\"/><path d=\"M78 94 q4 5 8 0\"/><path d=\"M79 105 v14 M85 105 v14\"/><path d=\"M145 80 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0\"/><path d=\"M150 85 l5 16\"/><path d=\"M153 90 l-10 5\"/><path d=\"M155 101 l11 15 M155 101 l-5 17\"/></g><g class=\"trait-rubrique\"><path d=\"M195 120 h139\"/><path d=\"M212 100 h115\"/><path d=\"M230 80 h90\"/><path d=\"M248 60 h64\"/><path d=\"M205 120 v-9 M225 120 v-9 M245 100 v-9 M265 100 v-9 M285 80 v-9 M305 80 v-9\"/></g></svg>",
+  "titre": "Dire et faire",
+  "titre_html": "Dire et <span class=\"it\">faire</span>",
+  "sous_titre": "Le premier fils avait dit non ; c'est lui pourtant qui entre dans la vigne.",
+  "suite_hier": null,
+  "gravure_alt": "Un bois gravé montrant deux fils devant une vigne en terrasses ; l'un, le dos tourné au père, s'engage déjà sur le chemin des ceps, l'autre reste debout près du père, les mains jointes, sans faire un pas.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 18, 25-28",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">25</span> Vous dites: La voie du Seigneur n'est pas <button class=\"mot\" data-g=\"g-taken\">droite</button>. Écoutez donc, maison d'Israël! Est-ce ma voie qui n'est pas droite? Ne sont-ce pas plutôt vos voies qui ne sont pas droites? <span class=\"s\">26</span> Si le juste se détourne de sa justice et commet l'iniquité, et meurt pour cela, il meurt à cause de l'iniquité qu'il a commise. <span class=\"s\">27</span> Si le méchant <button class=\"mot\" data-g=\"g-shuv\">revient</button> de sa méchanceté qu'il a commise et pratique la droiture et la justice, il fera vivre son âme. <span class=\"s\">28</span> Parce qu'il ouvre les yeux et se détourne de toutes les transgressions qu'il avait commises, il vivra, il ne mourra pas.",
+      "gloses": [
+        {
+          "id": "g-taken",
+          "lemme": "Taken",
+          "html": "Le verbe hébreu <span class=\"gr\">תָּכַן</span> (Taken) évoque d'abord la pesée sur une balance, la juste mesure, avant de désigner ce qui est droit ou équitable. Segond traduit par « droite », ce qui fixe l'image sur une ligne alors que l'hébreu pense une pesée: le peuple accuse Dieu de fausser la balance, quand c'est sa propre mesure qui est faussée. Calvin, dans son commentaire sur Ézéchiel, souligne cette inversion: l'homme juge Dieu inique précisément là où Dieu se montre patient au-delà de toute mesure humaine."
+        },
+        {
+          "id": "g-shuv",
+          "lemme": "Shuv",
+          "html": "Le verbe hébreu <span class=\"gr\">שׁוב</span> (shuv), « revenir, se retourner », est la racine même de la teshuva, la conversion dans la tradition juive — non un sentiment de remords mais un demi-tour du corps entier. Segond traduit fidèlement par « revient », mais le français perd la force physique du mouvement. Les rabbins ont vu dans ce chapitre le fondement d'une teshuva qui efface réellement le passé, parce que Dieu juge l'homme tel qu'il se tient devant lui aujourd'hui, non tel qu'il a été hier."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 24 (25), 4-5ab, 6-7, 8-9",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">4</span> Fais-moi connaître tes voies, ô Éternel! Enseigne-moi tes sentiers. <span class=\"s\">5</span> Conduis-moi dans ta <button class=\"mot\" data-g=\"g-emet\">vérité</button>, et instruis-moi; car tu es le Dieu de mon salut, tu es toujours mon espérance. <span class=\"s\">6</span> Éternel! souviens-toi de ta miséricorde et de ta bonté; car elles sont éternelles. <span class=\"s\">7</span> Ne te souviens pas des péchés de ma jeunesse ni de mes transgressions; souviens-toi de moi selon ta miséricorde, à cause de ta bonté, ô Éternel! <span class=\"s\">8</span> L'Éternel est bon et droit: c'est pourquoi il montre aux pécheurs la voie. <span class=\"s\">9</span> Il conduit les <button class=\"mot\" data-g=\"g-anavim\">humbles</button> dans la justice, il enseigne aux humbles sa voie.",
+      "gloses": [
+        {
+          "id": "g-emet",
+          "lemme": "Emet",
+          "html": "L'hébreu <span class=\"gr\">אֱמֶת</span> (emet), rendu par « vérité », partage sa racine avec « amen »: il désigne moins une exactitude intellectuelle qu'une fermeté sur laquelle on peut s'appuyer sans qu'elle cède. Demander à être conduit dans l'emet de Dieu, ce n'est donc pas réclamer une information juste, mais une terre ferme sous les pas. Calvin note que le fidèle ne cherche pas ici la connaissance des voies de Dieu pour elle-même, mais parce qu'elle mène droit au salut qu'il attend."
+        },
+        {
+          "id": "g-anavim",
+          "lemme": "Anavim",
+          "html": "Le mot <span class=\"gr\">עֲנָוִים</span> (anavim), « les humbles », vient d'une racine qui signifie d'abord « être courbé, opprimé », avant de devenir une vertu choisie. Segond traduit « humbles », ce qui est juste, mais estompe le lien avec l'affliction concrète que porte le terme hébreu. La tradition rabbinique associe souvent cette humilité à Moïse, « le plus humble (anav) de tous les hommes » (Nombres 12,3), faisant de la docilité la condition même pour recevoir un enseignement."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Ph 2, 1-11",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Si donc il y a quelque consolation en Christ, s'il y a quelque soulagement dans la charité, s'il y a quelque union d'esprit, s'il y a quelque compassion et quelque miséricorde, <span class=\"s\">2</span> rendez ma joie parfaite, ayant un même sentiment, un même amour, une même âme, une même pensée. <span class=\"s\">3</span> Ne faites rien par esprit de parti ou par vaine gloire, mais que l'humilité vous fasse regarder les autres comme étant au-dessus de vous-mêmes. <span class=\"s\">4</span> Que chacun de vous, au lieu de considérer ses propres intérêts, considère aussi ceux des autres. <span class=\"s\">5</span> Ayez en vous les sentiments qui étaient en Jésus Christ, <span class=\"s\">6</span> lequel, existant en <button class=\"mot\" data-g=\"g-morphe\">forme</button> de Dieu, n'a point regardé comme une <button class=\"mot\" data-g=\"g-harpagmos\">proie à arracher</button> d'être égal avec Dieu, <span class=\"s\">7</span> mais s'est <button class=\"mot\" data-g=\"g-kenoo\">dépouillé</button> lui-même, en prenant une forme de serviteur, en devenant semblable aux hommes; et ayant paru comme un simple homme, <span class=\"s\">8</span> il s'est humilié lui-même, se rendant obéissant jusqu'à la mort, même jusqu'à la mort de la croix. <span class=\"s\">9</span> C'est pourquoi aussi Dieu l'a souverainement élevé, et lui a donné le nom qui est au-dessus de tout nom, <span class=\"s\">10</span> afin qu'au nom de Jésus tout genou fléchisse dans les cieux, sur la terre et sous la terre, <span class=\"s\">11</span> et que toute langue confesse que Jésus Christ est Seigneur, à la gloire de Dieu le Père.",
+      "gloses": [
+        {
+          "id": "g-morphe",
+          "lemme": "morphè",
+          "html": "Le grec <span class=\"gr\">μορφή</span> (morphè) désigne la forme qui exprime la nature profonde d'un être, non un aspect extérieur qu'on pourrait quitter comme un vêtement — c'est pourquoi le Christ peut exister « en forme de Dieu » sans que cela signifie une simple ressemblance. Segond garde « forme », au risque que le lecteur y entende un habit provisoire. Athanase, contre les ariens, a fondé sur ce mot la pleine divinité du Fils avant l'incarnation."
+        },
+        {
+          "id": "g-harpagmos",
+          "lemme": "harpagmos",
+          "html": "Le grec <span class=\"gr\">ἁρπαγμός</span> (harpagmos) vient du verbe « arracher, ravir de force » et décrit un butin qu'on saisit et retient jalousement. Segond traduit « une proie à arracher », ce qui garde l'idée de rapine: le Christ n'a pas traité l'égalité avec Dieu comme un bien à défendre par la force, lui qui la possédait déjà en propre. Chrysostome, dans ses homélies sur Philippiens, y voit un paradoxe: c'est parce qu'il ne craignait pas de perdre sa gloire qu'il a pu s'en dépouiller sans réserve."
+        },
+        {
+          "id": "g-kenoo",
+          "lemme": "kénoô",
+          "html": "Le verbe grec <span class=\"gr\">ἐκένωσεν</span> (ekénôsen), de kénoô, signifie littéralement « vider, rendre vide ». Segond traduit « s'est dépouillé », ce qui est fidèle mais adoucit la radicalité du verbe: il ne s'agit pas d'ôter un vêtement mais de se vider soi-même. Ce verset a donné son nom à la théologie de la « kénose »; Calvin, prudent, y voit un Christ qui voile sa gloire plus qu'il ne la perd, « se cachant sous la chair comme sous un nuage »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture (forme brève)",
+      "reference": "Ph 2, 1-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Si donc il y a quelque consolation en Christ, s'il y a quelque soulagement dans la charité, s'il y a quelque union d'esprit, s'il y a quelque compassion et quelque miséricorde, <span class=\"s\">2</span> rendez ma joie parfaite, ayant un même <button class=\"mot\" data-g=\"g-phroneo\">sentiment</button>, un même amour, une même âme, une même pensée. <span class=\"s\">3</span> Ne faites rien par esprit de parti ou par vaine gloire, mais que l'<button class=\"mot\" data-g=\"g-tapeino\">humilité</button> vous fasse regarder les autres comme étant au-dessus de vous-mêmes. <span class=\"s\">4</span> Que chacun de vous, au lieu de considérer ses propres intérêts, considère aussi ceux des autres. <span class=\"s\">5</span> Ayez en vous les sentiments qui étaient en Jésus Christ,",
+      "gloses": [
+        {
+          "id": "g-phroneo",
+          "lemme": "phronein",
+          "html": "Le verbe grec <span class=\"gr\">φρονεῖν</span> (phronein), dont « sentiment » traduit ici la forme nominale, désigne moins une émotion qu'une orientation stable de tout l'être, un jugement pratique qui commande l'action. Segond traduit par « sentiment », terme qui penche en français vers l'affect, alors que Paul demande une même manière de penser et de vouloir ensemble. Le même verbe reviendra au verset 5, « ayez en vous les sentiments qui étaient en Jésus-Christ »: tout le passage se construit sur ce seul mot."
+        },
+        {
+          "id": "g-tapeino",
+          "lemme": "tapeinophrosynè",
+          "html": "Le mot grec <span class=\"gr\">ταπεινοφροσύνη</span>, « humilité », est presque absent du grec profane, où il porte plutôt un sens péjoratif de bassesse ou de servilité. Segond traduit « humilité » sans pouvoir restituer ce retournement de valeur propre au vocabulaire chrétien naissant. Chrysostome remarque que Paul fait ici presque œuvre de créateur, contre toute la morale antique qui voyait dans l'abaissement volontaire une déchéance et non une grandeur."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 21, 28-32",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">28</span> Que vous en semble? Un homme avait deux fils; et, s'adressant au premier, il dit: Mon enfant, va travailler aujourd'hui dans ma vigne. <span class=\"s\">29</span> Il répondit: Je ne veux pas. Ensuite, il se <button class=\"mot\" data-g=\"g-metamelomai\">repentit</button>, et il alla. <span class=\"s\">30</span> S'adressant à l'autre, il dit la même chose. Et ce fils répondit: Je veux bien, seigneur. Et il n'alla pas. <span class=\"s\">31</span> Lequel des deux a fait la <button class=\"mot\" data-g=\"g-thelema\">volonté</button> du père? Ils répondirent: Le premier. Et Jésus leur dit: Je vous le dis en vérité, les publicains et les prostituées vous <button class=\"mot\" data-g=\"g-proago\">devancent</button> dans le royaume de Dieu. <span class=\"s\">32</span> Car Jean est venu à vous dans la voie de la justice, et vous n'avez pas cru en lui. Mais les publicains et les prostituées ont cru en lui; et vous, qui avez vu cela, vous ne vous êtes pas même repentis ensuite, pour croire en lui.",
+      "gloses": [
+        {
+          "id": "g-metamelomai",
+          "lemme": "metamelomai",
+          "html": "Le verbe grec <span class=\"gr\">μετεμελήθη</span> (metemelèthè) est distinct de metanoeô, qui structure ailleurs l'appel de Jean-Baptiste; il décrit plutôt un regret qui saisit après coup et retourne l'action déjà engagée. Segond traduit « il se repentit », alignant le mot sur le vocabulaire théologique fort de la conversion, alors que le grec choisit un terme plus proche du remords immédiat. Ce choix n'est peut-être pas anodin: Matthieu semble indiquer que même un mouvement intérieur moins noble que la metanoia parfaite suffit, pourvu qu'il conduise au geste juste."
+        },
+        {
+          "id": "g-thelema",
+          "lemme": "thelèma",
+          "html": "Le mot <span class=\"gr\">θέλημα</span> (thelèma), « volonté », vient du verbe thelô, « vouloir », et désigne dans le Nouveau Testament la volonté de Dieu comme un projet à accomplir plutôt qu'un simple souhait. Segond traduit fidèlement par « volonté »; c'est le mot exact du Notre Père, « que ta volonté soit faite ». La question de Jésus renverse l'attente: ce n'est pas celui qui proclame vouloir qui fait le thelèma, mais celui dont l'acte seul le révèle."
+        },
+        {
+          "id": "g-proago",
+          "lemme": "proagô",
+          "html": "Le verbe <span class=\"gr\">προάγουσιν</span> (proagousin), « devancent », signifie littéralement « marcher devant, précéder sur le chemin »: l'image est celle d'une procession où certains, qu'on n'attendait pas, se retrouvent en tête. Segond traduit « vous devancent », gardant le mouvement mais perdant l'image de marche commune vers un même lieu. Chrysostome souligne, dans son homélie sur ce passage, que Jésus ne dit pas les chefs religieux exclus du royaume, mais qu'ils y entrent après — ce qui est peut-être plus dur à entendre qu'une exclusion nette."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un proverbe contesté en exil",
+      "corps_html": "Le chapitre 18 d'Ézéchiel répond à un dicton qui circulait parmi les exilés de Babylone, vers 587 avant notre ère: « Les pères ont mangé des raisins verts, et les dents des enfants ont été agacées » — façon de dire que le malheur présent vient des fautes des ancêtres, non des vivants. Ézéchiel, prêtre déporté, démonte ce fatalisme verset après verset: chacun répond de sa propre voie, et cette voie peut se retourner d'un jour à l'autre."
+    },
+    {
+      "titre": "Un hymne plus ancien que la lettre",
+      "corps_html": "Beaucoup d'exégètes pensent que Philippiens 2,6-11 cite un hymne chrétien antérieur à Paul, peut-être chanté dans les assemblées avant même la rédaction de la lettre, écrite vers 62 depuis une captivité — Rome ou Éphèse selon les hypothèses. Paul l'insère alors comme argument: si le Christ a consenti cet abaissement jusqu'à la croix, la petite humilité qu'il demande aux Philippiens entre eux n'est presque rien à côté."
+    }
+  ],
+  "analogie": {
+    "titre": "Le mouvement second",
+    "variantes": [
+      "Il y a eu peut-être, dans ta vie de foi, un moment où tu as dit oui avec une force qui ne demandait rien de moins que ta vie entière — une nuit de veillée, une confirmation, une promesse faite à voix haute devant d'autres. Et puis les jours ordinaires sont revenus, et ce oui n'a plus rien commandé, il est resté une parole prononcée une fois, sans suite véritable dans ce que tu fais de tes matins. Ce n'est pas la sincérité de cet instant qui est en cause devant Dieu, c'est ce qui, depuis, ne s'est pas remis en marche.",
+      "Il y a aussi, sans doute, une tâche que tu as d'abord refusée en toi-même — visiter quelqu'un que tu n'aimais pas, pardonner ce que tu ne voulais pas pardonner, te lever pour un service qui ne t'attirait pas — un refus net, formulé dans le secret de ton cœur avant même d'être dit. Et puis, sans que rien d'extérieur ne change, quelque chose en toi s'est retourné, et tu y es allé quand même, sans avoir jamais rétracté publiquement ton premier mouvement. C'est ce second mouvement, invisible aux autres, que Dieu regarde — non le refus qui l'a précédé.",
+      "Tu connais peut-être cette disproportion entre ce que tu confesses le dimanche, debout, la voix ferme, et ce que tu vis le mardi soir quand personne ne demande de compte à ta foi. Ce n'est pas nécessairement de l'hypocrisie: c'est la distance ordinaire entre la parole qui va vite et l'obéissance qui traîne derrière elle. Le Christ dont Paul chante l'abaissement n'a pas connu cet écart — chez lui la parole et l'acte ne faisaient qu'un jusqu'à la croix — et c'est cette obéissance sans reste qui vient combler, devant Dieu, celle qui manque à la tienne."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte ne demande pas de juger lequel des deux fils te ressemble le plus — les deux vivent en chacun, selon les jours.",
+    "geste": "Prends un moment pour nommer, en silence, un lieu précis où tu as dit oui à Dieu sans y être encore allé — et demande seulement la force d'y aller, sans te justifier davantage.",
+    "note": "Le psaume ne suit pas la parabole pour illustrer la faute, mais pour rappeler à qui la confier: « Ne te souviens pas des péchés de ma jeunesse. »"
+  },
+  "question": "Qu'est-ce qui, en toi, a déjà dit non à Dieu une fois — et n'a pas encore reçu son second mouvement ?",
+  "racines": [
+    {
+      "titre": "Le premier fils, figure des pécheurs publics",
+      "corps_html": "Jean Chrysostome, dans son homélie 67 sur Matthieu, lit dans le fils qui refuse puis se ravise les publicains et les prostituées: ils ont d'abord dit non à la loi par leur vie, mais l'appel de Jean les a retournés. Le second fils, qui dit oui sans y aller, ce sont les chefs religieux, prompts à professer l'obéissance et lents à la vivre. Chrysostome insiste: Jésus ne loue pas le refus initial, mais le seul mouvement qui compte au bout du compte, l'obéissance enfin accomplie.",
+      "attribution": "Jean Chrysostome, Homélies sur l'Évangile de Matthieu, homélie 67"
+    },
+    {
+      "titre": "Dieu ne pèse pas midi contre minuit",
+      "corps_html": "Calvin, commentant Ézéchiel 18, refuse qu'on y voie une addition de mérites où les bonnes années compenseraient les mauvaises: Dieu regarde l'homme dans l'état où il se trouve, comme on regarde un homme vivant, non le total de sa vie passée. Ce n'est pas oubli des fautes anciennes, dit-il, mais reconnaissance que la conversion change réellement ce que l'homme est devant Dieu, et non seulement ce qu'il paraît.",
+      "attribution": "Jean Calvin, Commentaires sur Ézéchiel"
+    },
+    {
+      "titre": "L'obéissance qui descend jusqu'au bout",
+      "corps_html": "Chrysostome, sur Philippiens, s'arrête sur la progression du texte: obéissant, puis obéissant jusqu'à la mort, puis jusqu'à la mort de la croix — chaque ajout creuse l'abaissement d'un degré, comme si Paul craignait qu'on n'en mesure pas l'ampleur d'un seul coup. Il y voit le modèle que les Philippiens doivent imiter dans leurs querelles: non l'humilité qui cède un peu, mais celle qui va jusqu'au bout de ce qu'elle a commencé.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Philippiens"
+    }
+  ]
+}
