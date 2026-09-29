@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-30",
+  "date_humaine": "mercredi",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jb 9, 1-12.14-16 ; Lc 9, 57-62",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M334 70 q-120 6 -230 60\"/><path d=\"M300 55 q-90 8 -180 70\"/><path d=\"M270 130 l30 -34 q6 -8 -2 -12 q-8 -3 -13 5 l-24 41 z\"/><path d=\"M298 84 l16 -18\"/><path d=\"M296 130 h20\"/><path d=\"M220 128 q6 -20 26 -22\"/><path d=\"M14 40 h30 l-6 14 h-24 z\"/><path d=\"M18 40 v-10 h22 v10\"/><path d=\"M10 54 h38\"/></g></svg>",
+  "titre": "Il passe",
+  "titre_html": "Il <span class=\"it\">passe</span>",
+  "sous_titre": "Job devant le juge qu'il ne peut voir, le psaume qui crie sans réponse, et l'appel qui ne souffre pas qu'on se retourne.",
+  "suite_hier": null,
+  "gravure_alt": "Un chemin de terre s'enfonce vers l'horizon sans qu'on distingue qui le précède ; au premier plan, une charrue est retournée, le soc encore dans le sillon, et une main la tient sans se retourner vers la maison qu'on devine au loin.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Première lecture",
+      "reference": "Jb 9, 1-12.14-16",
+      "traduction": "Louis Segond (1910)",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Job prit la parole et dit : <span class=\"s\">2</span> « Je sais bien qu'il en est ainsi ; comment l'homme serait-il <button class=\"mot\" data-g=\"g-tsaddiq\">juste</button> devant Dieu ? <span class=\"s\">3</span> S'il voulait <button class=\"mot\" data-g=\"g-rib\">contester</button> avec lui, sur mille choses il ne pourrait répondre à une seule. <span class=\"s\">4</span> À lui la sagesse et la toute-puissance : qui lui résisterait impunément ?</p><p><span class=\"s\">5</span> Il transporte soudain les montagnes, il les renverse dans sa colère. <span class=\"s\">6</span> Il secoue la terre sur sa base, et ses colonnes sont ébranlées. <span class=\"s\">7</span> Il commande au soleil, et le soleil ne paraît pas ; il met un <button class=\"mot\" data-g=\"g-chatam\">sceau</button> sur les étoiles. <span class=\"s\">8</span> Seul, il étend les cieux, il marche sur les hauteurs de la mer. <span class=\"s\">9</span> Il a créé la Grande Ourse, l'Orion et les Pléiades, et les étoiles des régions australes. <span class=\"s\">10</span> Il fait des choses grandes et insondables, des merveilles sans nombre.</p><p><span class=\"s\">11</span> Voici, il passe près de moi, et je ne le vois pas ; il s'en va, et je ne l'aperçois pas. <span class=\"s\">12</span> S'il enlève, qui s'y opposera ? Qui lui dira : Que fais-tu ?</p><p><span class=\"s\">14</span> Et moi, comment lui répondre ? Comment choisir mes paroles avec lui ? <span class=\"s\">15</span> Quand je serais juste, je ne répondrais pas ; je ne puis qu'<button class=\"mot\" data-g=\"g-tachanun\">implorer</button> mon juge. <span class=\"s\">16</span> Et quand il m'exaucerait, si je l'invoque, je ne croirais pas qu'il eût écouté ma voix. »</p>",
+      "gloses": [
+        {
+          "id": "g-tsaddiq",
+          "lemme": "juste",
+          "html": "Le verbe hébreu ici est <span class=\"gr\">yitsdaq</span>, de la racine tsadaq, qui dit moins une pureté intérieure que la victoire dans un procès, le fait d'obtenir gain de cause devant un tribunal. Segond traduit par « juste », ce qui fait entendre une qualité morale alors que Job pose une question judiciaire : peut-on faire valoir son droit face à Dieu ? Grégoire le Grand, dans les Moralia in Job, lit ce verset comme l'aveu qu'aucune créature ne peut sortir victorieuse d'un tel procès. Calvin, dans ses Sermons sur Job, y entendra l'annonce en creux d'une justice qui ne peut venir que d'ailleurs que de l'homme lui-même."
+        },
+        {
+          "id": "g-rib",
+          "lemme": "contester",
+          "html": "Le mot hébreu sous-jacent, <span class=\"gr\">rib</span>, désigne un procès en bonne et due forme, le genre de cause que les prophètes intentent au peuple au nom de Dieu. Segond choisit « contester », qui garde l'idée de dispute mais perd la solennité judiciaire du terme : ce n'est pas une querelle, c'est une instance devant un tribunal. Job retourne ici l'image contre lui-même : si même Dieu peut ouvrir un procès, quel accusé pourrait répondre à mille chefs d'accusation quand il en tient à peine un seul en mémoire ? Les commentateurs ont longtemps hésité entre traduire ce champ lexical par la dispute ou par le procès proprement dit."
+        },
+        {
+          "id": "g-chatam",
+          "lemme": "sceau",
+          "html": "Segond garde le mot à mot : l'hébreu <span class=\"gr\">chatam</span> signifie sceller, apposer un sceau comme on le fait sur un document ou une porte pour en interdire l'accès. L'image est frappante — Dieu scelle les étoiles comme un roi scelle un décret, en signe de possession et d'autorité absolue, non de simple création. Grégoire le Grand y voit une figure de la souveraineté divine qui s'étend jusqu'aux confins invisibles du ciel nocturne, là où l'œil humain ne voit qu'obscurité. Le verbe reviendra plus tard dans l'Écriture pour désigner ce que nul ne peut rouvrir sans autorité — ce que Job, précisément, ne détient pas."
+        },
+        {
+          "id": "g-tachanun",
+          "lemme": "implorer",
+          "html": "Le substantif hébreu apparenté, <span class=\"gr\">tehinnah</span>, vient de la racine chanan, faire grâce : ce que Job réclame n'est pas un droit mais une faveur imméritée. Segond traduit par « implorer », qui rend bien le renoncement à toute prétention de justice personnelle — Job ne dit plus « j'ai raison », il dit « aie pitié ». Calvin, commentant ce passage dans ses Sermons sur Job, note que c'est là le seul chemin qui reste ouvert à quiconque comprend enfin devant qui il se tient : non plus discuter, mais supplier."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 87 (88), 10bc-11, 12-13, 14-15",
+      "traduction": "Louis Segond (1910)",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">10</span> Je t'invoque tous les jours, ô Éternel ! J'étends vers toi les mains. <span class=\"s\">11</span> Est-ce pour les <button class=\"mot\" data-g=\"g-rephaim\">morts</button> que tu fais des miracles ? Les morts se lèvent-ils pour te louer ?</p><p><span class=\"s\">12</span> Parle-t-on de ta bonté dans le sépulcre, de ta <button class=\"mot\" data-g=\"g-emeth\">fidélité</button> dans l'abîme ? <span class=\"s\">13</span> Tes prodiges sont-ils connus dans les ténèbres, et ta justice dans la terre de l'oubli ?</p><p><span class=\"s\">14</span> Ô Éternel ! je crie à toi, ma prière va au-devant de toi dès le <button class=\"mot\" data-g=\"g-boqer\">matin</button>. <span class=\"s\">15</span> Pourquoi, Éternel, repousses-tu mon âme ? Pourquoi me caches-tu ta face ?</p>",
+      "gloses": [
+        {
+          "id": "g-rephaim",
+          "lemme": "morts",
+          "html": "L'hébreu ne dit pas simplement « les morts » : il emploie <span class=\"gr\">rephaïm</span>, terme propre à l'Ancien Testament pour désigner les ombres exsangues du séjour des morts, incapables d'action ou de parole. Segond aplatit en « les morts », ce qui est juste mais efface l'image archaïque d'un monde silencieux et sans force que le mot hébreu porte encore. Augustin, commentant ce psaume dans les Enarrationes in Psalmos, y entend la voix du Christ lui-même, descendu jusqu'à ce lieu où l'on ne peut plus louer, afin d'y faire retentir malgré tout une prière."
+        },
+        {
+          "id": "g-emeth",
+          "lemme": "fidélité",
+          "html": "Le mot hébreu, <span class=\"gr\">emounah</span>, appartient à la même famille que « amen » : il dit la solidité, ce sur quoi on peut s'appuyer sans être trahi, plus qu'une simple loyauté affective. Segond traduit par « fidélité », choix défendable mais qui perd la nuance de fermeté, de sol qui ne cède pas, présente dans la racine. Les rabbins comptent ce terme parmi les attributs par lesquels Dieu se nomme lui-même à Moïse au Sinaï — et c'est précisément cet attribut-là que le psalmiste ose interroger depuis l'abîme, sans cesser de le nommer."
+        },
+        {
+          "id": "g-boqer",
+          "lemme": "matin",
+          "html": "L'hébreu <span class=\"gr\">boqer</span> désigne le point du jour, l'instant où la lumière perce enfin l'obscurité de la nuit. Segond traduit simplement par « matin », mais la charge du mot est ici ironique : presque tous les psaumes de lamentation se retournent, à un moment donné, vers la louange, comme le jour succède à la nuit — celui-ci, presque seul dans le psautier, ne connaît pas ce retournement, et s'achève dans les ténèbres qu'il évoquait au début. Prier « dès le matin » sans que le matin n'apporte de réponse est peut-être la forme la plus nue de la foi que contient l'Écriture."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Lc 9, 57-62",
+      "traduction": "Louis Segond (1910)",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">57</span> Pendant qu'ils étaient en chemin, un homme lui dit : « Seigneur, je te <button class=\"mot\" data-g=\"g-akoloutheo\">suivrai</button> partout où tu iras. » <span class=\"s\">58</span> Jésus lui répondit : « Les renards ont des tanières, et les oiseaux du ciel ont des nids ; mais le Fils de l'homme n'a pas où reposer sa tête. »</p><p><span class=\"s\">59</span> Il dit à un autre : « Suis-moi. » Et il répondit : « Seigneur, permets-moi d'aller d'abord ensevelir mon père. » <span class=\"s\">60</span> Mais Jésus lui dit : « Laisse les <button class=\"mot\" data-g=\"g-nekros\">morts</button> ensevelir leurs morts ; et toi, va annoncer le royaume de Dieu. »</p><p><span class=\"s\">61</span> Un autre dit : « Je te suivrai, Seigneur, mais permets-moi d'aller d'abord prendre congé de ceux de ma maison. » <span class=\"s\">62</span> Jésus lui répondit : « Quiconque met la main à la charrue, et regarde en arrière, n'est pas <button class=\"mot\" data-g=\"g-euthetos\">propre</button> au royaume de Dieu. »</p>",
+      "gloses": [
+        {
+          "id": "g-akoloutheo",
+          "lemme": "suivre",
+          "html": "Le grec <span class=\"gr\">akolouthēsō</span>, futur du verbe akoloutheō, est le terme technique des évangiles pour désigner non un simple accompagnement mais l'attachement du disciple à son maître, la marche dans ses pas. Segond traduit justement par « suivre », mais le lecteur français perd la charge presque professionnelle du mot dans la culture des écoles rabbiniques, où l'on ne suit pas un maître par sentiment mais par un engagement qui régit toute une vie. Ambroise, dans son commentaire de Luc, relève que cet homme promet avant d'avoir entendu ce que suivre coûte réellement — la réponse de Jésus vient combler ce vide entre la promesse et la connaissance."
+        },
+        {
+          "id": "g-nekros",
+          "lemme": "morts",
+          "html": "Le grec répète deux fois le même mot, <span class=\"gr\">nekrous</span>, dans une phrase que Segond garde volontairement paradoxale : « laisse les morts ensevelir leurs morts ». Depuis Ambroise, la tradition chrétienne distingue les deux occurrences : les premiers morts sont ceux qui n'ont pas encore reçu la vie que donne le Christ, les seconds sont les morts au sens ordinaire, que l'on ensevelit. Garder la répétition littérale, comme le fait Segond plutôt que de gloser le sens, oblige le lecteur à s'arrêter sur la dureté du mot avant d'en chercher l'interprétation."
+        },
+        {
+          "id": "g-euthetos",
+          "lemme": "propre",
+          "html": "L'adjectif grec <span class=\"gr\">euthetos</span> signifie proprement bien disposé, bien ajusté à son usage — on l'emploie pour un outil qui convient exactement à la tâche. Segond le traduit par « propre », dans le sens vieilli de « propre à », apte, et non dans le sens moderne de pureté : il ne s'agit pas de mérite mais d'ajustement. Ambroise associe ce verset au geste concret du laboureur antique, qui doit fixer un point devant lui pour tracer un sillon droit — quiconque regarde en arrière trace, dit-il, un sillon tordu qui trahit un cœur divisé."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Job répond à Bildad",
+      "corps_html": "Au chapitre 8, Bildad affirmait que le juste prospère et l'impie périt : il suffirait de chercher Dieu pour être rétabli. Job 9 est la réplique de Job à ce théorème trop simple. Le livre, sagesse post-exilique dont la datation reste discutée (entre le VIe et le IVe siècle avant notre ère), met en scène un homme intègre qui refuse d'acheter la paix par l'aveu d'une faute qu'il ne reconnaît pas. Ce chapitre ouvre le second discours de Job dans le premier cycle du dialogue."
+    },
+    {
+      "titre": "Le grand voyage de Luc",
+      "corps_html": "En 9,51, Luc écrit que Jésus « prit la résolution de se rendre à Jérusalem » : commence alors la longue section du voyage (9,51–19,27), propre à cet évangile, où Jésus enseigne tout en marchant vers sa Passion. Les trois vocations manquées de 9,57-62 ouvrent ce parcours : elles disent d'emblée le prix du chemin, avant même le premier miracle de la section. Rien n'est anecdotique dans leur position : Luc les place en seuil, comme un avertissement avant la route."
+    }
+  ],
+  "analogie": {
+    "titre": "Marcher sans se retourner",
+    "variantes": [
+      "Tu as prié des mois, parfois des années, pour une chose précise, et rien n'est venu qui ressemble à une réponse : pas de paix sensible, pas de signe, seulement le silence répété soir après soir. Tu as continué malgré tout, non par une foi héroïque mais parce que tu ne savais plus faire autrement que crier vers ce silence-là. Il se peut que ce ne soit pas Dieu qui se taise, mais toi qui n'aies pas encore l'oreille pour entendre une réponse qui ne prend pas la forme que tu attendais — et que la prière elle-même, tenue sans rien recevoir, soit déjà la preuve qu'il t'a rejoint avant même de te répondre.",
+      "Il y a eu un jour où tu as dû partir sans pouvoir revenir vérifier si tu avais raison : quitter un lieu, rompre avec une manière de vivre, dire un non qui ne se reprend pas. Tu aurais voulu une garantie avant d'avancer, une preuve que la route menait quelque part, et tu ne l'as pas eue. Ce que tu as découvert plus tard, c'est que la garantie n'était pas devant toi sur le chemin, mais dans le fait même de continuer à marcher sans elle — comme si la seule façon de savoir que Dieu tenait la route avait été de cesser de la lui redemander.",
+      "Tu as traversé un deuil ou un effondrement pendant lequel tu cherchais Dieu partout sans jamais le trouver là où tu regardais, et personne n'a pu t'expliquer pourquoi les choses se passaient ainsi. Ce n'est que plus tard, en te retournant sur cette période, que tu as reconnu qu'il s'était passé quelque chose : un soutien que tu n'avais pas senti sur le moment, une force que tu ne t'expliques toujours pas. Tu ne l'as pas vu passer — tu l'as seulement reconnu après coup, comme une empreinte laissée dans le sable que la marée a déjà quittée."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Ce jour ne promet pas de réponse claire ; il promet une présence qui marche devant, même quand tu ne la vois pas.",
+    "geste": "Choisis aujourd'hui une chose que tu remets sans cesse à plus tard par peur de ne pas savoir où elle mène, et fais-en un seul pas, sans attendre d'y voir clair jusqu'au bout.",
+    "note": "Ce n'est pas un appel à l'imprudence, mais à la confiance : on n'a jamais toute la route avant de partir."
+  },
+  "question": "Qu'est-ce qui, dans ta vie, attend encore que tu cesses de te retourner pour t'y engager tout entier ?",
+  "racines": [
+    {
+      "titre": "Le vertige de Job",
+      "corps_html": "Grégoire le Grand lit ce chapitre comme l'aveu que nulle créature ne peut soutenir un procès contre son Créateur : la sagesse de Job n'est pas de se taire par faiblesse, mais de reconnaître qu'aucune parole humaine ne pèse assez pour discuter avec Celui qui pèse les montagnes. Il y voit moins une leçon de résignation qu'une préparation : seul celui qui renonce à se justifier lui-même peut recevoir une justice qui vienne d'ailleurs.",
+      "attribution": "Grégoire le Grand, Moralia in Job"
+    },
+    {
+      "titre": "Le psaume sans aurore",
+      "corps_html": "Augustin remarque que ce psaume, presque seul dans le psautier, s'achève sans retour à la louange : il finit sur les ténèbres, non sur l'espérance. Il y entend la voix du Christ lui-même descendu jusqu'à l'extrémité de l'abandon, afin qu'aucun cri humain, même sans réponse perceptible, ne reste étranger à Dieu. La prière qui ne reçoit rien n'est pas pour autant une prière perdue.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 87"
+    },
+    {
+      "titre": "Le regard en arrière",
+      "corps_html": "Ambroise rapproche cette parole du sort de la femme de Lot, changée en statue de sel pour s'être retournée vers Sodome : ce n'est pas le passé lui-même qui est condamné, mais l'hésitation qui divise le cœur au moment d'avancer. Le laboureur qui regarde en arrière trace un sillon tordu ; Ambroise y voit l'image d'une âme qui ne peut suivre le Christ que les yeux tournés vers lui seul.",
+      "attribution": "Ambroise de Milan, Traité sur l'Évangile de Luc"
+    }
+  ]
+}
