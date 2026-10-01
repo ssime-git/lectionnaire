@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-02",
+  "date_humaine": "vendredi",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jb 38, 1.12-21 ; 40, 3-5 ; Mt 18, 1-5.10",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-liturgie\"><path d=\"M170 6 q60 6 55 42 q-5 28 -40 30\"/><path d=\"M170 14 q42 6 38 32 q-4 20 -28 22\"/><path d=\"M170 22 q24 6 20 22 q-3 13 -17 14\"/><path d=\"M170 30 q10 4 8 12\"/></g><g class=\"trait-encre\"><path d=\"M20 135 h300\"/><path d=\"M170 95 a5 5 0 1 0 0.1 0\"/><path d=\"M170 100 v22\"/><path d=\"M170 103 q-7 -5 -2 -12\"/><path d=\"M170 122 l-7 13\"/><path d=\"M170 122 l7 13\"/><path d=\"M198 118 a4 4 0 1 0 0.1 0\"/><path d=\"M198 123 q-4 7 4 9\"/><path d=\"M196 132 h8\"/></g></svg>",
+  "titre": "La main sur la bouche",
+  "titre_html": "La main <span class=\"it\">sur la bouche</span>",
+  "sous_titre": "Job réduit au silence devant la tempête, le psalmiste sondé jusqu'au sein maternel, l'enfant reçu au milieu des disciples",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : au centre, une petite silhouette humaine porte la main à sa bouche, debout au pied d'un tourbillon qui occupe toute la moitié supérieure de l'image ; à ses pieds, un enfant est assis dans la poussière, le visage levé, dans le style sobre des gravures bibliques anciennes.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jb 38, 1.12-21 ; 40, 3-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> L'Éternel répondit à Job du milieu de la <button class=\"mot\" data-g=\"g-tempete\">tempête</button> et dit : <span class=\"s\">12</span> Depuis que tu existes, as-tu commandé au matin ? As-tu montré sa place à l'<button class=\"mot\" data-g=\"g-aurore\">aurore</button>, <span class=\"s\">13</span> pour qu'elle saisisse les extrémités de la terre, et que les méchants en soient secoués ; <span class=\"s\">14</span> pour que la terre se transforme comme l'argile qui reçoit une empreinte, et qu'elle soit parée comme d'un vêtement ; <span class=\"s\">15</span> pour que les méchants soient privés de leur lumière, et que le bras qui se lève soit brisé ? <span class=\"s\">16</span> As-tu pénétré jusqu'aux sources de la mer ? T'es-tu promené dans les profondeurs de l'abîme ? <span class=\"s\">17</span> Les portes de la mort t'ont-elles été ouvertes ? As-tu vu les portes de l'<button class=\"mot\" data-g=\"g-ombremort\">ombre de la mort</button> ? <span class=\"s\">18</span> As-tu embrassé du regard l'étendue de la terre ? Parle, si tu sais toutes ces choses. <span class=\"s\">19</span> Où est le chemin qui conduit au séjour de la lumière ? Et les ténèbres, où ont-elles leur demeure ? <span class=\"s\">20</span> Peux-tu les saisir à leur limite, et connaître les sentiers de leur habitation ? <span class=\"s\">21</span> Tu le sais, car alors tu étais né, et le nombre de tes jours est grand ! <span class=\"s\">40,3</span> Job répondit à l'Éternel et dit : <span class=\"s\">4</span> Voici, je suis <button class=\"mot\" data-g=\"g-qallothi\">trop peu de chose</button> ; que te répliquerais-je ? Je mets la main sur ma bouche. <span class=\"s\">5</span> J'ai parlé une fois, je ne répondrai plus ; deux fois, je n'ajouterai rien.",
+      "gloses": [
+        {
+          "id": "g-tempete",
+          "lemme": "se'arah",
+          "html": "Le mot hébreu est <span class=\"gr\">se'arah</span>, la tempête, le tourbillon — le même mot qui emporte Élie au ciel en 2 Rois 2,11. Segond traduit « tempête », fidèle au texte, mais il faut entendre qu'aucune voix calme ne répond à Job : Dieu parle depuis le chaos même qu'il va questionner. Grégoire le Grand, dans ses Moralia sur Job, y voit le signe que la grandeur divine ne se laisse approcher que dans ce qui dépasse l'homme, jamais dans une parole apprivoisée."
+        },
+        {
+          "id": "g-aurore",
+          "lemme": "shachar",
+          "html": "<span class=\"gr\">shachar</span>, l'aurore, désigne l'instant précis où la nuit bascule — un mot que l'on retrouve au verset 9 du psaume de ce jour, « les ailes de l'aurore », comme un écho voulu entre les deux textes. Segond garde l'image concrète du lever du jour plutôt que de l'abstraire en « commencement » ; le texte hébreu personnifie presque l'aurore, à qui l'on « montre sa place », comme on l'assignerait à un serviteur. Job n'a jamais donné d'ordre à l'aurore : c'est tout l'argument du chapitre."
+        },
+        {
+          "id": "g-ombremort",
+          "lemme": "tsalmavet",
+          "html": "<span class=\"gr\">tsalmavet</span>, littéralement « l'ombre de la mort », un mot que l'hébreu biblique emploie pour les lieux les plus désolés — la vallée du psaume 23 en est le lieu le plus connu. Des exégètes modernes ont proposé d'y lire simplement « obscurité profonde », sans racine liée à la mort, mais Segond suit la tradition massorétique et la Vulgate (umbra mortis), qui gardent la charge funèbre du mot. Job, qui a frôlé ce seuil tout au long du livre, s'entend demander s'il en a vu la porte — lui qui a tant demandé à mourir."
+        },
+        {
+          "id": "g-qallothi",
+          "lemme": "qallothi",
+          "html": "Le verbe est <span class=\"gr\">qalal</span>, être léger, être de peu de poids — le même mot qui sert à peser Balthasar dans Daniel 5 : « tu as été pesé et trouvé léger ». Segond traduit par « je suis trop peu de chose », une paraphrase honnête mais qui perd l'image de la balance : Job ne dit pas qu'il est coupable, il dit qu'il ne pèse rien devant ce qui vient de lui être montré. Calvin, dans ses leçons sur Job, insiste sur ce point : ce n'est pas un aveu de péché mais la mesure exacte que prend une créature de sa propre légèreté devant le Créateur."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 138 (139), 1-3, 7-8, 9-10, 13-14ab",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Éternel ! tu me <button class=\"mot\" data-g=\"g-sondes\">sondes</button> et tu me connais, <span class=\"s\">2</span> tu sais quand je m'assieds et quand je me lève, tu pénètres de loin ma pensée ; <span class=\"s\">3</span> tu sais quand je marche et quand je me couche, et tu pénètres toutes mes voies. <span class=\"s\">7</span> Où irais-je loin de ton esprit, et où fuirais-je loin de ta face ? <span class=\"s\">8</span> Si je monte aux cieux, tu y es ; si je me couche au séjour des morts, t'y voilà. <span class=\"s\">9</span> Si je prends les <button class=\"mot\" data-g=\"g-ailesaurore\">ailes de l'aurore</button>, et que j'aille habiter à l'extrémité de la mer, <span class=\"s\">10</span> là aussi ta main me conduira, et ta droite me saisira. <span class=\"s\">13</span> C'est toi qui as formé mes reins, qui m'as <button class=\"mot\" data-g=\"g-tisse\">tissé</button> dans le sein de ma mère. <span class=\"s\">14</span> Je te loue de ce que je suis une créature si merveilleuse. Tes œuvres sont admirables,",
+      "gloses": [
+        {
+          "id": "g-sondes",
+          "lemme": "chaqar",
+          "html": "Le verbe <span class=\"gr\">chaqar</span> appartient au vocabulaire du mineur qui creuse la roche pour en extraire le métal — Job 28 l'emploie justement pour les chercheurs d'argent et d'or. Segond traduit « sonder », qui garde l'idée d'une fouille, mais adoucit la dureté du geste : Dieu n'observe pas le psalmiste de loin, il l'extrait comme on extrait un minerai. Le second verbe du même verset, <span class=\"gr\">yada</span>, « connaître », est le mot de la connaissance intime, celui-là même qui dit l'union d'Adam et Ève en Genèse 4,1 ; les deux verbes ensemble disent une connaissance qui fouille et qui aime à la fois."
+        },
+        {
+          "id": "g-ailesaurore",
+          "lemme": "kanfei-shachar",
+          "html": "<span class=\"gr\">kanfei-shachar</span>, « les ailes de l'aurore » — la même aurore, <span class=\"gr\">shachar</span>, que Job entendait sommée de prendre sa place dans la lecture de ce jour. Le psalmiste imagine la vitesse la plus grande qu'il connaisse, celle de la lumière qui court d'un bout à l'autre du ciel chaque matin, et dit que même là la main de Dieu le devance. Les rabbins ont lu dans cette image une allusion au retour d'exil, le juste porté par la lumière elle-même jusqu'au bout de la terre ; le texte ne promet pas d'échapper à Dieu, il promet qu'on ne fuit jamais hors de sa main."
+        },
+        {
+          "id": "g-tisse",
+          "lemme": "sakak",
+          "html": "Le verbe hébreu, <span class=\"gr\">sakak</span>, évoque le tissage, l'entrelacement des fils d'une étoffe ou d'un panier — c'est le même champ lexical qui décrit le voile tissé du tabernacle. Segond traduit « tisser », image juste et rare pour dire la formation du corps dans le sein maternel, loin de toute abstraction sur l'âme. Augustin, commentant ce psaume, y voit la preuve que le Créateur ne délègue à personne, pas même à la nature, le façonnage secret de chaque vie."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 18, 1-5.10",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> En ce moment, les disciples s'approchèrent de Jésus, et dirent : Qui donc est le plus grand dans le royaume des cieux ? <span class=\"s\">2</span> Jésus, ayant appelé un petit enfant, le plaça au milieu d'eux, <span class=\"s\">3</span> et dit : Je vous le dis en vérité, si vous ne vous <button class=\"mot\" data-g=\"g-convertissez\">convertissez</button> et si vous ne devenez comme les petits enfants, vous n'entrerez pas dans le royaume des cieux. <span class=\"s\">4</span> C'est pourquoi, quiconque se rendra <button class=\"mot\" data-g=\"g-humble\">humble</button> comme ce petit enfant sera le plus grand dans le royaume des cieux. <span class=\"s\">5</span> Et quiconque reçoit en mon nom un petit enfant comme celui-ci, me reçoit moi-même. <span class=\"s\">10</span> Gardez-vous de mépriser un seul de ces petits ; car je vous dis que leurs <button class=\"mot\" data-g=\"g-anges\">anges</button> dans les cieux voient continuellement la face de mon Père qui est dans les cieux.",
+      "gloses": [
+        {
+          "id": "g-convertissez",
+          "lemme": "strephō",
+          "html": "Le verbe grec est <span class=\"gr\">straphēte</span>, de <span class=\"gr\">strephō</span>, se retourner, faire volte-face — un mot de mouvement physique avant d'être un mot de morale. Segond traduit « vous convertissez », qui est juste mais qui a pris, en français courant, un sens moral et progressif que le grec n'a pas : il s'agit d'un demi-tour, pas d'un cheminement. Jean Chrysostome, dans ses homélies sur Matthieu, insiste sur la brutalité du mot : Jésus ne demande pas de devenir meilleur, mais de faire demi-tour vers ce qu'on a quitté en grandissant."
+        },
+        {
+          "id": "g-humble",
+          "lemme": "tapeinoō",
+          "html": "Le verbe est <span class=\"gr\">tapeinōsei</span>, de <span class=\"gr\">tapeinos</span>, qui dit la bassesse de condition, l'absence de rang — c'est le mot que Marie emploie dans le Magnificat pour qualifier sa propre situation, « il a regardé la bassesse de sa servante ». Segond traduit « se rendra humble », qui introduit une vertu morale ; le grec dit plutôt un état social, celui de l'enfant dans la maison antique, sans droit ni voix. Chrysostome rapproche ce mot du geste même de Jésus plaçant l'enfant au milieu : il ne loue pas une qualité intérieure de l'enfant, mais sa condition de dépendance totale."
+        },
+        {
+          "id": "g-anges",
+          "lemme": "angelos",
+          "html": "<span class=\"gr\">angeloi</span>, les anges, les messagers — le mot grec ne dit rien de plus qu'« envoyé », et c'est tout le sens du verset : ces petits ont, eux aussi, un messager qui se tient devant Dieu. Segond garde « anges », transparent depuis la Vulgate (angeli) ; le verset affirme une dignité invisible, proportionnelle à l'insignifiance sociale de l'enfant qu'on vient de placer au milieu des disciples. Origène, commentant ce passage, y voit la preuve que nul petit n'est trop bas pour avoir, devant la face du Père, un répondant qui ne détourne jamais le regard."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le second discours de Dieu",
+      "corps_html": "Le livre de Job, texte de sagesse que l'on situe le plus souvent après l'exil, consacre quatre chapitres (38 à 41) à la réponse de Dieu aux trente-sept chapitres de plaintes et de disputes qui précèdent. Cette première intervention ne répond à aucune des questions de Job : elle les déborde par une suite ininterrompue d'interrogations sur la création. Grégoire le Grand y a consacré trente-cinq livres de ses Moralia, lus des siècles durant comme la grande école chrétienne de la patience."
+    },
+    {
+      "titre": "Le discours sur l'Église",
+      "corps_html": "Matthieu 18 forme le quatrième des cinq grands discours de l'évangile, celui que la tradition appelle discours ecclésial. Il vient juste après l'épisode de l'impôt du temple, où Jésus s'est lui-même rangé parmi les petits en payant pour ne pas scandaliser. La question des disciples sur la préséance trahit une communauté déjà travaillée par les rivalités de rang. Jean Chrysostome, dans ses homélies 57 à 59 sur Matthieu, lit cette scène non comme une leçon pour enfants mais comme la charte fondatrice de l'humilité entre frères."
+    }
+  ],
+  "analogie": {
+    "titre": "La main qui se tait",
+    "variantes": [
+      "Il t'est arrivé de préparer, avant d'entrer dans une pièce où tu devais te défendre, toute une suite d'arguments — ce que tu dirais, dans quel ordre, pour ne pas être pris en faute. Puis, devant la personne elle-même, les mots ont manqué, non par faiblesse mais parce que ce que tu avais en face de toi dépassait ce pour quoi tu t'étais préparé. Tu es resté sans voix, la main presque physiquement posée sur ta propre bouche, et ce silence-là, pour une fois, n'a rien eu d'une défaite : c'est le même silence que demande le Dieu de la tempête, et c'est devant lui seul qu'il trouve son sens.",
+      "Il y a des conversations où quelqu'un, sans élever la voix, nomme en toi une chose que tu n'avais dite à personne — une peur ancienne, une habitude cachée, un geste que tu croyais invisible — et tu sens alors que tu es connu plus loin que tu ne te connais toi-même. Ce moment-là n'est pas d'abord inconfortable : il est, une fois passée la surprise, presque un soulagement, parce qu'être vu jusque-là sans être rejeté est une forme de grâce que tu n'avais pas su demander. C'est cette connaissance-là, antérieure à toute confession, que chante le psaume : tu me sondes et tu me connais avant même que j'ouvre la bouche.",
+      "Il y a un âge, ou une maladie, ou un deuil, où tu cesses brusquement de pouvoir te rendre utile — où tu n'as plus rien à apporter, ni force, ni solution, ni parole qui arrange les choses, et où tu dépends entièrement d'une main qui te lève, te lave, te porte. Ce dépouillement-là, que tu n'as pas choisi, te met dans une position que tu avais fuie toute ta vie active, et c'est précisément cette position que Jésus place au milieu des disciples comme la plus grande : non l'enfant innocent, mais l'enfant qui ne peut rien, et qu'on doit entièrement recevoir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre le jour, laisse-toi rejoindre par la question qui n'attend pas de réponse savante, seulement une main posée et un cœur reçu comme un enfant.",
+    "geste": "Pose, un instant, ta main sur ta bouche, sans rien dire — pas comme un geste de honte, mais comme la réponse la plus juste que tu puisses offrir à ce qui te dépasse.",
+    "note": "Il n'y a rien à réussir dans ce silence : il est déjà, en lui-même, une prière."
+  },
+  "question": "Qu'est-ce qui, en toi, demande encore à être persuadé de sa propre petitesse avant de pouvoir être vraiment reçu ?",
+  "racines": [
+    {
+      "titre": "Le silence plus haut que la parole",
+      "corps_html": "Grégoire le Grand explique que la main posée sur la bouche n'est pas un geste de honte mais le seul geste juste devant l'incompréhensible : « Il est bon de taire ce qu'on ne peut dire dignement, plutôt que de parler imparfaitement de ce qui dépasse toute parole. » Toute la fin des Moralia développe ce silence comme une parole plus haute que le discours, la vraie réponse de la créature au Créateur.",
+      "attribution": "Grégoire le Grand, Moralia in Job, XXXV"
+    },
+    {
+      "titre": "Connu avant de se connaître",
+      "corps_html": "Calvin, commentant ce psaume, insiste sur l'ordre des verbes : Dieu connaît avant que l'homme ne se connaisse lui-même, et c'est cette primauté qui fonde toute prière vraie. Pour lui, la fuite imaginée par le psalmiste — monter aux cieux, descendre au séjour des morts — n'est pas une tentation d'échapper à Dieu mais la preuve, par l'absurde, qu'aucun lieu ne soustrait la créature au regard qui l'a formée.",
+      "attribution": "Jean Calvin, Commentaire des Psaumes, Ps 139"
+    },
+    {
+      "titre": "Le privilège des derniers",
+      "corps_html": "Origène rapproche le verset sur les anges des petits du privilège refusé à Moïse, qui ne pouvait voir la face de Dieu sans mourir : les anges des petits, eux, la contemplent sans relâche. Il en conclut que la hiérarchie du royaume s'inverse exactement : ceux que l'on tient pour les derniers dans l'ordre humain reçoivent les messagers les plus proches du trône.",
+      "attribution": "Origène, Commentaire sur Matthieu, XIII"
+    }
+  ]
+}
