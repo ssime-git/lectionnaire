@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-03",
+  "date_humaine": "samedi",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jb 42, 1-3.5-6.12-17 ; Lc 10, 17-24",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M30 30 Q170 8 310 30\"/><path d=\"M55 33 l4 7 l4 -7 M90 29 l4 7 l4 -7 M125 26 l4 7 l4 -7 M160 25 l4 7 l4 -7 M195 25 l4 7 l4 -7 M230 26 l4 7 l4 -7 M265 29 l4 7 l4 -7 M295 33 l4 7 l4 -7\"/><path d=\"M120 88 Q170 62 220 88 Q170 112 120 88 Z\"/><path d=\"M128 93 Q170 104 212 93\"/><path d=\"M95 88 Q75 72 86 50 Q98 66 92 82\"/><path d=\"M245 88 Q265 72 254 50 Q242 66 248 82\"/><path d=\"M150 58 Q170 40 190 58\"/><path d=\"M150 118 Q170 132 190 118\"/></g><g class=\"trait-rubrique\"><path d=\"M158 88 q12 -11 24 0 q-12 11 -24 0 z\"/></g><g class=\"trait-liturgie\"><path d=\"M40 14 Q170 2 300 14\"/></g></svg>",
+  "titre": "Entendre et voir",
+  "titre_html": "Entendre <span class=\"it\">et voir</span>",
+  "sous_titre": "Job 42 et Luc 10 : de l'oreille qui croyait à l'œil qui voit",
+  "suite_hier": null,
+  "gravure_alt": "Un œil grand ouvert gravé au centre du bois, cerné par les volutes d'un vent de tempête ; en haut, soixante-dix silhouettes minuscules reviennent par un chemin, le visage levé vers un ciel dégagé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jb 42, 1-3.5-6.12-17",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Job répondit à l'Éternel et dit : <span class=\"s\">2</span> Je sais que tu peux tout, et que rien ne t'est impossible quand tu as un dessein. <span class=\"s\">3</span> Qui est celui qui obscurcit mes desseins par des discours sans intelligence ? — Oui, j'ai parlé, sans comprendre, de merveilles qui sont au-dessus de ma raison. <span class=\"s\">5</span> Mon <button class=\"mot\" data-g=\"g-oreille\">oreille</button> avait entendu parler de toi ; mais maintenant mon œil t'a vu. <span class=\"s\">6</span> C'est pourquoi je me <button class=\"mot\" data-g=\"g-emas\">condamne</button> et je me <button class=\"mot\" data-g=\"g-nacham\">repens</button> sur la poussière et sur la cendre. <span class=\"s\">12</span> L'Éternel bénit la dernière partie de la vie de Job plus que la première ; Job posséda quatorze mille brebis, six mille chameaux, mille paires de bœufs et mille ânesses. <span class=\"s\">13</span> Il eut sept fils et trois filles : <span class=\"s\">14</span> il donna à la première le nom de Jemima, à la seconde celui de Ketsia, et à la troisième celui de Kéren Hapuc. <span class=\"s\">15</span> Il n'y avait pas dans tout le pays d'aussi belles femmes que les filles de Job. Leur père leur accorda une part d'héritage parmi leurs frères. <span class=\"s\">16</span> Job vécut après cela cent quarante ans, et il vit ses enfants et les enfants de ses enfants jusqu'à la quatrième génération. <span class=\"s\">17</span> Et Job mourut âgé et rassasié de jours.",
+      "gloses": [
+        {
+          "id": "g-oreille",
+          "lemme": "ozen",
+          "html": "L'hébreu emploie ici le mot <span class=\"gr\">ozen</span>, « l'oreille », dans l'expression « à l'écoute de l'oreille ». Segond traduit platement « mon oreille avait entendu parler de toi », en gardant le redoublement oreille/œil qui est la charnière de tout le livre : Job ne nie pas ce qu'on lui avait enseigné sur Dieu, il en marque seulement la distance. Grégoire le Grand, dans ses Moralia in Job, lit ce verset comme le passage de la foi reçue par ouï-dire à la vision intérieure donnée par l'épreuve."
+        },
+        {
+          "id": "g-emas",
+          "lemme": "ma'as",
+          "html": "Le verbe hébreu est <span class=\"gr\">'em'as</span>, de la racine <span class=\"gr\">ma'as</span>, « rejeter, mépriser, refuser » — sans complément exprimé dans le texte, ce qui a longtemps embarrassé les traducteurs. Segond ajoute « je me condamne », choix interprétatif qui comble ce vide en faisant de Job l'objet de son propre rejet, alors que d'autres versions suppléent « mes paroles » ou « mes prétentions ». Calvin, dans son sermon sur ce chapitre, penche pour la première lecture : Job retire ses accusations, non la dignité d'homme intègre que Dieu lui-même avait reconnue au premier chapitre."
+        },
+        {
+          "id": "g-nacham",
+          "lemme": "nacham",
+          "html": "La racine hébraïque <span class=\"gr\">nacham</span> porte deux sens : se repentir, changer d'avis, mais aussi être consolé, trouver du réconfort. Segond choisit « je me repens », lecture pénitentielle classique, mais la racine permettrait tout aussi bien « je suis consolé au sujet de la poussière et de la cendre », c'est-à-dire du deuil que Job porte depuis le début du livre. Ibn Ezra, commentateur juif médiéval, a retenu cette seconde piste : Job ne se flagelle pas, il fait la paix avec sa condition de créature."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 118 (119), 66.71, 75.91, 125.130",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">66</span> Enseigne-moi le bon sens et l'intelligence ! Car je crois à tes commandements. <span class=\"s\">71</span> Il m'est bon d'avoir été <button class=\"mot\" data-g=\"g-humilie\">humilié</button>, afin que j'apprisse tes statuts. <span class=\"s\">75</span> Je sais, Éternel, que tes jugements sont justes ; c'est par fidélité que tu m'as humilié. <span class=\"s\">91</span> Elles subsistent encore aujourd'hui selon tes ordres, car toutes choses te sont assujetties. <span class=\"s\">125</span> Je suis ton serviteur : donne-moi l'intelligence, pour que je connaisse tes <button class=\"mot\" data-g=\"g-piqqudim\">préceptes</button> ! <span class=\"s\">130</span> La révélation de tes paroles donne la lumière, elle donne l'intelligence aux <button class=\"mot\" data-g=\"g-petaim\">simples</button>.",
+      "gloses": [
+        {
+          "id": "g-humilie",
+          "lemme": "'anah",
+          "html": "L'hébreu <span class=\"gr\">'anah</span> signifie « affliger, humilier, courber » — la même racine qui décrit, dans l'Exode, l'oppression d'Israël en Égypte. Segond traduit par « humilié », ce qui est juste mais adoucit la violence du terme : il s'agit moins d'une leçon morale que d'une détresse réellement traversée. Calvin, dans son commentaire sur les psaumes, insiste sur ce lien : l'école de Dieu, dit-il, n'a pas d'autre salle que celle de la souffrance consentie."
+        },
+        {
+          "id": "g-piqqudim",
+          "lemme": "piqqudim",
+          "html": "Le mot hébreu est <span class=\"gr\">piqqudim</span>, de la racine <span class=\"gr\">paqad</span>, « visiter, inspecter, confier une charge » — il ne désigne pas la loi en général ni le commandement moral, mais une charge précise, confiée et vérifiable, comme un dépôt remis à un intendant. Segond traduit uniformément par « préceptes » dans tout ce psaume, ce qui uniformise un vocabulaire hébreu en réalité très varié — pas moins de huit synonymes de la loi s'y succèdent. Les rabbins ont vu dans ce terme l'image du serviteur de confiance à qui l'on remet un inventaire à surveiller, non un sujet qui obéit par crainte."
+        },
+        {
+          "id": "g-petaim",
+          "lemme": "pethi",
+          "html": "L'hébreu <span class=\"gr\">pethi</span> vient de la racine <span class=\"gr\">patah</span>, « ouvrir » : le simple n'est donc pas le sot, mais celui qui est resté ouvert, sans défense acquise. Segond rend par « simples », ce qui est fidèle mais perd la consonance avec « ouvrir » que le verset exploite : la parole qui « s'ouvre » rencontre celui qui est lui-même ouvert. On retrouve cette racine en bonne part chez les sages d'Israël, qui ne méprisent jamais le pethi mais cherchent à le rendre attentif avant qu'il ne se referme dans l'assurance."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 10, 17-24",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">17</span> Les soixante-dix revinrent avec joie, et dirent : Seigneur, les démons mêmes nous sont soumis en ton nom. <span class=\"s\">18</span> Jésus leur dit : Je voyais Satan tomber du ciel comme un éclair. <span class=\"s\">19</span> Voici, je vous ai donné le pouvoir de marcher sur les serpents et les scorpions, et sur toute la puissance de l'ennemi ; et rien ne pourra vous nuire. <span class=\"s\">20</span> Cependant ne vous réjouissez pas de ce que les esprits vous sont soumis ; mais réjouissez-vous de ce que vos noms sont écrits dans les cieux. <span class=\"s\">21</span> En ce moment même, Jésus tressaillit de joie par le Saint-Esprit, et il dit : Je te loue, Père, Seigneur du ciel et de la terre, de ce que tu as caché ces choses aux sages et aux intelligents, et de ce que tu les as <button class=\"mot\" data-g=\"g-apekalypsas\">révélées</button> aux <button class=\"mot\" data-g=\"g-nepioi\">enfants</button>. Oui, Père, je te loue de ce que tu l'as <button class=\"mot\" data-g=\"g-eudokia\">voulu ainsi</button>. <span class=\"s\">22</span> Toutes choses m'ont été remises par mon Père, et personne ne connaît qui est le Fils, si ce n'est le Père, ni qui est le Père, si ce n'est le Fils et celui à qui le Fils veut le révéler. <span class=\"s\">23</span> Et, se tournant vers les disciples, il dit en particulier : Heureux les <button class=\"mot\" data-g=\"g-ophthalmoi\">yeux</button> qui voient ce que vous voyez ! <span class=\"s\">24</span> Car je vous dis que beaucoup de prophètes et de rois ont voulu voir ce que vous voyez, et ne l'ont pas vu, et entendre ce que vous entendez, et ne l'ont pas entendu.",
+      "gloses": [
+        {
+          "id": "g-apekalypsas",
+          "lemme": "apokalyptō",
+          "html": "Le verbe grec est <span class=\"gr\">apokalyptō</span>, « dévoiler, ôter ce qui couvre » — le même verbe donnera son nom au dernier livre du Nouveau Testament, l'Apocalypse. Segond traduit par « révélées », ce qui est correct mais efface l'image concrète du voile qu'on retire : Dieu n'ajoute pas une information, il retire un obstacle à la vue. Chrysostome rapproche ce dévoilement de celui que reçoit Job après l'épreuve — la même action divine qui ôte le voile sur les « sages » aveuglés par leur science l'ôte sur l'œil de celui qui avait seulement entendu."
+        },
+        {
+          "id": "g-nepioi",
+          "lemme": "nēpios",
+          "html": "Le grec <span class=\"gr\">nēpios</span> signifie littéralement « qui ne parle pas » — plus radical que <span class=\"gr\">paidion</span>, « l'enfant », ou <span class=\"gr\">teknon</span>, « le fils ». Segond unifie sous « enfants » un mot qui insiste surtout sur l'absence de maîtrise du langage, donc de la rhétorique des sages. Chrysostome, commentant ce même verset, y voit moins une question d'âge qu'une disposition intérieure que chacun peut garder ou perdre, quel que soit son savoir."
+        },
+        {
+          "id": "g-eudokia",
+          "lemme": "eudokia",
+          "html": "Le mot grec est <span class=\"gr\">eudokia</span>, « bon plaisir, bienveillance résolue » — le même mot que chantent les anges à Noël, « paix sur la terre aux hommes de bonne volonté » (Luc 2,14). Segond dilue le terme en « tu l'as voulu ainsi », qui rend l'idée de décision mais perd la nuance de joie bienveillante : ce n'est pas une volonté froide, c'est un plaisir du Père à agir ainsi. Le mot relie donc la joie de Jésus, au verset précédent, à celle du Père : les deux se réjouissent du même mouvement."
+        },
+        {
+          "id": "g-ophthalmoi",
+          "lemme": "ophthalmos",
+          "html": "Le mot grec <span class=\"gr\">ophthalmoi</span> signifie simplement « les yeux », sans ambiguïté de traduction possible pour Segond — mais c'est le rapprochement avec Job qui lui donne tout son poids : « mon oreille avait entendu... mais maintenant mon œil t'a vu » (Job 42,5). Ce que l'œil de Job a vu au terme d'une longue épreuve, les disciples le voient ici sans avoir traversé le même chemin, par grâce pure et non par mérite. C'est tout l'écart, et tout le don, que ce seul mot rassemble entre les deux lectures du jour."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le cadre et le poème",
+      "corps_html": "Le livre de Job se présente en deux étages de langue : un récit en prose simple, au début et à la fin du livre, où Dieu parle avec Satan et restitue à Job ce qu'il avait perdu ; entre les deux, quarante chapitres de poésie hébraïque savante, les dialogues avec les amis puis la réponse de Dieu depuis la tempête. Beaucoup d'exégètes considèrent le récit-cadre comme un conte ancien dans lequel aurait été inséré le poème — ce qui explique pourquoi l'épilogue du chapitre 42 renoue si vite, après la vision bouleversante de Job, avec le ton tranquille d'un conte qui se termine bien."
+    },
+    {
+      "titre": "Soixante-dix ou soixante-douze ?",
+      "corps_html": "Les manuscrits anciens de Luc se partagent entre deux chiffres pour désigner les envoyés de ce chapitre : soixante-dix ou soixante-douze. Segond, suivant le texte reçu de son temps, retient soixante-dix, chiffre qui évoque dans la tradition juive les soixante-dix nations de la terre selon Genèse 10, ou les soixante-dix anciens qui entourent Moïse en Nombres 11 — un nombre qui dit l'universalité de l'envoi, bien au-delà du cercle des Douze. Les éditions critiques modernes préfèrent souvent soixante-douze, sans que la variante change le sens du récit : ce qui importe, c'est le retour et la joie, non le compte exact."
+    }
+  ],
+  "analogie": {
+    "titre": "Entendu, puis vu",
+    "variantes": [
+      "Tu as sans doute une phrase que tu tiens de quelqu'un — un parent, une parole entendue en retraite, un verset appris enfant — connue depuis si longtemps qu'elle avait perdu tout relief, simple formule qu'on répète sans même l'écouter soi-même. Puis vient un jour où une épreuve réelle te fait toucher, dans ta vie, ce que cette phrase disait depuis toujours sans que tu l'aies jamais vérifié — et alors elle change de statut : ce n'était pas un mensonge appris, c'était une vérité que tu n'avais encore jamais vue, seulement entendue. Tu ne découvres rien de neuf devant Dieu ; tu vois enfin ce que tu savais déjà.",
+      "Il t'est peut-être arrivé de prier avec constance sans qu'aucune réponse ne vienne, au point de douter que la prière serve à quoi que ce soit — puis, bien plus tard, dans une période où tu ne priais presque plus par lassitude, de reconnaître soudain que cette traversée t'avait appris à attendre sans exiger, à espérer sans vouloir contrôler. Tu n'aurais jamais choisi ce détour, et pourtant c'est lui, et non les années de ferveur, qui t'a enseigné ce que tu sais maintenant de la patience de Dieu. Ce que l'épreuve t'a arraché n'était pas une punition : c'était une leçon que la facilité ne t'aurait jamais donnée.",
+      "Tu as sûrement connu ce moment où un service que tu rendais a cessé de porter le fruit visible qu'il portait au début — plus personne pour le remarquer, aucun signe que cela change quoi que ce soit — et où tu as pourtant continué, non par orgueil ni par habitude, mais parce qu'une certitude plus ancienne que le résultat te portait encore. Ce jour-là, tu as touché la différence entre être utile et être aimé : la première se mesure et s'épuise, la seconde ne dépend d'aucun succès et ne t'a jamais manqué, même quand tu croyais ne rien produire. C'est cette certitude-là, devant Dieu, et non l'efficacité de tes mains, que ce texte appelle une joie qui ne trompe pas."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Rien, dans ce chapitre de Job ni dans ce passage de Luc, ne demande que tu comprennes davantage. L'un et l'autre texte parlent d'une vue donnée, non conquise — à Job au bout de l'épreuve, aux disciples sans qu'ils l'aient méritée plus que les prophètes qui l'ont désirée avant eux.",
+    "geste": "Reprends une parole que tu connais par cœur depuis longtemps — un psaume, un verset, une prière apprise enfant — et lis-la lentement, à voix basse, comme si tu l'entendais pour la première fois.",
+    "note": "Cette manière de relire une parole déjà sue, jusqu'à ce qu'elle se rouvre, est proche de ce que les moines appelaient la lectio divina — non pas apprendre un sens nouveau, mais laisser le texte déjà connu descendre enfin jusqu'au cœur."
+  },
+  "question": "Qu'as-tu, jusqu'ici, seulement entendu dire de Dieu, et que tu n'as encore jamais vu de tes propres yeux ?",
+  "racines": [
+    {
+      "titre": "L'oreille et l'œil, selon Grégoire le Grand",
+      "corps_html": "Grégoire le Grand consacre une partie de ses Moralia in Job, écrits à la fin du VIe siècle, à ce verset. Il y voit le mouvement propre de toute vie spirituelle : on commence par croire ce qu'on nous rapporte de Dieu, comme un bruit venu du dehors, puis l'on avance, par l'épreuve et la patience, vers une connaissance qui n'a plus besoin de témoin parce qu'elle touche directement l'âme. Pour Grégoire, Job ne corrige pas une erreur de doctrine : il franchit la distance entre savoir et voir.",
+      "attribution": "Grégoire le Grand, Moralia in Job, fin du VIe siècle"
+    },
+    {
+      "titre": "L'école de l'affliction, selon Calvin",
+      "corps_html": "Dans son commentaire sur les psaumes, Calvin revient sur le verset 71 pour en tirer une règle qu'il juge universelle : Dieu n'instruit véritablement que ceux qu'il a d'abord humiliés, parce que la prospérité rend l'homme sourd à sa propre parole. Il met en garde contre une lecture qui ferait de la souffrance une vertu en soi — elle n'a de valeur, dit-il, que parce que Dieu s'en sert pour ouvrir une oreille qui sans elle resterait fermée.",
+      "attribution": "Jean Calvin, Commentaire sur les psaumes, 1557"
+    },
+    {
+      "titre": "Cachée aux sages, selon Jean Chrysostome",
+      "corps_html": "Jean Chrysostome, dans ses homélies, s'arrête sur l'étonnement que peut provoquer ce verset : pourquoi Dieu se réjouirait-il de cacher quelque chose aux sages ? Il répond que ce n'est pas le savoir qui est écarté, mais l'orgueil qui s'appuie sur lui ; les mêmes vérités restent offertes à qui les reçoit sans vouloir les posséder par sa propre force. La joie de Jésus, note-t-il, n'est donc pas une joie contre l'intelligence, mais contre la prétention qui l'accompagne trop souvent.",
+      "attribution": "Jean Chrysostome, Homélies sur l'Évangile, IVe siècle"
+    }
+  ]
+}
