@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le fruit dû — dimanche 4 octobre 2026</title>
+<meta name="description" content="Ce que Dieu plante, il vient le chercher — et il ne cesse pas d'attendre.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 4 octobre 2026 · 27ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Le fruit <span class="it">dû</span></h1>
+    <p class="chapeau">Ce que Dieu plante, il vient le chercher — et il ne cesse pas d'attendre.</p>
+    <figure class="gravure" aria-label="Une vigne entourée d'un mur de pierres sèches, une tour inachevée dressée au centre, un pressoir vide à ses pieds ; au loin des sarments arrachés jonchent le sol, et une pierre d'angle gît, écartée, devant un mur en construction."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 130 h320"/><path d="M20 130 L20 60 L300 60 L300 130"/><path d="M20 60 l10 -10 M40 60 l10 -10 M60 60 l10 -10 M80 60 l10 -10 M100 60 l10 -10"/><path d="M220 60 l10 -10 M240 60 l10 -10 M260 60 l10 -10 M280 60 l10 -10 M290 60 l10 -10"/><path d="M160 60 v-38 h26 v38"/><path d="M160 38 h26"/><path d="M105 130 v-14 h40 v14"/><path d="M110 116 v-10 M120 116 v-10 M130 116 v-10 M140 116 v-10"/></g><g class="trait-rubrique"><path d="M190 110 q10 -8 6 -18 q-6 6 -4 14 q-10 -10 -4 -24 q6 14 -2 20"/><path d="M230 120 q8 -6 5 -15"/><path d="M250 125 q-6 -4 -3 -12"/></g><g class="trait-liturgie"><path d="M66 130 q-4 -10 4 -14 q8 4 4 14 z"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 5, 1-7 — Bible Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Je chanterai à mon <button class="mot" data-g="g-dod">bien-aimé</button> le cantique de mon bien-aimé sur sa vigne. Mon bien-aimé avait une vigne, sur un coteau fertile. <span class="s">2</span> Il en remua le sol, en ôta les pierres, et y mit un plant excellent ; il bâtit une tour au milieu d'elle, il y creusa aussi un pressoir ; puis il espéra qu'elle produirait de bons raisins, mais elle en a produit de <button class="mot" data-g="g-beushim">mauvais</button>. <span class="s">3</span> Maintenant donc, habitants de Jérusalem et hommes de Juda, soyez juges entre moi et ma vigne ! <span class="s">4</span> Qu'y avait-il encore à faire à ma vigne, que je n'aie pas fait pour elle ? Pourquoi, quand j'ai espéré qu'elle produirait de bons raisins, en a-t-elle produit de mauvais ? <span class="s">5</span> Je vous dirai maintenant ce que je vais faire à ma vigne. J'en arracherai la haie, pour qu'elle soit broutée ; j'en abattrai la clôture, pour qu'elle soit foulée aux pieds. <span class="s">6</span> Je la réduirai en désert ; elle ne sera plus taillée, ni cultivée ; les ronces et les épines y croîtront ; et je donnerai mes ordres aux nuées, afin qu'elles ne laissent plus tomber la pluie sur elle. <span class="s">7</span> La vigne de l'Éternel des armées, c'est la maison d'Israël, et les hommes de Juda, c'est le plant qu'il avait chéri. Il avait espéré de la droiture, et voici du sang versé ! Il avait espéré de la justice, et voici des cris de détresse !</div>
+        <div class="glose" id="g-dod"><span class="lemme">dôd</span> <span class="gr">dôd</span>, « bien-aimé » : c'est le mot même du Cantique des cantiques (Ct 1, 13 ; 2, 16), le vocabulaire de l'amour conjugal, et c'est aussi la racine du nom David. Segond traduit fidèlement, mais perd l'écho : Ésaïe ouvre son oracle de jugement comme un chant d'amour, non comme un réquisitoire. Les Pères latins, lisant ce texte avec le Cantique, y ont entendu l'époux divin chantant pour sa vigne avant de la chanter contre elle.</div>
+        <div class="glose" id="g-beushim"><span class="lemme">be'ushim</span> Le texte hébreu joue sur deux mots presque jumeaux : <span class="gr">anabim</span>, « bons raisins », et <span class="gr">be'ushim</span>, que Segond rend platement par « mauvais » mais qui signifie littéralement « choses puantes, pourries ». L'oreille hébraïque entend la rime et la chute : on attendait le même mot, on reçoit son contraire fétide. Les commentateurs juifs médiévaux, Rachi en tête, relevaient déjà ce jeu de sons comme la clé du poème : la vigne n'a pas simplement déçu, elle a tourné.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 79 (80), 9-12, 13-14, 15-16a, 19-20 — Bible Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">9</span> Tu arrachas une vigne de l'Égypte, tu chassas des nations, et tu la <button class="mot" data-g="g-nasa">plantas</button>. <span class="s">10</span> Tu fis place devant elle, et elle poussa des racines et remplit la terre ; <span class="s">11</span> les montagnes étaient couvertes de son ombre, et ses rameaux étaient comme des cèdres de Dieu ; <span class="s">12</span> elle étendait ses branches jusqu'à la mer, et ses rejetons jusqu'au fleuve. <span class="s">13</span> Pourquoi as-tu rompu ses clôtures, en sorte que tous les passants la dépouillent ? <span class="s">14</span> Le sanglier de la forêt la ravage, et les bêtes des champs en font leur pâture. <span class="s">15</span> Dieu des armées, reviens ! Regarde du haut des cieux, et vois ! Considère cette vigne ! <span class="s">16a</span> Protège ce que ta droite a planté, et le <button class="mot" data-g="g-ben">fils</button> que tu t'es choisi !... <span class="s">19</span> Et nous ne nous éloignerons plus de toi. Fais-nous revivre, et nous invoquerons ton nom. <span class="s">20</span> Éternel, Dieu des armées, rétablis-nous ! Fais briller ta face, et nous serons sauvés !</div>
+        <div class="glose" id="g-nasa"><span class="lemme">tassia</span> <span class="gr">tassia</span>, de la racine <span class="gr">nassa</span>, ne veut pas dire « arracher » au sens où l'on déracine, mais « faire voyager, faire partir » — le même verbe que pour une caravane qui se met en marche. Segond choisit « arrachas », qui dramatise un déplacement que l'hébreu présente d'abord comme une marche, celle de l'exode. Le psaume rejoue ainsi, par ce seul verbe, tout le trajet d'Égypte en Canaan avant même de nommer la vigne.</div>
+        <div class="glose" id="g-ben"><span class="lemme">ben</span> Le mot <span class="gr">ben</span>, « fils », clôt discrètement le poème sur la vigne : le plant que Dieu a planté de sa main devient, sans transition grammaticale, un fils qu'il s'est choisi. Segond garde la rupture telle quelle, sans la lisser. Calvin, commentant ce psaume, refuse d'y lire une prophétie directe, mais note que le peuple entier y est appelé fils comme un seul homme — lecture que la tradition chrétienne a ensuite resserrée sur le Fils unique rejeté par les vignerons de l'évangile de ce jour.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — Ph 4, 6-9 — Bible Segond, 1910</p>
+        <div class="ecriture "><span class="s">6</span> Ne vous <button class="mot" data-g="g-merimnao">inquiétez</button> de rien ; mais en toute chose faites connaître vos besoins à Dieu par des prières et des supplications, avec des actions de grâces. <span class="s">7</span> Et la paix de Dieu, qui surpasse toute intelligence, <button class="mot" data-g="g-phroureo">gardera</button> vos cœurs et vos pensées en Jésus-Christ. <span class="s">8</span> Au reste, frères, que tout ce qui est vrai, tout ce qui est honorable, tout ce qui est juste, tout ce qui est pur, tout ce qui est aimable, tout ce qui mérite l'approbation, ce qui est vertueux et digne de louange, soit l'objet de vos pensées. <span class="s">9</span> Ce que vous avez appris, reçu et entendu de moi, et ce que vous avez vu en moi, mettez-le en pratique. Et le Dieu de paix sera avec vous.</div>
+        <div class="glose" id="g-merimnao"><span class="lemme">merimnaô</span> <span class="gr">merimnate</span>, « inquiétez-vous », vient d'une racine qui signifie diviser, partager en plusieurs morceaux : l'inquiet est celui dont l'esprit se fractionne entre plusieurs objets à la fois. C'est le même verbe que Jésus emploie en Matthieu 6, 25-34 à propos des oiseaux du ciel et des lis des champs. Segond traduit justement, mais il faut entendre sous « inquiétude » cette image d'un cœur tiré en plusieurs directions à la fois, non une simple émotion passagère.</div>
+        <div class="glose" id="g-phroureo"><span class="lemme">phroureô</span> <span class="gr">phrourêsei</span>, « gardera », est un terme militaire : celui d'une garnison postée en sentinelle aux portes d'une ville. Segond traduit par « gardera », ce qui est juste, mais efface l'image d'une faction armée montant la garde autour du cœur. Jean Chrysostome, prêchant sur cette épître, insiste sur ce relief martial : la paix de Dieu n'est pas une absence de combat, elle est elle-même postée en sentinelle contre ce qui voudrait reprendre le cœur.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 21, 33-43 — Bible Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">33</span> Écoutez une autre parabole. Un homme planta une vigne. Il l'entoura d'une haie, y creusa un pressoir, et y bâtit une tour ; puis il l'afferma à des <button class="mot" data-g="g-georgois">vignerons</button>, et quitta le pays. <span class="s">34</span> Lorsque le temps de la récolte fut arrivé, il envoya ses serviteurs vers les vignerons, pour recevoir le produit de sa vigne. <span class="s">35</span> Les vignerons, s'étant saisis de ses serviteurs, battirent l'un, tuèrent l'autre, et en lapidèrent un troisième. <span class="s">36</span> Il envoya encore d'autres serviteurs, en plus grand nombre que les premiers ; et les vignerons les traitèrent de la même manière. <span class="s">37</span> Enfin, il envoya son fils, disant : Ils respecteront mon fils. <span class="s">38</span> Mais, quand les vignerons virent le fils, ils dirent entre eux : Voici l'héritier ; tuons-le, et emparons-nous de son héritage. <span class="s">39</span> Et ils le saisirent, le <button class="mot" data-g="g-ekballo">jetèrent</button> hors de la vigne, et le tuèrent. <span class="s">40</span> Maintenant, quand le maître de la vigne viendra, que fera-t-il à ces vignerons ? <span class="s">41</span> Ils lui répondirent : Il fera périr ces misérables, et il louera sa vigne à d'autres vignerons, qui lui en donneront le produit au temps de la récolte. <span class="s">42</span> Jésus leur dit : N'avez-vous jamais lu ces paroles dans les Écritures : La pierre qu'ont rejetée ceux qui bâtissaient est devenue la <button class="mot" data-g="g-kephale">principale de l'angle</button> ; c'est du Seigneur que cela est venu, et c'est un prodige à nos yeux ? <span class="s">43</span> C'est pourquoi, je vous dis que le royaume de Dieu vous sera enlevé, et sera donné à une nation qui en rendra les fruits.</div>
+        <div class="glose" id="g-georgois"><span class="lemme">geôrgoi</span> <span class="gr">geôrgois</span>, « vignerons », ne désigne pas de simples ouvriers mais des fermiers à qui l'on a confié une terre en location, responsables du fruit et comptables du loyer en nature. Segond traduit bien, mais il faut entendre derrière ce mot un statut précis du droit agraire de l'époque, repris aussi en Marc 12 et Luc 20. La parabole suppose un contrat réel, connu de l'auditoire, ce qui rend plus insoutenable encore le refus de rendre le fruit dû.</div>
+        <div class="glose" id="g-ekballo"><span class="lemme">ekballô</span> <span class="gr">exebalon</span>, « jetèrent », est le même verbe que les évangiles emploient pour chasser les démons ou expulser un homme hors d'une synagogue. Segond traduit correctement par « jetèrent », mais le grec porte une violence d'expulsion rituelle, comme si le fils était traité en élément impur à rejeter hors du lieu saint. Jean Chrysostome, dans son commentaire sur ce passage, relève que la vigne, lieu de bénédiction, devient ainsi le lieu du meurtre.</div>
+        <div class="glose" id="g-kephale"><span class="lemme">kephalê gônias</span> <span class="gr">kephalên gônias</span>, « tête de l'angle », cite le Psaume 118, 22 et désigne la pierre maîtresse qui, à l'angle d'un édifice, porte et aligne deux murs. Segond traduit « la principale de l'angle », formule un peu raide mais fidèle. Pierre reprendra ce verset devant le sanhédrin (Actes 4, 11) pour désigner le Christ crucifié puis ressuscité : la pierre que les bâtisseurs — les vignerons de la parabole — ont jugée inutilisable devient, par la résurrection, ce qui tient tout l'édifice.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Un chant d'amour qui devient accusation</h3><p>Ésaïe compose son oracle sur le modèle d'un chant de vendange, comme on en chantait au VIIIe siècle avant notre ère lors des fêtes des moissons à Jérusalem. L'auditoire, invité à juger « entre moi et ma vigne », se retrouve pris au piège : en applaudissant le chant, il se condamne lui-même, puisque la vigne, c'est Juda, à la veille des invasions assyriennes qui menacent déjà le royaume du Nord.</p></div>
+      <div><h3>Une parabole dite dans le Temple, juste avant la Passion</h3><p>Matthieu place cette parabole durant la dernière semaine, dans l'enceinte du Temple, devant les grands prêtres et les anciens du peuple (Mt 21, 23.45). Ce n'est donc pas un enseignement général : c'est une confrontation directe, quelques jours avant l'arrestation de Jésus, où ceux qui l'écoutent comprennent — Matthieu le dit explicitement au verset suivant — qu'il parle d'eux.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Planter, attendre, ne rien voir venir</h2>
+<p>Il y a des années où tu as tout donné à quelque chose — une relation, un engagement, une prière reprise chaque soir — et où rien ne semble avoir poussé. Tu as retourné la terre, enlevé les pierres, planté ce qu'il y avait de meilleur en toi, et pourtant ce qui revient ressemble à l'inverse de ce que tu espérais. Ce n'est pas d'abord une faute à chercher en toi : c'est la question même du texte de ce jour, posée non pas sur toi mais par le maître de la vigne, qui attend encore devant ce qu'il a planté.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, reste un instant devant cette question : qu'est-ce que tu attends de ce que tu as planté — et qu'attends-tu que Dieu attende de toi ?</p>
+      <p class="geste">Nomme, en silence, un lieu précis de ta vie où tu as cru avoir tout fait et où le fruit ne vient toujours pas — puis remets-le, sans l'expliquer, devant Dieu.</p>
+      <small>Ce n'est pas un bilan à produire, mais un regard à laisser poser sur toi.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu continues d'attendre de Dieu, et qu'est-ce que Dieu, peut-être, attend encore de toi ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une seule vigne, deux envois de serviteurs</h3>
+          <p>Irénée de Lyon, discutant cette parabole dans son traité contre les hérésies, y voit l'unité des deux Testaments : les serviteurs envoyés avant le fils sont les prophètes, refusés par les mêmes hommes qui refuseront ensuite le Fils lui-même. Contre ceux qui séparaient le Dieu de l'Ancien Testament et celui du Nouveau, Irénée insiste sur un seul maître de la vigne, patient à travers une seule et même histoire.</p>
+<p class="attrib">Irénée de Lyon, Contre les hérésies, IV</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Ésaïe lu depuis Juda menacé</h3>
+          <p>Calvin, dans son commentaire sur Ésaïe, relève que le prophète ne prononce pas un oracle abstrait : il parle à un peuple qui se croit protégé par l'élection et le culte du Temple, quelques décennies avant que le royaume du Nord ne tombe sous l'Assyrie. Le jugement annoncé contre la vigne n'est donc pas une menace lointaine mais la description de ce qui est déjà en train de se nouer sous leurs yeux.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre du prophète Ésaïe</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La paix qui garde, et non qui console seulement</h3>
+          <p>Jean Chrysostome, prêchant sur l'épître aux Philippiens, observe que Paul n'écrit pas ces lignes depuis le repos mais depuis une prison, enchaîné, incertain de son procès. La paix qu'il annonce n'est donc pas la paix de celui qui a réglé ses affaires, mais celle que Dieu pose comme sentinelle au cœur même de ce qui reste menaçant et non résolu.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'épître aux Philippiens</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 27ème Semaine du Temps Ordinaire — Is 5, 1-7 ; Ph 4, 6-9 ; Mt 21, 33-43.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
