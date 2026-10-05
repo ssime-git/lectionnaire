@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-06",
+  "date_humaine": "mardi",
+  "semaine": "27ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 1, 13-24 ; Lc 10, 38-42",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M105 40 q45 -32 90 0 q-45 32 -90 0 z\"/><path d=\"M138 28 q10 4 6 16 q-4 9 -12 6 q-6 -10 2 -18 z\"/><path d=\"M248 92 q-6 20 0 36 q11 7 22 0 q6 -16 0 -36 q-11 -7 -22 0 z\"/><path d=\"M256 74 q7 -7 13 0 q2 9 -5 13 q-8 2 -11 -6 z\"/><path d=\"M249 102 q-10 6 -16 16\"/><path d=\"M271 102 q10 6 16 16\"/><path d=\"M38 112 q0 -16 11 -16 q11 0 11 16 q0 16 -11 16 q-11 0 -11 -16 z\"/><path d=\"M58 98 q7 2 5 11\"/><path d=\"M78 126 q14 -4 26 0 q4 2 -2 4 q-12 3 -24 -4\"/><path d=\"M98 88 l-6 40\"/></g><g class=\"trait-rubrique\"><path d=\"M128 22 q16 -10 30 2 q8 12 -4 22 q-12 9 -24 2 q-8 -6 -2 -18\"/></g><g class=\"trait-liturgie\"><path d=\"M332 58 l-42 20\"/><path d=\"M336 74 l-48 4\"/><path d=\"M332 92 l-42 -10\"/></g></svg>",
+  "titre": "Mis à part",
+  "titre_html": "Mis <span class=\"it\">à part</span>",
+  "sous_titre": "Galates 1 ; Psaume 139 ; Luc 10 — mis à part avant d'agir, et la part qu'on ne t'ôtera pas.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : dans la partie haute, un fil se tisse autour d'une forme encore indistincte dans un sein maternel ; en bas, une femme assise, immobile parmi des outils de service abandonnés, tourne le visage vers une lumière hors cadre.",
+  "lectures": [
+    {
+      "etiquette": "Lecture",
+      "reference": "Ga 1, 13-24",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">13</span> Vous avez su, en effet, quelle était autrefois ma conduite dans le judaïsme, comment je persécutais à outrance et traitais en ennemie l'Église de Dieu, <span class=\"s\">14</span> et comment j'étais d'un <button class=\"mot\" data-g=\"g-zele\">zèle excessif</button> pour les traditions de mes pères, surpassant en cela tous ceux de mon âge parmi mes compatriotes. <span class=\"s\">15</span> Mais, lorsqu'il plut à celui qui m'avait <button class=\"mot\" data-g=\"g-mis-a-part\">mis à part</button> dès le sein de ma mère, et qui m'a appelé par sa grâce, <span class=\"s\">16</span> de révéler en moi son Fils, afin que je l'annonçasse parmi les païens, aussitôt, <span class=\"s\">17</span> je ne consultai personne et je n'allai pas non plus à Jérusalem vers ceux qui étaient apôtres avant moi, mais je partis pour l'Arabie. Puis je revins à Damas. <span class=\"s\">18</span> Trois ans plus tard, je montai à Jérusalem pour faire la connaissance de Céphas, et je demeurai quinze jours chez lui. <span class=\"s\">19</span> Mais je ne vis aucun autre des apôtres, si ce n'est Jacques, le frère du Seigneur. <span class=\"s\">20</span> Dans ce que je vous écris, voici, devant Dieu, je ne mens point. <span class=\"s\">21</span> J'allai ensuite dans les contrées de la Syrie et de la Cilicie. <span class=\"s\">22</span> Or, j'étais inconnu de visage aux Églises de la Judée qui sont en Christ ; <span class=\"s\">23</span> seulement, elles avaient entendu dire : Celui qui autrefois nous persécutait annonce maintenant la foi qu'il s'efforçait alors de détruire. <span class=\"s\">24</span> Et elles glorifiaient Dieu à cause de moi.",
+      "gloses": [
+        {
+          "id": "g-zele",
+          "lemme": "zèle",
+          "html": "Le grec dit καὶ περισσοτέρως ἐζήλουν (<span class=\"gr\">perissoterōs ezēloun</span>), littéralement « et j'étais zélé plus abondamment ». <span class=\"gr\">perissoterōs</span> appartient à la même famille que le mot qui dira, en Romains 5,20, la grâce « surabondante » : Paul applique à son ancien fanatisme le vocabulaire même du débordement divin. Segond traduit par « zèle excessif », ce qui rend bien le comparatif mais efface l'ironie du mot. Chrysostome, dans ses homélies sur Galates, insiste sur ce retournement : la même ardeur qui persécutait sera, sans perdre d'intensité, mise au service de l'Évangile."
+        },
+        {
+          "id": "g-mis-a-part",
+          "lemme": "mis à part",
+          "html": "Le verbe grec est ἀφορίσας (<span class=\"gr\">aphorisas</span>), de ἀφορίζω, « mettre à part, séparer » — le même verbe, ironiquement, qui donne leur nom aux pharisiens, les « séparés ». Segond traduit fidèlement par « mis à part » ; mais l'ironie se perd en français, celle d'un pharisien zélé, qui se séparait lui-même pour garder la Loi pure, découvrant qu'il a été séparé par un autre, avant même de naître. En Romains 1,1, Paul reprend ce même verbe pour se dire « mis à part pour annoncer l'Évangile » — signe que cette mise à part n'est pas un privilège figé mais un envoi. Chrysostome note que Dieu choisit ainsi « dès le sein », avant tout mérite constatable, pour que nul ne puisse dire avoir devancé la grâce."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 138 (139), 1-3, 13-14ab, 14cd-15",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Éternel ! tu me <button class=\"mot\" data-g=\"g-sonder\">sondes</button> et tu me connais, <span class=\"s\">2</span> Tu sais quand je m'assieds et quand je me lève, Tu pénètres de loin ma pensée. <span class=\"s\">3</span> Tu sais quand je marche et quand je me couche, Et toutes mes voies te sont familières. <span class=\"s\">13</span> C'est toi qui as formé mes reins, Qui m'as <button class=\"mot\" data-g=\"g-tisse\">tissé</button> dans le sein de ma mère. <span class=\"s\">14</span> Je te loue de ce que je suis une créature si merveilleuse. Tes œuvres sont admirables, Et je le reconnais. <span class=\"s\">15</span> Mon corps n'était point caché à tes yeux, Lorsque j'étais formé dans le sein maternel, Lorsque j'étais tissé dans les profondeurs de la terre.",
+      "gloses": [
+        {
+          "id": "g-sonder",
+          "lemme": "sondes",
+          "html": "L'hébreu est חָקַרְתָּ (<span class=\"gr\">chaqartani</span>), de la racine <span class=\"gr\">chaqar</span>, qui désigne d'abord l'exploration minière, le fait de creuser pour atteindre un filon caché — ainsi en Job 28,3, où le mineur « sonde » les ténèbres. Segond choisit « tu me sondes », verbe français qui garde heureusement cette image de profondeur et de recherche patiente, plutôt qu'un simple « tu me connais » qui aurait aplati le texte. Calvin, dans son Commentaire sur les Psaumes, relève que ce verbe interdit toute idée d'une connaissance superficielle : Dieu ne regarde pas de l'extérieur, il descend dans les couches les plus intimes de la personne, comme on descend dans une mine."
+        },
+        {
+          "id": "g-tisse",
+          "lemme": "tissé",
+          "html": "Le verbe hébreu, rare, vient d'une racine dont le sens exact reste discuté par les lexicographes : « tisser, tresser », mais aussi « couvrir, faire de l'ombre », selon la lecture qu'on retient. Segond opte pour « tissé », image textile qui rejoint celle des « reins formés » au même verset et qui a marqué la tradition dévotionnelle ; d'autres anciennes versions, lisant la racine du côté de l'ombre protectrice, penchent plutôt vers l'idée d'un voile ou d'une couverture. Cette hésitation même est précieuse : qu'on lise « tissé » ou « couvert », le texte dit une action minutieuse et cachée de Dieu sur un corps qui n'existe pas encore pour lui-même."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 10, 38-42",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">38</span> Comme Jésus était en chemin avec ses disciples, il entra dans un village, et une femme, nommée Marthe, le reçut dans sa maison. <span class=\"s\">39</span> Elle avait une sœur, nommée Marie, qui, s'étant assise aux pieds du Seigneur, écoutait sa parole. <span class=\"s\">40</span> Marthe, occupée à divers soins domestiques, survint et dit : Seigneur, cela ne te fait-il rien que ma sœur me laisse seule pour servir ? Dis-lui donc de m'aider. <span class=\"s\">41</span> Le Seigneur lui répondit : Marthe, Marthe, tu <button class=\"mot\" data-g=\"g-agites\">t'inquiètes et tu t'agites</button> pour beaucoup de choses. <span class=\"s\">42</span> Une seule chose est nécessaire. Marie a choisi la <button class=\"mot\" data-g=\"g-part\">bonne part</button>, qui ne lui sera point ôtée.",
+      "gloses": [
+        {
+          "id": "g-agites",
+          "lemme": "t'agites",
+          "html": "Le grec emploie deux verbes rares : <span class=\"gr\">merimnas</span> (« tu te soucies ») et <span class=\"gr\">turbazē</span>, mot qui n'apparaît nulle part ailleurs dans le Nouveau Testament, venu de <span class=\"gr\">turbē</span>, « tumulte, agitation confuse » — le même fond que le latin turba, la foule bruyante. Segond rend l'ensemble par « tu t'inquiètes et tu t'agites », doublant le verbe français pour deux verbes grecs distincts, l'un intérieur, l'autre extérieur : le souci qui ronge et le mouvement qui s'éparpille. D'anciens grammairiens rapprochaient déjà <span class=\"gr\">merimna</span> de <span class=\"gr\">merizō</span>, « diviser » — comme si l'inquiétude était, par nature, un esprit partagé en plusieurs directions à la fois, incapable de se tenir en un seul lieu."
+        },
+        {
+          "id": "g-part",
+          "lemme": "bonne part",
+          "html": "Le mot grec est <span class=\"gr\">meris</span>, « portion, part attribuée » — le même mot qui désigne, dans la Loi, la part d'héritage que les lévites ne reçoivent pas en terre : « l'Éternel est sa part » (Dt 10,9 ; 18,2). Segond traduit littéralement par « la bonne part », gardant ainsi, sans le souligner, l'écho de ce vieux statut lévitique : Marie reçoit, comme les lévites, pour part non un bien à posséder mais une présence à écouter. Origène, puis Augustin après lui, liront ce verset comme la figure de la vie contemplative — non pas opposée au service de Marthe, mais qui ne doit pas lui être sacrifiée."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre de combat",
+      "corps_html": "L'épître aux Galates est écrite dans l'urgence : des prédicateurs venus après Paul exigent des chrétiens d'origine païenne qu'ils se fassent circoncire pour appartenir pleinement au peuple de Dieu. Dans les versets qui précèdent notre passage (1,11-12), Paul vient d'affirmer qu'il n'a reçu son Évangile d'aucun homme. Le récit autobiographique qui suit — zèle persécuteur, révélation, puis quatorze années avant de remonter à Jérusalem (2,1) — sert cet unique argument : son apostolat ne doit rien à l'Église de Jérusalem, tout à l'appel reçu."
+    },
+    {
+      "titre": "Entre un Samaritain et une prière",
+      "corps_html": "Luc place cette scène juste après la parabole du bon Samaritain, qui définissait le prochain par l'action, et juste avant l'enseignement sur la prière (11,1-13). Entre les deux, Marthe et Marie : comme si l'évangéliste voulait empêcher qu'on réduise la foi au seul service. Le village n'est pas nommé par Luc — la tradition johannique (Jn 11,1) l'identifiera à Béthanie — mais la leçon vaut pour toute maison où l'on reçoit le Seigneur."
+    }
+  ],
+  "analogie": {
+    "titre": "La part qu'on ne mesure pas",
+    "variantes": [
+      "Tu connais ces jours où tout ce que tu fais pour Dieu te paraît nécessaire : un service après l'autre, une tâche qui en appelle une deuxième, jamais le temps de t'arrêter sans avoir l'impression de manquer à quelque chose. Puis vient, parfois sans que tu l'aies choisi — une maladie, un deuil, une fatigue qui ne cède pas —, un moment où plus rien ne peut être fait. Tu restes là, les mains vides, sans rien à montrer pour cette heure perdue, et c'est précisément dans ce vide que quelque chose se reçoit, qui ne t'avait jamais été donné par tout ce que tu accomplissais : non une récompense pour ton service, mais une présence qui ne demandait que ta présence.",
+      "Tu portes peut-être, sans l'avoir choisi, une disposition qui t'habite depuis toujours — une attention à la souffrance des autres, un besoin de justice, une fidélité presque obstinée — et dont tu ne sais pas d'où elle te vient ni pourquoi elle t'a été donnée à toi plutôt qu'à un autre. Tu l'as longtemps vécue comme un trait de caractère, parfois comme un fardeau, sans y voir une direction. Puis un jour, au milieu d'une tâche qui n'avait rien d'extraordinaire, tu comprends que ce trait ancien visait depuis le début ce moment précis — qu'il avait été formé en toi avant que tu puisses t'en féliciter ou t'en plaindre, par une main que tu ne voyais pas encore.",
+      "Tu as peut-être connu cette certitude brûlante qui te faisait défendre une cause, une idée, une image de toi-même ou de Dieu, avec une énergie qui ne doutait de rien et qui, parfois, blessait sans le vouloir ceux qui pensaient autrement. Puis quelque chose a cédé en toi — un visage, une parole, un échec — et cette même ardeur, loin de s'éteindre, s'est mise à chercher ailleurs, avec la même intensité mais une direction inverse. Tu portes encore aujourd'hui ce feu-là ; ce qui a changé, ce n'est pas sa force, c'est devant qui tu le déposes."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant d'ouvrir un livre, un agenda ou une liste de choses à faire aujourd'hui, essaie de rester une minute sans rien produire.",
+    "geste": "Assieds-toi, comme Marie, sans but immédiat, et laisse monter en toi la question : qu'est-ce qui, en moi, a été formé avant que je le mérite ou que je le décide ?",
+    "note": "Ce n'est pas un exercice de relaxation : c'est consentir, pour un instant, à être connu avant d'agir."
+  },
+  "question": "Quelle part de ta vie reconnais-tu aujourd'hui comme ayant été mise à part avant que tu ne t'en soucies toi-même — et que fais-tu, d'ordinaire, pour ne pas avoir à t'arrêter devant elle ?",
+  "racines": [
+    {
+      "titre": "Le zèle retourné",
+      "corps_html": "Dans ses Homélies sur l'épître aux Galates, Chrysostome s'arrête sur le contraste entre le persécuteur et l'apôtre : la même énergie, dit-il, qui jetait Paul contre l'Église de Dieu est celle qui le jettera, sans diminuer d'intensité, au service de l'Évangile parmi les nations. Dieu, selon lui, ne commence pas par éteindre ce qui brûle en l'homme ; il en change la direction. C'est pourquoi Paul peut dire qu'il a été mis à part « dès le sein » : la conversion n'ajoute rien à sa nature, elle la retourne.",
+      "attribution": "Jean Chrysostome"
+    },
+    {
+      "titre": "Connu avant de se connaître",
+      "corps_html": "Calvin, commentant le Psaume 139, insiste sur le vertige qu'éprouve l'âme devant une connaissance divine qui ne laisse aucun repli : Dieu nous a vus avant que nous nous voyions nous-mêmes, formés avant d'être nés, connus avant de pouvoir répondre. Pour Calvin, ce n'est pas d'abord une doctrine de la providence qu'il faut en tirer, mais une humiliation salutaire : toute prétention humaine à se définir soi-même tombe devant un regard qui a précédé jusqu'à notre premier souffle.",
+      "attribution": "Jean Calvin"
+    },
+    {
+      "titre": "L'action et le repos",
+      "corps_html": "Augustin revient plusieurs fois, dans ses Sermons, sur Marthe et Marie comme figures de deux vies également légitimes, la vie active et la vie contemplative, mais non égales en destination : le service de Marthe passera, la part de Marie demeurera, parce qu'elle préfigure le repos éternel où le service lui-même s'achèvera. Augustin se garde pourtant de mépriser Marthe : sans elle, dit-il, le Seigneur n'aurait pas eu de pain ; mais sans Marie, l'hospitalité serait restée sans écoute.",
+      "attribution": "Augustin d'Hippone"
+    }
+  ]
+}
