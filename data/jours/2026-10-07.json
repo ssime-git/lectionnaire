@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-07",
+  "date_humaine": "mercredi",
+  "semaine": "27ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 2, 1-2.7-14 ; Lc 11, 1-4",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 8\" aria-hidden=\"true\"></svg>",
+  "titre": "Le Nom",
+  "titre_html": "Le <span class=\"it\">Nom</span>",
+  "sous_titre": "Quand la prière devient apprentissage du Christ, et non technique à maîtriser",
+  "suite_hier": "Hier nous voyions Jésus en prière dans un lieu désert ; aujourd'hui ses disciples, témoins de cette vie cachée, lui demandent ce qu'ils n'avaient pas encore osé : apprends-nous.",
+  "gravure_alt": "Un homme en prière, agenouillé, les mains ouvertes vers le ciel nocturne ; derrière lui, d'autres figures dans l'ombre attendent, le visage tourné vers lui. Gravure sur bois, hachures denses, lumière venant d'en haut.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ga 2, 1-2.7-14",
+      "traduction": "Louis Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Ensuite, quatorze ans après, je montai de nouveau à Jérusalem avec Barnabas, ayant aussi pris Tite avec moi. <span class=\"s\">2</span> Et ce fut d'après une <button class=\"mot\" data-g=\"g-apocalypse\">révélation</button> que j'y montai. Je leur exposai l'Évangile que je prêche parmi les païens, je l'exposai en particulier à ceux qui sont les plus considérés, afin de ne pas courir ou avoir couru en vain. <span class=\"s\">7</span> Au contraire, voyant que l'Évangile m'avait été confié pour les <button class=\"mot\" data-g=\"g-incirconcis\">incirconcis</button>, comme à Pierre pour les circoncis — <span class=\"s\">8</span> car celui qui a opéré en Pierre pour l'apostolat de la circoncision a aussi opéré en moi pour l'apostolat des païens —, <span class=\"s\">9</span> et ayant connu la grâce qui m'avait été accordée, Jacques, Céphas et Jean, qui sont regardés comme les <button class=\"mot\" data-g=\"g-colonnes\">colonnes</button>, me donnèrent, à moi et à Barnabas, la main d'association, afin que nous allassions, nous vers les païens, et eux vers les circoncis. <span class=\"s\">10</span> Ils nous recommandèrent seulement de nous souvenir des <button class=\"mot\" data-g=\"g-pauvres\">pauvres</button>, ce que j'ai bien eu soin de faire. <span class=\"s\">11</span> Mais lorsque Céphas vint à Antioche, je lui résistai en face, parce qu'il était répréhensible. <span class=\"s\">12</span> En effet, avant l'arrivée de certains envoyés par Jacques, il mangeait avec les païens ; mais quand ils furent venus, il s'esquiva et se sépara d'eux, par <button class=\"mot\" data-g=\"g-crainte\">crainte</button> de ceux de la circoncision. <span class=\"s\">13</span> Et les autres Juifs dissimulèrent avec lui, en sorte que Barnabas même fut entraîné par leur dissimulation. <span class=\"s\">14</span> Voyant qu'ils ne marchaient pas droitement selon la vérité de l'Évangile, je dis à Céphas devant tous : Si toi, qui es Juif, tu vis comme les païens et non comme les Juifs, pourquoi forces-tu les païens à judaïser ?</p>",
+      "gloses": [
+        {
+          "id": "g-apocalypse",
+          "lemme": "révélation",
+          "html": "Segond traduit ici le grec <span class=\"gr\">apokalypsis</span>, terme technique de la littérature juive pour la dévoilement d'un mystère caché, souvent en vision. Le choix de « révélation » plutôt que « manifestation » atténue la dimension soudaine, presque violente du mot. Calvin, commentant ce passage, insiste sur cette <span class=\"gr\">apokalypsis</span> comme preuve que Paul ne dépend pas de la tradition humaine : ce n'est pas une instruction reçue mais un arrachement à soi. La réception patristique, chez Chrysostome notamment, y voit la marque d'une autorité qui ne se transmet pas par succession mais par intervention divine directe."
+        },
+        {
+          "id": "g-incirconcis",
+          "lemme": "incirconcis",
+          "html": "Le grec <span class=\"gr\">akrobystia</span> désigne proprement le prépuce, métaphoriquement ceux qui en sont marqués. Segond, comme la Vulgate avant lui, garde cette tournure abrupte, alors que d'autres proposent « Gentils » ou « nations ». Le choix est théologiquement chargé : il maintient le scandale de la différence, la marque corporelle comme signe d'alliance. Les rabbins du Talmud de Babylone (traité Yevamot) discutent déjà de ce statut ; Paul en fait une catégorie théologique neuve, où l'incirconcision devient lieu même de l'élection."
+        },
+        {
+          "id": "g-colonnes",
+          "lemme": "colonnes",
+          "html": "<span class=\"gr\">Styloi</span> en grec, terme d'architecture pour les piliers porteurs d'un édifice. Segond traduit littéralement, alors que le métaphore implique déjà une évaluation : ces trois hommes soutiennent l'Église entière. Chrysostome, dans ses Homélies sur les Galates, souligne l'humilité de Paul qui reconnaît cette fonction sans s'y soumettre pour autant ; Calvin y voit une concession rhétorique, pas doctrinale. Le mot évoque aussi les colonnes du Temple, et peut-être Jachin et Boaz, portant le nom de Dieu sans le contenir."
+        },
+        {
+          "id": "g-pauvres",
+          "lemme": "pauvres",
+          "html": "Le grec <span class=\"gr\">ptôchoi</span>, plus fort que <span class=\"gr\">penês</span> (celui qui travaille pour vivre), désigne l'indigent absolu, celui qui mendie. Segond ne distingue pas les deux termes, conséquence de la tradition française où « pauvre » recouvre toute la gamme. Pourtant le choix paulinien est précis : il renvoie probablement à la collecte pour Jérusalem (Rm 15, 26), mais aussi à la béatitude lucanienne des <span class=\"gr\">ptôchoi</span>. Les Pères, Clément de Rome en tête, ont lu ici une économie spirituelle : la reconnaissance réciproque des Églises par le partage matériel."
+        },
+        {
+          "id": "g-crainte",
+          "lemme": "crainte",
+          "html": "<span class=\"gr\">Phobos</span>, le même mot que dans « les dons de l'Esprit » (Rm 8, 15) où il est précisément ce dont le chrétien est libéré. La traduction de Segond est neutre, mais le contexte la charge : cette crainte de Pierre est celle de l'esclave, non du fils. Jean Chrysostome, dans l'Homélie 15 sur les Galates, ne ménage pas Céphas : cette peur-là, dit-il, est une négation de la croix, puisque le Christ est mort pour abolir ce mur. Calvin, plus mesuré, y voit une faiblesse humaine, non une apostasie totale — mais une faiblesse qui entraîne, par l'exemple, la ruine d'autrui."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 116 (117), 1, 2",
+      "traduction": "Louis Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Louez l'Éternel, vous toutes les nations, célébrez-le, vous tous les peuples ! <span class=\"s\">2</span> Car sa <button class=\"mot\" data-g=\"g-bonte\">bonté</button> pour nous est grande, et sa <button class=\"mot\" data-g=\"g-fidelite\">fidélité</button> dure à toujours. Louez l'Éternel !</p>",
+      "gloses": [
+        {
+          "id": "g-bonte",
+          "lemme": "bonté",
+          "html": "Segond traduit ici <span class=\"gr\">eleos</span> (dans la Septante, car l'hébreu original est <span class=\"gr\">hasdey</span>, pluriel de <span class=\"gr\">hesed</span>). Le choix de « bonté » est faible : <span class=\"gr\">hesed</span> désigne la loyauté contractuelle, la fidélité active d'une alliance, pas seulement une disposition morale. La tradition rabbinique (Rachi sur ce psaume) la définit comme ce qui dépasse le strict mérite ; les Pères latins, Jérôme en tête, la rendent par <span class=\"it\">misericordia</span>, liant le psaume à la venue du Christ. « Bonté » fait penser à une qualité stable de Dieu ; <span class=\"gr\">hesed</span> dit plutôt un mouvement vers celui qui n'a pas de quoi payer."
+        },
+        {
+          "id": "g-fidelite",
+          "lemme": "fidélité",
+          "html": "<span class=\"gr\">Emeth</span> en hébreu, <span class=\"gr\">aletheia</span> dans la Septante que Segond suit. Mais <span class=\"gr\">emeth</span> est plus concret : la solidité, ce qui tient quand on s'y appuie. La racine <span class=\"gr\">'mn</span> donne aussi « amen », la parole qui fonde. Calvin, commentant ce psaume, distingue soigneusement : la <span class=\"gr\">bonté</span> est le don, la <span class=\"gr\">fidélité</span> en est la garantie perpétuelle. Cette dernière phrase du psaume, redite dans l'Apocalypse (7, 9-12), annonce la liturgie céleste où toute nation est présente sans distinction."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 1-4",
+      "traduction": "Louis Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Jésus était en un lieu, <button class=\"mot\" data-g=\"g-priant\">priant</button>. Lorsqu'il cessa, un de ses disciples lui dit : Seigneur, <button class=\"mot\" data-g=\"g-apprends\">apprends</button>-nous à prier, comme Jean aussi l'a appris à ses disciples. <span class=\"s\">2</span> Il leur dit : Quand vous priez, dites : Père, que ton <button class=\"mot\" data-g=\"g-nom\">nom</button> soit sanctifié ; que ton règne vienne. <span class=\"s\">3</span> Donne-nous chaque jour notre <button class=\"mot\" data-g=\"g-pain\">pain</button> quotidien. <span class=\"s\">4</span> Pardonne-nous nos péchés, car nous aussi nous pardonnons à quiconque nous offense ; et ne nous <button class=\"mot\" data-g=\"g-induire\">induis</button> pas en tentation.</p>",
+      "gloses": [
+        {
+          "id": "g-priant",
+          "lemme": "priant",
+          "html": "<span class=\"gr\">En tô topô einai auton proseuchomenon</span> : le grec met le participe au présent, décrivant une scène en cours, non un fait accompli. Luc, seul évangéliste à noter cette fréquence (7, 3.21 ; 9, 18.28-29), construit son récit sur l'observation de la prière de Jésus. Segond simplifie en « était en prière », perdant la durée, l'imparfait grec. Calvin remarque que les disciples ne demandent pas la théorie de la prière mais sa pratique : ils ont vu, ils veulent faire. Chrysostome ajoute que la prière de Jésus est leur école, non leur spectacle."
+        },
+        {
+          "id": "g-apprends",
+          "lemme": "apprends",
+          "html": "<span class=\"gr\">Didaxon</span>, aoriste impératif, la forme de la requête urgente. Ce n'est pas « enseigne » dans le sens d'un cursus, mais « fais-nous entrer » dans ce que tu fais. La comparaison avec Jean le Baptiste est rarement notée : les disciples de Jean avaient une prière propre, peut-être liée à leur baptême. Jésus ne répudie pas cette filiation mais la transforme : le Maître répond par un texte que la communauté lucanienne priera trois fois par jour. Didaché 8, 1-2 témoigne de cette pratique au Ier siècle."
+        },
+        {
+          "id": "g-nom",
+          "lemme": "nom",
+          "html": "<span class=\"gr\">Hagiasthêtô to onoma sou</span>. Le « nom » en hébreu, <span class=\"gr\">shem</span>, n'est pas l'étiquette mais la présence active, ce par quoi Dieu se rend accessible sans se livrer totalement. Segond traduit « sanctifié », mais <span class=\"gr\">hagiazô</span> dit plutôt « mis à part », « traité comme saint ». Calvin, dans son commentaire sur la prière dominicale, insiste : ce n'est pas Dieu qui a besoin d'être sanctifié, c'est nous qui demandons à le reconnaître tel. La petition est ainsi transformation du regard, non changement de Dieu."
+        },
+        {
+          "id": "g-pain",
+          "lemme": "pain",
+          "html": "<span class=\"gr\">Artos</span>, simplement. Mais l'adjectif qui suit, <span class=\"gr\">epiousios</span>, est le plus obscur du Nouveau Testament. Segond choisit « quotidien », suivant Jérôme (<span class=\"it\">cotidianum</span>), mais le mot pourrait signifier « de demain », « nécessaire à l'existence », voire « supraterrestre » (Origène). Chrysostome lit ici l'enseignement de la providence : on ne demande pas l'abondance mais le suffisant. Calvin, plus radical, y voit la renonciation à toute propriété : le pain est donné, reçu, jamais acquis définitivement."
+        },
+        {
+          "id": "g-induire",
+          "lemme": "induire",
+          "html": "Segond corrige ici la tradition plus ancienne « ne nous laisse pas entrer ». Le grec <span class=\"gr\">eispherô</span> est pourtant fort : Dieu est celui qui peut nous porter, nous conduire quelque part. La tentation n'est pas le péché mais l'épreuve qui le rend possible. Chrysostome, dans son commentaire sur Matthieu (parallèle à ce texte), distingue : Dieu ne tente pas, mais il permet l'épreuve ; la petition demande que cette permission n'aboutisse pas à notre chute. La traduction « induire » est juridique, comme si Dieu était accusé ; le grec est plus nuancé, plus confiant."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La prière comme relation, non comme technique",
+      "corps_html": "<p>Luc place cette scène au cœur d'un voyage qui monte vers Jérusalem. Jésus prie « en un lieu », sans précision : la topographie importe moins que l'attitude. Les disciples observent, puis osent demander — ce qu'ils n'avaient pas fait ailleurs. La comparaison avec Jean le Baptiste, unique à Luc, situe la demande dans une concurrence entre écoles de prière. Mais Jésus ne donne pas une formule magique : il donne des mots qui engagent celui qui les prononce dans une économie divine — le nom, le règne, le pain, le pardon, la délivrance. Chrysostome, dans ses Homélies sur Matthieu (dont Luc est le doublet), remarque que le Pater est court pour que personne n'ait d'excuse de le négliger, et profond pour que personne ne l'épuise. Calvin, commentant ce passage dans son <span class=\"it\">Institution</span> (III, 20), y voit la preuve que la prière véritable est affranchie de tout mérite propre : on demande, on reçoit, on rend grâce — point."
+    },
+    {
+      "titre": "Paul face à Pierre : la vérité de l'Évangile contre la convenance",
+      "corps_html": "<p>Le récit de Ga 2 est le seul témoignage direct d'une confrontation entre apôtres. Paul ne raconte pas cela pour son honneur, mais pour la justification de sa mission aux païens. Le détail est précis : Antioche, la grande ville cosmopolite, où Juifs et païens mangeaient ensemble — jusqu'à l'arrivée des « envoyés de Jacques ». La <span class=\"gr\">dissimulation</span> (<span class=\"gr\">hypokrisis</span>) de Pierre n'est pas une trahison doctrinale, mais une défaillance de conduite qui, par l'exemple, devient négation de l'Évangile. Calvin, dans son commentaire sur les Galates (1548), excrète cette faiblesse tout en la comprenant : le plus fort peut tomber par la crainte du jugement d'autrui. Mais Paul « résiste en face », selon le devoir de fraternité que la suite de l'épître développera (6, 1). La table, lieu de communion, est devenue lieu de ségrégation ; l'Évangile est en jeu dans le geste le plus ordinaire."
+    }
+  ],
+  "analogie": {
+    "titre": "La prière apprise qu'on n'a pas choisie",
+    "variantes": [
+      "Certaines paroles vous ont été données avant que vous sachiez ce qu'elles pesaient. Vous les avez répétées par habitude, par obéissance, parfois sans y croire, parfois avec une croyance si diffuse qu'elle ne distinguait pas le Dieu invoqué du bruit du monde. Et puis un jour — peut-être celui où plus rien ne tenait debout, où vos propres mots vous trahissaient — ces syllabes sont remontées, intactes, portant ce que vous ne pouviez plus porter seul. Vous ne les aviez pas mémorisées avec soin ; elles étaient là, dans une couche plus ancienne que votre volonté. C'est ainsi que le Père se donne : non pas à qui sait prier, mais à qui reçoit les mots du Christ avant de les comprendre, et les retrouve quand tout autre langage fait faillite.",
+      "Il arrive que vous priiez longtemps sans rien ressentir, sans que le ciel s'ouvre, sans même la certitude d'être entendu. Les mots tombent, vous les ramassez, vous les redisposez, ils restent plats. Vous croyez que la prière est un échec, que vous n'y mettez pas assez de cœur, que d'autres y parviennent mieux. Mais l'Évangile ne dit pas que Jésus enseigne à ses disciples à <span class=\"it\">réussir</span> la prière ; il dit qu'il leur apprend <span class=\"it\">à</span> prier, comme on apprend une langue en la parlant mal, d'abord, jusqu'à ce qu'elle devienne la sienne. La sanctification du nom de Dieu commence peut-être là : dans cette fidélité des mots prononcés sans succès apparent, qui peu à peu façonnent en vous celui qui les prononce.",
+      "Vous avez peut-être vécu cette situation où quelqu'un vous demande de prier, et vous ne savez pas quoi dire — pas par manque de mots, mais par excès de conscience, de peur de ne pas être à la hauteur. Alors vous empruntez des mots que d'autres ont trouvés avant vous, et vous les offrez tels quels, honteux de cette dépendance. Mais le Christ, dans ce texte, ne demande pas aux disciples d'inventer. Il leur donne des mots qui les précèdent, qui le précèdent, qui portent la structure même de sa relation au Père. Prier, ce n'est pas d'abord exprimer son âme ; c'est se laisser inclure dans une prière plus grande que la sienne, et découvrir, avec le temps, que ces mots empruntés sont devenus les siens, que cette voix qui priait en lui priait en vous."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Aujourd'hui, vous pouvez laisser ces mots vous apprendre plutôt que de chercher à les maîtriser.",
+    "geste": "Prenez un temps de silence suffisant pour dire le Pater lentement, en laissant chaque demande résonner avant de passer à la suivante. Ne cherchez pas à « bien » prier ; contentez-vous de prononcer les mots du Christ comme un enfant répète ce qu'on lui a appris, dans la confiance que le sens viendra avec l'usage fidèle.",
+    "note": "Si ces mots vous semblent usés, c'est peut-être qu'ils ont porté trop de monde avant vous. C'est leur force, non leur faiblesse."
+  },
+  "question": "Qu'est-ce qui, dans votre prière actuelle, ressemble encore à une performance à réussir plutôt qu'à une relation à recevoir ?",
+  "racines": [
+    {
+      "titre": "Calvin sur la prière du Seigneur",
+      "corps_html": "<p>Dans l'<span class=\"it\">Institution de la religion chrétienne</span> (III, 20, 34), Calvin traite le Pater comme « la règle infaillible » donnée par le Christ, non pour restreindre la prière mais pour lui donner ses bornes véritables. Il insiste sur l'adresse « Père » : ce n'est pas un titre parmi d'autres, mais la transformation de tout le rapport. « Car de quel front oserions-nous présenter nos requêtes au Seigneur de toute majesté, si nous n'étions assurés que nous avons un Père en lui ? » Cette assurance n'est pas sentimentale : elle procède de l'adoption, de l'Esprit qui fait crier « Abba » (Rm 8, 15). Le Pater est ainsi le lieu où la foi se vérifie, non dans l'intensité éprouvée, mais dans l'obéissance à la forme donnée.</p>",
+      "attribution": "Jean Calvin, <span class=\"it\">Institution</span>, III, 20, 34"
+    },
+    {
+      "titre": "Chrysostome sur la brièveté du Pater",
+      "corps_html": "<p>Dans son commentaire sur Matthieu (Homélie 19, 4-5), Chrysostome s'étonne que le Christ ait condensé toute la prière en si peu de mots, alors que les païens « pensent être exaucés par leurs longs discours ». Cette brièveté est miséricorde : elle évite que le faible se décourage, et elle défie le savant qui croirait mériter par sa parole. Mais elle est aussi profondeur inépuisable : « Car si tu examines chaque mot avec soin, tu y trouveras une mer de pensées. » Le « pain quotidien » seul, dit-il, renferme l'économie entière de la Providence. La prière du Christ est ainsi simultanément porte étroite et maison spacieuse.</p>",
+      "attribution": "Jean Chrysostome, <span class=\"it\">Homélies sur Matthieu</span>, 19, 4-5"
+    },
+    {
+      "titre": "La Didaché et la trihoraire",
+      "corps_html": "<p>La <span class=\"it\">Didaché</span>, traité de discipline ecclésiastique composé vers 100, prescrit : « Ne priez pas comme les hypocrites, mais comme le Seigneur a commandé dans son Évangile : Notre Père qui es aux cieux... Priez ainsi trois fois le jour » (8, 2-3). Cette triple répétition, matin, midi, soir, structure la vie du chrétien autour du Pater avant même que ne se fixe l'office des heures. Le texte ajoute une curiosité : on ne doit pas prier avec « ceux qui sont dans la voie de la mort », c'est-à-dire les païens ou les hérétiques, mais le Pater lui-même unit tous ceux qui le prient. C'est la première attestation liturgique du texte lucanien, et elle montre déjà que la prière du Christ crée une communauté qui la dépasse.</p>",
+      "attribution": "<span class=\"it\">Didaché des Douze Apôtres</span>, 8, 1-3"
+    }
+  ]
+}
