@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-08",
+  "date_humaine": "jeudi",
+  "semaine": "27ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 3, 1-5 ; Lc 1, 69-70, 71-72, 73-75 ; Lc 11, 5-13",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 130 h300\"/><path d=\"M140 130 v-110 h60 v110\"/><path d=\"M158 20 v110\"/><path d=\"M172 20 v110\"/><path d=\"M186 20 v110\"/><path d=\"M238 62 q10 -9 20 -1 q5 7 -1 15 q-11 7 -19 -2 q-4 -6 0 -12 z\"/><path d=\"M248 76 l16 28\"/><path d=\"M44 26 q12 -12 26 -6 q-15 3 -15 15 q0 12 15 15 q-14 6 -26 -6 z\"/></g><g class=\"trait-liturgie\"><path d=\"M193 28 v94\"/><path d=\"M197 58 l15 -5\"/><path d=\"M197 90 l16 6\"/></g></svg>",
+  "titre": "Frapper et recevoir",
+  "titre_html": "Frapper et <span class=\"it\">recevoir</span>",
+  "sous_titre": "Ce que l'on ne mérite pas, et qui se donne quand même",
+  "suite_hier": null,
+  "gravure_alt": "Une porte de bois fermée dans la nuit, une main levée pour frapper, et par la fente de la porte une lumière qui commence à poindre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Galates 3, 1-5",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> O Galates, dépourvus de sens ! qui vous a <button class=\"mot\" data-g=\"g-fascines\">fascinés</button>, vous, aux yeux de qui Jésus-Christ a été <button class=\"mot\" data-g=\"g-peint\">peint</button> comme crucifié ? <span class=\"s\">2</span> Voici seulement ce que je voudrais apprendre de vous : est-ce par les œuvres de la loi que vous avez reçu l'Esprit, ou par <button class=\"mot\" data-g=\"g-foi\">la prédication de la foi</button> ? <span class=\"s\">3</span> Êtes-vous tellement dépourvus de sens ? Après avoir commencé par l'Esprit, voulez-vous maintenant finir par la chair ? <span class=\"s\">4</span> Avez-vous tant souffert en vain ? si toutefois c'est en vain. <span class=\"s\">5</span> Celui qui vous accorde l'Esprit, et qui opère des miracles parmi vous, le fait-il par les œuvres de la loi, ou par la prédication de la foi ?",
+      "gloses": [
+        {
+          "id": "g-fascines",
+          "lemme": "baskaino",
+          "html": "Le verbe grec employé ici, <span class=\"gr\">ebaskanen</span>, appartient au vocabulaire de la magie populaire : il désigne l'action de jeter le mauvais œil, de fasciner par un charme pour nuire. Segond traduit fidèlement par « fasciner », gardant la violence de l'image là où une version plus plate dirait simplement « séduire » ou « tromper ». Jean Chrysostome, dans ses homélies sur l'épître, relève que Paul choisit délibérément ce mot pour dire que les Galates n'ont pas été convaincus par un argument, mais comme ensorcelés, détournés d'une vérité qu'ils avaient pourtant vue de leurs propres yeux."
+        },
+        {
+          "id": "g-peint",
+          "lemme": "prographo",
+          "html": "<span class=\"gr\">prographē</span> est un verbe composé qui signifie littéralement « écrire par avance » ou « afficher publiquement », comme on placarde un édit sur l'agora. Segond choisit « peint », qui restitue bien l'idée d'une image exposée aux regards, mais estompe la nuance d'annonce officielle et antérieure que porte le préfixe pro-. Augustin, commentant ce passage, y entend que la croix du Christ avait déjà été « écrite » dans les Écritures d'Israël avant d'être dressée à Golgotha, si bien que la prédication de Paul ne fait que donner voix à une fresque déjà tracée par les prophètes."
+        },
+        {
+          "id": "g-foi",
+          "lemme": "akoe pisteos",
+          "html": "L'expression grecque <span class=\"gr\">akoē pisteōs</span> signifie à la lettre « l'écoute de la foi », et non d'abord « la prédication » comme le rend Segond : le mot akoē désigne l'audition, ce qui est entendu, avant de désigner celui qui parle. Ce choix de traduction déplace discrètement l'accent de l'auditeur vers le prédicateur. Calvin, dans son commentaire sur Galates, insiste au contraire sur le fait que la foi naît de ce qui est entendu et reçu, non de ce que l'on accomplit : l'Esprit est donné à l'oreille qui écoute, non à la main qui s'active."
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Luc 1, 69-75",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">69</span> Et nous a suscité un <button class=\"mot\" data-g=\"g-corne\">puissant Sauveur</button> dans la maison de David, son serviteur, <span class=\"s\">70</span> comme il l'avait annoncé par la bouche de ses saints prophètes des temps anciens, — <span class=\"s\">71</span> un Sauveur qui nous délivre de nos ennemis et de la main de tous ceux qui nous haïssent ! <span class=\"s\">72</span> C'est ainsi qu'il manifeste sa miséricorde envers nos pères, et se souvient de sa <button class=\"mot\" data-g=\"g-alliance\">sainte alliance</button>, <span class=\"s\">73</span> selon le serment par lequel il avait juré à Abraham, notre père, <span class=\"s\">74</span> de nous permettre, après que nous serions délivrés de la main de nos ennemis, de le servir sans crainte, <span class=\"s\">75</span> en marchant devant lui dans la sainteté et dans la justice tous les jours de notre vie.",
+      "gloses": [
+        {
+          "id": "g-corne",
+          "lemme": "keras soterias",
+          "html": "Le texte grec dit littéralement que Dieu a « relevé une corne de salut », <span class=\"gr\">keras sōtērias</span>, une image empruntée à l'hébreu biblique où la corne figure la force du roi ou de l'autel. Segond, pour la clarté, traduit par « un puissant Sauveur » et perd ainsi l'image concrète héritée du psaume : « la corne de mon salut », liée à l'onction des rois d'Israël. Le choix est défendable pour un lecteur moderne, mais il efface le lien que Zacharie établit délibérément avec la royauté davidique et les cornes consacrées de l'autel, signe d'une force que Dieu donne et que l'homme ne conquiert pas."
+        },
+        {
+          "id": "g-alliance",
+          "lemme": "diatheke",
+          "html": "Le mot grec <span class=\"gr\">diathēkē</span>, que Segond rend par « alliance », désigne d'abord une disposition unilatérale, un testament, plutôt qu'un contrat entre égaux — nuance que le français « alliance » tend à égaliser. Il traduit l'hébreu <span class=\"gr\">berith</span>, dont les rabbins soulignent qu'il engage Dieu seul par serment, sans condition réciproque posée à Abraham. Zacharie ne célèbre donc pas un accord renégocié mais la fidélité d'un Dieu qui se souvient de sa propre parole, antérieure à toute obéissance d'Israël."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Luc 11, 5-13",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">5</span> Il leur dit encore : Si l'un de vous a un ami, et qu'il aille le trouver au milieu de la nuit pour lui dire : Ami, prête-moi trois pains, <span class=\"s\">6</span> car un de mes amis est arrivé de voyage chez moi, et je n'ai rien à lui offrir, <span class=\"s\">7</span> et si, de l'intérieur de sa maison, cet ami lui répond : Ne m'importune pas, la porte est déjà fermée, mes enfants et moi sommes au lit, je ne puis me lever pour te donner des pains, — <span class=\"s\">8</span> je vous dis que, s'il ne se lève pas pour les lui donner parce que c'est son ami, il se lèvera à cause de son <button class=\"mot\" data-g=\"g-importunite\">importunité</button> et lui donnera tout ce dont il a besoin. <span class=\"s\">9</span> Et moi, je vous dis : <button class=\"mot\" data-g=\"g-demandez\">demandez</button>, et l'on vous donnera ; cherchez, et vous trouverez ; frappez, et l'on vous ouvrira. <span class=\"s\">10</span> Car quiconque demande reçoit, celui qui cherche trouve, et l'on ouvre à celui qui frappe. <span class=\"s\">11</span> Quel est parmi vous le père qui donnera une pierre à son fils, s'il lui demande du pain ? Ou, s'il demande un poisson, lui donnera-t-il un serpent au lieu d'un poisson ? <span class=\"s\">12</span> Ou, s'il demande un œuf, lui donnera-t-il un scorpion ? <span class=\"s\">13</span> Si donc, méchants comme vous l'êtes, vous savez donner de bonnes choses à vos enfants, à combien plus forte raison le Père céleste donnera-t-il le <button class=\"mot\" data-g=\"g-esprit\">Saint-Esprit</button> à ceux qui le lui demandent.",
+      "gloses": [
+        {
+          "id": "g-importunite",
+          "lemme": "anaideia",
+          "html": "Le mot grec <span class=\"gr\">anaideia</span> ne signifie pas d'abord la persévérance, comme on l'entend souvent, mais littéralement l'absence de honte, l'impudence. Segond traduit par « importunité », un choix plus doux qui atténue la crudité du texte grec. Le bibliste Kenneth Bailey, lisant la parabole dans son cadre moyen-oriental, a proposé d'y voir plutôt la honte que l'homme endormi craindrait pour lui-même s'il laissait un voisin repartir les mains vides en pleine nuit devant tout le village — ce qui déplace le sens de l'audace du priant vers l'honneur du Père qui ne peut se dérober."
+        },
+        {
+          "id": "g-demandez",
+          "lemme": "aiteite",
+          "html": "Le verbe grec <span class=\"gr\">aiteite</span> est à l'impératif présent, qui en grec marque une action répétée ou continue : « demandez, et demandez encore », non un geste unique. Segond traduit par un simple « demandez » qui ne restitue pas cette durée inscrite dans la grammaire même. Les deux impératifs qui suivent, chercher et frapper, sont construits sur le même temps : le texte grec décrit moins une requête ponctuelle qu'une disposition stable et persévérante du cœur devant Dieu."
+        },
+        {
+          "id": "g-esprit",
+          "lemme": "pneuma hagion",
+          "html": "L'expression <span class=\"gr\">to pneuma to hagion</span>, « le Saint-Esprit », reprend exactement les mots que Paul emploie en Galates 3 pour l'Esprit reçu par la prédication de la foi et non par les œuvres. Luc place ainsi, au terme d'une parabole sur la prière, le don le plus haut que l'on puisse demander : non le pain ou le poisson du quotidien, mais Dieu lui-même donné à qui demande. Origène notait déjà que cette finale distingue l'enseignement de Jésus sur la prière de toute magie incantatoire : on ne force pas la main de Dieu par l'insistance, on est accueilli par un Père qui désire donner plus qu'on ne sait demander."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre écrite dans l'urgence",
+      "corps_html": "Galates est sans doute la lettre la plus abrupte de Paul, écrite vers 53-54 pour des communautés de Galatie où des prédicateurs judaïsants exigeaient des païens convertis la circoncision et l'observance de la loi mosaïque pour parfaire leur salut. Paul n'ouvre même pas sa lettre par l'habituelle action de grâce : il entre directement dans la polémique, signe de l'urgence qu'il perçoit devant ce retournement."
+    },
+    {
+      "titre": "Le cantique de Zacharie dans la liturgie",
+      "corps_html": "Ce cantique, dit Benedictus, clôt le silence de neuf mois imposé à Zacharie après son doute devant l'ange Gabriel. L'Église l'a retenu dès les premiers siècles comme hymne du matin, aux Laudes, où il ouvre chaque jour liturgique sur la promesse d'un salut déjà accompli en Christ. Calvin lui-même, peu enclin aux liturgies fixes, reconnaît dans ce cantique un modèle de prière fondée sur la mémoire fidèle de Dieu plutôt que sur l'émotion du moment."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qu'on ne force pas et qui pourtant s'ouvre",
+    "variantes": [
+      "Il t'est arrivé de prier sans rien ressentir, de refaire les mêmes mots du soir sans qu'aucune émotion ne vienne les soutenir, et de te demander alors si ta prière valait quelque chose, si elle montait seulement jusqu'à Dieu. Tu guettais un signe intérieur qui prouverait que tu avais bien prié, une chaleur, une certitude, comme s'il fallait mériter d'être entendu par la qualité de ce que tu ressentais. Mais ce que le texte de ce jour appelle « demander » ne pèse pas la ferveur de celui qui frappe : il suffit que tu te tiennes devant la porte et que tu frappes encore, et c'est Dieu qui se charge de donner, non ta prière qui se charge de mériter.",
+      "Tu as peut-être passé des années à vouloir prouver, devant Dieu ou devant toi-même, que tu étais digne d'être aimé, à force d'obéissance scrupuleuse, de générosité calculée, de reproches intérieurs quand tu sentais que tu n'en faisais pas assez. Et puis un jour, sans que tu l'aies cherché, tu as compris que cette dette que tu t'acharnais à rembourser n'avait jamais été réclamée de cette façon, que l'amour qui te portait depuis le début ne t'attendait pas au bout de tes efforts mais s'était donné avant eux. Ce renversement, qui dessaisit les mains occupées à mériter pour les ouvrir à recevoir, est exactement ce que Paul reproche aux Galates d'avoir oublié.",
+      "Tu as pu prier longtemps pour une chose précise, reprendre inlassablement la même demande pendant des années sans qu'aucune réponse ne vienne, au point de te demander si Dieu avait seulement entendu ou si tu frappais contre un mur. Et puis, parfois bien plus tard, la réponse est venue par un chemin que tu n'attendais pas, sans lien apparent avec ta demande initiale, comme un serment tenu depuis longtemps mais dont tu avais perdu le fil. Le cantique de Zacharie parle ainsi d'une fidélité qui se souvient par-delà le silence des générations : ce que tu frappes à la porte n'est jamais perdu, même quand la réponse se fait attendre au-delà de ce que tu peux mesurer."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre non par un sentiment mais par une promesse : celle d'un Père qui donne avant même que tu aies fini de mériter.",
+    "geste": "Formule une seule demande, simplement, sans l'argumenter ni la justifier — comme on frappe à une porte, sans discours préparé — et dépose-la ce soir devant Dieu.",
+    "note": "Le texte ne demande pas de ressentir, mais de frapper encore."
+  },
+  "question": "Qu'est-ce que tu continues de vouloir mériter, alors que Dieu l'offre déjà ?",
+  "racines": [
+    {
+      "titre": "L'ensorcellement du cœur",
+      "corps_html": "Jean Chrysostome s'étonne que des hommes qui avaient vu Paul leur peindre la croix du Christ avec tant de clarté aient pu se laisser reprendre par la loi : il compare leur retournement à l'effet d'un charme, où la raison elle-même semble comme endormie. Pour lui, le danger n'est pas l'ignorance mais l'oubli volontaire d'une grâce pourtant reçue et vécue dans l'Esprit.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Galates"
+    },
+    {
+      "titre": "La foi qui reçoit, la loi qui exige",
+      "corps_html": "Calvin, commentant ce passage, insiste sur le fait que l'Esprit ne se négocie pas : il est donné à qui écoute et croit, jamais à qui s'acquitte d'une dette. Toute tentative de compléter par les œuvres ce que la croix a déjà accompli lui paraît une manière de mépriser la mort du Christ en la jugeant insuffisante.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Galates"
+    },
+    {
+      "titre": "Un Père qu'on n'a pas à vaincre",
+      "corps_html": "Origène refuse de lire la parabole de l'ami importun comme l'éloge d'une prière qui arracherait Dieu à son repos par la force de l'insistance : pour lui, c'est l'homme qui apprend à demander juste, non Dieu qui apprend à céder. Le contraste final avec le père terrestre, incapable de donner une pierre pour du pain, désigne un Père céleste dont la bonté précède toujours la requête.",
+      "attribution": "Origène, Traité sur la prière"
+    }
+  ]
+}
