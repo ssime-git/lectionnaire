@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-10",
+  "date_humaine": "samedi",
+  "semaine": "27ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 3, 22-29 ; Lc 11, 27-28",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M150 20 v110\"/><path d=\"M150 20 h70\"/><path d=\"M220 20 v110\"/><path d=\"M150 130 h-30\"/><path d=\"M220 130 h30\"/><path d=\"M112 95 q4 -12 13 -8 q10 -12 20 3\"/><path d=\"M112 95 q3 20 -4 30\"/><path d=\"M108 125 h16\"/><path d=\"M112 95 v22\"/></g><g class=\"trait-rubrique\"><path d=\"M70 130 q20 -4 34 -1 q2 -6 -6 -9 q-16 -3 -28 10\"/></g><g class=\"trait-liturgie\"><path d=\"M250 70 q10 -10 22 -4\"/><path d=\"M272 66 q6 10 -2 18\"/></g></svg>",
+  "titre": "Autre lignée",
+  "titre_html": "Autre <span class=\"it\">lignée</span>",
+  "sous_titre": "La promesse ne se transmet pas par le sang, mais par la foi qui écoute",
+  "suite_hier": null,
+  "gravure_alt": "Un enfant franchit le seuil d'une porte, abandonnant derrière lui une tunique tombée à terre, tandis qu'au-delà du seuil une main lui tend un manteau neuf.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ga 3, 22-29",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">22</span> Mais l'Écriture a tout renfermé sous le péché, afin que ce qui avait été promis fût donné par la foi en Jésus-Christ à ceux qui croient. <span class=\"s\">23</span> Avant que la foi vînt, nous étions enfermés sous la garde de la loi, en vue de la foi qui devait être révélée. <span class=\"s\">24</span> Ainsi la loi a été comme un <button class=\"mot\" data-g=\"g-pedagogue\">pédagogue</button>, jusqu'à Christ, pour que nous fussions justifiés par la foi. <span class=\"s\">25</span> La foi étant venue, nous ne sommes plus sous ce pédagogue. <span class=\"s\">26</span> Car vous êtes tous fils de Dieu par la foi en Jésus-Christ; <span class=\"s\">27</span> car vous tous, qui avez été baptisés en Christ, vous avez <button class=\"mot\" data-g=\"g-revetu\">revêtu</button> Christ. <span class=\"s\">28</span> Il n'y a plus ni Juif ni Grec, il n'y a plus ni esclave ni libre, il n'y a plus ni homme ni femme; car vous êtes tous un en Jésus-Christ. <span class=\"s\">29</span> Et si vous êtes à Christ, vous êtes donc la <button class=\"mot\" data-g=\"g-posterite\">postérité</button> d'Abraham, héritiers selon la promesse.",
+      "gloses": [
+        {
+          "id": "g-pedagogue",
+          "lemme": "pédagogue",
+          "html": "Le grec porte <span class=\"gr\">paidagôgos</span> (παιδαγωγός), que Segond garde presque tel quel. Or le mot ne désigne pas, dans l'usage gréco-romain, un éducateur au sens moderne : c'est l'esclave chargé d'escorter l'enfant jusqu'à l'école et de le tenir en respect, dont l'autorité cesse automatiquement à la majorité. Garder le mot français « pédagogue » risque donc d'affaiblir l'image : Paul ne pense pas à un maître qui transmet un savoir, mais à un gardien dont la fonction a, par nature, une fin fixée d'avance. Calvin, dans son commentaire sur ce passage, insiste sur cette temporalité pour écarter deux erreurs opposées, mépriser la loi ou lui rester soumis après la foi."
+        },
+        {
+          "id": "g-revetu",
+          "lemme": "revêtu",
+          "html": "Le verbe grec est <span class=\"gr\">enedysasthe</span> (ἐνεδύσασθε), de ἐνδύω, « se vêtir, endosser un habit ». Segond traduit littéralement par « revêtu », ce qui conserve l'image vestimentaire liée au baptême mais peut en estomper la force rituelle pour un lecteur moderne. Chrysostome, dans ses homélies sur cette épître, rattache le verset au geste concret du baptême tel qu'on le pratiquait de son temps : le catéchumène sortait nu de l'eau et recevait une tunique blanche, signe visible de ce que la foi accomplissait réellement."
+        },
+        {
+          "id": "g-posterite",
+          "lemme": "postérité",
+          "html": "Le mot grec <span class=\"gr\">sperma</span> (σπέρμα) signifie « semence », et c'est le terme même de la promesse faite à Abraham en Genèse 12,7 selon la Septante. Segond le traduit par « postérité », mot plus abstrait qui dilue le lien verbal direct avec le texte de la Genèse que Paul exploite délibérément : il joue sur le singulier de « semence » pour l'appliquer d'abord à Christ seul, puis, par lui, à quiconque croit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 104 (105), 2-3, 4-5, 6-7",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Chantez, chantez en son honneur! Parlez de toutes ses merveilles! <span class=\"s\">3</span> Glorifiez-vous de son saint nom! Que le cœur de ceux qui <button class=\"mot\" data-g=\"g-cherchent\">cherchent</button> l'Éternel se réjouisse! <span class=\"s\">4</span> Ayez recours à l'Éternel et à son appui, Cherchez continuellement sa <button class=\"mot\" data-g=\"g-face\">face</button>! <span class=\"s\">5</span> Souvenez-vous des prodiges qu'il a faits, De ses miracles et des jugements de sa bouche, <span class=\"s\">6</span> Postérité d'Abraham, son serviteur, Enfants de Jacob, ses élus! <span class=\"s\">7</span> L'Éternel est notre Dieu; Ses jugements s'exercent sur toute la terre.",
+      "gloses": [
+        {
+          "id": "g-cherchent",
+          "lemme": "cherchent",
+          "html": "L'hébreu emploie ici la racine <span class=\"gr\">baqash</span> (בקש), qui porte l'idée d'une quête active, presque d'une poursuite, plutôt que la simple consultation ponctuelle que peut désigner ailleurs <span class=\"gr\">darash</span> (דרש). Segond rend les deux par « chercher », effaçant une nuance que les rabbins, Rachi en tête, relient volontiers à la prière continuelle plutôt qu'à l'interrogation occasionnelle d'un oracle ou d'un sanctuaire."
+        },
+        {
+          "id": "g-face",
+          "lemme": "face",
+          "html": "Le mot hébreu est <span class=\"gr\">panim</span> (פנים), « face, présence ». « Chercher la face » de quelqu'un, dans la langue biblique, c'est solliciter une audience réelle, non se représenter mentalement une image : c'est un langage de cour autant que de culte. Calvin, commentant ce psaume, relève que l'adverbe « continuellement » exclut toute satisfaction acquise une fois pour toutes — la piété s'y définit comme quête sans relâche, jamais comme possession."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 27-28",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">27</span> Tandis que Jésus parlait ainsi, une femme, élevant la voix du milieu de la foule, lui dit: <button class=\"mot\" data-g=\"g-heureux\">Heureux</button> le sein qui t'a porté, et les mamelles qui t'ont allaité! <span class=\"s\">28</span> Et il répondit: Heureux plutôt ceux qui écoutent la parole de Dieu, et qui la <button class=\"mot\" data-g=\"g-gardent\">gardent</button>!",
+      "gloses": [
+        {
+          "id": "g-heureux",
+          "lemme": "heureux",
+          "html": "Le grec <span class=\"gr\">makarios</span> (μακάριος) est le mot même des béatitudes de Matthieu 5 : il ne décrit pas une émotion mais un état de faveur reconnu, proche de l'hébreu <span class=\"gr\">asheri</span> des psaumes (cf. Ps 1,1). Segond le traduit uniformément par « heureux », ce qui est juste mais uniformise deux usages très différents : la femme l'emploie au sens charnel, heureuse la mère d'un tel fils, et Jésus reprend exactement le même mot pour le déplacer ailleurs."
+        },
+        {
+          "id": "g-gardent",
+          "lemme": "gardent",
+          "html": "Le grec <span class=\"gr\">tērountes</span> (τηροῦντες), de τηρέω, porte l'idée d'une vigilance active et durable, plus que la simple conservation en mémoire que « garder » peut suggérer en français. On retrouve ce même verbe chez Jean (14,21), signe d'une parenté entre les deux évangiles sur ce point. Augustin, commentant précisément ce verset dans son traité De la sainte virginité, écrit que Marie fut « plus heureuse de recevoir la foi du Christ que de concevoir la chair du Christ » — l'écoute qui garde, non la maternité seule, fait ici la béatitude."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre à des chrétiens déboussolés",
+      "corps_html": "L'épître aux Galates est écrite par Paul vers 53-55, en réaction à des prédicateurs judaïsants qui exigent des chrétiens d'origine païenne la circoncision et l'observance de la loi mosaïque pour appartenir pleinement au peuple de Dieu. Paul y développe, aux chapitres 3 et 4, l'image de la loi comme tuteur provisoire : utile en son temps, mais destiné à s'effacer devant la majorité acquise par la foi. Le passage du jour en est le sommet argumentatif."
+    },
+    {
+      "titre": "Une interruption dans la foule",
+      "corps_html": "Chez Luc, cette parole suit immédiatement la controverse sur Béelzébul et précède la demande d'un signe que Jésus refuse (11,29). L'acclamation de la femme — bénir la mère plutôt que le fils — est une façon ordinaire d'honorer un homme remarquable par sa filiation. Jésus ne la dément pas : il déplace le critère du bonheur, de la chair vers l'écoute, comme il l'avait déjà fait en 8,21 à propos de « sa mère et ses frères »."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui ne se reçoit pas par le sang",
+    "variantes": [
+      "Il y a des années où tu as tenu une discipline religieuse — une prière récitée chaque soir, une règle reçue d'un parent ou d'un catéchisme — sans en comprendre le sens, simplement parce qu'on te l'imposait et que tu craignais de la rompre. Puis un jour, sans date précise, tu t'es rendu compte que tu ne l'observais plus par peur mais par amour : la règle n'avait pas disparu, elle s'était changée en désir. Ce passage-là, de la contrainte à la liberté qui veut ce que la loi voulait, est ce que Paul appelle sortir de la garde du pédagogue pour vivre fils.",
+      "Tu as pu passer des années à servir, prier, te rendre utile dans une communauté, avec la certitude diffuse que cela te vaudrait enfin d'être reconnu, accepté, aimé pour de bon — comme si l'appartenance restait à gagner. Puis, dans un moment que tu ne choisis pas, la fatigue d'avoir à prouver quelque chose tombe, et tu comprends que tu étais déjà fils avant d'avoir rien fait, que la place était là avant le mérite. C'est cette gratuité que Paul nomme héritage selon la promesse, non selon la loi.",
+      "Tu peux prier sans qu'aucune émotion vienne, sentir que tu n'as pas la sensibilité religieuse de telle personne née dans une famille croyante, pas son histoire, pas son hérédité spirituelle — et croire que cela te place en retrait, du côté de ceux qui n'ont rien reçu à la naissance. Mais ce que Jésus répond à la femme de la foule ne demande ni généalogie ni sensibilité : seulement une écoute qui se tient et qui dure. C'est là, dans cette garde simple de la parole entendue, que se loge un bonheur qu'aucune naissance ne transmet."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec la réponse de Jésus à cette femme : il ne dément pas sa mère, il déplace seulement le lieu du bonheur.",
+    "geste": "Relis Luc 11,28 à voix basse, lentement, en remplaçant « ceux » par ton propre nom.",
+    "note": "Rien ici ne demande une émotion particulière — seulement une écoute qui dure."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore d'être reçu comme fils plutôt que surveillé comme sous un tuteur ?",
+  "racines": [
+    {
+      "titre": "Le tuteur dont l'autorité s'achève",
+      "corps_html": "Calvin insiste sur la temporalité de l'image : le pédagogue antique n'a d'autorité que jusqu'à la majorité de l'enfant qui lui est confié, non par mépris de sa charge, mais parce qu'elle est bornée dès l'origine. Il avertit que mépriser la loi serait aussi faux que lui demeurer soumis après la venue de la foi : les deux erreurs oublient que la garde a une fin fixée par Dieu lui-même, non par l'humeur de celui qui la porte.",
+      "attribution": "Calvin, Commentaire sur l'épître aux Galates (1548)"
+    },
+    {
+      "titre": "Le vêtement baptismal",
+      "corps_html": "Chrysostome rattache « vous avez revêtu Christ » au rite même du baptême : le catéchumène descendait nu dans l'eau et remontait vêtu d'une tunique blanche. Il y voit moins une métaphore qu'une description : ce que le vêtement visible signifiait, la foi l'accomplit réellement, de sorte que le chrétien ne porte plus son origine ethnique ou sociale comme un habit, mais Christ lui-même.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Galates (IVe siècle)"
+    },
+    {
+      "titre": "Plus heureuse d'écouter que d'enfanter",
+      "corps_html": "Commentant exactement ce verset de Luc, Augustin écrit que Marie fut « plus heureuse de recevoir la foi du Christ que de concevoir la chair du Christ » — formule qui ne diminue pas sa maternité mais refuse qu'elle suffise à elle seule. L'obéissance de l'écoute, dit-il, était déjà sienne avant même la conception, et c'est elle, plus que le lien du sang, qui fait sa béatitude et celle de tout croyant.",
+      "attribution": "Augustin, De la sainte virginité, ch. 3 (401)"
+    }
+  ]
+}
