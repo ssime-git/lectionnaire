@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-11",
+  "date_humaine": "dimanche",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 25, 6-10a ; Ph 4, 12-14.19-20 ; Mt 22, 1-14 ; Mt 22, 1-10",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M8 145 L170 95 L334 55\"/><path d=\"M55 112 L300 70\"/><path d=\"M55 112 L55 119\"/><path d=\"M300 70 L300 77\"/><path d=\"M15 20 q25 -12 50 0 q25 -12 50 0 q25 -12 50 0\"/><path d=\"M225 56 h8 v-12 h6 v12 h10 v-18 h6 v18 h8 v-8 h8\"/><path d=\"M66 100 q4 -6 8 0 v10\"/><path d=\"M116 93 q4 -6 8 0 v10\"/><path d=\"M166 85 q4 -6 8 0 v10\"/><path d=\"M216 77 q4 -6 8 0 v10\"/><path d=\"M266 70 q4 -6 8 0 v10\"/></g><g class=\"trait-rubrique\"><path d=\"M250 40 q-11 -17 -1 -31 q-3 13 6 15 q7 -19 -3 -43 q14 22 3 43 q9 -6 6 -17 q8 19 -11 34\"/></g><g class=\"trait-liturgie\"><path d=\"M22 100 q0 18 13 20 q13 -2 13 -20 z\"/><path d=\"M35 120 v14\"/><path d=\"M24 140 h22\"/><path d=\"M20 98 q6 -10 13 -2 q7 -8 13 2\"/></g></svg>",
+  "titre": "Le Festin des Noces",
+  "titre_html": "Le Festin des <span class=\"it\">Noces</span>",
+  "sous_titre": "Dimanche — Ésaïe, les Philippiens et la parabole du roi qui fit des noces pour son fils",
+  "suite_hier": null,
+  "gravure_alt": "Une longue table dressée à flanc de montagne, des convives de toutes conditions s'y attablant tandis qu'au loin une ville brûle sous un ciel d'orage ; au premier plan, une coupe qui déborde.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 25, 6-10a",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">6</span> L'Éternel des armées fera à tous les peuples, sur cette montagne, un <button class=\"mot\" data-g=\"g-mishteh\">festin</button> de mets succulents, un festin de vins vieux, de mets succulents, pleins de moelle, de vins vieux, clarifiés. <span class=\"s\">7</span> Et, sur cette montagne, il anéantira le <button class=\"mot\" data-g=\"g-lot\">voile</button> qui couvre tous les peuples, la couverture qui s'étend sur toutes les nations. <span class=\"s\">8</span> Il <button class=\"mot\" data-g=\"g-bala\">détruira</button> la mort pour toujours; le Seigneur, l'Éternel, <button class=\"mot\" data-g=\"g-macha\">essuiera</button> les larmes de tous les visages, il fera disparaître l'opprobre de son peuple sur toute la terre; car l'Éternel a parlé. <span class=\"s\">9</span> En ce jour l'on dira: Voici, c'est notre Dieu, en qui nous avons confiance, et c'est lui qui nous sauve; c'est l'Éternel, en qui nous avons confiance; soyons dans l'allégresse, et réjouissons-nous de son salut! <span class=\"s\">10a</span> Car la main de l'Éternel reposera sur cette montagne...",
+      "gloses": [
+        {
+          "id": "g-mishteh",
+          "lemme": "mishteh",
+          "html": "Le mot hébreu est <span class=\"gr\">mishteh</span>, construit sur la racine <span class=\"gr\">shatah</span>, « boire ». Avant d'être un repas, c'est une beuverie rituelle, ce que Segond adoucit en traduisant simplement « festin ». Calvin, dans son commentaire sur Ésaïe, insiste sur le caractère volontairement excessif de l'image : Dieu ne promet pas une ration mais une ivresse de joie, à la mesure de ce que le texte annonce ensuite — la mort elle-même engloutie."
+        },
+        {
+          "id": "g-lot",
+          "lemme": "lot",
+          "html": "Le mot <span class=\"gr\">lot</span>, traduit par « voile », n'apparaît dans toute la Bible hébraïque qu'à cet endroit : c'est un hapax, et personne n'est pleinement certain de son sens exact. Segond choisit « voile », rattachant le mot à la racine « envelopper », mais d'autres traducteurs anciens ont entendu un lien avec le deuil plutôt qu'avec l'ignorance. Ce qui est sûr, c'est l'image : quelque chose recouvre actuellement toutes les nations, et c'est cela, précisément, que la montagne de Dieu doit faire disparaître."
+        },
+        {
+          "id": "g-bala",
+          "lemme": "bala",
+          "html": "Le verbe employé n'est pas un simple « détruire » : c'est <span class=\"gr\">billa</span>, de la racine <span class=\"gr\">bala</span>, « avaler, engloutir » — le même verbe qui décrit ailleurs la terre engloutissant Coré, ou le poisson engloutissant Jonas. La mort, qui dans toute la Bible est celle qui avale les vivants, se retrouve ici avalée à son tour. Paul reprend très exactement cette image en 1 Corinthiens 15, 54, citant la version grecque de ce verset : « la mort a été engloutie dans la victoire » — preuve que cette lecture n'est pas une extrapolation moderne mais la manière même dont les premiers chrétiens ont lu Ésaïe 25."
+        },
+        {
+          "id": "g-macha",
+          "lemme": "machah",
+          "html": "« Essuiera » traduit <span class=\"gr\">machah</span>, verbe concret qui désigne le geste d'effacer une trace, une écriture, une tache — pas seulement sécher une joue. Le choix de Segond est juste, mais il faut entendre que le texte ne promet pas une consolation qui s'ajoute à la peine : il promet que la peine elle-même soit effacée, comme on efface ce qui a été écrit. L'Apocalypse reprendra mot pour mot cette formule en 21, 4, signe que l'espérance chrétienne finale se pense très précisément dans les termes d'Ésaïe."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 22 (23), 1-2ab, 2c-3, 4, 5, 6",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> L'Éternel est mon <button class=\"mot\" data-g=\"g-raah\">berger</button>: je ne manquerai de rien. <span class=\"s\">2ab</span> Il me fait reposer dans de verts pâturages, <span class=\"s\">2c</span> il me dirige près des eaux paisibles. <span class=\"s\">3</span> Il restaure mon <button class=\"mot\" data-g=\"g-nephesh\">âme</button>, il me conduit dans les sentiers de la justice, à cause de son nom. <span class=\"s\">4</span> Quand je marche dans la vallée de l'<button class=\"mot\" data-g=\"g-tsalmaveth\">ombre de la mort</button>, je ne crains aucun mal, car tu es avec moi: ta houlette et ton bâton me rassurent. <span class=\"s\">5</span> Tu dresses devant moi une table, en face de mes adversaires; tu oins d'huile ma tête, et ma coupe débordante. <span class=\"s\">6</span> Oui, le bonheur et la grâce m'accompagneront tous les jours de ma vie, et j'habiterai dans la maison de l'Éternel jusqu'à la fin de mes jours.",
+      "gloses": [
+        {
+          "id": "g-raah",
+          "lemme": "ro'eh",
+          "html": "« Berger » traduit le participe <span class=\"gr\">ro'eh</span>, de la racine « mener au pâturage », qui est aussi, en hébreu, un mot ordinaire pour « ami » ou « compagnon » selon le contexte. Ce double sens n'est pas un hasard : le psaume ne décrit pas seulement une fonction de protection mais une proximité. Jésus reprendra ce titre pour lui-même en Jean 10, « je suis le bon berger », après qu'Ézéchiel 34 eut dénoncé les mauvais bergers d'Israël — le psaume se tient entre ces deux pôles, la plainte contre les chefs indignes et la promesse d'un berger qui ne faillira pas."
+        },
+        {
+          "id": "g-nephesh",
+          "lemme": "nephesh",
+          "html": "« Âme » traduit <span class=\"gr\">nephesh</span>, mot qui en hébreu ne désigne pas une partie immatérielle opposée au corps, mais la vie elle-même, le souffle, parfois la gorge qui respire. Segond, en écrivant « âme », importe une dualité grecque étrangère au texte : ce que le berger restaure, c'est tout l'être vivant, non une part détachable de lui. La tradition rabbinique a longtemps gardé ce sens unitaire, avant que des distinctions plus tardives entre nephesh, ruah et neshamah n'introduisent des nuances que le psaume ignore."
+        },
+        {
+          "id": "g-tsalmaveth",
+          "lemme": "tsalmaveth",
+          "html": "Le mot <span class=\"gr\">tsalmaveth</span>, « ombre de la mort », est d'étymologie disputée : certains hébraïsants y lisent un composé de « ombre » et « mort », d'autres une simple forme intensive signifiant « obscurité profonde », sans référence directe à la mort. Segond suit la lecture traditionnelle, déjà celle de la Septante (« ombre de mort »), et c'est cette version grecque que Luc reprend mot pour mot dans le cantique de Zacharie, à propos de « ceux qui sont assis dans les ténèbres et dans l'ombre de la mort » — preuve que l'Évangile a lu ce psaume comme une prophétie de sa propre venue."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "Ph 4, 12-14.19-20",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> Je sais vivre dans l'humiliation, et je sais vivre dans l'abondance; en tout et partout j'ai <button class=\"mot\" data-g=\"g-memyemai\">appris</button> à être rassasié et à avoir faim, à être dans l'abondance et à être dans la disette. <span class=\"s\">13</span> Je puis tout par celui qui me <button class=\"mot\" data-g=\"g-endunamounti\">fortifie</button>. <span class=\"s\">14</span> Cependant vous avez bien fait de prendre part à mon affliction. <span class=\"s\">19</span> Et mon Dieu <button class=\"mot\" data-g=\"g-plerosei\">pourvoira</button> à tous vos besoins selon sa richesse, avec gloire, en Jésus-Christ. <span class=\"s\">20</span> À notre Dieu et Père la gloire aux siècles des siècles! Amen!",
+      "gloses": [
+        {
+          "id": "g-memyemai",
+          "lemme": "memyēmai",
+          "html": "« J'ai appris » traduit <span class=\"gr\">memyēmai</span>, parfait du verbe <span class=\"gr\">myeō</span>, qui signifie précisément « être initié aux mystères » — c'est le vocabulaire des cultes à mystères de l'Antiquité, où l'on était introduit à un secret par degrés. Segond lisse ce terme en « j'ai appris », ce qui n'est pas faux mais efface l'idée que ce contentement n'est pas une leçon retenue par l'effort, mais quelque chose dans lequel on est progressivement introduit, presque malgré soi. Paul, ancien pharisien, emprunte ici délibérément le langage des religions qui l'entourent pour dire une expérience que ce langage seul approche."
+        },
+        {
+          "id": "g-endunamounti",
+          "lemme": "endynamoō",
+          "html": "« Me fortifie » rend <span class=\"gr\">endynamounti</span>, participe présent de <span class=\"gr\">endynamoō</span>, littéralement « mettre la puissance dedans ». Ce n'est pas un stoïcisme de la volonté : la force dont Paul parle n'est pas la sienne, elle vient se loger en lui depuis l'extérieur. Le même verbe revient en Éphésiens 6, 10, « fortifiez-vous dans le Seigneur », signe d'un vocabulaire paulinien cohérent pour dire une force reçue plutôt que conquise."
+        },
+        {
+          "id": "g-plerosei",
+          "lemme": "plēroō",
+          "html": "« Pourvoira » traduit <span class=\"gr\">plērōsei</span>, futur de <span class=\"gr\">plēroō</span>, « remplir entièrement, combler ». Segond affaiblit le verbe en « pourvoira », qui évoque une provision suffisante, alors que le grec promet un remplissement total. C'est le même verbe qui donne le mot <span class=\"gr\">plērōma</span>, la « plénitude », par lequel Paul décrira ailleurs tout ce qui habite en Christ (Colossiens 1, 19 et 2, 9) — le besoin comblé des Philippiens et la plénitude du Christ relèvent, dans le grec de Paul, du même mot."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 22, 1-14",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Jésus, prenant la parole, leur dit encore cette parabole: <span class=\"s\">2</span> Le royaume des cieux est semblable à un roi qui fit des noces pour son fils. <span class=\"s\">3</span> Il envoya ses serviteurs appeler ceux qui étaient <button class=\"mot\" data-g=\"g-keklemenoi\">invités</button> aux noces; mais ils ne voulurent pas venir. <span class=\"s\">4</span> Il envoya encore d'autres serviteurs, disant: Dites aux conviés: Voici, j'ai préparé mon festin; mes bœufs et mes bêtes grasses sont tués, tout est prêt, venez aux noces. <span class=\"s\">5</span> Mais, sans s'inquiéter de cela, ils s'en allèrent, celui-ci à son champ, celui-là à son trafic; <span class=\"s\">6</span> et les autres se saisirent de ses serviteurs, les outragèrent et les tuèrent. <span class=\"s\">7</span> Le roi fut irrité; il envoya ses troupes, fit périr ces meurtriers, et brûla leur ville. <span class=\"s\">8</span> Alors il dit à ses serviteurs: Les noces sont prêtes; mais les conviés n'en étaient pas dignes. <span class=\"s\">9</span> Allez donc dans les carrefours, et appelez aux noces tous ceux que vous trouverez. <span class=\"s\">10</span> Ces serviteurs allèrent dans les chemins, rassemblèrent tous ceux qu'ils trouvèrent, méchants et bons, et la salle des noces fut remplie de convives. <span class=\"s\">11</span> Le roi entra pour voir ceux qui étaient à table, et il aperçut là un homme qui n'avait pas revêtu un <button class=\"mot\" data-g=\"g-endyma\">habit de noces</button>. <span class=\"s\">12</span> Il lui dit: Mon ami, comment es-tu entré ici sans avoir un habit de noces? Cet homme eut la bouche fermée. <span class=\"s\">13</span> Alors le roi dit aux serviteurs: Liez-lui les pieds et les mains, et jetez-le dans les <button class=\"mot\" data-g=\"g-skotos\">ténèbres du dehors</button>, où il y aura des pleurs et des grincements de dents. <span class=\"s\">14</span> Car beaucoup sont appelés, mais peu sont élus.",
+      "gloses": [
+        {
+          "id": "g-keklemenoi",
+          "lemme": "keklēmenoi",
+          "html": "« Invités » traduit <span class=\"gr\">keklēmenoi</span>, participe parfait passif de <span class=\"gr\">kaleō</span>, « appeler » — le même verbe qui donne <span class=\"gr\">ekklēsia</span>, l'assemblée de ceux qui ont été appelés hors de leurs maisons. Segond varie entre « invités » et « conviés » pour traduire ce qui, en grec, est répété presque à l'identique d'un verset à l'autre. Ce choix de variation en français masque une insistance que le texte grec, lui, entretient délibérément : on ne cesse d'être appelé, même quand on refuse de répondre."
+        },
+        {
+          "id": "g-endyma",
+          "lemme": "endyma gamou",
+          "html": "« Habit de noces » traduit <span class=\"gr\">endyma gamou</span>, une expression qui n'a pas de parallèle dans l'Ancien Testament et qui semble propre à cette parabole. Jean Chrysostome, dans ses homélies sur l'évangile de Matthieu, refuse d'y voir un détail de protocole : pour lui, le vêtement, c'est la charité et les œuvres bonnes, que l'homme n'a pas revêtues bien qu'il ait répondu à l'appel. Être entré dans la salle ne suffit donc pas — la parabole distingue l'appel reçu et la vie qui devrait s'accorder à lui."
+        },
+        {
+          "id": "g-skotos",
+          "lemme": "to skotos to exōteron",
+          "html": "« Ténèbres du dehors » traduit <span class=\"gr\">to skotos to exōteron</span>, une formule que Matthieu seul emploie dans tout le Nouveau Testament, et seulement trois fois (8, 12 ; 22, 13 ; 25, 30). Ce n'est pas une expression biblique courante mais une image forgée par cet évangile pour dire l'exclusion ultime, toujours construite en contraste avec la salle éclairée du festin. Le choix de Segond, littéral, garde intacte cette opposition entre la lumière du dedans et l'obscurité du dehors."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile (forme brève)",
+      "reference": "Mt 22, 1-10",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Jésus, prenant la parole, leur dit encore cette parabole: <span class=\"s\">2</span> Le royaume des cieux est semblable à un roi qui fit des noces pour son fils. <span class=\"s\">3</span> Il envoya ses serviteurs appeler ceux qui étaient invités aux noces; mais ils ne voulurent pas venir. <span class=\"s\">4</span> Il envoya encore d'autres serviteurs, disant: Dites aux conviés: Voici, j'ai préparé mon festin; mes bœufs et mes bêtes grasses sont tués, tout est prêt, venez aux noces. <span class=\"s\">5</span> Mais, sans s'inquiéter de cela, ils s'en allèrent, celui-ci à son champ, celui-là à son <button class=\"mot\" data-g=\"g-trafic\">trafic</button>; <span class=\"s\">6</span> et les autres se saisirent de ses serviteurs, les outragèrent et les tuèrent. <span class=\"s\">7</span> Le roi fut irrité; il envoya ses troupes, fit périr ces meurtriers, et brûla leur ville. <span class=\"s\">8</span> Alors il dit à ses serviteurs: Les noces sont prêtes; mais les conviés n'en étaient pas dignes. <span class=\"s\">9</span> Allez donc dans les <button class=\"mot\" data-g=\"g-carrefours\">carrefours</button>, et appelez aux noces tous ceux que vous trouverez. <span class=\"s\">10</span> Ces serviteurs allèrent dans les chemins, rassemblèrent tous ceux qu'ils trouvèrent, méchants et bons, et la salle des noces fut remplie de convives.",
+      "gloses": [
+        {
+          "id": "g-trafic",
+          "lemme": "emporia",
+          "html": "« Trafic » traduit <span class=\"gr\">emporia</span>, le commerce ordinaire, sans aucune connotation malhonnête dans le grec. Segond garde ce sens neutre, et c'est important : les premiers invités ne refusent pas par hostilité déclarée mais par préoccupation banale, un champ à cultiver, des affaires à conclure. Le texte ne décrit pas des ennemis de Dieu mais des gens occupés — ce qui rend le jugement qui suit plus troublant qu'un simple récit de rejet frontal."
+        },
+        {
+          "id": "g-carrefours",
+          "lemme": "diexodous",
+          "html": "Le mot grec est <span class=\"gr\">diexodous</span>, littéralement « les issues », les points où les chemins sortent de la ville vers l'extérieur. Segond traduit par « carrefours », ce qui est juste dans le sens mais efface l'image des marges, des sorties : les serviteurs ne vont pas seulement dans des lieux de passage animés, ils vont jusqu'aux limites de la ville, là où elle cesse d'être elle-même. C'est bien à sa marge, et non à son centre, que la salle des noces trouve finalement de quoi se remplir."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Ésaïe 24–27, une « petite apocalypse »",
+      "corps_html": "Les chapitres 24 à 27 d'Ésaïe forment un ensemble que les commentateurs appellent depuis longtemps « l'apocalypse d'Ésaïe » : un texte tardif, sans doute postérieur à l'exil, qui déborde le cadre des oracles contre les nations pour annoncer un jugement et un salut universels. Le festin du chapitre 25 n'est pas promis à Israël seul mais « à tous les peuples », sur « cette montagne » — Sion devenue le lieu d'un rassemblement qui dépasse toute frontière nationale."
+    },
+    {
+      "titre": "Philippes, une lettre depuis les chaînes",
+      "corps_html": "Paul écrit depuis une captivité — Rome selon la tradition ancienne, Éphèse ou Césarée selon des hypothèses plus récentes — à une communauté qu'il a fondée dix ans plus tôt, selon le récit d'Actes 16, après la conversion de Lydie et son propre emprisonnement dans cette même ville. Les Philippiens viennent de lui envoyer un soutien matériel par Épaphrodite ; c'est en répondant à ce don que Paul écrit, depuis ses chaînes, sa méditation sur l'abondance et le manque."
+    }
+  ],
+  "analogie": {
+    "titre": "La table déjà dressée",
+    "variantes": [
+      "Il arrive que tu entres quelque part — une maison en deuil, une assemblée que tu ne connais pas, une table à laquelle tu ne pensais pas avoir ta place — persuadé que tu vas devoir te justifier d'être là. Et puis quelqu'un a déjà prononcé ton nom, une chaise t'attendait, rien de tout cela n'avait été laissé à ton initiative. Tu n'as rien préparé qui mérite cet accueil ; il était là avant que tu arrives. C'est devant cela que le festin d'Ésaïe et la table du psaume te placent : non devant un mérite à produire, mais devant un lieu déjà prêt, où il ne reste qu'à s'asseoir.",
+      "Il y a des jours où tu te surprends à tenir — non pas parce que tu as rassemblé assez de force pour cela, mais parce qu'une force que tu n'avais pas en entrant s'est trouvée là au moment où il fallait. Tu cherches en toi l'endurance que la situation a exigée, et tu ne la trouves pas à l'origine ; elle est venue d'ailleurs, pendant que tu avançais. Ce n'est pas de la résignation, ni un talent que tu aurais développé : c'est une force reçue à l'instant où elle manquait. Paul dit cela aux Philippiens depuis sa prison, et il ne dit pas qu'il a appris à ne rien ressentir, il dit qu'un autre que lui s'est logé dans ce manque.",
+      "Il y a des moments où tes propres mots, ta propre contenance, ton propre courage ne suffiraient pas — et où pourtant tu traverses l'épreuve avec une justesse qui n'est pas la tienne, comme si on t'avait prêté, pour l'occasion, ce qu'il fallait dire ou tenir. Après, tu ne sais pas très bien d'où c'est venu ; ce n'était pas dans ta garde-robe habituelle. La parabole des noces parle ainsi d'un vêtement qu'on ne possède pas en entrant mais qu'il faut recevoir pour tenir sa place à la table — une justesse donnée, non fabriquée, sans laquelle même la présence à la fête resterait vide."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, reste un instant devant la table que ces textes dessinent ensemble — celle d'Ésaïe, celle du psaume, celle de la parabole.",
+    "geste": "Redis lentement le verset 5 du psaume — « tu dresses devant moi une table » — en remplaçant « moi » par ton propre nom, et laisse le silence qui suit.",
+    "note": "Il ne s'agit pas de mériter la place, mais de la reconnaître déjà donnée."
+  },
+  "question": "Qu'est-ce qui, en toi, résiste encore à l'idée d'être attendu sans l'avoir mérité ?",
+  "racines": [
+    {
+      "titre": "L'habit de noces, selon Chrysostome",
+      "corps_html": "Dans ses homélies sur l'évangile de Matthieu, Jean Chrysostome refuse de réduire cet homme sans vêtement à un détail secondaire du récit. Il a répondu à l'appel, il est entré dans la salle — mais l'appel reçu ne dispense pas d'une vie qui lui corresponde. Pour Chrysostome, le vêtement de noces, c'est la charité et les œuvres bonnes, sans lesquelles l'entrée elle-même reste vaine.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu"
+    },
+    {
+      "titre": "Le festin, figure de l'Évangile selon Calvin",
+      "corps_html": "Calvin, commentant Ésaïe 25, refuse d'y voir une simple promesse de prospérité matérielle : le festin sur la montagne annonce pour lui la table de la Parole et des sacrements, où Dieu rassasie les peuples non de pain mais de sa grâce en Christ. L'abondance décrite, dit-il, doit se mesurer à la faim qu'elle vient combler — une faim que seul l'Évangile révèle pleinement.",
+      "attribution": "Jean Calvin, Commentaire sur le livre d'Ésaïe"
+    },
+    {
+      "titre": "La mort engloutie, selon Paul",
+      "corps_html": "Quand Paul écrit, en 1 Corinthiens 15, 54, que « la mort a été engloutie dans la victoire », il cite presque mot pour mot la version grecque d'Ésaïe 25, 8. Ce n'est pas une allusion vague : c'est la preuve que, pour les premiers chrétiens, la résurrection du Christ accomplissait très précisément cette promesse-là, prononcée des siècles plus tôt sur une montagne que nul n'avait encore nommée.",
+      "attribution": "1 Corinthiens 15, 54"
+    }
+  ]
+}

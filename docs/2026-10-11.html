@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Festin des Noces — dimanche 11 octobre 2026</title>
+<meta name="description" content="Dimanche — Ésaïe, les Philippiens et la parabole du roi qui fit des noces pour son fils">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 11 octobre 2026 · 28ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Le Festin des <span class="it">Noces</span></h1>
+    <p class="chapeau">Dimanche — Ésaïe, les Philippiens et la parabole du roi qui fit des noces pour son fils</p>
+    <figure class="gravure" aria-label="Une longue table dressée à flanc de montagne, des convives de toutes conditions s'y attablant tandis qu'au loin une ville brûle sous un ciel d'orage ; au premier plan, une coupe qui déborde."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 145 L170 95 L334 55"/><path d="M55 112 L300 70"/><path d="M55 112 L55 119"/><path d="M300 70 L300 77"/><path d="M15 20 q25 -12 50 0 q25 -12 50 0 q25 -12 50 0"/><path d="M225 56 h8 v-12 h6 v12 h10 v-18 h6 v18 h8 v-8 h8"/><path d="M66 100 q4 -6 8 0 v10"/><path d="M116 93 q4 -6 8 0 v10"/><path d="M166 85 q4 -6 8 0 v10"/><path d="M216 77 q4 -6 8 0 v10"/><path d="M266 70 q4 -6 8 0 v10"/></g><g class="trait-rubrique"><path d="M250 40 q-11 -17 -1 -31 q-3 13 6 15 q7 -19 -3 -43 q14 22 3 43 q9 -6 6 -17 q8 19 -11 34"/></g><g class="trait-liturgie"><path d="M22 100 q0 18 13 20 q13 -2 13 -20 z"/><path d="M35 120 v14"/><path d="M24 140 h22"/><path d="M20 98 q6 -10 13 -2 q7 -8 13 2"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 25, 6-10a — Segond, 1910</p>
+        <div class="ecriture "><span class="s">6</span> L'Éternel des armées fera à tous les peuples, sur cette montagne, un <button class="mot" data-g="g-mishteh">festin</button> de mets succulents, un festin de vins vieux, de mets succulents, pleins de moelle, de vins vieux, clarifiés. <span class="s">7</span> Et, sur cette montagne, il anéantira le <button class="mot" data-g="g-lot">voile</button> qui couvre tous les peuples, la couverture qui s'étend sur toutes les nations. <span class="s">8</span> Il <button class="mot" data-g="g-bala">détruira</button> la mort pour toujours; le Seigneur, l'Éternel, <button class="mot" data-g="g-macha">essuiera</button> les larmes de tous les visages, il fera disparaître l'opprobre de son peuple sur toute la terre; car l'Éternel a parlé. <span class="s">9</span> En ce jour l'on dira: Voici, c'est notre Dieu, en qui nous avons confiance, et c'est lui qui nous sauve; c'est l'Éternel, en qui nous avons confiance; soyons dans l'allégresse, et réjouissons-nous de son salut! <span class="s">10a</span> Car la main de l'Éternel reposera sur cette montagne...</div>
+        <div class="glose" id="g-mishteh"><span class="lemme">mishteh</span> Le mot hébreu est <span class="gr">mishteh</span>, construit sur la racine <span class="gr">shatah</span>, « boire ». Avant d'être un repas, c'est une beuverie rituelle, ce que Segond adoucit en traduisant simplement « festin ». Calvin, dans son commentaire sur Ésaïe, insiste sur le caractère volontairement excessif de l'image : Dieu ne promet pas une ration mais une ivresse de joie, à la mesure de ce que le texte annonce ensuite — la mort elle-même engloutie.</div>
+        <div class="glose" id="g-lot"><span class="lemme">lot</span> Le mot <span class="gr">lot</span>, traduit par « voile », n'apparaît dans toute la Bible hébraïque qu'à cet endroit : c'est un hapax, et personne n'est pleinement certain de son sens exact. Segond choisit « voile », rattachant le mot à la racine « envelopper », mais d'autres traducteurs anciens ont entendu un lien avec le deuil plutôt qu'avec l'ignorance. Ce qui est sûr, c'est l'image : quelque chose recouvre actuellement toutes les nations, et c'est cela, précisément, que la montagne de Dieu doit faire disparaître.</div>
+        <div class="glose" id="g-bala"><span class="lemme">bala</span> Le verbe employé n'est pas un simple « détruire » : c'est <span class="gr">billa</span>, de la racine <span class="gr">bala</span>, « avaler, engloutir » — le même verbe qui décrit ailleurs la terre engloutissant Coré, ou le poisson engloutissant Jonas. La mort, qui dans toute la Bible est celle qui avale les vivants, se retrouve ici avalée à son tour. Paul reprend très exactement cette image en 1 Corinthiens 15, 54, citant la version grecque de ce verset : « la mort a été engloutie dans la victoire » — preuve que cette lecture n'est pas une extrapolation moderne mais la manière même dont les premiers chrétiens ont lu Ésaïe 25.</div>
+        <div class="glose" id="g-macha"><span class="lemme">machah</span> « Essuiera » traduit <span class="gr">machah</span>, verbe concret qui désigne le geste d'effacer une trace, une écriture, une tache — pas seulement sécher une joue. Le choix de Segond est juste, mais il faut entendre que le texte ne promet pas une consolation qui s'ajoute à la peine : il promet que la peine elle-même soit effacée, comme on efface ce qui a été écrit. L'Apocalypse reprendra mot pour mot cette formule en 21, 4, signe que l'espérance chrétienne finale se pense très précisément dans les termes d'Ésaïe.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 22 (23), 1-2ab, 2c-3, 4, 5, 6 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> L'Éternel est mon <button class="mot" data-g="g-raah">berger</button>: je ne manquerai de rien. <span class="s">2ab</span> Il me fait reposer dans de verts pâturages, <span class="s">2c</span> il me dirige près des eaux paisibles. <span class="s">3</span> Il restaure mon <button class="mot" data-g="g-nephesh">âme</button>, il me conduit dans les sentiers de la justice, à cause de son nom. <span class="s">4</span> Quand je marche dans la vallée de l'<button class="mot" data-g="g-tsalmaveth">ombre de la mort</button>, je ne crains aucun mal, car tu es avec moi: ta houlette et ton bâton me rassurent. <span class="s">5</span> Tu dresses devant moi une table, en face de mes adversaires; tu oins d'huile ma tête, et ma coupe débordante. <span class="s">6</span> Oui, le bonheur et la grâce m'accompagneront tous les jours de ma vie, et j'habiterai dans la maison de l'Éternel jusqu'à la fin de mes jours.</div>
+        <div class="glose" id="g-raah"><span class="lemme">ro'eh</span> « Berger » traduit le participe <span class="gr">ro'eh</span>, de la racine « mener au pâturage », qui est aussi, en hébreu, un mot ordinaire pour « ami » ou « compagnon » selon le contexte. Ce double sens n'est pas un hasard : le psaume ne décrit pas seulement une fonction de protection mais une proximité. Jésus reprendra ce titre pour lui-même en Jean 10, « je suis le bon berger », après qu'Ézéchiel 34 eut dénoncé les mauvais bergers d'Israël — le psaume se tient entre ces deux pôles, la plainte contre les chefs indignes et la promesse d'un berger qui ne faillira pas.</div>
+        <div class="glose" id="g-nephesh"><span class="lemme">nephesh</span> « Âme » traduit <span class="gr">nephesh</span>, mot qui en hébreu ne désigne pas une partie immatérielle opposée au corps, mais la vie elle-même, le souffle, parfois la gorge qui respire. Segond, en écrivant « âme », importe une dualité grecque étrangère au texte : ce que le berger restaure, c'est tout l'être vivant, non une part détachable de lui. La tradition rabbinique a longtemps gardé ce sens unitaire, avant que des distinctions plus tardives entre nephesh, ruah et neshamah n'introduisent des nuances que le psaume ignore.</div>
+        <div class="glose" id="g-tsalmaveth"><span class="lemme">tsalmaveth</span> Le mot <span class="gr">tsalmaveth</span>, « ombre de la mort », est d'étymologie disputée : certains hébraïsants y lisent un composé de « ombre » et « mort », d'autres une simple forme intensive signifiant « obscurité profonde », sans référence directe à la mort. Segond suit la lecture traditionnelle, déjà celle de la Septante (« ombre de mort »), et c'est cette version grecque que Luc reprend mot pour mot dans le cantique de Zacharie, à propos de « ceux qui sont assis dans les ténèbres et dans l'ombre de la mort » — preuve que l'Évangile a lu ce psaume comme une prophétie de sa propre venue.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — Ph 4, 12-14.19-20 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">12</span> Je sais vivre dans l'humiliation, et je sais vivre dans l'abondance; en tout et partout j'ai <button class="mot" data-g="g-memyemai">appris</button> à être rassasié et à avoir faim, à être dans l'abondance et à être dans la disette. <span class="s">13</span> Je puis tout par celui qui me <button class="mot" data-g="g-endunamounti">fortifie</button>. <span class="s">14</span> Cependant vous avez bien fait de prendre part à mon affliction. <span class="s">19</span> Et mon Dieu <button class="mot" data-g="g-plerosei">pourvoira</button> à tous vos besoins selon sa richesse, avec gloire, en Jésus-Christ. <span class="s">20</span> À notre Dieu et Père la gloire aux siècles des siècles! Amen!</div>
+        <div class="glose" id="g-memyemai"><span class="lemme">memyēmai</span> « J'ai appris » traduit <span class="gr">memyēmai</span>, parfait du verbe <span class="gr">myeō</span>, qui signifie précisément « être initié aux mystères » — c'est le vocabulaire des cultes à mystères de l'Antiquité, où l'on était introduit à un secret par degrés. Segond lisse ce terme en « j'ai appris », ce qui n'est pas faux mais efface l'idée que ce contentement n'est pas une leçon retenue par l'effort, mais quelque chose dans lequel on est progressivement introduit, presque malgré soi. Paul, ancien pharisien, emprunte ici délibérément le langage des religions qui l'entourent pour dire une expérience que ce langage seul approche.</div>
+        <div class="glose" id="g-endunamounti"><span class="lemme">endynamoō</span> « Me fortifie » rend <span class="gr">endynamounti</span>, participe présent de <span class="gr">endynamoō</span>, littéralement « mettre la puissance dedans ». Ce n'est pas un stoïcisme de la volonté : la force dont Paul parle n'est pas la sienne, elle vient se loger en lui depuis l'extérieur. Le même verbe revient en Éphésiens 6, 10, « fortifiez-vous dans le Seigneur », signe d'un vocabulaire paulinien cohérent pour dire une force reçue plutôt que conquise.</div>
+        <div class="glose" id="g-plerosei"><span class="lemme">plēroō</span> « Pourvoira » traduit <span class="gr">plērōsei</span>, futur de <span class="gr">plēroō</span>, « remplir entièrement, combler ». Segond affaiblit le verbe en « pourvoira », qui évoque une provision suffisante, alors que le grec promet un remplissement total. C'est le même verbe qui donne le mot <span class="gr">plērōma</span>, la « plénitude », par lequel Paul décrira ailleurs tout ce qui habite en Christ (Colossiens 1, 19 et 2, 9) — le besoin comblé des Philippiens et la plénitude du Christ relèvent, dans le grec de Paul, du même mot.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 22, 1-14 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span> Jésus, prenant la parole, leur dit encore cette parabole: <span class="s">2</span> Le royaume des cieux est semblable à un roi qui fit des noces pour son fils. <span class="s">3</span> Il envoya ses serviteurs appeler ceux qui étaient <button class="mot" data-g="g-keklemenoi">invités</button> aux noces; mais ils ne voulurent pas venir. <span class="s">4</span> Il envoya encore d'autres serviteurs, disant: Dites aux conviés: Voici, j'ai préparé mon festin; mes bœufs et mes bêtes grasses sont tués, tout est prêt, venez aux noces. <span class="s">5</span> Mais, sans s'inquiéter de cela, ils s'en allèrent, celui-ci à son champ, celui-là à son trafic; <span class="s">6</span> et les autres se saisirent de ses serviteurs, les outragèrent et les tuèrent. <span class="s">7</span> Le roi fut irrité; il envoya ses troupes, fit périr ces meurtriers, et brûla leur ville. <span class="s">8</span> Alors il dit à ses serviteurs: Les noces sont prêtes; mais les conviés n'en étaient pas dignes. <span class="s">9</span> Allez donc dans les carrefours, et appelez aux noces tous ceux que vous trouverez. <span class="s">10</span> Ces serviteurs allèrent dans les chemins, rassemblèrent tous ceux qu'ils trouvèrent, méchants et bons, et la salle des noces fut remplie de convives. <span class="s">11</span> Le roi entra pour voir ceux qui étaient à table, et il aperçut là un homme qui n'avait pas revêtu un <button class="mot" data-g="g-endyma">habit de noces</button>. <span class="s">12</span> Il lui dit: Mon ami, comment es-tu entré ici sans avoir un habit de noces? Cet homme eut la bouche fermée. <span class="s">13</span> Alors le roi dit aux serviteurs: Liez-lui les pieds et les mains, et jetez-le dans les <button class="mot" data-g="g-skotos">ténèbres du dehors</button>, où il y aura des pleurs et des grincements de dents. <span class="s">14</span> Car beaucoup sont appelés, mais peu sont élus.</div>
+        <div class="glose" id="g-keklemenoi"><span class="lemme">keklēmenoi</span> « Invités » traduit <span class="gr">keklēmenoi</span>, participe parfait passif de <span class="gr">kaleō</span>, « appeler » — le même verbe qui donne <span class="gr">ekklēsia</span>, l'assemblée de ceux qui ont été appelés hors de leurs maisons. Segond varie entre « invités » et « conviés » pour traduire ce qui, en grec, est répété presque à l'identique d'un verset à l'autre. Ce choix de variation en français masque une insistance que le texte grec, lui, entretient délibérément : on ne cesse d'être appelé, même quand on refuse de répondre.</div>
+        <div class="glose" id="g-endyma"><span class="lemme">endyma gamou</span> « Habit de noces » traduit <span class="gr">endyma gamou</span>, une expression qui n'a pas de parallèle dans l'Ancien Testament et qui semble propre à cette parabole. Jean Chrysostome, dans ses homélies sur l'évangile de Matthieu, refuse d'y voir un détail de protocole : pour lui, le vêtement, c'est la charité et les œuvres bonnes, que l'homme n'a pas revêtues bien qu'il ait répondu à l'appel. Être entré dans la salle ne suffit donc pas — la parabole distingue l'appel reçu et la vie qui devrait s'accorder à lui.</div>
+        <div class="glose" id="g-skotos"><span class="lemme">to skotos to exōteron</span> « Ténèbres du dehors » traduit <span class="gr">to skotos to exōteron</span>, une formule que Matthieu seul emploie dans tout le Nouveau Testament, et seulement trois fois (8, 12 ; 22, 13 ; 25, 30). Ce n'est pas une expression biblique courante mais une image forgée par cet évangile pour dire l'exclusion ultime, toujours construite en contraste avec la salle éclairée du festin. Le choix de Segond, littéral, garde intacte cette opposition entre la lumière du dedans et l'obscurité du dehors.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile (forme brève) — Mt 22, 1-10 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span> Jésus, prenant la parole, leur dit encore cette parabole: <span class="s">2</span> Le royaume des cieux est semblable à un roi qui fit des noces pour son fils. <span class="s">3</span> Il envoya ses serviteurs appeler ceux qui étaient invités aux noces; mais ils ne voulurent pas venir. <span class="s">4</span> Il envoya encore d'autres serviteurs, disant: Dites aux conviés: Voici, j'ai préparé mon festin; mes bœufs et mes bêtes grasses sont tués, tout est prêt, venez aux noces. <span class="s">5</span> Mais, sans s'inquiéter de cela, ils s'en allèrent, celui-ci à son champ, celui-là à son <button class="mot" data-g="g-trafic">trafic</button>; <span class="s">6</span> et les autres se saisirent de ses serviteurs, les outragèrent et les tuèrent. <span class="s">7</span> Le roi fut irrité; il envoya ses troupes, fit périr ces meurtriers, et brûla leur ville. <span class="s">8</span> Alors il dit à ses serviteurs: Les noces sont prêtes; mais les conviés n'en étaient pas dignes. <span class="s">9</span> Allez donc dans les <button class="mot" data-g="g-carrefours">carrefours</button>, et appelez aux noces tous ceux que vous trouverez. <span class="s">10</span> Ces serviteurs allèrent dans les chemins, rassemblèrent tous ceux qu'ils trouvèrent, méchants et bons, et la salle des noces fut remplie de convives.</div>
+        <div class="glose" id="g-trafic"><span class="lemme">emporia</span> « Trafic » traduit <span class="gr">emporia</span>, le commerce ordinaire, sans aucune connotation malhonnête dans le grec. Segond garde ce sens neutre, et c'est important : les premiers invités ne refusent pas par hostilité déclarée mais par préoccupation banale, un champ à cultiver, des affaires à conclure. Le texte ne décrit pas des ennemis de Dieu mais des gens occupés — ce qui rend le jugement qui suit plus troublant qu'un simple récit de rejet frontal.</div>
+        <div class="glose" id="g-carrefours"><span class="lemme">diexodous</span> Le mot grec est <span class="gr">diexodous</span>, littéralement « les issues », les points où les chemins sortent de la ville vers l'extérieur. Segond traduit par « carrefours », ce qui est juste dans le sens mais efface l'image des marges, des sorties : les serviteurs ne vont pas seulement dans des lieux de passage animés, ils vont jusqu'aux limites de la ville, là où elle cesse d'être elle-même. C'est bien à sa marge, et non à son centre, que la salle des noces trouve finalement de quoi se remplir.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i><i ></i></span> 5 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Ésaïe 24–27, une « petite apocalypse »</h3><p>Les chapitres 24 à 27 d'Ésaïe forment un ensemble que les commentateurs appellent depuis longtemps « l'apocalypse d'Ésaïe » : un texte tardif, sans doute postérieur à l'exil, qui déborde le cadre des oracles contre les nations pour annoncer un jugement et un salut universels. Le festin du chapitre 25 n'est pas promis à Israël seul mais « à tous les peuples », sur « cette montagne » — Sion devenue le lieu d'un rassemblement qui dépasse toute frontière nationale.</p></div>
+      <div><h3>Philippes, une lettre depuis les chaînes</h3><p>Paul écrit depuis une captivité — Rome selon la tradition ancienne, Éphèse ou Césarée selon des hypothèses plus récentes — à une communauté qu'il a fondée dix ans plus tôt, selon le récit d'Actes 16, après la conversion de Lydie et son propre emprisonnement dans cette même ville. Les Philippiens viennent de lui envoyer un soutien matériel par Épaphrodite ; c'est en répondant à ce don que Paul écrit, depuis ses chaînes, sa méditation sur l'abondance et le manque.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La table déjà dressée</h2>
+<p>Il arrive que tu entres quelque part — une maison en deuil, une assemblée que tu ne connais pas, une table à laquelle tu ne pensais pas avoir ta place — persuadé que tu vas devoir te justifier d'être là. Et puis quelqu'un a déjà prononcé ton nom, une chaise t'attendait, rien de tout cela n'avait été laissé à ton initiative. Tu n'as rien préparé qui mérite cet accueil ; il était là avant que tu arrives. C'est devant cela que le festin d'Ésaïe et la table du psaume te placent : non devant un mérite à produire, mais devant un lieu déjà prêt, où il ne reste qu'à s'asseoir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de fermer cette page, reste un instant devant la table que ces textes dessinent ensemble — celle d'Ésaïe, celle du psaume, celle de la parabole.</p>
+      <p class="geste">Redis lentement le verset 5 du psaume — « tu dresses devant moi une table » — en remplaçant « moi » par ton propre nom, et laisse le silence qui suit.</p>
+      <small>Il ne s'agit pas de mériter la place, mais de la reconnaître déjà donnée.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, en toi, résiste encore à l'idée d'être attendu sans l'avoir mérité ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>L'habit de noces, selon Chrysostome</h3>
+          <p>Dans ses homélies sur l'évangile de Matthieu, Jean Chrysostome refuse de réduire cet homme sans vêtement à un détail secondaire du récit. Il a répondu à l'appel, il est entré dans la salle — mais l'appel reçu ne dispense pas d'une vie qui lui corresponde. Pour Chrysostome, le vêtement de noces, c'est la charité et les œuvres bonnes, sans lesquelles l'entrée elle-même reste vaine.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le festin, figure de l'Évangile selon Calvin</h3>
+          <p>Calvin, commentant Ésaïe 25, refuse d'y voir une simple promesse de prospérité matérielle : le festin sur la montagne annonce pour lui la table de la Parole et des sacrements, où Dieu rassasie les peuples non de pain mais de sa grâce en Christ. L'abondance décrite, dit-il, doit se mesurer à la faim qu'elle vient combler — une faim que seul l'Évangile révèle pleinement.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre d'Ésaïe</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La mort engloutie, selon Paul</h3>
+          <p>Quand Paul écrit, en 1 Corinthiens 15, 54, que « la mort a été engloutie dans la victoire », il cite presque mot pour mot la version grecque d'Ésaïe 25, 8. Ce n'est pas une allusion vague : c'est la preuve que, pour les premiers chrétiens, la résurrection du Christ accomplissait très précisément cette promesse-là, prononcée des siècles plus tôt sur une montagne que nul n'avait encore nommée.</p>
+<p class="attrib">1 Corinthiens 15, 54</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 28ème Semaine du Temps Ordinaire — Is 25, 6-10a ; Ph 4, 12-14.19-20 ; Mt 22, 1-14 ; Mt 22, 1-10.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
