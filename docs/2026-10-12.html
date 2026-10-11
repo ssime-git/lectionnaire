@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nés libres — lundi 12 octobre 2026</title>
+<meta name="description" content="Agar et Sara, Ninive et la reine du Midi : la promesse déjà tenue face au signe sans cesse réclamé.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 12 octobre 2026 · 28ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Nés <span class="it">libres</span></h1>
+    <p class="chapeau">Agar et Sara, Ninive et la reine du Midi : la promesse déjà tenue face au signe sans cesse réclamé.</p>
+    <figure class="gravure" aria-label="Un joug brisé gît au sol, ses deux moitiés encore reliées par une lanière de cuir ; au-dessus, un vol d'oiseaux s'élève vers un ciel strié de hachures claires, tandis qu'à l'arrière-plan se dessine, à peine suggérée dans l'ombre, la gueule ouverte d'un grand poisson, rappelant Jonas."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 128 h324"/><path d="M50 120 q22 -16 58 -8 l4 3"/><path d="M112 115 l9 9"/><path d="M165 112 q34 -10 58 4 l4 3"/><path d="M169 115 l-7 9"/><path d="M113 121 q16 11 32 0"/><path d="M113 125 q16 9 32 0"/><path d="M138 60 q8 -7 16 0 q8 -7 16 0"/><path d="M168 44 q7 -6 14 0 q7 -6 14 0"/><path d="M193 29 q6 -5 12 0 q6 -5 12 0"/><path d="M213 17 q5 -4 10 0 q5 -4 10 0"/></g><g class="trait-rubrique"><path d="M238 14 l15 15"/><path d="M258 24 l15 15"/><path d="M278 38 l13 13"/></g><g class="trait-liturgie"><path d="M228 131 q42 -58 98 -22"/><path d="M228 131 q48 21 98 9"/><path d="M244 119 l7 12 l8 -13 l8 12 l8 -13 l7 11"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Lecture de la lettre de saint Paul aux Galates — Ga 4, 22-24.26-27.31 – 5, 1 — Segond 1910</p>
+        <div class="ecriture "><span class="s">22</span> Car il est écrit qu'Abraham eut deux fils, un de la femme esclave, et un de la femme libre. <span class="s">23</span> Mais celui de l'esclave naquit selon la chair, et celui de la femme libre naquit en vertu de la promesse. <span class="s">24</span> Ces choses sont <button class="mot" data-g="g-allegoroumena">allégoriques</button> ; car ces femmes sont deux alliances. L'une du mont Sinaï, enfantant pour la servitude, c'est <button class="mot" data-g="g-agar">Agar</button>. <span class="s">26</span> Mais la Jérusalem d'en haut est libre, c'est notre mère. <span class="s">27</span> Car il est écrit : Réjouis-toi, stérile, toi qui n'enfantes point ! Pousse des cris de joie et d'allégresse, toi qui n'as pas éprouvé les douleurs de l'enfantement ! Car les enfants de la délaissée seront plus nombreux que les enfants de celle qui était mariée. <span class="s">31</span> Ainsi, frères, nous ne sommes pas enfants de l'esclave, mais de la femme libre. <span class="s">1</span> C'est pour la liberté que Christ nous a <button class="mot" data-g="g-eleutheroo">affranchis</button>. Demeurez donc fermes, et ne vous laissez pas remettre sous le <button class="mot" data-g="g-zygos">joug</button> de la servitude.</div>
+        <div class="glose" id="g-allegoroumena"><span class="lemme">allégoriques</span> Le verbe grec employé par Paul, <span class="gr">allêgoroumena</span>, vient de <span class="gr">allos</span> (« autre ») et <span class="gr">agoreuein</span> (« parler en assemblée ») : parler autrement que ce que les mots disent d'abord. Segond traduit par l'adjectif « allégoriques », qui fige en catégorie littéraire ce que le grec présente comme une action en train de se faire. Jean Chrysostome précise que Paul ne fabrique pas une fiction : il révèle un sens que l'histoire d'Agar et de Sara portait déjà, inscrit par l'Esprit dans les faits eux-mêmes. Calvin va dans le même sens : l'allégorie paulinienne n'est pas un jeu d'esprit, mais une clé pour lire l'Écriture entière comme une seule histoire.</div>
+        <div class="glose" id="g-agar"><span class="lemme">Agar</span> Le nom hébreu <span class="gr">Hagar</span> se laisse entendre comme <span class="gr">ger</span>, « l'étranger », celui qui réside sans terre ni héritage — déjà en Genèse 16, elle est l'esclave égyptienne de Sara, étrangère à la promesse. Segond, comme la Septante avant lui, se contente de garder le nom propre sans le traduire. En l'associant au mont Sinaï au verset suivant, Paul reprend un rapprochement entre « Hagar » et « Hagra », nom sémitique de la région sinaïtique, que Jérôme relève encore dans ses Questions sur la Genèse. L'allégorie de Paul s'appuie donc sur une tradition de lecture réelle, non sur une invention isolée.</div>
+        <div class="glose" id="g-eleutheroo"><span class="lemme">affranchis</span> <span class="gr">êleutherôsen</span>, de <span class="gr">eleutheroô</span>, « rendre libre », appartient à la même famille que <span class="gr">eleutheria</span>, la liberté elle-même. Segond traduit par « affranchir », verbe juridique romain qui désigne la libération légale d'un esclave par son maître — image exacte de ce que Paul décrit, puisque le Christ agit ici comme celui qui rachète et libère en droit, non seulement en sentiment. Calvin insiste, dans son commentaire : cette liberté n'est pas un simple allègement de conscience, mais un affranchissement objectif à l'égard de la loi comme voie de justification, acquis une fois pour toutes.</div>
+        <div class="glose" id="g-zygos"><span class="lemme">joug</span> <span class="gr">zygos</span> désigne le joug qui attelle deux bêtes ensemble — le même mot que celui de Matthieu 11, 29-30, où Jésus dit : « mon joug est doux ». Segond garde l'image agricole, très concrète pour des lecteurs galates habitués aux travaux des champs. Chrysostome relève l'ironie de la situation : en se faisant circoncire pour observer la loi, les Galates échangent le joug léger du Christ contre celui, plus lourd, que même les Juifs de Jérusalem, selon Actes 15, 10, ne pouvaient porter sans faiblir.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 112 (113), 1-2, 3-4, 5a.6-7 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> <button class="mot" data-g="g-hallelouyah">Louez</button> l'Éternel ! Serviteurs de l'Éternel, louez, Louez le nom de l'Éternel ! <span class="s">2</span> Que le nom de l'Éternel soit béni, Dès maintenant et à jamais ! <span class="s">3</span> Du lever du soleil jusqu'à son couchant, Que le nom de l'Éternel soit célébré ! <span class="s">4</span> L'Éternel est élevé au-dessus de toutes les nations, Sa gloire est au-dessus des cieux. <span class="s">5a</span> Qui est semblable à l'Éternel, notre Dieu ? <span class="s">6</span> Il a sa demeure en haut, il s'abaisse pour regarder ce qui est dans les cieux et sur la terre. <span class="s">7</span> De la poussière il retire le pauvre, du <button class="mot" data-g="g-ashpot">fumier</button> il relève l'indigent,</div>
+        <div class="glose" id="g-hallelouyah"><span class="lemme">Louez</span> Le psaume ouvre sur <span class="gr">hallelou</span>, impératif pluriel du verbe <span class="gr">hillel</span>, « louer à pleine voix », racine de notre mot « alléluia ». Segond traduit sobrement par « Louez », mais l'hébreu porte une sonorité de clameur publique, plus proche de l'acclamation que de la prière silencieuse. Ce psaume ouvre la série dite du « hallel égyptien » (Ps 113 à 118), chantée à la Pâque juive ; selon une tradition ancienne, c'est l'un de ces psaumes que Jésus a pu chanter avec ses disciples avant de sortir vers le mont des Oliviers (Mt 26, 30).</div>
+        <div class="glose" id="g-ashpot"><span class="lemme">fumier</span> « Fumier » traduit l'hébreu <span class="gr">ashpot</span>, le tas d'ordures hors du camp où l'on jetait l'indigent. Segond garde l'image crue, sans l'adoucir. Cette formule reprend presque mot pour mot le cantique d'Anne en 1 Samuel 2, 8 — « il relève le pauvre de la poussière, il retire l'indigent du fumier » — et Marie, dans le Magnificat de Luc 1, 52, hérite de la même tradition de renversement des puissants et des petits.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile de Jésus Christ selon saint Luc — Lc 11, 29-32 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">29</span> Comme la foule s'amassait, Jésus dit : Cette génération est une génération méchante ; elle demande un <button class="mot" data-g="g-semeion">miracle</button> ; il ne lui sera donné d'autre miracle que celui de Jonas. <span class="s">30</span> Car, de même que Jonas fut un miracle pour les Ninivites, de même le Fils de l'homme en sera un pour cette génération. <span class="s">31</span> La reine du Midi se lèvera, au jour du jugement, avec cette génération et la condamnera, car elle vint des extrémités de la terre pour entendre la sagesse de Salomon ; et voici, il y a ici plus que Salomon. <span class="s">32</span> Les hommes de Ninive se lèveront, au jour du jugement, avec cette génération et la condamneront, car ils <button class="mot" data-g="g-metanoeo">se repentirent</button> à la prédication de Jonas ; et voici, il y a ici plus que Jonas.</div>
+        <div class="glose" id="g-semeion"><span class="lemme">miracle</span> <span class="gr">sêmeion</span> signifie d'abord « signe », non « prodige » : Segond traduit par « miracle », qui déplace l'attention de ce que le fait désigne vers son seul éclat spectaculaire. Jean emploie le même mot pour les actes de Jésus, le traduisant lui aussi parfois par « miracle », ce qui entretient en français une tension que le grec ne connaît pas. Chrysostome note que réclamer ici un <span class="gr">sêmeion</span> est déjà un aveu d'incrédulité : un signe a déjà été donné dans la personne même de Jésus, et en demander un autre revient à refuser celui qu'on a sous les yeux.</div>
+        <div class="glose" id="g-metanoeo"><span class="lemme">se repentirent</span> <span class="gr">metenoêsan</span>, de <span class="gr">metanoeô</span>, signifie littéralement « changer son <span class="gr">noos</span> », son intelligence, son regard sur toute chose — bien plus qu'un regret passager. Segond traduit par « se repentirent », mot hérité du latin poenitentia, chargé depuis la Vulgate d'une connotation de peine que le grec n'impose pas nécessairement. Calvin souligne que les Ninivites se sont retournés sur toute leur vie à la seule parole d'un étranger de passage, alors que l'auditoire de Jésus refuse ce retournement devant une parole bien plus grande que celle de Jonas.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Agar et Sara, deux pactes</h3><p>Vers 53 de notre ère, Paul écrit aux communautés de Galatie que des prédicateurs judaïsants pressent de se faire circoncire pour achever leur conversion. Il relit alors Genèse 16 et 21, non comme un simple récit de famille, mais comme une figure des deux alliances. Jean Chrysostome, dans sa quatrième homélie sur l'épître, précise que Paul ne nie pas l'histoire d'Agar et Sara : il en révèle le sens caché, déjà inscrit par l'Esprit dans les faits eux-mêmes.</p></div>
+      <div><h3>Le signe que Ninive a reçu</h3><p>Luc assemble ici deux souvenirs bibliques étrangers à Israël : les Ninivites, ennemis historiques d'Israël convertis à la seule voix de Jonas (Jon 3), et la reine de Saba, venue des confins du monde entendre Salomon (1 R 10). Origène, dans ses Homélies sur Luc, note que Jésus convoque volontairement deux témoins païens pour juger l'incrédulité de son propre peuple — un déplacement qui annonce déjà l'ouverture aux nations.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le signe déjà donné</h2>
+<p>Tu as connu ce moment où une parole t'a suffi — un verset lu au hasard, une phrase reçue au bon instant, une paix inexplicable après une nuit d'angoisse — et tu as su, ce jour-là, que Dieu venait de te répondre. Puis le doute est revenu, des mois plus tard, et tu as recommencé à demander un signe nouveau, comme si celui déjà reçu ne comptait plus, comme s'il fallait sans cesse en exiger un autre pour croire que Dieu est encore là. Le Christ ne refuse pas de répondre : il rappelle que la réponse a déjà été donnée, une fois, et qu'elle suffit si tu consens à t'y tenir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, laisse-toi rejoindre non par un signe nouveau, mais par celui déjà donné.</p>
+      <p class="geste">Nomme à voix basse un moment où Dieu s'est déjà fait reconnaître dans ta vie, et remercie-le pour cela seul, sans rien demander de plus aujourd'hui.</p>
+      <small>Les psaumes 113 à 118, dits « hallel égyptien », rythmaient la liturgie pascale juive du premier siècle ; les reprendre, c'est prier avec des mots que Jésus lui-même a pu chanter avant sa Passion (Mt 26, 30).</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quel signe Dieu t'a-t-il déjà donné, que tu continues pourtant à réclamer comme s'il ne t'avait jamais été accordé ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : une figure, non une fiction</h3>
+          <p>Dans sa quatrième homélie sur l'épître aux Galates, Jean Chrysostome insiste : Paul n'invente rien, il dévoile un sens que Moïse lui-même, selon lui, pressentait déjà en racontant l'histoire d'Agar et de Sara. L'allégorie paulinienne n'est donc pas un procédé rhétorique gratuit, mais la lecture d'une Écriture qui porte, dès l'origine, plus de sens qu'elle n'en donne à voir immédiatement.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'épître aux Galates, IVe hom.</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : la liberté qui s'use</h3>
+          <p>Calvin, commentant Galates 5, 1, avertit que la liberté chrétienne n'est jamais acquise comme un bien qu'on possède sans plus y veiller : elle exige d'être « tenue fermement », car la tentation de revenir sous un joug — fût-il religieux et apparemment pieux — demeure permanente chez l'homme, qui préfère souvent des règles visibles à une grâce qu'il ne maîtrise pas.</p>
+<p class="attrib">Jean Calvin, Commentaire sur l'épître aux Galates, ad loc. 5, 1</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Origène : deux témoins venus de loin</h3>
+          <p>Origène, dans ses Homélies sur Luc, remarque que Jésus convoque volontairement deux figures étrangères à Israël — la reine de Saba et les Ninivites — pour juger l'incrédulité de son propre peuple. Ce choix annonce, bien avant la mission aux nations, que la sagesse et le repentir peuvent surgir hors des frontières qu'on croyait celles de la promesse.</p>
+<p class="attrib">Origène, Homélies sur l'évangile de Luc, trad. latine de Jérôme</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 28ème Semaine du Temps Ordinaire — Ga 4, 22-24.26-27.31 – 5, 1 ; Lc 11, 29-32.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
