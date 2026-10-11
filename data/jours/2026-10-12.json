@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-12",
+  "date_humaine": "lundi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 4, 22-24.26-27.31 – 5, 1 ; Lc 11, 29-32",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M8 128 h324\"/><path d=\"M50 120 q22 -16 58 -8 l4 3\"/><path d=\"M112 115 l9 9\"/><path d=\"M165 112 q34 -10 58 4 l4 3\"/><path d=\"M169 115 l-7 9\"/><path d=\"M113 121 q16 11 32 0\"/><path d=\"M113 125 q16 9 32 0\"/><path d=\"M138 60 q8 -7 16 0 q8 -7 16 0\"/><path d=\"M168 44 q7 -6 14 0 q7 -6 14 0\"/><path d=\"M193 29 q6 -5 12 0 q6 -5 12 0\"/><path d=\"M213 17 q5 -4 10 0 q5 -4 10 0\"/></g><g class=\"trait-rubrique\"><path d=\"M238 14 l15 15\"/><path d=\"M258 24 l15 15\"/><path d=\"M278 38 l13 13\"/></g><g class=\"trait-liturgie\"><path d=\"M228 131 q42 -58 98 -22\"/><path d=\"M228 131 q48 21 98 9\"/><path d=\"M244 119 l7 12 l8 -13 l8 12 l8 -13 l7 11\"/></g></svg>",
+  "titre": "Nés libres",
+  "titre_html": "Nés <span class=\"it\">libres</span>",
+  "sous_titre": "Agar et Sara, Ninive et la reine du Midi : la promesse déjà tenue face au signe sans cesse réclamé.",
+  "suite_hier": null,
+  "gravure_alt": "Un joug brisé gît au sol, ses deux moitiés encore reliées par une lanière de cuir ; au-dessus, un vol d'oiseaux s'élève vers un ciel strié de hachures claires, tandis qu'à l'arrière-plan se dessine, à peine suggérée dans l'ombre, la gueule ouverte d'un grand poisson, rappelant Jonas.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Lecture de la lettre de saint Paul aux Galates",
+      "reference": "Ga 4, 22-24.26-27.31 – 5, 1",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">22</span> Car il est écrit qu'Abraham eut deux fils, un de la femme esclave, et un de la femme libre. <span class=\"s\">23</span> Mais celui de l'esclave naquit selon la chair, et celui de la femme libre naquit en vertu de la promesse. <span class=\"s\">24</span> Ces choses sont <button class=\"mot\" data-g=\"g-allegoroumena\">allégoriques</button> ; car ces femmes sont deux alliances. L'une du mont Sinaï, enfantant pour la servitude, c'est <button class=\"mot\" data-g=\"g-agar\">Agar</button>. <span class=\"s\">26</span> Mais la Jérusalem d'en haut est libre, c'est notre mère. <span class=\"s\">27</span> Car il est écrit : Réjouis-toi, stérile, toi qui n'enfantes point ! Pousse des cris de joie et d'allégresse, toi qui n'as pas éprouvé les douleurs de l'enfantement ! Car les enfants de la délaissée seront plus nombreux que les enfants de celle qui était mariée. <span class=\"s\">31</span> Ainsi, frères, nous ne sommes pas enfants de l'esclave, mais de la femme libre. <span class=\"s\">1</span> C'est pour la liberté que Christ nous a <button class=\"mot\" data-g=\"g-eleutheroo\">affranchis</button>. Demeurez donc fermes, et ne vous laissez pas remettre sous le <button class=\"mot\" data-g=\"g-zygos\">joug</button> de la servitude.",
+      "gloses": [
+        {
+          "id": "g-allegoroumena",
+          "lemme": "allégoriques",
+          "html": "Le verbe grec employé par Paul, <span class=\"gr\">allêgoroumena</span>, vient de <span class=\"gr\">allos</span> (« autre ») et <span class=\"gr\">agoreuein</span> (« parler en assemblée ») : parler autrement que ce que les mots disent d'abord. Segond traduit par l'adjectif « allégoriques », qui fige en catégorie littéraire ce que le grec présente comme une action en train de se faire. Jean Chrysostome précise que Paul ne fabrique pas une fiction : il révèle un sens que l'histoire d'Agar et de Sara portait déjà, inscrit par l'Esprit dans les faits eux-mêmes. Calvin va dans le même sens : l'allégorie paulinienne n'est pas un jeu d'esprit, mais une clé pour lire l'Écriture entière comme une seule histoire."
+        },
+        {
+          "id": "g-agar",
+          "lemme": "Agar",
+          "html": "Le nom hébreu <span class=\"gr\">Hagar</span> se laisse entendre comme <span class=\"gr\">ger</span>, « l'étranger », celui qui réside sans terre ni héritage — déjà en Genèse 16, elle est l'esclave égyptienne de Sara, étrangère à la promesse. Segond, comme la Septante avant lui, se contente de garder le nom propre sans le traduire. En l'associant au mont Sinaï au verset suivant, Paul reprend un rapprochement entre « Hagar » et « Hagra », nom sémitique de la région sinaïtique, que Jérôme relève encore dans ses Questions sur la Genèse. L'allégorie de Paul s'appuie donc sur une tradition de lecture réelle, non sur une invention isolée."
+        },
+        {
+          "id": "g-eleutheroo",
+          "lemme": "affranchis",
+          "html": "<span class=\"gr\">êleutherôsen</span>, de <span class=\"gr\">eleutheroô</span>, « rendre libre », appartient à la même famille que <span class=\"gr\">eleutheria</span>, la liberté elle-même. Segond traduit par « affranchir », verbe juridique romain qui désigne la libération légale d'un esclave par son maître — image exacte de ce que Paul décrit, puisque le Christ agit ici comme celui qui rachète et libère en droit, non seulement en sentiment. Calvin insiste, dans son commentaire : cette liberté n'est pas un simple allègement de conscience, mais un affranchissement objectif à l'égard de la loi comme voie de justification, acquis une fois pour toutes."
+        },
+        {
+          "id": "g-zygos",
+          "lemme": "joug",
+          "html": "<span class=\"gr\">zygos</span> désigne le joug qui attelle deux bêtes ensemble — le même mot que celui de Matthieu 11, 29-30, où Jésus dit : « mon joug est doux ». Segond garde l'image agricole, très concrète pour des lecteurs galates habitués aux travaux des champs. Chrysostome relève l'ironie de la situation : en se faisant circoncire pour observer la loi, les Galates échangent le joug léger du Christ contre celui, plus lourd, que même les Juifs de Jérusalem, selon Actes 15, 10, ne pouvaient porter sans faiblir."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 112 (113), 1-2, 3-4, 5a.6-7",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> <button class=\"mot\" data-g=\"g-hallelouyah\">Louez</button> l'Éternel ! Serviteurs de l'Éternel, louez, Louez le nom de l'Éternel ! <span class=\"s\">2</span> Que le nom de l'Éternel soit béni, Dès maintenant et à jamais ! <span class=\"s\">3</span> Du lever du soleil jusqu'à son couchant, Que le nom de l'Éternel soit célébré ! <span class=\"s\">4</span> L'Éternel est élevé au-dessus de toutes les nations, Sa gloire est au-dessus des cieux. <span class=\"s\">5a</span> Qui est semblable à l'Éternel, notre Dieu ? <span class=\"s\">6</span> Il a sa demeure en haut, il s'abaisse pour regarder ce qui est dans les cieux et sur la terre. <span class=\"s\">7</span> De la poussière il retire le pauvre, du <button class=\"mot\" data-g=\"g-ashpot\">fumier</button> il relève l'indigent,",
+      "gloses": [
+        {
+          "id": "g-hallelouyah",
+          "lemme": "Louez",
+          "html": "Le psaume ouvre sur <span class=\"gr\">hallelou</span>, impératif pluriel du verbe <span class=\"gr\">hillel</span>, « louer à pleine voix », racine de notre mot « alléluia ». Segond traduit sobrement par « Louez », mais l'hébreu porte une sonorité de clameur publique, plus proche de l'acclamation que de la prière silencieuse. Ce psaume ouvre la série dite du « hallel égyptien » (Ps 113 à 118), chantée à la Pâque juive ; selon une tradition ancienne, c'est l'un de ces psaumes que Jésus a pu chanter avec ses disciples avant de sortir vers le mont des Oliviers (Mt 26, 30)."
+        },
+        {
+          "id": "g-ashpot",
+          "lemme": "fumier",
+          "html": "« Fumier » traduit l'hébreu <span class=\"gr\">ashpot</span>, le tas d'ordures hors du camp où l'on jetait l'indigent. Segond garde l'image crue, sans l'adoucir. Cette formule reprend presque mot pour mot le cantique d'Anne en 1 Samuel 2, 8 — « il relève le pauvre de la poussière, il retire l'indigent du fumier » — et Marie, dans le Magnificat de Luc 1, 52, hérite de la même tradition de renversement des puissants et des petits."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile de Jésus Christ selon saint Luc",
+      "reference": "Lc 11, 29-32",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">29</span> Comme la foule s'amassait, Jésus dit : Cette génération est une génération méchante ; elle demande un <button class=\"mot\" data-g=\"g-semeion\">miracle</button> ; il ne lui sera donné d'autre miracle que celui de Jonas. <span class=\"s\">30</span> Car, de même que Jonas fut un miracle pour les Ninivites, de même le Fils de l'homme en sera un pour cette génération. <span class=\"s\">31</span> La reine du Midi se lèvera, au jour du jugement, avec cette génération et la condamnera, car elle vint des extrémités de la terre pour entendre la sagesse de Salomon ; et voici, il y a ici plus que Salomon. <span class=\"s\">32</span> Les hommes de Ninive se lèveront, au jour du jugement, avec cette génération et la condamneront, car ils <button class=\"mot\" data-g=\"g-metanoeo\">se repentirent</button> à la prédication de Jonas ; et voici, il y a ici plus que Jonas.",
+      "gloses": [
+        {
+          "id": "g-semeion",
+          "lemme": "miracle",
+          "html": "<span class=\"gr\">sêmeion</span> signifie d'abord « signe », non « prodige » : Segond traduit par « miracle », qui déplace l'attention de ce que le fait désigne vers son seul éclat spectaculaire. Jean emploie le même mot pour les actes de Jésus, le traduisant lui aussi parfois par « miracle », ce qui entretient en français une tension que le grec ne connaît pas. Chrysostome note que réclamer ici un <span class=\"gr\">sêmeion</span> est déjà un aveu d'incrédulité : un signe a déjà été donné dans la personne même de Jésus, et en demander un autre revient à refuser celui qu'on a sous les yeux."
+        },
+        {
+          "id": "g-metanoeo",
+          "lemme": "se repentirent",
+          "html": "<span class=\"gr\">metenoêsan</span>, de <span class=\"gr\">metanoeô</span>, signifie littéralement « changer son <span class=\"gr\">noos</span> », son intelligence, son regard sur toute chose — bien plus qu'un regret passager. Segond traduit par « se repentirent », mot hérité du latin poenitentia, chargé depuis la Vulgate d'une connotation de peine que le grec n'impose pas nécessairement. Calvin souligne que les Ninivites se sont retournés sur toute leur vie à la seule parole d'un étranger de passage, alors que l'auditoire de Jésus refuse ce retournement devant une parole bien plus grande que celle de Jonas."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Agar et Sara, deux pactes",
+      "corps_html": "Vers 53 de notre ère, Paul écrit aux communautés de Galatie que des prédicateurs judaïsants pressent de se faire circoncire pour achever leur conversion. Il relit alors Genèse 16 et 21, non comme un simple récit de famille, mais comme une figure des deux alliances. Jean Chrysostome, dans sa quatrième homélie sur l'épître, précise que Paul ne nie pas l'histoire d'Agar et Sara : il en révèle le sens caché, déjà inscrit par l'Esprit dans les faits eux-mêmes."
+    },
+    {
+      "titre": "Le signe que Ninive a reçu",
+      "corps_html": "Luc assemble ici deux souvenirs bibliques étrangers à Israël : les Ninivites, ennemis historiques d'Israël convertis à la seule voix de Jonas (Jon 3), et la reine de Saba, venue des confins du monde entendre Salomon (1 R 10). Origène, dans ses Homélies sur Luc, note que Jésus convoque volontairement deux témoins païens pour juger l'incrédulité de son propre peuple — un déplacement qui annonce déjà l'ouverture aux nations."
+    }
+  ],
+  "analogie": {
+    "titre": "Le signe déjà donné",
+    "variantes": [
+      "Tu as connu ce moment où une parole t'a suffi — un verset lu au hasard, une phrase reçue au bon instant, une paix inexplicable après une nuit d'angoisse — et tu as su, ce jour-là, que Dieu venait de te répondre. Puis le doute est revenu, des mois plus tard, et tu as recommencé à demander un signe nouveau, comme si celui déjà reçu ne comptait plus, comme s'il fallait sans cesse en exiger un autre pour croire que Dieu est encore là. Le Christ ne refuse pas de répondre : il rappelle que la réponse a déjà été donnée, une fois, et qu'elle suffit si tu consens à t'y tenir.",
+      "Tu as déjà vécu cela : une faute pardonnée depuis longtemps, que tu continues pourtant à porter comme une dette active, revenant t'excuser, te punir intérieurement, refusant d'habiter la liberté qu'on t'a pourtant donnée sans condition. Personne ne t'y oblige ; c'est toi qui replaces le joug sur ta propre nuque, nuit après nuit, parce que la servitude a quelque chose de plus familier que la liberté offerte. Paul ne dit pas seulement que tu es libre — il dit que tu dois tenir ferme dans cette liberté, parce qu'elle se perd plus facilement qu'elle ne s'acquiert.",
+      "Il y a ces années où rien ne semblait porter de fruit — un service rendu dans l'ombre, une prière répétée sans réponse visible, une attente si longue qu'elle ressemblait à de la stérilité — et puis, un jour, sans que tu l'aies vu venir, la promesse s'est tenue, et tu as compris qu'elle travaillait depuis le début, sous la surface, pendant tout ce temps où tu croyais qu'il ne se passait rien. Ce n'est pas toi qui as forcé l'accomplissement ; c'est la promesse elle-même qui portait déjà ce que tu n'arrivais pas à enfanter. Devant cela, il ne reste qu'à se taire et reconnaître que Dieu avait déjà commencé ce que tu croyais abandonné."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse-toi rejoindre non par un signe nouveau, mais par celui déjà donné.",
+    "geste": "Nomme à voix basse un moment où Dieu s'est déjà fait reconnaître dans ta vie, et remercie-le pour cela seul, sans rien demander de plus aujourd'hui.",
+    "note": "Les psaumes 113 à 118, dits « hallel égyptien », rythmaient la liturgie pascale juive du premier siècle ; les reprendre, c'est prier avec des mots que Jésus lui-même a pu chanter avant sa Passion (Mt 26, 30)."
+  },
+  "question": "Quel signe Dieu t'a-t-il déjà donné, que tu continues pourtant à réclamer comme s'il ne t'avait jamais été accordé ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : une figure, non une fiction",
+      "corps_html": "Dans sa quatrième homélie sur l'épître aux Galates, Jean Chrysostome insiste : Paul n'invente rien, il dévoile un sens que Moïse lui-même, selon lui, pressentait déjà en racontant l'histoire d'Agar et de Sara. L'allégorie paulinienne n'est donc pas un procédé rhétorique gratuit, mais la lecture d'une Écriture qui porte, dès l'origine, plus de sens qu'elle n'en donne à voir immédiatement.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Galates, IVe hom."
+    },
+    {
+      "titre": "Calvin : la liberté qui s'use",
+      "corps_html": "Calvin, commentant Galates 5, 1, avertit que la liberté chrétienne n'est jamais acquise comme un bien qu'on possède sans plus y veiller : elle exige d'être « tenue fermement », car la tentation de revenir sous un joug — fût-il religieux et apparemment pieux — demeure permanente chez l'homme, qui préfère souvent des règles visibles à une grâce qu'il ne maîtrise pas.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Galates, ad loc. 5, 1"
+    },
+    {
+      "titre": "Origène : deux témoins venus de loin",
+      "corps_html": "Origène, dans ses Homélies sur Luc, remarque que Jésus convoque volontairement deux figures étrangères à Israël — la reine de Saba et les Ninivites — pour juger l'incrédulité de son propre peuple. Ce choix annonce, bien avant la mission aux nations, que la sagesse et le repentir peuvent surgir hors des frontières qu'on croyait celles de la promesse.",
+      "attribution": "Origène, Homélies sur l'évangile de Luc, trad. latine de Jérôme"
+    }
+  ]
+}
