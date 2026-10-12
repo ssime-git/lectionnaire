@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-13",
+  "date_humaine": "mardi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 5, 1-6 ; Lc 11, 37-41",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 135 h300\"/><path d=\"M95 55 Q82 95 115 125 Q180 142 245 125 Q278 95 265 55\"/><path d=\"M112 63 Q103 92 126 112 Q180 124 234 112 Q257 92 248 63\"/><path d=\"M95 55 L112 63\"/><path d=\"M265 55 L248 63\"/><path d=\"M100 72 Q94 88 100 104\"/><path d=\"M258 75 Q264 90 259 106\"/><path d=\"M10 92 Q30 80 48 84\"/><path d=\"M48 84 Q62 62 85 52\"/><path d=\"M50 80 Q64 90 80 68\"/><path d=\"M54 74 Q66 80 76 64\"/></g><g class=\"trait-rubrique\"><path d=\"M145 88 l18 14\"/><path d=\"M165 92 l18 14\"/><path d=\"M183 86 l14 18\"/></g><g class=\"trait-liturgie\"><path d=\"M92 45 Q105 32 118 44 Q113 56 100 55 Q88 54 92 45\"/><path d=\"M98 40 Q106 44 112 41\"/></g></svg>",
+  "titre": "Dedans et dehors",
+  "titre_html": "Dedans <span class=\"it\">et dehors</span>",
+  "sous_titre": "Ce qui rend pur ne se frotte pas, il se donne.",
+  "suite_hier": null,
+  "gravure_alt": "Une coupe large, de pierre, vue en coupe transversale : l'extérieur porte des reflets polis, l'intérieur reste sombre ; une main tend vers l'ouverture un petit pain, comme pour verser au-dedans ce qu'on donnerait au-dehors.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ga 5, 1-6",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> C'est pour la <button class=\"mot\" data-g=\"g-eleutheria\">liberté</button> que Christ nous a libérés. Demeurez donc fermes, et ne vous laissez pas remettre sous le <button class=\"mot\" data-g=\"g-zygos\">joug</button> de la servitude. <span class=\"s\">2</span> Voici, moi Paul, je vous dis que, si vous vous faites <button class=\"mot\" data-g=\"g-peritome\">circoncire</button>, Christ ne vous servira de rien. <span class=\"s\">3</span> Et je proteste encore une fois à tout homme qui se fait circoncire, qu'il est tenu d'observer la loi tout entière. <span class=\"s\">4</span> Vous qui cherchez la justification dans la loi, vous êtes déchus de la grâce. <span class=\"s\">5</span> Pour nous, c'est de l'Esprit que nous attendons, par la foi, l'espérance de la justice. <span class=\"s\">6</span> Car, en Jésus-Christ, ni la circoncision ni l'incirconcision n'a de valeur, mais la <button class=\"mot\" data-g=\"g-pistis-agape\">foi agissant par la charité</button>.",
+      "gloses": [
+        {
+          "id": "g-eleutheria",
+          "lemme": "eleutheria",
+          "html": "<span class=\"gr\">eleutheria</span> dit la liberté d'un homme né libre, par contraste avec l'esclave — le vocabulaire est civique avant d'être religieux. Segond traduit l'aoriste <span class=\"gr\">ēleutherōsen</span> par « nous a libérés », un acte accompli une fois, non un état qu'il faudrait reconquérir chaque jour. Calvin, dans son commentaire sur ce passage, insiste : la liberté chrétienne ne consiste pas à n'avoir plus de loi, mais à ne plus en dépendre pour sa justification devant Dieu."
+        },
+        {
+          "id": "g-zygos",
+          "lemme": "zygos",
+          "html": "<span class=\"gr\">zygos</span> est le joug qu'on pose sur la nuque d'un animal de trait ; Segond garde l'image brute plutôt que de l'adoucir en « contrainte » ou « charge ». Le même mot revient au concile de Jérusalem, quand Pierre demande pourquoi « mettre sur le cou des disciples un joug que ni nos pères ni nous n'avons pu porter » (Actes 15, 10), et chez Matthieu, où Jésus promet un joug qui, lui, est léger (Mt 11, 29-30). Paul rejoue donc un débat déjà tranché, et le tranche à nouveau avec la même image."
+        },
+        {
+          "id": "g-peritome",
+          "lemme": "peritomē",
+          "html": "<span class=\"gr\">peritomē</span>, la circoncision, est le signe donné à Abraham (Genèse 17) comme marque de l'alliance, et Segond ne fait ici que transposer le mot grec sans l'affaiblir. Paul ne dit pas que le rite est mauvais en soi — lui-même l'a pratiqué sur Timothée (Actes 16, 3) — mais qu'exigé comme condition de salut, il change de sens et devient un acte qui dessaisit le Christ de son œuvre. Chrysostome, dans ses homélies sur Galates, relève cette apparente contradiction de Paul et montre que c'est l'intention, non le geste, qui est en cause."
+        },
+        {
+          "id": "g-pistis-agape",
+          "lemme": "pistis energoumenē",
+          "html": "<span class=\"gr\">pistis energoumenē dia agapēs</span> — littéralement « la foi agissant à travers l'amour ». Segond traduit <span class=\"gr\">agapē</span> par « charité », un mot vieilli qui a perdu son sens premier de don gratuit pour se réduire aujourd'hui à l'aumône institutionnelle. Ce verset fut au cœur du débat de la Réforme : Rome y lisait que l'amour « forme » la foi et la rend seule capable de justifier. Calvin répond, dans son commentaire sur Galates, que la foi seule reçoit le Christ et justifie, l'amour n'étant que son fruit nécessaire, la preuve qu'elle n'est pas feinte."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 118 (119), 41.43, 44-45, 47-48",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">41</span> Et que ta <button class=\"mot\" data-g=\"g-hesed\">miséricorde</button> vienne sur moi, Éternel! Que ton salut m'arrive selon ta promesse! <span class=\"s\">43</span> N'ôte pas entièrement de ma bouche la parole de la vérité! Car j'espère en tes jugements. <span class=\"s\">44</span> Je garderai ta loi constamment, à toujours et à perpétuité. <span class=\"s\">45</span> Je marcherai au large, car je recherche tes <button class=\"mot\" data-g=\"g-mitzvot\">ordonnances</button>. <span class=\"s\">47</span> Je fais mes <button class=\"mot\" data-g=\"g-sha-ashuim\">délices</button> de tes commandements, je les aime plus que tout. <span class=\"s\">48</span> Je lève mes mains vers tes commandements que j'aime, et je veux méditer tes statuts.",
+      "gloses": [
+        {
+          "id": "g-hesed",
+          "lemme": "ḥesed",
+          "html": "<span class=\"gr\">ḥesed</span> est l'un des mots les plus riches de l'hébreu biblique : il dit à la fois la bonté qui se penche et la fidélité qui tient un engagement, l'amour d'une alliance plutôt qu'un sentiment passager. Segond le traduit par « miséricorde », ce qui met en avant la compassion mais laisse échapper la dimension de fidélité contractuelle que des traductions modernes rendent par « amour fidèle » ou « bienveillance ». Le mot revient plus de deux cents fois dans l'Ancien Testament, presque toujours lié au vocabulaire de l'alliance."
+        },
+        {
+          "id": "g-mitzvot",
+          "lemme": "miṣwot",
+          "html": "<span class=\"gr\">miṣwot</span>, les commandements, vient d'une racine qui signifie « ordonner » — le mot souligne l'autorité de celui qui parle plus que le contenu de ce qui est demandé. Le psaume 119 est un acrostiche de vingt-deux strophes qui déploie huit synonymes presque interchangeables pour la loi — torah, miṣwot, ʿedot, ḥuqqim, mishpatim et d'autres — comme pour épuiser par la langue elle-même ce qu'un seul mot ne pourrait dire. Segond varie sa traduction (« ordonnances », « commandements », « statuts ») sans toujours distinguer ces nuances, que la tradition rabbinique, elle, a cherché à systématiser."
+        },
+        {
+          "id": "g-sha-ashuim",
+          "lemme": "shaʿashuʿay",
+          "html": "<span class=\"gr\">shaʿashuʿay</span>, « mes délices », vient d'une racine qui évoque le jeu et l'amusement — le même mot sert ailleurs pour décrire un enfant qu'on dandine sur les genoux (Ésaïe 66, 12). Segond traduit justement par « délices » plutôt que par un mot de devoir, car le psalmiste ne dit pas qu'il supporte la loi mais qu'il y prend un plaisir presque enfantin. Augustin, commentant ce psaume, s'étonne qu'on puisse aimer un commandement, et répond que seul l'Esprit change l'obéissance craintive en désir."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 37-41",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">37</span> Pendant qu'il parlait, un pharisien le pria de dîner chez lui. Il entra, et se mit à table. <span class=\"s\">38</span> Le pharisien, voyant qu'il ne se lavait pas avant le repas, s'en étonna. <span class=\"s\">39</span> Mais le Seigneur lui dit: Vous, pharisiens, vous nettoyez le dehors de la coupe et du plat, et à l'intérieur vous êtes pleins de <button class=\"mot\" data-g=\"g-harpage\">rapine</button> et de méchanceté. <span class=\"s\">40</span> Insensés! celui qui a fait le dehors n'a-t-il pas fait aussi le dedans? <span class=\"s\">41</span> Donnez plutôt en <button class=\"mot\" data-g=\"g-eleemosyne\">aumône</button> ce qui est dedans, et voici, toutes choses seront <button class=\"mot\" data-g=\"g-kathara\">pures</button> pour vous.",
+      "gloses": [
+        {
+          "id": "g-harpage",
+          "lemme": "harpagē",
+          "html": "<span class=\"gr\">harpagē</span> vient du verbe <span class=\"gr\">harpazō</span>, arracher, ravir de force — Segond traduit à juste titre par « rapine » plutôt que par le plus faible « cupidité », car le mot grec implique une violence, pas seulement une envie. Chrysostome, commentant ce type de reproche fait aux pharisiens, note que leur piété rituelle couvrait souvent des fortunes mal acquises, et que Jésus vise précisément cette hypocrisie économique, non la seule négligence d'un rite. Le mot apparaît aussi dans la Septante pour décrire le butin pris à la guerre, ce qui donne à l'accusation une violence presque littérale."
+        },
+        {
+          "id": "g-eleemosyne",
+          "lemme": "eleēmosynē",
+          "html": "<span class=\"gr\">eleēmosynē</span>, l'aumône, vient de <span class=\"gr\">eleos</span>, la pitié — étymologiquement, donner l'aumône n'est pas remplir un devoir social mais faire droit à une compassion. Segond garde le mot technique « aumône », déjà fixé dans l'usage chrétien depuis la Septante et les Actes des Apôtres, plutôt que de le diluer en « don » ou « partage ». Jésus demande ainsi aux pharisiens non pas un rite supplémentaire, mais que leur rapine se retourne en son contraire exact."
+        },
+        {
+          "id": "g-kathara",
+          "lemme": "katharos",
+          "html": "<span class=\"gr\">kathara</span>, pures, est le même radical que donnera le français « catharsis » — un mot d'abord rituel, qui désigne l'état requis pour approcher le sacré. Les pharisiens l'employaient au sens des règles de pureté que la Mishna codifiera plus tard ; Jésus ne l'abolit pas mais le déplace, puisque c'est l'aumône, un acte éthique, qui rend pur, et non plus le lavement des mains. Ce renversement annonce ce que Paul dira autrement en Galates : ce n'est pas l'observance qui justifie, c'est ce que le cœur donne réellement."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La crise des Galates",
+      "corps_html": "Vers 50-55, des missionnaires judaïsants ont suivi Paul en Galatie et exigé des croyants non-juifs la circoncision comme condition pour appartenir pleinement au peuple de l'alliance, revenant ainsi sur la décision du concile de Jérusalem (Actes 15). Paul, qui avait fondé ces Églises, écrit dans l'urgence : ce n'est pas un détail rituel qui se négocie, mais la nature même de la justification qui est en jeu."
+    },
+    {
+      "titre": "Un repas chez un pharisien",
+      "corps_html": "Luc situe souvent l'enseignement de Jésus à table (7, 36 ; 14, 1), un lieu où se joue la question de la pureté et de l'hospitalité. Le lavement des mains avant le repas, que les pharisiens pratiquaient par piété et que la Mishna (traité Yadayim) codifiera plus tard, n'est pas hygiène mais rite de séparation du profane. En l'omettant, Jésus ne néglige pas une règle : il la déplace."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qu'on polit et ce qu'on donne",
+    "variantes": [
+      "Tu as pu tenir une promesse, un engagement, une pratique de prière pendant des années par pure fidélité à ce que tu t'étais promis, sans y trouver ni goût ni joie, portant la chose comme on porte une dette qu'on rembourse. Puis, un jour, sans que rien d'extérieur change, le même geste s'est trouvé habité : tu ne l'accomplissais plus pour être quitte, tu le voulais. La loi que tu observais du dehors s'est mise à agir du dedans, et c'est seulement alors que tu as compris ce que veut dire une fidélité qui n'attend plus de récompense.",
+      "Il t'est arrivé de donner ton temps, ton attention ou ce que tu avais, à quelqu'un qui ne le saurait jamais et qui ne pourrait jamais te le rendre ni même t'en remercier, de sorte que rien, au-dehors, ne venait confirmer que ton geste avait eu lieu. Tu aurais pu t'en inquiéter, chercher une preuve, un effet visible. Mais ce qui comptait s'est joué ailleurs, dans ce mouvement intérieur que personne n'a vu et dont pourtant tu sais qu'il t'a changé, toi, avant même de changer quoi que ce soit chez l'autre.",
+      "Tu as pu soigner pendant longtemps ce que les autres voient de toi, tes mots, ta tenue, ta réputation de quelqu'un qui tient debout, tout en sachant qu'à l'intérieur restait un désordre que tu n'avais pas eu le courage de regarder en face. Un jour, une parole, un échec, une fatigue trop grande a fait tomber l'écart, et tu t'es trouvé devant Dieu non pas tel que tu te présentais, mais tel que tu étais, sans qu'il recule devant toi pour autant."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Rien de spectaculaire n'est demandé aujourd'hui, seulement un déplacement : du dehors vers le dedans.",
+    "geste": "Choisis un geste de générosité que personne ne pourra voir ni te créditer — et fais-le avant la fin du jour.",
+    "note": "Ce n'est pas une performance de plus à accomplir pour être en règle ; c'est laisser sortir, une fois, ce que la grâce a déjà mis dedans."
+  },
+  "question": "Qu'est-ce que tu continues de polir au-dehors pour ne pas avoir à regarder ce qu'il y a dedans — et que ferait Dieu de ce dedans-là, si tu le lui donnais plutôt que de le cacher ?",
+  "racines": [
+    {
+      "titre": "Le mot le plus dur de Paul",
+      "corps_html": "Chrysostome note l'extrême sévérité de Paul : ailleurs il tolère par charité des pratiques juives chez des juifs convertis, ici il refuse toute concession. La différence, dit-il, c'est l'intention : circoncire pour se justifier devant Dieu revient à déclarer l'œuvre du Christ insuffisante. Ce n'est donc pas le rite qui est condamné, mais ce qu'on lui fait porter.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Galates"
+    },
+    {
+      "titre": "Foi et charité, l'enjeu de la Réforme",
+      "corps_html": "Sur Galates 5, 6, Calvin s'oppose à la lecture romaine qui faisait de la charité ce qui « forme » la foi et la rend justifiante. Pour lui, la foi seule reçoit le Christ et justifie ; l'amour qui agit n'est pas ce qui rend la foi efficace, mais son fruit nécessaire, la preuve qu'elle est vivante et non pas feinte.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Galates"
+    },
+    {
+      "titre": "Le délice de la loi, l'aumône du dedans",
+      "corps_html": "Augustin s'étonne qu'on puisse aimer une loi, puisqu'on aime d'ordinaire ce qui attire et non ce qui commande. Il répond que l'Esprit change le commandement en désir : ce que la crainte observait du dehors, la charité le veut du dedans, et c'est alors seulement, dit-il, qu'on peut le donner aux autres comme une aumône, et non plus seulement l'observer pour soi.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 118 (119)"
+    }
+  ]
+}
