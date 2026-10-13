@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-14",
+  "date_humaine": "mercredi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ga 5, 18-25 ; Lc 11, 42-46",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 q10 8 20 0 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0 h228\"/><path d=\"M90 130 q-5 -10 3 -16 q-9 -8 1 -16 q-10 -8 2 -16 q-8 -6 0 -14 q6 -6 -2 -12\"/><path d=\"M94 56 q-7 -10 -1 -19 q-2 8 4 9 q4 -11 -2 -26 q8 13 2 26 q5 -4 4 -10 q5 11 -7 20\"/><path d=\"M100 50 q7 -9 1 -17 q2 7 -4 8 q-4 -10 2 -23 q-8 12 -2 23 q-5 -3 -4 -9 q-5 10 7 18\"/><path d=\"M88 40 q3 6 0 10 M104 32 q3 6 0 10 M96 24 q3 6 0 10\"/><path d=\"M270 130 v-46 M256 130 h28\"/><path d=\"M248 84 h44 M252 84 v12 M288 84 v12\"/><path d=\"M244 96 q8 8 16 0 M280 96 q8 8 16 0\"/><path d=\"M246 66 q4 -8 12 -6 q8 -1 9 7 q1 9 -8 12 q-9 3 -14 -4 q-5 -6 1 -9\"/></g><g class=\"trait-rubrique\"><path d=\"M246 92 q2 -6 8 -5 q-4 2 -1 5 M256 89 q1 -5 5 -3 q-2 1 0 4\"/></g></svg>",
+  "titre": "Le fruit sans la loi",
+  "titre_html": "Le fruit <span class=\"it\">sans la loi</span>",
+  "sous_titre": "Ce que l'Esprit fait pousser, la loi ne l'exige pas",
+  "suite_hier": null,
+  "gravure_alt": "Un arbre noueux planté au bord d'un canal d'irrigation, chargé de fruits lourds et de feuillage abondant, pendant qu'au premier plan une main dépose sur une petite balance des brins de menthe et de rue, trop légers pour faire pencher le plateau.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ga 5, 18-25",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">18</span> Si vous êtes conduits par l'Esprit, vous n'êtes point sous la loi. <span class=\"s\">19</span> Or, les œuvres de la <button class=\"mot\" data-g=\"g-sarx\">chair</button> sont manifestes, ce sont l'impudicité, l'impureté, la dissolution, <span class=\"s\">20</span> l'idolâtrie, la magie, les inimitiés, les querelles, les jalousies, les animosités, les disputes, les divisions, les sectes, <span class=\"s\">21</span> l'envie, l'ivrognerie, les excès de table, et les choses semblables. Je vous dis d'avance, comme je l'ai déjà dit, que ceux qui commettent de telles choses n'hériteront point le royaume de Dieu.</p><p><span class=\"s\">22</span> Mais le <button class=\"mot\" data-g=\"g-karpos\">fruit</button> de l'Esprit, c'est l'amour, la joie, la paix, la patience, la bonté, la bénignité, la fidélité, <span class=\"s\">23</span> la douceur, la <button class=\"mot\" data-g=\"g-enkrateia\">tempérance</button>; la loi n'est pas contre ces choses. <span class=\"s\">24</span> Ceux qui sont à Jésus-Christ ont crucifié la chair avec ses passions et ses désirs. <span class=\"s\">25</span> Si nous vivons par l'Esprit, marchons aussi selon l'Esprit.</p>",
+      "gloses": [
+        {
+          "id": "g-sarx",
+          "lemme": "sarx",
+          "html": "<span class=\"gr\">σάρξ</span> (sarx) : Segond traduit « chair », terme juste mais qui laisse croire que Paul vise seulement le corps. La liste qui suit — inimitiés, querelles, jalousies, disputes — montre pourtant que la sarx désigne chez lui l'existence humaine entière repliée sur elle-même, y compris dans ses relations, et non la seule matière corporelle. Chrysostome, dans ses Homélies sur l'épître aux Galates, insiste sur ce point: les péchés les plus graves nommés ici sont d'abord des péchés de communauté, non de chair au sens étroit."
+        },
+        {
+          "id": "g-karpos",
+          "lemme": "karpos",
+          "html": "<span class=\"gr\">καρπός</span> (karpos) : le fruit, au singulier, alors que les œuvres de la chair étaient énumérées au pluriel quelques versets plus haut — contraste que Segond conserve heureusement en français. Le péché multiplie et disperse, tandis que la vie selon l'Esprit produit une seule réalité unifiée, aux formes multiples comme les grains d'un même fruit. Chrysostome relève ce singulier pour dire que l'amour, la joie, la paix ne sont pas des vertus séparées à acquérir une à une, mais les faces d'un seul don."
+        },
+        {
+          "id": "g-enkrateia",
+          "lemme": "enkrateia",
+          "html": "<span class=\"gr\">ἐγκράτεια</span> (enkrateia) : la maîtrise de soi, que Segond rend par « tempérance », mot emprunté au latin temperantia et aux philosophes stoïciens, chez qui cette vertu s'acquérait par un exercice ascétique de la volonté. Paul la place pourtant au bout d'une liste de fruits, non de vertus: elle n'est plus l'effort stoïcien pour dominer ses passions, mais un don qui vient avec les autres, inséparable de la joie et de la paix. Calvin, dans son commentaire sur l'épître aux Galates, note que la loi elle-même ne condamne pas cette maîtrise — preuve qu'elle n'est pas opposée à la Loi, seulement à son usage comme moyen de salut."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 1, 1-2, 3, 4.6",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> <button class=\"mot\" data-g=\"g-ashrei\">Heureux</button> l'homme qui ne marche pas selon le conseil des méchants, Qui ne s'arrête pas sur la voie des pécheurs, Et qui ne s'assied pas en compagnie des moqueurs, <span class=\"s\">2</span> Mais qui trouve son plaisir dans la loi de l'Éternel, Et qui la médite jour et nuit!</p><p><span class=\"s\">3</span> Il est comme un arbre <button class=\"mot\" data-g=\"g-shatul\">planté</button> près d'un <button class=\"mot\" data-g=\"g-peleg\">courant d'eau</button>, Qui donne son fruit en sa saison, Et dont le feuillage ne se flétrit point: Tout ce qu'il fait réussit.</p><p><span class=\"s\">4</span> Il n'en est pas ainsi des méchants: Ils sont comme la paille que le vent dissipe.</p><p><span class=\"s\">6</span> Car l'Éternel connaît la voie des justes, Mais la voie des méchants mène à la ruine.</p>",
+      "gloses": [
+        {
+          "id": "g-ashrei",
+          "lemme": "ashrei",
+          "html": "<span class=\"gr\">אַשְׁרֵי</span> (ashrei) : pluriel construit signifiant littéralement « bonheurs de… », exclamation sans verbe plutôt qu'affirmation — ce que « Heureux » rend bien, sans garder toute la force d'ouverture de ce premier mot du Psautier. Les rabbins ont noté que la Torah comme les Psaumes commencent ainsi par la promesse d'un bonheur, avant toute loi énoncée. Augustin, dans ses Enarrationes in Psalmos, lit ce mot comme la porte par laquelle il faut entrer dans tout le Psautier."
+        },
+        {
+          "id": "g-shatul",
+          "lemme": "shatul",
+          "html": "<span class=\"gr\">שָׁתוּל</span> (shatul) : participe passif, « planté » — et non « qui s'est planté » ou « qui a poussé de lui-même ». Segond traduit fidèlement ce passif, mais on peut le lire vite et manquer ce qu'il dit: l'arbre heureux n'est pas devenu grand par sa propre vigueur, il a été mis là par un autre, près d'une eau qu'il n'a pas choisie. Calvin, dans son commentaire sur les Psaumes, tire de ce seul participe toute une théologie de la grâce: la persévérance du juste tient à cette plantation reçue, non à une vertu qui lui serait propre."
+        },
+        {
+          "id": "g-peleg",
+          "lemme": "peleg mayim",
+          "html": "<span class=\"gr\">פֶּלֶג מַיִם</span> (peleg mayim) : non un cours d'eau naturel (nahar) mais un canal d'irrigation creusé par la main de l'homme, terme technique de l'agriculture israélite. Segond traduit par « courant d'eau », ce qui est correct mais efface cette précision: l'arbre ne pousse pas au hasard près d'une source sauvage, il est planté là où quelqu'un a pris soin de conduire l'eau jusqu'à lui. L'image rejoint ainsi, par un autre mot, celle du participe « planté » du même verset: rien dans le bonheur de cet homme n'est laissé au hasard."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 42-46",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">42</span> Mais malheur à vous, pharisiens! parce que vous payez la <button class=\"mot\" data-g=\"g-dekatoo\">dîme</button> de la menthe, de la rue, et de toutes les herbes, et que vous négligez la <button class=\"mot\" data-g=\"g-krisis\">justice</button> et l'amour de Dieu. C'est là ce qu'il fallait faire, sans négliger les autres choses. <span class=\"s\">43</span> Malheur à vous, pharisiens! parce que vous aimez les premiers sièges dans les synagogues, et les salutations dans les places publiques.</p><p><span class=\"s\">44</span> Malheur à vous! parce que vous êtes comme les sépulcres qui ne paraissent pas, et sur lesquels on marche sans le savoir.</p><p><span class=\"s\">45</span> Un des docteurs de la loi lui dit: Maître, en parlant ainsi, c'est nous que tu outrages. <span class=\"s\">46</span> Et il dit: Malheur aussi à vous, docteurs de la loi! parce que vous <button class=\"mot\" data-g=\"g-phortion\">chargez</button> les hommes de fardeaux difficiles à porter, et que vous ne touchez pas vous-mêmes ces fardeaux.</p>",
+      "gloses": [
+        {
+          "id": "g-dekatoo",
+          "lemme": "apodekatoute",
+          "html": "<span class=\"gr\">ἀποδεκατοῦτε</span> (apodekatoute) : verbe composé avec le préfixe <span class=\"gr\">ἀπό</span>, qui insiste sur l'exactitude du prélèvement — vous dîmez jusqu'au bout, sans rien en garder. Segond traduit simplement « vous payez la dîme », ce qui est juste mais perd cette nuance de scrupule total. La Loi (Lv 27,30; Dt 14,22) ne prescrivait la dîme que pour les grains, le vin et l'huile; en l'étendant aux herbes du jardin comme la menthe et la rue, les pharisiens font preuve d'un zèle que Jésus ne condamne pas en lui-même — « c'est là ce qu'il fallait faire » — mais dont il dénonce la disproportion avec ce qu'ils négligent."
+        },
+        {
+          "id": "g-krisis",
+          "lemme": "krisis",
+          "html": "<span class=\"gr\">κρίσις</span> (krisis) : le jugement, l'acte de rendre droit à quelqu'un dans une cause, plutôt que la vertu intérieure de « justice » que suggère la traduction de Segond. C'est le même mot qui désignera ailleurs le jugement dernier; ce que les pharisiens négligent n'est donc pas un sentiment, mais une pratique concrète du droit envers les faibles — orphelins, veuves, étrangers — que les prophètes nomment en hébreu du mot voisin mishpat (cf. Michée 6,8). La dîme de la menthe peut se payer seul, dans son jardin; la krisis, elle, ne se rend qu'à un autre."
+        },
+        {
+          "id": "g-phortion",
+          "lemme": "phortion",
+          "html": "<span class=\"gr\">φορτίον</span> (phortion), de <span class=\"gr\">φορτίζετε</span> (phortizete, « vous chargez ») : le même mot reparaîtra dans la bouche de Jésus en Matthieu 11,30, lorsqu'il dira que son fardeau (phortion), lui, est léger. Segond traduit fidèlement « charger de fardeaux », mais seul le grec permet de voir que Luc emploie ici le mot même que Jésus reprendra pour s'opposer aux docteurs de la loi: eux imposent sans porter, lui portera ce qu'il demande. Le contraste n'est pas affaire de traduction mais de terme technique, chargé dans les deux cas du poids concret d'un fardeau que l'on porte sur le dos."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre écrite dans l'urgence",
+      "corps_html": "Écrite vers 53-55, l'épître aux Galates répond à une crise concrète: des prédicateurs judaïsants exigent des chrétiens d'origine païenne la circoncision et l'observance de la Loi mosaïque pour être pleinement sauvés. Paul réagit avec une violence rhétorique inhabituelle (Ga 1,6-9), y voyant nier la gratuité de la grâce reçue par la foi seule — ce que Luther relira plus tard comme le cœur même de l'Évangile."
+    },
+    {
+      "titre": "La dernière d'une série de maux",
+      "corps_html": "Ce passage clôt une série de sept malheurs prononcés par Jésus lors d'un repas chez un pharisien (Lc 11,37-54), au cœur du grand récit lucanien de la montée vers Jérusalem. Matthieu rapporte des paroles très proches en 23,1-36: les deux évangélistes puisent sans doute dans une source commune de paroles de Jésus, antérieure à leurs propres rédactions, que les spécialistes nomment la source Q."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu portes sans l'avoir forcé",
+    "variantes": [
+      "Tu as pu, un temps, tenir un compte strict de toi-même: telle pensée à chasser, telle parole à surveiller, telle faiblesse à corriger chaque soir avant de dormir — une dîme intérieure, prélevée jusque sur les plus petites feuilles de ta vie. Et malgré cette exactitude, ou à cause d'elle, tu sentais le fond de toi rester sec, comme si aucune de ces mesures ne touchait la racine. Ce texte ne te demande pas de tenir un compte plus serré encore; il te demande de laisser l'Esprit, et non ta seule vigilance, descendre jusque là où rien ne pousse encore.",
+      "Il y a des jours où tu remarques, sans l'avoir cherché, que tu n'as pas réagi comme avant — une parole blessante reçue sans la colère qui montait autrefois, une attente supportée sans l'amertume habituelle. Tu ne peux pas dire quand cela a changé ni par quel effort précis; cela s'est simplement trouvé là, comme un fruit qu'on découvre mûr sans se souvenir d'avoir veillé l'arbre. C'est peut-être cela que Paul appelle fruit et non œuvre: ce que tu ne peux pas t'attribuer, et qui pourtant est bien toi.",
+      "Tu connais cette forme de maîtrise de toi qui tient par la seule force de la volonté, serrée comme un poing, et qui cède d'un coup le jour où la fatigue ou le chagrin sont trop grands. Il existe une autre tempérance, plus silencieuse, qui ne se sent pas comme un effort mais comme un repos — celle qui vient quand tu cesses de te tenir toi-même et que tu laisses quelque chose d'autre te tenir. Devant Dieu, ce jour-là, tu ne te retiens plus: tu es porté."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec la question de ce que tu portes sans l'avoir forcé — ce qui, en toi, ressemble déjà à de l'amour, de la patience, de la joie, même naissants.",
+    "geste": "Choisis un seul fruit nommé par Paul — la patience, la bonté, la douceur — et demande simplement, sans te fixer d'objectif, où il est déjà en train de pousser en toi, même faiblement.",
+    "note": "Il ne s'agit pas de produire ce fruit par effort ce soir, mais de reconnaître là où l'Esprit l'a déjà fait naître."
+  },
+  "question": "Qu'est-ce que tu portes aujourd'hui qui n'a pas été le fruit de ta volonté, mais celui d'une racine que tu n'as pas plantée toi-même ?",
+  "racines": [
+    {
+      "titre": "Un pluriel qui disperse, un singulier qui rassemble",
+      "corps_html": "Chrysostome remarque que Paul parle des œuvres (erga) de la chair au pluriel, car le péché disperse et multiplie, mais du fruit (karpos) de l'Esprit au singulier, car la vie selon l'Esprit rassemble en une seule réalité ce qu'on croyait des vertus séparées: on ne reçoit pas l'amour d'un côté et la patience de l'autre, mais un seul fruit aux formes multiples, comme les grains d'un même arbre.",
+      "attribution": "Jean Chrysostome, IVe siècle, Homélies sur l'épître aux Galates"
+    },
+    {
+      "titre": "Un passif qui change tout",
+      "corps_html": "Calvin insiste sur le verbe passif « planté »: l'homme heureux du Psaume 1 ne s'est pas enraciné lui-même près de l'eau, Dieu l'y a mis. Il en tire que la persévérance du juste, opposée à la paille dispersée par le vent au verset 4, ne tient pas à une vertu propre mais à cette plantation reçue — ce qui renvoie déjà toute la piété du Psautier à la grâce plutôt qu'au mérite.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, 1557"
+    },
+    {
+      "titre": "Une dîme plus stricte que la Loi",
+      "corps_html": "La Loi écrite ne prescrit la dîme que pour les grains, le vin nouveau et l'huile (Dt 14,22-23); c'est la tradition pharisienne, consignée plus tard dans le traité Maaserot de la Mishna, qui l'étend aux plantes potagères comme la menthe et la rue, par scrupule de ne rien laisser échapper à Dieu. Jésus ne reproche donc pas ce zèle en soi, mais le fait qu'il ait pris toute la place laissée vide par l'abandon du jugement et de l'amour.",
+      "attribution": "Note historique — traité Maaserot de la Mishna, IIe siècle"
+    }
+  ]
+}
