@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-15",
+  "date_humaine": "jeudi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 1, 1-10 ; Lc 11, 47-54",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M150 50 v78\"/><path d=\"M202 50 v78\"/><path d=\"M150 50 q26 -14 52 0\"/><path d=\"M160 128 v-50 q16 -10 32 0 v50\"/><path d=\"M60 118 h26\"/><path d=\"M63 118 v-9 h20 v9\"/><path d=\"M250 122 h22\"/><path d=\"M253 122 v-8 h16 v8\"/></g><g class=\"trait-rubrique\"><path d=\"M176 26 v34\"/><path d=\"M176 60 q-10 4 -10 13 q10 -3 10 -9 q0 6 10 9 q0 -9 -10 -13\"/><path d=\"M168 30 h16\"/></g><g class=\"trait-liturgie\"><path d=\"M290 24 q10 8 2 20\"/><path d=\"M300 20 q6 12 -2 26\"/><path d=\"M308 18 q4 16 -6 30\"/></g></svg>",
+  "titre": "La clef",
+  "titre_html": "La <span class=\"it\">clef</span>",
+  "sous_titre": "Ce que Dieu révèle de toute éternité, les docteurs de la loi peuvent le verrouiller.",
+  "suite_hier": "Hier déjà, le Christ accumulait les « malheurs » contre pharisiens et docteurs de la loi ; aujourd'hui la liste s'achève, et elle s'aggrave jusqu'à l'accusation la plus grave : avoir pris la clef et ne pas être entré.",
+  "gravure_alt": "Une grande clef de fer suspendue au-dessus d'une porte entrouverte, dans le style des bois gravés anciens ; à l'arrière-plan, de petites formes de tombeaux à peine esquissées, et au loin un pan de ciel traversé d'une lumière qui ne vient pas de la porte elle-même.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 1, 1-10",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Paul, apôtre de Jésus-Christ par la volonté de Dieu, aux saints et fidèles en Jésus-Christ, qui sont à Éphèse. <span class=\"s\">2</span> Que la grâce et la paix vous soient données de la part de Dieu notre Père et du Seigneur Jésus-Christ! <span class=\"s\">3</span> <button class=\"mot\" data-g=\"g-eulogia\">Béni</button> soit Dieu, le Père de notre Seigneur Jésus-Christ, qui nous a bénis de toutes sortes de bénédictions spirituelles dans les lieux célestes en Christ! <span class=\"s\">4</span> En lui Dieu nous a élus avant la fondation du monde, pour que nous soyons saints et irrépréhensibles devant lui, <span class=\"s\">5</span> nous ayant <button class=\"mot\" data-g=\"g-proorisas\">prédestinés</button> dans son amour à être ses enfants d'adoption par Jésus-Christ, selon le bon plaisir de sa volonté, <span class=\"s\">6</span> afin que nous célébrions la gloire de sa grâce qu'il nous a accordée en son bien-aimé. <span class=\"s\">7</span> En lui nous avons la rédemption par son sang, la rémission des péchés, selon la richesse de sa grâce, <span class=\"s\">8</span> que Dieu a répandue abondamment sur nous par toute sorte de sagesse et d'intelligence, <span class=\"s\">9</span> nous faisant connaître le <button class=\"mot\" data-g=\"g-mysterion\">mystère</button> de sa volonté, selon le bienveillant dessein qu'il avait formé en lui-même, <span class=\"s\">10</span> pour l'<button class=\"mot\" data-g=\"g-oikonomia\">exécuter</button> lorsque les temps seraient accomplis, afin de réunir toutes choses en Christ, celles qui sont dans les cieux et celles qui sont sur la terre.",
+      "gloses": [
+        {
+          "id": "g-eulogia",
+          "lemme": "eulogia",
+          "html": "Le verbe grec <span class=\"gr\">eulogeō</span> et le nom <span class=\"gr\">eulogia</span> reviennent coup sur coup au verset 3 : « Béni soit Dieu... qui nous a bénis ». Segond traduit platement par « bénir », ce qui masque le jeu que garde le grec — Dieu bénit comme il est béni, dans un même mouvement de bonne parole (<span class=\"gr\">eu</span>, bien, <span class=\"gr\">logos</span>, parole). Jean Chrysostome, dans son homélie sur Éphésiens, souligne que l'homme ne fait ici que redire à Dieu, en louange, ce qu'il a d'abord reçu en bénédiction. Calvin ajoute que cette bénédiction n'attend aucune réciprocité méritée : elle est pure largesse, antérieure à toute réponse humaine."
+        },
+        {
+          "id": "g-proorisas",
+          "lemme": "proorizō",
+          "html": "Le verbe <span class=\"gr\">proorizō</span>, composé de <span class=\"gr\">pro</span> (avant) et <span class=\"gr\">horizō</span> (fixer une limite, d'où notre « horizon »), dit un dessein tracé par avance. Segond choisit « prédestinés », mot qui a pris en français un poids dogmatique que le grec n'impose pas nécessairement ici : il désigne moins un décret abstrait qu'un amour déjà orienté. Calvin, commentant ce passage, y voit la preuve que l'adoption des croyants ne tient à aucun mérite antérieur, puisqu'elle est fixée « avant la fondation du monde ». Les Pères grecs préfèrent lire le mot à la lumière de ce qui le précède immédiatement : « dans son amour », qui en est la vraie mesure."
+        },
+        {
+          "id": "g-mysterion",
+          "lemme": "mystērion",
+          "html": "Le mot <span class=\"gr\">mystērion</span> ne désigne pas, comme en français courant, une énigme insoluble, mais un dessein divin longtemps caché et désormais dévoilé — c'est le vocabulaire des cultes à mystères que Paul retourne au profit de l'Évangile. Segond garde « mystère », fidèle au terme, mais le lecteur moderne risque d'y entendre un mystère qui demeure mystère, alors que le texte dit l'inverse : Dieu « fait connaître ». Chrysostome y lit l'annonce que le salut des nations, tenu secret sous l'ancienne alliance, est désormais publié à tous. Le même mot reparaîtra au chapitre 3 pour désigner ce dessein unique de réunir juifs et païens en un seul corps."
+        },
+        {
+          "id": "g-oikonomia",
+          "lemme": "oikonomia",
+          "html": "Derrière « pour l'exécuter » se cache le mot <span class=\"gr\">oikonomia</span>, littéralement la gestion d'une maison (<span class=\"gr\">oikos</span>, maison, et <span class=\"gr\">nomos</span>, règle) — le mot donnera plus tard notre « économie ». Segond le dissout dans un simple verbe d'action, ce qui est défendable mais efface l'image : Dieu administre l'histoire comme un maître de maison mène sa maison, avec patience et à son heure choisie. Les Pères grecs, Chrysostome en tête, affectionnent ce terme pour dire l'incarnation elle-même comme « l'économie » du salut, le plan concret par lequel l'invisible se fait visible. Le « lorsque les temps seraient accomplis » indique que cette gestion suit un calendrier que Dieu seul connaît."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 97 (98), 1, 2-3ab, 3cd-4, 5-6",
+      "traduction": "Louis Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Chantez à l'Éternel un cantique <button class=\"mot\" data-g=\"g-chadash\">nouveau</button>! Car il a fait des prodiges. Sa droite et son bras saint lui ont assuré la victoire. <span class=\"s\">2</span> L'Éternel a manifesté son <button class=\"mot\" data-g=\"g-yeshuah\">salut</button>, il a révélé sa justice aux yeux des nations. <span class=\"s\">3</span> Il s'est souvenu de sa bonté et de sa fidélité envers la maison d'Israël, toutes les extrémités de la terre ont vu le salut de notre Dieu. <span class=\"s\">4</span> Poussez vers l'Éternel des cris de joie, vous tous, habitants de la terre! Entonnez des cantiques, et faites retentir vos instruments! <span class=\"s\">5</span> Chantez à l'Éternel avec la harpe, avec la harpe et de la voix mélodieuse; <span class=\"s\">6</span> avec les trompettes et au son du cor, poussez des cris de joie devant l'Éternel, le roi!",
+      "gloses": [
+        {
+          "id": "g-chadash",
+          "lemme": "chadash",
+          "html": "L'hébreu <span class=\"gr\">shir chadash</span>, « chant nouveau », ouvre plusieurs psaumes de louange après une délivrance inouïe — il ne s'agit pas d'une nouveauté à la mode, mais d'un acte de Dieu si inédit qu'aucun chant ancien ne suffit à le dire. Segond traduit fidèlement « nouveau », mais le lecteur français risque d'y entendre une simple fraîcheur esthétique. Les rabbins ont associé ce psaume au chant des temps messianiques, un chant qu'aucune génération n'a encore pu achever. Augustin, commentant les psaumes, voit dans ce « nouveau » l'homme lui-même renouvelé par la grâce, seul capable de chanter un chant vraiment nouveau."
+        },
+        {
+          "id": "g-yeshuah",
+          "lemme": "yeshuah",
+          "html": "Le mot <span class=\"gr\">yeshuah</span>, « salut », partage sa racine avec le nom même de Jésus (<span class=\"gr\">Yehoshua</span>, « le Seigneur sauve »), ce que le texte hébreu ne peut ignorer et que la tradition chrétienne a immédiatement entendu. Segond traduit sobrement « salut », sans pouvoir faire résonner en français ce jeu de racine. Le psaume précise que ce salut a été « révélé aux yeux des nations » — non réservé à Israël seul, mais rendu visible à tous, ce que les Pères liront comme une prophétie de la mission universelle de l'Église. Calvin souligne que ce salut manifesté reste d'abord l'œuvre du bras de Dieu, non celle d'Israël lui-même."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 11, 47-54",
+      "traduction": "Louis Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">47</span> Malheur à vous! parce que vous bâtissez les tombeaux des prophètes que vos pères ont tués. <span class=\"s\">48</span> Vous rendez donc témoignage aux œuvres de vos pères, et vous les approuvez, puisque eux les ont tués, et que vous bâtissez leurs tombeaux. <span class=\"s\">49</span> C'est pourquoi la <button class=\"mot\" data-g=\"g-sophia\">sagesse</button> de Dieu a dit: Je leur enverrai des prophètes et des apôtres; ils tueront les uns et persécuteront les autres, <span class=\"s\">50</span> afin que le sang de tous les prophètes, versé depuis la création du monde, soit redemandé à cette génération, <span class=\"s\">51</span> depuis le sang d'Abel jusqu'au sang de Zacharie, tué entre l'autel et le temple; oui, je vous le dis, il sera redemandé à cette génération. <span class=\"s\">52</span> Malheur à vous, <button class=\"mot\" data-g=\"g-nomikos\">docteurs de la loi</button>! parce que vous avez pris la <button class=\"mot\" data-g=\"g-kleis\">clef</button> de la science; vous n'êtes pas entrés vous-mêmes, et vous avez empêché d'entrer ceux qui le voulaient. <span class=\"s\">53</span> Quand il fut sorti de là, les scribes et les pharisiens commencèrent à le presser violemment, et à le tourmenter sur beaucoup de choses, <span class=\"s\">54</span> lui tendant des pièges, pour surprendre quelque parole sortie de sa bouche.",
+      "gloses": [
+        {
+          "id": "g-sophia",
+          "lemme": "sophia",
+          "html": "« La sagesse de Dieu a dit » : Luc fait parler ici une figure, <span class=\"gr\">sophia tou theou</span>, que la tradition juive de sagesse (Proverbes 8, Siracide 24) présente presque comme une personne, envoyée et rejetée par les hommes. Segond traduit littéralement, mais ne peut restituer à lui seul tout cet arrière-plan : cette Sagesse qui envoie des prophètes et se heurte au refus est, pour les Pères, une préfiguration du Christ lui-même, Sagesse incarnée de Dieu selon 1 Corinthiens 1, 24. Chrysostome y lit l'annonce que le rejet des prophètes d'hier et celui du Christ à venir relèvent d'un seul et même refus, obstiné à travers les générations."
+        },
+        {
+          "id": "g-nomikos",
+          "lemme": "nomikos",
+          "html": "Le grec <span class=\"gr\">nomikos</span> désigne littéralement l'homme de la <span class=\"gr\">nomos</span>, la Loi — celui dont le métier est d'en connaître le détail, de l'enseigner et de trancher les cas difficiles. Segond traduit par « docteurs de la loi », expression devenue si courante qu'elle a perdu son tranchant : il s'agit moins d'un titre honorifique que d'une fonction de gardien et d'interprète autorisé du texte sacré. C'est précisément cette fonction de gardien que Jésus retourne contre eux au verset suivant, avec l'image de la clef."
+        },
+        {
+          "id": "g-kleis",
+          "lemme": "kleis",
+          "html": "<span class=\"gr\">kleis</span>, la clef, est l'image la plus concrète du passage : on ne reproche pas aux docteurs de la loi d'ignorer l'Écriture, mais d'en détenir l'accès et de s'en servir pour fermer plutôt qu'ouvrir. Segond traduit littéralement « clef de la science », là où Matthieu 23, 13 parle plutôt du « royaume des cieux » qu'on verrouille aux autres. Les Pères grecs lisent ici un avertissement valable pour tout exégète : connaître l'Écriture ne sauve personne si cette connaissance sert à barrer la porte plutôt qu'à l'ouvrir. L'image prépare, en creux, celle des clefs confiées à Pierre en Matthieu 16, 19, données cette fois pour ouvrir."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Éphèse, ville des puissances occultes",
+      "corps_html": "Éphèse abritait l'immense temple d'Artémis, haut lieu de la magie et des cultes à mystères dans l'Empire romain — les Actes (19, 19) racontent des convertis brûlant publiquement leurs livres de sortilèges. Paul, prisonnier au moment où il écrit (on appelle cette lettre une « épître de la captivité »), oppose à ces puissances occultes une autre puissance, bénie « dans les lieux célestes », qui n'a besoin d'aucun rite pour agir, puisqu'elle a déjà tout décidé « avant la fondation du monde »."
+    },
+    {
+      "titre": "Un oracle prophétique, pas une dispute d'école",
+      "corps_html": "Les « malheurs » prononcés ici reprennent la forme des oracles prophétiques (cf. Amos 5, Isaïe 5), un genre que les auditeurs de Jésus reconnaissaient aussitôt comme une parole de jugement venant de Dieu, et non comme une simple querelle religieuse. La mention d'Abel « jusqu'au » sang de Zacharie n'est pas un hasard : dans l'ordre hébreu des livres bibliques, Abel ouvre la Genèse et Zacharie, fils de Barachie, meurt dans le dernier livre, les Chroniques (2 Ch 24, 20-22) — c'est donc toute l'Écriture, du premier au dernier meurtre, que Jésus déclare tenue pour responsable par cette génération qui l'écoute."
+    }
+  ],
+  "analogie": {
+    "titre": "La porte que tu détiens",
+    "variantes": [
+      "Il y a des jours où tu cherches dans ton passé la raison pour laquelle Dieu te voudrait : un mérite, une qualité, un moment où tu l'aurais bien servi. Tu ne trouves rien de solide, et cette absence de preuve te pèse comme une faute. Mais le texte d'aujourd'hui retourne la question : l'amour qui te porte ne date pas de ce que tu as fait, il te précède de toute éternité, « avant la fondation du monde » — et c'est devant ce choix qui ne t'attendait pas que tu es invité à te tenir, sans autre titre que d'avoir été aimé en premier.",
+      "Tu as peut-être cette expérience : plus tu avances dans la foi, plus tu vois clair sur ce qui est juste, et cette clarté, sans que tu le veuilles vraiment, se change en jugement sur ceux qui n'y sont pas encore entrés. Tu détiens quelque chose — une clef, une compréhension — et au lieu qu'elle ouvre un passage, elle devient la mesure à laquelle tu juges qui mérite d'entrer. Le Christ ne s'adresse pas ici à des ignorants mais à des savants : il leur demande ce que fait leur science, si elle ferme plus de portes qu'elle n'en ouvre, et c'est cette même question qui t'attend, devant lui, à l'heure où tu te crois le plus sûr de ta clef.",
+      "Il t'est arrivé de prier longtemps pour quelque chose sans qu'aucun signe ne vienne, et de croire, à force de silence, que rien n'était en train de se passer. Puis un jour, souvent sans lien apparent avec ta prière, quelque chose s'accomplit, et tu comprends, en regardant en arrière, que cela se préparait depuis longtemps, à l'insu de ton impatience. Le mystère dont parle Paul est de cet ordre : un dessein formé de toute éternité, tenu caché, puis dévoilé au moment choisi par Dieu seul — et c'est devant ce Dieu dont le temps n'est pas le tien que le texte te place aujourd'hui."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reprends lentement le verset 3 : « Béni soit Dieu... qui nous a bénis ». Laisse-le se retourner vers toi avant de l'adresser plus loin.",
+    "geste": "Nomme, à voix basse, trois choses reçues sans les avoir méritées — et laisse ce compte devenir prière de bénédiction plutôt qu'inventaire.",
+    "note": "Il ne s'agit pas de mériter la clef, mais de la laisser ouvrir d'abord en toi ce qu'elle doit ouvrir pour d'autres."
+  },
+  "question": "Qu'as-tu reçu de Dieu que tu n'as jamais pensé à utiliser pour ouvrir une porte à quelqu'un d'autre ?",
+  "racines": [
+    {
+      "titre": "Avant la fondation du monde",
+      "corps_html": "Calvin, commentant ce verset, insiste sur le fait que l'élection ne répond à aucune qualité prévue chez l'élu : elle est fixée « avant la fondation du monde », donc avant toute œuvre, bonne ou mauvaise, de la créature. Il y voit le fondement même de toute assurance chrétienne — si le salut dépendait de nous, il serait aussi fragile que nous. Augustin, un siècle plus tôt, avait déjà lu ce texte comme preuve que la grâce précède toujours le mérite.",
+      "attribution": "Calvin, Commentaire sur l'épître aux Éphésiens ; Augustin, De dono perseverantiae."
+    },
+    {
+      "titre": "Une sagesse qui envoie et qui est rejetée",
+      "corps_html": "Jean Chrysostome, dans ses homélies, rapproche ce verset de la figure de la Sagesse du livre des Proverbes, qui crie dans les rues sans être écoutée. Il y voit la preuve que le refus des prophètes n'est pas un accident de l'histoire d'Israël, mais une constante que le Christ lui-même viendra subir à son tour, en plénitude.",
+      "attribution": "Jean Chrysostome, Homélies."
+    },
+    {
+      "titre": "La clef qui ferme ou qui ouvre",
+      "corps_html": "Grégoire le Grand, dans la Règle pastorale, reprend cette image pour avertir les pasteurs : connaître l'Écriture sans la faire servir au salut des autres revient à posséder une clef qu'on ne tourne jamais. Il oppose ce verset à Matthieu 16, 19, où les clefs sont confiées à Pierre non pour verrouiller mais pour ouvrir le royaume aux croyants.",
+      "attribution": "Grégoire le Grand, Règle pastorale."
+    }
+  ]
+}
