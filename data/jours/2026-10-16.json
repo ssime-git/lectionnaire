@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-16",
+  "date_humaine": "vendredi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 1, 11-14 ; Lc 12, 1-7",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M40 100 q130 -14 260 0\"/><path d=\"M40 128 q130 14 260 0\"/><path d=\"M40 100 q-20 0 -20 14 q0 14 20 14\"/><path d=\"M300 100 q20 0 20 14 q0 14 -20 14\"/><path d=\"M110 106 q6 8 0 16\"/><path d=\"M230 106 q-6 8 0 16\"/><path d=\"M135 42 q0 -14 14 -14 q2 -10 16 -8 q6 -10 20 -2 q14 -2 14 10 q10 0 8 10 q-2 6 -10 6 h-54 q-10 0 -8 -2 z\"/><path d=\"M172 42 v10\"/><path d=\"M163 52 q9 -5 18 0 q2 5 -2 8 h-14 q-4 -3 -2 -8 z\"/><path d=\"M165 52 v-9\"/><path d=\"M171 52 v-11\"/><path d=\"M177 52 v-9\"/><path d=\"M163 55 q-5 2 -4 6\"/></g><g class=\"trait-rubrique\"><path d=\"M158 112 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 z\"/><path d=\"M166 124 q4 6 8 0\"/><path d=\"M164 112 h16 M172 104 v16\"/></g><g class=\"trait-liturgie\"><path d=\"M30 25 q5 -7 10 0 q5 -7 10 0\"/><path d=\"M70 18 q5 -7 10 0 q5 -7 10 0\"/><path d=\"M250 20 q5 -7 10 0 q5 -7 10 0\"/><path d=\"M290 15 q5 -7 10 0 q5 -7 10 0\"/></g></svg>",
+  "titre": "Le gage promis",
+  "titre_html": "Le gage <span class=\"it\">promis</span>",
+  "sous_titre": "Ce que Dieu scelle, il ne l'oublie pas.",
+  "suite_hier": null,
+  "gravure_alt": "Un sceau de cire pressé sur un parchemin déroulé, et au-dessus, une volée de passereaux comptés un à un par une main qui sort d'une nuée.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Première lecture",
+      "reference": "Ep 1, 11-14",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">11</span> en lui aussi nous sommes devenus héritiers, ayant été <button class=\"mot\" data-g=\"g-predestines\">prédestinés</button> suivant la résolution de celui qui opère toutes choses d'après le conseil de sa volonté, <span class=\"s\">12</span> afin que nous servions à la louange de sa gloire, nous qui d'avance avons espéré en Christ. <span class=\"s\">13</span> Et vous aussi, après avoir entendu la parole de la vérité, l'Évangile de votre salut, et après avoir cru en lui, vous avez été <button class=\"mot\" data-g=\"g-scelles\">scellés</button> du Saint-Esprit qui avait été promis, <span class=\"s\">14</span> lequel est un <button class=\"mot\" data-g=\"g-gage\">gage</button> de notre héritage, pour la rédemption dont nous serons possesseurs, à la louange de sa gloire.",
+      "gloses": [
+        {
+          "id": "g-predestines",
+          "lemme": "prédestinés",
+          "html": "Le verbe grec est <span class=\"gr\">proorizō</span>, littéralement « fixer d'avance une limite » (horos), comme on trace une frontière avant que le terrain ne soit occupé. Segond traduit par « prédestinés », qui a l'avantage de rendre l'antériorité du décret mais charge le mot du poids doctrinal qu'il a pris au fil des controverses sur la grâce. Calvin s'appuie précisément sur ce verset pour défendre l'élection comme acte libre et antérieur de Dieu, tandis que Chrysostome insiste davantage sur l'appel qui en découle que sur le décret lui-même. Les deux lectures s'accordent au moins sur un point : rien, dans la foi reçue, ne vient de l'homme en premier."
+        },
+        {
+          "id": "g-scelles",
+          "lemme": "scellés",
+          "html": "Segond traduit <span class=\"gr\">esphragisthēte</span> par « scellés », du verbe <span class=\"gr\">sphragizō</span>, qui désigne l'empreinte d'un sceau de cire ou d'argile apposée sur un document ou un lot de marchandise pour en garantir l'authenticité et le propriétaire. L'image est juridique et commerciale avant d'être spirituelle : un bien scellé ne peut plus être substitué ou contesté. Chrysostome compare ce scellement à la marque qu'un roi fait porter à ses soldats, signe visible d'une appartenance qui, elle, reste invisible. Le choix de Segond conserve heureusement cette image concrète, que des traductions plus abstraites auraient pu effacer."
+        },
+        {
+          "id": "g-gage",
+          "lemme": "gage",
+          "html": "Le mot grec <span class=\"gr\">arrabōn</span> est un emprunt au vocabulaire commercial sémitique, désignant l'acompte versé pour garantir le paiement intégral à venir — le grec moderne en a gardé un dérivé pour désigner l'anneau de fiançailles. Segond choisit « gage », plus neutre que « arrhes », qui aurait gardé la saveur commerciale du terme. Calvin insiste sur ce point dans son commentaire : l'Esprit n'est pas un simple indice extérieur, mais déjà une part réelle de l'héritage promis, reçue avant son achèvement. Le mot porte ainsi toute la tension du texte entre ce qui est déjà donné et ce qui reste encore attendu."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 32 (33), 1-2, 4-5, 12-13",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Justes, réjouissez-vous en l'Éternel! Vous qui êtes droits, louez-le! <span class=\"s\">2</span> Célébrez l'Éternel avec la harpe, Célébrez-le sur le luth à dix cordes. <span class=\"s\">4</span> Car la parole de l'Éternel est droite, Et toutes ses œuvres s'accomplissent avec <button class=\"mot\" data-g=\"g-fidelite\">fidélité</button>; <span class=\"s\">5</span> Il aime la justice et la droiture; La bonté de l'Éternel remplit la terre. <span class=\"s\">12</span> Heureuse la nation dont l'Éternel est le Dieu! Heureux le peuple qu'il choisit pour son <button class=\"mot\" data-g=\"g-heritage\">héritage</button>! <span class=\"s\">13</span> L'Éternel regarde du haut des cieux, Il voit tous les fils de l'homme;",
+      "gloses": [
+        {
+          "id": "g-fidelite",
+          "lemme": "fidélité",
+          "html": "L'hébreu <span class=\"gr\">emounah</span> vient de la racine <span class=\"gr\">aman</span>, « être ferme, tenir solidement » — la même racine que le mot « amen », par lequel on affirme la fermeté de ce qu'on vient d'entendre. Segond traduit par « fidélité », ce qui est juste, mais on pourrait tout autant rendre « constance » ou « solidité », insistant moins sur la relation que sur l'inébranlable stabilité de l'œuvre divine. Augustin, commentant ce psaume, relie cette fermeté de la parole créatrice à l'ordre visible du monde : les œuvres de Dieu « s'accomplissent avec fidélité » parce que la parole qui les a prononcées ne varie pas."
+        },
+        {
+          "id": "g-heritage",
+          "lemme": "héritage",
+          "html": "L'hébreu <span class=\"gr\">nachalah</span> désigne la part de terre attribuée à chaque tribu lors du partage de Canaan, un héritage légal et territorial avant d'être une image spirituelle. Segond traduit fidèlement par « héritage », gardant le lien avec tout le vocabulaire juridique de la possession du sol dans le livre de Josué. Ce même mot éclaire en retour l'« héritage » dont parle Paul en Éphésiens 1, 14 : le peuple que Dieu s'est choisi pour sa possession particulière devient, dans la lecture chrétienne, la figure de tous ceux que l'Esprit scelle désormais pour une possession qui n'est plus un territoire mais une promesse de résurrection."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Lc 12, 1-7",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Sur ces entrefaites, la foule s'étant assemblée par milliers, en sorte qu'on se foulait les uns les autres, Jésus se mit à dire à ses disciples: Gardez-vous avant tout du levain des pharisiens, qui est l'<button class=\"mot\" data-g=\"g-hypocrisie\">hypocrisie</button>. <span class=\"s\">2</span> Il n'y a rien de caché qui ne doive être découvert, rien de secret qui ne doive être connu. <span class=\"s\">3</span> C'est pourquoi tout ce que vous aurez dit dans les ténèbres sera entendu dans la lumière, et ce que vous aurez dit à l'oreille dans les chambres sera proclamé sur les toits. <span class=\"s\">4</span> Je vous dis, à vous qui êtes mes amis: Ne craignez pas ceux qui tuent le corps et qui, après cela, ne peuvent rien faire de plus. <span class=\"s\">5</span> Je vous montrerai qui vous devez craindre. Craignez celui qui, après avoir tué, a le pouvoir de jeter dans la <button class=\"mot\" data-g=\"g-gehenne\">géhenne</button>; oui, je vous le dis, c'est celui-là que vous devez craindre. <span class=\"s\">6</span> Ne vend-on pas cinq <button class=\"mot\" data-g=\"g-passereaux\">passereaux</button> pour deux sous? Cependant, aucun d'eux n'est oublié devant Dieu. <span class=\"s\">7</span> Bien plus, les cheveux mêmes de votre tête, tous, sont comptés. Ne craignez donc point: vous valez plus que beaucoup de passereaux.",
+      "gloses": [
+        {
+          "id": "g-hypocrisie",
+          "lemme": "hypocrisie",
+          "html": "Le grec <span class=\"gr\">hupokrisis</span> appartient d'abord au vocabulaire du théâtre : il désigne le jeu de l'acteur qui parle derrière un masque, en empruntant une voix et un rôle qui ne sont pas les siens. Segond garde le mot translitéré « hypocrisie », ce qui est fidèle mais fait perdre au lecteur français l'image concrète de la scène et du masque que percevait immédiatement un auditeur grec. Chrysostome revient souvent sur cette étymologie théâtrale dans ses homélies, pour souligner que l'hypocrite, comme l'acteur, ne peut tenir son rôle que tant que le rideau ne tombe pas — et le texte annonce précisément que le rideau tombera."
+        },
+        {
+          "id": "g-gehenne",
+          "lemme": "géhenne",
+          "html": "« Géhenne » transcrit l'hébreu <span class=\"gr\">Gê-Hinnom</span>, la vallée de Hinnom au sud de Jérusalem, lieu historique où l'on avait sacrifié des enfants à Molek avant que le lieu ne devienne, selon certaines traditions, le dépotoir où brûlaient les ordures de la ville. Segond choisit de conserver ce nom propre plutôt que de le traduire par « enfer », ce qui respecte son ancrage géographique et historique réel plutôt que d'en faire d'emblée une notion abstraite. Le texte garde ainsi la trace d'un lieu que les auditeurs de Jésus pouvaient situer précisément, avant qu'il ne devienne l'image du jugement dernier."
+        },
+        {
+          "id": "g-passereaux",
+          "lemme": "passereaux",
+          "html": "Le grec <span class=\"gr\">strouthia</span> désigne ces petits oiseaux, moineaux ou pinsons, vendus au marché comme nourriture bon marché pour les plus pauvres. Segond traduit simplement « passereaux », ce qui est exact, mais ne rend pas le détail frappant du texte grec : cinq pour deux sous, soit un prix de gros encore plus bas que les deux pour un sou de la version parallèle en Matthieu 10, 29 — l'ajout d'un cinquième oiseau, presque invendable seul, presque donné. Cyrille d'Alexandrie s'arrête sur ce rabais pour montrer que la providence de Dieu descend au-dessous même du seuil de ce que les hommes jugent avoir une valeur."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une seule phrase, un seul souffle",
+      "corps_html": "Dans le texte grec, les versets 3 à 14 ne forment qu'une seule phrase, sans ponctuation forte, construite sur le modèle de la berakah juive, la bénédiction liturgique récitée à la synagogue. Les plus anciens manuscrits, P46 et le Codex Vaticanus, omettent même la mention « à Éphèse » au verset 1 : beaucoup d'exégètes y voient une lettre circulaire, destinée à circuler entre plusieurs Églises d'Asie Mineure, plutôt qu'un courrier strictement local."
+    },
+    {
+      "titre": "D'une foule à l'oreille des disciples",
+      "corps_html": "Luc place cette parole juste après les violentes controverses du chapitre 11, où Jésus a dénoncé devant scribes et pharisiens leur manière de fermer aux autres l'accès au savoir. La foule qui se presse à présent par milliers n'empêche pas Jésus de se tourner vers ses disciples pour leur parler en particulier : le levain des pharisiens, cette hypocrisie qui travaille en profondeur sans se voir, devient ici un avertissement intime adressé à ceux qui vont, eux aussi, enseigner publiquement."
+    }
+  ],
+  "analogie": {
+    "titre": "Compté, scellé",
+    "variantes": [
+      "Il t'est arrivé de prier dans une assemblée nombreuse, noyé dans les voix des autres, sans qu'aucun mot ne semble s'adresser à toi en particulier — tu te dis que ta prière se perd dans la masse, comme une goutte dans une foule qui se bouscule. Et pourtant, à un moment que tu ne choisis pas, une phrase entendue cent fois te traverse soudain comme si elle n'avait été écrite que pour toi, ce jour-là, dans cette foule précise. Ce n'est pas que Dieu t'ait enfin remarqué : c'est que tu découvres, l'espace d'un instant, ce qui était vrai depuis toujours — qu'il te compte un par un, même quand tu te crois comptabilisé en masse.",
+      "Tu portes peut-être en toi une pensée que tu n'as confiée à personne, une faiblesse que tu caches même à ceux qui te connaissent le mieux, persuadé que si elle venait au jour, elle te disqualifierait. Puis un jour, devant Dieu seul, tu te risques à la nommer, et au lieu du jugement que tu redoutais, tu reçois une présence qui la connaissait déjà et qui ne s'est pas détournée. Ce que tu croyais devoir cacher pour rester aimable était déjà connu, et c'est cette connaissance-là, non ton silence, qui te garde.",
+      "Tu as peut-être reçu, un jour, un signe qui ne réglait rien encore — une parole, une promesse, un geste — mais qui t'a permis de tenir dans une attente qui, elle, s'est prolongée bien plus longtemps que tu ne l'aurais voulu. Ce signe n'était pas la chose promise elle-même, et il ne te dispensait pas de l'attente ; mais il te rendait cette attente supportable, parce qu'il portait déjà en lui quelque chose de ce qui devait venir. Tu ne vivais plus dans le vide, mais dans l'intervalle d'une promesse déjà commencée."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, reste un instant avec cette certitude que tu n'as pas à produire toi-même : tu es déjà compté, déjà scellé.",
+    "geste": "Nomme devant Dieu, en silence, une chose que tu crois trop petite ou trop cachée pour mériter son attention — et laisse-la simplement entendue.",
+    "note": "Il ne s'agit pas d'obtenir un signe nouveau, mais de reconnaître celui qui a déjà été donné."
+  },
+  "question": "Qu'est-ce qui, en toi, continue de croire qu'il faut se faire remarquer pour être compté ?",
+  "racines": [
+    {
+      "titre": "Un sceau qui marque l'appartenance",
+      "corps_html": "Commentant ce passage, Jean Chrysostome rapproche le scellement du Saint-Esprit de la marque que porte un soldat enrôlé dans l'armée d'un roi : elle ne garantit pas seulement une identité, elle signale à qui l'on appartient désormais et sous quelle autorité on combat. Pour lui, cette marque intérieure précède toute œuvre du croyant — elle vient de la grâce reçue par la foi, non d'un mérite acquis.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Éphésiens, IVe siècle"
+    },
+    {
+      "titre": "L'assurance plutôt que le vertige",
+      "corps_html": "Calvin, commentant Éphésiens 1, 13-14, s'arrête longuement sur le gage de l'Esprit : il y voit non une simple image mais la preuve intérieure, donnée à la conscience du croyant, que l'élection évoquée au verset 11 n'est pas un décret lointain et terrifiant mais une promesse déjà engagée. Il insiste : ce gage ne dispense pas d'attendre l'héritage entier, il en est la garantie vivante et agissante.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Éphésiens, 1548"
+    },
+    {
+      "titre": "Le prix du marché, mesure de rien",
+      "corps_html": "Cyrille d'Alexandrie, dans son commentaire sur Luc, s'attarde sur le détail du marché : cinq passereaux pour deux sous, moins encore que le tarif ordinaire de deux pour un sou chez Matthieu. Il y voit la preuve que la providence de Dieu ne s'arrête pas au seuil de ce que les hommes jugent digne d'attention : si la plus dérisoire des marchandises n'échappe pas à son regard, le disciple inquiet ne peut, lui, lui échapper.",
+      "attribution": "Cyrille d'Alexandrie, Commentaire sur l'évangile de Luc, sermon 89"
+    }
+  ]
+}
