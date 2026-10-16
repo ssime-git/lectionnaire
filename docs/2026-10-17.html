@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les yeux du cœur — samedi 17 octobre 2026</title>
+<meta name="description" content="La prière de Paul pour des yeux enfin ouverts">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">samedi 17 octobre 2026 · 28ème Semaine du Temps Ordinaire · <span class="couleur">rouge · </span>
+</p>
+    <h1>Les yeux <span class="it">du cœur</span></h1>
+    <p class="chapeau">La prière de Paul pour des yeux enfin ouverts</p>
+    <figure class="gravure" aria-label="Deux mains écartent un voile sombre devant un visage aux yeux clos tourné vers un ciel chargé d'étoiles, où une couronne reste suspendue au-dessus d'un trône encore vide."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 140 h328"/><path d="M30 14 v8 M26 18 h8 M70 10 v8 M66 14 h8 M200 12 v8 M196 16 h8 M270 16 v8 M266 20 h8 M310 10 v8 M306 14 h8"/><path d="M150 72 v-27 h40 v27 M150 60 h40"/><path d="M148 112 q22 -30 44 0 q-22 30 -44 0 z"/><path d="M158 103 q4 4 8 0 M174 103 q4 4 8 0"/><path d="M85 92 q10 -12 22 -8 M92 84 l3 -7 M98 82 l3 -8 M104 83 l3 -7"/><path d="M255 92 q-10 -12 -22 -8 M248 84 l-3 -7 M242 82 l-3 -8 M236 83 l-3 -7"/></g><g class="trait-rubrique"><path d="M100 85 q35 5 48 30 q-20 -8 -40 -2 q-10 -15 -8 -28 z"/><path d="M240 85 q-35 5 -48 30 q20 -8 40 -2 q10 -15 8 -28 z"/></g><g class="trait-liturgie"><path d="M148 38 h44 M150 38 l5 -16 l5 16 M165 38 l5 -16 l5 16 M180 38 l5 -16 l5 16"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Lecture de la lettre de saint Paul aux Éphésiens — Ep 1, 15-23 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">15</span> C'est pourquoi moi aussi, ayant entendu parler de votre foi au Seigneur Jésus et de votre charité pour tous les saints, <span class="s">16</span> je ne cesse de rendre grâces pour vous, faisant mention de vous dans mes prières, <span class="s">17</span> afin que le Dieu de notre Seigneur Jésus-Christ, le Père de gloire, vous donne un esprit de sagesse et de <button class="mot" data-g="g-apokalypse">révélation</button>, pour le connaître, <span class="s">18</span> et qu'il <button class="mot" data-g="g-photizo">illumine</button> les yeux de votre cœur, pour que vous sachiez quelle est l'espérance qui s'attache à son appel, quelle est la richesse de la gloire de son héritage qu'il réserve aux saints, <span class="s">19</span> et quelle est envers nous qui croyons l'infinie grandeur de sa puissance, se manifestant avec efficace par la vertu de sa force. <span class="s">20</span> Il l'a déployée en Christ, lorsqu'il l'a ressuscité des morts, et qu'il l'a fait asseoir à sa droite dans les lieux célestes, <span class="s">21</span> au-dessus de toute domination, de toute autorité, de toute puissance, de toute dignité, et de tout nom qui se nomme, non seulement dans ce siècle, mais encore dans le siècle à venir. <span class="s">22</span> Il a tout mis sous ses pieds, et il l'a donné pour chef suprême à l'Église, <span class="s">23</span> qui est son corps, la <button class="mot" data-g="g-pleroma">plénitude</button> de celui qui remplit tout en tous.</div>
+        <div class="glose" id="g-apokalypse"><span class="lemme">révélation</span> Le mot grec <span class="gr">apokalypsis</span> signifie proprement un dévoilement, l'action d'enlever un voile — c'est ce même mot qui donne son titre au dernier livre du Nouveau Testament. Segond traduit par « révélation », ce qui est juste mais peut faire entendre un contenu doctrinal nouveau, alors que Paul demande un don intérieur : que les Éphésiens voient ce qui leur a déjà été donné en Christ, non qu'ils reçoivent une information supplémentaire. Chrysostome, dans ses homélies sur cette épître, insiste sur ce point : la révélation demandée ici n'ajoute rien à l'Évangile déjà prêché, elle ouvre les yeux sur lui. Calvin note de même que cette connaissance n'est pas spéculative mais pratique, puisqu'elle doit conduire à l'espérance et à l'action de grâces.</div>
+        <div class="glose" id="g-photizo"><span class="lemme">illumine</span> Le verbe <span class="gr">phōtizō</span>, qu'on retrouve en Hébreux 6,4 et 10,32 pour désigner le baptême des premiers chrétiens, signifie littéralement « mettre en lumière ». Segond choisit « illumine », qui garde l'image de la lumière mais efface le lien avec ce vocabulaire baptismal que les premiers lecteurs auraient entendu. Il ne s'agit pas d'une illumination mystique réservée à quelques-uns : c'est le don commun fait à tout baptisé, pour que le regard intérieur — « les yeux du cœur », expression sans parallèle exact dans l'Ancien Testament — se porte enfin sur ce qu'il possède déjà en Christ.</div>
+        <div class="glose" id="g-pleroma"><span class="lemme">plénitude</span> <span class="gr">Plērōma</span> deviendra, un siècle plus tard, un terme technique des gnostiques valentiniens pour désigner la totalité des puissances divines émanées : c'est précisément contre cet usage qu'Irénée de Lyon défendra la lecture paulinienne du mot dans son traité Contre les hérésies. Segond traduit fidèlement par « plénitude », mais il faut entendre que Paul dit quelque chose d'audacieux : l'Église, corps du Christ, est le lieu où se déploie la totalité de celui qui remplit tout l'univers. Ce n'est pas le Christ qui complète l'Église ; c'est l'Église qui reçoit, comme un vase reçoit ce qui le remplit, la plénitude de celui qui est déjà parfait.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 8, 2-3a, 4-5, 6-7 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Éternel, notre Seigneur! Que ton nom est <button class="mot" data-g="g-addir">magnifique</button> sur toute la terre! Ta majesté s'élève au-dessus des cieux. <span class="s">3</span> Par la bouche des enfants et de ceux qui sont à la mamelle tu as fondé ta gloire. <span class="s">4</span> Quand je contemple les cieux, ouvrage de tes mains, la lune et les étoiles que tu as créées: <span class="s">5</span> Qu'est-ce que l'homme, pour que tu te souviennes de lui? Et le <button class="mot" data-g="g-benadam">fils de l'homme</button>, pour que tu prennes garde à lui? <span class="s">6</span> Tu l'as fait de peu inférieur à Dieu, et tu l'as <button class="mot" data-g="g-atar">couronné</button> de gloire et de magnificence. <span class="s">7</span> Tu lui as donné la domination sur les œuvres de tes mains, tu as tout mis sous ses pieds.</div>
+        <div class="glose" id="g-addir"><span class="lemme">magnifique</span> L'hébreu <span class="gr">addir</span> qualifie ailleurs les grands de ce monde, les puissants, les flots déchaînés de la mer (Ps 93,4) : c'est un mot de force et de majesté redoutable, pas seulement de beauté. Segond traduit par « magnifique », ce qui est esthétiquement juste mais adoucit la puissance presque menaçante du terme hébreu. Les commentateurs juifs classiques, comme Rachi, relèvent que ce nom est magnifique précisément parce qu'il se répand jusque dans la bouche des plus faibles — les enfants et les nourrissons du verset suivant —, contraste voulu entre la force du Nom et la fragilité de ses témoins.</div>
+        <div class="glose" id="g-benadam"><span class="lemme">fils de l'homme</span> L'hébreu emploie ici deux mots différents pour « homme » : <span class="gr">enosh</span>, qui désigne le mortel dans sa fragilité, et <span class="gr">ben-adam</span>, « fils d'Adam », qui souligne son origine terreuse. Segond rend les deux par la même famille d'expressions françaises, ce qui laisse heureusement percevoir le parallélisme hébraïque. L'épître aux Hébreux (2,6-9) cite ce verset et l'applique explicitement à Jésus : c'est lui, le fils de l'homme par excellence, qui reçoit la domination promise à l'humanité déchue. Luc reprend ce même titre dans l'Évangile de ce jour pour désigner celui devant qui toute confession se fera.</div>
+        <div class="glose" id="g-atar"><span class="lemme">couronné</span> Le verbe hébreu <span class="gr">atar</span>, « ceindre, couronner », appartient au vocabulaire royal : c'est le geste par lequel on pose la couronne sur la tête d'un roi. Segond traduit justement par « couronné », mais il faut entendre que ce couronnement n'est pas métaphorique au sens faible : le psaume attribue à l'homme, créature de poussière, une dignité royale reçue et non méritée. Hébreux 2,9 lit ce verset comme accompli en Jésus, « couronné de gloire et d'honneur » à cause de sa mort, déplaçant la promesse faite à Adam vers son accomplissement dans le Christ exalté.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile de Jésus Christ selon saint Luc — Lc 12, 8-12 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">8</span> Je vous le dis, quiconque me <button class="mot" data-g="g-homologeo">confessera</button> devant les hommes, le <button class="mot" data-g="g-huios-anthropou">Fils de l'homme</button> le confessera aussi devant les anges de Dieu; <span class="s">9</span> mais quiconque me reniera devant les hommes sera renié devant les anges de Dieu. <span class="s">10</span> Et quiconque parlera contre le Fils de l'homme, il lui sera pardonné; mais à celui qui <button class="mot" data-g="g-blasphemeo">blasphémera</button> contre le Saint-Esprit il ne sera point pardonné. <span class="s">11</span> Quand on vous mènera devant les synagogues, les magistrats et les autorités, ne vous inquiétez pas comment vous répondrez pour votre défense, ni de ce que vous direz; <span class="s">12</span> car le Saint-Esprit vous enseignera à l'heure même ce que vous devrez dire.</div>
+        <div class="glose" id="g-homologeo"><span class="lemme">confessera</span> Le verbe grec <span class="gr">homologeō</span> est composé de « même » et de « parole » : confesser, c'est littéralement dire la même chose que quelqu'un, se tenir d'accord avec lui en public. Segond traduit par « confessera », terme à la fois juridique et liturgique, qui convient bien puisque le contexte est celui d'un procès — les versets suivants parlent des synagogues et des magistrats. Calvin souligne dans son commentaire que cette confession n'est pas d'abord une proclamation de foi intérieure mais un acte public, risqué, qui engage le corps devant les autorités de ce monde.</div>
+        <div class="glose" id="g-blasphemeo"><span class="lemme">blasphémera</span> Le verbe <span class="gr">blasphēmeō</span> désigne une parole qui nuit à la réputation, qui calomnie — ici, calomnier l'action même de l'Esprit. Segond garde le mot « blasphémera », presque transcrit du grec, ce qui a l'avantage de signaler la gravité unique de cette parole. Augustin, dans sa lecture de ce passage reprise par de nombreux commentateurs ultérieurs, refuse d'y voir un acte précis et imparable : il y voit plutôt l'endurcissement final qui refuse jusqu'à la mort de reconnaître l'œuvre de Dieu — non une parole isolée, mais un refus entêté qui se ferme lui-même au pardon.</div>
+        <div class="glose" id="g-huios-anthropou"><span class="lemme">Fils de l'homme</span> Cette expression, calquée sur l'hébreu <span class="gr">ben-adam</span> du Psaume 8 et du livre de Daniel (7,13), est le titre que Jésus préfère pour se désigner lui-même dans les évangiles synoptiques. Segond la traduit littéralement, « Fils de l'homme », conservant l'étrangeté sémitique de l'expression plutôt que de la remplacer par un équivalent plus clair. Chrysostome relève que Jésus choisit ce titre d'humilité — et non « Fils de Dieu » — précisément au moment où il annonce qu'il reconnaîtra devant les anges ceux qui l'auront reconnu : la gloire promise passe par l'aveu de la condition commune.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une lettre de prisonnier</h3><p>Éphésiens appartient aux lettres dites « de la captivité », écrites selon la tradition depuis une prison romaine vers 60-62. Paul n'a sans doute jamais rencontré en personne la plupart de ces chrétiens d'Éphèse : sa prière d'intercession, rapportée ici, est le seul geste pastoral possible pour un apôtre enchaîné envers une Église qu'il ne peut plus visiter.</p></div>
+      <div><h3>Le procès qui vient</h3><p>Luc place cette parole juste après l'annonce des persécutions à venir (Lc 12,4-7) : les disciples seront traînés devant les synagogues, comme le sera Étienne en Actes 6-7. Les Actes des Apôtres montreront cette promesse tenue — l'Esprit donnant aux accusés, dans l'instant même, les mots qu'ils n'avaient pas préparés.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Des yeux qui s'ouvrent</h2>
+<p>Tu as pu lire et relire un passage de l'Écriture sans qu'il te dise rien de particulier, comme un mur blanc qu'on traverse du regard sans le voir. Puis un jour, sans que rien d'extérieur ait changé — ni la traduction, ni les mots —, la même phrase se met debout devant toi et te regarde. Ce n'est pas qu'elle contenait une information cachée que tu aurais enfin décodée : c'est que quelque chose en toi s'est ouvert pour recevoir ce qui était déjà là, offert depuis toujours. C'est exactement ce que Paul demande pour les Éphésiens : non une révélation nouvelle, mais des yeux assez dessillés pour voir l'héritage qui leur appartient déjà.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Reprends la prière de Paul comme la tienne : demande, non une connaissance nouvelle, mais des yeux de cœur enfin ouverts sur ce qui t'est déjà donné.</p>
+      <p class="geste">Choisis un verset que tu connais par cœur depuis longtemps — un psaume, un Notre Père — et redis-le une fois, lentement, en demandant seulement : Seigneur, ouvre mes yeux sur ce que je redis depuis si longtemps sans le voir.</p>
+      <small>Rien ne garantit un effet immédiat : l'illumination demandée par Paul est un don, pas une technique, et elle peut se faire attendre.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Devant qui, aujourd'hui, hésites-tu encore à dire que le Christ compte pour toi — et qu'est-ce que cette hésitation dit de ce que tu attends vraiment de lui ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Les lettres de prière</h3>
+          <p>Les quatre grandes lettres de la captivité (Éphésiens, Philippiens, Colossiens, Philémon) ouvrent presque toutes sur ce même geste : l'apôtre rapporte sa prière d'intercession avant d'enseigner quoi que ce soit. Ce choix n'est pas rhétorique : il signifie que la connaissance de Dieu demandée pour l'Église ne peut être enseignée comme une doctrine, elle doit d'abord être demandée comme une grâce.</p>
+<p class="attrib">Cf. Colossiens 1,9-14 ; Philippiens 1,9-11</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le mot que les gnostiques ont détourné</h3>
+          <p>Au IIe siècle, les disciples de Valentin ont fait du mot grec plérôme le nom technique de la totalité des puissances divines émanées, un système étranger à Paul. Irénée de Lyon consacre plusieurs livres de son traité Contre les hérésies à restituer au mot son sens paulinien : non une hiérarchie d'émanations, mais la plénitude du Christ reçue par l'Église, son corps.</p>
+<p class="attrib">Irénée de Lyon, Contre les hérésies, livre I</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Les mots donnés dans l'instant</h3>
+          <p>Le récit du martyre de l'évêque Polycarpe de Smyrne, au IIe siècle, montre un vieillard conduit devant le proconsul romain répondre avec une fermeté et une clarté qu'aucune préparation humaine n'explique entièrement. Les Actes des Apôtres racontent la même chose d'Étienne devant le sanhédrin (Ac 6-7) : la postérité chrétienne a lu ces scènes comme l'accomplissement visible de la promesse de Luc 12,11-12.</p>
+<p class="attrib">Martyre de Polycarpe ; Actes des Apôtres 6-7</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 28ème Semaine du Temps Ordinaire — Ep 1, 15-23 ; Lc 12, 8-12.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
