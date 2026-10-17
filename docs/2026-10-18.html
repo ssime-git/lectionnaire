@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rendre à César — dimanche 18 octobre 2026</title>
+<meta name="description" content="29e dimanche du temps ordinaire — année A">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 18 octobre 2026 · 29ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Rendre <span class="it">à César</span></h1>
+    <p class="chapeau">29e dimanche du temps ordinaire — année A</p>
+    <figure class="gravure" aria-label="Une pièce de monnaie tenue entre deux mains ouvertes, le profil de César gravé sur sa face en traits simples, le fond strié de hachures comme un bois ancien, sans qu'on sache si la main qui la tient va la garder ou la rendre."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 140 h328"/><path d="M18 150 q2 -34 30 -40 q16 -5 28 4"/><path d="M46 110 q8 -13 17 -9 q6 -9 15 -3 q6 -8 15 0 q7 -6 15 4"/><path d="M322 150 q-2 -34 -30 -40 q-16 -5 -28 4"/><path d="M294 110 q-8 -13 -17 -9 q-6 -9 -15 -3 q-6 -8 -15 0 q-7 -6 -15 4"/><path d="M159 62 q7 -6 10 1 q3 7 -3 11 q6 2 2 8 q-4 4 -8 2 q-4 4 -8 -1"/><path d="M169 55 l7 -5"/><path d="M14 18 l22 11"/><path d="M14 30 l22 11"/><path d="M304 18 l-22 11"/><path d="M304 30 l-22 11"/></g><g class="trait-liturgie"><path d="M150 76 q0 -22 20 -22 q20 0 20 22 q0 22 -20 22 q-20 0 -20 -22 z"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Is 45, 1.4-6 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Ainsi parle l'Éternel à son <button class="mot" data-g="g-oint">oint</button>, à Cyrus, qu'il tient par la main, pour terrasser devant lui les nations et pour relâcher la ceinture des rois, pour lui ouvrir les portes, afin qu'elles ne soient plus fermées. <span class="s">4</span> Pour l'amour de mon serviteur Jacob, et d'Israël mon <button class="mot" data-g="g-elu">élu</button>, je t'ai appelé par ton nom, je t'ai parlé avec bienveillance, avant que tu me connusses. <span class="s">5</span> Je suis l'Éternel, et il n'y en a point d'autre, hors moi il n'y a point de Dieu ; je t'ai ceint, avant que tu me connusses. <span class="s">6</span> C'est afin qu'on sache, du soleil levant au soleil couchant, que hors moi il n'y a point de Dieu : je suis l'Éternel, et il n'y en a point d'autre.</div>
+        <div class="glose" id="g-oint"><span class="lemme">mashiach</span> L'hébreu <span class="gr">מָשִׁיחַ</span> (mashiach) est le même mot qui désigne ailleurs le roi d'Israël consacré par l'onction, et que la tradition chrétienne entend finalement du Christ. Segond traduit sobrement « oint », ce qui est juste, mais masque un scandale : ici, pour la seule fois dans tout l'Ancien Testament, ce titre est donné à un païen, Cyrus roi de Perse, qui ne connaît pas l'Éternel. Calvin, dans son commentaire sur Ésaïe, s'arrête longuement sur cette audace : Dieu peut appeler « son oint » un instrument qu'il choisit sans qu'il le sache, preuve que l'élection ne dépend jamais de la conscience qu'on en a.</div>
+        <div class="glose" id="g-elu"><span class="lemme">bachir</span> <span class="gr">בָּחִיר</span> (bachir) vient de la racine <span class="gr">בחר</span> (bachar), « choisir », et désigne dans tout le Deutéro-Ésaïe le choix souverain et gratuit porté sur Israël, sans qu'aucun mérite antérieur ne le justifie. Segond traduit « élu », fidèle au sens, mais le français moderne a affaibli le mot au point d'en faire presque un terme électoral. Paul reprend exactement ce vocabulaire dans la lecture de ce jour pour les Thessaloniciens, montrant que l'élection d'Israël ne s'efface pas mais s'élargit.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 95 (96), 1.3, 4-5, 7-8, 9-10ac — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Chantez à l'Éternel un <button class="mot" data-g="g-cantique">cantique nouveau</button>! Chantez à l'Éternel, vous tous, habitants de la terre! <span class="s">3</span> Racontez parmi les nations sa gloire, parmi tous les peuples ses merveilles! <span class="s">4</span> Car l'Éternel est grand et très digne de louange, il est <button class="mot" data-g="g-redoutable">redoutable</button> par-dessus tous les dieux ; <span class="s">5</span> car tous les dieux des peuples sont des idoles, et l'Éternel a fait les cieux. <span class="s">7</span> Familles des peuples, rendez à l'Éternel gloire et honneur! Rendez à l'Éternel gloire et force! <span class="s">8</span> Rendez à l'Éternel gloire pour son nom! Apportez des offrandes, et entrez dans ses parvis! <span class="s">9</span> Prosternez-vous devant l'Éternel avec des ornements sacrés. Tremblez devant lui, vous tous habitants de la terre! <span class="s">10</span> Dites parmi les nations: L'Éternel règne.</div>
+        <div class="glose" id="g-cantique"><span class="lemme">shir chadash</span> <span class="gr">שִׁיר חָדָשׁ</span> (shir chadash), « cantique nouveau », que Segond rend littéralement. Dans le vocabulaire des prophètes et des psaumes, chadash ne signifie pas simplement récent mais annonce une œuvre inédite de Dieu, une création qui recommence — le même mot qu'Ésaïe emploie pour les « choses nouvelles » qu'il annonce. L'Apocalypse reprendra cette expression exacte pour le chant des rachetés devant l'Agneau, signe que ce psaume ouvre déjà sur un horizon qui dépasse Israël seul.</div>
+        <div class="glose" id="g-redoutable"><span class="lemme">nora</span> <span class="gr">נוֹרָא</span> (nora'), de la racine <span class="gr">ירא</span> (yare', craindre), que Segond traduit « redoutable ». Le mot français penche vers la terreur, alors que l'hébreu, dans les psaumes, qualifie presque toujours une crainte qui s'accompagne de louange et non de fuite. Calvin, commentant des psaumes voisins, insiste sur ce point : la crainte du Seigneur dont parle l'Écriture est filiale, elle rapproche au lieu d'éloigner.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 1 Th 1, 1-5b — Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Paul, et Silvain, et Timothée, à l'Église des Thessaloniciens, en Dieu le Père et en Jésus-Christ le Seigneur: que la grâce et la paix vous soient données! <span class="s">2</span> Nous rendons continuellement grâces à Dieu pour vous tous, faisant mention de vous dans nos prières, <span class="s">3</span> nous rappelant sans cesse l'œuvre de votre foi, le travail de votre amour, et la fermeté de votre espérance en notre Seigneur Jésus-Christ, devant Dieu notre Père. <span class="s">4</span> Nous savons, frères bien-aimés de Dieu, que vous avez été <button class="mot" data-g="g-elus">élus</button>, <span class="s">5</span> notre Évangile ne vous ayant pas été prêché avec paroles seulement, mais avec puissance, avec l'Esprit Saint, et avec une pleine <button class="mot" data-g="g-persuasion">persuasion</button>.</div>
+        <div class="glose" id="g-elus"><span class="lemme">eklogē</span> Le verbe grec sous-jacent renvoie à <span class="gr">ἐκλογή</span> (eklogē), « élection », exactement le vocabulaire que la Septante emploie pour Israël choisi par Dieu — le même champ que bachir en Ésaïe 45 lu aujourd'hui. Segond traduit « élus », fidèle au terme, mais le lecteur presse d'y voir une continuité : ce qui était dit d'Israël et, plus étrangement, de Cyrus, est maintenant dit d'une assemblée grecque sans ascendance juive. Jean Chrysostome, dans ses homélies sur cette épître, relève que cette élection ne tient à aucun mérite de race ni d'ancienneté.</div>
+        <div class="glose" id="g-persuasion"><span class="lemme">plērophoria</span> <span class="gr">πληροφορία</span> (plērophoria), de <span class="gr">πληρόω</span> (remplir), désigne une certitude qui comble entièrement, sans reste de doute. Segond traduit « pleine persuasion », ce qui rend bien l'idée de plénitude mais évoque en français une habileté rhétorique, presque une technique de persuasion. Le mot grec vise l'inverse : une assurance intérieure donnée par l'Esprit, qui ne dépend d'aucun art de l'orateur — Paul le distingue expressément de la « parole seulement ».</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 22, 15-21 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">15</span> Alors les pharisiens se retirèrent, et ils délibérèrent sur les moyens de surprendre Jésus par ses propres paroles. <span class="s">16</span> Ils envoyèrent auprès de lui leurs disciples, avec les hérodiens, qui dirent: Maître, nous savons que tu es vrai, et que tu enseignes la voie de Dieu selon la vérité, sans t'inquiéter de personne, car tu ne regardes pas à l'apparence des hommes. <span class="s">17</span> Dis-nous donc ce qu'il t'en semble: est-il permis, ou non, de payer le tribut à César? <span class="s">18</span> Jésus, connaissant leur méchanceté, répondit: Pourquoi me tentez-vous, <button class="mot" data-g="g-hypocrites">hypocrites</button>? <span class="s">19</span> Montrez-moi la pièce de la monnaie. Et ils lui présentèrent un denier. <span class="s">20</span> Il leur demanda: De qui sont cette <button class="mot" data-g="g-effigie">effigie</button> et cette inscription? <span class="s">21</span> De César, lui répondirent-ils. Alors il leur dit: <button class="mot" data-g="g-rendez">Rendez</button> donc à César ce qui est à César, et à Dieu ce qui est à Dieu.</div>
+        <div class="glose" id="g-hypocrites"><span class="lemme">hypokritai</span> <span class="gr">ὑποκριταί</span> (hypokritai) désignait d'abord les acteurs de théâtre, ceux qui parlent sous un masque. Segond conserve le mot presque tel quel, mais le français l'a réduit à un sens moral — mentir — alors que le grec vise d'abord le jeu de rôle : poser une question en ayant déjà écrit la réponse qu'on veut en tirer. Jean Chrysostome, dans ses homélies sur cet évangile, insiste sur ce piège à double fond, où l'éloge adressé à Jésus sert uniquement à l'enfermer.</div>
+        <div class="glose" id="g-effigie"><span class="lemme">eikōn</span> Le grec <span class="gr">εἰκών</span> (eikōn), « image », est le mot même que la Septante emploie en Genèse 1 pour l'homme fait « à l'image » de Dieu. Segond traduit ici « effigie », exact pour une monnaie mais qui coupe le lien avec ce vocabulaire. La question de Jésus, « de qui est cette image? », n'est donc pas seulement fiscale : elle prépare, sans la poser encore, la question inverse — de qui porte l'homme lui-même l'image?</div>
+        <div class="glose" id="g-rendez"><span class="lemme">apodidōmi</span> <span class="gr">ἀπόδοτε</span>, de <span class="gr">ἀποδίδωμι</span>, signifie restituer, rendre ce qui est dû, et non donner librement. Segond traduit « rendez », fidèle au sens, mais il faut l'entendre strictement : on ne cède pas, on restitue ce qui appartenait déjà à un autre. Une lecture ancienne, reprise notamment par Tertullien, en tire la conséquence : si la pièce, parce qu'elle porte l'image de César, doit lui revenir, l'homme, parce qu'il porte l'image de Dieu, doit par le même raisonnement se rendre à lui.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Cyrus, l'oint des nations</h3><p>En 538 avant notre ère, Cyrus, roi de Perse, autorise par décret le retour des exilés de Babylone et la reconstruction du Temple — fait confirmé par un document retrouvé en 1879, le cylindre de Cyrus, qui proclame sa politique de restauration des cultes locaux. Ésaïe 45 interprète ce geste politique comme l'œuvre cachée de l'Éternel, appelant par son nom un roi qui ignore tout de lui. Calvin, dans son commentaire sur Ésaïe, en fait le signe que la souveraineté de Dieu s'étend au-delà des frontières d'Israël, sans que les nations le sachent.</p></div>
+      <div><h3>Le denier et l'impôt de recensement</h3><p>L'impôt de capitation institué par Rome en Judée vers l'an 6 de notre ère se payait en denier d'argent, pièce frappée à l'effigie de l'empereur et portant une inscription le désignant comme fils du divin Auguste — formule que des pieux Juifs pouvaient juger idolâtre. Pharisiens, hostiles à l'occupation, et hérodiens, favorables au pouvoir en place, forment ici une alliance contre nature : la question du tribut est un piège politique autant que religieux, où répondre « oui » ou « non » expose également Jésus.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que tu portes sans le savoir</h2>
+<p>Il y a des paroles que tu as dites sans y croire toi-même, dans l'obéissance plutôt que dans la foi — une prière récitée par habitude, un service rendu sans élan, un geste de fidélité posé alors que ton cœur était ailleurs. Tu pensais agir à vide, simplement parce qu'il fallait agir. Et pourtant, bien plus tard, tu découvres qu'un fruit est né de ce geste-là, un fruit que tu n'avais ni prévu ni mérité, comme si quelqu'un d'autre que toi avait tenu ta main pendant que tu croyais seulement obéir à une contrainte. C'est devant ce Dieu qui se sert de ce que tu ne comprenais pas encore que le texte d'aujourd'hui te place : il a appelé Cyrus par son nom avant que Cyrus ne le connaisse.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de refermer cette page, reste un instant devant la question que Jésus ne tranche pas pour toi, mais qu'il te renvoie : de qui portes-tu l'image, et à qui appartient-elle vraiment.</p>
+      <p class="geste">Note, sur un papier ou mentalement, une chose que tu dois aujourd'hui à César — argent, temps, obéissance à une charge légitime — et une seule chose que tu sais n'appartenir qu'à Dieu, et que personne d'autre ne peut te réclamer.</p>
+      <small>Ce dimanche est le vingt-neuvième du temps ordinaire ; le même évangile, lu depuis les Pères, n'a jamais cessé d'être entendu comme une question posée à chaque génération sur la place réelle du pouvoir et de Dieu dans une vie.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, en toi, porte une image que nul pouvoir de ce monde n'a le droit de réclamer ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>L'image qu'on ne peut rendre à César</h3>
+          <p>Reprenant la question de Jésus sur l'effigie du denier, une tradition patristique ancienne observe que l'homme, lui, porte une autre image, celle de Dieu inscrite en Genèse 1. Si la pièce doit retourner à celui dont elle porte le visage, l'homme, par la même logique, se doit tout entier à Dieu. Cette lecture, attestée chez Tertullien, fait du mot « rendre » une restitution, non une taxation : on ne donne pas à Dieu un supplément, on lui restitue ce qui porte déjà sa marque.</p>
+<p class="attrib">Tertullien, De l'idolâtrie</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le scandale d'un oint étranger</h3>
+          <p>Calvin s'arrête longuement sur l'audace d'Ésaïe 45 : appeler « oint » un roi païen qui ignore l'Éternel heurte toute attente. Il répond que Dieu peut se servir d'instruments qui ne le connaissent pas, sans que cela diminue en rien l'honneur réservé au véritable Oint, le Christ, seul à recevoir l'onction en plénitude. Cyrus n'est oint que par comparaison, prêté le temps d'une mission, non élu pour lui-même.</p>
+<p class="attrib">Calvin, Commentaire sur le livre d'Ésaïe</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le piège à double fond</h3>
+          <p>Jean Chrysostome relève, dans ses homélies sur l'évangile de Matthieu, la construction du piège tendu à Jésus : pharisiens et hérodiens, ennemis politiques, s'unissent un instant parce que chacun espère une réponse qui compromette Jésus devant l'autre camp. L'habileté de la réponse de Jésus, selon lui, n'est pas une esquive mais un dévoilement : elle oblige chacun des deux partis à reconnaître ce qu'il prétendait ignorer.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 29ème Semaine du Temps Ordinaire — Is 45, 1.4-6 ; 1 Th 1, 1-5b ; Mt 22, 15-21.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
