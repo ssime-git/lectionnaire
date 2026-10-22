@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-23",
+  "date_humaine": "vendredi",
+  "semaine": "29ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 4, 1-6 ; Lc 12, 54-59",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M58 86 q4 -6 8 0 q-4 6 -8 0 z M62 92 v22\"/><path d=\"M62 98 l-10 -7 l6 2 M62 102 l7 9\"/><path d=\"M62 114 l-8 11 M62 114 l8 9\"/><path d=\"M70 122 q35 -4 55 -8\"/><path d=\"M125 114 q45 -8 85 -2\"/><path d=\"M125 114 q50 -30 90 -55 q25 -20 55 -40\"/><path d=\"M300 16 h20\"/><path d=\"M215 112 v-32 q15 -14 30 0 v32\"/></g><g class=\"trait-rubrique\"><path d=\"M10 120 q-3 -14 9 -20 q1 -12 15 -11 q5 -11 18 -4 q10 -8 17 1 q10 -4 9 8 q6 4 0 11 q-3 6 -11 5 h-45 q-9 0 -12 -10 z\"/></g><g class=\"trait-liturgie\"><path d=\"M230 68 v-12 M220 56 h20 M220 56 l-5 7 M240 56 l5 7\"/></g></svg>",
+  "titre": "Ce temps-ci",
+  "titre_html": "Ce <span class=\"it\">temps-ci</span>",
+  "sous_titre": "Discerner l'heure de la paix",
+  "suite_hier": null,
+  "gravure_alt": "Un homme scrutant un nuage sombre qui monte à l'horizon occidental, une main en visière ; au second plan, un chemin qui bifurque vers une porte de tribunal surmontée d'une balance, et plus haut encore, à peine esquissée, une montée abrupte vers un lieu élevé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 4, 1-6",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Je vous exhorte donc, moi, le prisonnier dans le Seigneur, à marcher d'une manière digne de la <button class=\"mot\" data-g=\"g-klesis\">vocation</button> qui vous a été adressée, <span class=\"s\">2</span> avec toute <button class=\"mot\" data-g=\"g-tapeinophrosyne\">humilité</button> et douceur, avec patience, vous supportant les uns les autres avec charité, <span class=\"s\">3</span> vous efforçant de conserver l'unité de l'esprit par le <button class=\"mot\" data-g=\"g-syndesmos\">lien</button> de la paix. <span class=\"s\">4</span> Il y a un seul corps et un seul Esprit, comme aussi vous avez été appelés à une seule espérance par votre vocation ; <span class=\"s\">5</span> il y a un seul Seigneur, une seule foi, un seul baptême, <span class=\"s\">6</span> un seul Dieu et Père de tous, qui est au-dessus de tous, et parmi tous, et en tous.",
+      "gloses": [
+        {
+          "id": "g-klesis",
+          "lemme": "klēsis",
+          "html": "Le grec dit <span class=\"gr\">klēsis</span>, l'appel, l'acte même de convoquer quelqu'un par son nom. Segond traduit par « vocation », mot latin qui insiste sur la voix qui appelle (vocare) plutôt que sur l'acte d'appeler lui-même — nuance fidèle, puisque Paul vient de rappeler qu'il parle depuis sa propre captivité, lui l'appelé enchaîné. Jean Chrysostome, dans ses homélies sur l'épître aux Éphésiens, lie étroitement la klēsis reçue et la manière de marcher qui doit lui répondre : l'appel ne se contemple pas, il s'habite. Calvin, dans son commentaire, note que cette vocation n'est pas un titre honorifique mais une tâche qui engage toute l'existence."
+        },
+        {
+          "id": "g-tapeinophrosyne",
+          "lemme": "tapeinophrosynē",
+          "html": "Le mot grec, <span class=\"gr\">tapeinophrosynē</span>, est pratiquement absent du grec profane avant le Nouveau Testament, où l'humilité passait plutôt pour une bassesse d'esclave que pour une vertu. Segond traduit simplement « humilité », ce qui est juste mais efface la composition du mot : tapeinos, ce qui est bas, et phrēn, la pensée — littéralement « penser petit de soi-même ». Chrysostome y voit la vertu fondatrice de toutes celles qui suivent, parce que sans elle la douceur et la patience retombent vite en orgueil déguisé."
+        },
+        {
+          "id": "g-syndesmos",
+          "lemme": "syndesmos",
+          "html": "<span class=\"gr\">Syndesmos</span> désigne au sens propre ce qui relie ensemble, un ligament, une attache — le mot s'emploie en grec médical pour les articulations du corps. Segond choisit « lien », traduction sobre qui garde l'image corporelle implicite, cohérente avec le « seul corps » du verset 4. Calvin relève que cette paix n'est pas un sentiment mais une structure qui tient les membres ensemble, à l'image des ligaments qui, invisibles, empêchent le corps de se disloquer."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 23 (24), 1-2, 3-4ab, 5-6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Psaume de David. A l'Éternel la terre et ce qu'elle renferme, Le monde et ceux qui l'habitent. <span class=\"s\">2</span> Car il l'a fondée sur les mers, Et affermie sur les fleuves. <span class=\"s\">3</span> Qui pourra monter à la montagne de l'Éternel ? Qui s'élèvera jusqu'à son <button class=\"mot\" data-g=\"g-lieusaint\">lieu saint</button> ? <span class=\"s\">4</span> Celui qui a les mains innocentes et le <button class=\"mot\" data-g=\"g-coeurpur\">cœur pur</button> ; Celui qui ne livre pas son âme au mensonge, Et qui ne jure pas pour tromper. <span class=\"s\">5</span> Il obtiendra la bénédiction de l'Éternel, La miséricorde du Dieu de son salut. <span class=\"s\">6</span> Voilà le partage de la génération qui l'invoque, De ceux qui cherchent ta <button class=\"mot\" data-g=\"g-face\">face</button>, de Jacob ! Pause.",
+      "gloses": [
+        {
+          "id": "g-lieusaint",
+          "lemme": "meqom qodsho",
+          "html": "L'hébreu dit <span class=\"gr\">meqom qodsho</span>, « le lieu de sa sainteté ». Segond traduit « son lieu saint », ce qui est exact mais lisse le génitif hébraïque qui fait de la sainteté non un attribut du lieu mais sa substance même — le lieu est saint parce qu'il est à Dieu, non l'inverse. Les rabbins ont lu ce verset comme une question liturgique posée à l'entrée du Temple ; Augustin, dans ses Énarrations sur les psaumes, y entend déjà l'ascension du Christ et, à sa suite, celle de l'Église."
+        },
+        {
+          "id": "g-coeurpur",
+          "lemme": "lev bar",
+          "html": "L'hébreu emploie <span class=\"gr\">lev bar</span>, littéralement un cœur « clarifié », « passé au tamis ». Segond traduit « cœur pur », ce qui rejoint l'image biblique de la purification rituelle mais perd la nuance de tri, de séparation entre ce qui doit rester et ce qui doit être écarté. Calvin souligne que ce verset refuse toute religion des seules mains — le geste cultuel sans la droiture intérieure — en exigeant les deux ensemble."
+        },
+        {
+          "id": "g-face",
+          "lemme": "panim",
+          "html": "Le mot hébreu <span class=\"gr\">panim</span> est toujours au pluriel, comme si le visage de Dieu ne pouvait jamais se réduire à une seule face offerte. Segond traduit simplement « face », au singulier, choix inévitable en français mais qui efface cette démultiplication. Les rabbins ont vu dans la « recherche de la face » une expression technique du pèlerinage au Temple, et Augustin la reprend pour en faire la définition même de la prière : chercher non un don de Dieu, mais Dieu lui-même."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 12, 54-59",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">54</span> Il dit encore aux foules : Quand vous voyez un nuage se lever à l'occident, vous dites aussitôt : Un orage vient. Et il arrive ainsi. <span class=\"s\">55</span> Et quand vous voyez souffler le vent du midi, vous dites : Il fera chaud. Et cela arrive. <span class=\"s\">56</span> <button class=\"mot\" data-g=\"g-hypocrites\">Hypocrites</button> ! vous savez bien discerner l'aspect du ciel et de la terre ; comment ne discernez-vous pas ce <button class=\"mot\" data-g=\"g-kairos\">temps-ci</button> ? <span class=\"s\">57</span> Et pourquoi ne discernez-vous pas aussi par vous-mêmes ce qui est juste ? <span class=\"s\">58</span> Lorsque tu vas avec ton adversaire devant le magistrat, tâche en chemin de sortir d'affaire avec lui, de peur qu'il ne te traîne devant le juge, que le juge ne te livre à l'officier de justice, et que l'officier de justice ne te mette en prison. <span class=\"s\">59</span> Je te le dis, tu ne sortiras pas de là, que tu n'aies payé jusqu'à la dernière <button class=\"mot\" data-g=\"g-pite\">pite</button>.",
+      "gloses": [
+        {
+          "id": "g-hypocrites",
+          "lemme": "hypokritai",
+          "html": "Le grec <span class=\"gr\">hypokritai</span> désignait à l'origine les acteurs de théâtre, ceux qui répondent sous un masque — le mot garde dans les évangiles cette image d'un rôle joué plutôt que d'une vie habitée. Segond garde le mot grec francisé, « hypocrites », qui a perdu en français courant la saveur théâtrale mais conserve le sens de duplicité. Chrysostome, dans ses homélies, insiste sur le fait que Jésus ne vise pas ici une tromperie des autres mais un aveuglement entretenu envers soi-même : on sait lire le ciel, on refuse de se lire."
+        },
+        {
+          "id": "g-kairos",
+          "lemme": "kairos",
+          "html": "Le grec emploie <span class=\"gr\">kairos</span>, non <span class=\"gr\">chronos</span> — non le temps qui s'écoule mais le moment qui se présente, chargé d'une occasion à saisir. Segond traduit par l'expression française « ce temps-ci », qui rend bien l'idée de moment présent mais ne porte pas, comme le grec, la charge de décision qu'il faut prendre maintenant ou perdre. Les lectures patristiques de ce passage reconnaissent souvent dans ce kairos la venue du Christ lui-même, déjà là, que les foules savent calculer pour la pluie mais non pour le salut."
+        },
+        {
+          "id": "g-pite",
+          "lemme": "lepton",
+          "html": "Le grec dit <span class=\"gr\">lepton</span>, la plus petite pièce de monnaie en circulation, littéralement « la mince », « la fine ». Segond traduit par « pite », ancienne petite monnaie française presque sans valeur, choix vieilli mais qui rend bien l'idée d'une somme infime dont il faut pourtant s'acquitter entièrement. Le mot souligne qu'aucune dette, même la plus légère, n'est négligeable devant la justice qu'il faut honorer sans délai."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre de prison",
+      "corps_html": "Paul écrit cette lettre depuis une captivité — vraisemblablement à Rome, vers 61-63, si l'on suit la tradition qui identifie cette détention avec celle rapportée aux derniers chapitres des Actes des Apôtres. Il se présente lui-même comme « le prisonnier dans le Seigneur », formule qui renverse déjà le regard : ce n'est pas César qui le détient, mais le Christ qui le tient captif bien avant Rome. Chrysostome s'arrête longuement, dans sa première homélie sur cette épître, sur ce titre que l'apôtre revendique comme une gloire plutôt qu'il ne le subit comme une honte."
+    },
+    {
+      "titre": "Les foules et les signes",
+      "corps_html": "Luc place cet avertissement juste après les paraboles sur la vigilance et juste avant l'appel à la réconciliation rapide. Les foules qui suivent Jésus vers Jérusalem savent lire dans le ciel de Palestine les signes de pluie venant de la mer, à l'occident, et de chaleur venant du désert, au sud — compétence paysanne élémentaire. Un passage parallèle, en Matthieu 16, 2-3, montre que cette capacité à prévoir le temps était proverbiale, ce qui rend d'autant plus pointu le reproche qui suit."
+    }
+  ],
+  "analogie": {
+    "titre": "Le ciel qu'on sait lire",
+    "variantes": [
+      "Tu sais depuis longtemps qu'il faudrait dire le mot qui répare, tendre la main vers quelqu'un avec qui tout s'est tendu sans éclat, sans rupture nette — juste un silence qui s'épaissit d'année en année. Tu remets, parce que ce n'est jamais le bon moment, parce que la blessure semble encore trop fraîche ou déjà trop ancienne pour qu'on y touche. Et puis un jour cette personne meurt, ou s'éloigne, ou simplement le lien se referme de lui-même, et tu comprends que le moment que tu attendais pour discerner juste était déjà passé pendant que tu regardais ailleurs — c'est devant ce temps perdu, et devant Dieu qui seul rouvre encore ce qui semblait clos, que ce texte te place.",
+      "Tu sais reconnaître, dans ta propre vie, les signes d'un orage intérieur qui monte — l'irritation qui revient toujours au même endroit, la fatigue qui précède toujours la même chute — avec une précision presque météorologique, et tu t'en sers pour t'excuser plutôt que pour te tourner. Tu discernes très bien ce qui t'arrive, mais tu refuses depuis longtemps de discerner ce que cela réclame de toi, parce que la lecture juste engagerait un changement que la lecture habile permet d'éviter. Ce texte ne te demande pas une compétence nouvelle, seulement de retourner sur toi-même le regard que tu portes déjà si bien sur le ciel, et de laisser Dieu, et lui seul, te dire ce que ce temps-ci attend de toi.",
+      "Tu as vécu ces moments où, au sein d'un groupe, d'une famille ou d'une assemblée, tu t'es senti porté par quelque chose de plus grand que les sympathies ou les désaccords du jour — un lien que personne n'avait fabriqué et que personne, à lui seul, n'aurait pu rompre tout à fait. Ce lien ne se sentait pas toujours ; souvent il ressemblait plutôt à une contrainte, une patience à maintenir avec des gens que tu n'aurais pas choisis. Mais avec le temps tu as reconnu qu'il te précédait et te survivrait, et que ta tâche n'était pas de le créer mais de ne pas le rompre — c'est cette même unité donnée avant d'être sentie que ce texte t'invite à reconnaître devant Dieu, comme un don reçu plutôt qu'un exploit à accomplir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, demande-toi quel différend tu repousses depuis trop longtemps, quelle démarche de paix tu ajournes en attendant un moment plus favorable qui ne viendra peut-être jamais sous cette forme.",
+    "geste": "Nomme devant Dieu, en silence, une personne avec qui une parole de paix reste à dire, sans décider encore comment ni quand la dire — seulement la nommer.",
+    "note": "Ce n'est pas une tâche à cocher, mais un lieu à rouvrir devant celui qui, seul, sait ce que ce temps-ci attend de toi."
+  },
+  "question": "Quel différend repousses-tu en attendant un temps plus favorable, alors que c'est peut-être celui-ci, précisément, que Dieu t'offre pour le porter devant lui ?",
+  "racines": [
+    {
+      "titre": "L'appel comme vocation, selon Chrysostome",
+      "corps_html": "Chrysostome insiste sur le paradoxe du prisonnier qui exhorte à la liberté de marcher dignement : selon lui, c'est précisément parce que Paul a tout perdu — statut, liberté de mouvement, réputation — qu'il peut parler sans réserve de l'unité qui ne dépend d'aucune de ces choses. L'appel, dit-il, ne se mesure pas aux circonstances de celui qui le reçoit, mais à la fidélité de celui qui le porte malgré elles.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Éphésiens, IVe siècle."
+    },
+    {
+      "titre": "La face qu'on cherche, selon Augustin",
+      "corps_html": "Augustin lit ce psaume comme la liturgie même de l'âme qui monte vers Dieu : la montagne n'est pas un lieu géographique mais la hauteur de la vie droite, et les mains innocentes, le cœur pur, ne sont pas des conditions préalables à l'entrée mais la forme même de l'ascension. Chercher la face de Dieu, pour lui, c'est déjà commencer à y monter, bien avant d'y parvenir.",
+      "attribution": "Augustin d'Hippone, Énarrations sur les psaumes, Psaume 24."
+    },
+    {
+      "titre": "Le moment qu'on refuse de lire, selon Calvin",
+      "corps_html": "Calvin relève la sévérité inhabituelle du mot « hypocrites » appliqué ici non à des pharisiens mais aux foules ordinaires : pour lui, nul n'est exempté de ce reproche, car chacun sait calculer son intérêt immédiat — la pluie qui menace, la récolte à rentrer — sans qu'on ait besoin de le lui enseigner. Le refus de discerner le temps du salut n'est donc pas une ignorance, mais un choix.",
+      "attribution": "Jean Calvin, Commentaire sur l'harmonie évangélique, ad loc. Luc 12."
+    }
+  ]
+}
