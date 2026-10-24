@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-18",
+  "date_humaine": "dimanche",
+  "semaine": "29ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Is 45, 1.4-6 ; 1 Th 1, 1-5b ; Mt 22, 15-21",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 140 h328\"/><path d=\"M18 150 q2 -34 30 -40 q16 -5 28 4\"/><path d=\"M46 110 q8 -13 17 -9 q6 -9 15 -3 q6 -8 15 0 q7 -6 15 4\"/><path d=\"M322 150 q-2 -34 -30 -40 q-16 -5 -28 4\"/><path d=\"M294 110 q-8 -13 -17 -9 q-6 -9 -15 -3 q-6 -8 -15 0 q-7 -6 -15 4\"/><path d=\"M159 62 q7 -6 10 1 q3 7 -3 11 q6 2 2 8 q-4 4 -8 2 q-4 4 -8 -1\"/><path d=\"M169 55 l7 -5\"/><path d=\"M14 18 l22 11\"/><path d=\"M14 30 l22 11\"/><path d=\"M304 18 l-22 11\"/><path d=\"M304 30 l-22 11\"/></g><g class=\"trait-liturgie\"><path d=\"M150 76 q0 -22 20 -22 q20 0 20 22 q0 22 -20 22 q-20 0 -20 -22 z\"/></g></svg>",
+  "titre": "Rendre à César",
+  "titre_html": "Rendre <span class=\"it\">à César</span>",
+  "sous_titre": "29e dimanche du temps ordinaire — année A",
+  "suite_hier": null,
+  "gravure_alt": "Une pièce de monnaie tenue entre deux mains ouvertes, le profil de César gravé sur sa face en traits simples, le fond strié de hachures comme un bois ancien, sans qu'on sache si la main qui la tient va la garder ou la rendre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Is 45, 1.4-6",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Ainsi parle l'Éternel à son <button class=\"mot\" data-g=\"g-oint\">oint</button>, à Cyrus, qu'il tient par la main, pour terrasser devant lui les nations et pour relâcher la ceinture des rois, pour lui ouvrir les portes, afin qu'elles ne soient plus fermées. <span class=\"s\">4</span> Pour l'amour de mon serviteur Jacob, et d'Israël mon <button class=\"mot\" data-g=\"g-elu\">élu</button>, je t'ai appelé par ton nom, je t'ai parlé avec bienveillance, avant que tu me connusses. <span class=\"s\">5</span> Je suis l'Éternel, et il n'y en a point d'autre, hors moi il n'y a point de Dieu ; je t'ai ceint, avant que tu me connusses. <span class=\"s\">6</span> C'est afin qu'on sache, du soleil levant au soleil couchant, que hors moi il n'y a point de Dieu : je suis l'Éternel, et il n'y en a point d'autre.",
+      "gloses": [
+        {
+          "id": "g-oint",
+          "lemme": "mashiach",
+          "html": "L'hébreu <span class=\"gr\">מָשִׁיחַ</span> (mashiach) est le même mot qui désigne ailleurs le roi d'Israël consacré par l'onction, et que la tradition chrétienne entend finalement du Christ. Segond traduit sobrement « oint », ce qui est juste, mais masque un scandale : ici, pour la seule fois dans tout l'Ancien Testament, ce titre est donné à un païen, Cyrus roi de Perse, qui ne connaît pas l'Éternel. Calvin, dans son commentaire sur Ésaïe, s'arrête longuement sur cette audace : Dieu peut appeler « son oint » un instrument qu'il choisit sans qu'il le sache, preuve que l'élection ne dépend jamais de la conscience qu'on en a."
+        },
+        {
+          "id": "g-elu",
+          "lemme": "bachir",
+          "html": "<span class=\"gr\">בָּחִיר</span> (bachir) vient de la racine <span class=\"gr\">בחר</span> (bachar), « choisir », et désigne dans tout le Deutéro-Ésaïe le choix souverain et gratuit porté sur Israël, sans qu'aucun mérite antérieur ne le justifie. Segond traduit « élu », fidèle au sens, mais le français moderne a affaibli le mot au point d'en faire presque un terme électoral. Paul reprend exactement ce vocabulaire dans la lecture de ce jour pour les Thessaloniciens, montrant que l'élection d'Israël ne s'efface pas mais s'élargit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 95 (96), 1.3, 4-5, 7-8, 9-10ac",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Chantez à l'Éternel un <button class=\"mot\" data-g=\"g-cantique\">cantique nouveau</button>! Chantez à l'Éternel, vous tous, habitants de la terre! <span class=\"s\">3</span> Racontez parmi les nations sa gloire, parmi tous les peuples ses merveilles! <span class=\"s\">4</span> Car l'Éternel est grand et très digne de louange, il est <button class=\"mot\" data-g=\"g-redoutable\">redoutable</button> par-dessus tous les dieux ; <span class=\"s\">5</span> car tous les dieux des peuples sont des idoles, et l'Éternel a fait les cieux. <span class=\"s\">7</span> Familles des peuples, rendez à l'Éternel gloire et honneur! Rendez à l'Éternel gloire et force! <span class=\"s\">8</span> Rendez à l'Éternel gloire pour son nom! Apportez des offrandes, et entrez dans ses parvis! <span class=\"s\">9</span> Prosternez-vous devant l'Éternel avec des ornements sacrés. Tremblez devant lui, vous tous habitants de la terre! <span class=\"s\">10</span> Dites parmi les nations: L'Éternel règne.",
+      "gloses": [
+        {
+          "id": "g-cantique",
+          "lemme": "shir chadash",
+          "html": "<span class=\"gr\">שִׁיר חָדָשׁ</span> (shir chadash), « cantique nouveau », que Segond rend littéralement. Dans le vocabulaire des prophètes et des psaumes, chadash ne signifie pas simplement récent mais annonce une œuvre inédite de Dieu, une création qui recommence — le même mot qu'Ésaïe emploie pour les « choses nouvelles » qu'il annonce. L'Apocalypse reprendra cette expression exacte pour le chant des rachetés devant l'Agneau, signe que ce psaume ouvre déjà sur un horizon qui dépasse Israël seul."
+        },
+        {
+          "id": "g-redoutable",
+          "lemme": "nora",
+          "html": "<span class=\"gr\">נוֹרָא</span> (nora'), de la racine <span class=\"gr\">ירא</span> (yare', craindre), que Segond traduit « redoutable ». Le mot français penche vers la terreur, alors que l'hébreu, dans les psaumes, qualifie presque toujours une crainte qui s'accompagne de louange et non de fuite. Calvin, commentant des psaumes voisins, insiste sur ce point : la crainte du Seigneur dont parle l'Écriture est filiale, elle rapproche au lieu d'éloigner."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Th 1, 1-5b",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Paul, et Silvain, et Timothée, à l'Église des Thessaloniciens, en Dieu le Père et en Jésus-Christ le Seigneur: que la grâce et la paix vous soient données! <span class=\"s\">2</span> Nous rendons continuellement grâces à Dieu pour vous tous, faisant mention de vous dans nos prières, <span class=\"s\">3</span> nous rappelant sans cesse l'œuvre de votre foi, le travail de votre amour, et la fermeté de votre espérance en notre Seigneur Jésus-Christ, devant Dieu notre Père. <span class=\"s\">4</span> Nous savons, frères bien-aimés de Dieu, que vous avez été <button class=\"mot\" data-g=\"g-elus\">élus</button>, <span class=\"s\">5</span> notre Évangile ne vous ayant pas été prêché avec paroles seulement, mais avec puissance, avec l'Esprit Saint, et avec une pleine <button class=\"mot\" data-g=\"g-persuasion\">persuasion</button>.",
+      "gloses": [
+        {
+          "id": "g-elus",
+          "lemme": "eklogē",
+          "html": "Le verbe grec sous-jacent renvoie à <span class=\"gr\">ἐκλογή</span> (eklogē), « élection », exactement le vocabulaire que la Septante emploie pour Israël choisi par Dieu — le même champ que bachir en Ésaïe 45 lu aujourd'hui. Segond traduit « élus », fidèle au terme, mais le lecteur presse d'y voir une continuité : ce qui était dit d'Israël et, plus étrangement, de Cyrus, est maintenant dit d'une assemblée grecque sans ascendance juive. Jean Chrysostome, dans ses homélies sur cette épître, relève que cette élection ne tient à aucun mérite de race ni d'ancienneté."
+        },
+        {
+          "id": "g-persuasion",
+          "lemme": "plērophoria",
+          "html": "<span class=\"gr\">πληροφορία</span> (plērophoria), de <span class=\"gr\">πληρόω</span> (remplir), désigne une certitude qui comble entièrement, sans reste de doute. Segond traduit « pleine persuasion », ce qui rend bien l'idée de plénitude mais évoque en français une habileté rhétorique, presque une technique de persuasion. Le mot grec vise l'inverse : une assurance intérieure donnée par l'Esprit, qui ne dépend d'aucun art de l'orateur — Paul le distingue expressément de la « parole seulement »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 22, 15-21",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">15</span> Alors les pharisiens se retirèrent, et ils délibérèrent sur les moyens de surprendre Jésus par ses propres paroles. <span class=\"s\">16</span> Ils envoyèrent auprès de lui leurs disciples, avec les hérodiens, qui dirent: Maître, nous savons que tu es vrai, et que tu enseignes la voie de Dieu selon la vérité, sans t'inquiéter de personne, car tu ne regardes pas à l'apparence des hommes. <span class=\"s\">17</span> Dis-nous donc ce qu'il t'en semble: est-il permis, ou non, de payer le tribut à César? <span class=\"s\">18</span> Jésus, connaissant leur méchanceté, répondit: Pourquoi me tentez-vous, <button class=\"mot\" data-g=\"g-hypocrites\">hypocrites</button>? <span class=\"s\">19</span> Montrez-moi la pièce de la monnaie. Et ils lui présentèrent un denier. <span class=\"s\">20</span> Il leur demanda: De qui sont cette <button class=\"mot\" data-g=\"g-effigie\">effigie</button> et cette inscription? <span class=\"s\">21</span> De César, lui répondirent-ils. Alors il leur dit: <button class=\"mot\" data-g=\"g-rendez\">Rendez</button> donc à César ce qui est à César, et à Dieu ce qui est à Dieu.",
+      "gloses": [
+        {
+          "id": "g-hypocrites",
+          "lemme": "hypokritai",
+          "html": "<span class=\"gr\">ὑποκριταί</span> (hypokritai) désignait d'abord les acteurs de théâtre, ceux qui parlent sous un masque. Segond conserve le mot presque tel quel, mais le français l'a réduit à un sens moral — mentir — alors que le grec vise d'abord le jeu de rôle : poser une question en ayant déjà écrit la réponse qu'on veut en tirer. Jean Chrysostome, dans ses homélies sur cet évangile, insiste sur ce piège à double fond, où l'éloge adressé à Jésus sert uniquement à l'enfermer."
+        },
+        {
+          "id": "g-effigie",
+          "lemme": "eikōn",
+          "html": "Le grec <span class=\"gr\">εἰκών</span> (eikōn), « image », est le mot même que la Septante emploie en Genèse 1 pour l'homme fait « à l'image » de Dieu. Segond traduit ici « effigie », exact pour une monnaie mais qui coupe le lien avec ce vocabulaire. La question de Jésus, « de qui est cette image? », n'est donc pas seulement fiscale : elle prépare, sans la poser encore, la question inverse — de qui porte l'homme lui-même l'image?"
+        },
+        {
+          "id": "g-rendez",
+          "lemme": "apodidōmi",
+          "html": "<span class=\"gr\">ἀπόδοτε</span>, de <span class=\"gr\">ἀποδίδωμι</span>, signifie restituer, rendre ce qui est dû, et non donner librement. Segond traduit « rendez », fidèle au sens, mais il faut l'entendre strictement : on ne cède pas, on restitue ce qui appartenait déjà à un autre. Une lecture ancienne, reprise notamment par Tertullien, en tire la conséquence : si la pièce, parce qu'elle porte l'image de César, doit lui revenir, l'homme, parce qu'il porte l'image de Dieu, doit par le même raisonnement se rendre à lui."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Cyrus, l'oint des nations",
+      "corps_html": "En 538 avant notre ère, Cyrus, roi de Perse, autorise par décret le retour des exilés de Babylone et la reconstruction du Temple — fait confirmé par un document retrouvé en 1879, le cylindre de Cyrus, qui proclame sa politique de restauration des cultes locaux. Ésaïe 45 interprète ce geste politique comme l'œuvre cachée de l'Éternel, appelant par son nom un roi qui ignore tout de lui. Calvin, dans son commentaire sur Ésaïe, en fait le signe que la souveraineté de Dieu s'étend au-delà des frontières d'Israël, sans que les nations le sachent."
+    },
+    {
+      "titre": "Le denier et l'impôt de recensement",
+      "corps_html": "L'impôt de capitation institué par Rome en Judée vers l'an 6 de notre ère se payait en denier d'argent, pièce frappée à l'effigie de l'empereur et portant une inscription le désignant comme fils du divin Auguste — formule que des pieux Juifs pouvaient juger idolâtre. Pharisiens, hostiles à l'occupation, et hérodiens, favorables au pouvoir en place, forment ici une alliance contre nature : la question du tribut est un piège politique autant que religieux, où répondre « oui » ou « non » expose également Jésus."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu portes sans le savoir",
+    "variantes": [
+      "Il y a des paroles que tu as dites sans y croire toi-même, dans l'obéissance plutôt que dans la foi — une prière récitée par habitude, un service rendu sans élan, un geste de fidélité posé alors que ton cœur était ailleurs. Tu pensais agir à vide, simplement parce qu'il fallait agir. Et pourtant, bien plus tard, tu découvres qu'un fruit est né de ce geste-là, un fruit que tu n'avais ni prévu ni mérité, comme si quelqu'un d'autre que toi avait tenu ta main pendant que tu croyais seulement obéir à une contrainte. C'est devant ce Dieu qui se sert de ce que tu ne comprenais pas encore que le texte d'aujourd'hui te place : il a appelé Cyrus par son nom avant que Cyrus ne le connaisse.",
+      "Tu connais ce tiraillement précis : une part de toi obéit chaque jour à des obligations qui ne regardent que ce monde — un salaire à gagner, une charge à tenir, des comptes à rendre — et une autre part sait, en silence, qu'elle appartient ailleurs, à Quelqu'un à qui aucune administration ne peut prétendre. Le danger n'est pas de devoir ces deux choses, mais d'oublier laquelle des deux porte vraiment ton visage, laquelle a droit à ce qui, en toi, ne se monnaie pas. Rendre à César ce qui est à César ne pose problème que si tu sais encore reconnaître, en toi-même, ce qui ne lui a jamais appartenu.",
+      "Il t'est arrivé qu'une personne croie en toi avant que tu ne mérites cette confiance, t'appelle pour une tâche dont tu te sentais incapable, et que cette parole, reçue sans l'avoir cherchée, devienne peu à peu le lieu où tu as commencé à exister vraiment. Tu n'as rien fait pour être choisi ainsi ; tu l'as seulement été, et c'est cela qui t'a mis en marche. Paul écrit aux Thessaloniciens qu'ils ont été élus non par la force d'une parole convaincante mais par une puissance reçue — la même élection gratuite qui, dans Ésaïe, rejoint jusqu'à un roi étranger appelé par son nom avant qu'il ne connaisse celui qui l'appelait."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer cette page, reste un instant devant la question que Jésus ne tranche pas pour toi, mais qu'il te renvoie : de qui portes-tu l'image, et à qui appartient-elle vraiment.",
+    "geste": "Note, sur un papier ou mentalement, une chose que tu dois aujourd'hui à César — argent, temps, obéissance à une charge légitime — et une seule chose que tu sais n'appartenir qu'à Dieu, et que personne d'autre ne peut te réclamer.",
+    "note": "Ce dimanche est le vingt-neuvième du temps ordinaire ; le même évangile, lu depuis les Pères, n'a jamais cessé d'être entendu comme une question posée à chaque génération sur la place réelle du pouvoir et de Dieu dans une vie."
+  },
+  "question": "Qu'est-ce qui, en toi, porte une image que nul pouvoir de ce monde n'a le droit de réclamer ?",
+  "racines": [
+    {
+      "titre": "L'image qu'on ne peut rendre à César",
+      "corps_html": "Reprenant la question de Jésus sur l'effigie du denier, une tradition patristique ancienne observe que l'homme, lui, porte une autre image, celle de Dieu inscrite en Genèse 1. Si la pièce doit retourner à celui dont elle porte le visage, l'homme, par la même logique, se doit tout entier à Dieu. Cette lecture, attestée chez Tertullien, fait du mot « rendre » une restitution, non une taxation : on ne donne pas à Dieu un supplément, on lui restitue ce qui porte déjà sa marque.",
+      "attribution": "Tertullien, De l'idolâtrie"
+    },
+    {
+      "titre": "Le scandale d'un oint étranger",
+      "corps_html": "Calvin s'arrête longuement sur l'audace d'Ésaïe 45 : appeler « oint » un roi païen qui ignore l'Éternel heurte toute attente. Il répond que Dieu peut se servir d'instruments qui ne le connaissent pas, sans que cela diminue en rien l'honneur réservé au véritable Oint, le Christ, seul à recevoir l'onction en plénitude. Cyrus n'est oint que par comparaison, prêté le temps d'une mission, non élu pour lui-même.",
+      "attribution": "Calvin, Commentaire sur le livre d'Ésaïe"
+    },
+    {
+      "titre": "Le piège à double fond",
+      "corps_html": "Jean Chrysostome relève, dans ses homélies sur l'évangile de Matthieu, la construction du piège tendu à Jésus : pharisiens et hérodiens, ennemis politiques, s'unissent un instant parce que chacun espère une réponse qui compromette Jésus devant l'autre camp. L'habileté de la réponse de Jésus, selon lui, n'est pas une esquive mais un dévoilement : elle oblige chacun des deux partis à reconnaître ce qu'il prétendait ignorer.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu"
+    }
+  ]
+}
