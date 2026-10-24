@@ -2,8 +2,7 @@ name: Générer un brouillon du lectionnaire
 
 # Deux déclencheurs, un même garde-fou : la fusion de la PR reste humaine.
 # - workflow_dispatch : n'importe quelle date, à la demande.
-# - cron nocturne 02:20 UTC (04:20 à Paris l'été) : génère le jour SUIVANT,
-#   juste après la remise à zéro du quota gratuit Workers AI (00:00 UTC).
+# - cron nocturne 02:20 UTC (04:20 à Paris l'été) : génère le jour SUIVANT.
 on:
   workflow_dispatch:
     inputs:
@@ -70,36 +69,17 @@ jobs:
         if: steps.existe.outputs.deja == 'false'
         run: make test
 
-      - name: Générer le contrat avec Workers AI
-        id: workers-ai
+      # Moteur unique : Claude Code headless, couvert par l'abonnement Claude
+      # Pro (token `claude setup-token` dans le secret CLAUDE_CODE_OAUTH_TOKEN).
+      # Kimi K2.6 sur Workers AI exige désormais un moyen de paiement : sur
+      # l'offre gratuite, chaque appel finissait en 403 et la nuit basculait
+      # de toute façon sur Claude. Le quota gratuit Workers AI reste ainsi
+      # entièrement disponible pour le carnet de questions.
+      - name: Générer le contrat avec Claude (abonnement Pro)
         if: steps.existe.outputs.deja == 'false'
-        continue-on-error: true
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_AI_API_TOKEN: ${{ secrets.CLOUDFLARE_AI_API_TOKEN }}
-        run: make generate DATE=${{ steps.date.outputs.date }}
-
-      # Un contrat généré mais refusé par le validateur (même après la passe de
-      # réparation côté generate.py) déclenche aussi la bascule : run du 14
-      # juillet, 9 fautes de gloses. Cette validation-ci est un aiguillage,
-      # pas un verdict — le verdict est l'étape « Valider le contrat ».
-      - name: Valider le brouillon Workers AI
-        id: validation-workers
-        if: steps.workers-ai.outcome == 'success'
-        continue-on-error: true
-        run: make validate DATE=${{ steps.date.outputs.date }}
-
-      # Filet de secours : quota Workers AI épuisé, panne du moteur principal,
-      # ou brouillon irréparable → Claude Code headless, couvert par
-      # l'abonnement Claude Pro. Voie officielle : token généré par
-      # `claude setup-token`, stocké dans le secret CLAUDE_CODE_OAUTH_TOKEN.
-      - name: Générer avec Claude en secours (abonnement Pro)
-        if: steps.workers-ai.outcome == 'failure' || steps.validation-workers.outcome == 'failure'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          LECTIONNAIRE_MOTEUR: claude
         run: |
-          echo "Workers AI a échoué ou son brouillon est invalide — bascule sur Claude (claude-sonnet-5)."
           npm install -g @anthropic-ai/claude-code
           make generate DATE=${{ steps.date.outputs.date }}
 
@@ -143,4 +123,3 @@ jobs:
           add-paths: |
             data/jours/${{ steps.date.outputs.date }}.json
             docs/${{ steps.date.outputs.date }}.html
-            docs/index.html

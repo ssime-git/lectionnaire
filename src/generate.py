@@ -31,10 +31,9 @@ from valider import CLASSES_CONNUES, valider_contrat  # type: ignore
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
 
-# Le modèle reste configurable dans le code, mais l'appel ne passe par aucun
-# Gateway payant : il utilise directement le quota quotidien Workers AI.
-# Kimi K2.6 (1T, classe frontière) : ~2 000 neurons par page, soit ~5
-# générations par jour dans le quota gratuit de 10 000 neurons.
+# Moteur optionnel (MOTEUR=workers-ai). Kimi K2.6 exige désormais un moyen de
+# paiement Cloudflare : sur l'offre gratuite l'appel répond 403. Le moteur par
+# défaut est Claude (voir Makefile) ; le quota Workers AI sert au carnet.
 MODELE_REDACTION = "@cf/moonshotai/kimi-k2.6"
 WORKERS_AI_URL = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
 
