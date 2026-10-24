@@ -287,6 +287,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
 .carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
 .carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
+.carnet .sources .trad a{color:inherit;text-decoration:none}
+.carnet .sources .trad a:hover{text-decoration:underline}
 .carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
 .carnet-libre{border-top:1px solid var(--filet);padding-top:1rem;margin-top:.4rem}
 .carnet-libre .libre-titre{font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;color:var(--rubrique);margin-bottom:.5rem}
@@ -551,6 +553,12 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
         if(x.s!==200){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.';return}
         var zone=libre.querySelector('.libre-texte');zone.textContent='';
         x.c.reponse.split(/\n\s*\n/).forEach(function(par){var p=document.createElement('p');p.textContent=par.trim();zone.appendChild(p)});
+        var src=libre.querySelector('.libre-sources');src.textContent='';
+        if(x.c.sources&&x.c.sources.length){var t=document.createElement('p');t.textContent='Pères et Réformateurs';src.appendChild(t);
+          var l=document.createElement('div');l.className='trad';
+          x.c.sources.forEach(function(s){var a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';
+            a.textContent=s.titre+' ('+s.credit+')';var sp=document.createElement('span');sp.appendChild(a);l.appendChild(sp)});
+          src.appendChild(l);src.hidden=false}else{src.hidden=true}
         libre.querySelector('.libre-reponse').hidden=false;
         etat.textContent=x.c.restant>0?'Encore '+x.c.restant+' question'+(x.c.restant>1?'s':'')+' aujourd\'hui.':'C\'était ta dernière question pour aujourd\'hui.';
         if(x.c.restant<=0)libre.querySelector('.libre-saisie').hidden=true})
