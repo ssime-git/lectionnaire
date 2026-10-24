@@ -1,0 +1,181 @@
+{
+  "date": "2026-09-29",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Dn 7, 9-10.13-14 ; Ap 12, 7-12a ; Jn 1, 47-51",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 132 H330\"/><path d=\"M148 132 L142 16\"/><path d=\"M172 132 L184 16\"/><path d=\"M147 118 L173 118 M146 100 L175 100 M145 82 L177 82 M144 64 L179 64 M144 46 L181 46 M143 28 L183 28\"/><path d=\"M270 132 L268 92\"/><path d=\"M268 100 q-18 -6 -30 4 M268 106 q16 -4 26 6 M268 114 q-14 6 -24 16 M268 120 q14 4 22 14\"/><path d=\"M150 108 L160 88 M160 88 q2 -4 5 -2\"/><path d=\"M155 98 q-14 -6 -14 -22 q8 3 14 14 M155 98 q14 -6 14 -22 q-8 3 -14 14\"/><path d=\"M178 40 L168 58 M168 58 q-3 4 -6 3\"/><path d=\"M173 49 q14 -4 16 -18 q-9 2 -16 12 M173 49 q-14 -4 -16 -18 q9 2 16 12\"/></g><g class=\"trait-liturgie\"><path d=\"M250 130 L250 105 M250 105 q4 -6 9 -4 M250 112 L238 118 M250 112 L258 106 M250 130 L242 132 M250 130 L258 132\"/></g><g class=\"trait-rubrique\"><path d=\"M60 25 m-3 0 l6 0 M60 25 m0 -3 l0 6 M100 45 m-3 0 l6 0 M100 45 m0 -3 l0 6 M220 20 m-3 0 l6 0 M220 20 m0 -3 l0 6 M300 60 m-3 0 l6 0 M300 60 m0 -3 l0 6\"/></g></svg>",
+  "titre": "Le ciel ouvert",
+  "titre_html": "Le ciel <span class=\"it\">ouvert</span>",
+  "sous_titre": "Fête des saints archanges Michel, Gabriel et Raphaël",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une échelle noueuse s'élève d'une terre sombre et labourée vers un ciel semé d'étoiles ; des silhouettes ailées la gravissent et la descendent en sens croisés, tandis qu'en bas, sous un figuier aux branches basses, un homme lève le visage sans encore comprendre ce qu'il voit.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture — Daniel",
+      "reference": "Dn 7, 9-10.13-14",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">9</span> Je regardai, pendant que l'on plaçait des trônes. Et un <button class=\"mot\" data-g=\"g-dn-atiq\">vieillard</button> s'assit. Son vêtement était blanc comme la neige, et les cheveux de sa tête étaient comme de la laine pure; son trône était comme des flammes de feu, et les roues comme un feu ardent. <span class=\"s\">10</span> Un fleuve de feu coulait et sortait de devant lui. Mille milliers le servaient, et dix mille millions se tenaient en sa présence. Les juges s'assirent, et les <button class=\"mot\" data-g=\"g-dn-livres\">livres</button> furent ouverts. <span class=\"s\">13</span> Je regardais pendant mes visions nocturnes, et voici, sur les nuées des cieux arriva quelqu'un de semblable à un <button class=\"mot\" data-g=\"g-dn-barenash\">fils de l'homme</button>; il s'avança vers l'ancien des jours, et on le fit approcher de lui. <span class=\"s\">14</span> On lui donna la domination, la gloire et le règne; et tous les peuples, les nations, et les hommes de toutes langues le servirent. Sa domination est une domination éternelle qui ne passera point, et son règne ne sera jamais détruit.",
+      "gloses": [
+        {
+          "id": "g-dn-atiq",
+          "lemme": "attiq yomin",
+          "html": "L'araméen עַתִּיק יוֹמִין, attiq yomin, signifie littéralement « l'ancien en jours », celui qui est avancé en jours. Au verset 9, Segond traduit par « vieillard », mais au verset 13, la même expression devient « l'ancien des jours » — deux rendus pour une seule locution, ce qui trahit une hésitation devant une image difficile à fixer en français. Les commentateurs juifs y voyaient une désignation de Dieu dans sa majesté immémoriale, et Hippolyte de Rome a lu dans ce trône de flammes une préfiguration du jugement dernier."
+        },
+        {
+          "id": "g-dn-livres",
+          "lemme": "sifrin",
+          "html": "L'araméen סִפְרִין, sifrin, désigne des rouleaux ou des registres, image empruntée à l'administration judiciaire des cours royales, où l'on consignait par écrit les actes et les sentences. Segond traduit simplement par « livres », ce qui garde la sobriété du texte mais efface la connotation de dossier déjà instruit. Cette image du tribunal céleste reparaît en Apocalypse 20, 12, signe que Jean relit consciemment cette scène de Daniel."
+        },
+        {
+          "id": "g-dn-barenash",
+          "lemme": "bar enash",
+          "html": "L'expression araméenne בַּר אֱנָשׁ, bar enash, signifie d'abord et simplement « un fils d'homme », c'est-à-dire un être humain, sans article défini dans le texte original. Segond traduit « un fils de l'homme », gardant l'indétermination de l'araméen : Daniel ne voit pas encore ici un titre messianique fixé, mais une figure humaine recevant une autorité divine. C'est cette page que Jésus reprend en se désignant lui-même comme « le Fils de l'homme », avec l'article cette fois, faisant de la vision de Daniel le fondement de son propre titre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Première lecture — Apocalypse (au choix)",
+      "reference": "Ap 12, 7-12a",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">7</span> Et il y eut un combat dans le ciel. Michel et ses anges combattirent contre le <button class=\"mot\" data-g=\"g-ap-drakon\">dragon</button>. Et le dragon et ses anges combattirent, <span class=\"s\">8</span> mais ils ne furent pas les plus forts, et leur place ne fut plus trouvée dans le ciel. <span class=\"s\">9</span> Et il fut précipité, le grand dragon, le serpent ancien, appelé le <button class=\"mot\" data-g=\"g-ap-diabolos\">diable</button> et <button class=\"mot\" data-g=\"g-ap-satan\">Satan</button>, celui qui séduit toute la terre, il fut précipité sur la terre, et ses anges furent précipités avec lui. <span class=\"s\">10</span> Et j'entendis dans le ciel une voix forte qui disait: Maintenant le salut, la puissance, et le règne de notre Dieu, et l'autorité de son Christ sont arrivés; car il a été précipité, l'<button class=\"mot\" data-g=\"g-ap-accusateur\">accusateur</button> de nos frères, celui qui les accusait devant notre Dieu jour et nuit. <span class=\"s\">11</span> Ils l'ont vaincu à cause du sang de l'agneau et à cause de la parole de leur <button class=\"mot\" data-g=\"g-ap-temoignage\">témoignage</button>, et ils n'ont pas aimé leur vie jusqu'à craindre la mort. <span class=\"s\">12</span> C'est pourquoi réjouissez-vous, cieux, et vous qui habitez dans les cieux.",
+      "gloses": [
+        {
+          "id": "g-ap-drakon",
+          "lemme": "drakōn",
+          "html": "Le grec δράκων, drakōn, désigne un serpent monstrueux, figure de chaos issue autant du folklore méditerranéen que des images bibliques du léviathan. Segond garde « dragon », un quasi-décalque qui a l'avantage de ne pas trahir l'image, mais qui la rend aussi étrangère au lecteur français qu'elle l'était pour les premiers auditeurs. L'identification au « serpent ancien » au verset suivant relie explicitement cette vision à Genèse 3, faisant de tout le chapitre une relecture cosmique de la chute."
+        },
+        {
+          "id": "g-ap-diabolos",
+          "lemme": "diabolos",
+          "html": "Le grec διάβολος, diabolos, vient du verbe diaballein, « jeter à travers », « désunir », « calomnier » — c'est le mot dont dérive notre « diable ». Segond conserve le décalque, ce qui masque le sens actif du terme : le diable n'est pas seulement un nom propre, mais une fonction, celle de celui qui divise et accuse. Origène insiste sur cette étymologie pour montrer que le mal se définit ici comme division, par contraste avec l'œuvre du Christ qui réunit."
+        },
+        {
+          "id": "g-ap-satan",
+          "lemme": "satan",
+          "html": "L'hébreu שָׂטָן, satan, signifie « l'adversaire », et désignait à l'origine une fonction juridique, celle de l'accusateur dans un procès, avant de devenir un nom propre, comme dans le prologue de Job. Segond translittère simplement le mot sans le traduire, suivant en cela la tradition depuis la Septante, qui avait déjà transposé le terme sans le rendre. Le verset suivant explicite cette fonction juridique en l'appelant « l'accusateur de nos frères »."
+        },
+        {
+          "id": "g-ap-accusateur",
+          "lemme": "katēgōr",
+          "html": "Le grec κατήγωρ, katēgōr, est un terme de tribunal, celui qui porte l'accusation publique, à la base de notre mot « catégorie » au sens logique ancien de chef d'accusation. En traduisant par « accusateur », Segond rend fidèlement l'image d'un procès permanent que Satan mènerait contre les croyants devant Dieu, déjà présente au prologue de Job. Jean affirme ici que ce procès est clos : l'accusateur a été précipité, non par une sentence, mais par le sang de l'Agneau."
+        },
+        {
+          "id": "g-ap-temoignage",
+          "lemme": "martyria",
+          "html": "Le grec μαρτυρία, martyria, désigne le témoignage rendu en justice, et c'est de ce mot que vient notre « martyr » — celui dont le témoignage est scellé par la mort. Segond traduit sobrement par « témoignage », ce qui est juste, mais qui a perdu, en français moderne, la charge judiciaire et parfois mortelle que le mot gardait pour les premiers lecteurs, en butte à la persécution. Ils l'ont vaincu, dit le texte, non par la force, mais par une parole qui a tenu bon jusqu'au bout."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 137 (138), 1-2a, 2bc-3, 4-5",
+      "traduction": "Louis Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> De David. <button class=\"mot\" data-g=\"g-ps-yadah\">Je te loue</button> de tout mon cœur, Je chante tes louanges en la présence de Dieu. <span class=\"s\">2</span> Je me prosterne dans ton saint <button class=\"mot\" data-g=\"g-ps-hekal\">temple</button>, et je célèbre ton nom, à cause de ta <button class=\"mot\" data-g=\"g-ps-hesed\">bonté</button> et de ta <button class=\"mot\" data-g=\"g-ps-emet\">fidélité</button>, car ta renommée s'est accrue par l'accomplissement de tes promesses. <span class=\"s\">3</span> Le jour où je t'ai invoqué, tu m'as exaucé, Tu m'as rassuré, tu as fortifié mon âme. <span class=\"s\">4</span> Tous les rois de la terre te loueront, ô Éternel! En entendant les paroles de ta bouche. <span class=\"s\">5</span> Ils célébreront les voies de l'Éternel, Car la gloire de l'Éternel est grande.",
+      "gloses": [
+        {
+          "id": "g-ps-yadah",
+          "lemme": "odekha",
+          "html": "Le verbe hébreu ידה, yadah, dont אוֹדְךָ, odekha, est la première personne, signifie d'abord « jeter », « lancer la main », avant de désigner l'action de louer ou de confesser, comme si la louange était un geste du corps entier tendu vers Dieu. Segond traduit par « je te loue », choix juste mais qui perd l'image physique du geste. C'est le même verbe qui donne son nom à Juda, Yehoudah, celui « que l'on célèbre »."
+        },
+        {
+          "id": "g-ps-hekal",
+          "lemme": "heikhal",
+          "html": "L'hébreu הֵיכָל, heikhal, désigne à la fois le palais royal et le temple, sans que la langue distingue nettement les deux, comme si la maison de Dieu était pensée d'abord comme la demeure d'un roi. Segond traduit par « temple », correct pour le contexte cultuel, mais efface la résonance royale que gardait le mot pour un lecteur israélite, habitué à l'entendre aussi pour la maison de David."
+        },
+        {
+          "id": "g-ps-hesed",
+          "lemme": "hesed",
+          "html": "Le hesed hébreu est l'un des mots les plus riches de l'Ancien Testament, une fidélité loyale qui dépasse l'obligation, un amour qui tient ses engagements même quand rien n'y contraint plus. Segond le traduit tantôt par « bonté », tantôt par « grâce » ou « miséricorde » selon les psaumes, faute d'un mot français équivalent. Calvin, dans son commentaire des psaumes, insiste sur ce double sens pour montrer que la louange répond non à un sentiment de Dieu, mais à son alliance tenue."
+        },
+        {
+          "id": "g-ps-emet",
+          "lemme": "emet",
+          "html": "L'hébreu אֱמֶת, emet, vient d'une racine qui signifie « être ferme, être stable », la même que celle du mot « amen » — dire emet, c'est dire ce sur quoi on peut s'appuyer sans vaciller. Segond traduit par « fidélité », ce qui restitue la stabilité du terme mais gomme le lien sonore avec l'amen liturgique. Associé au hesed dans le même verset, emet forme avec lui un couple traditionnel décrivant l'alliance de Dieu comme un amour qui ne ment pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Jn 1, 47-51",
+      "traduction": "Louis Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">47</span> Jésus, voyant venir à lui Nathanaël, dit de lui: Voici vraiment un Israélite, dans lequel il n'y a point de <button class=\"mot\" data-g=\"g-jn-dolos\">fraude</button>. <span class=\"s\">48</span> D'où me connais-tu? lui dit Nathanaël. Jésus lui répondit: Avant que Philippe t'appelât, quand tu étais sous le <button class=\"mot\" data-g=\"g-jn-sykee\">figuier</button>, je t'ai vu. <span class=\"s\">49</span> Nathanaël répondit et lui dit: Rabbi, tu es le Fils de Dieu, tu es le roi d'Israël. <span class=\"s\">50</span> Jésus lui répondit: Parce que je t'ai dit que je t'ai vu sous le figuier, tu crois; tu verras de plus grandes choses que celles-ci. <span class=\"s\">51</span> Et il lui dit: <button class=\"mot\" data-g=\"g-jn-amen\">En vérité, en vérité</button>, je vous le dis, vous verrez désormais le <button class=\"mot\" data-g=\"g-jn-ouvert\">ciel ouvert</button> et les anges de Dieu monter et descendre sur le Fils de l'homme.",
+      "gloses": [
+        {
+          "id": "g-jn-dolos",
+          "lemme": "dolos",
+          "html": "Le grec δόλος, dolos, désigne la ruse, l'appât ou le piège tendu à la proie, avant de signifier plus largement la fraude ou la duplicité. Segond traduit par « fraude », ce qui est exact, mais le choix devient bouleversant si l'on se souvient que Nathanaël porte le nom de Jacob, l'Israël originel, dont Genèse dit qu'il trompa son père et son frère par ruse. Jésus salue en Nathanaël l'Israélite véritable, celui qui réalise sans tromperie ce que le patriarche avait obtenu par le mensonge."
+        },
+        {
+          "id": "g-jn-sykee",
+          "lemme": "sykē",
+          "html": "Le figuier, συκῆ, sykē, était dans la tradition rabbinique le lieu privilégié de l'étude silencieuse de la Torah, à l'ombre duquel un maître pouvait méditer l'Écriture loin des regards. Segond garde simplement « figuier », laissant au lecteur moderne ignorer cette connotation, alors qu'elle éclaire tout l'échange : Jésus révèle avoir vu Nathanaël dans l'instant le plus intérieur de sa prière ou de son étude, ce qui suffit à emporter sa foi."
+        },
+        {
+          "id": "g-jn-amen",
+          "lemme": "amēn amēn",
+          "html": "La formule grecque Ἀμὴν ἀμὴν, amēn amēn, redouble un mot hébreu qui signifie « c'est ferme, c'est vrai », emprunté au vocabulaire liturgique où l'assemblée répond ainsi à une bénédiction. Segond conserve la translittération « en vérité, en vérité », fidèle à l'usage johannique : chez Jean seul, cet amen d'ouverture est redoublé, comme une signature stylistique qui annonce toujours une parole d'une gravité particulière. Aucun autre évangéliste ne connaît ce doublement."
+        },
+        {
+          "id": "g-jn-ouvert",
+          "lemme": "aneōgota",
+          "html": "Le participe parfait grec ἀνεῳγότα, aneōgota, indique un ciel qui a été ouvert et qui demeure ouvert, un état durable plutôt qu'un instant. Segond traduit « le ciel ouvert », ce qui rend bien le résultat mais efface la nuance temporelle du parfait grec. L'image reprend l'échelle de Jacob en Genèse 28, où les anges montent et descendent entre ciel et terre — Jésus annonce à Nathanaël, nouvel Israël, qu'il est lui-même désormais ce lieu de jonction."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une fête tardive, une union de trois anges",
+      "corps_html": "La date du 29 septembre remonte à la dédicace d'une basilique romaine consacrée à saint Michel sur la voie Salaria, attestée dès le Ve siècle. La réforme du calendrier romain de 1969 y a associé les fêtes de Gabriel et de Raphaël, auparavant célébrées à part, réunissant en un seul jour les trois seuls archanges nommés dans l'Écriture canonique."
+    },
+    {
+      "titre": "Daniel et l'Apocalypse, deux visions parentes",
+      "corps_html": "Le lectionnaire propose au choix deux visions de trône et de combat : celle de Daniel, où le Fils de l'homme reçoit un règne éternel devant l'Ancien des jours, et celle de l'Apocalypse, où Michel chasse le dragon du ciel. Daniel nomme déjà Michel comme le protecteur d'Israël (Dn 10, 13; 12, 1) ; Jean, des siècles plus tard, reprend cette figure pour raconter la victoire scellée par la croix."
+    }
+  ],
+  "analogie": {
+    "titre": "Le regard qui devance",
+    "variantes": [
+      "Il t'est arrivé de prier sans qu'aucune parole ne vienne, de te tenir devant Dieu l'esprit vide et les mains ouvertes sur rien, persuadé que cet instant sans éclat ne comptait pour personne, pas même pour toi. Puis, longtemps après, une phrase reçue d'un ami, un mot entendu en confession ou en prédication, t'a révélé que cet instant caché avait été vu, pesé, gardé, alors que tu croyais l'avoir vécu seul. Tu n'avais rien exhibé de toi-même sous ton figuier ; tu avais seulement été là, sans témoin — et c'est précisément cela qui avait été regardé. Devant cette antériorité du regard de Dieu, qui te connaît avant que tu ne te présentes à lui, tu es appelé, comme Nathanaël, à ne plus chercher comment il t'a vu, mais à croire ce qu'il te promet désormais.",
+      "Tu as connu ces périodes où un combat intérieur — une pensée qui te ronge, une peur, une tentation qui revient sans fin — semblait ne jamais devoir finir, où tu continuais de résister sans aucun signe que la lutte avançait. Puis un jour, sans que tu saches exactement quand ni comment, tu t'es rendu compte que cette pensée avait perdu sa force, que la place qu'elle occupait en toi ne lui appartenait plus. Tu n'as vu ni le combat ni la victoire ; tu en as seulement reçu le fruit, comme si tout s'était joué ailleurs, en amont de ta propre vigilance. C'est cette assurance-là que promet le texte : une victoire déjà remportée dans un lieu que tu ne vois pas, avant même que ta résistance n'ait porté ses fruits.",
+      "Tu as vécu ces saisons où le ciel te paraissait fermé, où tes prières semblaient s'arrêter au plafond sans que rien ne redescende en retour, et où tu en venais à douter qu'il existât encore un passage entre ce que tu portais et Dieu. Puis, parfois au moment où tu t'y attendais le moins, une aide est venue par un chemin que tu n'avais pas emprunté toi-même — une parole, une présence, une force reçue sans que tu l'aies mendiée directement. Tu as compris alors que la communication n'avait jamais cessé, seulement que tu n'en voyais pas le mouvement. C'est cette promesse que Jésus fait à Nathanaël : le ciel n'est plus fermé, un passage existe désormais entre ta terre et Dieu, même quand tu ne vois ni les anges monter ni les anges descendre."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre par cette promesse : tu es vu avant même de parler, et le ciel qui te semblait clos porte encore un passage ouvert.",
+    "geste": "Reste une minute en silence, sans rien demander, en te sachant simplement regardé — comme Nathanaël sous son figuier, avant même de savoir qu'il était vu.",
+    "note": "Aujourd'hui l'Église fête Michel, Gabriel et Raphaël : trois noms qui disent chacun, dans leur langue, une manière dont Dieu se penche vers toi — combattre pour toi, t'annoncer une parole, te guérir."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore d'apprendre qu'il a été vu depuis toujours ?",
+  "racines": [
+    {
+      "titre": "Grégoire le Grand sur les anges",
+      "corps_html": "Grégoire le Grand explique que les noms des anges disent leur mission plutôt que leur nature : Michel, « Qui est comme Dieu ? », combat l'orgueil de qui prétend s'égaler à lui ; Gabriel, « Force de Dieu », annonce l'Incarnation, œuvre de puissance ; Raphaël, « Dieu guérit », accompagne Tobie et referme les plaies. Un ange n'est pas nommé pour lui-même, mais pour le service qu'il accomplit.",
+      "attribution": "Grégoire le Grand, Homélies sur les évangiles"
+    },
+    {
+      "titre": "Jean Chrysostome sur Nathanaël",
+      "corps_html": "Chrysostome remarque que Jésus loue Nathanaël avant même de lui avoir parlé, preuve qu'il connaît les cœurs et non seulement les actes. Il rapproche la scène du figuier de la coutume juive de prier ou d'étudier sous cet arbre, et voit dans la promesse finale — le ciel ouvert, les anges montant et descendant — l'annonce que le Fils de l'homme devient lui-même l'échelle de Jacob.",
+      "attribution": "Jean Chrysostome, Homélies sur saint Jean"
+    },
+    {
+      "titre": "Calvin sur le trône de Daniel",
+      "corps_html": "Calvin lit la vision de Daniel comme une consolation adressée à une Église opprimée : le trône de flammes et les livres ouverts disent que le jugement de Dieu n'attend pas la fin de l'histoire pour commencer, et que le règne donné au Fils de l'homme, bien que caché aux yeux des puissants de ce monde, ne passera jamais, quoi qu'il arrive aux empires qui persécutent les fidèles.",
+      "attribution": "Calvin, Leçons sur le livre de Daniel"
+    }
+  ]
+}
