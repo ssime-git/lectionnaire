@@ -132,9 +132,8 @@ def _valider(d: dict, chemin: Path) -> None:
                 )
 
 
-def rendre(jour: str) -> Path:
-    donnees = charger_jour(jour)
-
+def rendre_html(donnees: dict) -> str:
+    """Rend la page d'un jour déjà chargé, sans rien écrire."""
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         # autoescape désactivé : le contenu porte du HTML volontaire (| safe).
@@ -150,8 +149,11 @@ def rendre(jour: str) -> Path:
         comment_start_string="{##",
         comment_end_string="##}",
     )
-    template = env.get_template("jour.html.j2")
-    html = template.render(**donnees)
+    return env.get_template("jour.html.j2").render(**donnees)
+
+
+def rendre(jour: str) -> Path:
+    html = rendre_html(charger_jour(jour))
 
     DOCS.mkdir(exist_ok=True)
     sortie = DOCS / f"{jour}.html"
