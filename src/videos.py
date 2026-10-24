@@ -44,6 +44,22 @@ def charger_catalogue(chemin: Path = CATALOGUE) -> dict[str, str]:
     return {v["id"]: v["titre"] for v in d.get("videos", [])}
 
 
+def telecharger_vignette(vid: str, dossier: Path) -> Path | None:
+    """Vignette servie depuis le site : le lecteur ne contacte Google qu'en
+    cliquant. Jamais d'exception — sans image, la façade affiche le titre."""
+    chemin = dossier / f"{vid}.jpg"
+    if chemin.exists():
+        return chemin
+    try:
+        r = requests.get(f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg", timeout=20)
+        r.raise_for_status()
+    except requests.RequestException:
+        return None
+    dossier.mkdir(parents=True, exist_ok=True)
+    chemin.write_bytes(r.content)
+    return chemin
+
+
 def extraire_videos(donnees: Any) -> dict[str, str]:
     """Collecte les vidéos d'un JSON YouTube, quel que soit son niveau
     d'imbrication. Deux formats coexistent selon les pages."""

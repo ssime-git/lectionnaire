@@ -20,6 +20,8 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from videos import CHAINE, charger_catalogue, telecharger_vignette
+
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
 TEMPLATE_DIR = RACINE / "template"
@@ -53,7 +55,28 @@ def charger_jour(jour: str) -> dict:
     donnees["date_complete"] = _date_complete(donnees.get("date", jour))
     _resoudre_analogie(donnees)
     _valider(donnees, chemin)
+    _preparer_videos(donnees, charger_catalogue(), DOCS / "vignettes")
     return donnees
+
+
+def _preparer_videos(d: dict, catalogue: dict[str, str], dossier: Path) -> None:
+    """Complète les vidéos choisies : titre du catalogue (jamais celui du
+    modèle), vignette locale, études de mots avant panoramas de livres."""
+    preparees = []
+    for groupe in ("mot", "livre"):
+        for v in d.get("videos") or []:
+            if v.get("groupe") != groupe:
+                continue
+            fichier = telecharger_vignette(v["id"], dossier)
+            preparees.append({
+                "id": v["id"],
+                "titre": catalogue.get(v["id"], v["id"]),
+                "raison": v.get("raison", ""),
+                "groupe": groupe,
+                "vignette": f"vignettes/{fichier.name}" if fichier else None,
+            })
+    d["videos"] = preparees
+    d["chaine"] = CHAINE
 
 
 def _resoudre_analogie(d: dict) -> None:

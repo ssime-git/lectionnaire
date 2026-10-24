@@ -57,6 +57,32 @@ class CatalogueTests(unittest.TestCase):
             self.assertEqual([v["titre"] for v in d["videos"]], ["Amos", "Zacharie"])
 
 
+class VignetteTests(unittest.TestCase):
+    def test_telecharger_ne_retelecharge_pas(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "1g4u57TSY0g.jpg").write_bytes(b"jpg")
+            with patch("videos.requests.get") as get:
+                self.assertEqual(videos.telecharger_vignette("1g4u57TSY0g", Path(tmp)),
+                                 Path(tmp) / "1g4u57TSY0g.jpg")
+            get.assert_not_called()
+
+    def test_telecharger_ecrit_le_fichier(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("videos.requests.get", return_value=Mock(content=b"jpg", status_code=200)) as get:
+                chemin = videos.telecharger_vignette("1g4u57TSY0g", Path(tmp) / "vignettes")
+            self.assertEqual(chemin.read_bytes(), b"jpg")
+            self.assertEqual(get.call_args.args[0], "https://i.ytimg.com/vi/1g4u57TSY0g/hqdefault.jpg")
+
+    def test_telecharger_renvoie_none_sur_erreur(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("videos.requests.get", side_effect=videos.requests.ConnectionError("hors ligne")):
+                self.assertIsNone(videos.telecharger_vignette("1g4u57TSY0g", Path(tmp)))
+            erreur = Mock(status_code=404)
+            erreur.raise_for_status.side_effect = videos.requests.HTTPError("404")
+            with patch("videos.requests.get", return_value=erreur):
+                self.assertIsNone(videos.telecharger_vignette("1g4u57TSY0g", Path(tmp)))
+
+
 class RecupererTests(unittest.TestCase):
     def test_recuperer_refuse_la_page_de_consentement(self) -> None:
         # En Europe, sans cookie, YouTube redirige vers consent.youtube.com.
