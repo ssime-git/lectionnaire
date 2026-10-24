@@ -28,6 +28,9 @@ CLES_REQUISES = {
 
 CLASSES_CONNUES = {"", "psaume", "evangile", "genealogie"}
 TRAITS_AUTORISES = {"trait-encre", "trait-liturgie", "trait-rubrique"}
+GROUPES_VIDEO = {"mot", "livre"}
+MAX_VIDEOS = 8
+CATALOGUE_VIDEOS = Path(__file__).resolve().parent.parent / "data" / "videos.json"
 SOURCES_INTERDITES = re.compile(
     r"\b(TOB|Bible de Jérusalem|Segond 21|traduction liturgique)\b", re.I)
 
@@ -40,7 +43,14 @@ def valider(chemin: Path) -> list[str]:
     return valider_contrat(d)
 
 
-def valider_contrat(d: dict) -> list[str]:
+def _ids_du_catalogue() -> set[str]:
+    if not CATALOGUE_VIDEOS.exists():
+        return set()
+    d = json.loads(CATALOGUE_VIDEOS.read_text(encoding="utf-8"))
+    return {v["id"] for v in d.get("videos", [])}
+
+
+def valider_contrat(d: dict, catalogue: set[str] | None = None) -> list[str]:
     """Même contrôle que `valider`, mais sur un dict déjà chargé — pour que
     generate.py puisse refuser (et faire réparer) un contrat avant de l'écrire."""
     fautes: list[str] = []
@@ -122,6 +132,28 @@ def valider_contrat(d: dict) -> list[str]:
         if not r.get("attribution"):
             fautes.append(f"racine {r.get('titre', '?')!r} : attribution manquante. "
                           f"Le site est anonyme : son autorité vient de ses sources.")
+
+    # 9. Vidéos (optionnelles) : uniquement le catalogue, chacune justifiée
+    videos = d.get("videos") or []
+    if videos:
+        ids = _ids_du_catalogue() if catalogue is None else catalogue
+        if len(videos) > MAX_VIDEOS:
+            fautes.append(f"videos : {len(videos)} vidéos, au plus {MAX_VIDEOS}.")
+        vues: set[str] = set()
+        for v in videos:
+            vid = v.get("id", "")
+            if ids and vid not in ids:
+                fautes.append(f"vidéo {vid!r} hors catalogue (data/videos.json) — "
+                              f"jamais d'id inventé.")
+            if vid in vues:
+                fautes.append(f"vidéo {vid!r} en doublon.")
+            vues.add(vid)
+            if not str(v.get("raison", "")).strip():
+                fautes.append(f"vidéo {vid!r} : raison manquante (une phrase qui la "
+                              f"relie à un verset ou un livre du jour).")
+            if v.get("groupe") not in GROUPES_VIDEO:
+                fautes.append(f"vidéo {vid!r} : groupe inconnu {v.get('groupe')!r} "
+                              f"({' ou '.join(sorted(GROUPES_VIDEO))}).")
 
     return fautes
 

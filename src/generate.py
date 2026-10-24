@@ -26,7 +26,8 @@ import requests
 
 from refs import recuperer, texte_segond  # type: ignore
 from liturgie import depuis_aelf  # type: ignore
-from valider import CLASSES_CONNUES, valider_contrat  # type: ignore
+from valider import CLASSES_CONNUES, GROUPES_VIDEO, MAX_VIDEOS, valider_contrat  # type: ignore
+from videos import charger_catalogue  # type: ignore
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -297,7 +298,8 @@ def _normaliser_classes(contenu: dict) -> None:
             lec["classe"] = aplati
 
 
-def _reparer(contrat: dict, fautes: list[str], essais: int = 2) -> dict:
+def _reparer(contrat: dict, fautes: list[str], essais: int = 2,
+             catalogue: dict[str, str] | None = None) -> dict:
     """Renvoie le contrat au modèle avec ses fautes jusqu'à ce que la
     validation passe. Lève ValueError une fois les essais épuisés."""
     for essai in range(essais):
@@ -317,6 +319,8 @@ def _reparer(contrat: dict, fautes: list[str], essais: int = 2) -> dict:
             if cle in contrat:
                 repare[cle] = contrat[cle]
         _normaliser_classes(repare)
+        if catalogue is not None:
+            _filtrer_videos(repare, catalogue)
         contrat = repare
         fautes = valider_contrat(contrat)
         if not fautes:
@@ -450,6 +454,8 @@ def construire_json(date_iso: str) -> dict:
             ),
         },
     }
+    catalogue = charger_catalogue()
+    _ajouter_catalogue(demande, catalogue)
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
     # Si le modèle rédacteur a produit un SVG malgré la consigne, on l'écarte :
@@ -484,9 +490,10 @@ def construire_json(date_iso: str) -> dict:
     # 4) Le validateur passe AVANT l'écriture : ce qu'il refuse part en
     #    réparation, au lieu de faire échouer le workflow deux étapes plus loin.
     _normaliser_classes(contrat)
+    _filtrer_videos(contrat, catalogue)
     fautes = valider_contrat(contrat)
     if fautes:
-        contrat = _reparer(contrat, fautes)
+        contrat = _reparer(contrat, fautes, catalogue=catalogue)
     if contrat["gravure_svg"] is _GRAVURE_ABSENTE:
         print("⚠  Pas de bois gravé pour ce jour : la page paraîtra sans image. "
               "Ajoute 'gravure_svg' à la main dans le JSON.")
@@ -505,6 +512,36 @@ CLES_REQUISES = {
     "invitation", "question", "racines", "references_brutes",
     "traduction_globale",
 }
+
+
+def _ajouter_catalogue(demande: dict, catalogue: dict[str, str]) -> None:
+    """Donne au rédacteur le catalogue des vidéos : il ne choisit que dedans."""
+    demande["catalogue_videos"] = [f"{i} | {t}" for i, t in catalogue.items()]
+    demande["consigne"] += (
+        " Ajoute aussi la clé videos (0 à 8 {id, raison, groupe: 'mot'|'livre'}) : "
+        "uniquement des ids de catalogue_videos (BibleProject - Français) ; "
+        "'mot' pour une étude de mot ou un thème qui touche un verset précis du "
+        "jour, 'livre' pour le panorama d'un livre lu ce jour ; raison = une "
+        "phrase qui relie la vidéo à un verset ou à un livre du jour. Une liste "
+        "vide vaut mieux qu'une vidéo sans lien réel avec les textes."
+    )
+
+
+def _filtrer_videos(contrat: dict, catalogue: dict[str, str]) -> None:
+    """Ce qui n'existe pas ne passe pas : ids hors catalogue, doublons, vidéos
+    sans raison ou de groupe inconnu sont retirés avant la validation. Le titre
+    viendra du catalogue au rendu, jamais du modèle."""
+    gardees, vues = [], set()
+    for v in contrat.get("videos") or []:
+        if not isinstance(v, dict):
+            continue
+        vid = v.get("id")
+        if (vid not in catalogue or vid in vues or not str(v.get("raison", "")).strip()
+                or v.get("groupe") not in GROUPES_VIDEO):
+            continue
+        vues.add(vid)
+        gardees.append({"id": vid, "raison": str(v["raison"]).strip(), "groupe": v["groupe"]})
+    contrat["videos"] = gardees[:MAX_VIDEOS]
 
 
 def _cles_manquantes(contrat: dict) -> list[str]:

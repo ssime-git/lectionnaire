@@ -352,6 +352,18 @@ class ReparerTests(unittest.TestCase):
         self.assertIn("g-loue", demande)
         self.assertNotIn("gravure_svg", demande)
 
+    def test_reparer_refiltre_les_videos_du_reparateur(self) -> None:
+        # Le réparateur peut réintroduire une vidéo inventée : elle est
+        # retirée, au lieu de faire échouer la nuit.
+        casse = self._casser(_contrat_valide())
+        fautes = valider.valider_contrat(casse)
+        repare = {k: v for k, v in _contrat_valide().items() if k != "gravure_svg"}
+        repare["videos"] = [{"id": "inventee123", "raison": "x", "groupe": "mot"},
+                            {"id": "1g4u57TSY0g", "raison": 7, "groupe": "mot"}]
+        with patch("generate._appel", return_value=generate.json.dumps(repare, ensure_ascii=False)):
+            resultat = generate._reparer(casse, fautes, catalogue={"1g4u57TSY0g": "Shema / Écouter"})
+        self.assertEqual(resultat["videos"], [{"id": "1g4u57TSY0g", "raison": "7", "groupe": "mot"}])
+
     def test_reparer_reimpose_les_champs_deterministes(self) -> None:
         casse = self._casser(_contrat_valide())
         fautes = valider.valider_contrat(casse)
@@ -390,6 +402,39 @@ class ContratTests(unittest.TestCase):
         del contrat["titre"]
         del contrat["analogie"]
         self.assertEqual(generate._cles_manquantes(contrat), ["analogie", "titre"])
+
+
+class VideosTests(unittest.TestCase):
+    CATALOGUE = {f"vid{i:08d}": f"Titre {i}" for i in range(12)}
+
+    def test_filtrer_retire_inconnues_doublons_et_tronque(self) -> None:
+        bonnes = [{"id": f"vid{i:08d}", "raison": "Lien au jour.", "groupe": "mot", "titre": "inventé"}
+                  for i in range(10)]
+        contrat = {"videos": [{"id": "inventee123", "raison": "x", "groupe": "mot"}, bonnes[0], *bonnes]}
+        generate._filtrer_videos(contrat, self.CATALOGUE)
+        ids = [v["id"] for v in contrat["videos"]]
+        self.assertEqual(len(ids), 8)
+        self.assertEqual(len(set(ids)), 8)
+        self.assertNotIn("inventee123", ids)
+        self.assertTrue(all("titre" not in v for v in contrat["videos"]))
+
+    def test_filtrer_retire_sans_raison_et_groupe_inconnu(self) -> None:
+        contrat = {"videos": [{"id": "vid00000000", "raison": " ", "groupe": "mot"},
+                              {"id": "vid00000001", "raison": "Lien.", "groupe": "theme"},
+                              {"id": "vid00000002", "raison": "Lien.", "groupe": "livre"}]}
+        generate._filtrer_videos(contrat, self.CATALOGUE)
+        self.assertEqual([v["id"] for v in contrat["videos"]], ["vid00000002"])
+
+    def test_filtrer_sans_champ_donne_liste_vide(self) -> None:
+        contrat: dict = {}
+        generate._filtrer_videos(contrat, self.CATALOGUE)
+        self.assertEqual(contrat["videos"], [])
+
+    def test_demande_contient_le_catalogue(self) -> None:
+        demande = {"consigne": "Produis le JSON."}
+        generate._ajouter_catalogue(demande, {"1g4u57TSY0g": "Shema / Écouter"})
+        self.assertEqual(demande["catalogue_videos"], ["1g4u57TSY0g | Shema / Écouter"])
+        self.assertIn("videos (0 à 8", demande["consigne"])
 
 
 if __name__ == "__main__":
