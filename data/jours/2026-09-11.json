@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-11",
+  "date_humaine": "vendredi",
+  "semaine": "23ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 9, 16-19.22-27 ; Lc 6, 39-42",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M8 128 h324\"/><path d=\"M141 54 q9 -9 18 0 q-9 9 -18 0 z\"/><path d=\"M150 63 q16 14 20 32\"/><path d=\"M170 95 q-12 8 -15 15 q-6 8 -17 17\"/><path d=\"M170 95 q14 8 20 13 q10 8 20 18\"/><path d=\"M156 68 q-14 6 -24 16\"/></g><g class=\"trait-liturgie\"><path d=\"M268 28 v100\"/><path d=\"M268 42 q-90 5 -160 30\"/></g><g class=\"trait-rubrique\"><path d=\"M152 64 q-12 -6 -6 -12\"/><path d=\"M144 52 h5\"/></g></svg>",
+  "titre": "Voir et courir",
+  "titre_html": "Voir <span class=\"it\">et courir</span>",
+  "sous_titre": "Paul s'impose une discipline d'athlète pour ne pas être disqualifié ; Jésus demande qu'on ôte d'abord la poutre de son œil avant de vouloir guider qui que ce soit.",
+  "suite_hier": null,
+  "gravure_alt": "Un coureur du stade antique, corps penché vers la ligne d'arrivée, dont l'un des bras se lève non pour recevoir une couronne mais pour toucher son propre œil, comme s'il devait d'abord s'y voir avant d'atteindre le but — deux gestes de la lecture du jour fondus en une seule silhouette au trait gravé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 9, 16-19.22-27",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">16</span> Si je prêche l'Évangile, ce n'est pas pour moi un sujet de gloire, car la <button class=\"mot\" data-g=\"g-anagke\">nécessité</button> m'en est imposée, et malheur à moi si je ne prêche pas l'Évangile !</p><p><span class=\"s\">17</span> Si je le fais de bon cœur, j'en ai la récompense ; mais si je le fais malgré moi, c'est une charge qui m'est confiée.</p><p><span class=\"s\">18</span> Quelle est donc ma récompense ? C'est d'offrir <button class=\"mot\" data-g=\"g-adapanon\">gratuitement</button> l'Évangile que j'annonce, sans user de mon droit de prédicateur de l'Évangile.</p><p><span class=\"s\">19</span> Car, bien que je sois libre à l'égard de tous, je me suis rendu le <button class=\"mot\" data-g=\"g-doulos\">serviteur</button> de tous, afin de gagner le plus grand nombre.</p><p><span class=\"s\">22</span> J'ai été faible avec les faibles, afin de gagner les faibles. Je me suis fait tout à tous, afin d'en sauver de toute manière quelques-uns.</p><p><span class=\"s\">23</span> Je fais tout à cause de l'Évangile, afin d'y avoir part.</p><p><span class=\"s\">24</span> Ne savez-vous pas que ceux qui courent dans le stade courent tous, mais qu'un seul remporte le prix ? Courez de manière à le remporter.</p><p><span class=\"s\">25</span> Tous ceux qui combattent s'imposent toute espèce d'abstinences, et ils le font pour obtenir une couronne corruptible ; mais nous, faisons-le pour une <button class=\"mot\" data-g=\"g-aphtharton\">couronne incorruptible</button>.</p><p><span class=\"s\">26</span> Ainsi donc, je cours, non pas comme au hasard ; je frappe, non pas comme battant l'air.</p><p><span class=\"s\">27</span> Mais je traite durement mon corps et je le tiens assujetti, de peur d'être moi-même <button class=\"mot\" data-g=\"g-adokimos\">rejeté</button>, après avoir prêché aux autres.</p>",
+      "gloses": [
+        {
+          "id": "g-anagke",
+          "lemme": "ἀνάγκη",
+          "html": "Le mot grec est <span class=\"gr\">anankè</span>, contrainte ou nécessité, qui structure toute la phrase. Segond traduit « la nécessité m'en est imposée », gardant la passivité du verbe grec ἐπίκειται, « elle pèse sur moi » : Paul ne se vante pas d'un zèle personnel, il subit une charge posée sur lui, comme la main de Dieu sur Jérémie, « il y avait dans mon cœur comme un feu dévorant » (Jr 20, 9). Chrysostome, dans ses Homélies sur la première épître aux Corinthiens (homélie 21), insiste sur ce point : la prédication de Paul n'est pas un mérite mais une dette, ce qui fonde son « malheur à moi » comme un cri de prophète plutôt qu'une plainte d'employé."
+        },
+        {
+          "id": "g-adapanon",
+          "lemme": "ἀδάπανον",
+          "html": "Segond traduit « gratuitement », mais le grec <span class=\"gr\">adapanon</span> signifie littéralement « sans dépense », un terme économique et non affectif. Paul ne dit pas qu'il prêche sans calcul intérieur, mais qu'il refuse de se faire payer, alors que la loi, évoquée juste avant, l'y autoriserait. Ce choix de traduction efface la dimension très concrète du débat corinthien, où certains reprochaient précisément à Paul de ne rien accepter — signe, pensaient-ils, qu'il n'était pas un vrai apôtre."
+        },
+        {
+          "id": "g-doulos",
+          "lemme": "δοῦλος",
+          "html": "Le mot grec est <span class=\"gr\">doulos</span>, l'esclave, non le serviteur salarié que suggère la traduction adoucie de Segond. Paul choisit délibérément le mot le plus bas de l'échelle sociale antique pour décrire sa liberté même : libre de tous, il s'est fait l'esclave de tous. Ce renversement annonce le vocabulaire de Philippiens 2, 7, où le Christ « prit la forme d'un esclave » ; Paul applique à son propre ministère le mouvement même de l'incarnation."
+        },
+        {
+          "id": "g-aphtharton",
+          "lemme": "ἄφθαρτον",
+          "html": "L'adjectif grec <span class=\"gr\">aphtharton</span> désigne ce qui échappe à la corruption, à la dissolution des corps. Segond traduit « incorruptible », ce qui garde bien le sens, mais perd l'écho qu'avait le mot pour des lecteurs corinthiens : la couronne de pin remise aux vainqueurs des Jeux isthmiques, disputés tout près de Corinthe, se flétrissait en quelques jours. Calvin, dans son commentaire, appelle cela « la récompense qui ne vieillit point »."
+        },
+        {
+          "id": "g-adokimos",
+          "lemme": "ἀδόκιμος",
+          "html": "Le grec <span class=\"gr\">adokimos</span> appartient au vocabulaire de l'orfèvre : il qualifie le métal qui, à l'épreuve du feu, se révèle impur et doit être rejeté. Segond traduit « rejeté », ce qui est juste mais lisse la métaphore technique sous-jacente — Paul ne craint pas un jugement moral abstrait, il craint l'épreuve qui démasque le faux. C'est le même mot qu'il emploie en 2 Corinthiens 13, 5 pour inviter les croyants à s'examiner eux-mêmes, « de peur que vous ne soyez réprouvés »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 83 (84), 3, 4, 5-6, 12",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">3</span> Mon âme <button class=\"mot\" data-g=\"g-nichsefa\">soupire et languit</button> après les parvis de l'Éternel, mon cœur et ma chair poussent des cris vers le Dieu vivant.</p><p><span class=\"s\">4</span> Le passereau même trouve une maison, et l'hirondelle un nid où elle dépose ses petits, tes autels, Éternel des armées ! Mon roi et mon Dieu !</p><p><span class=\"s\">5</span> <button class=\"mot\" data-g=\"g-ashrei\">Heureux</button> ceux qui habitent ta maison ! Ils peuvent te célébrer encore. Pause.</p><p><span class=\"s\">6</span> Heureux ceux qui placent en toi leur appui ! Ils trouvent dans leur cœur des <button class=\"mot\" data-g=\"g-mesillot\">chemins tout tracés</button>.</p><p><span class=\"s\">12</span> Car l'Éternel Dieu est un soleil et un bouclier, l'Éternel donne la grâce et la gloire, il ne refuse aucun bien à ceux qui marchent dans l'intégrité.</p>",
+      "gloses": [
+        {
+          "id": "g-nichsefa",
+          "lemme": "נִכְסְפָה",
+          "html": "Le verbe hébreu ici est <span class=\"gr\">nikhsaf</span>, qui décrit littéralement le teint qui blêmit de désir, comme on pâlit à force d'attendre quelqu'un qui tarde. Segond le rend par un doublet, « soupire et languit », pour restituer en français ce que l'hébreu dit en un seul mot intense. Rachi et les commentateurs juifs médiévaux y entendent moins une émotion passagère qu'un épuisement physique du corps entier tourné vers le sanctuaire — le verset précise d'ailleurs aussitôt « mon cœur et ma chair ». Calvin, commentant ce psaume, y voit la marque d'un désir authentique de Dieu, distinct de la dévotion de façade."
+        },
+        {
+          "id": "g-ashrei",
+          "lemme": "אַשְׁרֵי",
+          "html": "L'hébreu porte <span class=\"gr\">ashrei</span>, un pluriel construit intraduisible tel quel, littéralement « les bonheurs de… », qui ouvre aussi le Psaume 1 et que la Septante rendra par μακάριος, le mot même des Béatitudes de Matthieu 5. Segond traduit simplement « Heureux », ce qui est fidèle mais efface le lien littéraire que percevait tout lecteur juif ancien entre ce psaume et l'ouverture du Psautier. Ce n'est pas un souhait ni une émotion : c'est une déclaration sur l'état objectif de celui qui habite près de Dieu, avant même qu'il le ressente."
+        },
+        {
+          "id": "g-mesillot",
+          "lemme": "מְסִלָּה",
+          "html": "Le mot hébreu <span class=\"gr\">mesillah</span> désigne une route surélevée et damée, souvent royale ou processionnelle — le même mot sert pour la route que le pèlerin trace en marchant vers Jérusalem à travers la vallée de Baca mentionnée juste après. Segond traduit « des chemins tout tracés », ce qui rend bien l'idée d'une voie déjà frayée, mais perd l'image très concrète de la chaussée construite. Les commentateurs rabbiniques y ont vu la promesse que celui qui met en Dieu son appui trouve, même dans une terre aride, un chemin praticable là où il n'y en avait pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 6, 39-42",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">39</span> Il leur dit aussi cette parabole : un aveugle peut-il conduire un aveugle ? Ne tomberont-ils pas tous deux dans une fosse ?</p><p><span class=\"s\">40</span> Le disciple n'est pas au-dessus de son maître ; mais tout disciple accompli sera comme son maître.</p><p><span class=\"s\">41</span> Pourquoi vois-tu la <button class=\"mot\" data-g=\"g-karphos\">paille</button> qui est dans l'œil de ton frère, et n'aperçois-tu pas la <button class=\"mot\" data-g=\"g-dokos\">poutre</button> qui est dans ton œil ?</p><p><span class=\"s\">42</span> Ou comment peux-tu dire à ton frère : Frère, laisse-moi ôter la paille qui est dans ton œil, toi qui ne vois pas la poutre qui est dans le tien ? <button class=\"mot\" data-g=\"g-hypokrites\">Hypocrite</button>, ôte premièrement la poutre de ton œil, et alors tu verras comment ôter la paille qui est dans l'œil de ton frère.</p>",
+      "gloses": [
+        {
+          "id": "g-karphos",
+          "lemme": "κάρφος",
+          "html": "Le grec <span class=\"gr\">karphos</span> désigne un fragment minuscule et sec — un fétu de paille, une esquille de bois, quelque chose d'assez léger pour se loger sous une paupière. Segond traduit « paille », ce qui rend bien l'image rurale, familière à des auditeurs habitués aux aires de battage. Le mot n'a rien d'anodin dans sa légèreté même : c'est parce que la faute du frère est minime que l'aveuglement de celui qui la dénonce devient comique, un comique que Chrysostome, dans ses Homélies sur Matthieu (homélie 23, sur l'épisode parallèle), qualifie de grotesque plutôt que de simplement injuste."
+        },
+        {
+          "id": "g-dokos",
+          "lemme": "δοκός",
+          "html": "Le grec <span class=\"gr\">dokos</span> est le terme technique de la charpente, la poutre maîtresse qui porte un toit, par opposition au fragile karphos. L'image ne fonctionne que par ce contraste de taille absurde, propre à l'hyperbole que Jésus emploie ailleurs, comme le chameau et le chas de l'aiguille. Segond traduit littéralement « poutre », sans perte notable ; la difficulté n'est pas lexicale ici mais existentielle, puisque nul ne sent le poids de sa propre poutre tant qu'il regarde à travers elle plutôt que de la regarder elle-même."
+        },
+        {
+          "id": "g-hypokrites",
+          "lemme": "ὑποκριτής",
+          "html": "Le grec <span class=\"gr\">hypokritès</span> désignait à l'origine l'acteur du théâtre, celui qui répond depuis derrière un masque — le mot garde cette racine de réponse scénique, hypokrinomai, jouer un rôle. Segond conserve le mot par simple transcription, « Hypocrite », ce qui a fini par créer en français un faux ami : on entend une catégorie morale figée là où le grec décrit un geste, celui de jouer la scène du juge sans avoir soi-même quitté le banc des accusés. Jésus ne classe pas son interlocuteur parmi les hypocrites, il le surprend en train de jouer ce rôle précis, à cet instant précis."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un apôtre sans salaire",
+      "corps_html": "Paul écrit depuis Éphèse vers l'an 55, à une Église qu'il a fondée et qui doute désormais de lui : n'ayant jamais réclamé d'entretien matériel, contrairement aux autres prédicateurs itinérants, il passe pour faible aux yeux de certains Corinthiens plutôt que pour libre. Corinthe organisait tous les deux ans les Jeux isthmiques, second concours grec après Olympie : l'image du stade et de la couronne parle donc à un public qui l'avait vue de ses propres yeux, non loin de chez lui."
+    },
+    {
+      "titre": "Un psaume de pèlerinage",
+      "corps_html": "Le Psaume 84 appartient au recueil des fils de Coré, lévites chargés du chant au second Temple. Sa forme — désir des parvis, bonheur du portier plutôt que du prince, route tracée dans la vallée aride de Baca — correspond au genre des psaumes chantés par les pèlerins montant à Jérusalem pour les trois fêtes de pèlerinage prescrites par la Torah (Dt 16, 16)."
+    }
+  ],
+  "analogie": {
+    "titre": "L'œil et la charge",
+    "variantes": [
+      "Il y a cette rapidité presque physique avec laquelle tu repères la faute de l'autre — une parole plus dure qu'elle n'aurait dû l'être, une lenteur, un manque — avant même d'avoir fini de la juger en toi tu as déjà commencé à t'en distinguer, à te placer un cran au-dessus. Ce qui met plus de temps à se lever, c'est le même défaut logé chez toi depuis si longtemps que tu as cessé de le voir comme un défaut : il a pris la texture du normal, du « c'est ainsi que je suis », et personne, pas même toi, ne songe plus à l'examiner. Ce n'est pas un effort de mémoire qui peut l'exhumer — seul le regard de Dieu, plus patient que le tien, sait remonter jusque-là et nommer ce que ton propre jugement, si prompt pour autrui, n'atteint jamais chez toi.",
+      "Tu connais peut-être cette discipline intérieure que tu tiens depuis des années sans qu'elle produise jamais rien de montrable — une prière maintenue quand elle ne console pas, un silence gardé quand la réplique aurait été juste, un renoncement que personne ne remarque et qui ne te rapporte, en apparence, absolument rien. Le corps et le cœur continuent de résister à chaque reprise, comme au premier jour, et rien n'indique que cet entraînement mène quelque part de visible. Ce n'est pourtant pas pour toi-même que cette discipline a un sens, mais pour que ce que tu annonces de Dieu aux autres ne soit pas contredit, à l'instant même où tu le dis, par ta propre vie non tenue devant lui.",
+      "Tu as déjà renoncé, pour quelqu'un, à faire valoir un droit que tu avais réellement — te taire alors que tu aurais eu raison de parler, céder une place qui t'était due, ne pas relever une erreur qui te concernait pour ne pas écraser celui qui la faisait. Ce renoncement-là ne laisse aucune trace, personne ne t'en tiendra compte, et une part de toi voudrait au moins qu'on sache que tu en étais capable. Mais c'est précisément dans cet effacement sans témoin que se rejoue, à ton échelle la plus modeste, le mouvement même par lequel Dieu s'est fait le serviteur de ceux qu'il aurait pu simplement commander."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre quiconque aujourd'hui, laisse Dieu regarder d'abord ce que tu portes, toi.",
+    "geste": "Choisis un moment de calme et nomme, devant Dieu et non devant un miroir, une chose que tu reproches facilement à quelqu'un d'autre ; demande-toi ensuite, sans te condamner, depuis combien de temps elle loge chez toi sans que tu l'aies vue.",
+    "note": "Ce n'est pas un exercice de culpabilité mais de vérité : Dieu ne demande pas que tu te condamnes, il demande que tu cesses de regarder ailleurs."
+  },
+  "question": "Quelle est la faute que tu repères le plus vite chez les autres — et depuis quand est-elle chez toi sans que tu l'aies vue ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : l'esclavage libre",
+      "corps_html": "Chrysostome s'arrête longuement sur l'expression « esclave de tous » : il y voit non un abaissement mais la forme la plus haute de la liberté, puisque Paul n'obéit à aucun maître humain et choisit lui-même sa servitude par amour. Il oppose cette liberté-là à celle des Corinthiens qui, se prétendant libres, refusaient de renoncer à leurs droits pour les plus faibles.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens, homélie 21"
+    },
+    {
+      "titre": "Calvin : la poutre invisible",
+      "corps_html": "Calvin note que Jésus ne condamne pas ici toute correction fraternelle, qu'il recommande ailleurs, mais l'empressement à corriger qui naît d'un amour-propre satisfait de sa propre clairvoyance. Il rappelle que nul n'est aveugle à ce point sinon par la complaisance qu'il a pour lui-même, laquelle grossit les fautes d'autrui et rapetisse les siennes jusqu'à les rendre invisibles.",
+      "attribution": "Jean Calvin, Commentaire sur l'Harmonie des évangiles, sur Luc 6"
+    },
+    {
+      "titre": "Augustin : le passereau et la maison",
+      "corps_html": "Augustin lit le passereau et l'hirondelle du psaume comme l'âme errante qui, après avoir cherché en vain un abri parmi les créatures, ne trouve de repos que dans la maison de Dieu ; il joue sur le double sens du mot maison, qui désigne à la fois le Temple de pierre et le cœur de celui qui prie. Pour lui, le soupir même du pèlerin n'est déjà qu'un avant-goût de la présence qu'il cherche.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 83"
+    }
+  ]
+}
