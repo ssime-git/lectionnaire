@@ -12,6 +12,7 @@ sys.path.insert(0, str(RACINE / "src"))
 import valider  # noqa: E402
 
 BASE = json.loads((RACINE / "data" / "jours" / "2026-10-25.json").read_text(encoding="utf-8"))
+BASE.pop("videos", None)  # chaque test fournit ses vidéos face à son propre catalogue
 CATALOGUE = {"1g4u57TSY0g", "FuQp4baBpPU", "GIdz46OiA5s"} | {f"vid{i:08d}" for i in range(10)}
 
 
