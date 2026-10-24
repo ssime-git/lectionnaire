@@ -65,6 +65,12 @@ jobs:
         if: steps.existe.outputs.deja == 'false'
         run: uv sync --locked
 
+      - name: Installer Node (tests de la fonction du carnet)
+        if: steps.existe.outputs.deja == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Lancer les tests
         if: steps.existe.outputs.deja == 'false'
         run: make test
@@ -126,3 +132,4 @@ jobs:
             data/jours/${{ steps.date.outputs.date }}.json
             docs/${{ steps.date.outputs.date }}.html
             docs/vignettes/
+            docs/contexte/${{ steps.date.outputs.date }}.json

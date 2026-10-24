@@ -13,7 +13,9 @@ main, le template est validé. Ensuite seulement on branche generate.py.
 """
 
 from __future__ import annotations
+import html as html_lib
 import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -135,6 +137,31 @@ def _valider(d: dict, chemin: Path) -> None:
                 )
 
 
+def _texte(fragment: str) -> str:
+    """HTML → texte brut, espaces normalisés."""
+    blocs = re.sub(r"</(p|div|li|h\d)>|<br\s*/?>", " ", fragment or "")
+    sans = re.sub(r"<[^>]+>", "", blocs)  # balises en ligne : aucun espace ajouté
+    return re.sub(r"\s+", " ", html_lib.unescape(sans)).strip()
+
+
+def contexte_du_jour(d: dict) -> dict:
+    """Ce que le carnet libre sait du jour : le contenu de la page, en texte.
+    Publié en statique, lu côté serveur — jamais envoyé par le navigateur."""
+    return {
+        "date": d.get("date", ""),
+        "titre": d.get("titre", ""),
+        "references": d.get("references_brutes", ""),
+        "lectures": [{"etiquette": l.get("etiquette", ""), "reference": l.get("reference", ""),
+                      "texte": _texte(l.get("corps_html", ""))} for l in d.get("lectures", [])],
+        "gloses": [{"lemme": g.get("lemme", ""), "texte": _texte(g.get("html", ""))}
+                   for l in d.get("lectures", []) for g in l.get("gloses", [])],
+        "contexte": [{"titre": c.get("titre", ""), "texte": _texte(c.get("corps_html", ""))}
+                     for c in d.get("contexte", [])],
+        "carnet": [{"question": q.get("question", ""), "reponse": _texte(q.get("reponse_html", ""))}
+                   for q in d.get("carnet") or []],
+    }
+
+
 def rendre_html(donnees: dict) -> str:
     """Rend la page d'un jour déjà chargé, sans rien écrire."""
     env = Environment(
@@ -156,7 +183,12 @@ def rendre_html(donnees: dict) -> str:
 
 
 def rendre(jour: str) -> Path:
-    html = rendre_html(charger_jour(jour))
+    donnees = charger_jour(jour)
+    html = rendre_html(donnees)
+    (DOCS / "contexte").mkdir(parents=True, exist_ok=True)
+    (DOCS / "contexte" / f"{jour}.json").write_text(
+        json.dumps(contexte_du_jour(donnees), ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8")
 
     DOCS.mkdir(exist_ok=True)
     sortie = DOCS / f"{jour}.html"
