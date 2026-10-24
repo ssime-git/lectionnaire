@@ -200,37 +200,64 @@ class TemplateCarnetLibreTests(unittest.TestCase):
 
 
 class ContexteTraditionTests(unittest.TestCase):
-    INDEX = {"Mt": [{"id": "chrysostome-Mt-LXXI", "livre": "Mt", "homelie": "LXXI", "debut": [22, 34],
-                     "fin": [22, 999], "analyse": "1. Du premier et du second commandement.",
-                     "source_url": "https://fr.wikisource.org/wiki/X"},
-                    {"id": "chrysostome-Mt-LXX", "livre": "Mt", "homelie": "LXX", "debut": [22, 15],
-                     "fin": [22, 34], "analyse": "1. Le tribut.", "source_url": "https://fr.wikisource.org/wiki/X"}]}
-    TEXTES = {"chrysostome-Mt-LXXI": "1. " + "Texte de l’homélie. " * 200}
+    INDEX = {
+        "chrysostome": {"Mt": [
+            {"id": "chrysostome-Mt-LXXI", "auteur": "chrysostome", "livre": "Mt", "homelie": "LXXI",
+             "titre": "Homélie LXXI sur Matthieu", "debut": [22, 34], "fin": [22, 999],
+             "analyse": "1. Du premier et du second commandement.", "source_url": "https://fr.wikisource.org/wiki/X"}]},
+        "augustin": {"Ps": [
+            {"id": "augustin-Ps-17", "auteur": "augustin", "livre": "Ps", "numero": 17,
+             "titre": "Discours sur le psaume 17", "debut": [17, 1], "fin": [17, 999],
+             "analyse": "Le Christ et l’Église chantent leur délivrance.", "source_url": "https://fr.wikisource.org/wiki/Y"}]},
+    }
+    TEXTES = {"chrysostome-Mt-LXXI": "1. " + "Texte de l’homélie. " * 200,
+              "augustin-Ps-17": "1. Je vous aimerai, Seigneur, ma force."}
 
     def _contexte(self, d: dict) -> dict:
-        with patch("render.charger_index", return_value=self.INDEX), \
-                patch("render.texte_homelie", side_effect=lambda i: self.TEXTES.get(i)):
+        stock = {a: {s: [{**u, "texte": self.TEXTES[u["id"]]} for u in us] for s, us in livres.items()}
+                 for a, livres in self.INDEX.items()}
+        with patch("render.charger_passages", side_effect=lambda a: stock.get(a, {})):
             return render.contexte_du_jour(d)
 
-    def test_tradition_ajoutee_au_contexte(self) -> None:
+    def test_plusieurs_auteurs_sur_un_meme_jour(self) -> None:
         c = self._contexte(render.charger_jour("2026-10-25"))
-        self.assertEqual([t["titre"] for t in c["tradition"]], ["Jean Chrysostome, Homélie LXXI sur Matthieu"])
-        t = c["tradition"][0]
-        self.assertEqual(t["lecture"], "Mt 22, 34-40")
-        self.assertEqual(t["analyse"], "1. Du premier et du second commandement.")
-        self.assertLessEqual(len(t["extrait"]), 1500)
-        self.assertEqual(t["url"], "https://fr.wikisource.org/wiki/X")
-        self.assertEqual(t["credit"], "trad. Jeannin (1864-1867), Wikisource, CC BY-SA")
+        self.assertEqual([t["titre"] for t in c["tradition"]],
+                         ["Jean Chrysostome, Homélie LXXI sur Matthieu",
+                          "Augustin d’Hippone, Discours sur le psaume 17"])
+        chryso, augustin = c["tradition"]
+        self.assertEqual(chryso["lecture"], "Mt 22, 34-40")
+        self.assertLessEqual(len(chryso["extrait"]), 1500)
+        self.assertEqual(chryso["credit"], "trad. Jeannin (1864-1867), Wikisource, CC BY-SA")
+        self.assertEqual(augustin["lecture"], "Ps 17 (18), 2-3, 4.20, 47.51ab")
+        self.assertEqual(augustin["credit"], "éd. Raulx (1864), Wikisource, CC BY-SA")
+        self.assertEqual(augustin["url"], "https://fr.wikisource.org/wiki/Y")
 
-    def test_homelies_confirmees_par_le_brouillon_font_foi(self) -> None:
+    def test_passages_confirmes_par_le_brouillon_font_foi(self) -> None:
         d = render.charger_jour("2026-10-25")
-        d["homelies"] = []  # le brouillon n'a rien confirmé
-        self.assertEqual(self._contexte(d)["tradition"], [])
+        d["passages_tradition"] = ["augustin-Ps-17"]
+        self.assertEqual([t["titre"] for t in self._contexte(d)["tradition"]],
+                         ["Augustin d’Hippone, Discours sur le psaume 17"])
 
     def test_sans_index_tradition_vide(self) -> None:
         d = render.charger_jour("2026-10-25")
-        with patch("render.charger_index", return_value={}):
+        with patch("render.charger_passages", return_value={}):
             self.assertEqual(render.contexte_du_jour(d)["tradition"], [])
+
+class PrioriteEvangileTests(unittest.TestCase):
+    def test_evangile_d_abord_un_passage_par_lecture(self) -> None:
+        d = render.charger_jour("2026-10-25")
+        d["lectures"] = [{"reference": "Ep 2, 1-22", "corps_html": ""}, {"reference": "Mt 22, 34-40", "corps_html": ""}]
+        u = lambda i, livre, deb, fin: {"id": i, "auteur": "chrysostome", "livre": livre, "titre": i,
+                                         "debut": deb, "fin": fin, "analyse": "", "texte": "1. x", "source_url": ""}
+        stock = {"chrysostome": {
+            "Ep": [u("chrysostome-Ep-IV", "Ep", [2, 1], [2, 10]), u("chrysostome-Ep-V", "Ep", [2, 11], [2, 16]),
+                   u("chrysostome-Ep-VI", "Ep", [2, 17], [3, 8])],
+            "Mt": [u("chrysostome-Mt-LXXI", "Mt", [22, 34], [22, 999]),
+                   u("chrysostome-Mt-LXX", "Mt", [22, 15], [22, 34])]}}
+        with patch("render.charger_passages", side_effect=lambda a: stock.get(a, {})):
+            ids = [t["id"] for t in render.contexte_du_jour(d)["tradition"]]
+        self.assertEqual(ids, ["chrysostome-Mt-LXXI", "chrysostome-Ep-IV"])
+
 
 if __name__ == "__main__":
     unittest.main()

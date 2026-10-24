@@ -33,7 +33,7 @@ MAX_VIDEOS = 8
 CATALOGUE_VIDEOS = Path(__file__).resolve().parent.parent / "data" / "videos.json"
 OEUVRES_TRADITION = Path(__file__).resolve().parent.parent / "data" / "tradition" / "oeuvres.json"
 MAX_CARNET = 5
-HOMELIES = Path(__file__).resolve().parent.parent / "data" / "tradition" / "textes" / "chrysostome" / "homelies"
+TEXTES_TRADITION = Path(__file__).resolve().parent.parent / "data" / "tradition" / "textes"
 SOURCES_INTERDITES = re.compile(
     r"\b(TOB|Bible de Jérusalem|Segond 21|traduction liturgique)\b", re.I)
 
@@ -192,10 +192,11 @@ def valider_contrat(d: dict, catalogue: set[str] | None = None,
                 if not str(t.get("reference", "")).strip():
                     fautes.append(f"{etiquette} : référence manquante pour {t.get('oeuvre')!r}.")
 
-    # 11. Homélies confirmées (optionnel) : uniquement des textes enregistrés
-    for h in d.get("homelies") or []:
-        if not isinstance(h, str) or not (HOMELIES / f"{h}.json").exists():
-            fautes.append(f"homélie inconnue {h!r} (absente de data/tradition/textes/chrysostome/homelies).")
+    # 11. Passages des Pères confirmés (optionnel) : uniquement des textes enregistrés
+    for p in d.get("passages_tradition") or []:
+        chemin = TEXTES_TRADITION / str(p).split("-", 1)[0] / "passages" / f"{p}.json"
+        if not isinstance(p, str) or not chemin.exists():
+            fautes.append(f"passage inconnu {p!r} (absent de data/tradition/textes/<auteur>/passages).")
 
     return fautes
 

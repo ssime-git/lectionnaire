@@ -84,7 +84,7 @@ class EtendueLectureTests(unittest.TestCase):
         self.assertEqual(corpus.etendue("Ep 2, 19-22"), ("Ep", (2, 19), (2, 22)))
 
     def test_illisible(self) -> None:
-        self.assertIsNone(corpus.etendue("Ps 17 (18), 2-3, 4.20"))  # psaumes : hors périmètre 3b-1
+        self.assertIsNone(corpus.etendue("Is 9 (8), 1"))  # double numérotation hors psaumes
         self.assertIsNone(corpus.etendue("n'importe quoi"))
 
 
@@ -108,60 +108,63 @@ class PassagesTests(unittest.TestCase):
 
 
 class AuBesoinTests(unittest.TestCase):
-    """Le corpus grandit chaque nuit : index du livre à la première lecture,
-    texte gardé seulement pour les homélies utilisées."""
+    """Chaque nuit : seule la page utile est lue, seuls les passages du jour
+    sont enregistrés (texte + fiche). Pas d'index à part."""
 
     def setUp(self) -> None:
         self._tmp = tempfile.TemporaryDirectory()
-        self.dossier = Path(self._tmp.name) / "chrysostome"
+        self.racine = Path(self._tmp.name) / "textes"
         self.cache = Path(self._tmp.name) / "cache"
 
     def tearDown(self) -> None:
         self._tmp.cleanup()
 
-    def test_indexer_ecrit_un_index_sans_texte(self) -> None:
-        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
-            bilan = corpus.indexer("Rm", dossier=self.dossier, cache=self.cache)
-        self.assertEqual(bilan["ignorees"], ["III"])
-        d = json.loads((self.dossier / "Rm.index.json").read_text(encoding="utf-8"))
-        self.assertEqual([u["homelie"] for u in d["unites"]], ["I", "II"])
-        self.assertTrue(all("texte" not in u for u in d["unites"]))
-        self.assertEqual(d["unites"][0]["analyse"], "1. Explication très-détaillée. 2. Du salut.")
-        self.assertFalse((self.dossier / "homelies").exists())
-
-    def test_preparer_indexe_au_besoin_et_ne_garde_que_l_utile(self) -> None:
+    def test_preparer_ne_garde_que_le_passage_du_jour(self) -> None:
         with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>") as lire:
-            extraits = corpus.preparer(["Rm 1, 8-10", "Lc 6, 12-19"], dossier=self.dossier, cache=self.cache)
+            extraits = corpus.preparer(["Rm 1, 8-10", "Lc 6, 12-19"], racine=self.racine, cache=self.cache)
         self.assertEqual([u["id"] for u in extraits], ["chrysostome-Rm-II"])
-        self.assertTrue(extraits[0]["texte"].startswith("1. Corps de la deuxième homélie."))
-        self.assertEqual(lire.call_count, 1)  # une page Wikisource pour Romains, rien pour Luc
-        homelies = sorted(p.name for p in (self.dossier / "homelies").iterdir())
-        self.assertEqual(homelies, ["chrysostome-Rm-II.json"])
+        self.assertTrue(extraits[0]["nouveau"])
+        self.assertEqual(lire.call_count, 1)  # une page pour Romains, rien pour Luc
+        fichiers = sorted(p.name for p in (self.racine / "chrysostome" / "passages").iterdir())
+        self.assertEqual(fichiers, ["chrysostome-Rm-II.json"])
+        fiche = json.loads((self.racine / "chrysostome" / "passages" / fichiers[0]).read_text(encoding="utf-8"))
+        self.assertEqual(fiche["titre"], "Homélie II sur l'Épître aux Romains")
+        self.assertEqual((fiche["debut"], fiche["fin"]), ([1, 8], [1, 17]))
+        self.assertTrue(fiche["texte"].startswith("1. Corps de la deuxième homélie."))
+        self.assertFalse(list(self.racine.rglob("*.index.json")))
 
-    def test_preparer_reutilise_le_stocke_sans_reseau(self) -> None:
+    def test_un_passage_deja_enregistre_ne_relit_rien(self) -> None:
         with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
-            corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
+            corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache)
         with patch("corpus._html_de_la_page") as lire:
-            extraits = corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
+            extraits = corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache)
         lire.assert_not_called()
-        self.assertEqual([u["id"] for u in extraits], ["chrysostome-Rm-II"])
+        self.assertEqual([(u["id"], u["nouveau"]) for u in extraits], [("chrysostome-Rm-II", False)])
 
     def test_panne_reseau_ne_bloque_pas_la_nuit(self) -> None:
         with patch("corpus._html_de_la_page", side_effect=RuntimeError("Wikisource indisponible")):
-            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache), [])
-        self.assertFalse((self.dossier / "Rm.index.json").exists())
+            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache), [])
+        self.assertFalse(self.racine.exists() and any(self.racine.rglob("*.json")))
 
     def test_hors_ligne_rien_n_est_lu(self) -> None:
         with patch("corpus._html_de_la_page") as lire:
-            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache, reseau=False), [])
+            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache,
+                                             reseau=False), [])
         lire.assert_not_called()
 
-    def test_texte_et_index_relus(self) -> None:
+    def test_oublier_retire_un_passage_non_confirme(self) -> None:
         with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
-            corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
-        self.assertEqual(sorted(corpus.charger_index(self.dossier)), ["Rm"])
-        self.assertTrue(corpus.texte_homelie("chrysostome-Rm-II", self.dossier).startswith("1. Corps"))
-        self.assertIsNone(corpus.texte_homelie("chrysostome-Rm-I", self.dossier))
+            corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache)
+        corpus.oublier("chrysostome-Rm-II", self.racine)
+        self.assertEqual(corpus.charger_passages("chrysostome", self.racine), {})
+
+    def test_passages_enregistres_relus(self) -> None:
+        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
+            corpus.preparer(["Rm 1, 8-10"], racine=self.racine, cache=self.cache)
+        stock = corpus.charger_passages("chrysostome", self.racine)
+        self.assertEqual([u["id"] for u in stock["Rm"]], ["chrysostome-Rm-II"])
+        self.assertTrue(corpus.texte_passage("chrysostome-Rm-II", self.racine).startswith("1. Corps"))
+        self.assertIsNone(corpus.texte_passage("chrysostome-Rm-I", self.racine))
 
 class DecouperCasReelsTests(unittest.TestCase):
     def test_parenthese_ouvrante_manquante(self) -> None:
@@ -295,7 +298,7 @@ class CorrectionsTests(unittest.TestCase):
         self.assertNotIn("correction", unites[1])
 
     def test_fichier_de_corrections_jean(self) -> None:
-        c = json.loads(corpus.CORRECTIONS.read_text(encoding="utf-8"))["Jn"]
+        c = json.loads((corpus.TEXTES / "chrysostome" / "corrections.json").read_text(encoding="utf-8"))["Jn"]
         self.assertEqual(c["LXXXVII"]["debut"], [20, 24])
         self.assertTrue(all(v.get("motif") for v in c.values()))
 
@@ -311,6 +314,89 @@ class AbreviationsPhilippiensTests(unittest.TestCase):
         unites, ignorees = corpus.decouper_homelies(t, "Ph", "u", nb_chapitres=4)
         self.assertEqual([(u["id"], u["debut"], u["fin"]) for u in unites],
                          [("chrysostome-Ph-I", [1, 1], [1, 7]), ("chrysostome-Ph-II", [1, 8], [1, 19])])
+
+
+PSAUMES = (
+    "Saint Augustin Discours sur les psaumes : Psaumes XI à XX Œuvres complètes ( éd. Raulx, 1864) "
+    "DISCOURS SUR LE PSAUME 17 [ modifier ] CHANT DE DÉLIVRANCE. [ modifier ] Le Christ et l’Église chantent "
+    "leur délivrance. POUR LA FIN, AU SERVITEUR DU SEIGNEUR (Ps. 17,1). [ modifier ] 1. Je vous aimerai, "
+    "Seigneur, ma force. Corps du discours dix-sept. "
+    "PREMIER DISCOURS SUR LE PSAUME 18. [ modifier ] LE VERBE DE DIEU. [ modifier ] Argument. "
+    "(Ps. 18). 1. Corps du premier discours sur dix-huit. "
+    "DEUXIÈME DISCOURS SUR LE MÊME PSAUME. [ modifier ] Argument deux. 1. Corps du second discours. "
+    "DISCOURS SUR LE PSAUME XII. [ modifier ] EN DÉSORDRE. Argument. 1. Corps. "
+    "DISCOURS SUR LE PSAUME XIX. [ modifier ] LE CHRIST DANS SA PASSION. Argument. 1. Corps du dix-neuf."
+)
+
+
+class AugustinPsaumesTests(unittest.TestCase):
+    def test_decoupe_les_discours(self) -> None:
+        unites, ignorees = corpus.decouper_discours_psaumes(PSAUMES, "Ps", "u")
+        self.assertEqual([(u["id"], u["debut"], u["fin"]) for u in unites], [
+            ("augustin-Ps-17", [17, 1], [17, 999]),
+            ("augustin-Ps-18", [18, 1], [18, 999]),
+            ("augustin-Ps-18-2", [18, 1], [18, 999]),
+            ("augustin-Ps-19", [19, 1], [19, 999]),
+        ])
+        self.assertEqual(ignorees, ["12"])  # numéro qui recule : jamais deviné
+        u = unites[0]
+        self.assertEqual(u["lemme"], "CHANT DE DÉLIVRANCE.")
+        self.assertIn("Le Christ et l’Église chantent leur délivrance.", u["analyse"])
+        self.assertTrue(u["texte"].startswith("1. Je vous aimerai, Seigneur, ma force."))
+        self.assertNotIn("DISCOURS SUR LE PSAUME 18", u["texte"])
+        self.assertEqual(u["numero"], 17)
+
+    def test_titres(self) -> None:
+        unites, _ = corpus.decouper_discours_psaumes(PSAUMES, "Ps", "u")
+        titres = [corpus.AUTEURS["augustin"].titre(u) for u in unites]
+        self.assertEqual(titres[:3], ["Discours sur le psaume 17", "Discours sur le psaume 18",
+                                      "Discours sur le psaume 18 (2e discours)"])
+
+    def test_etendue_des_psaumes_numerotation_grecque(self) -> None:
+        self.assertEqual(corpus.etendue("Ps 17 (18), 2-3, 4.20, 47.51ab"), ("Ps", (17, 1), (17, 999)))
+        self.assertEqual(corpus.etendue("Ps 22, 1-6"), ("Ps", (22, 1), (22, 999)))
+
+
+class MultiAuteursTests(unittest.TestCase):
+    def test_un_jour_croise_plusieurs_auteurs_une_page_chacun(self) -> None:
+        lues = []
+
+        def page(nom: str, cache: Path) -> str:
+            lues.append(nom)
+            return "<p>" + (PSAUMES if "psaumes" in nom.lower() else TEXTE) + "</p>"
+        with tempfile.TemporaryDirectory() as tmp, patch("corpus._html_de_la_page", side_effect=page):
+            extraits = corpus.preparer(["Rm 1, 8-10", "Ps 17 (18), 2-3"], racine=Path(tmp),
+                                       cache=Path(tmp) / "c")
+            self.assertEqual([(u["auteur"], u["id"]) for u in extraits],
+                             [("chrysostome", "chrysostome-Rm-II"), ("augustin", "augustin-Ps-17")])
+            self.assertTrue((Path(tmp) / "augustin" / "passages" / "augustin-Ps-17.json").exists())
+        self.assertEqual(lues, ["Commentaire sur l’Épître de saint Paul aux Romains",
+                                "Discours sur les psaumes (Augustin)/Psaumes XI à XX"])
+
+    def test_page_du_psaume(self) -> None:
+        a = corpus.AUTEURS["augustin"]
+        self.assertEqual(a.pages_pour("Ps", 17), ["Discours sur les psaumes (Augustin)/Psaumes XI à XX"])
+        self.assertEqual(a.pages_pour("Ps", 150), ["Discours sur les psaumes (Augustin)/Psaumes CXLI à CL"])
+        self.assertEqual(a.pages_pour("Ps", 10), ["Discours sur les psaumes (Augustin)/Psaumes I à X"])
+        self.assertEqual(len(corpus.AUTEURS["chrysostome"].pages_pour("Mt", 22)), 3)  # livre entier
+
+    def test_registre(self) -> None:
+        a = corpus.AUTEURS["augustin"]
+        self.assertEqual(a.nom, "Augustin d’Hippone")
+        self.assertEqual(a.oeuvre, "augustin-enarrationes")
+        self.assertEqual(a.credit, "éd. Raulx (1864), Wikisource, CC BY-SA")
+        self.assertEqual(corpus.AUTEURS["chrysostome"].credit, "trad. Jeannin (1864-1867), Wikisource, CC BY-SA")
+
+class PrioritePreparerTests(unittest.TestCase):
+    def test_derniere_lecture_d_abord_un_passage_par_lecture(self) -> None:
+        texte = ("HOMÉLIE I. [ modifier ] A. (CHAP. I, VERS. 1 JUSQU’À 7) Analyse. 1. A. 1. Corps. "
+                 "HOMÉLIE II. [ modifier ] B. (8 JUSQU’A 17) Analyse. 1. B. 1. Corps. "
+                 "HOMÉLIE III. [ modifier ] C. (CHAP. II, VERS. 1 JUSQU’À 16) Analyse. 1. C. 1. Corps.")
+        with tempfile.TemporaryDirectory() as tmp, \
+                patch("corpus._html_de_la_page", return_value="<p>" + texte + "</p>"):
+            extraits = corpus.preparer(["Rm 1, 1-17", "Rm 2, 1-5"], racine=Path(tmp), cache=Path(tmp) / "c")
+        # Rm 1, 1-17 : l'homélie II (8-17) recouvre mieux la lecture que la I (1-7).
+        self.assertEqual([u["id"] for u in extraits], ["chrysostome-Rm-III", "chrysostome-Rm-II"])
 
 
 if __name__ == "__main__":

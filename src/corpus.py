@@ -7,11 +7,14 @@ Chrysostome dit de Mt 22, 34-40, il suffit de trouver l'homélie qui commente
 ce passage. Pas de recherche « par le sens », donc pas de Vectorize : chaque
 extrait cité est recopié tel quel, avec sa source.
 
-    python src/corpus.py        # importe les commentaires de Chrysostome
+Le corpus grandit chaque nuit (preparer) : seule la page Wikisource utile est
+lue, seuls les passages du jour sont enregistrés — texte et fiche dans
+data/tradition/textes/<auteur>/passages/. Pas d'index à part.
 
-Source : Wikisource, Œuvres complètes de saint Jean Chrysostome, trad. Jeannin
-(1864-1867), domaine public. Une homélie dont la référence n'est pas lisible
-n'est jamais devinée : elle reste hors index et figure dans le rapport.
+Plusieurs auteurs se croisent sur un même jour (registre AUTEURS) : Jean
+Chrysostome (homélies, trad. Jeannin) et Augustin (Discours sur les psaumes,
+éd. Raulx), tous deux sur Wikisource, domaine public. Une référence illisible
+n'est jamais devinée : le passage reste hors index.
 """
 
 from __future__ import annotations
@@ -19,20 +22,21 @@ import json
 import re
 import time
 import unicodedata
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import requests
 
 RACINE = Path(__file__).resolve().parent.parent
-TEXTES = RACINE / "data" / "tradition" / "textes" / "chrysostome"
+TEXTES = RACINE / "data" / "tradition" / "textes"  # un dossier par auteur
 CACHE = RACINE / ".cache" / "wikisource"
 API = "https://fr.wikisource.org/w/api.php"
 ENTETES = {"User-Agent": "LectionnaireCorpus/0.1 (https://github.com/ssime-git/lectionnaire; corpus domaine public)"}
 PAUSE = 6  # secondes entre deux requêtes Wikisource
 MAX_PASSAGES = 2
 
-# sigle AELF → (nom affiché, pages Wikisource qui, ensemble, couvrent le livre)
+# Chrysostome : sigle AELF → (nom affiché, pages Wikisource qui couvrent le livre)
 PAGES: dict[str, tuple[str, list[str]]] = {
     "Mt": ("Matthieu", [
         "Jean Chrysostome/Commentaire sur l’Évangile selon saint Matthieu/Homélie I",
@@ -220,6 +224,53 @@ def decouper_homelies(texte: str, sigle: str, url: str,
     return unites, ignorees
 
 
+_DISCOURS = re.compile(
+    r"(?:(PREMIER|[A-ZÉÈ\-]+IÈME)\s+)?DISCOURS SUR LE (?:PSAUME\s+([IVXLC]+|\d+)|MÊME PSAUME)\b\.?")
+
+
+def decouper_discours_psaumes(texte: str, sigle: str, url: str,
+                              nb_chapitres: int | None = 150,
+                              precedentes: list[dict] | None = None) -> tuple[list[dict], list[str]]:
+    """Discours d'Augustin sur les psaumes : un passage par discours, qui
+    vaut pour tout le psaume. Un numéro qui recule est écarté."""
+    texte = _propre(texte)
+    reperes = list(_DISCOURS.finditer(texte))
+    unites: list[dict] = []
+    ignorees: list[str] = []
+    deja = {u["id"] for u in precedentes or []}
+    numero = (precedentes or [{}])[-1].get("numero") if precedentes else None
+    for i, m in enumerate(reperes):
+        n = _nombre(m[2]) if m[2] else numero
+        bloc = texte[m.end(): reperes[i + 1].start() if i + 1 < len(reperes) else len(texte)].strip()
+        dernier = (unites or precedentes or [None])[-1]
+        if n is None or not 1 <= n <= (nb_chapitres or 150) or (dernier and n < dernier["numero"]):
+            ignorees.append(str(n))
+            continue
+        numero = n
+        rang = 1 + sum(1 for u in (precedentes or []) + unites if u["numero"] == n)
+        ident = f"augustin-{sigle}-{n}" + (f"-{rang}" if rang > 1 else "")
+        if ident in deja:
+            continue
+        corps_m = re.search(r"(?:^|\s)1\.\s", bloc)
+        entete = bloc[: corps_m.start()] if corps_m else bloc[:600]
+        titre_m = re.match(r"([^a-zà-ÿ]{3,120}?\.)\s", entete)  # sous-titre en capitales
+        lemme = titre_m[1].strip() if titre_m else ""
+        unites.append({
+            "id": ident,
+            "livre": sigle,
+            "numero": n,
+            "rang": rang,
+            "debut": [n, 1],
+            "fin": [n, 999],
+            "chapitre_herite": False,
+            "lemme": lemme,
+            "analyse": entete[len(titre_m[0]) if titre_m else 0:].strip()[:600],
+            "texte": bloc[corps_m.start():].strip() if corps_m else bloc,
+            "source_url": url,
+        })
+    return unites, ignorees
+
+
 def appliquer_corrections(unites: list[dict], corrections: dict[str, dict]) -> None:
     """Corrige les références fautives de l'édition, chacune motivée."""
     for u in unites:
@@ -233,8 +284,12 @@ def _sans_accents(s: str) -> str:
 
 
 def etendue(reference_courte: str) -> tuple[str, tuple[int, int], tuple[int, int]] | None:
-    """« 1 Th 1, 5c-10 » → ("1Th", (1, 5), (1, 10)). Les psaumes à double
-    numérotation et les références illisibles renvoient None."""
+    """« 1 Th 1, 5c-10 » → ("1Th", (1, 5), (1, 10)). Un psaume vaut en entier,
+    dans la numérotation grecque que l'AELF donne en premier et que suivent
+    les Pères : « Ps 17 (18), 2-3 » → ("Ps", (17, 1), (17, 999))."""
+    psaume = re.match(r"\s*Ps\s+(\d+)\b", reference_courte)
+    if psaume:
+        return "Ps", (int(psaume[1]), 1), (int(psaume[1]), 999)
     if "(" in reference_courte:
         return None
     m = re.match(r"\s*(\d?)\s*([A-Za-zÀ-ÿ]+)\s+(\d+)\s*,\s*(.+)$", reference_courte)
@@ -302,114 +357,133 @@ def _texte_de_html(html: str) -> str:
     return html_lib.unescape(sans)
 
 
-CORRECTIONS = TEXTES / "corrections.json"
+@dataclass(frozen=True)
+class Auteur:
+    cle: str
+    nom: str
+    oeuvre: str          # id de la liste blanche data/tradition/oeuvres.json
+    credit: str
+    livres: dict[str, tuple[str, list[str]]]
+    decouper: Callable[..., tuple[list[dict], list[str]]]
+    titre: Callable[[dict], str]
+    nb_chapitres: dict[str, int] = field(default_factory=dict)
+    # Pages à lire pour un chapitre donné : par défaut tout le livre (les
+    # références d'un commentaire suivi s'enchaînent d'une page à l'autre).
+    choisir_pages: Callable[["Auteur", str, int], list[str]] | None = None
+
+    def pages_pour(self, sigle: str, chapitre: int) -> list[str]:
+        if self.choisir_pages:
+            return self.choisir_pages(self, sigle, chapitre)
+        return self.livres[sigle][1]
+
+
+_TRANCHES_PSAUMES = [("I", "X"), ("XI", "XX"), ("XXI", "XXX"), ("XXXI", "XL"), ("XLI", "L"), ("LI", "LX"),
+                     ("LXI", "LXX"), ("LXXI", "LXXX"), ("LXXXI", "XC"), ("XCI", "C"), ("CI", "CX"),
+                     ("CXI", "CXX"), ("CXXI", "CXXX"), ("CXXXI", "CXL"), ("CXLI", "CL")]
+_PSAUMES_PAGES = [f"Discours sur les psaumes (Augustin)/Psaumes {a} à {b}" for a, b in _TRANCHES_PSAUMES]
+
+
+def _page_du_psaume(auteur: "Auteur", sigle: str, numero: int) -> list[str]:
+    """Une page Wikisource par dizaine de psaumes : on ne lit que la bonne."""
+    for (a, b), page in zip(_TRANCHES_PSAUMES, _PSAUMES_PAGES):
+        if _romain(a) <= numero <= _romain(b):
+            return [page]
+    return []
+
+
+AUTEURS: dict[str, Auteur] = {
+    "chrysostome": Auteur(
+        cle="chrysostome", nom="Jean Chrysostome", oeuvre="chrysostome-homelies",
+        credit="trad. Jeannin (1864-1867), Wikisource, CC BY-SA",
+        livres=PAGES, decouper=decouper_homelies, nb_chapitres=NB_CHAPITRES,
+        titre=lambda u: f"Homélie {u['homelie']} sur {PAGES[u['livre']][0]}"),
+    "augustin": Auteur(
+        cle="augustin", nom="Augustin d’Hippone", oeuvre="augustin-enarrationes",
+        credit="éd. Raulx (1864), Wikisource, CC BY-SA",
+        livres={"Ps": ("les Psaumes", _PSAUMES_PAGES)}, decouper=decouper_discours_psaumes,
+        nb_chapitres={"Ps": 150}, choisir_pages=_page_du_psaume,
+        titre=lambda u: f"Discours sur le psaume {u['numero']}"
+                        + (f" ({u['rang']}e discours)" if u.get("rang", 1) > 1 else "")),
+}
 MAX_PAR_JOUR = 4
+MAX_PAR_AUTEUR = 2
 
 
-def _lire_livre(sigle: str, cache: Path) -> tuple[list[dict], list[str]]:
-    """Toutes les homélies d'un livre, texte compris (réseau ou cache)."""
-    _, pages = PAGES[sigle]
+def _lire(auteur: str, sigle: str, chapitre: int, cache: Path) -> list[dict]:
+    """Les passages des pages utiles pour ce chapitre, texte compris."""
+    a = AUTEURS[auteur]
     unites: list[dict] = []
-    ignorees: list[str] = []
-    for page in pages:
+    for page in a.pages_pour(sigle, chapitre):
         url = "https://fr.wikisource.org/wiki/" + page.replace(" ", "_")
-        u, ig = decouper_homelies(_texte_de_html(_html_de_la_page(page, cache)), sigle, url,
-                                  nb_chapitres=NB_CHAPITRES.get(sigle), precedentes=unites)
+        u, _ = a.decouper(_texte_de_html(_html_de_la_page(page, cache)), sigle, url,
+                          nb_chapitres=a.nb_chapitres.get(sigle), precedentes=unites)
         unites += u
-        ignorees += ig
-    if CORRECTIONS.exists():
-        appliquer_corrections(unites, json.loads(CORRECTIONS.read_text(encoding="utf-8")).get(sigle, {}))
-    return unites, ignorees
+    corrections = TEXTES / auteur / "corrections.json"
+    if corrections.exists():
+        appliquer_corrections(unites, json.loads(corrections.read_text(encoding="utf-8")).get(sigle, {}))
+    for u in unites:
+        u["auteur"] = auteur
+        u["titre"] = a.titre(u)
+    return unites
 
 
-def _ecrire_index(sigle: str, unites: list[dict], ignorees: list[str], dossier: Path) -> None:
+def _enregistrer(u: dict, racine: Path) -> None:
+    dossier = racine / u["auteur"] / "passages"
     dossier.mkdir(parents=True, exist_ok=True)
-    (dossier / f"{sigle}.index.json").write_text(json.dumps({
-        "oeuvre": "chrysostome-homelies",
-        "livre": sigle,
-        "titre": f"Homélies sur {PAGES[sigle][0]}",
-        "ignorees": ignorees,
-        "unites": [{k: v for k, v in u.items() if k != "texte"} for u in unites],
-    }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (dossier / f"{u['id']}.json").write_text(json.dumps(u, ensure_ascii=False, indent=1) + "\n",
+                                             encoding="utf-8")
 
 
-def _ecrire_homelie(u: dict, dossier: Path) -> None:
-    (dossier / "homelies").mkdir(parents=True, exist_ok=True)
-    (dossier / "homelies" / f"{u['id']}.json").write_text(
-        json.dumps({"id": u["id"], "texte": u["texte"]}, ensure_ascii=False) + "\n", encoding="utf-8")
+def charger_passages(auteur: str, racine: Path = TEXTES) -> dict[str, list[dict]]:
+    """Les passages déjà enregistrés d'un auteur (fiche et texte), par livre."""
+    par_livre: dict[str, list[dict]] = {}
+    for f in sorted((racine / auteur / "passages").glob("*.json")):
+        u = json.loads(f.read_text(encoding="utf-8"))
+        par_livre.setdefault(u["livre"], []).append(u)
+    return par_livre
 
 
-def indexer(sigle: str, dossier: Path = TEXTES, cache: Path = CACHE) -> dict[str, Any]:
-    """Lit un livre et enregistre son index (références, résumés), sans le
-    texte. Tout est lu avant d'écrire : une panne ne laisse rien à moitié."""
-    unites, ignorees = _lire_livre(sigle, cache)
-    _ecrire_index(sigle, unites, ignorees, dossier)
-    return {"indexees": len(unites), "ignorees": ignorees}
-
-
-def charger_index(dossier: Path = TEXTES) -> dict[str, list[dict]]:
-    """Les homélies indexées (sans texte), par sigle de livre."""
-    if not dossier.exists():
-        return {}
-    return {f.name.removesuffix(".index.json"): json.loads(f.read_text(encoding="utf-8"))["unites"]
-            for f in sorted(dossier.glob("*.index.json"))}
-
-
-def texte_homelie(ident: str, dossier: Path = TEXTES) -> str | None:
-    f = dossier / "homelies" / f"{ident}.json"
+def texte_passage(ident: str, racine: Path = TEXTES) -> str | None:
+    f = racine / ident.split("-", 1)[0] / "passages" / f"{ident}.json"
     return json.loads(f.read_text(encoding="utf-8"))["texte"] if f.exists() else None
 
 
-def preparer(references: list[str], dossier: Path = TEXTES, cache: Path = CACHE,
+def oublier(ident: str, racine: Path = TEXTES) -> None:
+    """Retire un passage que Claude n'a pas confirmé."""
+    (racine / ident.split("-", 1)[0] / "passages" / f"{ident}.json").unlink(missing_ok=True)
+
+
+def preparer(references: list[str], racine: Path = TEXTES, cache: Path = CACHE,
              reseau: bool = True) -> list[dict]:
-    """Les homélies qui commentent les lectures du jour, texte compris.
-    Un livre jamais lu est indexé à ce moment-là ; seules les homélies
-    utilisées sont gardées. Une panne réseau ne bloque jamais la nuit."""
-    index = charger_index(dossier)
-    lus: dict[str, list[dict]] = {}
-    choisies: list[dict] = []
-    for ref in references:
-        e = etendue(ref)
-        if not e or e[0] not in PAGES:
-            continue
-        sigle = e[0]
-        if sigle not in index:
-            if not reseau:
+    """Les passages des Pères qui commentent les lectures du jour, tous
+    auteurs confondus (au plus MAX_PAR_AUTEUR chacun). Déjà enregistrés : relus
+    sans réseau. Sinon, seule la page utile est lue et les passages trouvés
+    sont enregistrés (« nouveau ») ; Claude confirmera. Une panne réseau ne
+    bloque jamais la nuit."""
+    choisis: list[dict] = []
+    for cle, a in AUTEURS.items():
+        pris = 0
+        # L'évangile d'abord (dernière lecture), puis on remonte ; un passage
+        # par lecture et par auteur.
+        for ref in reversed(references):
+            e = etendue(ref)
+            if not e or e[0] not in a.livres or pris >= MAX_PAR_AUTEUR or len(choisis) >= MAX_PAR_JOUR:
                 continue
-            try:
-                lus[sigle], ignorees = _lire_livre(sigle, cache)
-            except (RuntimeError, requests.RequestException) as exc:
-                print(f"⚠  Chrysostome sur {sigle} indisponible ce soir ({exc}).")
-                continue
-            _ecrire_index(sigle, lus[sigle], ignorees, dossier)
-            index = charger_index(dossier)
-        for u in passages_pour(ref, index):
-            if len(choisies) >= MAX_PAR_JOUR or any(c["id"] == u["id"] for c in choisies):
-                continue
-            texte = texte_homelie(u["id"], dossier)
-            if texte is None and reseau:
+            trouves = [(u, False) for u in passages_pour(ref, charger_passages(cle, racine))]
+            if not trouves and reseau:
                 try:
-                    if sigle not in lus:
-                        lus[sigle], _ = _lire_livre(sigle, cache)
+                    lus = _lire(cle, e[0], e[1][0], cache)
                 except (RuntimeError, requests.RequestException) as exc:
-                    print(f"⚠  Texte de {u['id']} indisponible ce soir ({exc}).")
+                    print(f"⚠  {a.nom} sur {ref} indisponible ce soir ({exc}).")
                     continue
-                complete = next((x for x in lus[sigle] if x["id"] == u["id"]), None)
-                if complete:
-                    _ecrire_homelie(complete, dossier)
-                    texte = complete["texte"]
-            if texte is not None:
-                choisies.append({**u, "texte": texte})
-    return choisies
-
-
-# Compatibilité : l'index fait foi pour la recherche par référence.
-charger_unites = charger_index
-
-
-if __name__ == "__main__":
-    import sys
-    for s in sys.argv[1:] or list(PAGES):
-        b = indexer(s)
-        print(f"- {s} ({PAGES[s][0]}) : {b['indexees']} indexées"
-              + (f", ignorées : {', '.join(b['ignorees'])}" if b["ignorees"] else ""))
+                trouves = [(u, True) for u in passages_pour(ref, {e[0]: lus})]
+            trouves = trouves[:1]
+            for u, nouveau in trouves:
+                if pris >= MAX_PAR_AUTEUR or len(choisis) >= MAX_PAR_JOUR \
+                        or any(c["id"] == u["id"] for c in choisis):
+                    continue
+                if nouveau:
+                    _enregistrer(u, racine)
+                choisis.append({**u, "nouveau": nouveau})
+                pris += 1
+    return choisis
