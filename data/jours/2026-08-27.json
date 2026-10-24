@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-27",
+  "date_humaine": "jeudi",
+  "semaine": "21ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 1, 1-9 ; Mt 24, 42-51",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 H328\"/><path d=\"M55 128 V30 H115 V128\"/><path d=\"M88 52 Q94 45 100 52 Q94 59 88 52\"/><path d=\"M83 128 Q84 88 90 58\"/><path d=\"M97 58 Q101 88 98 128\"/><path d=\"M93 62 Q104 54 108 46\"/><path d=\"M115 128 Q180 121 262 126\"/><path d=\"M235 128 V88 M235 104 L225 95 M235 97 L246 87\"/><path d=\"M272 128 V96 M272 109 L263 101 M272 102 L282 93\"/><path d=\"M253 126 V108\"/><path d=\"M253 106 Q256 102 253 98 Q250 102 253 106\"/></g><g class=\"trait-liturgie\"><path d=\"M105 42 Q108 36 111 42 Q108 48 105 42\"/><path d=\"M103 45 H112\"/></g></svg>",
+  "titre": "Veiller sans savoir",
+  "titre_html": "Veiller <span class=\"it\">sans savoir</span>",
+  "sous_titre": "Ce que le veilleur ne calcule pas, Dieu le garantit.",
+  "suite_hier": null,
+  "gravure_alt": "Un serviteur se tient debout dans l'embrasure d'une porte, une lampe à la main, dans une nuit épaisse ; au loin sur le chemin, à peine visible entre deux arbres nus, une silhouette approche sans qu'on puisse dire à quelle heure elle arrivera.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 1, 1-9",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Paul, <button class=\"mot\" data-g=\"g-kletos\">appelé</button> à être apôtre de Jésus-Christ par la volonté de Dieu, et le frère Sosthène, <span class=\"s\">2</span> à l'Église de Dieu qui est à Corinthe, à ceux qui ont été sanctifiés en Jésus-Christ, appelés à être saints, et à tous ceux qui invoquent en quelque lieu que ce soit le nom de notre Seigneur Jésus-Christ, leur Seigneur et le nôtre: <span class=\"s\">3</span> que la <button class=\"mot\" data-g=\"g-charis\">grâce</button> et la paix vous soient données de la part de Dieu notre Père et du Seigneur Jésus-Christ! <span class=\"s\">4</span> Je rends à mon Dieu de continuelles actions de grâces à votre sujet, pour la grâce de Dieu qui vous a été accordée en Jésus-Christ. <span class=\"s\">5</span> Car en lui vous avez été comblés de toutes les richesses, toutes celles de la parole et toutes celles de la connaissance, <span class=\"s\">6</span> le témoignage de Christ ayant été solidement établi parmi vous, <span class=\"s\">7</span> de sorte qu'il ne vous manque aucun don, dans l'attente où vous êtes de la manifestation de notre Seigneur Jésus-Christ. <span class=\"s\">8</span> Il vous <button class=\"mot\" data-g=\"g-bebaiosei\">affermira</button> aussi jusqu'à la fin, pour que vous soyez irréprochables au jour de notre Seigneur Jésus-Christ. <span class=\"s\">9</span> Dieu est <button class=\"mot\" data-g=\"g-pistos1\">fidèle</button>, lui qui vous a appelés à la communion de son Fils, Jésus-Christ notre Seigneur.",
+      "gloses": [
+        {
+          "id": "g-kletos",
+          "lemme": "klētos",
+          "html": "Segond traduit appelé, mais le grec <span class=\"gr\">klētos</span> est un adjectif verbal qui dit moins une invitation qu'une convocation déjà effective : celui qui est appelé l'est de fait, non en espérance. Paul l'emploie de lui-même comme apôtre, puis au verset suivant des Corinthiens appelés à être saints : la même vocation fonde l'apostolat et l'appartenance à l'Église, sans hiérarchie de dignité. Jean Chrysostome, dans sa première homélie sur cette épître, insiste : Paul ne se dit pas apôtre par mérite mais par appel, c'est Dieu qui choisit, jamais l'homme qui se désigne lui-même. Calvin y voit le fondement de toute vocation chrétienne : nul ne s'institue lui-même dans l'Église, on y est placé."
+        },
+        {
+          "id": "g-charis",
+          "lemme": "charis",
+          "html": "<span class=\"gr\">Charis</span>, que Segond rend par grâce, désignait dans le grec profane la faveur gracieuse, le charme qui rend une chose désirable sans contrepartie ; Paul en fait le mot central de son vocabulaire, celui d'un don entièrement immérité. Associé ici à la paix, il reprend une formule de salutation qui combine le grec (charis) et l'hébreu (shalom, traduit paix) : Paul salue ses lecteurs dans les deux langues de la foi. Calvin note dans son commentaire que cette double salutation n'est pas un simple formulaire de politesse orientale mais résume déjà tout l'Évangile : la grâce qui pardonne, la paix qui en résulte."
+        },
+        {
+          "id": "g-bebaiosei",
+          "lemme": "bebaioō",
+          "html": "Le verbe <span class=\"gr\">bebaioō</span>, que Segond traduit affermira, appartient au vocabulaire juridique grec de la garantie : il désignait la clause par laquelle un vendeur garantissait à l'acheteur la possession paisible d'un bien. Paul l'emploie deux fois dans ce court passage, comme s'il voulait garantir juridiquement aux Corinthiens, pourtant si instables, que leur persévérance ne dépend pas de leur propre constance mais d'une caution divine. Chrysostome relève cette insistance et y voit une consolation adressée par avance à une Église qu'il sait divisée : ce que Paul va reprocher aux chapitres suivants, il le couvre ici d'une promesse qui ne vient pas d'eux."
+        },
+        {
+          "id": "g-pistos1",
+          "lemme": "pistos",
+          "html": "<span class=\"gr\">Pistos</span>, fidèle, clôt le paragraphe et en est la clé : ce n'est plus la fidélité des Corinthiens qui est en jeu, comme dans toute l'épître à venir, mais celle de Dieu lui-même, qui seule fonde la leur. Segond garde fidèle, fidèle au mot, mais le grec dit aussi digne de foi, ce sur quoi on peut s'appuyer sans risque. Calvin commente que Paul place ce mot en majesté à la fin de sa salutation comme une pierre d'angle : avant même d'aborder les fautes de l'Église de Corinthe, il fixe le regard sur celui qui, lui, ne faillira pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 144 (145), 2-3, 4-5, 6-7",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Chaque jour je te <button class=\"mot\" data-g=\"g-barak\">bénirai</button>, Et je célébrerai ton nom à toujours et à perpétuité. <span class=\"s\">3</span> L'Éternel est grand et très digne de louange, Et sa grandeur est insondable. <span class=\"s\">4</span> Que chaque génération célèbre tes œuvres, Et publie tes <button class=\"mot\" data-g=\"g-geburot\">hauts faits</button>! <span class=\"s\">5</span> Je dirai la splendeur glorieuse de ta majesté; Je chanterai tes merveilles. <span class=\"s\">6</span> On parlera de ta puissance redoutable, Et je raconterai ta grandeur. <span class=\"s\">7</span> Qu'on proclame le souvenir de ton immense bonté, Et qu'on célèbre ta justice!",
+      "gloses": [
+        {
+          "id": "g-barak",
+          "lemme": "barak",
+          "html": "Le verbe hébreu <span class=\"gr\">barak</span>, que Segond traduit bénirai, est le même mot qui désigne la bénédiction que Dieu donne aux hommes ; le psalmiste le retourne vers Dieu, comme si la créature pouvait, à son tour, combler celui qui l'a comblée. Les rabbins ont souvent noté cette réciprocité étrange : on ne peut rien ajouter à Dieu, et pourtant l'Écriture emploie le même verbe dans les deux sens, comme si la louange humaine était une forme de don véritable, non un simple hommage verbal. Ce psaume 145 est le seul du psautier à porter en hébreu le titre tehillah, louange, d'où vient tehillim, nom hébreu de tout le livre des Psaumes."
+        },
+        {
+          "id": "g-geburot",
+          "lemme": "gevurah",
+          "html": "<span class=\"gr\">Gevurot</span>, que Segond traduit hauts faits, vient de la racine gabar, être fort : le mot désigne moins des exploits héroïques abstraits que des actes de puissance concrets et datables, ceux que la mémoire d'Israël récite dans son culte, la sortie d'Égypte, la traversée de la mer. Le pluriel indique une accumulation, une histoire entière de gestes divins que chaque génération doit retransmettre à la suivante, verbe après verbe. Calvin, dans son commentaire sur les psaumes, y voit le fondement de toute pédagogie de la foi : on ne croit pas dans le vide, on croit parce qu'on a reçu le récit de ce que Dieu a fait, et qu'on le redit à son tour."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 24, 42-51",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">42</span> <button class=\"mot\" data-g=\"g-gregoreite\">Veillez</button> donc, puisque vous ne savez pas quel jour votre Seigneur viendra. <span class=\"s\">43</span> Sachez-le bien, si le maître de la maison savait à quelle veille de la nuit le voleur doit venir, il veillerait et ne laisserait pas percer sa maison. <span class=\"s\">44</span> C'est pourquoi, vous aussi, tenez-vous prêts, car le Fils de l'homme viendra à l'heure où vous n'y penserez pas. <span class=\"s\">45</span> Quel est donc le serviteur <button class=\"mot\" data-g=\"g-pistosphronimos\">fidèle et prudent</button>, que son maître a établi sur ses gens, pour leur donner la nourriture au temps convenable? <span class=\"s\">46</span> Heureux ce serviteur, que son maître, à son arrivée, trouvera faisant ainsi! <span class=\"s\">47</span> Je vous le dis en vérité, il l'établira sur tous ses biens. <span class=\"s\">48</span> Mais, si c'est un méchant serviteur, qui dise en lui-même: Mon maître tarde à venir, <span class=\"s\">49</span> s'il se met à battre ses compagnons, s'il mange et boit avec les ivrognes, <span class=\"s\">50</span> le maître de ce serviteur viendra le jour où il ne s'y attend pas et à l'heure qu'il ne connaît pas, <span class=\"s\">51</span> il le mettra en pièces, et lui donnera sa part avec les <button class=\"mot\" data-g=\"g-hypokriton\">hypocrites</button>: c'est là qu'il y aura des pleurs et des grincements de dents.",
+      "gloses": [
+        {
+          "id": "g-gregoreite",
+          "lemme": "grēgoreō",
+          "html": "Le verbe grec <span class=\"gr\">grēgoreō</span>, veillez, dérive de egeirō, se réveiller : il ne s'agit pas d'une vigilance anxieuse mais d'un état d'éveil actif, celui de qui a déjà été tiré du sommeil et s'y maintient délibérément. Segond traduit justement par l'impératif veillez, mais laisse dans l'ombre la nuance du présent grec, qui indique une action continue et non un sursaut ponctuel : c'est une manière d'être, pas un geste isolé. Chrysostome, dans son homélie sur ce passage de Matthieu, insiste sur le fait que Jésus ne fixe aucune date précisément pour que cette veille reste permanente et non calculée à rebours d'une échéance connue."
+        },
+        {
+          "id": "g-pistosphronimos",
+          "lemme": "pistos kai phronimos",
+          "html": "Fidèle traduit <span class=\"gr\">pistos</span>, digne de confiance, mais prudent traduit <span class=\"gr\">phronimos</span>, un mot qui désigne moins la circonspection que le discernement pratique, la sagesse qui sait agir juste au moment juste, le même mot que dans la parabole des vierges sages quelques versets plus loin. Le serviteur loué n'est donc pas seulement loyal, il est intelligent de la situation qu'il traverse, capable de continuer son service sans que l'absence du maître ne change rien à sa tâche. Calvin note que cette association n'est pas fortuite : la fidélité sans discernement dérive vers le scrupule stérile, le discernement sans fidélité vers le calcul intéressé."
+        },
+        {
+          "id": "g-hypokriton",
+          "lemme": "hypokritēs",
+          "html": "<span class=\"gr\">Hypokritēs</span> désignait à l'origine l'acteur de théâtre, celui qui parle depuis un masque et joue un rôle qui n'est pas le sien ; Segond traduit hypocrites, en gardant le mot grec presque tel quel, ce qui masque en français sa provenance scénique. Le châtiment du mauvais serviteur consiste précisément à être renvoyé parmi ceux qui jouaient un rôle sans l'habiter, lui qui avait reçu une charge réelle et l'a traitée comme un rôle qu'on abandonne dès que le maître a le dos tourné. Chrysostome relève que ce sort n'est pas réservé aux étrangers à la maison mais à un serviteur de l'intérieur, ce qui rend l'avertissement particulièrement redoutable pour qui se croit déjà établi dans la foi."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre écrite depuis Éphèse",
+      "corps_html": "Paul rédige cette lettre depuis Éphèse, vers 54 ou 55, au cours de son troisième voyage missionnaire, en réponse à des informations reçues par les gens de Chloé (1 Co 1,11) et à des questions posées par une lettre des Corinthiens eux-mêmes (1 Co 7,1). Sosthène, associé à l'envoi, pourrait être le chef de synagogue battu devant le tribunal de Gallion selon Actes 18,17, devenu entre-temps chrétien."
+    },
+    {
+      "titre": "Le discours des Oliviers",
+      "corps_html": "Cette parabole appartient au grand discours eschatologique prononcé par Jésus sur le mont des Oliviers, en réponse à la question des disciples sur la destruction du Temple et la fin des temps (Mt 24,3). Elle suit immédiatement l'affirmation que ni les anges ni le Fils ne connaissent le jour (Mt 24,36) : la vigilance qu'elle enseigne n'est donc pas un calcul mais une disponibilité de tous les instants, comme le rappelle Chrysostome dans son homélie 77 sur Matthieu."
+    }
+  ],
+  "analogie": {
+    "titre": "La veille qui ne sait pas son heure",
+    "variantes": [
+      "Il y a des jours où la prière ne produit rien que tu puisses sentir : aucune paix perceptible, aucune réponse, aucun signe que quelqu'un écoute de l'autre côté. Tu continues pourtant, non par sursaut de ferveur mais par une fidélité plus têtue que le sentiment, celle qui se lève un matin de plus sans savoir si ce jour sera celui où quelque chose change. C'est cette veille sans certitude, sans date, sans preuve immédiate, que le texte de ce jour appelle bienheureuse, non parce qu'elle devine juste, mais parce qu'elle tient, précisément là où elle ne voit rien venir.",
+      "Tu sers depuis des années dans un lieu où rien ne semble avancer : les mêmes visages, les mêmes difficultés, aucun fruit visible à montrer pour justifier le temps donné. La tentation n'est pas de fuir d'un coup, mais de relâcher peu à peu, de te dire que puisque rien ne vient, autant vivre un peu pour soi en attendant que la situation change. Le texte de ce jour ne loue pas celui qui devine le moment du retour du maître, mais celui qui, à l'heure où personne ne regarde, continue de donner la nourriture qu'on lui a confiée : cette obstination sans preuve est la seule qui plaise, précisément parce qu'elle ne dépend pas de ce qu'elle voit.",
+      "Il y a des saisons où tu sais que si ta foi tenait uniquement à ta propre force de caractère, elle aurait déjà cédé : la lassitude, les doutes répétés, l'impression de rejouer chaque semaine le même combat sans y gagner de terrain. Et pourtant quelque chose te retient encore, un fil que tu ne tiens pas toi-même, dont tu ne sais même pas nommer l'origine exacte, sinon qu'il ne vient pas de ta constance. Paul dit aux Corinthiens, avant même de leur reprocher quoi que ce soit, que c'est Dieu qui les affermira jusqu'au bout : c'est cette promesse-là, reçue avant tout mérite, qui rend possible la veille dont parle l'Évangile."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre le cours du jour, laisse cette phrase de Paul reposer un instant en toi : ce n'est pas ta constance qui te tient, c'est la fidélité de celui qui t'a appelé.",
+    "geste": "Nomme, en silence, une chose que tu fais depuis longtemps sans en voir le fruit, et confie-la telle quelle, sans l'embellir.",
+    "note": "Il ne s'agit pas de redoubler d'effort mais de déplacer le regard : du service vers celui qui appelle."
+  },
+  "question": "Qu'est-ce que tu continues de faire aujourd'hui sans savoir si cela sert à quelque chose, et qu'est-ce que cela changerait de croire que ce n'est pas toi qui dois le garantir?",
+  "racines": [
+    {
+      "titre": "Chrysostome, sur l'appel de Paul",
+      "corps_html": "Dans sa première homélie sur cette épître, Chrysostome s'arrête sur le fait que Paul associe Sosthène à son envoi sans lui donner le titre d'apôtre : la lettre porte l'autorité de Paul seul, mais elle est écrite en compagnie, comme un rappel que même l'apôtre le plus assuré de sa vocation n'écrit jamais seul à l'Église.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens, Ie homélie"
+    },
+    {
+      "titre": "Le psaume que les rabbins faisaient réciter trois fois par jour",
+      "corps_html": "Le Talmud rapporte que quiconque récite le psaume 145 trois fois par jour a part au monde à venir, parce qu'il contient, verset après verset, l'alphabet hébreu presque complet et la louange de la providence de Dieu envers toute chair. Cette pratique liturgique juive, antérieure de plusieurs siècles au christianisme, montre l'ancienneté et la centralité de ce psaume dans la prière quotidienne d'Israël.",
+      "attribution": "Talmud de Babylone, traité Berakhot 4b"
+    },
+    {
+      "titre": "Calvin, la persévérance qui vient d'ailleurs",
+      "corps_html": "Calvin commente que Dieu, en affermissant les Corinthiens jusqu'à la fin, ne fait pas que commencer une bonne œuvre en eux : il la continue et l'achève, de sorte que la persévérance des croyants n'est jamais leur propriété mais un don renouvelé chaque jour. Cette lecture prépare, selon lui, tout ce que Paul reprochera ensuite à cette Église si instable : la promesse précède le reproche.",
+      "attribution": "Jean Calvin, Commentaire sur la première épître aux Corinthiens, ch. 1"
+    }
+  ]
+}
