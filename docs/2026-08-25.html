@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une coupe à deux registres : l'extérieur poli et orné de motifs répétés, l'intérieur suggéré en creux et resté vide ; au premier plan, quelques brins de menthe et d'aneth soigneusement alignés comme mesurés à la balance ; à l'arrière-plan, un arbre aux branches largement ouvertes, saisi en plein mouvement, comme s'il applaudissait."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 125 h300"/><path d="M118 40 q32 16 64 0"/><path d="M118 40 q-16 30 -10 55 q4 15 42 21"/><path d="M182 40 q16 30 10 55 q-4 15 -42 21"/><path d="M150 116 v9"/><path d="M132 125 h36"/><path d="M126 46 q24 12 48 0 M130 54 q20 14 40 0"/><path d="M112 66 v6 M126 72 v6 M140 76 v6 M154 77 v6 M168 74 v6 M182 68 v6"/><path d="M35 134 h270"/></g><g class="trait-rubrique"><path d="M45 134 v15 M45 141 l-5 -3 M45 141 l5 -3 M45 147 l-4 -3 M45 147 l4 -3 M90 134 v15 M90 141 l-5 -3 M90 141 l5 -3 M90 147 l-4 -3 M90 147 l4 -3 M255 134 v15 M255 141 l-5 -3 M255 141 l5 -3 M255 147 l-4 -3 M255 147 l4 -3 M300 134 v15 M300 141 l-5 -3 M300 141 l5 -3 M300 147 l-4 -3 M300 147 l4 -3"/></g><g class="trait-liturgie"><path d="M275 125 v-43"/><path d="M275 82 q-22 -8 -32 -32 M275 82 q22 -8 32 -32 M275 96 q-16 2 -26 -12 M275 96 q16 2 26 -12"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="FuQp4baBpPU" data-titre="Lev / Cœur" data-vignette="vignettes/FuQp4baBpPU.jpg" aria-label="Lire la vidéo Lev / Cœur"><img src="vignettes/FuQp4baBpPU.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Lev / Cœur</p>
+    <p class="raison" id="ecran-raison">Mt 23, 26 : purifier d'abord l'intérieur de la coupe — le cœur (lev) avant l'apparence.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=FuQp4baBpPU" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="FuQp4baBpPU" data-titre="Lev / Cœur" data-raison="Mt 23, 26 : purifier d&#39;abord l&#39;intérieur de la coupe — le cœur (lev) avant l&#39;apparence." data-vignette="vignettes/FuQp4baBpPU.jpg" class="on"><img src="vignettes/FuQp4baBpPU.jpg" alt="" loading="lazy"><span>Lev / Cœur</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="CSLk-ULxAik" data-titre="2 Thessaloniciens - Panorama" data-raison="2 Th 2, 1-3a.14-17 est tiré de ce panorama de 2 Thessaloniciens." data-vignette="vignettes/CSLk-ULxAik.jpg"><img src="vignettes/CSLk-ULxAik.jpg" alt="" loading="lazy"><span>2 Thessaloniciens - Panorama</span></button>
+      <button data-i="2" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14–28, qui couvre l&#39;appel à purifier d&#39;abord l&#39;intérieur (Mt 23, 23-26)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

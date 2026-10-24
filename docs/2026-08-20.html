@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un roi tendant un vêtement de noces vers une table dressée, tandis qu'au premier plan un cœur de pierre se fend pour laisser paraître, en dessous, un cœur de chair — dans le style sobre d'un bois gravé du XVIe siècle."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 145 H334"/><path d="M40 30 v-10 h8 v10 M56 30 v-10 h8 v10 M72 30 v-10 h8 v10"/><path d="M40 30 L26 95 L94 95 L80 30 Z"/><path d="M94 55 L130 50"/><path d="M170 95 H320"/><path d="M180 95 V125"/><path d="M310 95 V125"/><path d="M232 78 H248 L242 90 H238 Z M240 90 V95"/><path d="M50 145 C20 120 20 95 50 105 C80 95 80 120 50 145 Z"/><path d="M50 100 L44 112 L54 122 L46 132 L50 145"/></g><g class="trait-rubrique"><path d="M130 40 H165 V70 H130 Z"/><path d="M130 50 H165 M130 60 H165"/></g><g class="trait-liturgie"><path d="M50 142 C36 128 36 116 50 122 C64 116 64 128 50 142 Z"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">4 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,28 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="FuQp4baBpPU" data-titre="Lev / Cœur" data-vignette="vignettes/FuQp4baBpPU.jpg" aria-label="Lire la vidéo Lev / Cœur"><img src="vignettes/FuQp4baBpPU.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 4</p>    <p class="vtitre" id="ecran-titre">Lev / Cœur</p>
+    <p class="raison" id="ecran-raison">Ez 36, 26 promet un cœur nouveau (lev) à la place du cœur de pierre.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=FuQp4baBpPU" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="FuQp4baBpPU" data-titre="Lev / Cœur" data-raison="Ez 36, 26 promet un cœur nouveau (lev) à la place du cœur de pierre." data-vignette="vignettes/FuQp4baBpPU.jpg" class="on"><img src="vignettes/FuQp4baBpPU.jpg" alt="" loading="lazy"><span>Lev / Cœur</span></button>
+      <button data-i="1" data-yt="bvEGTiISqd8" data-titre="L’Esprit de Dieu" data-raison="Ez 36, 27 : « je mettrai en vous mon esprit » — le don de l&#39;Esprit annoncé dans la lecture." data-vignette="vignettes/bvEGTiISqd8.jpg"><img src="vignettes/bvEGTiISqd8.jpg" alt="" loading="lazy"><span>L’Esprit de Dieu</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="2" data-yt="MyFcRxLzW6g" data-titre="Ézéchiel 34–48 - Panorama" data-raison="Ez 36, 23-28 (le cœur nouveau) fait partie de ce panorama d&#39;Ézéchiel 34–48." data-vignette="vignettes/MyFcRxLzW6g.jpg"><img src="vignettes/MyFcRxLzW6g.jpg" alt="" loading="lazy"><span>Ézéchiel 34–48 - Panorama</span></button>
+      <button data-i="3" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14–28, qui couvre la parabole des noces (Mt 22, 1-14)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

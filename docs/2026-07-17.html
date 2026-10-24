@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Des disciples marchant dans un champ de blé mûr, leurs mains ouvertes vers les épis, tandis qu'un pharisien, les bras croisés, observe depuis le chemin ; au centre, le Christ, le regard tourné vers les cieux, dit que le Fils de l'homme est maître du sabbat."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 115 h320"/><path d="M5 115 q40 -8 80 -15 q60 -10 120 0 q60 8 110 15"/><path d="M20 115 l15 -25 l15 25"/><path d="M60 115 l12 -30 l12 30"/><path d="M100 115 l18 -35 l18 35"/><path d="M150 115 l10 -28 l10 28"/><path d="M200 115 l20 -32 l20 32"/><path d="M260 115 l15 -25 l15 25"/><path d="M300 115 l10 -20 l10 20"/><path d="M45 70 l-8 12"/><path d="M52 72 l-5 10"/><path d="M115 65 l8 10"/><path d="M108 68 l5 8"/><path d="M170 30 v50"/><path d="M158 38 h24"/><path d="M162 45 h16"/><path d="M285 50 l-8 25"/><path d="M295 55 l-5 20"/><path d="M305 50 l-3 22"/></g><g class="trait-rubrique"><path d="M170 80 q-12 0 -12 15 q0 12 12 15 q12 -3 12 -15 q0 -15 -12 -15"/><path d="M170 110 v5"/><path d="M160 120 h20"/></g><g class="trait-liturgie"><path d="M170 30 l-5 -8"/><path d="M170 30 l5 -8"/><path d="M170 22 v-6"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -439,9 +439,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="6lowTdQ61Y4" data-titre="Sabbat" data-vignette="vignettes/6lowTdQ61Y4.jpg" aria-label="Lire la vidéo Sabbat"><img src="vignettes/6lowTdQ61Y4.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Sabbat</p>
+    <p class="raison" id="ecran-raison">Étude du mot Sabbat, directement lié à Mt 12,1-8.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=6lowTdQ61Y4" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="6lowTdQ61Y4" data-titre="Sabbat" data-raison="Étude du mot Sabbat, directement lié à Mt 12,1-8." data-vignette="vignettes/6lowTdQ61Y4.jpg" class="on"><img src="vignettes/6lowTdQ61Y4.jpg" alt="" loading="lazy"><span>Sabbat</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="eOmd1d-6Whw" data-titre="Ésaïe 1–39 - Panorama" data-raison="Panorama d&#39;Ésaïe 1-39, livre lu ce jour (Is 38)." data-vignette="vignettes/eOmd1d-6Whw.jpg"><img src="vignettes/eOmd1d-6Whw.jpg" alt="" loading="lazy"><span>Ésaïe 1–39 - Panorama</span></button>
+      <button data-i="2" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Panorama de Matthieu 1-13, qui contient Mt 12,1-8." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

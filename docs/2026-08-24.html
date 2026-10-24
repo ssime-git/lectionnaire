@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un homme assis sous un figuier lève brusquement les yeux, saisi d'être reconnu, tandis qu'au loin une échelle de lumière relie la terre au ciel entrouvert."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M55 120 v-55"/><path d="M55 75 q-15 -10 -25 -5"/><path d="M55 70 q15 -12 28 -6"/><path d="M55 62 q-6 -16 4 -26"/><path d="M85 120 q6 -18 10 -26 q3 -5 7 -4"/><path d="M100 82 q5 -3 5 -8 q0 -5 -5 -8 q-5 3 -5 8 q0 5 5 8 z"/><path d="M85 120 q10 -4 20 -3 q8 1 13 -4"/></g><g class="trait-liturgie"><path d="M255 120 L295 20"/><path d="M270 120 L305 20"/><path d="M265 95 L278.75 95"/><path d="M275 70 L287.5 70"/><path d="M285 45 L296.25 45"/><path d="M275 22 q10 -14 25 -6"/><path d="M330 20 q-12 -14 -28 -4"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="zv1LAco6pTk" data-titre="L’importance de la Cité dans la Bible (et le plan de Dieu à ce sujet)" data-vignette="vignettes/zv1LAco6pTk.jpg" aria-label="Lire la vidéo L’importance de la Cité dans la Bible (et le plan de Dieu à ce sujet)"><img src="vignettes/zv1LAco6pTk.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">L’importance de la Cité dans la Bible (et le plan de Dieu à ce sujet)</p>
+    <p class="raison" id="ecran-raison">Ap 21 décrit la cité céleste, clé de voûte du plan de Dieu pour l'humanité.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=zv1LAco6pTk" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="zv1LAco6pTk" data-titre="L’importance de la Cité dans la Bible (et le plan de Dieu à ce sujet)" data-raison="Ap 21 décrit la cité céleste, clé de voûte du plan de Dieu pour l&#39;humanité." data-vignette="vignettes/zv1LAco6pTk.jpg" class="on"><img src="vignettes/zv1LAco6pTk.jpg" alt="" loading="lazy"><span>L’importance de la Cité dans la Bible (et le plan de Dieu à ce sujet)</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="HIfJZA9fwbM" data-titre="Apocalypse 12–22 - Panorama" data-raison="La description de la nouvelle Jérusalem (Ap 21, 9b-14) fait partie de ce panorama d&#39;Apocalypse 12–22." data-vignette="vignettes/HIfJZA9fwbM.jpg"><img src="vignettes/HIfJZA9fwbM.jpg" alt="" loading="lazy"><span>Apocalypse 12–22 - Panorama</span></button>
+      <button data-i="2" data-yt="QReuhS_R8Kk" data-titre="Jean 1–12 - Panorama" data-raison="L&#39;appel de Nathanaël sous le figuier (Jn 1, 45-51) est couvert par ce panorama de Jean 1–12." data-vignette="vignettes/QReuhS_R8Kk.jpg"><img src="vignettes/QReuhS_R8Kk.jpg" alt="" loading="lazy"><span>Jean 1–12 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

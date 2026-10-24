@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un sceau de cire pressé sur un parchemin déroulé, et au-dessus, une volée de passereaux comptés un à un par une main qui sort d'une nuée."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 100 q130 -14 260 0"/><path d="M40 128 q130 14 260 0"/><path d="M40 100 q-20 0 -20 14 q0 14 20 14"/><path d="M300 100 q20 0 20 14 q0 14 -20 14"/><path d="M110 106 q6 8 0 16"/><path d="M230 106 q-6 8 0 16"/><path d="M135 42 q0 -14 14 -14 q2 -10 16 -8 q6 -10 20 -2 q14 -2 14 10 q10 0 8 10 q-2 6 -10 6 h-54 q-10 0 -8 -2 z"/><path d="M172 42 v10"/><path d="M163 52 q9 -5 18 0 q2 5 -2 8 h-14 q-4 -3 -2 -8 z"/><path d="M165 52 v-9"/><path d="M171 52 v-11"/><path d="M177 52 v-9"/><path d="M163 55 q-5 2 -4 6"/></g><g class="trait-rubrique"><path d="M158 112 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 z"/><path d="M166 124 q4 6 8 0"/><path d="M164 112 h16 M172 104 v16"/></g><g class="trait-liturgie"><path d="M30 25 q5 -7 10 0 q5 -7 10 0"/><path d="M70 18 q5 -7 10 0 q5 -7 10 0"/><path d="M250 20 q5 -7 10 0 q5 -7 10 0"/><path d="M290 15 q5 -7 10 0 q5 -7 10 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Grâce éclaire 'scellés du gage de l'Esprit' en Ep 1, 11-14.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

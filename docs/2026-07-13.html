@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un prophète barbu tendant les mains ouvertes vers une ville aux portes closes, avec une épée plantée verticalement entre lui et les murailles, lame tournée vers le ciel comme un arbre dénudé."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M280 120 v-35 h15 v35 h15 v-35 h15 v35"/><path d="M285 90 h25"/><path d="M290 85 h15"/><path d="M40 120 v-20 q0 -15 15 -15 q15 0 15 15 v20"/><path d="M55 85 v-8 q0 -12 12 -12"/><path d="M50 55 q5 -8 10 0"/><path d="M45 65 q-3 -10 5 -15"/><path d="M65 65 q3 -10 -5 -15"/><path d="M35 75 q-5 5 0 12"/><path d="M75 75 q5 5 0 12"/><path d="M30 95 q12 -5 25 0 q12 5 25 0"/><path d="M45 105 q10 -3 20 0 q10 3 20 0"/><path d="M150 120 v-60 q0 -8 5 -8 q5 0 5 8 v60"/><path d="M155 52 v-22"/><path d="M148 42 h14"/><path d="M145 60 h20"/><path d="M152 30 l3 -8 l3 8"/><path d="M160 30 l3 -8 l3 8"/><path d="M140 120 h30"/><path d="M120 120 l25 -25"/><path d="M180 120 l-25 -25"/></g><g class="trait-rubrique"><path d="M155 55 q-3 15 0 25"/></g><g class="trait-liturgie"><path d="M175 120 v-55 q0 -10 8 -10 q8 0 8 10 v55"/><path d="M180 55 l3 -10 l3 10"/><path d="M183 45 v-15"/><path d="M172 68 h22"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -440,9 +440,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="eOmd1d-6Whw" data-titre="Ésaïe 1–39 - Panorama" data-vignette="vignettes/eOmd1d-6Whw.jpg" aria-label="Lire la vidéo Ésaïe 1–39 - Panorama"><img src="vignettes/eOmd1d-6Whw.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Ésaïe 1–39 - Panorama</p>
+    <p class="raison" id="ecran-raison">Panorama d'Ésaïe 1-39, livre lu ce jour (Is 1,10-17).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=eOmd1d-6Whw" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="eOmd1d-6Whw" data-titre="Ésaïe 1–39 - Panorama" data-raison="Panorama d&#39;Ésaïe 1-39, livre lu ce jour (Is 1,10-17)." data-vignette="vignettes/eOmd1d-6Whw.jpg" class="on"><img src="vignettes/eOmd1d-6Whw.jpg" alt="" loading="lazy"><span>Ésaïe 1–39 - Panorama</span></button>
+      <button data-i="1" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Panorama de Matthieu 1-13, qui contient Mt 10,34-11,1." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

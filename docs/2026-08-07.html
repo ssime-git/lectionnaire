@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois en taille douce : une épée fichée en terre devant les murailles crénelées et embrasées d'une ville qui s'écroule, sa garde barrée à l'horizontale comme une croix ; au loin, une silhouette courbée porte une poutre sur l'épaule, dans le même axe que la lame."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h150"/><path d="M18 128 v-12 h10 v-8 h10 v8 h10 v-12 h10 v12 h10 v-8 h10 v8 h10 v-12 h10 v12"/><path d="M28 108 v-18"/><path d="M58 108 v-24"/><path d="M88 108 v-18"/><path d="M40 90 l6 -14 l6 14"/><path d="M70 84 l7 -16 l7 16"/><path d="M100 90 l-14 10 q10 6 4 16"/><path d="M120 96 l-10 12 q8 4 2 14"/><path d="M228 118 l32 -16"/><path d="M232 112 l6 8"/><path d="M254 108 l6 8"/><path d="M215 130 q6 -10 16 -8"/></g><g class="trait-rubrique"><path d="M170 30 v88"/><path d="M150 46 h40"/><path d="M170 118 l-9 10 h18 z"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="7rBdJ1JZo9A" data-titre="Nahum - Panorama" data-vignette="vignettes/7rBdJ1JZo9A.jpg" aria-label="Lire la vidéo Nahum - Panorama"><img src="vignettes/7rBdJ1JZo9A.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Nahum - Panorama</p>
+    <p class="raison" id="ecran-raison">Panorama de Nahum, situant l'oracle de vengeance lu en Na 2-3</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=7rBdJ1JZo9A" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="7rBdJ1JZo9A" data-titre="Nahum - Panorama" data-raison="Panorama de Nahum, situant l&#39;oracle de vengeance lu en Na 2-3" data-vignette="vignettes/7rBdJ1JZo9A.jpg" class="on"><img src="vignettes/7rBdJ1JZo9A.jpg" alt="" loading="lazy"><span>Nahum - Panorama</span></button>
+      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28, qui couvre l&#39;appel à porter sa croix en Mt 16,24-28" data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

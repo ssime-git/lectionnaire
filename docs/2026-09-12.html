@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une coupe posée au centre d'une table de pierre, son pied confondu avec les racines noueuses d'un arbre chargé de fruits mûrs qui pousse juste derrière, l'ensemble planté à même un rocher affleurant, sous un ciel gravé de hachures fines."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 12 l10 10 M45 10 l10 10 M285 10 l10 10 M310 12 l10 10"/><path d="M4 128 l26 -8 l22 10 l28 -14 l30 10 l32 -8 l36 6 l34 -10 l38 8 l40 -6 l30 6 l20 -4"/><path d="M100 92 h140 M104 98 h132"/><path d="M118 98 l-4 22 h24 l-2 -22 z M198 98 l2 22 h24 l-4 -22 z"/><path d="M170 92 q-40 -30 -30 -67 M170 92 q40 -30 30 -67"/><path d="M140 25 q-14 -6 -22 0 M200 25 q14 -6 22 0 M140 25 q4 -14 14 -18 M200 25 q-4 -14 -14 -18"/><path d="M170 92 q-16 4 -22 14 M170 92 q-6 8 -4 16 M170 92 q6 8 4 16 M170 92 q16 4 22 14"/></g><g class="trait-liturgie"><path d="M154 50 q16 -8 32 0 q3 16 -16 22 q-19 -6 -16 -22 z"/><path d="M170 72 v18 M160 90 q10 5 20 0"/></g><g class="trait-rubrique"><path d="M118 25 q-4 4 0 8 q4 -4 0 -8 M222 25 q4 4 0 8 q-4 -4 0 -8 M154 7 q-4 3 0 7 q4 -3 0 -7 M186 7 q4 3 0 7 q-4 -3 0 -7"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-vignette="vignettes/q99CrlpKBrw.jpg" aria-label="Lire la vidéo 1 Corinthiens - Panorama"><img src="vignettes/q99CrlpKBrw.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">1 Corinthiens - Panorama</p>
+    <p class="raison" id="ecran-raison">1 Corinthiens 10, 14-22 (la coupe) est lu ce jour ; ce panorama situe tout le livre.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=q99CrlpKBrw" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

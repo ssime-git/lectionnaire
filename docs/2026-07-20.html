@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un prophète barbu debout sur une hauteur, les bras ouverts vers un peuple en contrebas qui tend des offrandes ; au-dessus de lui, des nuées où se dessinent des oreilles et une bouche, symbole du dialogue que Dieu cherche contre le bruit des victimes."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M170 120 v-15 q0 -8 -6 -12 q-8 -5 -12 -2"/><path d="M170 105 q0 -8 6 -12 q8 -5 12 -2"/><path d="M170 93 v-25 q0 -6 -4 -10 q-6 -5 -10 -2"/><path d="M170 68 v-15 q0 -5 4 -8 q5 -4 9 -2"/><path d="M145 58 h50"/><path d="M152 58 q-3 -8 5 -12 q6 -4 12 -2"/><path d="M188 58 q3 -8 -5 -12 q-6 -4 -12 -2"/><path d="M160 46 v-8"/><path d="M180 46 v-8"/><path d="M170 28 v12"/><path d="M120 115 q15 -25 35 -30"/><path d="M220 115 q-15 -25 -35 -30"/><path d="M130 120 q-5 -15 10 -25"/><path d="M210 120 q5 -15 -10 -25"/><path d="M80 120 q-10 -20 5 -35 q8 -10 20 -5"/><path d="M260 120 q10 -20 -5 -35 q-8 -10 -20 -5"/><path d="M50 120 q-5 -12 8 -18"/><path d="M290 120 q5 -12 -8 -18"/><path d="M100 120 l5 -8 l8 3 l-6 5"/><path d="M240 120 l-5 -8 l-8 3 l6 5"/><path d="M75 102 q8 -3 12 2"/><path d="M265 102 q-8 -3 -12 2"/></g><g class="trait-rubrique"><path d="M140 20 q-8 -5 -12 2 q-3 6 2 10"/><path d="M200 20 q8 -5 12 2 q3 6 -2 10"/><path d="M160 12 q10 -8 20 0"/><path d="M155 8 q15 -12 30 0"/></g><g class="trait-liturgie"><path d="M130 35 q-15 5 -20 18"/><path d="M210 35 q15 5 20 18"/><path d="M160 25 q10 -5 20 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -439,9 +439,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="DNjuAr9c7VU" data-titre="Jonas - Panorama" data-vignette="vignettes/DNjuAr9c7VU.jpg" aria-label="Lire la vidéo Jonas - Panorama"><img src="vignettes/DNjuAr9c7VU.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Jonas - Panorama</p>
+    <p class="raison" id="ecran-raison">Mt 12,38-42 : Jésus renvoie au signe de Jonas pour cette génération.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=DNjuAr9c7VU" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="DNjuAr9c7VU" data-titre="Jonas - Panorama" data-raison="Mt 12,38-42 : Jésus renvoie au signe de Jonas pour cette génération." data-vignette="vignettes/DNjuAr9c7VU.jpg" class="on"><img src="vignettes/DNjuAr9c7VU.jpg" alt="" loading="lazy"><span>Jonas - Panorama</span></button>
+      <button data-i="1" data-yt="H3-GGFM3WqM" data-titre="Justice" data-raison="Mi 6,8 : « pratiquer la justice » résume ce que le Seigneur demande." data-vignette="vignettes/H3-GGFM3WqM.jpg"><img src="vignettes/H3-GGFM3WqM.jpg" alt="" loading="lazy"><span>Justice</span></button>
+      <button data-i="2" data-yt="wmICj1t6UIA" data-titre="Sacrifice et Expiation" data-raison="Mi 6,6-8 : Dieu refuse les sacrifices pour demander la fidélité du cœur." data-vignette="vignettes/wmICj1t6UIA.jpg"><img src="vignettes/wmICj1t6UIA.jpg" alt="" loading="lazy"><span>Sacrifice et Expiation</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

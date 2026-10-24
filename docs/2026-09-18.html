@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un visage endormi tourné vers une fenêtre par laquelle entre la première lumière ; dans la pupille entrouverte se reflète, minuscule et debout, une silhouette qu'on dirait relevée."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 128 h320"/><path d="M28 32 h50 v66 h-50 z"/><path d="M53 32 v66"/><path d="M28 65 h50"/><path d="M268 45 q-38 -14 -70 8 q-18 12 -16 32 q1 12 12 20 q10 8 15 9 q20 8 42 1 q20 -7 24 -25 q4 -18 -3 -33 q-2 -6 -4 -12 z"/><path d="M188 66 q7 -5 15 0 q-7 5 -15 0"/><path d="M182 78 q-9 2 -10 9 q5 3 10 -1"/><path d="M186 96 q7 3 14 0"/><path d="M235 40 q12 -7 24 -2"/></g><g class="trait-rubrique"><path d="M80 50 l58 14"/><path d="M80 68 l66 3"/><path d="M80 88 l58 -12"/></g><g class="trait-liturgie"><path d="M196 65 v6"/><path d="M194.5 63 q1.5 -1.5 3 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="u-2dqyddp2o" data-titre="Vie Éternelle" data-vignette="vignettes/u-2dqyddp2o.jpg" aria-label="Lire la vidéo Vie Éternelle"><img src="vignettes/u-2dqyddp2o.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Vie Éternelle</p>
+    <p class="raison" id="ecran-raison">1 Co 15, 12-20 porte sur la résurrection et la vie éternelle, thème de cette vidéo.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=u-2dqyddp2o" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="u-2dqyddp2o" data-titre="Vie Éternelle" data-raison="1 Co 15, 12-20 porte sur la résurrection et la vie éternelle, thème de cette vidéo." data-vignette="vignettes/u-2dqyddp2o.jpg" class="on"><img src="vignettes/u-2dqyddp2o.jpg" alt="" loading="lazy"><span>Vie Éternelle</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="1 Corinthiens 15, 12-20 (la résurrection) est lu ce jour ; ce panorama situe le livre." data-vignette="vignettes/q99CrlpKBrw.jpg"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

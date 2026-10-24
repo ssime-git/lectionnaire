@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un paysan en tunique courte, à genoux dans un champ labouré, découvre un coffre éclatant sous une motte de terre que sa houe a soulevée ; au loin, un vendeur debout devant des perles étalées, tenant l'une d'elles contre la lumière du soleil couchant."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 120 h340"/><path d="M0 120 q40 -8 80 -15 q60 -10 120 0 q70 12 140 15"/><path d="M40 120 l25 -30 l20 5 l-15 25"/><path d="M85 95 l-8 -12"/><path d="M90 105 l-5 -18 l-8 3"/><path d="M65 90 q-5 -15 5 -25 q10 10 5 25"/><path d="M70 65 l-3 -8"/><path d="M95 120 q5 -20 20 -30 q15 10 10 30"/><path d="M105 90 l5 -15 l8 5"/><path d="M115 80 q8 -5 15 0"/><path d="M280 120 v-50 q-15 -5 -30 0 q-15 5 -15 15 q0 10 15 15 q15 5 30 0"/><path d="M260 75 l-5 -10 l10 -3"/><path d="M270 72 l8 -8"/><path d="M240 70 q10 -5 20 0"/><path d="M235 65 q5 -8 12 -5"/><path d="M275 60 q8 -3 12 5"/><path d="M250 55 l3 -8 l5 3"/><path d="M265 52 l5 -6"/><path d="M220 80 q-30 -15 -50 0"/><path d="M200 75 l-3 -8 l-5 3"/><path d="M195 70 l-5 -5"/><path d="M310 120 q-10 -35 -25 -50 q15 10 25 20"/><path d="M290 75 q8 -12 15 -5"/><path d="M305 65 l5 -8"/><path d="M315 60 q5 -8 0 -15"/><path d="M120 40 q30 -10 60 0"/><path d="M140 35 l10 -15"/><path d="M170 25 q5 -8 10 0"/><path d="M185 30 l8 -10"/></g><g class="trait-rubrique"><path d="M100 90 q-8 -5 -12 3 q-2 8 5 10 q8 2 12 -5 q2 -6 -5 -8 z"/><path d="M98 88 l-3 -5"/></g><g class="trait-liturgie"><path d="M270 55 q0 -10 -8 -15 q-5 8 -3 15 q5 3 11 0 z"/><path d="M262 40 l-5 -8"/><path d="M270 37 l5 -10"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -453,9 +453,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="YEv5AkBF56c" data-titre="Les livres de Salomon" data-vignette="vignettes/YEv5AkBF56c.jpg" aria-label="Lire la vidéo Les livres de Salomon"><img src="vignettes/YEv5AkBF56c.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Les livres de Salomon</p>
+    <p class="raison" id="ecran-raison">1 R 3,5-12 : Salomon demande la sagesse plutôt que richesse ou longue vie.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=YEv5AkBF56c" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="YEv5AkBF56c" data-titre="Les livres de Salomon" data-raison="1 R 3,5-12 : Salomon demande la sagesse plutôt que richesse ou longue vie." data-vignette="vignettes/YEv5AkBF56c.jpg" class="on"><img src="vignettes/YEv5AkBF56c.jpg" alt="" loading="lazy"><span>Les livres de Salomon</span></button>
+      <button data-i="1" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-raison="Mt 13,44-52 : trésor caché et filet, deux paraboles du Royaume commentées." data-vignette="vignettes/IT3LVWWuDDo.jpg"><img src="vignettes/IT3LVWWuDDo.jpg" alt="" loading="lazy"><span>Les paraboles de Jésus</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

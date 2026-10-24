@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : deux mains ouvertes tendant cinq pains et deux poissons vers une source qui jaillit en arrière-plan, traits épais et ombres croisées, dans le style sobre d'une gravure du XVIe siècle."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 134 h328"/><path d="M18 146 C46 118 72 104 104 100 C118 98 130 96 140 92"/><path d="M112 99 C108 88 110 80 118 74 M126 96 L122 76 M136 93 L134 74 M146 90 L146 72"/><path d="M322 146 C294 118 268 104 236 100 C222 98 210 96 200 92"/><path d="M228 99 C232 88 230 80 222 74 M214 96 L218 76 M204 93 L206 74 M194 90 L194 72"/><path d="M100 108 L112 116 M120 106 L132 114 M140 104 L152 112 M160 104 L172 112 M180 104 L192 112 M200 106 L212 114 M220 108 L232 116"/><path d="M30 140 L46 128 M310 140 L294 128"/></g><g class="trait-liturgie"><path d="M138 96 q32 16 64 0"/><path d="M170 94 C166 68 176 46 170 22"/><path d="M168 88 C142 64 118 50 96 40 M172 88 C198 64 222 50 244 40"/></g><g class="trait-rubrique"><path d="M128 96 q7 -14 14 0 M144 94 q8 -16 16 0 M160 92 q10 -18 20 0 M182 94 q8 -16 16 0 M200 96 q7 -14 14 0"/><path d="M132 92 l4 -4 M148 90 l4 -5 M168 86 l4 -6 M190 90 l4 -5 M204 92 l4 -4"/><path d="M112 108 q14 -10 28 0 q-14 10 -28 0 M112 108 l-8 -5 M112 108 l-8 5 M228 108 q-14 -10 -28 0 q14 10 28 0 M228 108 l8 -5 M228 108 l8 5"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="0dJXpm668TE" data-titre="Eau de Vie" data-vignette="vignettes/0dJXpm668TE.jpg" aria-label="Lire la vidéo Eau de Vie"><img src="vignettes/0dJXpm668TE.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Eau de Vie</p>
+    <p class="raison" id="ecran-raison">Étude sur l'Eau de Vie, en écho à l'eau et au pain gratuits d'Is 55,1-3</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=0dJXpm668TE" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="0dJXpm668TE" data-titre="Eau de Vie" data-raison="Étude sur l&#39;Eau de Vie, en écho à l&#39;eau et au pain gratuits d&#39;Is 55,1-3" data-vignette="vignettes/0dJXpm668TE.jpg" class="on"><img src="vignettes/0dJXpm668TE.jpg" alt="" loading="lazy"><span>Eau de Vie</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="TYxbJrDgZRg" data-titre="Romains 5–16 - Panorama" data-raison="Panorama de Romains 5-16, qui couvre l&#39;amour de Dieu dont rien ne sépare en Rm 8,35-39" data-vignette="vignettes/TYxbJrDgZRg.jpg"><img src="vignettes/TYxbJrDgZRg.jpg" alt="" loading="lazy"><span>Romains 5–16 - Panorama</span></button>
+      <button data-i="2" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28, qui couvre la multiplication des pains en Mt 14,13-21" data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

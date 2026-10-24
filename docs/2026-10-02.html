@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : au centre, une petite silhouette humaine porte la main à sa bouche, debout au pied d'un tourbillon qui occupe toute la moitié supérieure de l'image ; à ses pieds, un enfant est assis dans la poussière, le visage levé, dans le style sobre des gravures bibliques anciennes."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-liturgie"><path d="M170 6 q60 6 55 42 q-5 28 -40 30"/><path d="M170 14 q42 6 38 32 q-4 20 -28 22"/><path d="M170 22 q24 6 20 22 q-3 13 -17 14"/><path d="M170 30 q10 4 8 12"/></g><g class="trait-encre"><path d="M20 135 h300"/><path d="M170 95 a5 5 0 1 0 0.1 0"/><path d="M170 100 v22"/><path d="M170 103 q-7 -5 -2 -12"/><path d="M170 122 l-7 13"/><path d="M170 122 l7 13"/><path d="M198 118 a4 4 0 1 0 0.1 0"/><path d="M198 123 q-4 7 4 9"/><path d="M196 132 h8"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-vignette="vignettes/xRQ5ctHjhBs.jpg" aria-label="Lire la vidéo Job - Panorama"><img src="vignettes/xRQ5ctHjhBs.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Job - Panorama</p>
+    <p class="raison" id="ecran-raison">Job 38, la réponse de Dieu dans la tempête, se situe dans le panorama du livre de Job.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=xRQ5ctHjhBs" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-raison="Job 38, la réponse de Dieu dans la tempête, se situe dans le panorama du livre de Job." data-vignette="vignettes/xRQ5ctHjhBs.jpg" class="on"><img src="vignettes/xRQ5ctHjhBs.jpg" alt="" loading="lazy"><span>Job - Panorama</span></button>
+      <button data-i="1" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Matthieu 18,1-5.10, l&#39;enfant reçu par Jésus, fait partie du panorama de Matthieu 1-13." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

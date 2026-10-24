@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Deux greniers pleins à craquer sous un ciel nocturne hachuré de noir ; à leur pied, un homme endormi, la main crispée sur un sac de grain. De l'autre côté de la gravure, dans la pleine lumière, un tombeau ouvert laisse se dresser une silhouette debout, les bras levés."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M18 8 l9 9 M30 5 l9 9 M42 8 l9 9 M54 5 l9 9 M66 8 l9 9 M78 5 l9 9 M90 8 l9 9"/><path d="M20 120 V58 L38 28 L56 58 V120"/><path d="M27 32 q11 -16 22 0 M33 24 q5 -7 10 0"/><path d="M56 120 V65 L78 35 L100 65 V120"/><path d="M65 68 q13 -18 26 0 M72 58 q6 -9 12 0"/><path d="M106 118 Q116 106 132 110 Q148 113 150 118"/><path d="M95 108 q5 -6 10 0 q-5 6 -10 0 z"/><path d="M150 119 q-2 -11 9 -12 q11 1 9 12 q-3 5 -18 0 z M152 108 h14"/><path d="M222 120 V86 H298 V120"/><path d="M216 86 L232 64 L304 64 L292 86"/></g><g class="trait-liturgie"><path d="M258 40 q7 -8 14 0 q-7 8 -14 0 z"/><path d="M265 48 L250 90 L282 90 Z"/><path d="M259 54 L244 28 M273 54 L288 28"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Ep 2,8-10 dit qu'on est sauvés par grâce, pas par nos œuvres : la vidéo 'Grâce' éclaire ce don reçu sans l'avoir fabriqué.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-raison="Ep 2,8-10 dit qu&#39;on est sauvés par grâce, pas par nos œuvres : la vidéo &#39;Grâce&#39; éclaire ce don reçu sans l&#39;avoir fabriqué." data-vignette="vignettes/wktA2VE4yhY.jpg" class="on"><img src="vignettes/wktA2VE4yhY.jpg" alt="" loading="lazy"><span>Grâce</span></button>
+      <button data-i="1" data-yt="mBJrqtG_Cdk" data-titre="Ce que Jésus a enseigné sur les richesses et les biens" data-raison="Lc 12,13-21 est la parabole du riche aux greniers trop pleins : cette vidéo porte sur l&#39;enseignement de Jésus sur les richesses." data-vignette="vignettes/mBJrqtG_Cdk.jpg"><img src="vignettes/mBJrqtG_Cdk.jpg" alt="" loading="lazy"><span>Ce que Jésus a enseigné sur les richesses et les biens</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="2" data-yt="7pUE5wvhbBI" data-titre="Éphésiens - Panorama" data-raison="La lecture du jour est tirée d&#39;Éphésiens : panorama du livre pour situer Ep 2,1-10." data-vignette="vignettes/7pUE5wvhbBI.jpg"><img src="vignettes/7pUE5wvhbBI.jpg" alt="" loading="lazy"><span>Éphésiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

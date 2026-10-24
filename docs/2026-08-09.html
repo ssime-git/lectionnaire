@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une main jaillit des flots et saisit un poignet qui s'enfonce ; au-dessus des vagues démontées, une silhouette se tient debout, sans nimbe, seule sa main tendue capte un peu de lumière dans la nuit."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 100 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 -2"/><path d="M6 112 q30 -8 55 3 q28 12 58 -2 q26 -12 54 2 q30 14 60 -3 q28 -14 57 1 q28 14 44 4"/><path d="M0 128 q40 -6 80 2 q45 9 90 -3 q45 -11 90 4 q40 12 80 -4"/><path d="M158 96 q-10 22 -6 46"/><path d="M158 96 l14 20"/><path d="M172 116 l10 -8"/><path d="M186 30 q-4 20 0 38 q4 15 -2 30"/><path d="M172 46 q10 -10 16 -18"/><path d="M186 44 q6 -8 4 -18"/></g><g class="trait-rubrique"><path d="M186 30 q10 6 8 16 q-2 8 -10 8"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="uNfWBrrMn4Y" data-titre="1–2 Rois - Panorama" data-vignette="vignettes/uNfWBrrMn4Y.jpg" aria-label="Lire la vidéo 1–2 Rois - Panorama"><img src="vignettes/uNfWBrrMn4Y.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">1–2 Rois - Panorama</p>
+    <p class="raison" id="ecran-raison">Panorama de 1-2 Rois pour situer l'épisode du murmure d'Élie à l'Horeb (1 R 19, 9a.11-13a).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=uNfWBrrMn4Y" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="uNfWBrrMn4Y" data-titre="1–2 Rois - Panorama" data-raison="Panorama de 1-2 Rois pour situer l&#39;épisode du murmure d&#39;Élie à l&#39;Horeb (1 R 19, 9a.11-13a)." data-vignette="vignettes/uNfWBrrMn4Y.jpg" class="on"><img src="vignettes/uNfWBrrMn4Y.jpg" alt="" loading="lazy"><span>1–2 Rois - Panorama</span></button>
+      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28 pour resituer la marche sur l&#39;eau et le cri de Pierre (Mt 14, 22-33)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

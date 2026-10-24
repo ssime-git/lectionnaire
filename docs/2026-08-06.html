@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : le Christ debout au sommet d'une montagne, le visage rayonnant traversé de larges faisceaux de lumière, les vêtements striés de blanc. À sa droite et à sa gauche, Moïse tenant les tables de la Loi et Élie enveloppé d'un manteau, tous deux tournés vers lui. En contrebas, Pierre, Jacques et Jean tombés à terre, un bras levé devant leurs yeux, au milieu de rochers taillés à grands traits ; au-dessus de la scène, une nuée dense et sombre encadrée d'un mince trait de lumière."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M30 132 L170 44 L310 132"/><path d="M55 132 L72 114 L88 132"/><path d="M252 132 L268 112 L286 132"/><path d="M45 18 q125 -26 250 0 q-8 12 -22 9 q-101 15 -206 0 q-14 3 -22 -9 z"/><path d="M164 38 q6 -8 12 0 q-6 8 -12 0"/><path d="M170 44 v20 M158 64 l-8 24 M170 64 l0 24 M182 64 l8 24"/><path d="M170 48 l-12 10 M170 48 l12 10"/><path d="M107 62 q5 -7 10 0 q-5 7 -10 0"/><path d="M112 68 v34 M112 102 l-8 16 M112 102 l8 16"/><path d="M223 62 q5 -7 10 0 q-5 7 -10 0"/><path d="M228 68 v34 M218 74 q-14 14 -6 34 M238 74 q14 14 6 34 M228 102 l-8 16 M228 102 l8 16"/><path d="M138 130 l18 -8 M138 130 l-10 6 M150 118 l10 -10"/><path d="M168 134 l20 -6 M182 122 l8 -12"/><path d="M198 130 l-18 -8 M198 130 l10 6 M188 118 l-10 -10"/></g><g class="trait-rubrique"><path d="M104 76 h12 v20 h-12 z M110 76 v20"/></g><g class="trait-liturgie"><path d="M170 38 l-22 -20 M170 38 l22 -20 M170 34 l-30 -6 M170 34 l30 -6 M170 30 l-10 -26 M170 30 l10 -26"/><path d="M50 24 q120 -20 240 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -448,9 +448,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="9lxl6CS1RJk" data-titre="Fils de l&#39;Homme" data-vignette="vignettes/9lxl6CS1RJk.jpg" aria-label="Lire la vidéo Fils de l&#39;Homme"><img src="vignettes/9lxl6CS1RJk.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Fils de l'Homme</p>
+    <p class="raison" id="ecran-raison">Étude sur le Fils de l'Homme, qui relie Daniel 7,13-14 à la Transfiguration en Mt 17,1-9</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=9lxl6CS1RJk" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="9lxl6CS1RJk" data-titre="Fils de l&#39;Homme" data-raison="Étude sur le Fils de l&#39;Homme, qui relie Daniel 7,13-14 à la Transfiguration en Mt 17,1-9" data-vignette="vignettes/9lxl6CS1RJk.jpg" class="on"><img src="vignettes/9lxl6CS1RJk.jpg" alt="" loading="lazy"><span>Fils de l'Homme</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28, qui couvre la Transfiguration en Mt 17,1-9" data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+      <button data-i="2" data-yt="w6JiduuSdnQ" data-titre="2 Pierre - Panorama" data-raison="Panorama de 2 Pierre, qui couvre le témoignage de la Transfiguration en 2 P 1,16-19" data-vignette="vignettes/w6JiduuSdnQ.jpg"><img src="vignettes/w6JiduuSdnQ.jpg" alt="" loading="lazy"><span>2 Pierre - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un enfant franchit le seuil d'une porte, abandonnant derrière lui une tunique tombée à terre, tandis qu'au-delà du seuil une main lui tend un manteau neuf."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h328"/><path d="M150 20 v110"/><path d="M150 20 h70"/><path d="M220 20 v110"/><path d="M150 130 h-30"/><path d="M220 130 h30"/><path d="M112 95 q4 -12 13 -8 q10 -12 20 3"/><path d="M112 95 q3 20 -4 30"/><path d="M108 125 h16"/><path d="M112 95 v22"/></g><g class="trait-rubrique"><path d="M70 130 q20 -4 34 -1 q2 -6 -6 -9 q-16 -3 -28 10"/></g><g class="trait-liturgie"><path d="M250 70 q10 -10 22 -4"/><path d="M272 66 q6 10 -2 18"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -442,9 +442,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="1g4u57TSY0g" data-titre="Shema / Écouter" data-vignette="vignettes/1g4u57TSY0g.jpg" aria-label="Lire la vidéo Shema / Écouter"><img src="vignettes/1g4u57TSY0g.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Shema / Écouter</p>
+    <p class="raison" id="ecran-raison">Shema / Écouter relie directement à Lc 11, 27-28 : 'heureux ceux qui écoutent la parole'.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=1g4u57TSY0g" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="1g4u57TSY0g" data-titre="Shema / Écouter" data-raison="Shema / Écouter relie directement à Lc 11, 27-28 : &#39;heureux ceux qui écoutent la parole&#39;." data-vignette="vignettes/1g4u57TSY0g.jpg" class="on"><img src="vignettes/1g4u57TSY0g.jpg" alt="" loading="lazy"><span>Shema / Écouter</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="3elnA_n3nWc" data-titre="Galates - Panorama" data-raison="Galates - Panorama resitue la promesse par la foi de Ga 3, 22-29." data-vignette="vignettes/3elnA_n3nWc.jpg"><img src="vignettes/3elnA_n3nWc.jpg" alt="" loading="lazy"><span>Galates - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

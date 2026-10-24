@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Job assis à même la terre parmi des tessons, le visage renversé vers un ciel voilé de nuées, une main ouverte comme pour saisir une présence qu'il ne voit pas ; à l'arrière-plan, sur une route qui se perd à l'horizon, des silhouettes marchant deux par deux, bâton à la main, sans bagage."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h150"/><path d="M60 130 q-2 -18 10 -26 q10 -7 20 -2 q8 4 6 14 q-1 9 -10 14 q-9 5 -20 5 q-4 0 -6 -5 z"/><path d="M91 90 q4 -10 13 -8 q7 2 5 10 q-2 7 -10 6 q-7 -1 -8 -8 z"/><path d="M45 130 l8 -5 l4 6 z M100 132 l-7 -3 l1 -6 z"/><path d="M170 145 L280 65"/><path d="M340 148 L280 65"/><path d="M230 100 v16 M226 116 l-4 8 M234 116 l4 8 M224 94 l14 26"/><path d="M244 99 v15 M240 114 l-3 7 M248 114 l3 7 M238 93 l13 25"/><path d="M276 70 v8 M274 78 l-2 4 M278 78 l2 4 M272 68 l8 12"/><path d="M282 69 v8 M280 77 l-2 4 M284 77 l2 4 M278 67 l8 12"/></g><g class="trait-rubrique"><path d="M30 24 q14 -9 28 -1 q14 -9 28 -1 M140 16 q18 -10 36 0 q18 -10 36 0"/></g><g class="trait-liturgie"><path d="M88 100 q8 -10 18 -18 q3 -3 6 -2"/><path d="M112 80 l4 -3 M114 78 l1 -5 M110 79 l-1 -5"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -446,9 +446,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-vignette="vignettes/xRQ5ctHjhBs.jpg" aria-label="Lire la vidéo Job - Panorama"><img src="vignettes/xRQ5ctHjhBs.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Job - Panorama</p>
+    <p class="raison" id="ecran-raison">Job 19,21-27, l'espérance d'un témoin qui se lève, se comprend dans le panorama de Job.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=xRQ5ctHjhBs" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-raison="Job 19,21-27, l&#39;espérance d&#39;un témoin qui se lève, se comprend dans le panorama de Job." data-vignette="vignettes/xRQ5ctHjhBs.jpg" class="on"><img src="vignettes/xRQ5ctHjhBs.jpg" alt="" loading="lazy"><span>Job - Panorama</span></button>
+      <button data-i="1" data-yt="O-Za0jggT8Q" data-titre="Luc 10–24 - Panorama" data-raison="Luc 10,1-12, l&#39;envoi des soixante-dix, ouvre le panorama de Luc 10-24." data-vignette="vignettes/O-Za0jggT8Q.jpg"><img src="vignettes/O-Za0jggT8Q.jpg" alt="" loading="lazy"><span>Luc 10–24 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Bois gravé : une chaîne de maillons dont le dernier est ouvert, et par cette ouverture passe une lumière"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M28.0 82 a11 17 0 1 0 0.1 0"/><path d="M68.57142857142857 82 a11 17 0 1 0 0.1 0"/><path d="M109.14285714285714 82 a11 17 0 1 0 0.1 0"/><path d="M149.71428571428572 82 a11 17 0 1 0 0.1 0"/><path d="M190.28571428571428 82 a11 17 0 1 0 0.1 0"/><path d="M230.85714285714283 82 a11 17 0 1 0 0.1 0"/><path d="M271.42857142857144 82 a11 17 0 1 0 0.1 0"/></g><g class="trait-liturgie"><path d="M316.0 65 a11 17 0 0 0 -8 30"/><path d="M308.0 99 a11 17 0 0 0 8 -30"/><path d="M284 75 l26 0"/><path d="M284 75 l24 -12"/><path d="M284 75 l24 12"/><path d="M284 75 l18 -22"/><path d="M284 75 l18 22"/><path d="M284 75 l8 -27"/><path d="M284 75 l8 27"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="FVzc7zXuQzA" data-titre="Alliances" data-vignette="vignettes/FVzc7zXuQzA.jpg" aria-label="Lire la vidéo Alliances"><img src="vignettes/FVzc7zXuQzA.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Alliances</p>
+    <p class="raison" id="ecran-raison">Gn 49,8-10 annonce à Juda un sceptre royal durable, promesse d'alliance que la généalogie de Mt 1 fait aboutir au Christ.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=FVzc7zXuQzA" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="FVzc7zXuQzA" data-titre="Alliances" data-raison="Gn 49,8-10 annonce à Juda un sceptre royal durable, promesse d&#39;alliance que la généalogie de Mt 1 fait aboutir au Christ." data-vignette="vignettes/FVzc7zXuQzA.jpg" class="on"><img src="vignettes/FVzc7zXuQzA.jpg" alt="" loading="lazy"><span>Alliances</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="NylJU42gNnU" data-titre="Genèse 12–50 - Panorama" data-raison="Gn 49,2.8-10 appartient à Genèse 12-50 : panorama du livre pour situer la bénédiction de Jacob à Juda." data-vignette="vignettes/NylJU42gNnU.jpg"><img src="vignettes/NylJU42gNnU.jpg" alt="" loading="lazy"><span>Genèse 12–50 - Panorama</span></button>
+      <button data-i="2" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Mt 1,1-17 ouvre l&#39;évangile de Matthieu avec la généalogie de Jésus : panorama de Matthieu 1-13 pour le contexte." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

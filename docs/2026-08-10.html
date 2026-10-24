@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une main de semeur laissant tomber un grain de blé dans un sillon labouré, sous un ciel où ne perce qu'un rayon unique."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 128 q40 -6 80 0 q40 6 80 0 q40 -6 80 0 q40 6 80 0"/><path d="M10 136 q40 -5 80 0 q40 5 80 0 q40 -5 80 0 q40 5 80 0"/><path d="M150 30 q30 6 46 40 q10 20 4 46"/><path d="M188 66 q8 -6 18 -4"/><path d="M182 78 q9 -3 17 1"/><path d="M172 45 q5 8 3 17"/></g><g class="trait-rubrique"><path d="M198 96 q3 6 0 12 q-3 6 -6 0 q-2 -6 2 -10 z"/><path d="M200 108 l4 10"/></g><g class="trait-liturgie"><path d="M244 14 v50"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="fnP-hBi2A2Y" data-titre="Générosité" data-vignette="vignettes/fnP-hBi2A2Y.jpg" aria-label="Lire la vidéo Générosité"><img src="vignettes/fnP-hBi2A2Y.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Générosité</p>
+    <p class="raison" id="ecran-raison">Étude sur la générosité, qui éclaire le semeur qui donne sans compter (2 Co 9, 6-10).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=fnP-hBi2A2Y" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="fnP-hBi2A2Y" data-titre="Générosité" data-raison="Étude sur la générosité, qui éclaire le semeur qui donne sans compter (2 Co 9, 6-10)." data-vignette="vignettes/fnP-hBi2A2Y.jpg" class="on"><img src="vignettes/fnP-hBi2A2Y.jpg" alt="" loading="lazy"><span>Générosité</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="QReuhS_R8Kk" data-titre="Jean 1–12 - Panorama" data-raison="Panorama de Jean 1-12 pour resituer l&#39;image du grain qui meurt et porte du fruit (Jn 12, 24-26)." data-vignette="vignettes/QReuhS_R8Kk.jpg"><img src="vignettes/QReuhS_R8Kk.jpg" alt="" loading="lazy"><span>Jean 1–12 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

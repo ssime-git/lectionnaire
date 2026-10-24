@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : un plat vide posé sur une table de banquet ; au-dessus, une étoile unique perce l'obscurité ; à l'arrière-plan, les barreaux ouverts d'une prison et, à peine esquissé, un tombeau."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 118 h120"/><path d="M60 118 q40 -14 80 0"/><path d="M75 118 q25 -6 50 0"/><path d="M270 40 v20"/><path d="M270 76 v20"/><path d="M258 62 h-20"/><path d="M294 62 h20"/><path d="M280 50 l14 -14"/><path d="M260 74 l-14 14"/><path d="M280 74 l14 14"/><path d="M260 50 l-14 -14"/><path d="M230 130 h60"/><path d="M234 130 v-24 q26 -14 52 0 v24"/><path d="M246 130 v-18"/><path d="M258 130 v-22"/><path d="M270 130 v-24"/></g><g class="trait-rubrique"><path d="M170 18 l4 10 l10 1 l-8 7 l3 10 l-9 -6 l-9 6 l3 -10 l-8 -7 l10 -1 z"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-vignette="vignettes/q99CrlpKBrw.jpg" aria-label="Lire la vidéo 1 Corinthiens - Panorama"><img src="vignettes/q99CrlpKBrw.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">1 Corinthiens - Panorama</p>
+    <p class="raison" id="ecran-raison">1 Co 1,26-31 vient de cette lettre ; panorama de 1 Corinthiens pour situer l'appel des petits plutôt que des sages.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=q99CrlpKBrw" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="1 Co 1,26-31 vient de cette lettre ; panorama de 1 Corinthiens pour situer l&#39;appel des petits plutôt que des sages." data-vignette="vignettes/q99CrlpKBrw.jpg" class="on"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+      <button data-i="1" data-yt="9NhjIuy6_oo" data-titre="Marc - Panorama" data-raison="Mc 6,17-29 (mort de Jean Baptiste) est tiré de l&#39;Évangile de Marc ; panorama du livre." data-vignette="vignettes/9NhjIuy6_oo.jpg"><img src="vignettes/9NhjIuy6_oo.jpg" alt="" loading="lazy"><span>Marc - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

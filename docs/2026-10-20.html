@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une porte de bois entrebâillée sur la nuit ; sur le seuil, une lampe à huile posée à même la pierre projette un rond de lumière qui déborde légèrement à l'extérieur. En arrière-plan, un mur de pierres s'interrompt net, comme rompu, laissant voir au travers une seule pierre d'angle plus large que les autres, taillée en léger relief."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M15 130 H325"/><path d="M30 128 V22 H95 V128"/><path d="M30 128 L68 120 L66 28 L30 22"/><path d="M122 128 q0 -9 8 -9 q8 0 8 9 Z"/><path d="M130 119 v-5"/><path d="M190 45 H280"/><path d="M190 72 H288"/><path d="M190 100 H270"/><path d="M220 45 V72 M250 72 V100"/><path d="M280 45 L290 60 L270 100 L286 118"/></g><g class="trait-rubrique"><path d="M130 114 q-3 -7 0 -12 q3 5 0 12"/><path d="M128 112 q1 -4 2 -7"/><path d="M100 128 a30 9 0 1 0 60 0 a30 9 0 1 0 -60 0"/></g><g class="trait-liturgie"><path d="M245 95 H295 V120 H245 Z"/><path d="M250 101 L290 114"/><path d="M252 109 L285 119"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="ZjoRCeqpUSA" data-titre="Temple" data-vignette="vignettes/ZjoRCeqpUSA.jpg" aria-label="Lire la vidéo Temple"><img src="vignettes/ZjoRCeqpUSA.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Temple</p>
+    <p class="raison" id="ecran-raison">Ep 2,19-22 décrit les croyants bâtis en demeure de Dieu, un temple : la vidéo 'Temple' éclaire cette image.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=ZjoRCeqpUSA" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="ZjoRCeqpUSA" data-titre="Temple" data-raison="Ep 2,19-22 décrit les croyants bâtis en demeure de Dieu, un temple : la vidéo &#39;Temple&#39; éclaire cette image." data-vignette="vignettes/ZjoRCeqpUSA.jpg" class="on"><img src="vignettes/ZjoRCeqpUSA.jpg" alt="" loading="lazy"><span>Temple</span></button>
+      <button data-i="1" data-yt="mz0tAI2SdPk" data-titre="Découvrez le sens du mot “Demeure” (Mishkan) dans la Bible" data-raison="Ep 2,22 parle d&#39;être &#39;édifiés en une demeure&#39; : la vidéo sur Mishkan/Demeure relie ce vocabulaire biblique." data-vignette="vignettes/mz0tAI2SdPk.jpg"><img src="vignettes/mz0tAI2SdPk.jpg" alt="" loading="lazy"><span>Découvrez le sens du mot “Demeure” (Mishkan) dans la Bible</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="2" data-yt="7pUE5wvhbBI" data-titre="Éphésiens - Panorama" data-raison="Panorama d&#39;Éphésiens pour situer Ep 2,12-22 dans l&#39;ensemble de la lettre." data-vignette="vignettes/7pUE5wvhbBI.jpg"><img src="vignettes/7pUE5wvhbBI.jpg" alt="" loading="lazy"><span>Éphésiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

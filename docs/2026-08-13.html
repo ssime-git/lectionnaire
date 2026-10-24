@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une silhouette courbée creuse un trou dans un mur de pierre au crépuscule, un baluchon sur l'épaule, le visage voilé pour ne pas voir la terre qu'elle quitte."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h328"/><path d="M40 130 v-90 h100 v90"/><path d="M40 40 h100"/><path d="M60 40 v-8 h60 v8"/><path d="M150 80 q26 4 20 22 q-5 10 -20 6"/><path d="M96 92 q10 8 4 22 q-4 8 -16 6"/><path d="M74 130 q6 -34 22 -38"/><path d="M96 92 q10 -4 20 4"/><path d="M118 78 q8 6 -2 16"/><path d="M84 128 q-6 -10 2 -18"/></g><g class="trait-rubrique"><path d="M116 76 q6 -10 0 -18 q-9 4 -6 14 q2 5 6 4"/></g><g class="trait-liturgie"><path d="M150 84 q10 -2 14 6 q2 8 -6 12 q-10 2 -12 -8 q0 -6 4 -10"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Étude sur la grâce, en lien avec la dette remise dans la parabole du serviteur impitoyable (Mt 18, 21 – 19, 1).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-raison="Étude sur la grâce, en lien avec la dette remise dans la parabole du serviteur impitoyable (Mt 18, 21 – 19, 1)." data-vignette="vignettes/wktA2VE4yhY.jpg" class="on"><img src="vignettes/wktA2VE4yhY.jpg" alt="" loading="lazy"><span>Grâce</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="4Yr9DEYJ9IU" data-titre="Ézéchiel 1–33 - Panorama" data-raison="Panorama d&#39;Ézéchiel 1-33 pour situer le signe qu&#39;Israël refuse de voir (Ez 12, 1-12)." data-vignette="vignettes/4Yr9DEYJ9IU.jpg"><img src="vignettes/4Yr9DEYJ9IU.jpg" alt="" loading="lazy"><span>Ézéchiel 1–33 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

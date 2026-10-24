@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : un soleil à demi levé sur une ligne d'horizon circulaire sans début ni fin, une mince volute de fumée qui monte et se dissout dans l'air, et au premier plan une couronne posée de travers sur un trône vide."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 118 A600 600 0 0 1 340 118 A600 600 0 1 1 0 118 Z"/><path d="M148 93 A22 22 0 0 1 192 93"/><path d="M170 71 v-16 M154 76 l-9 -12 M186 76 l9 -12"/><path d="M40 118 h72"/><path d="M46 118 v-42"/><path d="M106 118 v-42"/><path d="M46 76 h60"/><path d="M50 118 v14 M100 118 v14"/></g><g class="trait-liturgie"><path d="M55 118 l7 -15 l6 8 l7 -17 l6 8 l7 -14 l5 7"/><path d="M55 118 q20 12 38 -6"/></g><g class="trait-rubrique"><path d="M255 128 q-9 -13 -1 -24 q7 -9 -1 -19 q-7 -8 1 -17 q6 -7 -2 -13"/><path d="M250 46 q3 -3 6 -1 M255 34 q2 -3 5 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="VURWsXy1nww" data-titre="Ecclésiaste - Panorama" data-vignette="vignettes/VURWsXy1nww.jpg" aria-label="Lire la vidéo Ecclésiaste - Panorama"><img src="vignettes/VURWsXy1nww.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Ecclésiaste - Panorama</p>
+    <p class="raison" id="ecran-raison">Qo 1,2-11 sur la vanité de toutes choses ouvre le panorama de l'Ecclésiaste.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=VURWsXy1nww" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="VURWsXy1nww" data-titre="Ecclésiaste - Panorama" data-raison="Qo 1,2-11 sur la vanité de toutes choses ouvre le panorama de l&#39;Ecclésiaste." data-vignette="vignettes/VURWsXy1nww.jpg" class="on"><img src="vignettes/VURWsXy1nww.jpg" alt="" loading="lazy"><span>Ecclésiaste - Panorama</span></button>
+      <button data-i="1" data-yt="Bo46uU2IF9w" data-titre="Luc 1–9 - Panorama" data-raison="Lc 9,7-9 sur les interrogations d&#39;Hérode sur Jésus appartient au panorama de Luc 1–9." data-vignette="vignettes/Bo46uU2IF9w.jpg"><img src="vignettes/Bo46uU2IF9w.jpg" alt="" loading="lazy"><span>Luc 1–9 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

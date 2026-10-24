@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une femme agenouillée au bord d'une table dressée, la main tendue vers des miettes tombées ; à l'arrière-plan, une porte de maison ouverte sur une montagne, vers laquelle marchent quelques figures venues de loin."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h150"/><path d="M18 128 v-16 l10 -8 l10 8 v16"/><path d="M23 128 v-14 h10 v14"/><path d="M60 100 h64"/><path d="M64 100 v28"/><path d="M120 100 v28"/><path d="M64 128 h56"/><path d="M75 96 l3 4 4 -6"/><path d="M95 96 l3 5 4 -7"/><path d="M70 132 q6 8 14 4 q6 6 13 -1"/></g><g class="trait-rubrique"><path d="M46 96 q10 -14 4 -26 q10 8 20 24 q-11 10 -24 2"/></g><g class="trait-liturgie"><path d="M180 30 l70 90 l70 -20"/><path d="M250 120 l0 -20"/><path d="M180 30 v98 h140"/><path d="M182 128 v-40 h20 v40"/><path d="M270 128 l14 -20 l14 20"/><path d="M296 128 l14 -20 l14 20"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="ztaPgwQ5j8k" data-titre="Ésaïe 40–66 - Panorama" data-vignette="vignettes/ztaPgwQ5j8k.jpg" aria-label="Lire la vidéo Ésaïe 40–66 - Panorama"><img src="vignettes/ztaPgwQ5j8k.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Ésaïe 40–66 - Panorama</p>
+    <p class="raison" id="ecran-raison">Panorama d'Ésaïe 40-66 pour resituer l'oracle sur la maison de prière pour toutes les nations (Is 56, 1.6-7).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=ztaPgwQ5j8k" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="ztaPgwQ5j8k" data-titre="Ésaïe 40–66 - Panorama" data-raison="Panorama d&#39;Ésaïe 40-66 pour resituer l&#39;oracle sur la maison de prière pour toutes les nations (Is 56, 1.6-7)." data-vignette="vignettes/ztaPgwQ5j8k.jpg" class="on"><img src="vignettes/ztaPgwQ5j8k.jpg" alt="" loading="lazy"><span>Ésaïe 40–66 - Panorama</span></button>
+      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28 pour situer la rencontre avec la femme cananéenne (Mt 15, 21-28)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

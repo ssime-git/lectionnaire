@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un prophète en train d'enterrer un vêtement dans la terre craquelée d'un ravin, la ceinture à peine visible sous une couche de sédiments ; à l'horizon, une graine minuscule dans un champ labouré."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 120 h340"/><path d="M0 120 q30 -8 60 0 q40 -12 80 0 q50 -15 100 0 q40 -10 80 0 q20 -6 40 0"/><path d="M20 110 l15 -8 l-3 12 l12 -6 l-5 10"/><path d="M280 115 l10 -5 l-2 8 l8 -4 l-3 6"/><path d="M140 120 q-5 -25 15 -45 q10 -15 8 -30"/><path d="M145 75 q12 -5 20 2"/><path d="M148 62 l-3 -8 l6 2 l-2 -7"/><path d="M155 80 l-8 15 l12 -5 l-5 12"/><path d="M162 95 q-3 8 2 15 q-5 -3 -8 5"/><path d="M158 102 l-12 8 l5 5"/><path d="M250 120 q5 -20 25 -35 q15 -10 20 -5"/><path d="M275 85 q8 -3 12 2 q-5 5 -10 8"/><path d="M280 80 l3 -6 l4 4 l-2 -5"/></g><g class="trait-rubrique"><path d="M150 110 q8 -15 20 -20 q-5 10 2 18 q-8 2 -12 8 q-5 -3 -10 -6 z"/></g><g class="trait-liturgie"><path d="M270 90 q3 -2 6 0 q-2 3 -5 2 z"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -449,9 +449,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="txGfRrR9v_M" data-titre="L&#39;Évangile du Royaume" data-vignette="vignettes/txGfRrR9v_M.jpg" aria-label="Lire la vidéo L&#39;Évangile du Royaume"><img src="vignettes/txGfRrR9v_M.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">L'Évangile du Royaume</p>
+    <p class="raison" id="ecran-raison">Mt 13,31-35 : graine de moutarde et levain, deux images de l'Évangile du Royaume.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=txGfRrR9v_M" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

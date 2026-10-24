@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un sépulcre de pierre à la façade fraîchement blanchie à la chaux, fendue d'une ouverture sombre où se devinent des ossements ; au premier plan, une main calleuse tient quelques épis de blé mûrs, seule tache de vie dans la gravure."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M100 128 v-70 l30 -25 h60 l30 25 v70 z"/><path d="M150 65 l7 -10 l-5 -9 l8 -7"/><path d="M195 90 l-8 8 l5 8"/><path d="M140 128 v-35 q30 -32 60 0 v35"/><path d="M150 120 l30 -20 M148 123 l5 -5 M148 117 l5 5 M178 103 l5 -5 M178 97 l5 5"/><path d="M180 120 l-30 -20 M182 123 l-5 -5 M182 117 l-5 5 M152 103 l-5 -5 M152 97 l-5 5"/></g><g class="trait-liturgie"><path d="M44 150 q-9 -16 -1 -28 q3 -8 12 -7 q6 -7 14 -2 q9 -4 13 4 q7 5 2 14 q5 8 -4 14 q-3 6 -12 6 q-9 1 -15 -4 q-6 -2 -9 3 z"/><path d="M55 122 q3 -4 7 0 M67 118 q3 -4 7 0"/><path d="M58 118 q1 -25 3 -48 M68 120 q1 -28 2 -55 M78 119 q1 -22 4 -42"/><path d="M61 70 l-6 8 M61 70 l6 8 M61 80 l-5 7 M61 80 l5 7 M70 65 l-6 8 M70 65 l6 8 M70 75 l-5 7 M70 75 l5 7 M82 77 l-5 7 M82 77 l5 7 M82 87 l-5 6 M82 87 l5 6"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -442,9 +442,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="CSLk-ULxAik" data-titre="2 Thessaloniciens - Panorama" data-vignette="vignettes/CSLk-ULxAik.jpg" aria-label="Lire la vidéo 2 Thessaloniciens - Panorama"><img src="vignettes/CSLk-ULxAik.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">2 Thessaloniciens - Panorama</p>
+    <p class="raison" id="ecran-raison">2 Th 3, 6-10.16-18 appartient à ce panorama de 2 Thessaloniciens.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=CSLk-ULxAik" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="CSLk-ULxAik" data-titre="2 Thessaloniciens - Panorama" data-raison="2 Th 3, 6-10.16-18 appartient à ce panorama de 2 Thessaloniciens." data-vignette="vignettes/CSLk-ULxAik.jpg" class="on"><img src="vignettes/CSLk-ULxAik.jpg" alt="" loading="lazy"><span>2 Thessaloniciens - Panorama</span></button>
+      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14–28, qui inclut l&#39;image des sépulcres blanchis (Mt 23, 27-32)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

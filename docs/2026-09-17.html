@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une femme agenouillée aux pieds d'un homme attablé, les cheveux dénoués épongeant ce que ses larmes viennent de mouiller ; à ses côtés, un vase d'albâtre renversé, tandis qu'un convive du fond détourne le regard."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M128 65 h102"/><path d="M134 65 v30"/><path d="M224 65 v30"/><path d="M182 92 q3 -32 18 -32 q15 0 18 32 z"/><path d="M191 43 a9 8 0 1 0 18 0 a9 8 0 1 0 -18 0"/><path d="M192 92 q-8 4 -14 10"/><path d="M118 128 q4 -28 22 -38 q14 -8 24 -6 q-12 8 -22 18 q-14 14 -24 26 z"/><path d="M172 90 q7 -6 12 0 q-2 7 -12 3"/><path d="M118 128 q10 -8 22 -6"/><path d="M35 95 q4 -22 16 -24 q11 2 13 18"/><path d="M43 58 q-7 -7 -14 -2 q2 9 9 9 q5 0 5 -7"/></g><g class="trait-rubrique"><path d="M168 85 q-3 10 2 18"/><path d="M172 83 q-2 13 6 20"/><path d="M176 81 q0 15 10 20"/></g><g class="trait-liturgie"><path d="M100 118 q-3 -8 6 -11 q9 -3 11 5 q2 7 -5 10 q-8 3 -12 -4 z"/><path d="M117 114 q9 3 14 9"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Lc 7, 36-50, la femme pardonnée 'sans mérite', illustre directement cette étude de la grâce.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-raison="Lc 7, 36-50, la femme pardonnée &#39;sans mérite&#39;, illustre directement cette étude de la grâce." data-vignette="vignettes/wktA2VE4yhY.jpg" class="on"><img src="vignettes/wktA2VE4yhY.jpg" alt="" loading="lazy"><span>Grâce</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="1 Corinthiens 15, 1-11 (la grâce reçue) est lu ce jour ; ce panorama situe le livre." data-vignette="vignettes/q99CrlpKBrw.jpg"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

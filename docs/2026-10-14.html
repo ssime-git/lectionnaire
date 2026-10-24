@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un arbre noueux planté au bord d'un canal d'irrigation, chargé de fruits lourds et de feuillage abondant, pendant qu'au premier plan une main dépose sur une petite balance des brins de menthe et de rue, trop légers pour faire pencher le plateau."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 q10 8 20 0 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0 h228"/><path d="M90 130 q-5 -10 3 -16 q-9 -8 1 -16 q-10 -8 2 -16 q-8 -6 0 -14 q6 -6 -2 -12"/><path d="M94 56 q-7 -10 -1 -19 q-2 8 4 9 q4 -11 -2 -26 q8 13 2 26 q5 -4 4 -10 q5 11 -7 20"/><path d="M100 50 q7 -9 1 -17 q2 7 -4 8 q-4 -10 2 -23 q-8 12 -2 23 q-5 -3 -4 -9 q-5 10 7 18"/><path d="M88 40 q3 6 0 10 M104 32 q3 6 0 10 M96 24 q3 6 0 10"/><path d="M270 130 v-46 M256 130 h28"/><path d="M248 84 h44 M252 84 v12 M288 84 v12"/><path d="M244 96 q8 8 16 0 M280 96 q8 8 16 0"/><path d="M246 66 q4 -8 12 -6 q8 -1 9 7 q1 9 -8 12 q-9 3 -14 -4 q-5 -6 1 -9"/></g><g class="trait-rubrique"><path d="M246 92 q2 -6 8 -5 q-4 2 -1 5 M256 89 q1 -5 5 -3 q-2 1 0 4"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="n4_ZOaMvpGY" data-titre="Le Saint-Esprit" data-vignette="vignettes/n4_ZOaMvpGY.jpg" aria-label="Lire la vidéo Le Saint-Esprit"><img src="vignettes/n4_ZOaMvpGY.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Le Saint-Esprit</p>
+    <p class="raison" id="ecran-raison">Le Saint-Esprit explique le 'fruit de l'Esprit' de Ga 5, 18-25.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=n4_ZOaMvpGY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une nouveau-née abandonnée dans un champ, une main qui étend sur elle le pan d'un vêtement en forme d'aile, et au loin deux mains jointes ne formant plus qu'une seule silhouette."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M38 14 q28 8 38 34 q7 18 -2 32"/><path d="M72 82 q5 -5 11 -3"/><path d="M70 89 q6 -3 11 0"/><path d="M96 118 q-4 -15 10 -18 q15 -3 17 12 q1 12 -13 15 q-13 2 -14 -9 z"/><path d="M105 95 q3 -7 9 -2 q2 6 -4 8 q-6 1 -5 -6"/><path d="M280 58 q-3 -9 5 -13 q8 -4 11 5 q2 8 -5 12 q-8 4 -11 -4"/><path d="M286 70 v18"/></g><g class="trait-rubrique"><path d="M76 80 q-22 4 -32 24 q16 -9 33 -7 q11 1 17 9 q-8 -20 -18 -26"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -452,9 +452,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="FVzc7zXuQzA" data-titre="Alliances" data-vignette="vignettes/FVzc7zXuQzA.jpg" aria-label="Lire la vidéo Alliances"><img src="vignettes/FVzc7zXuQzA.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Alliances</p>
+    <p class="raison" id="ecran-raison">Étude sur les alliances, pour éclairer l'infidélité d'Israël (Ez 16) et le lien noué par Dieu dans le mariage (Mt 19, 3-12).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=FVzc7zXuQzA" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="FVzc7zXuQzA" data-titre="Alliances" data-raison="Étude sur les alliances, pour éclairer l&#39;infidélité d&#39;Israël (Ez 16) et le lien noué par Dieu dans le mariage (Mt 19, 3-12)." data-vignette="vignettes/FVzc7zXuQzA.jpg" class="on"><img src="vignettes/FVzc7zXuQzA.jpg" alt="" loading="lazy"><span>Alliances</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="4Yr9DEYJ9IU" data-titre="Ézéchiel 1–33 - Panorama" data-raison="Panorama d&#39;Ézéchiel 1-33 pour resituer l&#39;allégorie de l&#39;épouse infidèle (Ez 16, 1-15.60.63)." data-vignette="vignettes/4Yr9DEYJ9IU.jpg"><img src="vignettes/4Yr9DEYJ9IU.jpg" alt="" loading="lazy"><span>Ézéchiel 1–33 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

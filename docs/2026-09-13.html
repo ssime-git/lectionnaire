@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un roi debout déchire une tablette couverte de chiffres, tandis qu'à ses pieds un serviteur agenouillé referme le poing sur une pièce unique."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M133 26 q6 -8 12 0 q-6 8 -12 0 z"/><path d="M139 40 v36"/><path d="M123 42 h32"/><path d="M120 80 q19 16 38 0 l-6 48 h-26 z"/><path d="M123 44 l-22 -30"/><path d="M155 44 l22 -30"/><path d="M82 6 l24 -3 l3 27 l-9 9 l-18 -15 z"/><path d="M88 12 h11 M89 18 h9 M90 24 h7"/><path d="M178 4 l24 5 l-5 27 l-19 -11 l0 -13 z"/><path d="M188 12 h9 M190 18 h9 M186 24 h11"/><path d="M205 92 q22 8 18 36"/><path d="M198 88 q5 -7 10 0 q-5 7 -10 0 z"/><path d="M213 122 v6 h14"/><path d="M218 108 q16 4 20 16"/></g><g class="trait-liturgie"><path d="M236 120 q5 -5 9 0 q-5 6 -9 0 z"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -449,9 +449,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-vignette="vignettes/mq0vO1vNVfY.jpg" aria-label="Lire la vidéo Matthieu 14–28 - Panorama"><img src="vignettes/mq0vO1vNVfY.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Matthieu 14–28 - Panorama</p>
+    <p class="raison" id="ecran-raison">Mt 18, 21-35 (parabole du serviteur impitoyable) appartient à ce panorama Matthieu 14-28.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=mq0vO1vNVfY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un homme au visage renversé vers le ciel, la bouche entrouverte comme un cri retenu, une main pressée sur la poitrine d'où semblent jaillir quelques flammes stylisées entre les côtes ; à l'arrière-plan, une silhouette porte une poutre de bois en travers des épaules, sur un chemin montant vers une colline nue."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 132 h328"/><path d="M110 132 q-4 -30 6 -52 q9 -20 4 -38"/><path d="M120 42 q-14 -6 -12 -18 q10 -6 16 4 q4 -12 16 -10 q8 8 -2 18 q10 0 8 12 q-10 10 -26 -6"/><path d="M105 55 q9 12 21 4"/><path d="M96 78 q16 6 30 -4"/><path d="M113 88 v22"/><path d="M235 132 q2 -34 14 -50 q10 -14 22 -24"/><path d="M235 132 q-2 -30 -12 -46"/><path d="M247 66 q-2 -12 8 -14 q9 3 6 14 q-6 8 -14 0"/><path d="M215 92 l64 -28"/><path d="M40 132 q60 -4 120 0 q90 6 140 0"/></g><g class="trait-rubrique"><path d="M132 60 q3 -10 -2 -18 q6 4 5 14 q4 -8 0 -16 q7 6 2 17 q3 -3 2 -9 q3 8 -7 12"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -451,9 +451,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="qTz_5zFBDsc" data-titre="Jérémie - Panorama" data-vignette="vignettes/qTz_5zFBDsc.jpg" aria-label="Lire la vidéo Jérémie - Panorama"><img src="vignettes/qTz_5zFBDsc.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Jérémie - Panorama</p>
+    <p class="raison" id="ecran-raison">Jr 20,7-9 (le feu dans les os de Jérémie) vient de ce livre ; panorama de Jérémie.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=qTz_5zFBDsc" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="qTz_5zFBDsc" data-titre="Jérémie - Panorama" data-raison="Jr 20,7-9 (le feu dans les os de Jérémie) vient de ce livre ; panorama de Jérémie." data-vignette="vignettes/qTz_5zFBDsc.jpg" class="on"><img src="vignettes/qTz_5zFBDsc.jpg" alt="" loading="lazy"><span>Jérémie - Panorama</span></button>
+      <button data-i="1" data-yt="TYxbJrDgZRg" data-titre="Romains 5–16 - Panorama" data-raison="Rm 12,1-2 (offrir sa vie en sacrifice) appartient à Romains 5-16 ; panorama du passage." data-vignette="vignettes/TYxbJrDgZRg.jpg"><img src="vignettes/TYxbJrDgZRg.jpg" alt="" loading="lazy"><span>Romains 5–16 - Panorama</span></button>
+      <button data-i="2" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Mt 16,21-27 (perdre sa vie pour la trouver) est couvert par ce panorama de Matthieu 14-28." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

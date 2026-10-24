@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un œil grand ouvert gravé au centre du bois, cerné par les volutes d'un vent de tempête ; en haut, soixante-dix silhouettes minuscules reviennent par un chemin, le visage levé vers un ciel dégagé."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M30 30 Q170 8 310 30"/><path d="M55 33 l4 7 l4 -7 M90 29 l4 7 l4 -7 M125 26 l4 7 l4 -7 M160 25 l4 7 l4 -7 M195 25 l4 7 l4 -7 M230 26 l4 7 l4 -7 M265 29 l4 7 l4 -7 M295 33 l4 7 l4 -7"/><path d="M120 88 Q170 62 220 88 Q170 112 120 88 Z"/><path d="M128 93 Q170 104 212 93"/><path d="M95 88 Q75 72 86 50 Q98 66 92 82"/><path d="M245 88 Q265 72 254 50 Q242 66 248 82"/><path d="M150 58 Q170 40 190 58"/><path d="M150 118 Q170 132 190 118"/></g><g class="trait-rubrique"><path d="M158 88 q12 -11 24 0 q-12 11 -24 0 z"/></g><g class="trait-liturgie"><path d="M40 14 Q170 2 300 14"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-vignette="vignettes/xRQ5ctHjhBs.jpg" aria-label="Lire la vidéo Job - Panorama"><img src="vignettes/xRQ5ctHjhBs.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Job - Panorama</p>
+    <p class="raison" id="ecran-raison">Job 42,1-3.5-6.12-17, la conclusion du livre, se lit dans le panorama de Job.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=xRQ5ctHjhBs" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-raison="Job 42,1-3.5-6.12-17, la conclusion du livre, se lit dans le panorama de Job." data-vignette="vignettes/xRQ5ctHjhBs.jpg" class="on"><img src="vignettes/xRQ5ctHjhBs.jpg" alt="" loading="lazy"><span>Job - Panorama</span></button>
+      <button data-i="1" data-yt="O-Za0jggT8Q" data-titre="Luc 10–24 - Panorama" data-raison="Luc 10,17-24, le retour des disciples et la joie de Jésus, appartient au panorama de Luc 10-24." data-vignette="vignettes/O-Za0jggT8Q.jpg"><img src="vignettes/O-Za0jggT8Q.jpg" alt="" loading="lazy"><span>Luc 10–24 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

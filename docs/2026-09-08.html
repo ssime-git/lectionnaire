@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : un arbre généalogique noueux dont chaque branche porte un nom gravé, montant vers une étoile unique au sommet ; au pied du tronc, un homme endormi près duquel se tient un ange, une main posée sur son épaule."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 138 h324"/><path d="M200 138 q-8 -10 0 -20 q8 -10 0 -20 q-8 -10 0 -20"/><path d="M200 78 q-20 -8 -34 -30"/><path d="M200 78 q20 -8 34 -30"/><path d="M166 48 q-10 -14 -22 -20 M166 48 q6 -16 -4 -26"/><path d="M234 48 q10 -14 22 -20 M234 48 q-6 -16 4 -26"/><path d="M64 136 q30 6 62 0 q8 -1 16 -6"/><path d="M148 116 q6 -9 15 -3 q3 7 -5 11 q-8 3 -10 -8 z"/><path d="M186 136 v-34 q0 -12 6 -14"/><path d="M188 82 q5 -7 11 0 q-1 8 -6 8 q-6 0 -5 -8 z"/><path d="M188 104 q-16 4 -28 10"/></g><g class="trait-rubrique"><path d="M192 96 q-18 -8 -22 -26 q15 2 23 16 q5 7 -1 10 z"/></g><g class="trait-liturgie"><path d="M200 4 v16 M192 12 h16 M195 7 l10 10 M205 7 l-10 10"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -454,9 +454,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="4eBBvA8zzxI" data-titre="Le Messie" data-vignette="vignettes/4eBBvA8zzxI.jpg" aria-label="Lire la vidéo Le Messie"><img src="vignettes/4eBBvA8zzxI.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Le Messie</p>
+    <p class="raison" id="ecran-raison">Michée 5,1-4a annonce le Messie issu de Bethléem, accompli en Mt 1,1-23 — étude du mot Messie.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=4eBBvA8zzxI" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="4eBBvA8zzxI" data-titre="Le Messie" data-raison="Michée 5,1-4a annonce le Messie issu de Bethléem, accompli en Mt 1,1-23 — étude du mot Messie." data-vignette="vignettes/4eBBvA8zzxI.jpg" class="on"><img src="vignettes/4eBBvA8zzxI.jpg" alt="" loading="lazy"><span>Le Messie</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="dmS-4-0cx5g" data-titre="Michée - Panorama" data-raison="Michée 5,1-4a est tiré de ce livre ; panorama de Michée." data-vignette="vignettes/dmS-4-0cx5g.jpg"><img src="vignettes/dmS-4-0cx5g.jpg" alt="" loading="lazy"><span>Michée - Panorama</span></button>
+      <button data-i="2" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Mt 1,1-16.18-23 (généalogie et naissance de Jésus) fait partie de ce panorama de Matthieu 1-13." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

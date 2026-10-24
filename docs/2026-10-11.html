@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une longue table dressée à flanc de montagne, des convives de toutes conditions s'y attablant tandis qu'au loin une ville brûle sous un ciel d'orage ; au premier plan, une coupe qui déborde."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 145 L170 95 L334 55"/><path d="M55 112 L300 70"/><path d="M55 112 L55 119"/><path d="M300 70 L300 77"/><path d="M15 20 q25 -12 50 0 q25 -12 50 0 q25 -12 50 0"/><path d="M225 56 h8 v-12 h6 v12 h10 v-18 h6 v18 h8 v-8 h8"/><path d="M66 100 q4 -6 8 0 v10"/><path d="M116 93 q4 -6 8 0 v10"/><path d="M166 85 q4 -6 8 0 v10"/><path d="M216 77 q4 -6 8 0 v10"/><path d="M266 70 q4 -6 8 0 v10"/></g><g class="trait-rubrique"><path d="M250 40 q-11 -17 -1 -31 q-3 13 6 15 q7 -19 -3 -43 q14 22 3 43 q9 -6 6 -17 q8 19 -11 34"/></g><g class="trait-liturgie"><path d="M22 100 q0 18 13 20 q13 -2 13 -20 z"/><path d="M35 120 v14"/><path d="M24 140 h22"/><path d="M20 98 q6 -10 13 -2 q7 -8 13 2"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -458,9 +458,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-vignette="vignettes/IT3LVWWuDDo.jpg" aria-label="Lire la vidéo Les paraboles de Jésus"><img src="vignettes/IT3LVWWuDDo.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Les paraboles de Jésus</p>
+    <p class="raison" id="ecran-raison">Les paraboles de Jésus éclaire la parabole des noces de Mt 22, 1-14.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=IT3LVWWuDDo" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-raison="Les paraboles de Jésus éclaire la parabole des noces de Mt 22, 1-14." data-vignette="vignettes/IT3LVWWuDDo.jpg" class="on"><img src="vignettes/IT3LVWWuDDo.jpg" alt="" loading="lazy"><span>Les paraboles de Jésus</span></button>
+      <button data-i="1" data-yt="txGfRrR9v_M" data-titre="L&#39;Évangile du Royaume" data-raison="L&#39;Évangile du Royaume relie le festin d&#39;Is 25, 6-10a au banquet messianique de Mt 22." data-vignette="vignettes/txGfRrR9v_M.jpg"><img src="vignettes/txGfRrR9v_M.jpg" alt="" loading="lazy"><span>L'Évangile du Royaume</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

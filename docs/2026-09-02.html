@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une main verse l'eau d'une cruche sur une jeune pousse sortant d'un sillon labouré, dans un champ délimité par une clôture basse, sous un ciel strié de fines hachures."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M4 18 h30 M44 18 h40 M94 18 h24 M128 20 h36 M4 32 h20 M34 32 h50 M94 32 h30 M134 32 h20"/><path d="M20 118 h300"/><path d="M20 118 q40 -6 80 -1 q40 5 80 -1 q40 -6 80 0 q30 4 60 0"/><path d="M8 132 h14 M8 132 v10 M22 132 v10 M8 137 h14 M40 130 h14 M40 130 v12 M54 130 v12 M40 136 h14 M300 131 h14 M300 131 v11 M314 131 v11 M300 137 h14"/><path d="M232 40 q10 -6 18 -2 q4 -10 -4 -18 q-2 10 -14 8 q-4 8 0 12"/><path d="M246 40 l12 30"/><path d="M244 68 q8 -4 16 4"/><path d="M170 100 v-16"/><path d="M170 84 q-8 -10 -2 -20"/><path d="M170 88 q10 -6 8 -18"/></g><g class="trait-liturgie"><path d="M258 70 q6 14 -4 26 q6 -2 8 -8 q2 10 -6 16"/></g><g class="trait-rubrique"><path d="M170 118 q-2 -10 0 -18"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-vignette="vignettes/q99CrlpKBrw.jpg" aria-label="Lire la vidéo 1 Corinthiens - Panorama"><img src="vignettes/q99CrlpKBrw.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">1 Corinthiens - Panorama</p>
+    <p class="raison" id="ecran-raison">1 Co 3,1-9 (Dieu seul fait croître) vient de 1 Corinthiens ; panorama du livre.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=q99CrlpKBrw" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="1 Co 3,1-9 (Dieu seul fait croître) vient de 1 Corinthiens ; panorama du livre." data-vignette="vignettes/q99CrlpKBrw.jpg" class="on"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+      <button data-i="1" data-yt="Bo46uU2IF9w" data-titre="Luc 1–9 - Panorama" data-raison="Lc 4,38-44 (guérisons à Capharnaüm) fait partie de ce panorama de Luc 1-9." data-vignette="vignettes/Bo46uU2IF9w.jpg"><img src="vignettes/Bo46uU2IF9w.jpg" alt="" loading="lazy"><span>Luc 1–9 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

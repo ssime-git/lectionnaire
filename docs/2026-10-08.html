@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Une porte de bois fermée dans la nuit, une main levée pour frapper, et par la fente de la porte une lumière qui commence à poindre."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M20 130 h300"/><path d="M140 130 v-110 h60 v110"/><path d="M158 20 v110"/><path d="M172 20 v110"/><path d="M186 20 v110"/><path d="M238 62 q10 -9 20 -1 q5 7 -1 15 q-11 7 -19 -2 q-4 -6 0 -12 z"/><path d="M248 76 l16 28"/><path d="M44 26 q12 -12 26 -6 q-15 3 -15 15 q0 12 15 15 q-14 6 -26 -6 z"/></g><g class="trait-liturgie"><path d="M193 28 v94"/><path d="M197 58 l15 -5"/><path d="M197 90 l16 6"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="Ws74bmmpf8w" data-titre="Pour quels sujets Jésus a-t-il prié ? Voici ce qu&#39;il a enseigné à ses disciples." data-vignette="vignettes/Ws74bmmpf8w.jpg" aria-label="Lire la vidéo Pour quels sujets Jésus a-t-il prié ? Voici ce qu&#39;il a enseigné à ses disciples."><img src="vignettes/Ws74bmmpf8w.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Pour quels sujets Jésus a-t-il prié ? Voici ce qu'il a enseigné à ses disciples.</p>
+    <p class="raison" id="ecran-raison">Luc 11,5-13, l'enseignement sur la prière persévérante, rejoint ce que Jésus a enseigné sur la prière.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=Ws74bmmpf8w" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="Ws74bmmpf8w" data-titre="Pour quels sujets Jésus a-t-il prié ? Voici ce qu&#39;il a enseigné à ses disciples." data-raison="Luc 11,5-13, l&#39;enseignement sur la prière persévérante, rejoint ce que Jésus a enseigné sur la prière." data-vignette="vignettes/Ws74bmmpf8w.jpg" class="on"><img src="vignettes/Ws74bmmpf8w.jpg" alt="" loading="lazy"><span>Pour quels sujets Jésus a-t-il prié ? Voici ce qu'il a enseigné à ses disciples.</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="3elnA_n3nWc" data-titre="Galates - Panorama" data-raison="Galates 3,1-5, l&#39;appel à recevoir l&#39;Esprit par la foi, s&#39;inscrit dans le panorama de Galates." data-vignette="vignettes/3elnA_n3nWc.jpg"><img src="vignettes/3elnA_n3nWc.jpg" alt="" loading="lazy"><span>Galates - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

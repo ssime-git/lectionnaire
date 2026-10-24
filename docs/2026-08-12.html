@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un homme vêtu de lin trace un signe sur le front d'une silhouette inclinée, au premier plan ; derrière eux, six figures armées se tiennent immobiles, l'instrument au poing ; au-dessus, des ailes de chérubins se soulèvent du seuil du Temple vers une porte ouverte à l'orient, dans le trait sec d'une gravure sur bois."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 132 h60"/><path d="M55 132 q0 -34 12 -46 q10 -10 4 -22"/><path d="M71 64 q6 4 2 12"/><path d="M67 132 v-30 q0 -14 -8 -20"/><path d="M63 82 h16"/><path d="M52 108 q10 -18 22 0"/><path d="M14 132 q2 -30 -3 -46"/><path d="M11 86 q-4 -6 2 -12"/><path d="M8 132 v-32"/><path d="M2 100 h18"/><path d="M4 132 q6 -14 0 -30"/><path d="M96 132 q1 -28 -4 -44"/><path d="M92 88 q-5 -6 1 -12"/><path d="M89 132 v-30"/><path d="M83 98 h18"/><path d="M85 132 q6 -12 0 -28"/><path d="M132 132 q1 -28 -4 -44"/><path d="M128 88 q-5 -6 1 -12"/><path d="M125 132 v-30"/><path d="M119 98 h18"/><path d="M121 132 q6 -12 0 -28"/><path d="M168 132 q1 -28 -4 -44"/><path d="M164 88 q-5 -6 1 -12"/><path d="M161 132 v-30"/><path d="M155 98 h18"/><path d="M157 132 q6 -12 0 -28"/><path d="M204 132 q1 -28 -4 -44"/><path d="M200 88 q-5 -6 1 -12"/><path d="M197 132 v-30"/><path d="M191 98 h18"/><path d="M193 132 q6 -12 0 -28"/><path d="M240 132 q1 -28 -4 -44"/><path d="M236 88 q-5 -6 1 -12"/><path d="M233 132 v-30"/><path d="M227 98 h18"/><path d="M229 132 q6 -12 0 -28"/><path d="M6 132 h316"/></g><g class="trait-rubrique"><path d="M266 30 q20 -10 44 4"/><path d="M270 34 q18 -6 36 4"/><path d="M282 22 q4 6 0 12"/><path d="M296 22 q4 6 0 12"/></g><g class="trait-liturgie"><path d="M300 10 v34"/><path d="M300 10 q14 4 16 16"/><path d="M300 22 q10 3 12 12"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="tlwz151z_80" data-titre="Découvrez le sens du mot “gloire” (kavod) dans la Bible" data-vignette="vignettes/tlwz151z_80.jpg" aria-label="Lire la vidéo Découvrez le sens du mot “gloire” (kavod) dans la Bible"><img src="vignettes/tlwz151z_80.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Découvrez le sens du mot “gloire” (kavod) dans la Bible</p>
+    <p class="raison" id="ecran-raison">Étude du mot 'gloire' (kavod), clé pour comprendre la gloire qui quitte le Temple (Ez 9, 1-7 ; 10, 18-22).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=tlwz151z_80" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="tlwz151z_80" data-titre="Découvrez le sens du mot “gloire” (kavod) dans la Bible" data-raison="Étude du mot &#39;gloire&#39; (kavod), clé pour comprendre la gloire qui quitte le Temple (Ez 9, 1-7 ; 10, 18-22)." data-vignette="vignettes/tlwz151z_80.jpg" class="on"><img src="vignettes/tlwz151z_80.jpg" alt="" loading="lazy"><span>Découvrez le sens du mot “gloire” (kavod) dans la Bible</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="4Yr9DEYJ9IU" data-titre="Ézéchiel 1–33 - Panorama" data-raison="Panorama d&#39;Ézéchiel 1-33 pour resituer le départ de la gloire divine du Temple." data-vignette="vignettes/4Yr9DEYJ9IU.jpg"><img src="vignettes/4Yr9DEYJ9IU.jpg" alt="" loading="lazy"><span>Ézéchiel 1–33 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

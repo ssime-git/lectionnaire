@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un berger franchit le seuil d'un enclos de pierres sèches, bâton en main, tourné vers des collines nues où quelques brebis dispersées se devinent au loin; le soleil est bas sur l'horizon, comme si cette sortie avait lieu à une heure tardive du jour."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M4 122 h100"/><path d="M4 100 v22"/><path d="M4 100 h34"/><path d="M38 78 v44"/><path d="M38 78 q30 -10 62 6"/><path d="M118 122 q60 -6 120 -2"/><path d="M150 108 q4 -8 12 -4"/><path d="M190 112 q5 -7 12 -3"/><path d="M225 106 q4 -7 11 -4"/><path d="M118 122 v-58"/><path d="M118 64 l16 26 h-16 z"/><path d="M118 90 v32"/><path d="M100 122 q8 -30 18 -32"/></g><g class="trait-liturgie"><path d="M266 92 q20 -14 46 0 q-23 -4 -46 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -445,9 +445,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="fnP-hBi2A2Y" data-titre="Générosité" data-vignette="vignettes/fnP-hBi2A2Y.jpg" aria-label="Lire la vidéo Générosité"><img src="vignettes/fnP-hBi2A2Y.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Générosité</p>
+    <p class="raison" id="ecran-raison">La parabole du maître qui paie tous les ouvriers pareil (Mt 20) illustre la générosité du Royaume.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=fnP-hBi2A2Y" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="fnP-hBi2A2Y" data-titre="Générosité" data-raison="La parabole du maître qui paie tous les ouvriers pareil (Mt 20) illustre la générosité du Royaume." data-vignette="vignettes/fnP-hBi2A2Y.jpg" class="on"><img src="vignettes/fnP-hBi2A2Y.jpg" alt="" loading="lazy"><span>Générosité</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="4Yr9DEYJ9IU" data-titre="Ézéchiel 1–33 - Panorama" data-raison="Ézéchiel 34 (le mauvais berger) est couvert par ce panorama d&#39;Ézéchiel 1–33." data-vignette="vignettes/4Yr9DEYJ9IU.jpg"><img src="vignettes/4Yr9DEYJ9IU.jpg" alt="" loading="lazy"><span>Ézéchiel 1–33 - Panorama</span></button>
+      <button data-i="2" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14–28, qui inclut la parabole des ouvriers de la 11e heure (Mt 20, 1-16)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

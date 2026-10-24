@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : un veilleur debout sur une tour de guet, une tablette entaillée à la main, le regard tourné vers un horizon vide ; en contrebas, un homme agenouillé présente un enfant secoué de convulsions vers une silhouette qui étend la main."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h328"/><path d="M40 130 v-70 h20 v70"/><path d="M40 90 h20"/><path d="M40 105 h20"/><path d="M44 60 h12 v-10 h-12 z"/><path d="M50 40 v10"/><path d="M50 40 q10 -6 16 2"/><path d="M50 50 q-9 3 -3 14 q4 8 12 3"/><path d="M62 55 l10 -6"/><path d="M60 60 l14 2"/></g><g class="trait-rubrique"><path d="M210 130 q0 -14 10 -20"/><path d="M220 110 q6 -4 10 0"/><path d="M210 130 l14 -4"/><path d="M224 126 q6 -18 -2 -30 q6 6 4 16 q-2 8 -2 14"/></g><g class="trait-liturgie"><path d="M270 100 q6 -14 20 -14"/><path d="M290 86 v12"/><path d="M270 100 q0 16 12 22 q10 4 20 -2"/><path d="M296 96 l16 -10"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="lBQbCKsvwCI" data-titre="Habacuc - Panorama" data-vignette="vignettes/lBQbCKsvwCI.jpg" aria-label="Lire la vidéo Habacuc - Panorama"><img src="vignettes/lBQbCKsvwCI.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Habacuc - Panorama</p>
+    <p class="raison" id="ecran-raison">Panorama d'Habacuc, situant « le juste vivra par sa foi » en Ha 1,12–2,4</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=lBQbCKsvwCI" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="lBQbCKsvwCI" data-titre="Habacuc - Panorama" data-raison="Panorama d&#39;Habacuc, situant « le juste vivra par sa foi » en Ha 1,12–2,4" data-vignette="vignettes/lBQbCKsvwCI.jpg" class="on"><img src="vignettes/lBQbCKsvwCI.jpg" alt="" loading="lazy"><span>Habacuc - Panorama</span></button>
+      <button data-i="1" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14-28, qui couvre la guérison par la foi en Mt 17,14-20" data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un veilleur debout devant une maison endormie, dans la nuit, tenant une lampe allumée et un trousseau de clefs à la ceinture, le regard tourné vers un chemin qu'on devine au loin."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 126 h100"/><path d="M250 130 q40 -4 70 -14"/><path d="M40 126 v-30 l28 -22 l28 22 v30"/><path d="M40 96 h56"/><path d="M60 126 v-24 h16 v24"/><path d="M58 72 v-10"/><path d="M52 65 h12"/><path d="M140 128 v-62"/><path d="M140 66 l10 10 l-10 6 l-10 -6 z"/><path d="M140 128 q-5 -34 -22 -52"/><path d="M140 128 q3 -20 14 -34"/><path d="M172 96 q6 10 2 22"/><path d="M172 96 q-3 11 1 22"/><path d="M164 128 h18"/><path d="M134 130 h14"/></g><g class="trait-liturgie"><path d="M140 58 q-6 -4 -2 -12 q4 4 4 8 q2 -5 7 -4 q-1 7 -9 8"/></g><g class="trait-rubrique"><path d="M175 112 q4 -3 8 -1"/><path d="M175 118 q6 -3 11 0"/><path d="M175 124 q5 -2 9 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="xqUPT7BoX-w" data-titre="Fidèle" data-vignette="vignettes/xqUPT7BoX-w.jpg" aria-label="Lire la vidéo Fidèle"><img src="vignettes/xqUPT7BoX-w.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Fidèle</p>
+    <p class="raison" id="ecran-raison">Lc 12,39-48 oppose le serviteur fidèle à l'intendant infidèle : la vidéo 'Fidèle' touche directement ce verset.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=xqUPT7BoX-w" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="xqUPT7BoX-w" data-titre="Fidèle" data-raison="Lc 12,39-48 oppose le serviteur fidèle à l&#39;intendant infidèle : la vidéo &#39;Fidèle&#39; touche directement ce verset." data-vignette="vignettes/xqUPT7BoX-w.jpg" class="on"><img src="vignettes/xqUPT7BoX-w.jpg" alt="" loading="lazy"><span>Fidèle</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="7pUE5wvhbBI" data-titre="Éphésiens - Panorama" data-raison="Ep 3,2-12 est tiré d&#39;Éphésiens : panorama du livre pour le contexte." data-vignette="vignettes/7pUE5wvhbBI.jpg"><img src="vignettes/7pUE5wvhbBI.jpg" alt="" loading="lazy"><span>Éphésiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

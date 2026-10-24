@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un potier assis à son tour, les mains dans l'argile qui s'affaisse et se relève ; à ses pieds, des tessons qu'il récupère ; au loin, des pêcheurs tirant un filet plein vers le rivage, où des hommes trient le poisson dans la lumière du soir"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 120 h328"/><path d="M80 120 l15 -45 l12 45"/><path d="M87 85 h14"/><path d="M95 75 v10"/><path d="M85 95 q10 8 20 0"/><path d="M90 120 q5 -20 15 -5 q5 -15 10 5"/><path d="M70 120 l8 -15 l6 8"/><path d="M60 118 l4 -8 l5 5"/><path d="M280 120 q-15 -18 -5 -32 q-2 12 7 14 q6 -18 -2 -38 q12 20 2 38 q8 -5 5 -16 q7 17 -7 34"/><path d="M260 88 q-10 5 -8 18 q5 8 16 5"/><path d="M220 95 q15 -8 25 0"/><path d="M228 95 l-3 12 l8 -2"/><path d="M245 95 l3 10 l-6 -1"/><path d="M300 82 q8 4 6 14"/><path d="M310 78 q6 3 4 12"/></g><g class="trait-rubrique"><path d="M95 65 q-8 -12 0 -22 q8 10 0 22"/><path d="M95 43 v8"/></g><g class="trait-liturgie"><path d="M155 120 q-10 -25 5 -40 q15 15 5 40"/><path d="M148 88 q7 -5 14 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -441,9 +441,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="txGfRrR9v_M" data-titre="L&#39;Évangile du Royaume" data-vignette="vignettes/txGfRrR9v_M.jpg" aria-label="Lire la vidéo L&#39;Évangile du Royaume"><img src="vignettes/txGfRrR9v_M.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">L'Évangile du Royaume</p>
+    <p class="raison" id="ecran-raison">Étude sur l'Évangile du Royaume, éclairant la parabole du filet et du Royaume en Mt 13,47-53</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=txGfRrR9v_M" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="txGfRrR9v_M" data-titre="L&#39;Évangile du Royaume" data-raison="Étude sur l&#39;Évangile du Royaume, éclairant la parabole du filet et du Royaume en Mt 13,47-53" data-vignette="vignettes/txGfRrR9v_M.jpg" class="on"><img src="vignettes/txGfRrR9v_M.jpg" alt="" loading="lazy"><span>L'Évangile du Royaume</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Panorama de Matthieu 1-13, qui couvre la parabole du filet en Mt 13,47-53" data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

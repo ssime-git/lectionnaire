@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une main tendue depuis une nuée présente un rouleau ouvert à un homme agenouillé qui porte la main à sa bouche ; à l'arrière-plan, un enfant se tient immobile au milieu d'un cercle de figures plus grandes, et plus loin encore, sur une colline, un berger porte une brebis sur ses épaules."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 130 h328"/><path d="M20 30 q10 -14 26 -14 q16 0 24 10"/><path d="M18 34 q26 6 52 -8"/><path d="M40 44 q10 12 4 26 l14 22 q4 6 -2 8 l-6 2 q-6 2 -8 -6 l-10 -26"/><path d="M46 100 q-2 10 8 12 h12 q9 -1 8 -11"/><path d="M56 44 v14 M64 46 l4 30"/><path d="M55 106 q3 8 0 14 M50 122 l3 -4 M60 122 l-3 -4"/><path d="M60 40 l14 -6"/><path d="M68 32 l10 8 l-4 10 l-12 -6 z"/><path d="M150 60 v40"/><path d="M150 62 q-8 6 -6 16 q2 8 6 10"/><path d="M142 84 q6 -6 8 0"/><path d="M120 106 q30 -20 60 0"/><path d="M112 110 q6 -6 12 0 M124 100 q6 -6 12 0 M176 100 q6 -6 12 0 M188 110 q6 -6 12 0"/><path d="M250 60 q30 0 44 30"/><path d="M270 78 q4 8 0 16 l8 16 q3 5 -2 6 l-4 1 q-5 1 -6 -4 l-6 -18"/><path d="M264 118 q-1 8 6 9 h8 q6 -1 5 -9"/><path d="M258 66 q10 -8 22 -2 q8 4 4 12 q-14 10 -26 -2 q-4 -4 0 -8"/><path d="M280 70 q10 -2 14 8 q2 8 -6 10 l-16 4"/></g><g class="trait-rubrique"><path d="M20 30 q6 -20 26 -22 q22 -1 28 18 q-16 -8 -28 -2 q-14 -14 -26 6"/></g><g class="trait-liturgie"><path d="M150 60 q-2 -14 6 -22 q10 -8 18 0 q6 8 0 16 q-8 -10 -16 -2 q-6 6 -8 8"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -447,9 +447,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="eFx-W3P6MeY" data-titre="La Loi" data-vignette="vignettes/eFx-W3P6MeY.jpg" aria-label="Lire la vidéo La Loi"><img src="vignettes/eFx-W3P6MeY.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">La Loi</p>
+    <p class="raison" id="ecran-raison">Étude sur la Loi, en écho au psalmiste qui savoure la parole (Ps 118, 14.24.72.103.111.131).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=eFx-W3P6MeY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="eFx-W3P6MeY" data-titre="La Loi" data-raison="Étude sur la Loi, en écho au psalmiste qui savoure la parole (Ps 118, 14.24.72.103.111.131)." data-vignette="vignettes/eFx-W3P6MeY.jpg" class="on"><img src="vignettes/eFx-W3P6MeY.jpg" alt="" loading="lazy"><span>La Loi</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="4Yr9DEYJ9IU" data-titre="Ézéchiel 1–33 - Panorama" data-raison="Panorama d&#39;Ézéchiel 1-33 pour situer la scène où le prophète mange le rouleau (Ez 2, 8 – 3, 4)." data-vignette="vignettes/4Yr9DEYJ9IU.jpg"><img src="vignettes/4Yr9DEYJ9IU.jpg" alt="" loading="lazy"><span>Ézéchiel 1–33 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

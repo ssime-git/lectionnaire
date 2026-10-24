@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Deux mains écartent un voile sombre devant un visage aux yeux clos tourné vers un ciel chargé d'étoiles, où une couronne reste suspendue au-dessus d'un trône encore vide."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 140 h328"/><path d="M30 14 v8 M26 18 h8 M70 10 v8 M66 14 h8 M200 12 v8 M196 16 h8 M270 16 v8 M266 20 h8 M310 10 v8 M306 14 h8"/><path d="M150 72 v-27 h40 v27 M150 60 h40"/><path d="M148 112 q22 -30 44 0 q-22 30 -44 0 z"/><path d="M158 103 q4 4 8 0 M174 103 q4 4 8 0"/><path d="M85 92 q10 -12 22 -8 M92 84 l3 -7 M98 82 l3 -8 M104 83 l3 -7"/><path d="M255 92 q-10 -12 -22 -8 M248 84 l-3 -7 M242 82 l-3 -8 M236 83 l-3 -7"/></g><g class="trait-rubrique"><path d="M100 85 q35 5 48 30 q-20 -8 -40 -2 q-10 -15 -8 -28 z"/><path d="M240 85 q-35 5 -48 30 q20 -8 40 -2 q10 -15 8 -28 z"/></g><g class="trait-liturgie"><path d="M148 38 h44 M150 38 l5 -16 l5 16 M165 38 l5 -16 l5 16 M180 38 l5 -16 l5 16"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="n4_ZOaMvpGY" data-titre="Le Saint-Esprit" data-vignette="vignettes/n4_ZOaMvpGY.jpg" aria-label="Lire la vidéo Le Saint-Esprit"><img src="vignettes/n4_ZOaMvpGY.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Le Saint-Esprit</p>
+    <p class="raison" id="ecran-raison">Le Saint-Esprit relie à Lc 12, 8-12 : 'l'Esprit Saint vous enseignera que dire'.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=n4_ZOaMvpGY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

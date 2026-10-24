@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un paysan courbé vers un sillon fraîchement tracé, tenant dans sa main gauche des graines qu'il semble vouloir semer ; à droite, trois oiseaux posés sur une branche basse, l'observant. Gravure sur bois, style J.-B. de Champagnolles, 1867."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 125 h328"/><path d="M6 125 q40 -8 80 -12 q50 -6 100 0 q50 6 100 12"/><path d="M86 113 q30 -3 60 0 q30 3 60 -2"/><path d="M40 125 q20 -25 35 -50 q8 -15 12 -28"/><path d="M75 47 q-5 15 8 28 q12 10 22 8 q15 -5 18 -22"/><path d="M68 58 q12 -5 22 -2"/><path d="M105 53 l8 12 l-6 4"/><path d="M78 78 q-8 12 -18 20"/><path d="M95 83 q-5 15 -15 25"/><path d="M240 125 q-15 -35 -25 -65 q-5 -12 -8 -20"/><path d="M207 40 q15 -5 28 0 q15 5 28 0"/><path d="M221 40 q-8 18 -5 35 q3 15 10 25"/><path d="M242 40 q5 15 2 30 q-3 12 -8 22"/><path d="M256 45 q8 5 12 12"/><path d="M215 55 q-8 5 -12 10"/></g><g class="trait-rubrique"><path d="M60 95 q-5 -8 2 -15 q5 8 8 3 q-2 -10 5 -18 q6 10 2 20 q6 -2 8 -8 q2 10 -8 18"/></g><g class="trait-liturgie"><path d="M295 38 q-12 8 -8 22 q4 12 16 8 q10 -5 6 -18 q-4 -10 -14 -12 z"/><path d="M299 68 v8"/><path d="M292 80 h14"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -441,9 +441,22 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-vignette="vignettes/IT3LVWWuDDo.jpg" aria-label="Lire la vidéo Les paraboles de Jésus"><img src="vignettes/IT3LVWWuDDo.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Les paraboles de Jésus</p>
+    <p class="raison" id="ecran-raison">Mt 13,10-17 : pourquoi Jésus parle en paraboles, voilées pour certains.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=IT3LVWWuDDo" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+</aside>
 
 <script>
 (function(){

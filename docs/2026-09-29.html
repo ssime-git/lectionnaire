@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une échelle noueuse s'élève d'une terre sombre et labourée vers un ciel semé d'étoiles ; des silhouettes ailées la gravissent et la descendent en sens croisés, tandis qu'en bas, sous un figuier aux branches basses, un homme lève le visage sans encore comprendre ce qu'il voit."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 132 H330"/><path d="M148 132 L142 16"/><path d="M172 132 L184 16"/><path d="M147 118 L173 118 M146 100 L175 100 M145 82 L177 82 M144 64 L179 64 M144 46 L181 46 M143 28 L183 28"/><path d="M270 132 L268 92"/><path d="M268 100 q-18 -6 -30 4 M268 106 q16 -4 26 6 M268 114 q-14 6 -24 16 M268 120 q14 4 22 14"/><path d="M150 108 L160 88 M160 88 q2 -4 5 -2"/><path d="M155 98 q-14 -6 -14 -22 q8 3 14 14 M155 98 q14 -6 14 -22 q-8 3 -14 14"/><path d="M178 40 L168 58 M168 58 q-3 4 -6 3"/><path d="M173 49 q14 -4 16 -18 q-9 2 -16 12 M173 49 q-14 -4 -16 -18 q9 2 16 12"/></g><g class="trait-liturgie"><path d="M250 130 L250 105 M250 105 q4 -6 9 -4 M250 112 L238 118 M250 112 L258 106 M250 130 L242 132 M250 130 L258 132"/></g><g class="trait-rubrique"><path d="M60 25 m-3 0 l6 0 M60 25 m0 -3 l0 6 M100 45 m-3 0 l6 0 M100 45 m0 -3 l0 6 M220 20 m-3 0 l6 0 M220 20 m0 -3 l0 6 M300 60 m-3 0 l6 0 M300 60 m0 -3 l0 6"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -455,9 +455,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="2BgWsZx7-5E" data-titre="Anges et chérubins" data-vignette="vignettes/2BgWsZx7-5E.jpg" aria-label="Lire la vidéo Anges et chérubins"><img src="vignettes/2BgWsZx7-5E.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Anges et chérubins</p>
+    <p class="raison" id="ecran-raison">Daniel 7 et Apocalypse 12 mettent en scène des anges et chérubins autour du trône de Dieu.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=2BgWsZx7-5E" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="2BgWsZx7-5E" data-titre="Anges et chérubins" data-raison="Daniel 7 et Apocalypse 12 mettent en scène des anges et chérubins autour du trône de Dieu." data-vignette="vignettes/2BgWsZx7-5E.jpg" class="on"><img src="vignettes/2BgWsZx7-5E.jpg" alt="" loading="lazy"><span>Anges et chérubins</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="HIfJZA9fwbM" data-titre="Apocalypse 12–22 - Panorama" data-raison="Apocalypse 12,7-12a, le combat de Michel contre le dragon, se lit dans le panorama d&#39;Apocalypse 12-22." data-vignette="vignettes/HIfJZA9fwbM.jpg"><img src="vignettes/HIfJZA9fwbM.jpg" alt="" loading="lazy"><span>Apocalypse 12–22 - Panorama</span></button>
+      <button data-i="2" data-yt="5RyZ2lceuPA" data-titre="Daniel - Panorama" data-raison="Daniel 7,9-10.13-14 situe la vision du Fils de l&#39;homme dans l&#39;ensemble du livre de Daniel." data-vignette="vignettes/5RyZ2lceuPA.jpg"><img src="vignettes/5RyZ2lceuPA.jpg" alt="" loading="lazy"><span>Daniel - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

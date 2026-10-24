@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une porte massive ouverte à l'orient, par laquelle un flot de lumière entre dans une nef obscure et en occupe tout l'espace jusqu'au sol dallé, tandis qu'au premier plan un siège vide, sculpté mais inoccupé, reste dans la pénombre."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M20 128 v-90 h70 v90"/><path d="M20 38 h70"/><path d="M250 128 q-6 -20 8 -34 q12 12 8 34"/><path d="M254 128 v-16"/><path d="M262 128 v-16"/><path d="M244 128 h24"/><path d="M244 116 h24"/></g><g class="trait-rubrique"><path d="M24 42 v82 h62 v-82 z"/><path d="M55 42 v82"/></g><g class="trait-liturgie"><path d="M55 42 v-8"/><path d="M40 44 l15 -12 l15 12"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -444,9 +444,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="tlwz151z_80" data-titre="Découvrez le sens du mot “gloire” (kavod) dans la Bible" data-vignette="vignettes/tlwz151z_80.jpg" aria-label="Lire la vidéo Découvrez le sens du mot “gloire” (kavod) dans la Bible"><img src="vignettes/tlwz151z_80.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Découvrez le sens du mot “gloire” (kavod) dans la Bible</p>
+    <p class="raison" id="ecran-raison">Ez 43, 2 : la gloire (kavod) du Seigneur remplit le temple par la porte de l'orient.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=tlwz151z_80" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="tlwz151z_80" data-titre="Découvrez le sens du mot “gloire” (kavod) dans la Bible" data-raison="Ez 43, 2 : la gloire (kavod) du Seigneur remplit le temple par la porte de l&#39;orient." data-vignette="vignettes/tlwz151z_80.jpg" class="on"><img src="vignettes/tlwz151z_80.jpg" alt="" loading="lazy"><span>Découvrez le sens du mot “gloire” (kavod) dans la Bible</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="MyFcRxLzW6g" data-titre="Ézéchiel 34–48 - Panorama" data-raison="Le retour de la gloire de Dieu dans le temple (Ez 43, 1-7a) appartient à ce panorama d&#39;Ézéchiel 34–48." data-vignette="vignettes/MyFcRxLzW6g.jpg"><img src="vignettes/MyFcRxLzW6g.jpg" alt="" loading="lazy"><span>Ézéchiel 34–48 - Panorama</span></button>
+      <button data-i="2" data-yt="mq0vO1vNVfY" data-titre="Matthieu 14–28 - Panorama" data-raison="Panorama de Matthieu 14–28, qui couvre la dénonciation des pharisiens (Mt 23, 1-12)." data-vignette="vignettes/mq0vO1vNVfY.jpg"><img src="vignettes/mq0vO1vNVfY.jpg" alt="" loading="lazy"><span>Matthieu 14–28 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

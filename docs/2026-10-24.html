@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un figuier noueux planté au bord d'une vigne en terrasses ; un vigneron agenouillé y creuse la terre à la bêche, pendant qu'au loin, sur les toits d'une ville fortifiée, des pèlerins montent par une volée de degrés vers un portail ouvert."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M14 116 q48 -4 96 -10"/><path d="M26 102 q42 -5 80 -12"/><path d="M38 86 q32 -6 60 -14"/><path d="M62 128 q3 -15 11 -17 q6 -1 7 5 q2 4 -3 7 M70 112 q3 -3 7 -1 M74 116 q9 -3 15 -10"/><path d="M90 106 l9 -13 M96 95 q4 -2 6 2 q-1 5 -6 4 M84 126 q4 2 8 0"/><path d="M222 92 q30 -24 58 -29 q25 -5 46 1"/><path d="M242 90 h60 M244 90 v-15 h8 v15 M259 90 v-15 h8 v15 M274 90 v-15 h8 v15 M289 90 v-15 h8 v15"/><path d="M212 92 l9 -5 l9 5 l9 -5 l9 5 l8 -5"/><path d="M216 86 v-5 M234 80 v-5 M250 76 v-5"/></g><g class="trait-rubrique"><path d="M98 128 q-3 -18 2 -31 q4 -11 -3 -20 M93 77 q-15 -7 -24 -1 M101 71 q11 -13 23 -8 M95 63 q1 -9 9 -13"/></g><g class="trait-liturgie"><path d="M265 90 v-22 q6 -8 12 0 v22 M258 90 l7 -6 M283 90 l-6 -6"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Ep 4,7 dit qu'une grâce est donnée à chacun selon une mesure : la vidéo 'Grâce' touche directement ce verset.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-raison="Ep 4,7 dit qu&#39;une grâce est donnée à chacun selon une mesure : la vidéo &#39;Grâce&#39; touche directement ce verset." data-vignette="vignettes/wktA2VE4yhY.jpg" class="on"><img src="vignettes/wktA2VE4yhY.jpg" alt="" loading="lazy"><span>Grâce</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="7pUE5wvhbBI" data-titre="Éphésiens - Panorama" data-raison="Ep 4,7-16 est tiré d&#39;Éphésiens : panorama du livre pour le contexte." data-vignette="vignettes/7pUE5wvhbBI.jpg"><img src="vignettes/7pUE5wvhbBI.jpg" alt="" loading="lazy"><span>Éphésiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

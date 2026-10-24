@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Gravure sur bois : une lourde clé antique posée sur une épaule nue, suspendue au-dessus du seuil d'une porte voûtée entrouverte sur l'ombre ; en contrebas, un rocher fendu soutient les premières pierres d'un édifice inachevé."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 55 q22 -14 44 0 q4 30 -4 62 q-18 8 -36 0 q-8 -32 -4 -62 z"/><path d="M108 62 l52 -18"/><path d="M160 44 q9 -3 15 4 q3 8 -6 12 l-11 4"/><path d="M169 48 l6 10"/><path d="M158 60 l6 9"/><path d="M230 30 v70"/><path d="M230 30 q30 -6 46 14"/><path d="M276 44 v56"/><path d="M276 100 q-16 18 -46 10"/><path d="M254 46 v46"/><path d="M254 46 q12 -3 18 6"/><path d="M272 52 v34"/><path d="M272 86 q-8 8 -18 4"/></g><g class="trait-rubrique"><path d="M60 100 q-2 20 6 34"/><path d="M40 128 q30 12 60 0"/><path d="M50 118 q20 8 40 0"/></g><g class="trait-liturgie"><path d="M150 132 q-14 -16 2 -30 q16 14 2 30 z"/><path d="M152 116 v-10"/><path d="M138 138 h28"/><path d="M186 138 l16 -14 l24 4 l30 -6 l40 10"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -451,9 +451,27 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="eOmd1d-6Whw" data-titre="Ésaïe 1–39 - Panorama" data-vignette="vignettes/eOmd1d-6Whw.jpg" aria-label="Lire la vidéo Ésaïe 1–39 - Panorama"><img src="vignettes/eOmd1d-6Whw.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Ésaïe 1–39 - Panorama</p>
+    <p class="raison" id="ecran-raison">La clef de la maison de David remise à Éliakim (Is 22, 19-23) vient de ce panorama d'Ésaïe 1–39.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=eOmd1d-6Whw" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="eOmd1d-6Whw" data-titre="Ésaïe 1–39 - Panorama" data-raison="La clef de la maison de David remise à Éliakim (Is 22, 19-23) vient de ce panorama d&#39;Ésaïe 1–39." data-vignette="vignettes/eOmd1d-6Whw.jpg" class="on"><img src="vignettes/eOmd1d-6Whw.jpg" alt="" loading="lazy"><span>Ésaïe 1–39 - Panorama</span></button>
+      <button data-i="1" data-yt="TYxbJrDgZRg" data-titre="Romains 5–16 - Panorama" data-raison="Rm 11, 33-36 (l&#39;insondable sagesse de Dieu) appartient à ce panorama de Romains 5–16." data-vignette="vignettes/TYxbJrDgZRg.jpg"><img src="vignettes/TYxbJrDgZRg.jpg" alt="" loading="lazy"><span>Romains 5–16 - Panorama</span></button>
+      <button data-i="2" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Jésus remet les clefs du Royaume à Pierre (Mt 16, 13-20), épisode couvert par ce panorama de Matthieu 1–13." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

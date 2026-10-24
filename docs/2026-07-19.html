@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un champ au crépuscule, où des épis mûrs et des tiges folles se mêlent dans la même lumière dorée ; au loin, le silhouette d'un moissoneur qui attend, une faucille à la main, sans trancher encore."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M0 125 h340"/><path d="M15 125 q40 -35 80 -25 q35 8 55 -5 q40 -18 75 -2 q30 12 55 3 q35 -10 55 -21"/><path d="M20 125 l25 -60 l8 60"/><path d="M55 125 l18 -45 l12 45"/><path d="M95 125 l10 -55 l15 55"/><path d="M130 125 l-5 -40 l20 40"/><path d="M165 125 l8 -50 l8 50"/><path d="M195 125 l-3 -35 l18 35"/><path d="M230 125 l5 -48 l12 48"/><path d="M270 125 l-8 -30 l15 30"/><path d="M300 125 l5 -42 l10 42"/><path d="M45 80 q-8 5 -5 15"/><path d="M75 90 q-10 -3 -12 8"/><path d="M140 95 q-12 0 -10 12"/><path d="M210 88 q-8 8 -5 18"/><path d="M285 95 q-10 5 -8 15"/></g><g class="trait-rubrique"><path d="M255 125 v-55 l-12 -8 l12 -5 l-5 -12"/><path d="M255 70 l8 -3"/><path d="M240 125 h30"/></g><g class="trait-liturgie"><path d="M180 58 q-15 8 -25 20"/><path d="M185 55 q0 -12 -8 -18"/><path d="M190 52 q12 -5 15 -15"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -446,9 +446,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-vignette="vignettes/IT3LVWWuDDo.jpg" aria-label="Lire la vidéo Les paraboles de Jésus"><img src="vignettes/IT3LVWWuDDo.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Les paraboles de Jésus</p>
+    <p class="raison" id="ecran-raison">Les paraboles de Jésus, dont l'ivraie et le blé (Mt 13,24-43).</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=IT3LVWWuDDo" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="IT3LVWWuDDo" data-titre="Les paraboles de Jésus" data-raison="Les paraboles de Jésus, dont l&#39;ivraie et le blé (Mt 13,24-43)." data-vignette="vignettes/IT3LVWWuDDo.jpg" class="on"><img src="vignettes/IT3LVWWuDDo.jpg" alt="" loading="lazy"><span>Les paraboles de Jésus</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="Panorama de Matthieu 1-13, qui contient la parabole de l&#39;ivraie (Mt 13,24-43)." data-vignette="vignettes/wOJY7gRBkNU.jpg"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){

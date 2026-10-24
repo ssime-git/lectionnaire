@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -329,7 +329,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un homme se lève de son comptoir à péage, la main encore posée sur des pièces, tandis qu'une silhouette en marche lui tend la main vers une porte ouverte ; à l'arrière-plan, une table où des convives se penchent les uns vers les autres dans une même lumière."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M15 128 v-23 h50 v23"/><path d="M28 101 q3 -3 6 0 q-3 3 -6 0 M40 103 q3 -3 6 0 q-3 3 -6 0"/><path d="M72 78 q6 -6 12 0 q-6 6 -12 0"/><path d="M78 84 q-8 14 -6 26"/><path d="M72 110 q-4 10 -2 18 M72 110 q6 8 8 18"/><path d="M76 92 q-16 4 -30 8"/><path d="M144 60 q6 -6 12 0 q-6 6 -12 0"/><path d="M150 66 q2 18 -2 32"/><path d="M148 98 q10 12 6 30 M148 98 q-8 10 -14 30"/><path d="M152 78 q20 -2 36 -6"/><path d="M272 46 h60"/><path d="M278 46 v8 M326 46 v8"/><path d="M280 40 q6 -8 12 0 M298 40 q6 -8 12 0 M314 40 q6 -8 12 0"/></g><g class="trait-liturgie"><path d="M232 128 v-56 h34"/><path d="M266 72 l24 20"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
     </nav>
   </header>
 
@@ -443,9 +443,26 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-vignette="vignettes/wOJY7gRBkNU.jpg" aria-label="Lire la vidéo Matthieu 1–13 - Panorama"><img src="vignettes/wOJY7gRBkNU.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Matthieu 1–13 - Panorama</p>
+    <p class="raison" id="ecran-raison">L'appel de Matthieu au bureau des taxes (Mt 9,9-13) est raconté dans le panorama de Matthieu 1–13.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wOJY7gRBkNU" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="wOJY7gRBkNU" data-titre="Matthieu 1–13 - Panorama" data-raison="L&#39;appel de Matthieu au bureau des taxes (Mt 9,9-13) est raconté dans le panorama de Matthieu 1–13." data-vignette="vignettes/wOJY7gRBkNU.jpg" class="on"><img src="vignettes/wOJY7gRBkNU.jpg" alt="" loading="lazy"><span>Matthieu 1–13 - Panorama</span></button>
+      <button data-i="1" data-yt="7pUE5wvhbBI" data-titre="Éphésiens - Panorama" data-raison="Ep 4,1-7.11-13 sur les ministères donnés à l&#39;Église est tiré du panorama d&#39;Éphésiens." data-vignette="vignettes/7pUE5wvhbBI.jpg"><img src="vignettes/7pUE5wvhbBI.jpg" alt="" loading="lazy"><span>Éphésiens - Panorama</span></button>
+    </div>
+  </div>
+</aside>
 
 <script>
 (function(){
