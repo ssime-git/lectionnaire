@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-23",
+  "date_humaine": "mercredi",
+  "semaine": "25ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Pr 30, 5-9 ; Lc 9, 1-6",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M30 122 L240 100\"/><path d=\"M290 122 L258 100\"/><path d=\"M15 115 q8 -12 16 -4 q8 -10 16 -4 q7 -9 14 -4 q6 -7 12 -3 q5 -5 9 -2\"/><path d=\"M325 115 q-8 -12 -16 -4 q-8 -10 -16 -4 q-7 -9 -14 -4 q-6 -7 -12 -3 q-5 -5 -9 -2\"/><path d=\"M90.5 92 a4.5 4.5 0 1 0 9 0 a4.5 4.5 0 1 0 -9 0\"/><path d=\"M95 96.5 L95 111\"/><path d=\"M95 100 L88 109 M95 100 L102 110\"/><path d=\"M95 111 L88 120 M95 111 L103 119\"/><path d=\"M245 118 v-20 h26 v20\"/><path d=\"M242 98 L258 82 L274 98\"/></g><g class=\"trait-rubrique\"><path d=\"M96 99 L101 105 M101 105 q-6 1 -6 7 q0 6 6 6 q5 0 5 -6 q0 -6 -5 -7 z\"/></g><g class=\"trait-liturgie\"><path d=\"M255 118 L264 106\"/><path d=\"M258 82 q5 -7 0 -13 q-5 -6 1 -12 q5 -5 0 -11\"/></g></svg>",
+  "titre": "Le pain du jour",
+  "titre_html": "Le pain <span class=\"it\">du jour</span>",
+  "sous_titre": "La prière d'un sage et l'envoi des Douze : ce que Dieu donne ne se thésaurise pas.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : un chemin de terre entre deux haies, un homme y marche les mains vides, une besace vide pendant à son épaule ; au loin, une maison ouvre sa porte et une fumée monte du toit — le pain n'est pas dans le sac, il attend dans la maison qui accueille.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Pr 30, 5-9",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">5</span> Toute parole de Dieu est <button class=\"mot\" data-g=\"g-eprouvee\">éprouvée</button>. Il est un bouclier pour ceux qui cherchent en lui un refuge. <span class=\"s\">6</span> N'ajoute rien à ses paroles, de peur qu'il ne te reprenne et que tu ne sois trouvé menteur.</p><p><span class=\"s\">7</span> Je te demande deux choses : ne me les refuse pas, avant que je meure ! <span class=\"s\">8</span> Éloigne de moi la fausseté et la parole mensongère ; ne me donne ni pauvreté ni richesse, accorde-moi <button class=\"mot\" data-g=\"g-pain\">le pain qui m'est nécessaire</button>. <span class=\"s\">9</span> De peur que, dans l'abondance, je ne te renie et ne dise : Qui est l'Éternel ? Ou que, dans la pauvreté, je ne dérobe, et ne profane le nom de mon Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-eprouvee",
+          "lemme": "éprouvée",
+          "html": "Le mot hébreu est <span class=\"gr\">tserufa</span>, participe du verbe tsaraf : fondre le métal au feu jusqu'à ce que l'écume remonte et que seul le métal pur demeure. Segond traduit par « éprouvée », ce qui garde l'idée d'épreuve mais efface l'image du creuset : ce n'est pas un examen extérieur, c'est une purification qui retire les scories. Le verset le plus proche est le Psaume 12,7 (11,7 dans la Vulgate), « un argent épuré sur terre au creuset, sept fois épuré » — une image qu'Augustin commente longuement dans ses Enarrationes in Psalmos comme figure de la parole divine et de l'âme éprouvée."
+        },
+        {
+          "id": "g-pain",
+          "lemme": "le pain qui m'est nécessaire",
+          "html": "L'hébreu porte <span class=\"gr\">lechem choqi</span>, littéralement « le pain de mon choq » — un mot qui désigne ailleurs la part fixée, la ration décrétée, la même racine que les « ordonnances » du Psaume 119. Segond choisit « le pain qui m'est nécessaire », juste mais qui efface la nuance juridique : Agour ne demande pas de quoi manger en général, il demande la portion exactement fixée, ni plus ni moins, comme la manne que chacun ramassait « selon ce que chacun en mange » (Exode 16,16-18), sans qu'il en reste rien le lendemain. C'est ce même resserrement que retrouvera la prière donnée aux disciples : « donne-nous aujourd'hui notre pain de ce jour » (Matthieu 6,11)."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 118 (119), 29.72, 89.101, 104.163",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">29</span> Éloigne de moi la voie du <button class=\"mot\" data-g=\"g-sheqer\">mensonge</button>, et accorde-moi la grâce de suivre ta loi ! <span class=\"s\">72</span> Mieux vaut pour moi la loi de ta bouche que mille objets d'or et d'argent.</p><p><span class=\"s\">89</span> A toujours, ô Éternel, ta parole subsiste dans les cieux. <span class=\"s\">101</span> Je retiens mon pied loin de tout mauvais chemin, afin de garder ta parole.</p><p><span class=\"s\">104</span> Par tes ordonnances je deviens intelligent, aussi je hais toute voie de mensonge. <span class=\"s\">163</span> Je hais, je déteste le mensonge, j'aime ta loi.</p>",
+      "gloses": [
+        {
+          "id": "g-sheqer",
+          "lemme": "mensonge",
+          "html": "Le mot hébreu <span class=\"gr\">sheqer</span> revient comme un refrain dans ce psaume immense consacré à la torah : il désigne moins le mensonge d'un discours que la trahison d'une alliance, la parole qui déçoit ce qu'elle promettait. Segond traduit uniformément par « mensonge », ce qui est exact mais uniformise un mot que l'hébreu associe souvent au faux témoignage (Exode 20,16) plutôt qu'à l'erreur involontaire. Calvin, commentant ce psaume, insiste sur le fait que la haine du sheqer n'est pas une vertu morale isolée mais la conséquence nécessaire de l'amour de la loi : on ne peut aimer une parole vraie sans détester tout ce qui la contrefait."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 9, 1-6",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Jésus, ayant assemblé les douze, leur donna <button class=\"mot\" data-g=\"g-exousia\">force et pouvoir</button> sur tous les démons, avec le pouvoir de guérir les maladies. <span class=\"s\">2</span> Il les envoya prêcher le royaume de Dieu, et guérir les malades.</p><p><span class=\"s\">3</span> Ne prenez rien pour le voyage, leur dit-il, ni bâton, ni sac, ni pain, ni argent, et n'ayez pas deux tuniques. <span class=\"s\">4</span> Dans quelque maison que vous entriez, restez-y jusqu'à ce que vous partiez de ce lieu.</p><p><span class=\"s\">5</span> Et, si les gens ne vous reçoivent pas, sortez de cette ville, et <button class=\"mot\" data-g=\"g-poussiere\">secouez la poussière</button> de vos pieds, en témoignage contre eux. <span class=\"s\">6</span> Ils partirent, et ils allèrent de village en village, annonçant la bonne nouvelle et opérant partout des guérisons.</p>",
+      "gloses": [
+        {
+          "id": "g-exousia",
+          "lemme": "force et pouvoir",
+          "html": "Le grec distingue deux mots que le français confond souvent : <span class=\"gr\">dynamin</span>, la force, la capacité d'agir, d'où notre « dynamique », et <span class=\"gr\">exousian</span>, le droit reconnu, l'autorité déléguée. Segond les traduit respectivement par « force » et « pouvoir », gardant la distinction que Luc pose avec soin : Jésus ne donne pas seulement aux Douze une puissance brute sur les démons, il leur délègue une autorité, comme un envoyé reçoit mandat de celui qui l'envoie. Chrysostome, prêchant sur l'envoi des disciples, insiste sur ce point : la force sans le mandat serait présomption, le mandat sans la force serait impuissance."
+        },
+        {
+          "id": "g-poussiere",
+          "lemme": "secouez la poussière",
+          "html": "Le geste que Jésus prescrit appartient à une pratique attestée dans le judaïsme du premier siècle : le pieux Israélite qui revenait d'un territoire païen secouait la poussière étrangère avant de rentrer en terre sainte, pour ne rien emporter de son impureté. En le demandant à ses envoyés à l'intérieur même d'Israël, Jésus retourne le geste contre ceux qui refusent l'accueil : ce ne sont plus les nations qui sont étrangères, mais la maison qui ferme sa porte. Luc précise que ce geste vaut « en témoignage », <span class=\"gr\">martyrion</span> — le même mot que celui du martyre ; on retrouve le geste accompli littéralement par Paul et Barnabas en Actes 13,51."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Agour, la voix qui doute",
+      "corps_html": "Le chapitre 30 des Proverbes s'ouvre sur une signature inhabituelle : « Paroles d'Agour, fils de Jaké. Sentence » — en hébreu massa, un mot qui désigne ailleurs un oracle pesant, une charge prophétique. Contrairement à Salomon, Agour commence par avouer son ignorance : « Je suis plus stupide que personne » (Pr 30,2). La tradition rabbinique, reprise par Rashi, a voulu voir dans ce nom un pseudonyme de Salomon lui-même, celui qui « rassemble » la sagesse ; mais le texte reçu se présente comme la voix d'un sage étranger au cercle royal, dont la prière qui suit (v. 7-9) est d'une sobriété rare dans tout le livre."
+    },
+    {
+      "titre": "Le plus long poème de la Bible",
+      "corps_html": "Le Psaume 119 (118 dans la numérotation grecque et latine reprise par la liturgie) est un acrostiche parfait : vingt-deux strophes de huit versets, une pour chaque lettre de l'alphabet hébreu, où presque chaque verset nomme la loi de Dieu par un synonyme différent — torah, mishpat, choq, piqqudim, mitzvah, edut. Calvin, dans son Commentaire sur les Psaumes, note que cette accumulation n'est pas de la rhétorique : elle dit l'impossibilité d'épuiser en un seul mot ce que signifie recevoir une parole qui vient de Dieu. Les versets retenus aujourd'hui reviennent tous, par des chemins différents, à l'opposition entre la parole vraie et le sheqer, le mensonge."
+    }
+  ],
+  "analogie": {
+    "titre": "La part exacte",
+    "variantes": [
+      "Il y a des jours où tu pries en demandant très précisément ce qu'il te faut pour tenir, rien de plus, et tu sens presque de la gêne à formuler une demande aussi modeste — comme si la foi méritait une requête plus ample, plus généreuse envers toi-même. Puis vient un jour où l'on te retire, sans préavis, ce que tu avais mis de côté par précaution plus que par besoin, cette petite réserve que tu appelais prudence et qui était peut-être de la défiance déguisée. Tu t'attends à la panique ; ce qui vient, à la place, c'est une paix étrange, parce qu'il te reste exactement ce qu'il te faut pour aujourd'hui, ni plus, et que cela suffit — tu découvres alors que ce que tu appelais manque n'était que l'absence du trop.",
+      "Tu pars parfois voir quelqu'un qui traverse une épreuve sans avoir rien préparé à dire, sans une parole toute faite, les mains aussi vides que si tu avais oublié d'emporter ce qu'il fallait — et c'est précisément dans cette pauvreté-là, sans discours ni solution, que quelque chose passe entre vous que tu n'avais pas fabriqué. Tu repars en te demandant ce que tu as bien pu apporter, puisque tu n'avais rien préparé, et la seule réponse honnête est que tu as été reçu avant d'avoir donné, que le peu que tu portais n'a pesé que parce qu'une porte s'est ouverte devant toi. Ce n'est pas ton bagage qui a servi ; c'est l'accueil que tu n'as pas provoqué.",
+      "Il t'arrive de vouloir garantir demain avant même d'avoir vécu aujourd'hui, de demander dans la prière une assurance qui dépasse largement ce dont tu as besoin maintenant, comme si Dieu devait te signer un contrat plutôt que te donner un pain. Et il y a ces jours plus rares où tu te surprends à ne demander que ce qui manque pour tenir jusqu'au soir, sans rien de plus, et où cette demande resserrée, au lieu de t'angoisser, te rend le présent à lui-même — tu cesses un instant de vivre dans un lendemain que tu ne possèdes pas. Ce resserrement-là n'est pas une privation ; c'est la forme précise que prend, en toi, la confiance."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse la prière d'Agour reformuler la tienne : non pas demander plus, mais demander juste.",
+    "geste": "Aujourd'hui, nomme une seule chose dont tu as vraiment besoin — pas dont tu as envie — et demande-la, sans l'entourer de garanties pour demain.",
+    "note": "Ce n'est pas un exercice de sobriété : c'est une manière de laisser Dieu être celui qui donne, jour après jour."
+  },
+  "question": "Qu'est-ce que tu accumules aujourd'hui, par prudence ou par manque de confiance, que le Christ te demanderait de laisser à la porte avant d'entrer ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la pauvreté qui prêche",
+      "corps_html": "Commentant l'envoi des Douze chez Matthieu, section parallèle à celle de Luc, Jean Chrysostome s'arrête sur l'ordre de ne rien emporter : ni bâton, ni sac, ni pain, ni argent. Il y voit une pédagogie plus qu'une règle absolue — le Christ veut que ses envoyés apprennent, dès le premier pas, à ne pas confondre l'autorité qu'ils reçoivent avec une assurance matérielle, et à se laisser porter par ceux-là mêmes à qui ils annoncent la bonne nouvelle. Le dépouillement n'est pas un exploit ascétique : c'est la condition pour que la guérison donnée ne paraisse pas achetée.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 32"
+    },
+    {
+      "titre": "Calvin : aimer la loi, détester le mensonge",
+      "corps_html": "Pour Calvin, l'insistance du Psaume 119 sur la haine du mensonge n'est pas un excès rhétorique : elle traduit la logique même de la foi. On ne reçoit pas la parole de Dieu comme une information parmi d'autres ; on l'aime, ou on ne l'a pas reçue. Calvin rappelle que le psalmiste ne dit jamais haïr les hommes qui mentent, mais la voie du mensonge elle-même — distinction qu'il juge essentielle pour ne pas transformer la piété en amertume contre autrui, alors qu'elle doit rester un combat intérieur pour la vérité.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, sur Ps 119"
+    },
+    {
+      "titre": "Le style numérique du sage",
+      "corps_html": "La suite du chapitre 30 des Proverbes multiplie un procédé bien attesté dans la sagesse proche-orientale : le dicton numérique gradué, « trois choses... et même quatre ». On le retrouve dans les oracles d'Amos (1,3-2,6) et dans des textes ougaritiques antérieurs de plusieurs siècles à la rédaction des Proverbes. La demande d'Agour, « je te demande deux choses », inaugure discrètement ce procédé : deux requêtes seulement, la vérité et la juste mesure du pain, avant que le chapitre ne s'amuse avec des séries plus longues et plus énigmatiques.",
+      "attribution": "note de critique littéraire sur la forme sapientielle du dicton numérique"
+    }
+  ]
+}
