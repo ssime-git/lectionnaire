@@ -134,7 +134,8 @@ class TemplateCarnetTests(unittest.TestCase):
         self.assertIn("Pères et Réformateurs", html)
         self.assertIn("Catéchisme de Heidelberg (1563), Q. 4", html)
         self.assertIn("<p>Jésus récite le Shema.</p>", html)
-        self.assertNotIn("<input", html)
+        # Saisie libre présente mais cachée : elle ne s'ouvre que si /api/carnet répond.
+        self.assertIn('<form class="carnet-libre" hidden', html)
 
     def test_carnet_sans_videos(self) -> None:
         html = self._jour([], [_qr()])
@@ -180,6 +181,21 @@ class ContexteTests(unittest.TestCase):
             render.rendre("2026-10-25")
             c = json.loads((Path(tmp) / "contexte" / "2026-10-25.json").read_text(encoding="utf-8"))
         self.assertEqual(c["titre"], "Un seul amour")
+
+
+class TemplateCarnetLibreTests(unittest.TestCase):
+    def test_formulaire_cache_present_avec_carnet(self) -> None:
+        d = _jour([])
+        d["carnet"] = [_qr()]
+        html = render.rendre_html(d)
+        self.assertIn('<form class="carnet-libre" hidden', html)
+        self.assertIn('data-date="2026-10-25"', html)
+        self.assertIn("Réponse générée par IA, non relue — à vérifier.", html)
+        self.assertNotIn("challenges.cloudflare.com/turnstile/v0/api.js\"", html)  # pas de <script src>
+        self.assertNotIn('<script src="https://challenges.cloudflare.com', html)
+
+    def test_pas_de_formulaire_sans_carnet(self) -> None:
+        self.assertNotIn('class="carnet-libre"', render.rendre_html(_jour([])))
 
 
 if __name__ == "__main__":
