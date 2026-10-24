@@ -8,6 +8,9 @@ const CONTEXTE = {
   date: "2026-10-25", titre: "Un seul amour", references: "Mt 22, 34-40",
   lectures: [{ etiquette: "Évangile", reference: "Mt 22, 34-40", texte: "37 Jésus lui répondit : Tu aimeras le Seigneur" }],
   gloses: [], contexte: [], carnet: [],
+  tradition: [{ titre: "Jean Chrysostome, Homélie LXXI sur Matthieu", lecture: "Mt 22, 34-40",
+    analyse: "1. Du premier et du second commandement.", extrait: "1. Les pharisiens se rassemblent.",
+    url: "https://fr.wikisource.org/wiki/X", credit: "trad. Jeannin (1864-1867), Wikisource, CC BY-SA" }],
 };
 
 function kvMemoire() {
@@ -172,4 +175,16 @@ test("corps non JSON : 400", async () => {
   const { e } = env();
   const r = await onRequestPost({ request: new Request("https://x/api/carnet", { method: "POST", body: "pas du json" }), env: e });
   assert.equal(r.status, 400);
+});
+
+test("Chrysostome dans le prompt, sources tirées du contexte et non du modèle", async () => {
+  siteverify();
+  const { e, appels } = env();
+  const r = await onRequestPost({ request: requete(BON), env: e });
+  const corps = await r.json();
+  const prompt = JSON.stringify(appels.ai[0].entree.messages);
+  assert.ok(prompt.includes("Jean Chrysostome, Homélie LXXI sur Matthieu"));
+  assert.ok(prompt.includes("Les pharisiens se rassemblent"));
+  assert.deepEqual(corps.sources, [{ titre: "Jean Chrysostome, Homélie LXXI sur Matthieu",
+    url: "https://fr.wikisource.org/wiki/X", credit: "trad. Jeannin (1864-1867), Wikisource, CC BY-SA" }]);
 });

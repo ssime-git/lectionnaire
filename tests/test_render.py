@@ -167,7 +167,7 @@ class ContexteTests(unittest.TestCase):
         d["carnet"] = [{"question": "Pourquoi deux ?", "reponse_html": "<p>Parce <em>que</em>.</p>",
                         "sources": {"jour": ["Mt 22"], "tradition": []}}]
         c = render.contexte_du_jour(d)
-        self.assertEqual(set(c), {"date", "titre", "references", "lectures", "gloses", "contexte", "carnet"})
+        self.assertEqual(set(c), {"date", "titre", "references", "lectures", "gloses", "contexte", "carnet", "tradition"})
         self.assertEqual(c["date"], "2026-10-25")
         self.assertEqual(c["lectures"][0]["reference"], "Ex 22, 20-26")
         self.assertTrue(c["lectures"][0]["texte"].startswith("21 Tu ne maltraiteras point l'étranger"))
@@ -191,11 +191,37 @@ class TemplateCarnetLibreTests(unittest.TestCase):
         self.assertIn('<form class="carnet-libre" hidden', html)
         self.assertIn('data-date="2026-10-25"', html)
         self.assertIn("Réponse générée par IA, non relue — à vérifier.", html)
+        self.assertIn('<div class="libre-sources sources" hidden></div>', html)
         self.assertNotIn("challenges.cloudflare.com/turnstile/v0/api.js\"", html)  # pas de <script src>
         self.assertNotIn('<script src="https://challenges.cloudflare.com', html)
 
     def test_pas_de_formulaire_sans_carnet(self) -> None:
         self.assertNotIn('class="carnet-libre"', render.rendre_html(_jour([])))
+
+
+class ContexteTraditionTests(unittest.TestCase):
+    UNITES = {"Mt": [{"id": "chrysostome-Mt-LXXI", "livre": "Mt", "homelie": "LXXI", "debut": [22, 34],
+                      "fin": [22, 999], "analyse": "1. Du premier et du second commandement.",
+                      "texte": "1. " + "Texte de l’homélie. " * 200,
+                      "source_url": "https://fr.wikisource.org/wiki/X"}]}
+
+    def test_tradition_ajoutee_au_contexte(self) -> None:
+        d = render.charger_jour("2026-10-25")
+        with patch("render.charger_unites", return_value=self.UNITES):
+            c = render.contexte_du_jour(d)
+        self.assertEqual(len(c["tradition"]), 1)
+        t = c["tradition"][0]
+        self.assertEqual(t["titre"], "Jean Chrysostome, Homélie LXXI sur Matthieu")
+        self.assertEqual(t["lecture"], "Mt 22, 34-40")
+        self.assertEqual(t["analyse"], "1. Du premier et du second commandement.")
+        self.assertLessEqual(len(t["extrait"]), 1500)
+        self.assertEqual(t["url"], "https://fr.wikisource.org/wiki/X")
+        self.assertEqual(t["credit"], "trad. Jeannin (1864-1867), Wikisource, CC BY-SA")
+
+    def test_sans_homelie_tradition_vide(self) -> None:
+        d = render.charger_jour("2026-10-25")
+        with patch("render.charger_unites", return_value={}):
+            self.assertEqual(render.contexte_du_jour(d)["tradition"], [])
 
 
 if __name__ == "__main__":
