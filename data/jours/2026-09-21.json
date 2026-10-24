@@ -1,0 +1,132 @@
+{
+  "date": "2026-09-21",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 4, 1-7.11-13 ; Mt 9, 9-13",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M15 128 v-23 h50 v23\"/><path d=\"M28 101 q3 -3 6 0 q-3 3 -6 0 M40 103 q3 -3 6 0 q-3 3 -6 0\"/><path d=\"M72 78 q6 -6 12 0 q-6 6 -12 0\"/><path d=\"M78 84 q-8 14 -6 26\"/><path d=\"M72 110 q-4 10 -2 18 M72 110 q6 8 8 18\"/><path d=\"M76 92 q-16 4 -30 8\"/><path d=\"M144 60 q6 -6 12 0 q-6 6 -12 0\"/><path d=\"M150 66 q2 18 -2 32\"/><path d=\"M148 98 q10 12 6 30 M148 98 q-8 10 -14 30\"/><path d=\"M152 78 q20 -2 36 -6\"/><path d=\"M272 46 h60\"/><path d=\"M278 46 v8 M326 46 v8\"/><path d=\"M280 40 q6 -8 12 0 M298 40 q6 -8 12 0 M314 40 q6 -8 12 0\"/></g><g class=\"trait-liturgie\"><path d=\"M232 128 v-56 h34\"/><path d=\"M266 72 l24 20\"/></g></svg>",
+  "titre": "L'appel",
+  "titre_html": "L'appel <span class=\"it\">à table</span>",
+  "sous_titre": "Saint Matthieu, apôtre et évangéliste — Éphésiens 4, 1-7.11-13 ; Psaume 18 (19) ; Matthieu 9, 9-13",
+  "suite_hier": null,
+  "gravure_alt": "Un homme se lève de son comptoir à péage, la main encore posée sur des pièces, tandis qu'une silhouette en marche lui tend la main vers une porte ouverte ; à l'arrière-plan, une table où des convives se penchent les uns vers les autres dans une même lumière.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 4, 1-7.11-13",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Je vous exhorte donc, moi, le prisonnier dans le Seigneur, à marcher d'une manière digne de la <button class=\"mot\" data-g=\"g-vocation\">vocation</button> qui vous a été adressée, <span class=\"s\">2</span> en toute humilité et douceur, avec patience, vous supportant les uns les autres avec charité, <span class=\"s\">3</span> vous efforçant de conserver l'unité de l'esprit par le lien de la paix. <span class=\"s\">4</span> Il y a un seul corps et un seul Esprit, comme aussi vous avez été appelés à une seule espérance par votre vocation; <span class=\"s\">5</span> il y a un seul Seigneur, une seule foi, un seul baptême, <span class=\"s\">6</span> un seul Dieu et Père de tous, qui est au-dessus de tous, et parmi tous, et en tous. <span class=\"s\">7</span> Mais à chacun de nous la grâce a été donnée selon la mesure du don de Christ. <span class=\"s\">11</span> Et il a donné les uns comme apôtres, les autres comme prophètes, les autres comme évangélistes, les autres comme <button class=\"mot\" data-g=\"g-docteurs\">pasteurs et docteurs</button>, <span class=\"s\">12</span> pour le perfectionnement des saints en vue de l'œuvre du ministère et de l'<button class=\"mot\" data-g=\"g-edification\">édification</button> du corps de Christ, <span class=\"s\">13</span> jusqu'à ce que nous soyons tous parvenus à l'unité de la foi et de la connaissance du Fils de Dieu, à l'état d'homme fait, à la mesure de la stature parfaite de Christ.",
+      "gloses": [
+        {
+          "id": "g-vocation",
+          "lemme": "klêsis",
+          "html": "<span class=\"gr\">klêsis</span> désigne l'appel lui-même, l'acte par lequel on est convoqué, plutôt qu'un état stable. Segond traduit par « vocation », mot qui en français a glissé vers l'idée d'une orientation de vie ou d'un métier, alors que Paul, quelques versets plus haut dans la même lettre, parlait de « l'espérance qui s'attache à son appel » (Ep 1, 18) — un événement reçu, non une carrière choisie. Calvin, commentant ce passage, insiste sur le fait que cet appel demeure un acte gratuit de Dieu envers des hommes qui n'y avaient aucun titre, et que « marcher dignement » ne consiste pas à le mériter après coup mais à lui correspondre."
+        },
+        {
+          "id": "g-docteurs",
+          "lemme": "poimenas kai didaskalous",
+          "html": "Le grec ne met qu'un seul article devant <span class=\"gr\">poimenas kai didaskalous</span>, « pasteurs et docteurs », alors qu'il en met un devant chacune des charges précédentes — apôtres, prophètes, évangélistes. Cela suggère une seule fonction envisagée sous deux aspects plutôt que deux charges distinctes, nuance que le français de Segond, qui égrène « les uns... les autres » de façon uniforme, ne rend pas. Jean Chrysostome note dans ses homélies que le docteur nomme la même charge que le pasteur du côté de l'enseignement : on ne paît pas sans instruire, on n'instruit pas sans paître."
+        },
+        {
+          "id": "g-edification",
+          "lemme": "oikodomê",
+          "html": "<span class=\"gr\">oikodomê</span> vient de <span class=\"gr\">oikos</span>, la maison, et signifie d'abord une construction, un bâtiment que l'on élève pierre après pierre. Segond traduit par « édification », latinisme devenu en français un mot presque moral, celui qu'on emploie pour dire qu'un propos « édifie » — on a perdu l'image concrète du chantier. Paul développe pourtant cette même image un peu plus haut dans la lettre, à propos d'un édifice bâti sur le fondement des apôtres et des prophètes (Ep 2, 20-22) : le corps grandit comme un mur s'élève, assemblage visible et lent."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 18 (19), 2-3, 4-5ab",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Les cieux <button class=\"mot\" data-g=\"g-racontent\">racontent</button> la gloire de Dieu, et l'<button class=\"mot\" data-g=\"g-etendue\">étendue</button> manifeste l'oeuvre de ses mains. <span class=\"s\">3</span> Le jour en instruit un autre jour, la nuit en donne connaissance à une autre nuit. <span class=\"s\">4</span> Ce n'est pas un langage, ce ne sont pas des paroles dont le son ne soit point entendu: <span class=\"s\">5</span> leur retentissement parcourt toute la terre, leurs accents vont jusqu'au bout du monde.",
+      "gloses": [
+        {
+          "id": "g-racontent",
+          "lemme": "mesapperim",
+          "html": "L'hébreu <span class=\"gr\">mesapperim</span> vient de la racine <span class=\"gr\">safar</span>, qui donne aussi bien « raconter » que « compter, dénombrer » — c'est la même racine qui forme <span class=\"gr\">sefer</span>, le livre. Segond choisit « racontent », privilégiant l'image du récit, mais le mot porte aussi l'idée d'un compte tenu avec exactitude, comme si les cieux tenaient un registre ouvert de la gloire de Dieu. Augustin, méditant ce psaume, s'arrête précisément sur le paradoxe d'une parole « sans voix ni langage » qui pourtant se fait entendre de tous les peuples."
+        },
+        {
+          "id": "g-etendue",
+          "lemme": "raqia",
+          "html": "<span class=\"gr\">raqia</span> est le même mot qu'en Genèse 1, 6-8 pour le firmament qui sépare les eaux. Segond traduit ici par « étendue » plutôt que par « firmament », choix qui affaiblit l'écho entre les deux textes mais restitue le sens premier de la racine <span class=\"gr\">raqa</span>, « aplatir, étendre en martelant le métal » — une surface façonnée, non un simple vide. La Septante rend le mot par <span class=\"gr\">stereôma</span>, la solidité, lecture que reprennent plusieurs Pères grecs pour souligner la fermeté de l'œuvre créatrice."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 9, 9-13",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">9</span> De là étant allé plus loin, Jésus vit un homme assis au bureau des péages, et qui s'appelait Matthieu. Il lui dit: Suis-moi. Cet homme se leva, et le suivit. <span class=\"s\">10</span> Comme Jésus était à table dans la maison, voici, beaucoup de <button class=\"mot\" data-g=\"g-telones\">publicains</button> et de gens de mauvaise vie vinrent se mettre à table avec lui et avec ses disciples. <span class=\"s\">11</span> Les pharisiens virent cela, et ils dirent à ses disciples: Pourquoi votre maître mange-t-il avec les publicains et les gens de mauvaise vie? <span class=\"s\">12</span> Ce que Jésus ayant entendu, il dit: Ce ne sont pas ceux qui se portent bien qui ont besoin de médecin, mais les malades. <span class=\"s\">13</span> Allez, et apprenez ce que signifie: Je prends plaisir à la <button class=\"mot\" data-g=\"g-misericorde\">miséricorde</button>, et non aux sacrifices. Car je ne suis pas venu appeler des justes, mais des <button class=\"mot\" data-g=\"g-pecheurs\">pécheurs</button>.",
+      "gloses": [
+        {
+          "id": "g-telones",
+          "lemme": "telônês",
+          "html": "<span class=\"gr\">telônês</span> vient de <span class=\"gr\">telos</span>, le péage, la taxe. Le mot « publicain » que garde Segond désigne un métier bien réel sous l'occupation romaine : ces hommes affermaient la perception de l'impôt et étaient tenus pour des collaborateurs et des extorqueurs, exclus du témoignage devant les tribunaux et assimilés aux païens. Jean Chrysostome remarque que Matthieu, en écrivant son propre évangile, ne cache pas cette profession honteuse, alors que Marc et Luc préfèrent l'appeler par son autre nom, Lévi, par une pudeur qu'il ne s'accorde pas à lui-même."
+        },
+        {
+          "id": "g-misericorde",
+          "lemme": "hesed",
+          "html": "Jésus cite ici Osée 6, 6, où le mot hébreu est <span class=\"gr\">hesed</span>, la fidélité loyale de l'alliance, plus large qu'un sentiment de pitié : Dieu s'y tient parce qu'il s'est engagé, non par accès d'émotion. Segond traduit par « miséricorde », suivant le grec <span class=\"gr\">eleos</span> de la Septante que cite Matthieu, alors qu'ailleurs il rend le même hesed par « bonté » ou « grâce » — l'unité du mot hébreu se perd dans la diversité des équivalents français. Calvin relève que Jésus renvoie ainsi les pharisiens à leur propre Écriture, pour leur montrer qu'ils l'ont lue sans la comprendre."
+        },
+        {
+          "id": "g-pecheurs",
+          "lemme": "hamartôlous",
+          "html": "<span class=\"gr\">hamartôlous</span> vient du verbe <span class=\"gr\">hamartanein</span>, « manquer la cible » — une image empruntée au tir à l'arc plutôt qu'au tribunal. Segond traduit régulièrement par « pécheurs », terme devenu si religieux en français qu'il a perdu la vivacité concrète du grec : ne pas atteindre ce qui était visé. Chrysostome note que Jésus ne nie pas ce manque chez ceux avec qui il mange ; il vient précisément pour cela, comme le médecin va chez le malade et non l'inverse."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Matthieu le publicain, un métier maudit",
+      "corps_html": "Percevoir l'impôt pour Rome ou pour Hérode Antipas, à Capharnaüm, ville de passage sur la route commerciale reliant Damas à la mer, plaçait un Juif hors de la communauté d'Israël : les publicains étaient assimilés aux païens et aux voleurs, exclus du témoignage devant les tribunaux rabbiniques. C'est cet homme-là, et non un scribe pieux, que Jésus choisit pour porter son nom dans l'un des quatre évangiles."
+    },
+    {
+      "titre": "Une lettre écrite depuis la prison",
+      "corps_html": "Paul se nomme lui-même « le prisonnier dans le Seigneur » (Ep 4, 1) : l'épître aux Éphésiens appartient au groupe des lettres dites de la captivité, avec Philippiens, Colossiens et Philémon. Loin d'y récriminer contre sa condition, il y déploie une vision de l'Église comme corps unique, où la diversité des ministères — apôtres, prophètes, évangélistes, pasteurs et docteurs — sert une seule croissance."
+    }
+  ],
+  "analogie": {
+    "titre": "Rejoint avant d'avoir prouvé",
+    "variantes": [
+      "Il y a des jours où tu additionnes des colonnes de chiffres, où tu remplis des cases, où ta tâche ne demande à ton âme aucune présence particulière — et c'est précisément dans ce jour sans relief qu'une parole vient te trouver, sans que tu l'aies cherchée ni méritée par un effort spirituel préalable. Tu ne t'étais pas préparé à être appelé ; tu comptais, c'est tout. Ce jour-là bascule pourtant, non parce que tu as changé de posture avant que la parole n'arrive, mais parce qu'elle est arrivée alors que tu ne l'attendais pas — et devant Dieu, tu n'as pas eu à faire la preuve que tu valais l'appel avant de le recevoir.",
+      "Tu gardes quelque part le souvenir précis d'un moment où tu étais sûr d'avoir disqualifié, par ce que tu avais fait ou par ce que tu étais, toute proximité possible avec ce qui est saint — un geste, une parole, une habitude que tu ne racontes à personne. Des années plus tard, tu comprends que c'est exactement là, dans cette zone que tu croyais interdite à Dieu, qu'il s'est approché le plus, sans attendre que tu t'en sois d'abord extrait. Ce n'est pas ta guérison qui a précédé sa venue ; c'est sa venue qui a rendu la guérison pensable, et tu te tiens devant lui non pas justifié par ce que tu as changé, mais rejoint dans ce que tu n'avais pas encore changé.",
+      "Il t'est arrivé de t'asseoir à une table où tu pensais devoir te taire, laisser parler ceux qui, eux, avaient droit de cité — et de découvrir, à ta grande surprise, qu'on t'y attendait autant que les autres, sans qu'on ait vérifié d'abord tes titres à être là. Ce sentiment d'être reçu avant d'avoir prouvé quoi que ce soit ne s'oublie pas ; il continue de travailler en toi longtemps après. Il te met devant un Dieu dont la table fonctionne selon cette même logique renversée, où la miséricorde précède toujours le mérite au lieu de le récompenser."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Comme Matthieu, tu es invité à te lever de ce que tu comptais aujourd'hui, sans attendre d'être prêt ni d'avoir fini ta tâche.",
+    "geste": "Repère un moment ordinaire de ta journée — un travail répétitif, une attente, une occupation sans éclat — et laisse-toi rejoindre par ces mots : Suis-moi. Reste un instant en silence avant de reprendre ce que tu faisais.",
+    "note": "Il n'est pas demandé de changer de vie avant ce soir ; seulement de laisser la parole entrer là où tu ne l'attendais pas."
+  },
+  "question": "Qu'est-ce qui, dans ta vie aujourd'hui, ressemble encore à ce bureau de péage où tu ne t'attendais pas à être appelé ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : l'aveu du publicain",
+      "corps_html": "Jean Chrysostome remarque que Matthieu, écrivant son propre évangile, ne cache pas son ancien métier honteux, alors que Marc et Luc l'appellent par son autre nom, Lévi, par pudeur à son égard. Cet aveu, dit-il, montre un homme qui ne craint plus de nommer ce qu'il a été, parce qu'il sait ce qu'il est devenu par grâce.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 30"
+    },
+    {
+      "titre": "Calvin : un seul corps, une seule espérance",
+      "corps_html": "Calvin, commentant Éphésiens 4, insiste sur le fait que l'unité de l'Église ne précède pas les dons différents qu'énumère Paul — apôtres, prophètes, pasteurs, docteurs — mais se construit par eux : chaque charge reçue sert l'édification commune, non la distinction de celui qui l'exerce.",
+      "attribution": "Jean Calvin, Commentaire sur l'épître aux Éphésiens, chapitre 4"
+    },
+    {
+      "titre": "Augustin : une voix qui ne parle pas",
+      "corps_html": "Augustin, méditant le Psaume 18 (19), relève que cette voix des cieux « sans langage ni paroles » est reprise par Paul en Romains 10, 18 pour désigner l'annonce apostolique portée jusqu'aux extrémités du monde : la création parlait déjà avant que les apôtres eux-mêmes ne parlent.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 18 (19)"
+    }
+  ]
+}

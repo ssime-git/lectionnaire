@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'appel — lundi 21 septembre 2026</title>
+<meta name="description" content="Saint Matthieu, apôtre et évangéliste — Éphésiens 4, 1-7.11-13 ; Psaume 18 (19) ; Matthieu 9, 9-13">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 21 septembre 2026 · None · <span class="couleur">rouge · Fête</span>
+</p>
+    <h1>L'appel <span class="it">à table</span></h1>
+    <p class="chapeau">Saint Matthieu, apôtre et évangéliste — Éphésiens 4, 1-7.11-13 ; Psaume 18 (19) ; Matthieu 9, 9-13</p>
+    <figure class="gravure" aria-label="Un homme se lève de son comptoir à péage, la main encore posée sur des pièces, tandis qu'une silhouette en marche lui tend la main vers une porte ouverte ; à l'arrière-plan, une table où des convives se penchent les uns vers les autres dans une même lumière."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M15 128 v-23 h50 v23"/><path d="M28 101 q3 -3 6 0 q-3 3 -6 0 M40 103 q3 -3 6 0 q-3 3 -6 0"/><path d="M72 78 q6 -6 12 0 q-6 6 -12 0"/><path d="M78 84 q-8 14 -6 26"/><path d="M72 110 q-4 10 -2 18 M72 110 q6 8 8 18"/><path d="M76 92 q-16 4 -30 8"/><path d="M144 60 q6 -6 12 0 q-6 6 -12 0"/><path d="M150 66 q2 18 -2 32"/><path d="M148 98 q10 12 6 30 M148 98 q-8 10 -14 30"/><path d="M152 78 q20 -2 36 -6"/><path d="M272 46 h60"/><path d="M278 46 v8 M326 46 v8"/><path d="M280 40 q6 -8 12 0 M298 40 q6 -8 12 0 M314 40 q6 -8 12 0"/></g><g class="trait-liturgie"><path d="M232 128 v-56 h34"/><path d="M266 72 l24 20"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ep 4, 1-7.11-13 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Je vous exhorte donc, moi, le prisonnier dans le Seigneur, à marcher d'une manière digne de la <button class="mot" data-g="g-vocation">vocation</button> qui vous a été adressée, <span class="s">2</span> en toute humilité et douceur, avec patience, vous supportant les uns les autres avec charité, <span class="s">3</span> vous efforçant de conserver l'unité de l'esprit par le lien de la paix. <span class="s">4</span> Il y a un seul corps et un seul Esprit, comme aussi vous avez été appelés à une seule espérance par votre vocation; <span class="s">5</span> il y a un seul Seigneur, une seule foi, un seul baptême, <span class="s">6</span> un seul Dieu et Père de tous, qui est au-dessus de tous, et parmi tous, et en tous. <span class="s">7</span> Mais à chacun de nous la grâce a été donnée selon la mesure du don de Christ. <span class="s">11</span> Et il a donné les uns comme apôtres, les autres comme prophètes, les autres comme évangélistes, les autres comme <button class="mot" data-g="g-docteurs">pasteurs et docteurs</button>, <span class="s">12</span> pour le perfectionnement des saints en vue de l'œuvre du ministère et de l'<button class="mot" data-g="g-edification">édification</button> du corps de Christ, <span class="s">13</span> jusqu'à ce que nous soyons tous parvenus à l'unité de la foi et de la connaissance du Fils de Dieu, à l'état d'homme fait, à la mesure de la stature parfaite de Christ.</div>
+        <div class="glose" id="g-vocation"><span class="lemme">klêsis</span> <span class="gr">klêsis</span> désigne l'appel lui-même, l'acte par lequel on est convoqué, plutôt qu'un état stable. Segond traduit par « vocation », mot qui en français a glissé vers l'idée d'une orientation de vie ou d'un métier, alors que Paul, quelques versets plus haut dans la même lettre, parlait de « l'espérance qui s'attache à son appel » (Ep 1, 18) — un événement reçu, non une carrière choisie. Calvin, commentant ce passage, insiste sur le fait que cet appel demeure un acte gratuit de Dieu envers des hommes qui n'y avaient aucun titre, et que « marcher dignement » ne consiste pas à le mériter après coup mais à lui correspondre.</div>
+        <div class="glose" id="g-docteurs"><span class="lemme">poimenas kai didaskalous</span> Le grec ne met qu'un seul article devant <span class="gr">poimenas kai didaskalous</span>, « pasteurs et docteurs », alors qu'il en met un devant chacune des charges précédentes — apôtres, prophètes, évangélistes. Cela suggère une seule fonction envisagée sous deux aspects plutôt que deux charges distinctes, nuance que le français de Segond, qui égrène « les uns... les autres » de façon uniforme, ne rend pas. Jean Chrysostome note dans ses homélies que le docteur nomme la même charge que le pasteur du côté de l'enseignement : on ne paît pas sans instruire, on n'instruit pas sans paître.</div>
+        <div class="glose" id="g-edification"><span class="lemme">oikodomê</span> <span class="gr">oikodomê</span> vient de <span class="gr">oikos</span>, la maison, et signifie d'abord une construction, un bâtiment que l'on élève pierre après pierre. Segond traduit par « édification », latinisme devenu en français un mot presque moral, celui qu'on emploie pour dire qu'un propos « édifie » — on a perdu l'image concrète du chantier. Paul développe pourtant cette même image un peu plus haut dans la lettre, à propos d'un édifice bâti sur le fondement des apôtres et des prophètes (Ep 2, 20-22) : le corps grandit comme un mur s'élève, assemblage visible et lent.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 18 (19), 2-3, 4-5ab — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Les cieux <button class="mot" data-g="g-racontent">racontent</button> la gloire de Dieu, et l'<button class="mot" data-g="g-etendue">étendue</button> manifeste l'oeuvre de ses mains. <span class="s">3</span> Le jour en instruit un autre jour, la nuit en donne connaissance à une autre nuit. <span class="s">4</span> Ce n'est pas un langage, ce ne sont pas des paroles dont le son ne soit point entendu: <span class="s">5</span> leur retentissement parcourt toute la terre, leurs accents vont jusqu'au bout du monde.</div>
+        <div class="glose" id="g-racontent"><span class="lemme">mesapperim</span> L'hébreu <span class="gr">mesapperim</span> vient de la racine <span class="gr">safar</span>, qui donne aussi bien « raconter » que « compter, dénombrer » — c'est la même racine qui forme <span class="gr">sefer</span>, le livre. Segond choisit « racontent », privilégiant l'image du récit, mais le mot porte aussi l'idée d'un compte tenu avec exactitude, comme si les cieux tenaient un registre ouvert de la gloire de Dieu. Augustin, méditant ce psaume, s'arrête précisément sur le paradoxe d'une parole « sans voix ni langage » qui pourtant se fait entendre de tous les peuples.</div>
+        <div class="glose" id="g-etendue"><span class="lemme">raqia</span> <span class="gr">raqia</span> est le même mot qu'en Genèse 1, 6-8 pour le firmament qui sépare les eaux. Segond traduit ici par « étendue » plutôt que par « firmament », choix qui affaiblit l'écho entre les deux textes mais restitue le sens premier de la racine <span class="gr">raqa</span>, « aplatir, étendre en martelant le métal » — une surface façonnée, non un simple vide. La Septante rend le mot par <span class="gr">stereôma</span>, la solidité, lecture que reprennent plusieurs Pères grecs pour souligner la fermeté de l'œuvre créatrice.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 9, 9-13 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">9</span> De là étant allé plus loin, Jésus vit un homme assis au bureau des péages, et qui s'appelait Matthieu. Il lui dit: Suis-moi. Cet homme se leva, et le suivit. <span class="s">10</span> Comme Jésus était à table dans la maison, voici, beaucoup de <button class="mot" data-g="g-telones">publicains</button> et de gens de mauvaise vie vinrent se mettre à table avec lui et avec ses disciples. <span class="s">11</span> Les pharisiens virent cela, et ils dirent à ses disciples: Pourquoi votre maître mange-t-il avec les publicains et les gens de mauvaise vie? <span class="s">12</span> Ce que Jésus ayant entendu, il dit: Ce ne sont pas ceux qui se portent bien qui ont besoin de médecin, mais les malades. <span class="s">13</span> Allez, et apprenez ce que signifie: Je prends plaisir à la <button class="mot" data-g="g-misericorde">miséricorde</button>, et non aux sacrifices. Car je ne suis pas venu appeler des justes, mais des <button class="mot" data-g="g-pecheurs">pécheurs</button>.</div>
+        <div class="glose" id="g-telones"><span class="lemme">telônês</span> <span class="gr">telônês</span> vient de <span class="gr">telos</span>, le péage, la taxe. Le mot « publicain » que garde Segond désigne un métier bien réel sous l'occupation romaine : ces hommes affermaient la perception de l'impôt et étaient tenus pour des collaborateurs et des extorqueurs, exclus du témoignage devant les tribunaux et assimilés aux païens. Jean Chrysostome remarque que Matthieu, en écrivant son propre évangile, ne cache pas cette profession honteuse, alors que Marc et Luc préfèrent l'appeler par son autre nom, Lévi, par une pudeur qu'il ne s'accorde pas à lui-même.</div>
+        <div class="glose" id="g-misericorde"><span class="lemme">hesed</span> Jésus cite ici Osée 6, 6, où le mot hébreu est <span class="gr">hesed</span>, la fidélité loyale de l'alliance, plus large qu'un sentiment de pitié : Dieu s'y tient parce qu'il s'est engagé, non par accès d'émotion. Segond traduit par « miséricorde », suivant le grec <span class="gr">eleos</span> de la Septante que cite Matthieu, alors qu'ailleurs il rend le même hesed par « bonté » ou « grâce » — l'unité du mot hébreu se perd dans la diversité des équivalents français. Calvin relève que Jésus renvoie ainsi les pharisiens à leur propre Écriture, pour leur montrer qu'ils l'ont lue sans la comprendre.</div>
+        <div class="glose" id="g-pecheurs"><span class="lemme">hamartôlous</span> <span class="gr">hamartôlous</span> vient du verbe <span class="gr">hamartanein</span>, « manquer la cible » — une image empruntée au tir à l'arc plutôt qu'au tribunal. Segond traduit régulièrement par « pécheurs », terme devenu si religieux en français qu'il a perdu la vivacité concrète du grec : ne pas atteindre ce qui était visé. Chrysostome note que Jésus ne nie pas ce manque chez ceux avec qui il mange ; il vient précisément pour cela, comme le médecin va chez le malade et non l'inverse.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Matthieu le publicain, un métier maudit</h3><p>Percevoir l'impôt pour Rome ou pour Hérode Antipas, à Capharnaüm, ville de passage sur la route commerciale reliant Damas à la mer, plaçait un Juif hors de la communauté d'Israël : les publicains étaient assimilés aux païens et aux voleurs, exclus du témoignage devant les tribunaux rabbiniques. C'est cet homme-là, et non un scribe pieux, que Jésus choisit pour porter son nom dans l'un des quatre évangiles.</p></div>
+      <div><h3>Une lettre écrite depuis la prison</h3><p>Paul se nomme lui-même « le prisonnier dans le Seigneur » (Ep 4, 1) : l'épître aux Éphésiens appartient au groupe des lettres dites de la captivité, avec Philippiens, Colossiens et Philémon. Loin d'y récriminer contre sa condition, il y déploie une vision de l'Église comme corps unique, où la diversité des ministères — apôtres, prophètes, évangélistes, pasteurs et docteurs — sert une seule croissance.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Rejoint avant d'avoir prouvé</h2>
+<p>Il y a des jours où tu additionnes des colonnes de chiffres, où tu remplis des cases, où ta tâche ne demande à ton âme aucune présence particulière — et c'est précisément dans ce jour sans relief qu'une parole vient te trouver, sans que tu l'aies cherchée ni méritée par un effort spirituel préalable. Tu ne t'étais pas préparé à être appelé ; tu comptais, c'est tout. Ce jour-là bascule pourtant, non parce que tu as changé de posture avant que la parole n'arrive, mais parce qu'elle est arrivée alors que tu ne l'attendais pas — et devant Dieu, tu n'as pas eu à faire la preuve que tu valais l'appel avant de le recevoir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Comme Matthieu, tu es invité à te lever de ce que tu comptais aujourd'hui, sans attendre d'être prêt ni d'avoir fini ta tâche.</p>
+      <p class="geste">Repère un moment ordinaire de ta journée — un travail répétitif, une attente, une occupation sans éclat — et laisse-toi rejoindre par ces mots : Suis-moi. Reste un instant en silence avant de reprendre ce que tu faisais.</p>
+      <small>Il n'est pas demandé de changer de vie avant ce soir ; seulement de laisser la parole entrer là où tu ne l'attendais pas.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, dans ta vie aujourd'hui, ressemble encore à ce bureau de péage où tu ne t'attendais pas à être appelé ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : l'aveu du publicain</h3>
+          <p>Jean Chrysostome remarque que Matthieu, écrivant son propre évangile, ne cache pas son ancien métier honteux, alors que Marc et Luc l'appellent par son autre nom, Lévi, par pudeur à son égard. Cet aveu, dit-il, montre un homme qui ne craint plus de nommer ce qu'il a été, parce qu'il sait ce qu'il est devenu par grâce.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 30</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : un seul corps, une seule espérance</h3>
+          <p>Calvin, commentant Éphésiens 4, insiste sur le fait que l'unité de l'Église ne précède pas les dons différents qu'énumère Paul — apôtres, prophètes, pasteurs, docteurs — mais se construit par eux : chaque charge reçue sert l'édification commune, non la distinction de celui qui l'exerce.</p>
+<p class="attrib">Jean Calvin, Commentaire sur l'épître aux Éphésiens, chapitre 4</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Augustin : une voix qui ne parle pas</h3>
+          <p>Augustin, méditant le Psaume 18 (19), relève que cette voix des cieux « sans langage ni paroles » est reprise par Paul en Romains 10, 18 pour désigner l'annonce apostolique portée jusqu'aux extrémités du monde : la création parlait déjà avant que les apôtres eux-mêmes ne parlent.</p>
+<p class="attrib">Augustin, Enarrationes in Psalmos, sur le Psaume 18 (19)</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Ep 4, 1-7.11-13 ; Mt 9, 9-13.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
