@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-21",
+  "date_humaine": "vendredi",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 37, 1-14 ; Mt 22, 34-40",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M20 128 q30 -8 55 0\"/><path d=\"M100 128 q28 -10 60 0\"/><path d=\"M185 128 q30 -9 58 0\"/><path d=\"M40 118 l10 -10 m-4 10 l9 -13 m8 13 l6 -14 m5 14 l8 -12\"/><path d=\"M120 116 l9 -11 m6 11 l7 -13 m9 13 l5 -12\"/><path d=\"M210 118 l9 -10 m7 10 l6 -13 m8 13 l6 -11\"/><path d=\"M255 12 l30 20 M258 18 l27 17 M262 24 l24 15 M266 30 l20 13\"/><path d=\"M295 44 l26 18 M298 50 l23 15 M301 56 l20 13\"/><path d=\"M270 65 v50\"/><path d=\"M258 78 q12 -14 24 0\"/><path d=\"M255 96 h30\"/></g><g class=\"trait-liturgie\"><path d=\"M74 108 q3 -14 0 -22\"/><path d=\"M62 100 v14\"/><path d=\"M86 100 v14\"/></g></svg>",
+  "titre": "Ossements vivants",
+  "titre_html": "Ossements <span class=\"it\">vivants</span>",
+  "sous_titre": "Le souffle qui relève les morts, le commandement qui résume la loi.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois représentant une vallée jonchée d'ossements que traverse un souffle de vent suggéré par de longues hachures obliques, avec au loin une silhouette prophétique aux bras levés face à des os qui se redressent.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ézéchiel 37, 1-14",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> La main de l'Éternel fut sur moi, et l'Éternel me transporta en <button class=\"mot\" data-g=\"g-ruah\">esprit</button>, et me déposa dans le milieu d'une vallée pleine d'ossements. <span class=\"s\">2</span> Il me fit passer auprès d'eux, tout autour; et voici, ils étaient fort nombreux, à la surface de la vallée, et fort secs. <span class=\"s\">3</span> Il me dit: <button class=\"mot\" data-g=\"g-benadam\">Fils de l'homme</button>, ces os pourront-ils revivre? Je répondis: Seigneur Éternel, tu le sais. <span class=\"s\">4</span> Il me dit: Prophétise sur ces os, et dis-leur: <button class=\"mot\" data-g=\"g-atsamot\">Ossements desséchés</button>, écoutez la parole de l'Éternel! <span class=\"s\">5</span> Ainsi parle le Seigneur, l'Éternel, à ces os: Voici, je vais faire entrer en vous un esprit, et vous vivrez. <span class=\"s\">6</span> Je vous donnerai des nerfs, et je ferai croître sur vous de la chair, je vous couvrirai de peau, je mettrai en vous un esprit, et vous vivrez; et vous saurez que je suis l'Éternel. <span class=\"s\">7</span> Je prophétisai, selon l'ordre que j'avais reçu. Et comme je prophétisais, il y eut un bruit, et voici, il se fit un mouvement, et les os s'approchèrent les uns des autres. <span class=\"s\">8</span> Je regardai, et voici, il leur vint des nerfs, la chair crût, et la peau les couvrit par-dessus; mais il n'y avait point en eux d'esprit. <span class=\"s\">9</span> Il me dit: Prophétise, et parle à l'esprit! prophétise, fils de l'homme, et dis à l'esprit: Ainsi parle le Seigneur, l'Éternel: Esprit, viens des quatre vents, souffle sur ces morts, et qu'ils revivent! <span class=\"s\">10</span> Je prophétisai, selon l'ordre qu'il m'avait donné. Et l'esprit entra en eux, et ils reprirent vie, et ils se tinrent sur leurs pieds: c'était une armée nombreuse, très nombreuse. <span class=\"s\">11</span> Il me dit: Fils de l'homme, ces os, c'est toute la maison d'Israël. Voici, ils disent: Nos os sont desséchés, notre espérance est détruite, nous sommes anéantis! <span class=\"s\">12</span> Prophétise donc, et dis-leur: Ainsi parle le Seigneur, l'Éternel: Voici, j'ouvrirai vos <button class=\"mot\" data-g=\"g-qevarim\">sépulcres</button>, je vous ferai sortir de vos sépulcres, ô mon peuple, et je vous ramènerai dans le pays d'Israël. <span class=\"s\">13</span> Et vous saurez que je suis l'Éternel, lorsque j'ouvrirai vos sépulcres, et que je vous ferai sortir de vos sépulcres, ô mon peuple! <span class=\"s\">14</span> Je mettrai mon esprit en vous, et vous vivrez, je vous rétablirai dans votre pays, et vous saurez que j'ai parlé et exécuté, dit l'Éternel.",
+      "gloses": [
+        {
+          "id": "g-ruah",
+          "lemme": "ruah",
+          "html": "Le mot hébreu <span class=\"gr\">ruah</span> traverse tout le chapitre et change de sens à chaque verset sans jamais changer de lettres : c'est le vent qui balaie la vallée, le souffle qui anime la poitrine, et l'Esprit de Dieu lui-même. Segond doit choisir un mot français à chaque occurrence — « esprit » au verset 1, « souffle » au verset 9 — alors que l'hébreu joue précisément sur cette unité que la traduction brise. Les Pères grecs, en rendant ruah par <span class=\"gr\">pneuma</span>, ont lu ce chapitre comme une préfiguration de la Pentecôte. Calvin, dans son commentaire sur Ézéchiel, rappelle pourtant que la vision décrit d'abord le rétablissement du peuple exilé, non une résurrection individuelle."
+        },
+        {
+          "id": "g-benadam",
+          "lemme": "fils de l'homme",
+          "html": "L'expression hébraïque <span class=\"gr\">ben-adam</span>, « fils d'homme », est le titre que Dieu donne systématiquement à Ézéchiel dans tout le livre, plus de quatre-vingt-dix fois. Elle ne désigne rien de messianique ici : elle souligne au contraire la simple humanité, la créature de poussière, face à la majesté divine qui parle. Segond traduit littéralement, gardant le contraste voulu par le texte entre la fragilité de celui qui reçoit la vision et la puissance de celui qui l'envoie. Le même titre reviendra dans la bouche de Jésus, mais chargé d'un sens nouveau que le grec des évangiles, <span class=\"gr\">huios tou anthropou</span>, ne recouvre pas exactement."
+        },
+        {
+          "id": "g-atsamot",
+          "lemme": "ossements desséchés",
+          "html": "L'hébreu <span class=\"gr\">atsamot yeveshot</span>, littéralement « des os asséchés », insiste sur un dessèchement total : non des cadavres récents, mais des ossements exposés depuis longtemps, vidés de toute humidité et de toute vie possible. Segond traduit sobrement « ossements desséchés », gardant la répétition qui structure la vision. Les rabbins du Talmud (Sanhédrin 92b) ont discuté si cette vallée décrivait un événement réel ou une parabole ; la majorité y a vu une image, sans que cela n'enlève rien à sa force. C'est précisément cette extrémité, l'os sec sans chair ni souffle, que le texte choisit comme lieu de la parole de Dieu."
+        },
+        {
+          "id": "g-qevarim",
+          "lemme": "sépulcres",
+          "html": "Le mot <span class=\"gr\">qevarim</span>, « sépulcres » ou « tombeaux », déplace la vision : après l'image des os épars dans la vallée, le texte parle de tombes que Dieu va ouvrir, ce qui suggère un second niveau de lecture, celui de l'exil comme mort collective et du retour comme sortie du tombeau national. Segond garde « sépulcres », terme concret qui annonce, sans le vouloir directement, le vocabulaire évangélique du tombeau ouvert. Origène et les Pères latins liront ce verset en écho à la résurrection de Lazare, sans que le texte d'Ézéchiel vise lui-même autre chose que le retour de Babylone."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 106 (107), 2-3, 4-5, 6-7, 8-9",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Qu'ainsi disent les <button class=\"mot\" data-g=\"g-gaal\">rachetés</button> de l'Éternel, Ceux qu'il a délivrés de la main de l'ennemi, <span class=\"s\">3</span> Et qu'il a rassemblés de tous les pays, De l'orient et de l'occident, du nord et de la mer! <span class=\"s\">4</span> Ils erraient dans le désert, ils marchaient dans la solitude, Sans trouver une ville où ils pussent habiter. <span class=\"s\">5</span> Ils souffraient de la faim et de la soif; Leur <button class=\"mot\" data-g=\"g-nephesh\">âme</button> était languissante. <span class=\"s\">6</span> Dans leur détresse, ils crièrent à l'Éternel, Et il les délivra de leurs angoisses; <span class=\"s\">7</span> Il les conduisit par un chemin droit, Pour aller dans une ville habitable. <span class=\"s\">8</span> Qu'ils louent l'Éternel pour sa bonté, Et pour ses merveilles en faveur des fils de l'homme! <span class=\"s\">9</span> Car il a satisfait l'âme altérée, Il a comblé de biens l'âme affamée.",
+      "gloses": [
+        {
+          "id": "g-gaal",
+          "lemme": "ga'al",
+          "html": "Le verbe hébreu <span class=\"gr\">ga'al</span>, « racheter », désigne à l'origine le geste du proche parent qui rachète un membre de sa famille tombé en esclavage ou dépossédé de sa terre, vocabulaire du lévirat et de la loi du rachat en Lévitique 25. Segond traduit « rachetés », gardant la métaphore juridique et familiale : Dieu se comporte envers Israël comme le parent le plus proche, le <span class=\"gr\">go'el</span>. Les rabbins ont vu dans ce psaume un chant de pèlerins revenus d'exil, avant qu'Augustin n'y entende un rachat plus large de toute âme errante. Le mot porte donc à la fois une histoire précise, celle du retour de Babylone, et une capacité d'élargissement que le culte n'a cessé d'exploiter."
+        },
+        {
+          "id": "g-nephesh",
+          "lemme": "nephesh",
+          "html": "L'hébreu <span class=\"gr\">nephesh</span>, traduit ici par « âme », ne désigne pas une partie immatérielle opposée au corps mais l'être vivant tout entier, y compris sa faim et sa soif, c'est le mot qui, en Genèse 2, décrit l'homme devenu « âme vivante » par le souffle de Dieu. Segond, en traduisant « leur âme était languissante » puis « il a satisfait l'âme altérée », emploie un mot français chargé de dualisme grec que l'hébreu ignore. Ce même terme reviendra sous une autre forme dans la vision d'Ézéchiel, quand les os reprennent vie et se tiennent debout sur leurs pieds : la vie biblique est toujours corporelle avant d'être intérieure."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Matthieu 22, 34-40",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">34</span> Les pharisiens, ayant appris qu'il avait réduit au silence les sadducéens, se rassemblèrent, <span class=\"s\">35</span> et l'un d'eux, docteur de la loi, lui fit cette question, pour l'éprouver: <span class=\"s\">36</span> Maître, quel est le plus grand commandement de la loi? <span class=\"s\">37</span> Jésus lui répondit: <button class=\"mot\" data-g=\"g-agapao\">Tu aimeras</button> le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, et de toute ta <button class=\"mot\" data-g=\"g-dianoia\">pensée</button>. <span class=\"s\">38</span> C'est le premier et le plus grand commandement. <span class=\"s\">39</span> Et voici le second, qui lui est semblable: Tu aimeras ton <button class=\"mot\" data-g=\"g-plesion\">prochain</button> comme toi-même. <span class=\"s\">40</span> De ces deux commandements dépendent toute la loi et les prophètes.",
+      "gloses": [
+        {
+          "id": "g-agapao",
+          "lemme": "agapaō",
+          "html": "Le grec emploie ici <span class=\"gr\">agapēseis</span>, futur du verbe <span class=\"gr\">agapaō</span>, et non <span class=\"gr\">phileō</span> : ce n'est pas un sentiment spontané d'affection mais un attachement voulu, orienté, qui engage la volonté autant que le cœur. Segond traduit uniformément par « aimer », effaçant une distinction que le grec du Nouveau Testament maintient ailleurs, par exemple dans le dialogue entre Jésus et Pierre en Jean 21. Jésus cite ici Deutéronome 6, 5 selon la Septante, qui employait déjà agapaō pour traduire l'hébreu <span class=\"gr\">ahav</span> du Shema. Chrysostome, dans ses homélies sur Matthieu, souligne que ce commandement n'est pas nouveau mais rappelé comme fondement de tout le reste."
+        },
+        {
+          "id": "g-dianoia",
+          "lemme": "dianoia",
+          "html": "Là où Deutéronome 6, 5 énumère le cœur, l'âme et la force (<span class=\"gr\">me'od</span> en hébreu, rendu par <span class=\"gr\">dynamis</span> dans la Septante), Matthieu fait dire à Jésus cœur, âme et <span class=\"gr\">dianoia</span>, « pensée » ou « intelligence », un terme que ni l'hébreu ni la Septante du Deutéronome ne portaient à cette place. Segond traduit fidèlement ce déplacement par « pensée », sans le signaler comme une variante. Les commentateurs anciens y ont vu un souci propre à Matthieu d'inclure l'intellect dans l'amour dû à Dieu, contre toute piété purement affective ou seulement obéissante."
+        },
+        {
+          "id": "g-plesion",
+          "lemme": "plēsion",
+          "html": "Le grec <span class=\"gr\">plēsion</span>, « le proche », traduit l'hébreu <span class=\"gr\">rea</span> de Lévitique 19, 18, un mot dont le sens premier visait dans son contexte le compatriote, le membre du même peuple. Segond traduit « prochain », mot français qui a fini par désigner, dans l'usage courant, n'importe quel être humain rencontré, élargissement que le texte de la loi ne portait pas nécessairement à l'origine. C'est la parabole du bon Samaritain, un peu plus loin dans les évangiles, qui viendra explicitement forcer cet élargissement. Ici, Jésus ne redéfinit pas le mot : il fait de son commandement l'égal du premier."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une vision au creux de l'exil",
+      "corps_html": "La vision de la vallée des ossements appartient à la seconde partie du livre d'Ézéchiel (chapitres 33 à 39), écrite après l'annonce de la chute de Jérusalem en 587 avant notre ère, quand le prophète, déporté à Babylone dès 597, doit désormais annoncer non plus le jugement mais la restauration. Le peuple exilé se vit comme mort — « nos os sont desséchés » — et c'est à ce désespoir précis que la vision répond, juste avant l'oracle des deux bâtons réunis qui suit au verset 15."
+    },
+    {
+      "titre": "La dernière des controverses du temple",
+      "corps_html": "Cette question sur le plus grand commandement forme, chez Matthieu, la troisième d'une série de controverses posées à Jésus dans le temple de Jérusalem durant la semaine qui précède sa mort, après celle des sadducéens sur la résurrection. Marc (12, 28-34) et Luc (10, 25-28) rapportent une scène proche, mais Luc la déplace plus tôt et la fait déboucher sur la parabole du bon Samaritain. Le fait que Jésus lie ensemble Deutéronome 6,5 et Lévitique 19,18 est reçu, chez certains maîtres juifs contemporains comme Hillel, dans un esprit voisin de synthèse de la loi."
+    }
+  ],
+  "analogie": {
+    "titre": "Le souffle qui manquait",
+    "variantes": [
+      "Il y a des saisons où prier ressemble à parler dans une pièce vide : les mots sortent, la posture est juste, mais rien ne répond en toi, aucune chaleur, aucune certitude que quelqu'un écoute. Tu continues pourtant, par habitude ou par fidélité nue, sans savoir si cela sert à quelque chose. C'est exactement la position des os de la vallée avant le verset 9 : la chair est revenue, la forme est là, mais aucun souffle. Le texte ne dit pas que tu dois produire ce souffle par ta ferveur ; il dit qu'il vient d'ailleurs, appelé par une parole qui n'est pas la tienne, et qu'il vient sur ce qui semblait définitivement sec.",
+      "Tu as pu donner des années à une tâche, accompagner quelqu'un, transmettre, veiller sur une communauté, sans jamais voir ce que cela produisait, sans certitude que quoi que ce soit prenait racine. Le silence qui suit ce genre de service ressemble à un cimetière : tu sèmes dans ce qui paraît mort, et rien ne te garantit que tu verras la moisson. La promesse d'Ézéchiel ne s'adresse pas à ta capacité de faire lever la vie, mais à la fidélité de celui qui ouvre les sépulcres en son temps — « vous saurez que j'ai parlé et exécuté », dit le texte, non pas toi, mais lui.",
+      "Il t'est arrivé d'aimer quelqu'un par décision avant de le sentir, de continuer à visiter, à écouter, à servir une personne pour qui tu n'éprouvais plus rien, simplement parce que le commandement tenait encore quand le sentiment avait disparu. Tu craignais alors que cet amour sans chaleur ne soit qu'une coquille vide, une obéissance sans vie, comme ces os recouverts de chair mais sans souffle. Le premier commandement ne demande pourtant pas d'abord un sentiment : il ordonne un amour de tout le cœur, de toute l'âme, de toute la pensée, et c'est souvent dans la persévérance de l'acte que le souffle, un jour, rejoint enfin le geste."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte ne demande pas d'abord de comprendre comment des os peuvent revivre, ni de vérifier que ton amour est assez grand : il demande de te tenir, un instant, à l'endroit où tu te crois trop sec ou trop tiède pour que quoi que ce soit change.",
+    "geste": "Reste en silence quelques minutes et redis lentement, sans les commenter, les mots : « Tu aimeras le Seigneur ton Dieu de tout ton cœur » — laisse-les rejoindre l'endroit précis où tu te sens aujourd'hui le plus desséché.",
+    "note": "Rien n'oblige à ressentir quoi que ce soit pendant ce temps ; le texte du jour promet le souffle, pas l'émotion qui l'accompagnerait."
+  },
+  "question": "Quel endroit de ta vie ressemble aujourd'hui le plus à cette vallée d'ossements desséchés, et qu'est-ce que cela changerait de croire que la parole de Dieu peut encore s'y adresser ?",
+  "racines": [
+    {
+      "titre": "Le commandement qui contient tous les autres",
+      "corps_html": "Jean Chrysostome, commentant ce passage dans ses homélies sur Matthieu, note que Jésus ne juxtapose pas deux commandements séparés mais montre que le second procède du premier : qui aime vraiment Dieu ne peut mépriser celui que Dieu a créé à son image. Pour lui, la loi et les prophètes ne sont pas abolis mais rassemblés dans ce double mouvement, comme des rayons qui reviennent à leur centre.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, LXXI"
+    },
+    {
+      "titre": "Une vision pour un peuple, pas pour un individu",
+      "corps_html": "Calvin, dans ses leçons sur Ézéchiel, insiste sur le fait que la vision de la vallée ne parle pas d'abord de la résurrection des corps après la mort, mais du relèvement politique et spirituel d'Israël exilé, réduit à rien aux yeux des nations. Il met en garde contre une lecture qui isolerait ce texte de son objet premier, le retour de la captivité, tout en reconnaissant qu'il annonce ensuite une espérance plus vaste.",
+      "attribution": "Jean Calvin, Leçons sur le prophète Ézéchiel"
+    },
+    {
+      "titre": "Une image, pas un fait, disent les maîtres",
+      "corps_html": "Le Talmud de Babylone (traité Sanhédrin 92b) rapporte un débat entre rabbins sur la vision d'Ézéchiel : Rabbi Eliézer soutient que les morts ressuscités ont chanté un cantique puis sont remontés dans leur tombe, tandis que Rabbi Yehoushoua ben Qorha estime que la scène entière n'est qu'une parabole, <span class=\"gr\">mashal</span>, destinée à enseigner l'espérance et non un événement littéral. Cette discussion montre que le texte a, très tôt, résisté à une lecture uniquement biographique.",
+      "attribution": "Talmud de Babylone, Sanhédrin 92b"
+    }
+  ]
+}
