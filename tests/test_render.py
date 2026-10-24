@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 import tempfile
 import unittest
@@ -157,6 +158,28 @@ class TemplateCarnetTests(unittest.TestCase):
     def test_question_echappee(self) -> None:
         html = self._jour([], [_qr('Pourquoi "semblable" <et> pas égal ?')])
         self.assertIn("Pourquoi &#34;semblable&#34; &lt;et&gt; pas égal ?", html)
+
+
+class ContexteTests(unittest.TestCase):
+    def test_contexte_compact_sans_html(self) -> None:
+        d = render.charger_jour("2026-10-25")
+        d["carnet"] = [{"question": "Pourquoi deux ?", "reponse_html": "<p>Parce <em>que</em>.</p>",
+                        "sources": {"jour": ["Mt 22"], "tradition": []}}]
+        c = render.contexte_du_jour(d)
+        self.assertEqual(set(c), {"date", "titre", "references", "lectures", "gloses", "contexte", "carnet"})
+        self.assertEqual(c["date"], "2026-10-25")
+        self.assertEqual(c["lectures"][0]["reference"], "Ex 22, 20-26")
+        self.assertTrue(c["lectures"][0]["texte"].startswith("21 Tu ne maltraiteras point l'étranger"))
+        self.assertNotIn("<", json.dumps(c, ensure_ascii=False))
+        self.assertEqual(c["carnet"], [{"question": "Pourquoi deux ?", "reponse": "Parce que."}])
+        self.assertTrue(any(g["lemme"] == "ger" for g in c["gloses"]))
+
+    def test_rendre_ecrit_le_contexte(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp, patch("render.DOCS", Path(tmp)), \
+                patch("render.RACINE", Path(tmp)), patch("render.reconstruire_index"):
+            render.rendre("2026-10-25")
+            c = json.loads((Path(tmp) / "contexte" / "2026-10-25.json").read_text(encoding="utf-8"))
+        self.assertEqual(c["titre"], "Un seul amour")
 
 
 if __name__ == "__main__":

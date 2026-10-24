@@ -126,3 +126,4 @@ jobs:
             data/jours/${{ steps.date.outputs.date }}.json
             docs/${{ steps.date.outputs.date }}.html
             docs/vignettes/
+            docs/contexte/${{ steps.date.outputs.date }}.json
