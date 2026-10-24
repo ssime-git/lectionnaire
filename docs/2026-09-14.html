@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Élevé — lundi 14 septembre 2026</title>
+<meta name="description" content="Le serpent dressé au désert, figure de la croix glorieuse">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 14 septembre 2026 · None · <span class="couleur">rouge · Fête du Seigneur</span>
+</p>
+    <h1>Élevé <span class="it">comme le serpent</span></h1>
+    <p class="chapeau">Le serpent dressé au désert, figure de la croix glorieuse</p>
+    <figure class="gravure" aria-label="Bois gravé : un serpent de bronze dressé sur une haute perche au milieu du camp d'Israël, des silhouettes levant les yeux vers lui ; en arrière-plan, les mêmes lignes composent, à peine visible, la forme d'une croix."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M4 132 h332"/><path d="M170 132 v-108"/><path d="M148 42 h44"/><path d="M90 132 v-26"/><path d="M84 100 q6 -9 12 0"/><path d="M96 112 l20 -14"/><path d="M250 132 v-26"/><path d="M244 100 q6 -9 12 0"/><path d="M244 112 l-20 -14"/><path d="M125 128 v-14"/><path d="M121 114 q4 -6 8 0"/></g><g class="trait-rubrique"><path d="M170 128 q-14 -8 0 -16 q14 -8 0 -16 q-14 -8 0 -16 q14 -8 0 -16 q-14 -8 0 -16"/><path d="M162 46 q8 -14 16 0 q-8 10 -16 0 z"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Nb 21, 4b-9 — Louis Segond, 1910</p>
+        <div class="ecriture "><span class="s">4</span> Le peuple s'impatienta en route, <span class="s">5</span> et parla contre Dieu et contre Moïse : Pourquoi nous avez-vous fait monter hors d'Égypte, pour que nous mourions dans le désert ? car il n'y a point de pain, et il n'y a point d'eau, et notre âme est dégoûtée de cette misérable nourriture. <span class="s">6</span> Alors l'Éternel envoya contre le peuple des <button class="mot" data-g="g-serafim">serpents brûlants</button> ; ils mordirent le peuple, et il mourut beaucoup de gens en Israël. <span class="s">7</span> Le peuple vint à Moïse, et dit : Nous avons péché, car nous avons parlé contre l'Éternel et contre toi. Prie l'Éternel, afin qu'il éloigne de nous ces serpents. Moïse pria pour le peuple. <span class="s">8</span> L'Éternel dit à Moïse : Fais-toi un serpent brûlant, et place-le sur une perche ; quiconque aura été mordu, et le regardera, conservera la vie. <span class="s">9</span> Moïse fit un serpent d'<button class="mot" data-g="g-nehoshet">airain</button>, et le plaça sur une perche ; et quiconque avait été mordu par un serpent, et regardait le serpent d'airain, conservait la vie.</div>
+        <div class="glose" id="g-serafim"><span class="lemme">śərāphîm</span> L'hébreu porte נְחָשִׁים שְׂרָפִים, littéralement des <span class="gr">nəḥashim śərafim</span>, où l'adjectif vient de la racine <span class="gr">śrp</span>, « brûler » : le mot désigne moins une espèce de serpent que la sensation du venin, une morsure de feu. Segond traduit par « serpents brûlants », choix qui garde la sensation mais perd un rapprochement frappant : la même racine donne les <span class="gr">śərāphîm</span>, les séraphins de feu qui entourent le trône en Ésaïe 6. Le texte hébreu place ainsi, à distance, les créatures les plus proches de la gloire de Dieu et les bêtes qui châtient le peuple révolté, comme si le feu qui sanctifie et celui qui punit portaient, dans la langue, le même nom. Les lecteurs rabbiniques anciens ont surtout retenu l'image de la brûlure du jugement ; c'est cette veine que Segond a choisi de traduire, au prix de l'écho avec Ésaïe.</div>
+        <div class="glose" id="g-nehoshet"><span class="lemme">nəḥošet</span> Le texte hébreu joue sur une paronomase que le français ne peut pas rendre : le serpent, <span class="gr">naḥash</span>, est fait de bronze, <span class="gr">nəḥošet</span>, deux mots presque jumeaux par le son. Segond traduit sobrement « serpent d'airain », sans pouvoir garder ce jeu où la matière du remède porte, dans sa sonorité même, le nom du mal qu'elle guérit. Le second livre des Rois (18, 4) raconte que cet objet, gardé comme relique, finit par devenir une idole que le roi Ézéchias doit briser, et qu'on surnommait alors <span class="gr">Nəḥushtan</span> : le signe efficace pour regarder vers Dieu s'était retourné en objet de culte pour lui-même. Cette histoire rappelle qu'un signe ne sauve que tant qu'il renvoie au-delà de lui, ce que Jean reprendra en désignant, derrière le serpent, le Fils de l'homme élevé.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — Ph 2, 6-11 — Louis Segond, 1910</p>
+        <div class="ecriture "><span class="s">6</span> lequel, existant en <button class="mot" data-g="g-morphe">forme de Dieu</button>, n'a point regardé comme une <button class="mot" data-g="g-harpagmon">proie à arracher</button> d'être égal avec Dieu, <span class="s">7</span> mais s'est <button class="mot" data-g="g-ekenosen">dépouillé lui-même</button>, en prenant une forme de serviteur, en devenant semblable aux hommes ; et ayant paru comme un simple homme, <span class="s">8</span> il s'est humilié lui-même, se rendant obéissant jusqu'à la mort, même jusqu'à la mort de la croix. <span class="s">9</span> C'est pourquoi aussi Dieu l'a souverainement élevé, et lui a donné le nom qui est au-dessus de tout nom, <span class="s">10</span> afin qu'au nom de Jésus tout genou fléchisse dans les cieux, sur la terre et sous la terre, <span class="s">11</span> et que toute langue confesse que Jésus-Christ est Seigneur, à la gloire de Dieu le Père.</div>
+        <div class="glose" id="g-morphe"><span class="lemme">morphē</span> Le grec dit que le Christ existait ἐν <span class="gr">morphē</span> Θεοῦ, « en forme de Dieu », un mot que le vocabulaire philosophique grec réservait à la nature même d'une chose, non à son apparence extérieure, pour laquelle un autre mot existait, <span class="gr">schēma</span>. Segond traduit « forme », ce qui en français peut prêter à confusion avec un simple aspect, alors que Paul affirme une condition réelle : le Christ est dans la manière d'être de Dieu avant tout abaissement. Les Pères grecs, dès le quatrième siècle, se sont appuyés sur cette précision contre l'arianisme, pour qui le Fils n'était pas pleinement Dieu : on ne prend pas la <span class="gr">morphē</span> de ce qu'on n'est pas. C'est cette même forme qu'il échangera, au verset suivant, contre la forme de serviteur, un vrai échange de condition, non un déguisement.</div>
+        <div class="glose" id="g-harpagmon"><span class="lemme">harpagmon</span> Le mot grec ἁρπαγμόν, de la racine <span class="gr">harpazō</span>, « ravir, arracher de force », est l'un des termes les plus discutés du Nouveau Testament. Segond traduit « une proie à arracher », lisant le mot comme une chose à saisir par la violence, sens que Chrysostome développait déjà dans ses homélies sur Philippiens, en opposant le Christ à Adam : Adam, qui n'était pas Dieu, a voulu ravir l'égalité avec Dieu ; le Christ, qui l'était déjà, n'a rien eu à ravir. D'autres lecteurs anciens ont plutôt entendu le mot comme désignant une chose qu'on retient jalousement une fois qu'on la possède, ce qui déplace le sens : ce n'est pas la convoitise qui est niée mais l'attachement. Dans les deux lectures, la pointe du texte demeure : l'égalité avec Dieu, loin d'être défendue comme un droit, devient le lieu même du dépouillement.</div>
+        <div class="glose" id="g-ekenosen"><span class="lemme">ekenōsen</span> Le verbe grec ἐκένωσεν vient de <span class="gr">kenoō</span>, « vider » : Paul dit littéralement que le Christ « s'est vidé lui-même », et c'est de ce verbe que la théologie a tiré le mot kénose. Segond traduit « s'est dépouillé lui-même », image du vêtement qu'on ôte plutôt que du vase qu'on renverse, un choix qui adoucit peut-être la radicalité du grec, où il n'est pas seulement question d'un habit changé mais d'un abaissement total. Calvin, dans son commentaire sur ce passage, insiste sur le fait que le Christ n'a rien perdu de sa divinité en se vidant ainsi, mais qu'il en a voilé l'éclat sous la condition de serviteur, à la manière dont on cache une lumière sans l'éteindre. Ce vidage volontaire est présenté par Paul non comme une défaite mais comme le mouvement même qui précède et rend possible l'élévation du verset 9.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 77 (78), 3-4a.c, 34-35, 36-37, 38ab.39 — Louis Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">3</span> Ce que nous avons entendu, ce que nous savons, ce que nos pères nous ont raconté, <span class="s">4</span> nous ne le cacherons point à leurs enfants ; et sa puissance, et les <button class="mot" data-g="g-niphlaot">prodiges</button> qu'il a opérés. <span class="s">34</span> Quand il les frappait de mort, ils le cherchaient, ils revenaient et se tournaient vers Dieu ; <span class="s">35</span> ils se souvenaient que Dieu était leur rocher, que le Dieu Très Haut était leur libérateur. <span class="s">36</span> Mais ils le trompaient de la bouche, et ils lui mentaient de la langue ; <span class="s">37</span> leur cœur n'était pas ferme envers lui, et ils n'étaient pas fidèles à son alliance. <span class="s">38</span> Toutefois, dans sa miséricorde, il pardonne l'iniquité et ne détruit pas ; il retient souvent sa colère et ne se livre pas à toute sa fureur. <span class="s">39</span> Il se souvenait qu'ils n'étaient que chair, un souffle qui s'en va et ne revient pas.</div>
+        <div class="glose" id="g-niphlaot"><span class="lemme">niphlaʾot</span> Le mot hébreu traduit par « prodiges », <span class="gr">niphlaʾot</span>, vient de la racine <span class="gr">pala</span>, qui dit ce qui dépasse la mesure humaine, ce qui échappe à l'explication ordinaire. La même racine donne, en Ésaïe 9, le titre « merveilleux conseiller » donné à l'enfant royal attendu. Segond traduit par « prodiges », mot juste mais qui, en français courant, a pris une connotation presque spectaculaire, alors que l'hébreu vise surtout l'inexplicable de la fidélité de Dieu envers un peuple infidèle. Le psaume, quelques versets plus loin, dira que ce même peuple a oublié ces <span class="gr">niphlaʾot</span> : la mémoire déposée pour les enfants, au verset 4, est précisément la mémoire de ce qui, sans elle, s'oublie.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Jn 3, 13-17 — Louis Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">13</span> Personne n'est monté au ciel, si ce n'est celui qui est descendu du ciel, le Fils de l'homme qui est dans le ciel. <span class="s">14</span> Et comme Moïse éleva le serpent dans le désert, il faut de même que le Fils de l'homme soit <button class="mot" data-g="g-hypsothenai">élevé</button>, <span class="s">15</span> afin que quiconque croit en lui ait la vie éternelle. <span class="s">16</span> Car Dieu a <button class="mot" data-g="g-agapao">tant aimé</button> le monde qu'il a donné son <button class="mot" data-g="g-monogenes">Fils unique</button>, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle. <span class="s">17</span> Dieu, en effet, n'a pas envoyé son Fils dans le monde pour qu'il juge le monde, mais pour que le monde soit sauvé par lui.</div>
+        <div class="glose" id="g-hypsothenai"><span class="lemme">hypsōthēnai</span> Le verbe grec ὑψωθῆναι, « être élevé », est d'une ambiguïté que Jean cultive volontairement : il désigne aussi bien l'élévation sur la croix que l'élévation dans la gloire, les deux en un seul mouvement. Segond traduit simplement « élevé », fidèle au grec, mais le lecteur français risque de n'entendre que le sens spatial, la potence, sans percevoir l'autre sens que Jean vise tout autant. La Septante emploie le même verbe en Ésaïe 52, 13 pour annoncer que le Serviteur souffrant <span class="gr">hypsōthēsetai</span>, « sera élevé » : Jean reprend ce mot pour dire que la croix elle-même est déjà l'élévation, non son contraire. Chrysostome, dans ses homélies sur Jean, remarque que Jésus choisit exprès l'image du serpent, signe de mort, pour annoncer un supplice qui sera en réalité une intronisation.</div>
+        <div class="glose" id="g-agapao"><span class="lemme">ēgapēsen</span> Le verbe ἠγάπησεν vient de <span class="gr">agapaō</span>, le verbe que le grec biblique préfère pour dire un amour de décision et de don, distinct de <span class="gr">phileō</span>, l'amour d'affection ou d'amitié. Segond traduit « a tant aimé », ajoutant l'adverbe d'intensité que le grec ne porte pas littéralement : le texte dit seulement « Dieu a aimé le monde ainsi », de cette manière-là, en désignant le don du Fils comme la mesure même de l'amour plutôt que son intensité. Ce déplacement n'est pas une erreur, il traduit bien l'effet du texte, mais il fait de l'amour un sentiment fort là où le grec en fait d'abord un geste précis et daté. Augustin, commentant ce verset dans ses homélies sur Jean, insiste sur le fait que cet amour précède toute réponse du monde : il n'est pas la récompense d'une conversion mais son unique cause.</div>
+        <div class="glose" id="g-monogenes"><span class="lemme">monogenē</span> Le grec dit τὸν υἱὸν τὸν <span class="gr">monogenē</span>, littéralement « le fils unique-engendré », un mot composé de <span class="gr">monos</span>, seul, et de la racine qui dit l'engendrement. Segond traduit « Fils unique », ce qui rend bien l'unicité mais efface la nuance de l'engendrement que les conciles anciens ont pourtant scrutée mot à mot : le concile de Nicée, en 325, a bâti sa formule sur des termes de cette famille pour affirmer que le Fils n'est pas une créature mais engendré, non fait. Le mot revient chez Jean à quatre reprises (1, 14.18 ; 3, 16.18), toujours pour ce Fils-là, jamais pour un autre, une manière de dire que le don du verset 16 coûte à Dieu ce qu'il a de plus propre, non un envoyé parmi d'autres.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le murmure au désert</h3><p>Le livre des Nombres égrène plusieurs récits de murmure : l'eau à Mara, la manne au chapitre 11, les eaux de Meriba au chapitre 20, et ici, juste après la mort d'Aaron, un nouveau soulèvement contre Moïse alors qu'Israël contourne Édom. Ce n'est pas un accident isolé mais un motif structurant du livre : la génération sortie d'Égypte ne parvient pas à faire confiance, verset après verset, malgré les délivrances déjà vécues. Calvin, commentant ces récits, y voit moins la faute d'un peuple particulièrement ingrat que le miroir de toute incrédulité humaine devant la providence.</p></div>
+      <div><h3>Une fête née d'une croix retrouvée</h3><p>La fête du 14 septembre remonte à la dédicace de la basilique du Saint-Sépulcre à Jérusalem, le 13 septembre 335, construite sur le lieu où la tradition situe la découverte de la croix par Hélène quelques années plus tôt. Le lendemain de la dédicace, on exposait solennellement le bois de la croix à la vénération du peuple, geste qui a donné son nom à la fête. Au septième siècle, quand l'empereur Héraclius rapporte la relique prise par les Perses et la relève lui-même à Jérusalem en 629, la fête reçoit tout son sens : ce qui fut un instrument de supplice devient objet d'élévation et de gloire, exactement ce que proclament ce jour les lectures de Jean et de Philippiens.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Regarder pour vivre</h2>
+<p>Il y a des nuits où une faute ancienne remonte, et le premier réflexe est de détourner l'attention, de rallumer une lumière, de penser à autre chose pour ne pas la regarder en face. Tu sais que regarder ne répare rien tout de suite, alors tu préfères l'oubli actif, la fuite en avant, plutôt que de rester un instant devant ce qui te fait mal. Et pourtant, les rares fois où tu as consenti à regarder vraiment, sans te justifier, sans déjà chercher la solution, quelque chose s'est desserré, non parce que tu avais changé la faute, mais parce que tu avais cessé de fuir son regard. Ce n'est pas ta force qui a agi ce soir-là, c'est le seul fait de rester tourné vers ce que tu redoutais, en laissant faire ce qui te dépasse. C'est ce regard-là, plus que tout effort, que le texte de ce jour désigne comme le lieu où la vie est donnée.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Il ne s'agit pas aujourd'hui de comprendre davantage, mais de se laisser regarder par ce qui, en toi, cherche encore la fuite.</p>
+      <p class="geste">Prends un instant, dans le silence, pour nommer devant Dieu ce que tu évites habituellement de regarder, sans chercher à le résoudre, seulement à le déposer sous ce regard qui guérit sans exiger que tu répares d'abord toi-même.</p>
+      <small>Rien ici ne demande un effort de plus : la croix n'ajoute pas une tâche, elle expose ce qui, déjà, cherchait à se cacher.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qu'aujourd'hui, en toi, tu préfères ne pas regarder, et que se passerait-il si tu le laissais, un instant, sous le regard de Dieu ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le bois qui guérit le bois</h3>
+          <p>Dès le deuxième siècle, Justin Martyr voit dans le serpent d'airain dressé par Moïse une figure explicite de la croix : de même que le peuple mordu par les serpents ne trouvait la vie qu'en regardant ce signe de bronze, l'humanité blessée par le péché ne trouve la vie qu'en regardant le crucifié. Dans son Dialogue avec Tryphon, chapitre 91, il insiste sur le paradoxe : Dieu se sert d'une image de serpent, animal maudit depuis la Genèse, pour figurer d'avance le salut par la croix, retournant ainsi le signe même de la chute.</p>
+<p class="attrib">Justin Martyr, Dialogue avec Tryphon</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une croix qui n'humilie pas Dieu</h3>
+          <p>Commentant Jean 3, 14, Chrysostome s'arrête sur le choix même de l'image : pourquoi le serpent, et non un autre signe ? Il répond que Jésus veut préparer ses auditeurs au scandale de la croix en leur montrant d'avance, dans l'Écriture qu'ils connaissent déjà, qu'un signe de mort peut porter la vie. Pour Chrysostome, l'élévation sur la croix et l'élévation dans la gloire ne sont pas deux moments séparés mais un seul mouvement, ce que le simple verbe grec ὑψωθῆναι porte déjà dans sa double portée.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Jean</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le mouvement qui précède toute obéissance</h3>
+          <p>Calvin lit l'hymne de Philippiens 2 comme la clé de toute la doctrine de l'incarnation : le Fils, égal à Dieu, ne descend pas parce qu'il y serait contraint, mais par un acte libre qui précède et fonde son obéissance jusqu'à la croix. Il en tire une leçon pour les croyants eux-mêmes, au verset 5 qui introduit l'hymne : la même disposition à s'abaisser librement doit habiter quiconque est uni au Christ, non par imitation morale, mais parce qu'elle procède de la même source.</p>
+<p class="attrib">Calvin, Institution de la religion chrétienne</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Nb 21, 4b-9 ; Ph 2, 6-11 ; Jn 3, 13-17.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
