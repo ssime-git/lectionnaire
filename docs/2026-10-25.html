@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un seul amour — dimanche 25 octobre 2026</title>
+<meta name="description" content="Un docteur de la loi interroge Jésus sur le plus grand commandement">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">dimanche 25 octobre 2026 · 30ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Un seul <span class="it">amour</span></h1>
+    <p class="chapeau">Un docteur de la loi interroge Jésus sur le plus grand commandement</p>
+    <figure class="gravure" aria-label="Gravure sur bois : deux mains qui ne forment qu'une seule prise, l'une tendue vers un visage à demi caché, l'autre vers une étoile à peine visible au-dessus — un seul geste, deux directions."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 128 h328"/><path d="M118 98 L72 68"/><path d="M192 92 L238 48"/><path d="M150 96 q8 -16 24 -10 q4 2 7 6"/><path d="M181 92 q8 16 -8 20 q-16 4 -23 -8"/><path d="M158 98 q6 6 15 4"/></g><g class="trait-rubrique"><path d="M52 55 q-12 16 -2 34 q8 12 22 6"/><path d="M63 50 v42"/></g><g class="trait-liturgie"><path d="M248 20 l3 11 l11 3 l-11 3 l-3 11 l-3 -11 l-11 -3 l11 -3 z"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ex 22, 20-26 — Segond 1910</p>
+        <div class="ecriture "><span class="s">21</span> Tu ne maltraiteras point l'<button class="mot" data-g="g-ger">étranger</button>, et tu ne l'opprimeras point ; car vous avez été étrangers dans le pays d'Égypte. <span class="s">22</span> Tu n'<button class="mot" data-g="g-anah">affligeras</button> point la veuve, ni l'orphelin. <span class="s">23</span> Si tu les affliges, et qu'ils viennent à crier à moi, j'entendrai leurs cris ; <span class="s">24</span> ma colère s'enflammera, et je vous détruirai par l'épée ; vos femmes deviendront veuves, et vos enfants orphelins. <span class="s">25</span> Si tu prêtes de l'argent à mon peuple, au pauvre qui est avec toi, tu ne seras point envers lui comme un créancier, tu ne lui imposeras point d'intérêt. <span class="s">26</span> Si tu prends en gage le vêtement de ton prochain, tu le lui rendras avant le coucher du soleil ; <span class="s">27</span> car c'est sa seule couverture, c'est le vêtement dont il s'enveloppe le corps : dans quoi coucherait-il ? S'il crie à moi, je l'entendrai, car je suis <button class="mot" data-g="g-channun">miséricordieux</button>.</div>
+        <div class="glose" id="g-ger"><span class="lemme">ger</span> Le mot hébreu <span class="gr">ger</span> ne désigne pas le simple voyageur de passage mais le résident étranger, sans terre ni clan, dépendant pour sa survie de la bienveillance qu'on voudra bien lui accorder. Segond traduit simplement « étranger », ce qui aplatit la précision juridique du terme — un ger n'a aucun recours légal propre. La tradition rabbinique a compté ce commandement parmi les plus répétés de toute la Torah, signe, selon elle, de la fragilité particulière de cette catégorie de personnes. Le motif qui suit immédiatement, le souvenir de l'Égypte, transforme une loi sociale en obligation de mémoire.</div>
+        <div class="glose" id="g-anah"><span class="lemme">anah</span> Le verbe <span class="gr">anah</span>, que Segond traduit par « affligeras », porte en réalité le sens plus dur d'humilier, de courber, voire de violenter — c'est le même verbe qui décrit, dans l'Exode, l'oppression d'Israël par les Égyptiens. Le choix de Segond, plus doux, risque de faire perdre au lecteur la continuité voulue du texte : celui qui opprime la veuve ou l'orphelin rejoue, à l'intérieur même d'Israël, ce que Pharaon a fait à Israël. Cette répétition du même mot n'est pas un hasard de traduction mais le ressort théologique du passage.</div>
+        <div class="glose" id="g-channun"><span class="lemme">channun</span> L'adjectif <span class="gr">channun</span>, « miséricordieux », appartient au couple d'attributs que Dieu révèle lui-même à Moïse après la faute du veau d'or, associé à <span class="gr">rachum</span>, « compassionné ». Segond le rend fidèlement, mais sans pouvoir restituer qu'il s'agit ici d'une citation implicite : le texte applique à Dieu lui-même, dans sa réponse au cri du pauvre, le nom qu'il s'est donné à Horeb. Calvin note dans son commentaire que Dieu prend ainsi la cause du pauvre comme la sienne propre, au point d'en faire une affaire de son propre nom.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 17 (18), 2-3, 4.20, 47.51ab — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Je t'<button class="mot" data-g="g-racham">aime</button>, ô Éternel, ma force ! <span class="s">3</span> Éternel, mon <button class="mot" data-g="g-tsur">rocher</button>, ma forteresse, mon libérateur ! Mon Dieu, mon rocher, où je trouve un abri ! Mon bouclier, la force qui me sauve, ma haute retraite ! <span class="s">4</span> Je m'écrie : Loué soit l'Éternel ! Et je suis délivré de mes ennemis. <span class="s">20</span> Il m'a mis au large, il m'a sauvé, parce qu'il m'aime. <span class="s">47</span> Vive l'Éternel, et béni soit mon rocher ! Que le Dieu de mon salut soit exalté, <span class="s">51</span> tu accordes de grandes délivrances à ton roi, et tu fais miséricorde à ton oint.</div>
+        <div class="glose" id="g-racham"><span class="lemme">racham</span> Le verbe employé ici, <span class="gr">racham</span>, est apparenté au mot hébreu pour « sein maternel » et porte une tendresse viscérale que le verbe ordinaire pour aimer, <span class="gr">ahav</span>, n'a pas. C'est la seule fois dans tout le psautier qu'un être humain dit « je te racham » à Dieu — ailleurs c'est toujours Dieu qui racham l'homme. Segond traduit simplement par « j'aime », ce qui est inévitable mais efface ce renversement unique : le psalmiste ose employer, envers Dieu, le mot réservé à la tendresse d'une mère.</div>
+        <div class="glose" id="g-tsur"><span class="lemme">tsur</span> <span class="gr">Tsur</span>, « rocher », est un des titres divins les plus anciens d'Israël, déjà présent dans le cantique de Moïse, où il sert justement à railler les dieux étrangers, eux aussi appelés « rochers », mais incapables de sauver. Segond conserve l'image sans pouvoir en restituer la polémique sous-jacente. Calvin, commentant ce psaume, insiste sur le fait que ce rocher n'est pas une puissance abstraite mais un abri personnel, éprouvé dans des périls réels — ce qui distingue radicalement, selon lui, le vrai Dieu de toute idole de pierre.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 1 Th 1, 5c-10 — Segond 1910</p>
+        <div class="ecriture "><span class="s">5</span> … vous savez de quelle manière nous avons agi parmi vous à cause de vous. <span class="s">6</span> Et vous-mêmes, vous êtes devenus nos <button class="mot" data-g="g-mimetai">imitateurs</button> et ceux du Seigneur, en recevant la parole au milieu de beaucoup de tribulations, avec la joie du Saint-Esprit, <span class="s">7</span> en sorte que vous êtes devenus un <button class="mot" data-g="g-typos">modèle</button> pour tous les croyants de la Macédoine et de l'Achaïe. <span class="s">8</span> Car la parole du Seigneur a retenti de chez vous, non seulement dans la Macédoine et dans l'Achaïe, mais en tout lieu votre foi en Dieu s'est fait connaître, de sorte que nous n'avons pas besoin d'en parler. <span class="s">9</span> Car on raconte, à notre sujet, quel accès nous avons eu auprès de vous, et comment vous vous êtes convertis des idoles à Dieu, pour servir le Dieu <button class="mot" data-g="g-zon">vivant et vrai</button>, <span class="s">10</span> et pour attendre des cieux son Fils, qu'il a ressuscité des morts, Jésus, qui nous délivre de la colère à venir.</div>
+        <div class="glose" id="g-mimetai"><span class="lemme">mimêtai</span> Le mot grec <span class="gr">mimêtai</span>, « imitateurs », est le même que Paul emploie en 1 Corinthiens 11 lorsqu'il s'exhorte lui-même à être imité comme il imite le Christ — il ne s'agit donc pas d'une simple ressemblance morale mais d'une chaîne de transmission vivante. Segond traduit littéralement, sans perte notable. Chrysostome s'arrête sur le paradoxe que souligne la phrase suivante : cette imitation se reçoit « au milieu de beaucoup de tribulations », preuve, selon lui, que la joie qu'elle porte ne vient pas des circonstances mais de l'Esprit lui-même.</div>
+        <div class="glose" id="g-typos"><span class="lemme">typos</span> <span class="gr">Typos</span> désigne d'abord la marque laissée par un coup, l'empreinte d'un sceau — un mot beaucoup plus concret que le français « modèle » choisi par Segond. Paul l'emploie ailleurs pour Adam, « figure » de celui qui devait venir (Romains 5,14) : ce n'est donc pas un exemple parmi d'autres, mais une empreinte destinée à se reproduire. Les Thessaloniciens, dit Paul, sont devenus eux-mêmes ce type pour toute la Macédoine et l'Achaïe — la foi reçue se retransmet par contact, non par seule instruction.</div>
+        <div class="glose" id="g-zon"><span class="lemme">zônti kai alêthinô</span> L'expression grecque <span class="gr">zônti kai alêthinô</span>, « vivant et vrai », reprend un couple traditionnel de la polémique biblique contre les idoles, incapables de bouger ou de parler, donc ni vivantes ni vraies — on la retrouve chez Jérémie. Segond traduit les deux adjectifs sans chercher à en restituer l'arrière-plan polémique, ce qui peut faire perdre au lecteur moderne la violence du contraste initial entre les idoles abandonnées et ce Dieu-là. Chrysostome y voit la preuve que la conversion des Thessaloniciens n'a pas été un simple changement d'opinion mais un passage d'un monde mort à un monde vivant.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Mt 22, 34-40 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">34</span> Les pharisiens, ayant appris qu'il avait fermé la bouche aux sadducéens, se rassemblèrent, <span class="s">35</span> et l'un d'eux, docteur de la loi, lui fit cette question, pour l'éprouver : <span class="s">36</span> Maître, quel est le plus grand commandement de la loi ? <span class="s">37</span> Jésus lui répondit : Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, et de toute ta <button class="mot" data-g="g-dianoia">pensée</button>. <span class="s">38</span> C'est le premier et le plus grand commandement. <span class="s">39</span> Et voici le second, qui lui est <button class="mot" data-g="g-homoia">semblable</button> : Tu aimeras ton <button class="mot" data-g="g-plesion">prochain</button> comme toi-même. <span class="s">40</span> De ces deux commandements dépendent toute la loi et les prophètes.</div>
+        <div class="glose" id="g-dianoia"><span class="lemme">dianoia</span> Le mot grec <span class="gr">dianoia</span>, « pensée » ou « intelligence », est absent du texte hébreu original du Shema (Deutéronome 6,5), qui ne connaît que le cœur, l'âme et la force. Matthieu, suivant ici la version grecque des Septante et son propre vocabulaire, ajoute ce quatrième terme, englobant l'activité réfléchie de l'esprit. Segond traduit simplement « pensée ». Origène et, après lui, plusieurs Pères grecs ont vu dans cette multiplication des termes la volonté de ne laisser aucune faculté humaine hors du commandement — ni le sentiment, ni le souffle vital, ni la raison.</div>
+        <div class="glose" id="g-homoia"><span class="lemme">homoia</span> L'adjectif <span class="gr">homoia</span>, que Segond rend par « semblable », ne dit pas que le second commandement serait de rang inférieur, annexé au premier, mais qu'il partage sa nature même. Jésus ne répond pas à la question qui ne portait que sur un seul commandement : il en donne deux, unis par cette ressemblance essentielle. Augustin, dans son commentaire, insiste sur le fait qu'on ne peut prétendre vérifier l'un sans l'autre, tant leur ressemblance les rend inséparables dans la pratique.</div>
+        <div class="glose" id="g-plesion"><span class="lemme">plêsion</span> <span class="gr">Plêsion</span>, littéralement « celui qui est proche », traduit dans la Septante l'hébreu <span class="gr">rea</span> du Lévitique (19,18), que les scribes de l'époque de Jésus restreignaient volontiers au compatriote ou au coreligionnaire. Segond traduit par « prochain », terme devenu si familier en français qu'il en perd l'ambiguïté du débat juif ancien sur ses limites. C'est précisément cette question des limites du mot que Luc met en scène dans la parabole du Samaritain, et que Chrysostome commente comme une extension volontaire, par Jésus, d'un mot que ses auditeurs voulaient garder étroit.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Le code de l'alliance</h3><p>L'ensemble de prescriptions qui va d'Exode 20,22 à 23,33, appelé par les exégètes « code de l'alliance », suit immédiatement le don des dix paroles au Sinaï. Il traduit en lois concrètes, souvent proches des codes mésopotamiens comme celui d'Hammurabi, l'exigence de justice envers les plus vulnérables — étranger, veuve, orphelin, débiteur. Le motif invoqué n'est jamais abstrait : « car vous avez été étrangers », rappelle le texte, ancrant le droit dans une mémoire vécue de servitude plutôt que dans un principe moral général.</p></div>
+      <div><h3>La controverse du Temple</h3><p>La scène se déroule dans la semaine qui précède la Passion, au Temple de Jérusalem, après que Jésus a réduit au silence les sadducéens sur la résurrection (Mt 22,23-33). Un docteur de la loi reprend alors un exercice bien connu des écoles rabbiniques : résumer en une seule formule l'ensemble des six cent treize commandements de la Torah. On racontait déjà d'un maître comme Hillel qu'il avait répondu à un païen pressé : « Ce qui t'est odieux, ne le fais pas à ton prochain ; voilà toute la Loi, le reste n'en est que le commentaire. »</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Un seul mouvement</h2>
+<p>Il y a cette prière que tu finis par dire pour quelqu'un qui t'a blessé, non parce que tu le voudrais, mais parce que tu sais qu'il faut la dire. Tu la répètes des semaines, presque mécaniquement, en gardant intact, au fond, le ressentiment. Puis un jour, sans que tu l'aies cherché, tu t'aperçois que ce ressentiment-là est exactement celui qui, ailleurs, t'empêchait d'entrer vraiment en prière devant Dieu — la même dureté, le même refus de se laisser déplacer. Ce jour-là tu comprends que ce ne sont pas deux duretés différentes à vaincre, mais une seule, et qu'aucune prière adressée à Dieu ne te laissera longtemps intact devant l'homme que tu n'arrives pas à aimer.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de fermer ce texte, ne cherche pas d'abord à savoir si tu aimes assez Dieu en général. Descends vers une personne précise, celle que tu évites le plus facilement d'aimer.</p>
+      <p class="geste">Nomme-la en silence devant Dieu, dans la même phrase où tu lui dis que tu l'aimes, sans les séparer.</p>
+      <small>Ce dimanche referme le cycle des grandes controverses de Jérusalem : après lui, plus personne n'interroge Jésus — il ne reste que la Passion.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, en toi, continue de traiter l'amour de Dieu et l'amour de telle personne précise comme deux devoirs séparés, au lieu d'un seul ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Augustin : la règle qui mesure toute lecture</h3>
+          <p>Dans le prologue de son traité sur l'interprétation de l'Écriture, Augustin pose ce double amour comme la règle même de toute lecture biblique : quiconque croit avoir compris un passage, si cette intelligence ne construit pas en lui la charité envers Dieu et le prochain, ne l'a pas encore réellement compris. L'exégèse elle-même, pour lui, se juge à cette aune — non à l'érudition.</p>
+<p class="attrib">Augustin, De la doctrine chrétienne, I, 36 (env. 397 ap. J.-C.)</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : une joie qui naît dans la tribulation</h3>
+          <p>Commentant l'éloge que Paul fait des Thessaloniciens, Chrysostome s'arrête sur l'union, apparemment contradictoire, de la tribulation et de la joie du Saint-Esprit. Pour lui, cette joie n'est pas un sentiment ajouté à l'épreuve mais le signe même que l'Esprit a déjà commencé, en eux, l'œuvre qu'il décrit ailleurs comme une nouvelle naissance : ils imitent le Seigneur jusque dans la manière de souffrir.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la Première Épître aux Thessaloniciens, Homélie II</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : le prêt qui ne doit pas dépouiller</h3>
+          <p>Calvin, commentant ces lois d'Exode, refuse d'en faire une condamnation absolue de tout intérêt ; il distingue le prêt commercial, licite entre partenaires égaux, du prêt fait au pauvre, où exiger un gain revient à profiter de sa détresse. La loi, dit-il, ne vise pas la finance mais la tentation, toujours actuelle, de transformer la misère d'autrui en occasion de gain.</p>
+<p class="attrib">Jean Calvin, Commentaires sur les cinq livres de Moïse, sur Exode 22</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 30ème Semaine du Temps Ordinaire — Ex 22, 20-26 ; 1 Th 1, 5c-10 ; Mt 22, 34-40.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
