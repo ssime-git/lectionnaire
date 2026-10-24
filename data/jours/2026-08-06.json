@@ -1,0 +1,146 @@
+{
+  "date": "2026-08-06",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête du Seigneur",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Dn 7, 9-10.13-14 ; 2 P 1, 16-19 ; Mt 17, 1-9",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M30 132 L170 44 L310 132\"/><path d=\"M55 132 L72 114 L88 132\"/><path d=\"M252 132 L268 112 L286 132\"/><path d=\"M45 18 q125 -26 250 0 q-8 12 -22 9 q-101 15 -206 0 q-14 3 -22 -9 z\"/><path d=\"M164 38 q6 -8 12 0 q-6 8 -12 0\"/><path d=\"M170 44 v20 M158 64 l-8 24 M170 64 l0 24 M182 64 l8 24\"/><path d=\"M170 48 l-12 10 M170 48 l12 10\"/><path d=\"M107 62 q5 -7 10 0 q-5 7 -10 0\"/><path d=\"M112 68 v34 M112 102 l-8 16 M112 102 l8 16\"/><path d=\"M223 62 q5 -7 10 0 q-5 7 -10 0\"/><path d=\"M228 68 v34 M218 74 q-14 14 -6 34 M238 74 q14 14 6 34 M228 102 l-8 16 M228 102 l8 16\"/><path d=\"M138 130 l18 -8 M138 130 l-10 6 M150 118 l10 -10\"/><path d=\"M168 134 l20 -6 M182 122 l8 -12\"/><path d=\"M198 130 l-18 -8 M198 130 l10 6 M188 118 l-10 -10\"/></g><g class=\"trait-rubrique\"><path d=\"M104 76 h12 v20 h-12 z M110 76 v20\"/></g><g class=\"trait-liturgie\"><path d=\"M170 38 l-22 -20 M170 38 l22 -20 M170 34 l-30 -6 M170 34 l30 -6 M170 30 l-10 -26 M170 30 l10 -26\"/><path d=\"M50 24 q120 -20 240 0\"/></g></svg>",
+  "titre": "Visage transfiguré",
+  "titre_html": "Visage <span class=\"it\">transfiguré</span>",
+  "sous_titre": "Fête de la Transfiguration du Seigneur",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : le Christ debout au sommet d'une montagne, le visage rayonnant traversé de larges faisceaux de lumière, les vêtements striés de blanc. À sa droite et à sa gauche, Moïse tenant les tables de la Loi et Élie enveloppé d'un manteau, tous deux tournés vers lui. En contrebas, Pierre, Jacques et Jean tombés à terre, un bras levé devant leurs yeux, au milieu de rochers taillés à grands traits ; au-dessus de la scène, une nuée dense et sombre encadrée d'un mince trait de lumière.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Daniel 7, 9-10.13-14",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">9</span> Je regardais, pendant que l'on plaçait des trônes. Et l'<button class=\"mot\" data-g=\"g-atiq\">ancien des jours</button> s'assit. Son vêtement était blanc comme la neige, et les cheveux de sa tête étaient comme de la laine pure ; son trône était comme des flammes de feu, et les roues comme un feu ardent. <span class=\"s\">10</span> Un fleuve de feu coulait et sortait de devant lui. Mille milliers le servaient, et dix mille millions se tenaient en sa présence. Les juges s'assirent, et les livres furent ouverts. <span class=\"s\">13</span> Je regardais pendant mes visions de la nuit, et voici, sur les nuées des cieux arriva quelqu'un de semblable à un <button class=\"mot\" data-g=\"g-benash\">fils de l'homme</button> ; il s'avança vers l'ancien des jours, et on le fit approcher de lui. <span class=\"s\">14</span> On lui donna la domination, la gloire et le règne ; et tous les peuples, les nations, et les hommes de toutes langues le servirent. Sa domination est une domination éternelle qui ne passera point, et son règne ne sera jamais détruit.",
+      "gloses": [
+        {
+          "id": "g-atiq",
+          "lemme": "Atiq Yomin",
+          "html": "L'expression araméenne <span class=\"gr\">עַתִּיק יוֹמִין</span>, atiq yomin, ne désigne pas simplement un vieillard mais celui qui est antérieur aux jours, la source même du temps. Segond traduit par « ancien des jours », choix fidèle mais qui risque de faire entendre un aïeul plutôt que l'Éternel hors du temps. Les lecteurs juifs anciens y ont vu une désignation de Dieu lui-même, siégeant en juge ; Hippolyte de Rome, dans son commentaire sur Daniel, rapproche cette vision du Père glorieux que le Fils de l'homme vient rejoindre. La Septante rend l'expression par παλαιὸς ἡμερῶν, qui garde la même tension entre l'ancienneté et l'éternité."
+        },
+        {
+          "id": "g-benash",
+          "lemme": "Bar Enash",
+          "html": "<span class=\"gr\">בַּר אֱנָשׁ</span>, bar enash, signifie littéralement « fils d'homme », c'est-à-dire un être humain, un mortel — l'expression est d'une grande banalité en araméen, employée ailleurs pour dire simplement « un homme ». Segond garde « fils de l'homme », suivant la Septante υἱὸς ἀνθρώπου, et c'est précisément cette platitude apparente qui rend la scène bouleversante : celui qui reçoit domination et gloire éternelles a d'abord la figure d'un mortel ordinaire. Jésus reprendra ce titre pour lui-même dans les évangiles, juste avant et après la Transfiguration chez Matthieu, où il annonce que le Fils de l'homme doit souffrir puis ressusciter."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "2 Pierre 1, 16-19",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">16</span> Ce n'est pas, en effet, en suivant des fables habilement conçues, que nous vous avons fait connaître la puissance et l'avènement de notre Seigneur Jésus Christ, mais c'est comme ayant été <button class=\"mot\" data-g=\"g-epoptai\">témoins oculaires</button> de sa majesté. <span class=\"s\">17</span> Car il reçut de Dieu le Père honneur et gloire, quand la gloire magnifique lui fit entendre une voix qui disait : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection. <span class=\"s\">18</span> Et nous avons entendu cette voix venant du ciel, lorsque nous étions avec lui sur la sainte montagne. <span class=\"s\">19</span> Et nous tenons pour d'autant plus certaine la <button class=\"mot\" data-g=\"g-logos\">parole prophétique</button>, à laquelle vous faites bien de prêter attention, comme à une lampe qui brille dans un lieu obscur, jusqu'à ce que le jour vienne à paraître et que l'étoile du matin se lève dans vos cœurs.",
+      "gloses": [
+        {
+          "id": "g-epoptai",
+          "lemme": "epoptai",
+          "html": "Le grec <span class=\"gr\">ἐπόπται</span>, epoptai, est un mot rare et choisi avec soin : il désigne, dans le vocabulaire des mystères d'Éleusis, celui qui a atteint le degré ultime de l'initiation et contemplé de ses yeux ce qui restait caché aux autres. Segond traduit prudemment par « témoins oculaires », ce qui est juste mais efface la résonance presque technique du terme grec, qui dit une vision reçue, pas seulement constatée. Pierre choisit délibérément ce mot pour opposer l'expérience réelle de la montagne aux « fables habilement conçues ». Jean Chrysostome, dans ses homélies sur cette épître, appuie sur ce contraste entre la fable et le témoignage oculaire comme fondement de l'autorité apostolique."
+        },
+        {
+          "id": "g-logos",
+          "lemme": "logos prophétique",
+          "html": "<span class=\"gr\">προφητικὸν λόγον</span>, ho prophētikos logos, désigne la parole prophétique tout entière, l'ensemble des Écritures d'Israël qui annoncent le Christ. Segond traduit littéralement, mais l'enjeu du verset tient au mot « plus certaine » qui précède : Pierre affirme que la parole des prophètes, confirmée par la vision de la montagne, est plus sûre encore que sa propre expérience visuelle. C'est un renversement presque paradoxal pour un témoin oculaire, et Calvin le souligne dans son commentaire sur cette épître : l'Écriture demeure la lampe qui éclaire même les visions les plus éclatantes, jusqu'à ce que le jour se lève."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 96, 1-2, 4-5, 6.9",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Chantez à l'Éternel un <button class=\"mot\" data-g=\"g-shir\">cantique nouveau</button> ! Chantez à l'Éternel, vous tous, habitants de la terre ! <span class=\"s\">2</span> Chantez à l'Éternel, bénissez son nom, annoncez de jour en jour son salut ! <span class=\"s\">4</span> Car l'Éternel est grand et très digne de louange, il est <button class=\"mot\" data-g=\"g-nora\">redoutable</button> par-dessus tous les dieux ; <span class=\"s\">5</span> car tous les dieux des peuples sont des idoles, et l'Éternel a fait les cieux. <span class=\"s\">6</span> La splendeur et la magnificence sont devant sa face, la gloire et la majesté sont dans son sanctuaire. <span class=\"s\">9</span> Prosternez-vous devant l'Éternel avec des ornements sacrés, tremblez devant lui, vous tous, habitants de la terre !",
+      "gloses": [
+        {
+          "id": "g-shir",
+          "lemme": "shir chadash",
+          "html": "<span class=\"gr\">שִׁיר חָדָשׁ</span>, shir chadash, revient plusieurs fois dans le psautier pour introduire un chant de louange devant une action nouvelle de Dieu — souvent après une délivrance ou devant l'annonce de son règne universel. Segond traduit fidèlement « cantique nouveau », mais l'adjectif chadash porte en hébreu l'idée d'un renouvellement radical, pas d'une simple nouveauté chronologique. Les rabbins ont associé ce psaume au chant qu'entonneront les nations à la venue du Messie, lecture que les premiers chrétiens reprendront pour l'appliquer à la gloire du Christ manifestée sur la montagne."
+        },
+        {
+          "id": "g-nora",
+          "lemme": "nora",
+          "html": "<span class=\"gr\">נוֹרָא</span>, nora, vient de la racine yare, craindre, et dit littéralement « celui devant qui l'on doit trembler ». Segond choisit « redoutable », traduction forte et juste, mais qui en français moderne penche vers l'effroi plutôt que vers cette crainte révérencielle, mélange d'admiration et de tremblement, que porte l'hébreu biblique. Calvin, commentant ce psaume, rappelle que cette crainte n'exclut pas la louange qui l'entoure de toutes parts dans le texte : on tremble devant l'Éternel précisément parce qu'on chante sa gloire, non malgré elle."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Matthieu 17, 1-9",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Six jours après, Jésus prit avec lui Pierre, Jacques, et Jean, son frère, et il les conduisit à l'écart sur une haute montagne. <span class=\"s\">2</span> Il fut <button class=\"mot\" data-g=\"g-metemorphothe\">transfiguré</button> devant eux ; son visage resplendit comme le soleil, et ses vêtements devinrent blancs comme la lumière. <span class=\"s\">3</span> Et voici, Moïse et Élie leur apparurent, s'entretenant avec lui. <span class=\"s\">4</span> Pierre, prenant la parole, dit à Jésus : Seigneur, il est bon que nous soyons ici ; si tu le veux, je dresserai ici trois <button class=\"mot\" data-g=\"g-skenas\">tentes</button>, une pour toi, une pour Moïse, et une pour Élie. <span class=\"s\">5</span> Comme il parlait encore, une <button class=\"mot\" data-g=\"g-nephele\">nuée lumineuse</button> les couvrit. Et voici, une voix fit entendre de la nuée ces paroles : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection : écoutez-le ! <span class=\"s\">6</span> Lorsqu'ils entendirent cette voix, les disciples tombèrent sur leur face, et furent saisis d'une grande frayeur. <span class=\"s\">7</span> Mais Jésus, s'approchant, les toucha, et dit : Levez-vous, n'ayez pas peur ! <span class=\"s\">8</span> Ils levèrent les yeux, et ne virent que Jésus seul. <span class=\"s\">9</span> Comme ils descendaient de la montagne, Jésus leur donna cet ordre : Ne parlez à personne de cette vision, jusqu'à ce que le Fils de l'homme soit ressuscité des morts.",
+      "gloses": [
+        {
+          "id": "g-metemorphothe",
+          "lemme": "metemorphothe",
+          "html": "<span class=\"gr\">μετεμορφώθη</span>, metemorphōthē, vient du même verbe que notre mot métamorphose ; Segond traduit par « transfiguré », un néologisme théologique forgé sur le latin transfigurare pour éviter toute confusion avec les métamorphoses des dieux grecs en animaux ou en éléments. Paul emploie exactement le même verbe en Romains 12,2, quand il exhorte les croyants à être transformés par le renouvellement de l'intelligence — signe que ce qui arrive au visage du Christ est destiné, d'une certaine manière, à advenir aussi en ceux qui le contemplent. Origène, dans son commentaire sur Matthieu, insiste sur le fait que le Christ ne change pas de nature dans cet épisode : c'est le regard des disciples qui est momentanément ouvert à ce qu'il est déjà."
+        },
+        {
+          "id": "g-skenas",
+          "lemme": "skenas",
+          "html": "<span class=\"gr\">σκηνάς</span>, skēnas, désigne les tentes ou tabernacles, et le mot renvoie directement à la tente de la rencontre du désert et à la fête des Tentes, Souccot, qui commémorait la présence de Dieu marchant avec son peuple. La proposition de Pierre de dresser trois tentes n'est donc pas une idée naïve mais un geste théologique précis : il veut fixer la présence divine dans un lieu, comme au désert. Le texte ne dit jamais que Jésus accepte cette proposition — la voix du Père l'interrompt aussitôt, comme pour indiquer que cette gloire ne se laisse pas enclore dans une tente mais doit redescendre vers la croix."
+        },
+        {
+          "id": "g-nephele",
+          "lemme": "nephele photeine",
+          "html": "<span class=\"gr\">νεφέλη φωτεινή</span>, nephelē phōteinē, la nuée lumineuse, reprend un motif constant de l'Exode : la nuée qui couvre la montagne du Sinaï et le tabernacle, signe visible de la présence de Dieu, la Shekina dont parlent les rabbins. Segond traduit littéralement, gardant le paradoxe d'une nuée qui, loin d'obscurcir, illumine — figure de la présence divine qui se donne à voir sans se laisser saisir. Grégoire de Nazianze, dans son discours sur la Transfiguration, relève que cette nuée enveloppe les disciples eux-mêmes, non seulement Jésus : ils entrent, un instant, dans la gloire qu'ils contemplent."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une fête tardive, une scène ancienne",
+      "corps_html": "La fête de la Transfiguration n'entre dans le calendrier romain qu'en 1456, sous le pape Callixte III, en action de grâce pour la levée du siège de Belgrade — mais la scène elle-même est bien plus ancienne, lue dès les premiers siècles comme la clé de voûte des évangiles synoptiques, au centre exact du récit de Matthieu, entre l'annonce de la passion et la montée vers Jérusalem."
+    },
+    {
+      "titre": "Moïse, Élie, et la Loi accomplie",
+      "corps_html": "Moïse représente la Loi, reçue sur une montagne dans la nuée ; Élie représente les prophètes, qui entendit Dieu non dans le vent ni le feu mais dans le silence, sur l'Horeb. Leur présence aux côtés du Christ transfiguré, relevée dès Origène, dit que la Loi et les Prophètes ne s'effacent pas devant lui : ils trouvent en lui leur accomplissement et s'entretiennent avec lui de son exode à venir, selon Luc 9,31."
+    }
+  ],
+  "analogie": {
+    "titre": "Une lumière qui ne se répète pas",
+    "variantes": [
+      "Il t'est peut-être arrivé, une fois, dans une prière ou un chant, de sentir sans discuter que Dieu était là — non comme une conviction raisonnée mais comme une évidence brève, presque physique, qui a duré le temps d'un instant puis s'est refermée. Tu n'as pas pu la provoquer de nouveau ensuite, ni la retenir plus longtemps qu'elle ne s'est donnée, et les jours suivants, revenus à leur grisaille ordinaire, ont pu te faire douter d'avoir vraiment vécu cela. Pierre, Jacques et Jean redescendent eux aussi de la montagne vers la plaine, vers un enfant qu'ils ne sauront pas guérir, vers la route qui monte à Jérusalem — mais ce qu'ils ont vu ne leur est pas retiré : il travaille en eux, silencieusement, jusqu'à ce qu'ils comprennent, bien plus tard, ce qu'ils avaient contemplé sans le savoir encore.",
+      "Il y a des moments où tu crois quelque chose non parce que tu l'as vu, mais parce que quelqu'un que tu tiens pour fiable te l'a rapporté avec une certitude qui ne cherchait pas à te convaincre — un parent, un ami plus avancé dans la foi, dont la parole a fait plus pour toi, sur le moment, que n'importe quelle preuve. Pierre écrit sa lettre à la fin de sa vie, non pour raconter un souvenir merveilleux, mais pour transmettre ce qu'il a vu à ceux qui ne verront jamais la montagne, et il leur dit que la parole reçue vaut plus encore que la vision elle-même. Ce que tu n'as pas contemplé de tes yeux peut ainsi devenir, par la confiance, une lumière aussi sûre que si tu l'avais vue.",
+      "Tu as peut-être continué, des années durant, à prier, à servir, à tenir une fidélité que rien ne venait confirmer par un signe éclatant — aucune montagne, aucune voix, seulement l'obéissance nue à une parole entendue une fois et qu'il fallait croire sans le secours d'une nouvelle preuve. C'est exactement ce que demande la voix qui parle depuis la nuée : non pas voir sans cesse, mais écouter — un verbe qui n'exige aucune extase répétée, seulement une attention tenue jour après jour. La gloire entrevue sur la montagne n'était pas donnée pour remplacer cette écoute ordinaire, mais pour lui donner, une fois pour toutes, la certitude qu'elle ne s'adresse pas dans le vide."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Aujourd'hui, l'Église contemple un visage transformé sans qu'aucune prière ne puisse provoquer pareille clarté à volonté. Ce qui est demandé n'est pas de revivre l'éblouissement des trois disciples, mais d'entendre ce que la nuée a dit une fois pour toutes.",
+    "geste": "Reprends aujourd'hui une seule phrase de l'évangile — écoutez-le — et porte-la, en silence, dans un moment ordinaire de ta journée, sans chercher à ressentir quoi que ce soit de particulier.",
+    "note": "La tradition protestante se méfie à raison des extases recherchées pour elles-mêmes ; elle retient de ce texte l'ordre final, sobre et suffisant : écouter la parole du Christ, plutôt que poursuivre la vision."
+  },
+  "question": "Quelle parole du Christ continues-tu d'écouter aujourd'hui, longtemps après qu'elle t'a été donnée, sans qu'aucun signe nouveau ne soit venu la confirmer ?",
+  "racines": [
+    {
+      "titre": "Pourquoi seulement trois ?",
+      "corps_html": "Jean Chrysostome demande pourquoi Jésus n'emmène que Pierre, Jacques et Jean, et répond que ce sont les trois qui se montreront les plus faibles à Gethsémané : ceux qui verront la gloire sont aussi ceux qui verront l'agonie, afin que la mémoire de la montagne les retienne au jardin, quand tout semblera perdu.",
+      "attribution": "Jean Chrysostome, Homélies sur Matthieu, LVI"
+    },
+    {
+      "titre": "Écoutez-le",
+      "corps_html": "Calvin, commentant cet évangile, insiste sur le dernier mot de la voix céleste : après avoir désigné Jésus comme Fils bien-aimé, le Père ajoute un impératif qui vaut pour toute l'Église — écoutez-le — signe que la gloire manifestée sur la montagne n'a pas d'autre fin que d'accréditer la parole du Christ reçue plus bas, dans la plaine, au milieu des foules et des malades.",
+      "attribution": "Jean Calvin, Commentaire sur l'Harmonie évangélique"
+    },
+    {
+      "titre": "Le trône entrevu",
+      "corps_html": "Le choix de Daniel 7 comme première lecture n'est pas arbitraire : Hippolyte de Rome, dans son commentaire sur Daniel, lit dans le Fils de l'homme s'avançant vers l'Ancien des jours l'annonce même de ce que trois disciples verront sur la montagne, la gloire promise au terme des temps déjà entrouverte un instant dans le visage d'un homme de Galilée.",
+      "attribution": "Hippolyte de Rome, Commentaire sur Daniel"
+    }
+  ]
+}
