@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le grain semé — lundi 10 août 2026</title>
+<meta name="description" content="Ce que le semeur perd, il le retrouve au centuple">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 10 août 2026 · None · <span class="couleur">rouge · Fête</span>
+</p>
+    <h1>Le grain <span class="it">semé</span></h1>
+    <p class="chapeau">Ce que le semeur perd, il le retrouve au centuple</p>
+    <figure class="gravure" aria-label="Une main de semeur laissant tomber un grain de blé dans un sillon labouré, sous un ciel où ne perce qu'un rayon unique."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 128 q40 -6 80 0 q40 6 80 0 q40 -6 80 0 q40 6 80 0"/><path d="M10 136 q40 -5 80 0 q40 5 80 0 q40 -5 80 0 q40 5 80 0"/><path d="M150 30 q30 6 46 40 q10 20 4 46"/><path d="M188 66 q8 -6 18 -4"/><path d="M182 78 q9 -3 17 1"/><path d="M172 45 q5 8 3 17"/></g><g class="trait-rubrique"><path d="M198 96 q3 6 0 12 q-3 6 -6 0 q-2 -6 2 -10 z"/><path d="M200 108 l4 10"/></g><g class="trait-liturgie"><path d="M244 14 v50"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 2 Co 9, 6-10 — Louis Segond, 1910</p>
+        <div class="ecriture "><span class="s">6</span> Sachez-le, celui qui sème peu moissonnera peu, et celui qui sème abondamment moissonnera abondamment. <span class="s">7</span> Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec <button class="mot" data-g="g-hilaron">joie</button>. <span class="s">8</span> Et Dieu peut vous combler de toutes ses grâces, afin que, possédant toujours en toutes choses de quoi satisfaire à tous vos besoins, vous ayez encore en abondance pour toute bonne œuvre, <span class="s">9</span> selon qu'il est écrit : Il a dispersé, il a donné aux <button class="mot" data-g="g-penes">indigents</button> ; sa <button class="mot" data-g="g-dikaiosyne">justice</button> subsiste à jamais. <span class="s">10</span> Celui qui fournit de la semence au semeur, et du pain pour sa nourriture, vous fournira et vous multipliera la semence, et il augmentera les fruits de votre justice.</div>
+        <div class="glose" id="g-hilaron"><span class="lemme">hilaron</span> Le grec dit <span class="gr">ἱλαρόν</span> (hilaron), l'adjectif qui a donné « hilare » en français mais qui, dans la Septante de Proverbes 22, 8a — texte que Paul a sans doute en tête —, qualifie déjà le donateur aimé de Dieu. Segond traduit par « avec joie », ce qui est juste mais adoucit un mot qui désigne moins une émotion passagère qu'une disposition stable, presque un tempérament. Chrysostome, commentant ce passage, insiste sur le fait que cette joie n'est pas la conséquence du don mais sa condition : on ne donne bien que si l'on donne déjà joyeux.</div>
+        <div class="glose" id="g-penes"><span class="lemme">indigents</span> Le grec <span class="gr">πένησιν</span>, datif de <span class="gr">πένης</span> (penēs), désigne l'homme de condition modeste, celui qui doit travailler de ses mains pour vivre — un mot différent de <span class="gr">πτωχός</span> (ptōchos), le mendiant totalement démuni qu'on trouve ailleurs dans le Nouveau Testament. Segond uniformise les deux par « indigents », ce qui efface une nuance sociale que le texte cité, le Psaume 112, 9, maintenait. Le choix n'est pas anodin : Paul ne demande pas seulement l'aumône aux plus pauvres, mais un partage plus large, vers ceux qui ont peu.</div>
+        <div class="glose" id="g-dikaiosyne"><span class="lemme">dikaiosynê</span> <span class="gr">δικαιοσύνη</span> (dikaiosynē) traduit ici l'hébreu tsedaqah (צְדָקָה) du psaume cité, un mot qui, dans le judaïsme post-exilique, en était venu à désigner concrètement l'aumône elle-même, et pas seulement la justice au sens abstrait. Segond garde « justice », fidèle au grec, mais un lecteur juif du premier siècle aurait entendu résonner les deux sens à la fois. Calvin note que cette justice qui « subsiste à jamais » n'est pas celle que l'on acquiert en donnant, mais celle que Dieu accorde à qui donne sans arrière-pensée.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 111 (112), 1-2, 5-6, 7-8, 4b.9 — Louis Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Louez l'Éternel ! <button class="mot" data-g="g-esher">Heureux</button> l'homme qui craint l'Éternel, qui trouve un grand plaisir à ses commandements. <span class="s">2</span> Sa postérité sera puissante sur la terre, la génération des hommes droits sera bénie. <span class="s">5</span> Heureux l'homme qui exerce la <button class="mot" data-g="g-chesed">miséricorde</button> et qui prête, qui règle ses actions d'après la justice. <span class="s">6</span> Car il ne chancelle jamais ; la mémoire du juste dure toujours. <span class="s">7</span> Il ne craint point de mauvaises nouvelles ; son cœur est ferme, confiant en l'Éternel. <span class="s">8</span> Son cœur est <button class="mot" data-g="g-affermi">affermi</button> ; il n'a point de crainte, jusqu'à ce qu'il mette son plaisir à regarder ses adversaires. <span class="s">4b</span> … sur celui qui est miséricordieux, compatissant et juste. <span class="s">9</span> Il fait des largesses, il donne aux indigents ; sa justice subsiste à jamais ; sa tête s'élève avec gloire.</div>
+        <div class="glose" id="g-esher"><span class="lemme">'ashrei</span> L'hébreu porte <span class="gr">אַשְׁרֵי</span> ('ashrei), non un souhait ni une bénédiction prononcée sur quelqu'un, comme bārûk, mais une exclamation qui salue un état déjà en marche — le mot vient d'une racine qui évoque le fait d'avancer droit, de progresser. Segond traduit par « heureux », ce que reprendra la Septante avec <span class="gr">μακάριος</span> (makarios), le mot même qui ouvre les Béatitudes de Matthieu 5. C'est donc moins un sentiment qu'une direction : celui qui craint l'Éternel est déclaré en marche vers quelque chose.</div>
+        <div class="glose" id="g-chesed"><span class="lemme">chesed</span> <span class="gr">חֶסֶד</span> (chesed) est un des mots les plus denses de l'hébreu biblique : il ne désigne pas la pitié occasionnelle mais la fidélité loyale qu'on doit à celui avec qui on est lié par une alliance. Segond le rend tantôt par « miséricorde », tantôt par « bonté » ou « grâce » selon les contextes, sans qu'aucun mot français ne recouvre à lui seul le terme hébreu. Calvin, commentant les psaumes voisins, insiste sur le fait que ce chesed humain, chez le juste, n'est jamais qu'un reflet du chesed que Dieu a montré le premier à son peuple.</div>
+        <div class="glose" id="g-affermi"><span class="lemme">samukh</span> Le verbe hébreu vient de la racine samakh (סמך), « s'appuyer, être soutenu » — la même racine que semikhah, le geste rituel de l'imposition des mains. Un cœur « affermi » n'est donc pas un cœur naturellement fort, mais un cœur qui tient parce qu'il est appuyé sur un autre que lui-même. C'est tout le sens du verset suivant : cette fermeté ne craint pas les mauvaises nouvelles, non par tempérament, mais parce qu'elle repose ailleurs qu'en elle-même.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Jn 12, 24-26 — Louis Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">24</span> En vérité, en vérité, je vous le dis, si le <button class="mot" data-g="g-kokkos">grain de blé</button> qui est tombé en terre ne meurt, il reste seul ; mais, s'il meurt, il porte beaucoup de fruit. <span class="s">25</span> Celui qui aime sa <button class="mot" data-g="g-psyche">vie</button> la perdra, et celui qui hait sa vie dans ce monde la conservera pour la vie éternelle. <span class="s">26</span> Si quelqu'un me sert, qu'il me suive ; et là où je suis, là aussi sera mon <button class="mot" data-g="g-diakonos">serviteur</button>. Si quelqu'un me sert, mon Père l'honorera.</div>
+        <div class="glose" id="g-kokkos"><span class="lemme">kokkos</span> <span class="gr">κόκκος τοῦ σίτου</span>, le grain de blé, est le mot le plus concret qui soit — pas de métaphore savante, juste la semence qu'on jette chaque année dans les champs de Galilée. Chrysostome lit ce verset comme une parole que Jésus dit d'abord de lui-même avant de l'étendre aux siens : c'est lui, le premier grain, qui descend dans la terre par la croix. Paul reprendra la même image en 1 Corinthiens 15, 36-37 pour parler de la résurrection des corps : ce qui est semé nu doit mourir pour lever autrement.</div>
+        <div class="glose" id="g-psyche"><span class="lemme">psychê</span> Le grec <span class="gr">ψυχή</span> (psychē) peut se traduire aussi bien par « âme » que par « vie », et Segond choisit ici « vie » dans les deux occurrences du verset, ce qui unifie le texte mais efface l'ambiguïté volontaire du grec, héritée de l'hébreu nephesh, qui désigne le souffle vital autant que la personne tout entière. Le paradoxe de Jésus joue précisément sur cette instabilité du mot : la psychē qu'on protège pour elle-même se perd, celle qu'on hait dans ce monde se retrouve transformée.</div>
+        <div class="glose" id="g-diakonos"><span class="lemme">diakonos</span> <span class="gr">διάκονος</span> (diakonos), « celui qui sert à table, qui assiste », a donné en français le mot « diacre » : ce n'est pas un hasard si l'Église ancienne a puisé dans ce verset le nom de son ministère du service. Segond traduit simplement par « serviteur », ce qui est exact mais rend invisible ce lien lexical direct avec la fonction ecclésiale. C'est ce mot précis qui explique pourquoi ce passage a été retenu par la tradition liturgique pour la mémoire d'un diacre : suivre le Christ jusqu'à la croix s'est incarné, pour lui, dans le service concret des pauvres.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>La collecte pour Jérusalem</h3><p>Ces versets appartiennent à la longue exhortation des chapitres 8 et 9 de la seconde épître aux Corinthiens, où Paul organise la collecte destinée aux chrétiens pauvres de Jérusalem (cf. Rm 15, 26 ; Ga 2, 10). Vers 56-57, il presse les Corinthiens, plus prompts à promettre qu'à donner, d'achever ce qu'ils avaient commencé un an plus tôt, prenant pour modèles les Églises de Macédoine, pauvres mais généreuses au-delà de leurs moyens (2 Co 8, 1-5).</p></div>
+      <div><h3>Ces lectures à la mémoire d'un diacre</h3><p>Dans le lectionnaire romain, ce triptyque — la générosité de 2 Co 9, le juste du Psaume 112, le grain de blé de Jean 12 — forme les lectures propres de la mémoire de Laurent, diacre de Rome mis à mort en 258 sous Valérien pour avoir distribué aux pauvres les biens de l'Église plutôt que de les livrer au préfet. Le mot grec diakonos, « serviteur », au verset 26 de l'évangile, n'est pas étranger à ce choix.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que tu sèmes sans le voir lever</h2>
+<p>Tu as donné de ton temps, de ton attention, parfois de toi-même, à quelqu'un ou à une tâche dont tu ne verras peut-être jamais le résultat — un enfant que tu as patiemment repris sans savoir ce qu'il en gardera, une lettre écrite à quelqu'un qui ne répondra pas, des années de service discret dans un lieu où personne ne compte les heures. Tu ne sais pas si cela portera du fruit ; tu ne le sauras peut-être jamais de ton vivant. C'est exactement le lieu où Paul te parle : Dieu, dit-il, fournit la semence au semeur — la mesure du don ne se prend pas au moment où tu ouvres la main, mais dans une moisson que tu ne verras pas forcément toi-même.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, laisse-toi rejoindre par cette promesse : ce que tu sèmes dans le secret n'est jamais perdu.</p>
+      <p class="geste">Choisis aujourd'hui un don caché — de temps, d'attention ou de bien — que personne ne pourra te rendre, et fais-le sans le noter nulle part.</p>
+      <small>Ce n'est pas un exercice de générosité à mesurer, mais un geste pour désapprendre le calcul.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu retiens aujourd'hui, par peur de le voir mourir sans retour ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : le premier grain tombé en terre</h3>
+          <p>Commentant ce passage, Jean Chrysostome voit dans le grain de blé une image que le Christ applique d'abord à lui-même avant de l'étendre à ses disciples : c'est lui, le premier, qui descend dans la terre par la mort pour porter, en ressuscitant, la multitude des croyants comme autant d'épis.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Jean, LXVII</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : la joie qui ne calcule pas</h3>
+          <p>Calvin insiste sur le fait que Dieu ne pèse pas la quantité donnée mais la disposition du cœur : un don arraché par honte ou par contrainte n'a pas plus de valeur devant Dieu qu'un fruit gâté ; seule la libéralité joyeuse, qui procède de la foi et non du calcul, honore celui qui a lui-même tout donné le premier.</p>
+<p class="attrib">Jean Calvin, Commentaire sur la seconde épître aux Corinthiens</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>L'acrostiche du juste</h3>
+          <p>Le Psaume 112 est un acrostiche : chacune de ses vingt-deux lignes commence par une lettre successive de l'alphabet hébreu, exactement comme le Psaume 111 qui le précède et qui loue, selon le même procédé, les œuvres de l'Éternel. La tradition juive a lu ce doublet comme un miroir voulu : l'homme qui craint Dieu reproduit, jusque dans la forme du chant, la justice qu'il célèbre chez son Seigneur.</p>
+<p class="attrib">Tradition rabbinique de lecture du Psautier</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — 2 Co 9, 6-10 ; Jn 12, 24-26.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>

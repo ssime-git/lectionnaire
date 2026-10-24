@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-10",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "2 Co 9, 6-10 ; Jn 12, 24-26",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 128 q40 -6 80 0 q40 6 80 0 q40 -6 80 0 q40 6 80 0\"/><path d=\"M10 136 q40 -5 80 0 q40 5 80 0 q40 -5 80 0 q40 5 80 0\"/><path d=\"M150 30 q30 6 46 40 q10 20 4 46\"/><path d=\"M188 66 q8 -6 18 -4\"/><path d=\"M182 78 q9 -3 17 1\"/><path d=\"M172 45 q5 8 3 17\"/></g><g class=\"trait-rubrique\"><path d=\"M198 96 q3 6 0 12 q-3 6 -6 0 q-2 -6 2 -10 z\"/><path d=\"M200 108 l4 10\"/></g><g class=\"trait-liturgie\"><path d=\"M244 14 v50\"/></g></svg>",
+  "titre": "Le grain semé",
+  "titre_html": "Le grain <span class=\"it\">semé</span>",
+  "sous_titre": "Ce que le semeur perd, il le retrouve au centuple",
+  "suite_hier": null,
+  "gravure_alt": "Une main de semeur laissant tomber un grain de blé dans un sillon labouré, sous un ciel où ne perce qu'un rayon unique.",
+  "lectures": [
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "2 Co 9, 6-10",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">6</span> Sachez-le, celui qui sème peu moissonnera peu, et celui qui sème abondamment moissonnera abondamment. <span class=\"s\">7</span> Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec <button class=\"mot\" data-g=\"g-hilaron\">joie</button>. <span class=\"s\">8</span> Et Dieu peut vous combler de toutes ses grâces, afin que, possédant toujours en toutes choses de quoi satisfaire à tous vos besoins, vous ayez encore en abondance pour toute bonne œuvre, <span class=\"s\">9</span> selon qu'il est écrit : Il a dispersé, il a donné aux <button class=\"mot\" data-g=\"g-penes\">indigents</button> ; sa <button class=\"mot\" data-g=\"g-dikaiosyne\">justice</button> subsiste à jamais. <span class=\"s\">10</span> Celui qui fournit de la semence au semeur, et du pain pour sa nourriture, vous fournira et vous multipliera la semence, et il augmentera les fruits de votre justice.",
+      "gloses": [
+        {
+          "id": "g-hilaron",
+          "lemme": "hilaron",
+          "html": "Le grec dit <span class=\"gr\">ἱλαρόν</span> (hilaron), l'adjectif qui a donné « hilare » en français mais qui, dans la Septante de Proverbes 22, 8a — texte que Paul a sans doute en tête —, qualifie déjà le donateur aimé de Dieu. Segond traduit par « avec joie », ce qui est juste mais adoucit un mot qui désigne moins une émotion passagère qu'une disposition stable, presque un tempérament. Chrysostome, commentant ce passage, insiste sur le fait que cette joie n'est pas la conséquence du don mais sa condition : on ne donne bien que si l'on donne déjà joyeux."
+        },
+        {
+          "id": "g-penes",
+          "lemme": "indigents",
+          "html": "Le grec <span class=\"gr\">πένησιν</span>, datif de <span class=\"gr\">πένης</span> (penēs), désigne l'homme de condition modeste, celui qui doit travailler de ses mains pour vivre — un mot différent de <span class=\"gr\">πτωχός</span> (ptōchos), le mendiant totalement démuni qu'on trouve ailleurs dans le Nouveau Testament. Segond uniformise les deux par « indigents », ce qui efface une nuance sociale que le texte cité, le Psaume 112, 9, maintenait. Le choix n'est pas anodin : Paul ne demande pas seulement l'aumône aux plus pauvres, mais un partage plus large, vers ceux qui ont peu."
+        },
+        {
+          "id": "g-dikaiosyne",
+          "lemme": "dikaiosynê",
+          "html": "<span class=\"gr\">δικαιοσύνη</span> (dikaiosynē) traduit ici l'hébreu tsedaqah (צְדָקָה) du psaume cité, un mot qui, dans le judaïsme post-exilique, en était venu à désigner concrètement l'aumône elle-même, et pas seulement la justice au sens abstrait. Segond garde « justice », fidèle au grec, mais un lecteur juif du premier siècle aurait entendu résonner les deux sens à la fois. Calvin note que cette justice qui « subsiste à jamais » n'est pas celle que l'on acquiert en donnant, mais celle que Dieu accorde à qui donne sans arrière-pensée."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 111 (112), 1-2, 5-6, 7-8, 4b.9",
+      "traduction": "Louis Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Louez l'Éternel ! <button class=\"mot\" data-g=\"g-esher\">Heureux</button> l'homme qui craint l'Éternel, qui trouve un grand plaisir à ses commandements. <span class=\"s\">2</span> Sa postérité sera puissante sur la terre, la génération des hommes droits sera bénie. <span class=\"s\">5</span> Heureux l'homme qui exerce la <button class=\"mot\" data-g=\"g-chesed\">miséricorde</button> et qui prête, qui règle ses actions d'après la justice. <span class=\"s\">6</span> Car il ne chancelle jamais ; la mémoire du juste dure toujours. <span class=\"s\">7</span> Il ne craint point de mauvaises nouvelles ; son cœur est ferme, confiant en l'Éternel. <span class=\"s\">8</span> Son cœur est <button class=\"mot\" data-g=\"g-affermi\">affermi</button> ; il n'a point de crainte, jusqu'à ce qu'il mette son plaisir à regarder ses adversaires. <span class=\"s\">4b</span> … sur celui qui est miséricordieux, compatissant et juste. <span class=\"s\">9</span> Il fait des largesses, il donne aux indigents ; sa justice subsiste à jamais ; sa tête s'élève avec gloire.",
+      "gloses": [
+        {
+          "id": "g-esher",
+          "lemme": "'ashrei",
+          "html": "L'hébreu porte <span class=\"gr\">אַשְׁרֵי</span> ('ashrei), non un souhait ni une bénédiction prononcée sur quelqu'un, comme bārûk, mais une exclamation qui salue un état déjà en marche — le mot vient d'une racine qui évoque le fait d'avancer droit, de progresser. Segond traduit par « heureux », ce que reprendra la Septante avec <span class=\"gr\">μακάριος</span> (makarios), le mot même qui ouvre les Béatitudes de Matthieu 5. C'est donc moins un sentiment qu'une direction : celui qui craint l'Éternel est déclaré en marche vers quelque chose."
+        },
+        {
+          "id": "g-chesed",
+          "lemme": "chesed",
+          "html": "<span class=\"gr\">חֶסֶד</span> (chesed) est un des mots les plus denses de l'hébreu biblique : il ne désigne pas la pitié occasionnelle mais la fidélité loyale qu'on doit à celui avec qui on est lié par une alliance. Segond le rend tantôt par « miséricorde », tantôt par « bonté » ou « grâce » selon les contextes, sans qu'aucun mot français ne recouvre à lui seul le terme hébreu. Calvin, commentant les psaumes voisins, insiste sur le fait que ce chesed humain, chez le juste, n'est jamais qu'un reflet du chesed que Dieu a montré le premier à son peuple."
+        },
+        {
+          "id": "g-affermi",
+          "lemme": "samukh",
+          "html": "Le verbe hébreu vient de la racine samakh (סמך), « s'appuyer, être soutenu » — la même racine que semikhah, le geste rituel de l'imposition des mains. Un cœur « affermi » n'est donc pas un cœur naturellement fort, mais un cœur qui tient parce qu'il est appuyé sur un autre que lui-même. C'est tout le sens du verset suivant : cette fermeté ne craint pas les mauvaises nouvelles, non par tempérament, mais parce qu'elle repose ailleurs qu'en elle-même."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Jn 12, 24-26",
+      "traduction": "Louis Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">24</span> En vérité, en vérité, je vous le dis, si le <button class=\"mot\" data-g=\"g-kokkos\">grain de blé</button> qui est tombé en terre ne meurt, il reste seul ; mais, s'il meurt, il porte beaucoup de fruit. <span class=\"s\">25</span> Celui qui aime sa <button class=\"mot\" data-g=\"g-psyche\">vie</button> la perdra, et celui qui hait sa vie dans ce monde la conservera pour la vie éternelle. <span class=\"s\">26</span> Si quelqu'un me sert, qu'il me suive ; et là où je suis, là aussi sera mon <button class=\"mot\" data-g=\"g-diakonos\">serviteur</button>. Si quelqu'un me sert, mon Père l'honorera.",
+      "gloses": [
+        {
+          "id": "g-kokkos",
+          "lemme": "kokkos",
+          "html": "<span class=\"gr\">κόκκος τοῦ σίτου</span>, le grain de blé, est le mot le plus concret qui soit — pas de métaphore savante, juste la semence qu'on jette chaque année dans les champs de Galilée. Chrysostome lit ce verset comme une parole que Jésus dit d'abord de lui-même avant de l'étendre aux siens : c'est lui, le premier grain, qui descend dans la terre par la croix. Paul reprendra la même image en 1 Corinthiens 15, 36-37 pour parler de la résurrection des corps : ce qui est semé nu doit mourir pour lever autrement."
+        },
+        {
+          "id": "g-psyche",
+          "lemme": "psychê",
+          "html": "Le grec <span class=\"gr\">ψυχή</span> (psychē) peut se traduire aussi bien par « âme » que par « vie », et Segond choisit ici « vie » dans les deux occurrences du verset, ce qui unifie le texte mais efface l'ambiguïté volontaire du grec, héritée de l'hébreu nephesh, qui désigne le souffle vital autant que la personne tout entière. Le paradoxe de Jésus joue précisément sur cette instabilité du mot : la psychē qu'on protège pour elle-même se perd, celle qu'on hait dans ce monde se retrouve transformée."
+        },
+        {
+          "id": "g-diakonos",
+          "lemme": "diakonos",
+          "html": "<span class=\"gr\">διάκονος</span> (diakonos), « celui qui sert à table, qui assiste », a donné en français le mot « diacre » : ce n'est pas un hasard si l'Église ancienne a puisé dans ce verset le nom de son ministère du service. Segond traduit simplement par « serviteur », ce qui est exact mais rend invisible ce lien lexical direct avec la fonction ecclésiale. C'est ce mot précis qui explique pourquoi ce passage a été retenu par la tradition liturgique pour la mémoire d'un diacre : suivre le Christ jusqu'à la croix s'est incarné, pour lui, dans le service concret des pauvres."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La collecte pour Jérusalem",
+      "corps_html": "Ces versets appartiennent à la longue exhortation des chapitres 8 et 9 de la seconde épître aux Corinthiens, où Paul organise la collecte destinée aux chrétiens pauvres de Jérusalem (cf. Rm 15, 26 ; Ga 2, 10). Vers 56-57, il presse les Corinthiens, plus prompts à promettre qu'à donner, d'achever ce qu'ils avaient commencé un an plus tôt, prenant pour modèles les Églises de Macédoine, pauvres mais généreuses au-delà de leurs moyens (2 Co 8, 1-5)."
+    },
+    {
+      "titre": "Ces lectures à la mémoire d'un diacre",
+      "corps_html": "Dans le lectionnaire romain, ce triptyque — la générosité de 2 Co 9, le juste du Psaume 112, le grain de blé de Jean 12 — forme les lectures propres de la mémoire de Laurent, diacre de Rome mis à mort en 258 sous Valérien pour avoir distribué aux pauvres les biens de l'Église plutôt que de les livrer au préfet. Le mot grec diakonos, « serviteur », au verset 26 de l'évangile, n'est pas étranger à ce choix."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu sèmes sans le voir lever",
+    "variantes": [
+      "Tu as donné de ton temps, de ton attention, parfois de toi-même, à quelqu'un ou à une tâche dont tu ne verras peut-être jamais le résultat — un enfant que tu as patiemment repris sans savoir ce qu'il en gardera, une lettre écrite à quelqu'un qui ne répondra pas, des années de service discret dans un lieu où personne ne compte les heures. Tu ne sais pas si cela portera du fruit ; tu ne le sauras peut-être jamais de ton vivant. C'est exactement le lieu où Paul te parle : Dieu, dit-il, fournit la semence au semeur — la mesure du don ne se prend pas au moment où tu ouvres la main, mais dans une moisson que tu ne verras pas forcément toi-même.",
+      "Il y a des choses que tu retiens par peur — une parole d'affection que tu n'as pas dite, un pardon que tu gardes en réserve, une part de toi que tu protèges parce que la donner te semble une perte. Tu connais aussi l'inverse : les rares fois où tu as donné sans calculer, sans compter ce qu'il t'en coûterait, et où quelque chose en toi s'est desserré, comme si le don t'avait rendu plus léger plutôt que plus pauvre. Paul ne te demande pas de donner plus, mais de reconnaître ce que tu sais déjà : ce que tu retiens par crainte se dessèche en toi ; ce que tu donnes avec joie ne t'appauvrit jamais devant Dieu.",
+      "Tu as peut-être connu ce moment où il t'a fallu renoncer à ce que ton travail, ton amour ou ta fidélité soient vus, comptés, remerciés — laisser une part de toi disparaître dans ce que tu faisais, sans qu'il en reste de trace à ton nom. Sur le moment, cela ressemble à une perte, presque à une petite mort. Jésus ne dit pas autre chose du grain : tant qu'il reste entier, visible, préservé, il reste seul ; c'est en cessant d'être gardé pour lui-même qu'il devient autre chose que lui-même. Ce que tu as laissé disparaître sans jamais le voir refleurir est peut-être précisément ce qui, en toi, a le plus porté fruit."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse-toi rejoindre par cette promesse : ce que tu sèmes dans le secret n'est jamais perdu.",
+    "geste": "Choisis aujourd'hui un don caché — de temps, d'attention ou de bien — que personne ne pourra te rendre, et fais-le sans le noter nulle part.",
+    "note": "Ce n'est pas un exercice de générosité à mesurer, mais un geste pour désapprendre le calcul."
+  },
+  "question": "Qu'est-ce que tu retiens aujourd'hui, par peur de le voir mourir sans retour ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : le premier grain tombé en terre",
+      "corps_html": "Commentant ce passage, Jean Chrysostome voit dans le grain de blé une image que le Christ applique d'abord à lui-même avant de l'étendre à ses disciples : c'est lui, le premier, qui descend dans la terre par la mort pour porter, en ressuscitant, la multitude des croyants comme autant d'épis.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Jean, LXVII"
+    },
+    {
+      "titre": "Calvin : la joie qui ne calcule pas",
+      "corps_html": "Calvin insiste sur le fait que Dieu ne pèse pas la quantité donnée mais la disposition du cœur : un don arraché par honte ou par contrainte n'a pas plus de valeur devant Dieu qu'un fruit gâté ; seule la libéralité joyeuse, qui procède de la foi et non du calcul, honore celui qui a lui-même tout donné le premier.",
+      "attribution": "Jean Calvin, Commentaire sur la seconde épître aux Corinthiens"
+    },
+    {
+      "titre": "L'acrostiche du juste",
+      "corps_html": "Le Psaume 112 est un acrostiche : chacune de ses vingt-deux lignes commence par une lettre successive de l'alphabet hébreu, exactement comme le Psaume 111 qui le précède et qui loue, selon le même procédé, les œuvres de l'Éternel. La tradition juive a lu ce doublet comme un miroir voulu : l'homme qui craint Dieu reproduit, jusque dans la forme du chant, la justice qu'il célèbre chez son Seigneur.",
+      "attribution": "Tradition rabbinique de lecture du Psautier"
+    }
+  ]
+}
