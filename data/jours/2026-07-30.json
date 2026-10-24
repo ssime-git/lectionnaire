@@ -1,0 +1,122 @@
+{
+  "date": "2026-07-30",
+  "date_humaine": "jeudi",
+  "semaine": "17ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 18, 1-6 ; Mt 13, 47-53",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M80 120 l15 -45 l12 45\"/><path d=\"M87 85 h14\"/><path d=\"M95 75 v10\"/><path d=\"M85 95 q10 8 20 0\"/><path d=\"M90 120 q5 -20 15 -5 q5 -15 10 5\"/><path d=\"M70 120 l8 -15 l6 8\"/><path d=\"M60 118 l4 -8 l5 5\"/><path d=\"M280 120 q-15 -18 -5 -32 q-2 12 7 14 q6 -18 -2 -38 q12 20 2 38 q8 -5 5 -16 q7 17 -7 34\"/><path d=\"M260 88 q-10 5 -8 18 q5 8 16 5\"/><path d=\"M220 95 q15 -8 25 0\"/><path d=\"M228 95 l-3 12 l8 -2\"/><path d=\"M245 95 l3 10 l-6 -1\"/><path d=\"M300 82 q8 4 6 14\"/><path d=\"M310 78 q6 3 4 12\"/></g><g class=\"trait-rubrique\"><path d=\"M95 65 q-8 -12 0 -22 q8 10 0 22\"/><path d=\"M95 43 v8\"/></g><g class=\"trait-liturgie\"><path d=\"M155 120 q-10 -25 5 -40 q15 15 5 40\"/><path d=\"M148 88 q7 -5 14 0\"/></g></svg>",
+  "titre": "Le potier et le filet",
+  "titre_html": "Le <span class=\"it\">potier et le filet</span>",
+  "sous_titre": "Quand Dieu reprend l'argile de nos vies pour en refaire une forme nouvelle, et quand le Royaume vient à nous avant que nous sachions le discerner",
+  "suite_hier": null,
+  "gravure_alt": "Un potier assis à son tour, les mains dans l'argile qui s'affaisse et se relève ; à ses pieds, des tessons qu'il récupère ; au loin, des pêcheurs tirant un filet plein vers le rivage, où des hommes trient le poisson dans la lumière du soir",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 18, 1-6",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> La parole qui fut adressée à Jérémie de la part de l'Éternel, en ces mots : <span class=\"s\">2</span> Lève-toi, et descends dans la maison du potier ; là, je te ferai entendre mes paroles. <span class=\"s\">3</span> Je descendis dans la maison du potier, et voici, il travaillait sur son <button class=\"mot\" data-g=\"g-tour\">tour</button>. <span class=\"s\">4</span> Le vase qu'il faisait d'argile fut gâté entre ses mains ; alors il en refit un autre vase, tel qu'il lui plut de le faire. <span class=\"s\">5</span> Et la parole de l'Éternel me fut adressée, en ces mots : <span class=\"s\">6</span> Ne puis-je pas agir envers vous comme ce potier, maison d'Israël ? dit l'Éternel. Voici, comme l'argile dans la main du potier, ainsi vous êtes dans ma main, maison d'Israël.</p>",
+      "gloses": [
+        {
+          "id": "g-tour",
+          "lemme": "tour",
+          "html": "L'hébreu <span class=\"gr\">ʾābənayim</span> désigne proprement les deux pierres du tour du potier, le double disque qui tourne. Segond simplifie en « tour », mais le mot original évoque la dualité du mouvement : la pierre fixe et la pierre mobile, l'axe immobile et la forme qui naît du geste répété. Jérémie ne voit pas une machine mais un corps en action, une technique du corps où la matière se plie à la patience. Origène, dans ses <em>Homélies sur Jérémie</em>, y lit déjà l'image de la conversion : non pas destruction mais reformation, le même argile qui redevient malléable entre des mains qui ne se lassent pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 145 (146), 1-2, 3-4, 5-6ab",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Loue l'Éternel, ô mon <button class=\"mot\" data-g=\"g-ame\">âme</button> ! Je louerai l'Éternel tant que je vivrai, Je célébrerai mon Dieu tant que j'existerai. <span class=\"s\">2</span> Ne vous confiez pas aux grands, Aux fils de l'homme, qui ne peuvent sauver. <span class=\"s\">3</span> Leur souffle s'en va, ils retournent à la terre, Et ce même jour leurs desseins périssent. <span class=\"s\">4</span> Heureux celui qui a pour secours le Dieu de Jacob, Qui met son espoir en l'Éternel, son Dieu ! <span class=\"s\">5</span> Il est le créateur des cieux et de la terre, De la mer et de tout ce qui s'y trouve. Il garde la <button class=\"mot\" data-g=\"g-foi\">foi</button> à toujours. <span class=\"s\">6ab</span> Il fait droit aux opprimés ; Il donne du pain aux affamés.</p>",
+      "gloses": [
+        {
+          "id": "g-ame",
+          "lemme": "âme",
+          "html": "Le hébreu <span class=\"gr\">nep̄eš</span> ne désigne pas l'âme séparable du corps, comme le grec <span class=\"gr\">psychē</span> le suggérera plus tard, mais le souffle vital, le soi entier dans sa respiration. Segond traduit par « âme » par fidélité à l'usage biblique français, mais le mot porte ici le poids de l'exhortation totale : louer Dieu de tout son être vivant, non d'une partie spiritualisée. Les rabbins du Talmud de Babylone (<em>Berakhot</em> 10a) rapportent que cette ouverture du psaume fut sur les lèvres de martyr juifs ; la prière du <span class=\"gr\">nep̄eš</span> est la prière du corps menacé qui refuse de séparer sa louange de son sang."
+        },
+        {
+          "id": "g-foi",
+          "lemme": "foi",
+          "html": "Segond traduit ici <span class=\"gr\">ʾĕmeṯ</span> par « foi », mais le mot hébreu signifie vérité, fidélité, constance dans le temps. C'est le même mot qui qualifie l'alliance de Dieu avec Abraham. Calvin, dans son commentaire des Psaumes, insiste sur ce point : « Ce n'est point une vérité speculative, mais une vérité qui tient et qui demeure. » Dieu garde la <span class=\"gr\">ʾĕmeṯ</span> : il reste lui-même, il ne se dédit pas, il est le rocher où l'espérance s'appuie quand tout autre soutien s'effondre, comme le dit le verset précédent sur la mort des grands."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 13, 47-53",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">47</span> Le royaume des cieux est encore semblable à un filet jeté dans la mer, et qui a rassemblé des poissons de toute espèce. <span class=\"s\">48</span> Quand il est rempli, les pêcheurs le tirent ; et, s'étant assis sur le <button class=\"mot\" data-g=\"g-rivage\">rivage</button>, ils mettent dans des vases ce qui est bon, et ils jettent ce qui est mauvais. <span class=\"s\">49</span> Il en sera de même à la fin du monde. Les anges viendront, et sépareront les méchants d'avec les justes, <span class=\"s\">50</span> et ils les jetteront dans la fournaise du feu, où il y aura des pleurs et des grincements de dents. <span class=\"s\">51</span> Avez-vous compris toutes ces choses ? Ils lui répondirent : Oui. <span class=\"s\">52</span> Et il leur dit : C'est pourquoi tout <button class=\"mot\" data-g=\"g-scribe\">scribe</button> devenu <button class=\"mot\" data-g=\"g-disciple\">disciple</button> du royaume des cieux est semblable à un père de famille qui tire de son trésor des choses nouvelles et des choses anciennes. <span class=\"s\">53</span> Lorsque Jésus eut achevé ces paraboles, il partit de là.</p>",
+      "gloses": [
+        {
+          "id": "g-rivage",
+          "lemme": "rivage",
+          "html": "Le grec <span class=\"gr\">aigialos</span> désigne la ligne de plage battue par les flots, l'espace liminal entre la mer et la terre ferme. Segond traduit simplement « rivage », mais le mot évoque le lieu où le filet devient visible, où ce qui était caché dans les profondeurs est exposé à la lumière et au tri. Chrysostome, dans sa <em>Homélie XLVII sur Matthieu</em>, remarque que ce rivage est déjà le jugement : non pas un tribunal lointain, mais le moment où le filet de la grâce révèle ce qu'il contenait, où la vérité de chaque vie apparaît dans la clarté du jour qui vient."
+        },
+        {
+          "id": "g-scribe",
+          "lemme": "scribe",
+          "html": "Le mot grec <span class=\"gr\">grammateus</span> désigne celui qui maîtrise les lettres, l'expert en Écriture, souvent opposé à Jésus dans les récits évangéliques. Ici, Matthieu retourne l'attente : le scribe devenu disciple n'abandonne pas son savoir, il le transforme. Calvin note dans son <em>Harmonie évangélique</em> : « Il ne dit pas que le scribe doit tout quitter, mais qu'il doit devenir disciple, c'est-à-dire qu'il doit apprendre de nouveau. » La conversion n'est pas l'effacement du passé mais son réajustement sous l'autorité du Maître."
+        },
+        {
+          "id": "g-disciple",
+          "lemme": "disciple",
+          "html": "Le grec <span class=\"gr\">mathētēs</span> vient du verbe <span class=\"gr\">manthanō</span>, apprendre, et désigne avant tout celui qui se tient près d'un maître pour recevoir de lui une formation de vie. Segond ne peut que translittérer par « disciple », car le français n'a pas de mot qui porte cette densité relationnelle. Le disciple n'est pas l'étudiant qui accumulate des connaissances, mais celui qui se laisse façonner, comme l'argile du potier, par la présence et la parole de celui qu'il suit. Origène, commentant ce verset, voit dans le scribe devenu disciple l'image même de l'Église : Israël qui reçoit l'Évangile, les nations qui accèdent aux Écritures, les deux trésors qui se mêlent dans une même main ouverte."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La maison du potier, un lieu de contestation",
+      "corps_html": "Jérémie reçoit l'ordre de descendre, non pas au temple ni au palais, mais dans l'atelier d'un artisan anonyme. Cette descente est déjà théologique : la parole de Dieu ne vient plus dans les lieux institutionnels où le peuple attend sa sécurité, mais dans l'humilité d'un travail manuel, dans l'odeur de l'argile et le bruit du tour. Le contexte historique est celui de la menace babylonienne, vers 605 avant notre ère, quand l'asservissement paraît inévitable et que les élites de Juda comptent encore sur les alliances égyptiennes. Jérémie 18 s'inscrit dans une série de signes-actes (le ceinturon pourri, la cruche brisée) où le prophète incarne par son corps ce que Dieu fait ou ce que le peuple subit. Le potier n'est pas métaphore décorative : il est le réel où Dieu se donne à voir. Calvin, dans son prêche sur ce texte, souligne que « Dieu se sert des choses basses et viles pour confondre la sagesse du monde » — le tour du potier devient le lieu d'une théologie de la grâce qui passe par l'échec reconnu."
+    },
+    {
+      "titre": "Le filet, dernière parabole du chapitre des secrets",
+      "corps_html": "Matthieu 13 est le grand chapitre des paraboles du Royaume, et ce filet en est le dernier récit avant la conclusion didactique du verset 52. La structure est soigneusement orchestrée : le semeur, l'ivraie, le grain de sénevé, la pâte, le trésor, la perle, le filet — sept paraboles qui montent en intensité vers la réalité du jugement. Le filet rassemble « de toute espèce », le grec <span class=\"gr\">pantos genous</span>, une formule qui évoque la mission universelle de l'Église mais aussi l'indistinction du mélange avant le tri. Chrysostome, dans ses homélies sur Matthieu, insiste sur cette patience de Dieu qui laisse cohabiter le bon et le mauvais poisson dans les mêmes eaux : « Le filet n'est pas brisé, il ne refuse rien, il accueille tout. » Le jugement n'est pas la violence d'une exclusion prematurée, mais la pleine lumière où chaque chose trouve sa place véritable. Le verset 52, sur le scribe devenu disciple, fonctionne comme clé herméneutique : celui qui a compris le filet sait que son trésor contient désormais les anciennes Écritures et la nouvelle réalité du Royaume, sans rupture ni simple juxtaposition."
+    }
+  ],
+  "analogie": {
+    "titre": "L'argile qui redevient malléable",
+    "variantes": [
+      "Tu as vécu des saisons où ta prière s'est réduite à la répétition de formules que tu ne sentais plus, où le nom de Dieu passait sur tes lèvres sans toucher ce qui en toi était blessé ou fermé. Tu croyais que cette époque était perdue, que ces mots vides s'étaient accumulés comme un échec dont il fallait faire le deuil. Puis un matin, sans que tu aies rien préparé, une parole que tu avais lue dix fois sans la comprendre s'est soudain ouverte, portant exactement ce que ta vie était devenue entre-temps. Tu n'as rien fait pour mériter cette coïncidence : elle ressemble à ces mains du potier qui reprennent l'argile gâtée pour en faire autre chose, sans que l'argile ait à se justifier de son premier échec.",
+      "Tu portes en toi des décisions prises dans l'urgence, des mots prononcés que tu ne peux plus retirer, des chemins empruntés qui ont défiguré ce que tu croyais être ta forme véritable. Le regret n'est pas une illusion : il dit vrai sur ce qui a été brisé. Mais le texte de Jérémie ne promet pas que le potier répare le vase, il dit qu'il en refait un autre, tel qu'il lui plaît de le faire. Cette promesse ne s'adresse pas à celui qui se sent entier, mais à celui qui reconnaît en lui-même la tesson, l'argile qui s'est effondrée entre des mains pourtant habiles. Le nouveau vase ne ressemblera peut-être pas à ce que tu avais imaginé ; il sera la forme que Dieu choisit, et cette forme te surprendra avant de te reconnaître.",
+      "Tu as connu ces moments où le filet de ta vie semblait ne rien ramener que du trouble, où les gens croisés, les engagements pris, les appartenances revendiquées formaient un amas confus dont tu ne savais plus ce qui tenait debout. La parabole du filet dit que ce mélange est le lieu même où Dieu travaille, non pas pour que tu fasses le tri toi-même, mais pour que tu acceptes d'être tiré vers le rivage où la lumière fera son œuvre. Cette attente du rivage change la manière de vivre la mer : chaque rencontre, chaque épreuve, chaque grâce reçue dans l'indistinction devient porteuse d'un sens qui ne se livrera qu'à la fin. Tu n'es pas celui qui jette le mauvais poisson ; tu es celui qui, parmi les autres, apprend à espérer le tri de Dieu."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Dieu ne demande pas que tu te présentes à lui sous une forme achevée. Il descend dans l'atelier où tu es en train de t'effondrer, et ses mains reprennent l'argile.",
+    "geste": "Pose devant toi, sur la table ou dans ta paume, un objet sans valeur — un caillou, une coquille, une clef usée — et dis-lui : « Voici ce que je suis devenu. Fais-en ce qui te plaît. »",
+    "note": "Ce geste n'est pas magique. Il est le signe que tu acceptes de ne plus être le potier de toi-même."
+  },
+  "question": "Quelle « forme gâtée » de ta vie pourrais-tu, aujourd'hui, remettre entre les mains de Dieu sans lui imposer la forme qu'elle devrait reprendre ?",
+  "racines": [
+    {
+      "titre": "Origène sur le potier qui refait",
+      "corps_html": "Dans ses <em>Homélies sur Jérémie</em>, Origène (185-253) développe une lecture spirituelle de la maison du potier qui influencera toute la tradition. Il distingue soigneusement : le vase gâté n'est pas détruit, il est « refait », <span class=\"gr\">aneplasen</span> en grec de la Septante, le même verbe que pour la création de l'homme dans la Genèse. La conversion n'est donc pas une seconde création ex nihilo, mais une re-formation de la même matière. Origène ajoute que le potier « fait ce qui lui plaît », ce qui signifie que la nouvelle forme dépend de la volonté libre de Dieu, non de nos mérites antérieurs. Cette lecture sera reprise par Jean Chrysostome et par la tradition monastique, où le tour du potier devient une image classique de l'<em>obéissance</em> comme abandon de sa propre forme.",
+      "attribution": "Origène, <em>Homélies sur Jérémie</em>, II, 1-3"
+    },
+    {
+      "titre": "Calvin sur le scribe devenu disciple",
+      "corps_html": "Dans son <em>Commentaire sur l'Harmonie évangélique</em> (1555), Calvin insiste sur le verset 52 comme programme herméneutique pour les ministres de sa Réforme. Il refuse deux écueils : celui des scribes qui restent enfermés dans la lettre ancienne sans recevoir le Christ, et celui des enthousiastes qui prétendent découvrir des « choses nouvelles » sans ancrage dans l'Écriture. « Il faut, dit Calvin, que le scribe soit <em>fait disciple</em>, c'est-à-dire qu'il apprenne de Christ ce qu'il n'avait point appris en l'école des hommes. » Le trésor du scribe converti contient donc les deux testaments, mais dans un ordre nouveau : les choses anciennes reçues à la lumière du Royaume, les choses nouvelles fondées sur l'autorité des prophètes. Cette double fidélité définira la prédication réformée.",
+      "attribution": "Jean Calvin, <em>Commentaire sur l'Harmonie évangélique</em>, éd. 1555"
+    },
+    {
+      "titre": "Chrysostome sur la patience du filet",
+      "corps_html": "Jean Chrysostome (344-407), dans sa <em>Quarante-septième homélie sur Matthieu</em>, médite longuement sur la parabole du filet pour répondre à ceux qui s'impatientent du mélange des bons et des méchants dans l'Église. Il oppose le filet à la faucille : le semeur avait interdit d'arracher l'ivraie avant le temps, et le filet prolonge cette patience divine. « Ne dis pas : Pourquoi le méchant est-il dans l'Église ? Le filet n'a pas encore été tiré. » Chrysostome met en garde contre l'illusion de pouvoir faire le tri soi-même : le pêcheur ne distingue pas les poissons dans les profondeurs, il les accueille tous. C'est seulement « sur le rivage », dans la lumière eschatologique, que le tri devient possible. Cette homélie fut prononcée à Antioche, où les tensions entre communautés juive et païenne convertie rendaient urgente une théologie de l'accueil indifférencié.",
+      "attribution": "Jean Chrysostome, <em>Homélie XLVII sur Matthieu</em>, PG 58, 479-486"
+    }
+  ]
+}
