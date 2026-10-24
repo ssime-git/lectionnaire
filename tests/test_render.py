@@ -298,6 +298,11 @@ class FilDuJourTests(unittest.TestCase):
         self.assertIn("De la doctrine chrétienne", self.html)  # attribution d'une racine
         self.assertIn("BibleProject - Français", self.html)
 
+    def test_le_fil_reprend_le_pied_de_page(self) -> None:
+        self.assertIn('<a href="./guide.html">Comment lire une page</a>', self.html.split('id="fil"')[1])
+        self.assertIn("Objet d'étude, pas une autorité", self.html.split('id="fil"')[1])
+        self.assertIn("body.fil-ouvert footer{display:none}", self.html)
+
     def test_peres_du_corpus_avec_lien(self) -> None:
         d = _jour([])
         d["peres"] = [{"titre": "Jean Chrysostome, Homélie LXXI sur Matthieu", "url": "https://fr.wikisource.org/wiki/X",

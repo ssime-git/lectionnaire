@@ -282,6 +282,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
 .fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
 .fil-sources small{display:block;font-size:.75rem}
+.fil-note{font-size:.78rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
+.fil-liens{font-size:.82rem;margin-top:.8rem!important}
 .fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
 #ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
 #ouvrir-fil:hover{border-color:var(--ink)}
@@ -291,6 +293,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   body{transition:padding .35s ease}
   body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
   body.fil-ouvert #carte{display:none}
+  /* Le fil porte déjà références, sources et mention IA. */
+  body.fil-ouvert footer{display:none}
 }
 @media(max-width:1279px){
   .fil{z-index:95;width:min(86vw,320px);box-shadow:20px 0 40px rgba(0,0,0,.14)}
@@ -410,7 +414,9 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
 <p>Louis Segond 1910, domaine public</p>        <p><a href="https://www.aelf.org/2026-07-27/romain/messe" target="_blank" rel="noopener">Lectionnaire romain (AELF)</a></p>
       </div>
 <div class="groupe" data-pour="racines contexte"><p class="nom">Les anciens</p>
-<p>Origène, <em>Homélies sur Jérémie</em>, hom. IX, 4 (traduction latine de Jérôme)</p><p>Jean Calvin, <em>Commentaire sur le livre de Jérémie</em>, 1563, sur Jr 13,1-11</p><p>Jean Chrysostome, <em>Homélies sur Matthieu</em>, hom. XLVI, 2-3</p><p><a href="https://fr.wikisource.org/wiki/Jean_Chrysostome/Commentaire_sur_l’Évangile_selon_saint_Matthieu/Homélie_XL" target="_blank" rel="noopener">Jean Chrysostome, Homélie XLVI sur Matthieu</a> <small>trad. Jeannin (1864-1867), Wikisource, CC BY-SA</small></p>      </div><div class="groupe" data-pour="voir"><p class="nom">Vidéos</p><p><a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a></p></div>      <p class="fil-ia">Gloses, contexte et carnet rédigés avec l'aide d'une IA : à relire et vérifier.</p>
+<p>Origène, <em>Homélies sur Jérémie</em>, hom. IX, 4 (traduction latine de Jérôme)</p><p>Jean Calvin, <em>Commentaire sur le livre de Jérémie</em>, 1563, sur Jr 13,1-11</p><p>Jean Chrysostome, <em>Homélies sur Matthieu</em>, hom. XLVI, 2-3</p><p><a href="https://fr.wikisource.org/wiki/Jean_Chrysostome/Commentaire_sur_l’Évangile_selon_saint_Matthieu/Homélie_XL" target="_blank" rel="noopener">Jean Chrysostome, Homélie XLVI sur Matthieu</a> <small>trad. Jeannin (1864-1867), Wikisource, CC BY-SA</small></p>      </div><div class="groupe" data-pour="voir"><p class="nom">Vidéos</p><p><a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a></p></div>      <p class="fil-note">Objet d'étude, pas une autorité — chaque affirmation reste traçable.</p>
+      <p class="fil-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</p>
+      <p class="fil-liens"><a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a></p>
     </div>
   </div>
 </aside>
