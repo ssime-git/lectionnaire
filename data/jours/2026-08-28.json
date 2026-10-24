@@ -1,0 +1,132 @@
+{
+  "date": "2026-08-28",
+  "date_humaine": "vendredi",
+  "semaine": "21ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 1, 17-25 ; Mt 25, 1-13",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M258 130 v-45 h28 v45\"/><path d=\"M272 85 v45\"/><path d=\"M254 85 l18 -22 l18 22\"/><path d=\"M170 10 v45\"/><path d=\"M154 24 h32\"/><path d=\"M17 128 q8 -9 16 0 q-8 6 -16 0 z\"/><path d=\"M52 128 q8 -9 16 0 q-8 6 -16 0 z\"/><path d=\"M87 128 q8 -9 16 0 q-8 6 -16 0 z\"/><path d=\"M122 128 q8 -9 16 0 q-8 6 -16 0 z\"/><path d=\"M157 128 q8 -9 16 0 q-8 6 -16 0 z\"/><path d=\"M38 128 v-14 q0 -6 4 -6 q4 0 4 6 v14 z M39 111 h6 M108 128 v-14 q0 -6 4 -6 q4 0 4 6 v14 z M109 111 h6\"/></g><g class=\"trait-liturgie\"><path d=\"M25 118 q-3 -6 0 -10 q3 4 0 10 z M60 118 q-3 -6 0 -10 q3 4 0 10 z M95 118 q-3 -6 0 -10 q3 4 0 10 z M130 118 q-3 -6 0 -10 q3 4 0 10 z M165 118 q-3 -6 0 -10 q3 4 0 10 z\"/></g><g class=\"trait-rubrique\"><path d=\"M170 55 l150 75\"/><path d=\"M215 110 l60 -35\"/></g></svg>",
+  "titre": "Huile",
+  "titre_html": "Huile <span class=\"it\">cachée</span>",
+  "sous_titre": "Ce que le monde appelle folie, ce que la nuit exige en réserve.",
+  "suite_hier": null,
+  "gravure_alt": "Cinq lampes veillent dans la nuit à côté de fioles d'huile scellées, tandis qu'au fond une porte close se dresse sous un fronton et qu'une croix nue, simplement esquissée, projette son ombre sur toute la scène.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 1, 17-25",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">17</span> Ce n'est pas pour baptiser que Christ m'a envoyé, c'est pour annoncer l'Évangile, et cela sans la sagesse du langage, afin que la croix de Christ ne soit pas rendue vaine. <span class=\"s\">18</span> Car la prédication de la croix est une <button class=\"mot\" data-g=\"g-moria\">folie</button> pour ceux qui périssent; mais pour nous qui sommes sauvés, elle est une puissance de Dieu. <span class=\"s\">19</span> Aussi est-il écrit: Je détruirai la sagesse des sages, Et j'anéantirai l'intelligence des intelligents. <span class=\"s\">20</span> Où est le sage? où est le scribe? où est le disputeur de ce siècle? Dieu n'a-t-il pas convaincu de folie la sagesse du monde? <span class=\"s\">21</span> Car puisque le monde, avec sa sagesse, n'a point connu Dieu dans la sagesse de Dieu, il a plu à Dieu de sauver les croyants par la folie de la prédication. <span class=\"s\">22</span> Les Juifs demandent des miracles et les Grecs cherchent la sagesse: <span class=\"s\">23</span> nous, nous prêchons Christ crucifié; <button class=\"mot\" data-g=\"g-skandalon\">scandale</button> pour les Juifs et folie pour les païens, <span class=\"s\">24</span> mais puissance de Dieu et sagesse de Dieu pour ceux qui sont <button class=\"mot\" data-g=\"g-kletois\">appelés</button>, tant Juifs que Grecs. <span class=\"s\">25</span> Car la folie de Dieu est plus sage que les hommes, et la faiblesse de Dieu est plus forte que les hommes.",
+      "gloses": [
+        {
+          "id": "g-moria",
+          "lemme": "môria",
+          "html": "<span class=\"gr\">môria</span> — Segond traduit par « folie », et le mot est juste, mais il faut entendre sa charge : dans le grec profane, môria désignait le jugement porté par les écoles philosophiques sur ce qui ne mérite même pas d'être discuté, l'insulte technique que les stoïciens ou les platoniciens réservaient aux opinions grossières. Paul ne l'atténue pas : il reprend l'insulte des Grecs pour la retourner contre leur propre critère de sagesse. Jean Chrysostome, dans son homélie sur ce passage, insiste : Paul n'accorde rien de réel à cette folie, il nomme seulement ce que le monde voit, pour montrer ensuite que ce jugement même est retourné par Dieu. Calvin ajoute que Dieu « s'accommode » ainsi à l'aveuglement humain, choisissant délibérément ce qui scandalise pour humilier toute prétention à comprendre par soi-même."
+        },
+        {
+          "id": "g-skandalon",
+          "lemme": "skandalon",
+          "html": "<span class=\"gr\">skandalon</span> — le mot, avant d'être une indignation morale comme dans notre usage moderne, désignait la pièce du piège sur laquelle l'animal bute et se prend. Segond garde « scandale », mais perd l'image mécanique : pour un Juif qui attend un messie de gloire et de puissance, un messie crucifié ne choque pas seulement, il fait littéralement trébucher toute la structure de l'attente. Le mot revient en Romains 9,33, citant Ésaïe, pour désigner « une pierre d'achoppement et un rocher de scandale » — Paul lit donc la croix comme l'accomplissement exact de ce que le prophète avait annoncé comme obstacle. Toute la tradition patristique, de Justin à Irénée, reprendra cette lecture du crucifié comme skandalon prophétisé plutôt que comme accident imprévu."
+        },
+        {
+          "id": "g-kletois",
+          "lemme": "klêtois",
+          "html": "<span class=\"gr\">klêtois</span> — de <span class=\"gr\">kaleô</span>, appeler. Segond traduit « ceux qui sont appelés », mais le terme est d'ordre juridique et relationnel plus que psychologique : il ne décrit pas un sentiment intérieur d'être appelé, mais le fait d'avoir été convoqué par un autre. La distinction que Paul trace au verset 24 n'oppose donc pas les intelligents aux sots, mais les appelés à ceux qui ne le sont pas — une catégorie qui déplace tout le critère du mérite vers celui de la vocation reçue. Calvin s'appuie fortement sur ce verset dans l'Institution pour fonder sa doctrine de l'élection : ce n'est pas la sagesse du sujet qui produit la foi devant la croix, c'est l'appel qui la précède."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 32 (33), 1-2, 4-5, 10-11",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Justes, réjouissez-vous en l'Éternel! La louange sied aux hommes <button class=\"mot\" data-g=\"g-yashar\">droits</button>. <span class=\"s\">2</span> Célébrez l'Éternel avec la harpe, Célébrez-le sur le luth à dix cordes. <span class=\"s\">4</span> Car la parole de l'Éternel est droite, Et toutes ses œuvres s'accomplissent avec fidélité; <span class=\"s\">5</span> Il aime la justice et la droiture; La <button class=\"mot\" data-g=\"g-hesed\">bonté</button> de l'Éternel remplit la terre. <span class=\"s\">10</span> L'Éternel renverse les desseins des nations, Il anéantit les projets des peuples; <span class=\"s\">11</span> Les desseins de l'Éternel subsistent à toujours, Et les projets de son cœur, de génération en génération.",
+      "gloses": [
+        {
+          "id": "g-yashar",
+          "lemme": "yashar",
+          "html": "<span class=\"gr\">yashar</span> — Segond rend le même mot hébreu par « droits » au verset 1 et par « droite » au verset 4, appliqué tour à tour aux justes et à la parole de Dieu, et cette répétition n'est pas un hasard de traduction : le psaume affirme que l'homme droit l'est parce qu'il se conforme à une parole qui, elle, est droite en premier. Le mot désigne moins une vertu morale abstraite qu'un ajustement, une ligne qui ne dévie pas. Rachi, commentant ce type d'emploi dans les psaumes, rattache la droiture non à un sentiment de justice propre à l'homme mais à sa conformité à la Torah reçue — la droiture se mesure, elle ne s'invente pas."
+        },
+        {
+          "id": "g-hesed",
+          "lemme": "hessed",
+          "html": "<span class=\"gr\">hessed</span> — Segond traduit « bonté », ce qui est court : le mot hébreu désigne la fidélité loyale que l'on doit à celui avec qui l'on est lié par une alliance, plus proche d'un attachement tenace que d'une bienveillance générale. La Septante le rend par <span class=\"gr\">eleos</span>, miséricorde, la Vulgate par misericordia — chaque traduction glisse un peu plus loin de l'idée de constance contractuelle vers celle d'un sentiment. Calvin, commentant ce psaume, insiste sur le fait que cette bonté n'est pas vague : c'est la fidélité par laquelle Dieu tient parole envers son peuple, quoi qu'il en coûte et quelle que soit l'indignité de ceux qu'il a liés à lui."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 25, 1-13",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Alors le royaume des cieux sera semblable à dix vierges qui, ayant pris leurs lampes, allèrent à la rencontre de l'<button class=\"mot\" data-g=\"g-nymphios\">époux</button>. <span class=\"s\">2</span> Cinq d'entre elles étaient <button class=\"mot\" data-g=\"g-morai\">folles</button>, et cinq étaient sages. <span class=\"s\">3</span> Les folles, en prenant leurs lampes, ne prirent point d'huile avec elles; <span class=\"s\">4</span> mais les sages prirent, avec leurs lampes, de l'<button class=\"mot\" data-g=\"g-elaion\">huile</button> dans des vases. <span class=\"s\">5</span> Comme l'époux tardait, toutes s'assoupirent et s'endormirent. <span class=\"s\">6</span> Au milieu de la nuit, on entendit un cri: Voici l'époux, allez à sa rencontre! <span class=\"s\">7</span> Alors toutes ces vierges se réveillèrent, et préparèrent leurs lampes. <span class=\"s\">8</span> Les folles dirent aux sages: Donnez-nous de votre huile, car nos lampes s'éteignent. <span class=\"s\">9</span> Les sages répondirent: Non; il n'y en aurait pas assez pour nous et pour vous; allez plutôt chez ceux qui en vendent, et achetez-en pour vous. <span class=\"s\">10</span> Pendant qu'elles allaient en acheter, l'époux arriva; celles qui étaient prêtes entrèrent avec lui dans la salle des noces, et la porte fut fermée. <span class=\"s\">11</span> Plus tard, les autres vierges vinrent, et dirent: Seigneur, Seigneur, ouvre-nous. <span class=\"s\">12</span> Mais il répondit: Je vous le dis en vérité, je ne vous connais pas. <span class=\"s\">13</span> Veillez donc, puisque vous ne savez ni le jour, ni l'heure.",
+      "gloses": [
+        {
+          "id": "g-nymphios",
+          "lemme": "numphios",
+          "html": "<span class=\"gr\">numphios</span> — l'époux. Segond traduit simplement, mais le mot porte toute l'image nuptiale que l'Écriture applique à Dieu depuis Osée et le Cantique, et que Matthieu reprend ailleurs dans la bouche même de Jésus : « les amis de l'époux peuvent-ils s'affliger pendant que l'époux est avec eux ? » (Mt 9,15). En plaçant ce mot au seuil de la parabole, Matthieu situe d'emblée le retard et l'attente non comme une épreuve administrative mais comme le délai d'une noce promise — l'Apocalypse reprendra cette image jusqu'aux « noces de l'Agneau » (Ap 19,7)."
+        },
+        {
+          "id": "g-morai",
+          "lemme": "môrai",
+          "html": "<span class=\"gr\">môrai</span> — les folles, du même adjectif <span class=\"gr\">môros</span> qui donne le nom môria en 1 Corinthiens 1,18 pour désigner la folie de la croix. Le rapprochement n'est sans doute pas voulu par Matthieu, écrivant sans viser Paul, mais le lecteur qui entend les deux textes le même jour ne peut pas ne pas l'entendre : ce que le monde appelle folie chez Dieu ressemble, dans la bouche de Jésus, à l'insouciance de celles qui n'ont pas prévu la durée de l'attente. Ce n'est pas la même folie, mais Matthieu, comme Paul, retourne le mot contre celui qui croyait juger correctement."
+        },
+        {
+          "id": "g-elaion",
+          "lemme": "elaion",
+          "html": "<span class=\"gr\">elaion</span> — l'huile. Le détail le plus commenté de la parabole est que cette huile ne se prête pas : « il n'y en aurait pas assez pour nous et pour vous » (v.9). Jean Chrysostome, dans son homélie sur ce chapitre, lit l'huile comme figure de l'aumône et de la charité vécue — chose que nul ne peut transmettre à un autre au dernier moment, parce qu'elle se constitue par une pratique tenue dans la durée, non par un geste d'emprunt à l'heure du besoin. Le texte ne dit pas ce qu'est l'huile ; il dit seulement qu'elle ne se transfère pas, ce qui suffit à déplacer toute la question de la vigilance vers celle de la constitution silencieuse d'une réserve."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe divisée",
+      "corps_html": "La lettre naît d'un conflit concret : la communauté de Corinthe se fractionne en partis — « moi, je suis de Paul ! moi, d'Apollos ! » (1 Co 1,12) — chacun se réclamant du prédicateur dont l'éloquence lui plaît le plus. Corinthe, ville commerçante et carrefour de sophistes itinérants, valorisait la parole brillante comme une marchandise. C'est à cette hiérarchie du talent oratoire que Paul oppose, dès le verset 17, son refus délibéré de « la sagesse du langage »."
+    },
+    {
+      "titre": "Un discours prononcé avant la Passion",
+      "corps_html": "La parabole des dix vierges appartient au grand discours eschatologique que Matthieu place juste avant le récit de la Passion (chapitres 24-25), prononcé sur le mont des Oliviers. La communauté à laquelle l'évangile s'adresse, dans les années 80, connaît déjà le désarroi d'une attente du retour du Christ qui se prolonge au-delà de ce qu'elle avait imaginé — c'est cette durée non prévue que la parabole vient directement travailler."
+    }
+  ],
+  "analogie": {
+    "titre": "La provision qu'on ne voit pas",
+    "variantes": [
+      "Il t'est arrivé de prier des années durant sans qu'il ne se passe rien de sensible — la même demande reprise soir après soir, sans réponse perceptible, sans ce frisson qu'on voudrait recevoir en retour. Tu as fini par te demander si tu n'étais pas simplement naïf de continuer, si les autres, ceux qui ont cessé, n'avaient pas raison de juger cela vain. Et pourtant quelque chose en toi persistait à tenir cette prière, sans preuve, sans autre appui que la promesse elle-même — c'est cette obstination sans démonstration que le texte de ce jour appelle une sagesse cachée sous l'apparence de la folie.",
+      "Tu as connu ces nuits où tu voulais absolument rester éveillé pour quelqu'un — veiller un malade, attendre un appel, tenir une résolution jusqu'au bout — et où le sommeil t'a pris malgré toi, sans que ta volonté y puisse rien. Le texte ne dit pas que les vierges sages ont réussi à ne pas dormir : elles se sont assoupies comme les autres, toutes ensemble. Ce qui les distinguait ne s'est pas joué dans la vigilance elle-même, mais dans ce qu'elles avaient emporté avant de s'endormir, une provision constituée en amont de l'épreuve et qui a tenu quand elles n'y pouvaient plus rien.",
+      "Il y a en toi, peut-être, une fidélité que tu tiens depuis longtemps sans que personne ne la voie — un pardon accordé en secret, une discipline de prière gardée sans témoin, une patience exercée jour après jour sans qu'aucun fruit ne s'en montre. Le jour où quelqu'un te demande de la lui céder d'un coup, à l'improviste, tu découvres qu'elle ne se transmet pas comme un objet qu'on prête : elle s'est formée en toi par une lenteur que rien ne remplace, et c'est justement cela qu'on ne peut te prendre, ni te donner en substitut au dernier moment."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, reste un instant devant ce que la croix appelle folie et que Dieu appelle puissance.",
+    "geste": "Note, sans te juger, une chose que tu tiens fidèlement depuis longtemps sans en avoir jamais vu le fruit — et remets-la, telle quelle, devant Dieu.",
+    "note": "Vendredi — jour traditionnellement associé, dans la piété chrétienne, au souvenir de la croix."
+  },
+  "question": "Qu'est-ce que tu continues de tenir, sans preuve ni démonstration, simplement parce que la promesse reçue tient encore ?",
+  "racines": [
+    {
+      "titre": "Pourquoi ce psaume porte deux numéros",
+      "corps_html": "La double numérotation « Ps 32 (33) » vient de deux traditions de comptage : la Septante grecque, suivie par la Vulgate latine et donc par la liturgie catholique, fusionne deux psaumes hébreux en un seul à un endroit du psautier, ce qui décale d'une unité toute la numérotation suivante. Le texte hébreu massorétique, suivi par Segond et les traductions protestantes, compte ce psaume comme le 33e. Les deux numérotations désignent exactement le même texte.",
+      "attribution": "Note historique — tradition massorétique et Septante"
+    },
+    {
+      "titre": "Un supplice qu'on ne nommait pas",
+      "corps_html": "Dans le monde romain du premier siècle, la croix n'était pas un symbole mais un supplice réservé aux esclaves et aux rebelles, jugé si abject qu'un citoyen romain ne pouvait légalement y être condamné. Cicéron, plaidant devant le peuple romain, qualifie la croix de « crudelissimum taeterrimumque supplicium », le plus cruel et le plus abject des supplices, dont il faut éloigner jusqu'au nom des oreilles des citoyens. C'est ce fond social précis que Paul a devant lui lorsqu'il parle de « scandale ».",
+      "attribution": "Cicéron, Pro Rabirio Perduellionis Reo, 5.16"
+    },
+    {
+      "titre": "L'huile qui ne se prête pas",
+      "corps_html": "Commentant cette parabole, Jean Chrysostome remarque que l'huile refusée par les vierges sages n'est pas de l'égoïsme mais un constat : certaines réalités spirituelles, dit-il, comme l'aumône et la charité vécue, ne peuvent être transférées d'une personne à une autre au moment du besoin, parce qu'elles se sont formées par une pratique tenue dans la durée. Il lit ainsi la clôture de la porte non comme une sentence arbitraire mais comme la simple constatation d'un état déjà scellé avant l'heure du cri.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de Matthieu, homélie 78"
+    }
+  ]
+}
