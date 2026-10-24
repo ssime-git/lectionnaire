@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savoir et connaître — mardi 1 septembre 2026</title>
+<meta name="description" content="Ce que le démon sait, ce que l'Esprit donne de connaître">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mardi 1 septembre 2026 · 22ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+<span class="suite">Hier, à Nazareth, on voulait le précipiter du haut de la colline pour avoir trop bien parlé de lui-même (Lc 4,16-30) ; aujourd'hui, à Capernaüm, la même parole commande aux esprits impurs — c'est la suite immédiate du même chapitre de Luc.</span></p>
+    <h1>Savoir <span class="it">et connaître</span></h1>
+    <p class="chapeau">Ce que le démon sait, ce que l'Esprit donne de connaître</p>
+    <figure class="gravure" aria-label="Gravure sur bois : dans une synagogue aux murs de basalte, Jésus tend la main vers un homme prosterné dont une forme tourmentée s'échappe sans le toucher ; l'assemblée, figée en arc de cercle, lève les mains de stupeur ; un rai de lumière tombe d'une fenêtre étroite au-dessus de la scène."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M6 132 h328"/><path d="M20 132 v-70 l30 -22 l30 22 v70"/><path d="M100 132 v-70 l25 -18 l25 18 v70"/><path d="M270 132 v-90 l25 -20 l25 20 v90"/><path d="M175 30 h20 v22 h-20 z"/><path d="M60 132 v-30 q30 -14 55 -2 q28 -14 55 0 v32"/><path d="M148 100 q10 8 24 8 q14 0 22 -10"/><path d="M172 108 q-6 14 -16 20 q-6 4 -14 4"/><path d="M198 108 l16 -20 q8 -10 20 -8"/></g><g class="trait-rubrique"><path d="M164 88 q-16 6 -18 18 q10 -6 16 -2 q-10 4 -8 14 q10 -10 18 -6 q-4 -14 -8 -24 z"/></g><g class="trait-liturgie"><path d="M185 52 l-6 34"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — 1 Co 2, 10b-16 — Segond, 1910</p>
+        <div class="ecriture "><p><span class="s">10</span>Car l'Esprit <button class="mot" data-g="g-sonde">sonde</button> tout, même les profondeurs de Dieu. <span class="s">11</span>Lequel des hommes, en effet, connaît les choses de l'homme, si ce n'est l'esprit de l'homme qui est en lui ? De même, personne ne connaît les choses de Dieu, si ce n'est l'Esprit de Dieu. <span class="s">12</span>Or nous, nous n'avons pas reçu l'esprit du monde, mais l'Esprit qui vient de Dieu, afin que nous connaissions les choses que Dieu nous a données par sa grâce. <span class="s">13</span>Et nous en parlons, non avec des discours qu'enseigne la sagesse humaine, mais avec ceux qu'enseigne l'Esprit, employant un langage spirituel pour les choses spirituelles.</p><p><span class="s">14</span>Mais l'homme <button class="mot" data-g="g-animal">animal</button> ne reçoit pas les choses de l'Esprit de Dieu, car elles sont une folie pour lui, et il ne peut les connaître, parce que c'est spirituellement qu'on en juge. <span class="s">15</span>L'homme spirituel, au contraire, <button class="mot" data-g="g-juge">juge</button> de tout, et il n'est lui-même jugé par personne. <span class="s">16</span>Car qui a connu la pensée du Seigneur, pour l'instruire ? Or nous, nous avons la pensée de Christ.</p></div>
+        <div class="glose" id="g-sonde"><span class="lemme">ἐραυνᾷ (eraunâ)</span> Du verbe ἐρευνάω, « scruter, fouiller, sonder » — le mot qui désigne ailleurs la recherche des Écritures (Jean 5,39) ou le Dieu qui « sonde les cœurs » (Ps 7,10 LXX ; Rm 8,27). Segond garde l'image concrète de la sonde du navigateur, qui mesure une profondeur qu'on ne voit pas d'en haut. Chrysostome, dans son homélie VII sur cette épître, précise que cette recherche n'est pas ignorance en Dieu : l'Esprit ne s'informe pas du dehors, il connaît du dedans, comme l'esprit de l'homme connaît l'homme.</div>
+        <div class="glose" id="g-animal"><span class="lemme">ψυχικός (psychikos)</span> De ψυχή, l'âme, le souffle vital commun à tout vivant. Segond traduit par « animal », choix rude qui fait entendre la bête plutôt que l'âme ; d'autres versions préfèrent « l'homme naturel » ou « psychique », plus proche du grec mais plus obscur. Chrysostome, puis Calvin à sa suite, n'y lisent pas un mépris du corps mais la condition de qui n'a que les ressources de la raison naturelle, sans le don de l'Esprit qui seul ouvre à connaître « les choses de Dieu ».</div>
+        <div class="glose" id="g-juge"><span class="lemme">ἀνακρίνει (anakrinei)</span> Verbe du vocabulaire judiciaire, « instruire une cause, interroger, discerner » — le mot que Luc emploie pour l'interrogatoire des apôtres devant le sanhédrin (Ac 4,9) ou l'examen des Béréens scrutant les Écritures (Ac 17,11). Segond traduit « juge », ce qui évoque un verdict moral, alors que Paul décrit plutôt un discernement, une capacité de peser toute chose à la lumière de l'Esprit reçu. Calvin y voit la liberté du croyant spirituel, soustrait à tout tribunal humain non par orgueil, mais parce que le jugement des hommes n'atteint pas ce qui vient de Dieu.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 144 (145), 8-9, 10-11, 12-13ab, 13cd-14 — Segond, 1910</p>
+        <div class="ecriture psaume"><p><span class="s">8</span>L'Éternel est <button class="mot" data-g="g-misericordieux">miséricordieux</button> et compatissant, lent à la colère et plein de bonté. <span class="s">9</span>L'Éternel est bon envers tous, et ses compassions s'étendent sur toutes ses œuvres.</p><p><span class="s">10</span>Toutes tes œuvres te loueront, ô Éternel ! et tes fidèles te béniront. <span class="s">11</span>Ils diront la gloire de ton règne, et ils proclameront ta puissance,</p><p><span class="s">12</span>pour faire connaître aux fils de l'homme ta puissance et la gloire magnifique de ton règne. <span class="s">13</span>Ton règne est un règne de tous les siècles, et ta domination subsiste dans tous les âges.</p><p><span class="s">14</span>L'Éternel <button class="mot" data-g="g-soutient">soutient</button> tous ceux qui tombent, et il redresse tous ceux qui sont courbés.</p></div>
+        <div class="glose" id="g-misericordieux"><span class="lemme">רַחוּם (rachum)</span> De la racine רֶחֶם (rechem), « le sein maternel » — la miséricorde biblique est littéralement une tendresse d'entrailles, non un sentiment abstrait. Segond traduit « miséricordieux », fidèle à la vieille langue religieuse, là où l'hébreu garde la mémoire physique du mot. C'est la formule même proclamée à Moïse au Sinaï (Exode 34,6), reprise ici comme la carte d'identité de Dieu, redite dans tout le Psautier (Ps 86,15 ; 103,8).</div>
+        <div class="glose" id="g-soutient"><span class="lemme">סוֹמֵךְ (someikh)</span> « Il soutient, il étaie » — ce verset ouvre la lettre samekh de l'acrostiche alphabétique du psaume 145. Or, entre le mem (v.13) et ce samekh, manque dans le texte hébreu massorétique que traduit Segond la lettre noun : un verset entier — « l'Éternel est fidèle dans toutes ses paroles et miséricordieux dans toutes ses œuvres » — a disparu par accident de copie, et n'est restitué que par la Septante, la Vulgate et le rouleau des Psaumes de Qumrân (11QPsa). C'est ce verset que le lectionnaire appelle « 13cd » : Segond, fidèle au texte hébreu reçu, ne le porte pas, tandis que la liturgie romaine, suivant la Vulgate, le restitue.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 4, 31-37 — Segond, 1910</p>
+        <div class="ecriture evangile"><p><span class="s">31</span>Il descendit à Capernaüm, ville de la Galilée ; et il enseignait, le jour du sabbat. <span class="s">32</span>On était frappé de sa doctrine ; car il parlait avec <button class="mot" data-g="g-autorite">autorité</button>.</p><p><span class="s">33</span>Il se trouva dans la synagogue un homme qui avait un <button class="mot" data-g="g-esprit-impur">esprit de démon impur</button>, et qui s'écria d'une voix forte : <span class="s">34</span>Ah ! qu'y a-t-il entre nous et toi, Jésus de Nazareth ? Tu es venu pour nous perdre. Je sais qui tu es : le <button class="mot" data-g="g-saint-de-dieu">Saint de Dieu</button>.</p><p><span class="s">35</span>Jésus le menaça, disant : Tais-toi, et sors de cet homme. Et le démon le jeta au milieu de l'assemblée, et sortit de lui, sans lui faire aucun mal. <span class="s">36</span>Tous furent saisis de stupeur, et ils se disaient les uns aux autres : Quelle est cette parole ? il commande avec autorité et puissance aux esprits impurs, et ils sortent ! <span class="s">37</span>Et sa renommée se répandit dans tous les lieux d'alentour.</p></div>
+        <div class="glose" id="g-autorite"><span class="lemme">ἐξουσία (exousia)</span> Pouvoir qui vient d'un droit reconnu, non simple force brute (δύναμις). Segond traduit « autorité », choix juste, mais il faut entendre que Luc oppose ce pouvoir à celui des scribes, dont l'enseignement s'appuyait sur la chaîne des maîtres cités (cf. Mt 7,29, parallèle). Chrysostome, à propos du même trait chez Matthieu, note que cette autorité n'est pas un ton mais l'accomplissement immédiat de la parole prononcée — ce que confirme le verset suivant, où le mot devient un ordre qui expulse.</div>
+        <div class="glose" id="g-esprit-impur"><span class="lemme">πνεῦμα δαιμονίου ἀκαθάρτου</span> Littéralement « esprit d'un démon impur » ; Segond garde la lourdeur du génitif grec plutôt que de lisser en « esprit impur » comme au verset suivant. Le mot ἀκάθαρτος appartient au vocabulaire rituel du Lévitique en grec, qui distingue le pur et l'impur devant Dieu ; porté sur l'esprit, il range le mal parmi ce qui rend inapte au culte, dans la synagogue même où la scène se déroule. Cyrille d'Alexandrie remarque que le démon crie précisément là où on lit la Loi, comme si sa présence n'y devenait visible qu'au moment où la parole de Jésus s'y fait entendre.</div>
+        <div class="glose" id="g-saint-de-dieu"><span class="lemme">ὁ ἅγιος τοῦ θεοῦ</span> Ce titre n'est prononcé dans les évangiles que par des démons (cf. Marc 1,24), et l'on retrouve un aveu comparable dans la bouche de la servante devineresse d'Actes 16,17, proclamant Paul et Silas « serviteurs du Dieu Très-Haut ». Calvin s'arrête sur ce paradoxe : les démons confessent une vérité que beaucoup d'hommes refusent, et pourtant cette connaissance ne les sauve pas, car elle n'est pas la foi mais une reconnaissance arrachée par la crainte. C'est exactement l'écart que Paul marque en 1 Corinthiens 2 entre savoir une chose et la connaître par l'Esprit qui unit à elle.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Corinthe et les sagesses rivales</h3><p>Corinthe, ville-carrefour rebâtie par Rome en 44 av. J.-C., attirait rhéteurs et sophistes dont l'éloquence faisait autorité. L'Église, fondée par Paul vers 50-51, se divisait déjà selon les maîtres qu'on suivait (1 Co 1,12). Contre cette sagesse de tribune, Paul oppose dès 1 Co 2,1-5 une prédication « en démonstration d'Esprit » ; ce chapitre en tire la théorie : on ne reçoit la pensée de Dieu que par l'Esprit qui la révèle, non par l'art du discours.</p></div>
+      <div><h3>Capernaüm, la ville que Jésus choisit</h3><p>Capernaüm, modeste bourg de pêcheurs sur la rive nord du lac de Galilée, devient dans Luc la base de la mission après le rejet de Nazareth (Lc 4,16-30 ; cf. Mt 4,13, « sa ville », Mt 9,1). Les fouilles ont dégagé, sous la synagogue de basalte noir datée du 4e siècle, des fondations plus anciennes qui pourraient remonter au temps de Jésus. Luc y situe son premier exorcisme rapporté, un jour de sabbat, dans le lieu même de la lecture de la Loi.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que tu sais, ce qui te connaît</h2>
+<p>Tu peux réciter le Symbole des Apôtres depuis l'enfance, nommer sans hésiter chaque article — la création, l'incarnation, la résurrection — comme on énonce une leçon sue par cœur, sans qu'aucun mot ne t'ait jamais requis personnellement. Puis vient une nuit où tout vacille, où la peur ou le deuil te tient éveillé, et les mêmes mots reviennent, mais ils ne sont plus une liste : ils te portent, et tu comprends soudain la différence entre savoir qui est Dieu et être rejoint par lui. Ce que le texte de ce jour appelle l'Esprit qui sonde les profondeurs, tu ne l'as pas produit en approfondissant ta doctrine ; il t'a atteint là où ton savoir s'arrêtait.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, laisse un instant ces mots te rejoindre, non comme une information de plus, mais comme une question posée par l'Esprit lui-même.</p>
+      <p class="geste">Reprends lentement 1 Co 2,16 — « nous avons la pensée de Christ » — puis reste en silence une minute, sans rien ajouter, en laissant cette phrase te sonder plutôt que l'inverse.</p>
+      <small>Rien ici ne demande une émotion particulière : l'Esprit qui sonde travaille aussi dans le silence sans ressenti.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce que tu sais de Dieu, aujourd'hui, sans que cela t'ait jamais vraiment atteint ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une recherche qui n'est pas ignorance</h3>
+          <p>Chrysostome s'arrête sur le verbe « sonder » : comment l'Esprit, qui est Dieu, pourrait-il chercher ce qu'il connaît déjà ? Il répond que l'Écriture parle ici « à la manière des hommes », comme ailleurs Dieu « descend voir » Sodome (Gn 18,21) sans rien ignorer. Sonder les profondeurs de Dieu, pour l'Esprit, c'est les habiter et les communiquer, non les découvrir du dehors. Ce détour de langage protège, selon lui, l'unité de nature entre l'Esprit et le Père qu'il révèle.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la première épître aux Corinthiens, homélie VII</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La foi des démons n'est pas la foi</h3>
+          <p>Calvin distingue nettement le savoir que les démons ont de Dieu et la foi qui unit le croyant au Christ. S'appuyant sur Jacques 2,19 — « les démons le croient aussi, et ils tremblent » — il refuse d'appeler foi cette connaissance sans amour ni confiance : elle est arrachée par la crainte, non donnée par l'Esprit. Le cri du possédé de Capernaüm, qui nomme justement Jésus « le Saint de Dieu », illustre pour lui cette connaissance stérile, à l'opposé de la reconnaissance filiale.</p>
+<p class="attrib">Jean Calvin, Institution de la religion chrétienne, III, 2</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le cri dans le lieu de la Loi</h3>
+          <p>Cyrille remarque que c'est dans la synagogue même, un jour de sabbat, que le démon se manifeste — comme si la seule proclamation de la Loi et l'enseignement du Christ suffisaient à rendre visible ce qui restait caché jusque-là. Il lit dans l'ordre « Tais-toi, et sors » une double correction : Jésus refuse le témoignage du démon avant même de le chasser, parce qu'une vérité, même juste, dite par une telle bouche, reste inapte à édifier l'Église naissante.</p>
+<p class="attrib">Cyrille d'Alexandrie, Homélies sur saint Luc, homélie XII (trad. R. Payne Smith)</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 22ème Semaine du Temps Ordinaire — 1 Co 2, 10b-16 ; Lc 4, 31-37.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
