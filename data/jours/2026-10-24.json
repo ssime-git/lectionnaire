@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-24",
+  "date_humaine": "samedi",
+  "semaine": "29ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 4, 7-16 ; Lc 13, 1-9",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M14 116 q48 -4 96 -10\"/><path d=\"M26 102 q42 -5 80 -12\"/><path d=\"M38 86 q32 -6 60 -14\"/><path d=\"M62 128 q3 -15 11 -17 q6 -1 7 5 q2 4 -3 7 M70 112 q3 -3 7 -1 M74 116 q9 -3 15 -10\"/><path d=\"M90 106 l9 -13 M96 95 q4 -2 6 2 q-1 5 -6 4 M84 126 q4 2 8 0\"/><path d=\"M222 92 q30 -24 58 -29 q25 -5 46 1\"/><path d=\"M242 90 h60 M244 90 v-15 h8 v15 M259 90 v-15 h8 v15 M274 90 v-15 h8 v15 M289 90 v-15 h8 v15\"/><path d=\"M212 92 l9 -5 l9 5 l9 -5 l9 5 l8 -5\"/><path d=\"M216 86 v-5 M234 80 v-5 M250 76 v-5\"/></g><g class=\"trait-rubrique\"><path d=\"M98 128 q-3 -18 2 -31 q4 -11 -3 -20 M93 77 q-15 -7 -24 -1 M101 71 q11 -13 23 -8 M95 63 q1 -9 9 -13\"/></g><g class=\"trait-liturgie\"><path d=\"M265 90 v-22 q6 -8 12 0 v22 M258 90 l7 -6 M283 90 l-6 -6\"/></g></svg>",
+  "titre": "Mesure et sursis",
+  "titre_html": "Mesure et <span class=\"it\">sursis</span>",
+  "sous_titre": "Ce que la grâce donne par mesure, la patience de Dieu le donne par délai.",
+  "suite_hier": null,
+  "gravure_alt": "Un figuier noueux planté au bord d'une vigne en terrasses ; un vigneron agenouillé y creuse la terre à la bêche, pendant qu'au loin, sur les toits d'une ville fortifiée, des pèlerins montent par une volée de degrés vers un portail ouvert.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 4, 7-16",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">7</span> Mais à chacun de nous la grâce a été donnée selon la <button class=\"mot\" data-g=\"g-metron\">mesure</button> du don de Christ.</p><p><span class=\"s\">8</span> C'est pourquoi il est dit : Il est monté en haut, il a emmené des captifs, et il a fait des <button class=\"mot\" data-g=\"g-domata\">dons</button> aux hommes.</p><p><span class=\"s\">9</span> Or, que signifie : il est monté, sinon qu'il est aussi descendu ? <span class=\"s\">10</span> Celui qui est descendu, c'est le même qui est monté au-dessus de tous les cieux, afin de remplir toutes choses.</p><p><span class=\"s\">11</span> Et il a donné les uns comme apôtres, les autres comme prophètes, les autres comme évangélistes, les autres comme pasteurs et docteurs, <span class=\"s\">12</span> pour le perfectionnement des saints en vue de l'œuvre du ministère et de l'<button class=\"mot\" data-g=\"g-oikodome\">édification</button> du corps de Christ,</p><p><span class=\"s\">13</span> jusqu'à ce que nous soyons tous parvenus à l'unité de la foi et de la connaissance du Fils de Dieu, à l'état d'homme fait, à la <button class=\"mot\" data-g=\"g-helikia\">mesure de la stature</button> parfaite de Christ,</p><p><span class=\"s\">14</span> afin que nous ne soyons plus des enfants, flottants et emportés à tout vent de doctrine, par la tromperie des hommes, par leur ruse dans les moyens de séduire, <span class=\"s\">15</span> mais que, professant la vérité dans la charité, nous croissions à tous égards en celui qui est le chef, Christ.</p><p><span class=\"s\">16</span> C'est de lui, et grâce à tous les liens de son assistance, que le corps tout entier, bien coordonné et formé ensemble, tire son accroissement selon la force qui convient à chacune de ses parties, et s'édifie lui-même dans l'amour.</p>",
+      "gloses": [
+        {
+          "id": "g-metron",
+          "lemme": "métron",
+          "html": "Le grec dit <span class=\"gr\">μέτρον</span> (metron), « mesure » : chacun ne reçoit pas la grâce en bloc, mais selon une quantité ajustée à sa place dans le corps. Segond traduit littéralement, gardant l'idée d'une répartition calculée plutôt que d'un don identique pour tous. Chrysostome, dans ses homélies sur cette épître, insiste : si la grâce était uniforme, le corps n'aurait que des yeux ou que des mains, et périrait de cette uniformité même — c'est la mesure propre à chacun qui rend l'ensemble vivant."
+        },
+        {
+          "id": "g-domata",
+          "lemme": "dons",
+          "html": "Paul cite le Psaume 68,19 qui dit, lui, que le vainqueur « a reçu des dons parmi les hommes » (<span class=\"gr\">δόματα</span>, domata, dans la Septante) ; or il écrit ici l'inverse : le Christ « a fait des dons aux hommes ». Segond traduit fidèlement ce renversement sans le signaler au lecteur. Jérôme notait déjà ce glissement : le roi victorieux reçoit le tribut des vaincus pour le redistribuer ensuite à son peuple — la citation n'est pas inexacte, elle est relue à la lumière de la croix."
+        },
+        {
+          "id": "g-oikodome",
+          "lemme": "oikodomè",
+          "html": "<span class=\"gr\">οἰκοδομή</span> (oikodomè), de <span class=\"gr\">οἶκος</span> (maison) et <span class=\"gr\">δέμω</span> (bâtir), désigne le chantier concret plus que l'idée abstraite que « édification » évoque aujourd'hui en français. Segond choisit un mot devenu technique et un peu pieux, là où le grec garde l'image d'une maison qu'on monte pierre après pierre. Calvin rappelle que cette construction n'est jamais individuelle chez Paul : nul ne se bâtit seul, chacun est à la fois pierre et maçon pour les autres."
+        },
+        {
+          "id": "g-helikia",
+          "lemme": "hèlikia",
+          "html": "<span class=\"gr\">ἡλικία</span> (hèlikia) peut signifier aussi bien « âge » que « stature, taille » : Segond choisit « stature », gardant l'image d'une croissance physique plutôt que celle, plus plate, d'un âge atteint. Chrysostome lit ce verset comme la description d'un corps qui n'a pas fini de grandir tant que tous ses membres ne sont pas venus prendre leur place : la maturité ne se mesure jamais à un seul, mais à l'ensemble assemblé."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 121 (122), 1-2, 3-4ab, 4cd-5",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> <button class=\"mot\" data-g=\"g-maalot\">Cantique des degrés</button>. De David. Je suis dans la joie quand on me dit : Allons à la maison de l'Éternel ! <span class=\"s\">2</span> Nos pieds s'arrêtent dans tes portes, Jérusalem !</p><p><span class=\"s\">3</span> Jérusalem, tu es bâtie comme une ville dont les parties sont <button class=\"mot\" data-g=\"g-chubbera\">liées ensemble</button>. <span class=\"s\">4</span> C'est là que montent les tribus, les tribus de l'Éternel, selon la loi d'Israël, pour louer le nom de l'Éternel.</p><p><span class=\"s\">5</span> Car là sont posés les sièges du jugement, les sièges de la maison de David.</p>",
+      "gloses": [
+        {
+          "id": "g-maalot",
+          "lemme": "ma'alot",
+          "html": "<span class=\"gr\">שִׁיר הַמַּעֲלוֹת</span> (shir ha-ma'alot), litt. « chant des montées » : titre commun aux Psaumes 120 à 134, chantés par les pèlerins montant à Jérusalem pour les grandes fêtes, ou peut-être liés aux quinze marches du Temple où se tenaient les lévites selon la Mishna (Soukka 5,4). Segond garde le mot technique « degrés » plutôt que « pèlerinages », restant littéral au prix de la clarté, mais conservant ainsi l'image d'une ascension physique que le psaume met en scène dès son premier mot."
+        },
+        {
+          "id": "g-chubbera",
+          "lemme": "chubberah",
+          "html": "<span class=\"gr\">חֻבְּרָה</span> (chubberah), « jointe, assemblée », vient de la racine <span class=\"gr\">חבר</span> (chabar), « lier, unir » — la même racine que le mot hébreu pour « compagnon ». Segond traduit avec justesse « dont les parties sont liées ensemble », gardant l'image de pierres ajustées sans joint visible. Le Midrash Tehillim y lit l'unité d'Israël rassemblé dans la ville ; les Pères y verront plus tard l'image de l'Église, « bien coordonnée et formée ensemble » — presque les mots mêmes d'Éphésiens 4,16."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 13, 1-9",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> En ce même temps, quelques personnes qui étaient là racontaient à Jésus ce qui était arrivé à des Galiléens dont Pilate avait mêlé le sang avec celui des sacrifices qu'ils offraient.</p><p><span class=\"s\">2</span> Il leur répondit : Pensez-vous que ces Galiléens fussent plus pécheurs que tous les autres Galiléens, parce qu'ils ont souffert de la sorte ? <span class=\"s\">3</span> Non, je vous le dis. Mais si vous ne vous <button class=\"mot\" data-g=\"g-metanoeo\">repentez</button> pas, vous périrez tous de la même manière.</p><p><span class=\"s\">4</span> Ou bien, ces dix-huit personnes sur qui est tombée la tour de Siloé et qu'elle a tuées, croyez-vous qu'elles fussent plus coupables que tous les autres habitants de Jérusalem ? <span class=\"s\">5</span> Non, je vous le dis. Mais si vous ne vous repentez pas, vous périrez tous de même.</p><p><span class=\"s\">6</span> Il dit aussi cette parabole : Un homme avait un figuier planté dans sa vigne. Il vint pour y chercher du fruit, et il n'en trouva point. <span class=\"s\">7</span> Alors il dit au vigneron : Voilà trois ans que je viens chercher du fruit à ce figuier, et je n'en trouve point. Coupe-le : pourquoi occupe-t-il la terre inutilement ?</p><p><span class=\"s\">8</span> Mais le vigneron lui répondit : Seigneur, <button class=\"mot\" data-g=\"g-aphes\">laisse-le</button> encore cette année ; je creuserai tout autour, et j'y mettrai du fumier. <span class=\"s\">9</span> Peut-être à l'avenir donnera-t-il du fruit ; si non, tu le couperas.</p>",
+      "gloses": [
+        {
+          "id": "g-metanoeo",
+          "lemme": "metanoéô",
+          "html": "<span class=\"gr\">μετανοέω</span> (metanoéô), litt. « changer de pensée » (<span class=\"gr\">νοῦς</span>, l'intelligence), bien plus radical que le simple regret. Segond traduit par « se repentir », mot d'origine latine chargé en français d'une connotation de contrition affective, alors que le grec désigne un retournement de l'intelligence et de la direction entière de la vie. Chrysostome note que Jésus ne répond pas à la question du pourquoi du malheur, mais déplace toute la question vers l'urgence de ce changement intérieur : le malheur d'autrui devient un appel, non une explication."
+        },
+        {
+          "id": "g-aphes",
+          "lemme": "aphès",
+          "html": "<span class=\"gr\">ἄφες</span> (aphès), impératif de <span class=\"gr\">ἀφίημι</span> (aphièmi), « laisser, remettre, pardonner » — la même racine que le pardon des péchés dans le Notre Père. Segond traduit platement par « laisse », perdant l'écho : le vigneron ne demande pas un simple délai technique, il intercède, il plaide une remise de peine pour l'arbre condamné. L'exégèse ancienne, reprise par les homéliaires byzantins, a souvent lu ce vigneron comme une figure du Christ intercesseur, retardant le jugement par sa propre médiation."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre de prison",
+      "corps_html": "Paul écrit ces lignes depuis une captivité qu'il mentionne lui-même (Ep 3,1 ; 4,1), probablement à Rome vers 61-63. Les trois premiers chapitres ont déployé un mystère : Juifs et païens réunis en un seul corps par la croix. Au chapitre 4 commence la partie que l'on appelle éthique — non une morale ajoutée après coup, mais la question de savoir comment cette unité déjà donnée devient une vie concrète, faite de dons distincts tenus ensemble malgré leur différence."
+    },
+    {
+      "titre": "Pilate et la tour de Siloé",
+      "corps_html": "Aucun historien profane ne rapporte précisément ce massacre de Galiléens, mais Josèphe (Antiquités juives, XVIII, 3) décrit un Pilate coutumier de la répression brutale, notamment lors d'émeutes liées à des travaux d'aqueduc près de Jérusalem — travaux auxquels on a parfois rattaché l'effondrement de la tour de Siloé. Luc ne cherche pas à vérifier les faits : il s'en sert pour déplacer la question du malheur vers celle, plus urgente à ses yeux, de la conversion de chacun."
+    }
+  ],
+  "analogie": {
+    "titre": "Le délai",
+    "variantes": [
+      "Il y a des années où tu pries sans qu'il se passe rien de visible, où ta vie spirituelle semble un sol tassé qui ne porte aucun fruit malgré les saisons qui passent. Tu pourrais conclure, comme le maître de la parabole, qu'il n'y a plus rien à attendre de cette terre-là. Mais ce que tu ne vois pas, c'est l'intercession qui se fait pour toi pendant ce temps où tu ne sens rien — quelqu'un plaide ton sursis avant même que tu saches qu'il t'est nécessaire, et c'est cela, non ta propre fécondité, qui te maintient debout devant Dieu.",
+      "Tu voudrais parfois savoir d'un coup ce que Dieu attend de toi, recevoir ta part entière, ta mesure de grâce, comme on reçoit un salaire compté. Mais la grâce ne vient pas ainsi : elle s'ajuste à ce que tu peux porter aujourd'hui, un peu à la fois, et ce qui te manque encore n'est pas un retard de Dieu mais la forme même de ta croissance. Tu ne grandis pas en recevant tout de suite ce que tu seras un jour, tu grandis en recevant chaque jour exactement ce qu'il te faut pour tenir debout à côté des autres, qui reçoivent eux aussi leur propre mesure, différente et nécessaire.",
+      "Tu as pu servir longtemps sans rien voir lever — une parole donnée qui n'a changé personne que tu saches, une fidélité maintenue sans signe de retour. Le découragement vient alors te dire que ce travail est vain, qu'il faudrait couper, passer à autre chose de plus rentable. Mais la prière qui intercède pour toi ne mesure pas comme toi : elle demande du temps, elle retourne la terre une fois encore, et ce que tu appelais stérilité n'était peut-être que la lenteur normale de ce qui doit encore mûrir sous une main qui n'a pas renoncé."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le vigneron de la parabole ne promet pas que l'arbre portera du fruit ; il demande seulement le temps de retourner la terre une fois encore. C'est peut-être la prière la plus honnête qu'on puisse faire aujourd'hui pour soi-même.",
+    "geste": "Nomme devant Dieu, en silence, un endroit précis de ta vie où tu te sens stérile ou à bout de patience envers toi-même, et demande seulement le délai, pas encore le fruit.",
+    "note": "Rien n'oblige à ressentir un résultat immédiat : le texte lui-même suspend la réponse à l'année suivante."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore qu'on retourne la terre autour de lui avant de porter du fruit ?",
+  "racines": [
+    {
+      "titre": "La mesure qui rend le corps vivant",
+      "corps_html": "Chrysostome s'arrête longuement sur le mot « mesure » : si la grâce était donnée à tous de façon identique, dit-il, le corps n'aurait que des yeux ou que des mains, et périrait de cette uniformité même. C'est la diversité mesurée des dons qui rend le corps vivant — nul membre n'a reçu assez pour se suffire à lui-même, ce qui oblige chacun à l'autre pour que l'ensemble tienne debout.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Éphésiens, XIᵉ homélie"
+    },
+    {
+      "titre": "Une patience qui n'est pas indéfinie",
+      "corps_html": "Calvin lit le délai accordé au figuier comme la patience même de Dieu envers son Église, patience qui n'est jamais sans terme : le vigneron plaide une année, non une éternité. Il met en garde contre deux excès symétriques — présumer de la miséricorde au point de s'endormir, ou désespérer d'elle au point de ne plus labourer sa propre terre en attendant.",
+      "attribution": "Jean Calvin, Commentaire sur l'harmonie évangélique, sur Luc 13"
+    },
+    {
+      "titre": "Monter au-dessus de soi-même",
+      "corps_html": "Augustin lit les montées de ce psaume non comme un déplacement géographique mais comme une ascension intérieure : on monte vers Jérusalem en montant au-dessus de soi-même, par l'humilité qui seule fait grandir. Il rapproche ce psaume des degrés de la charité, chaque pèlerin montant d'un amour plus étroit à un amour plus large, jusqu'à la maison commune.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 121 (122)"
+    }
+  ]
+}
