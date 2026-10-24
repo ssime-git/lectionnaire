@@ -113,6 +113,7 @@ jobs:
             - [ ] Analogie : choisir la variante (`analogie.choisi` : 0, 1 ou 2)
             - [ ] Ton : sobre, sans formules creuses
             - [ ] Gravure : vérifier le bois gravé (généré ; le retoucher à la main si besoin)
+            - [ ] Vidéos : chaque vidéo a un lien réel avec le jour (sinon la retirer de `videos`)
 
             Pour corriger : éditer `data/jours/${{ steps.date.outputs.date }}.json`
             directement dans la PR — le HTML est re-rendu automatiquement à
@@ -123,3 +124,4 @@ jobs:
           add-paths: |
             data/jours/${{ steps.date.outputs.date }}.json
             docs/${{ steps.date.outputs.date }}.html
+            docs/vignettes/

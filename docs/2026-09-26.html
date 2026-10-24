@@ -204,6 +204,68 @@ footer a{color:var(--rubrique)}
   .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveler.vu{opacity:1;transform:none}
 }
+
+/* ---------- PORTES & BARRE : les entrées de lecture ----------
+   Lire / Comprendre suivent la position ; Voir est un interrupteur qui
+   déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
+.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
+.portes a:last-child{border-right:0}
+.portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
+.portes .d{display:block;font-size:.85rem;color:var(--muet);font-style:italic;margin-top:.3rem;line-height:1.3}
+.portes a:hover .n,.portes .on .n{color:var(--liturgie)}
+.portes .on{background:var(--papier-creux)}
+.portes .voir .n{color:var(--rubrique)}
+.portes .ouvert-voir{background:var(--liturgie)}
+.portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
+.portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+@media(max-width:560px){.portes .d{display:none}}
+.barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
+.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;transition:background .3s,color .3s}
+.barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
+footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
+
+/* ---------- COMPAGNON : une vidéo à la fois ---------- */
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:auto;transition:transform .35s ease}
+.compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.compagnon .entete .rubrique{margin:0}
+.compagnon .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier:hover{color:var(--ink);border-color:var(--ink)}
+.video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
+.video:hover img,.video:focus-visible img{filter:none;opacity:1}
+.video .facade-titre{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-family:'Fraunces',serif;font-size:1.3rem}
+.video .lire{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;background:var(--papier);color:var(--ink);padding:.35rem .8rem .35rem .45rem;border-radius:999px;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;border:1px solid var(--filet)}
+.video .lire::before{content:"▶";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--rubrique);color:var(--papier);font-size:.62rem}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video:focus-visible{outline:2px solid var(--liturgie);outline-offset:3px}
+.compteur{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.8rem;margin-top:.8rem}
+.vtitre{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-top:.4rem}
+.raison{font-size:1.02rem;color:var(--glose-ink);font-style:italic;margin-top:.3rem}
+.credit{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.8rem;margin-top:.45rem}
+.credit a{color:var(--muet);text-decoration:none;border-bottom:1px solid var(--filet)}
+.credit a:hover{color:var(--rubrique)}
+.pellicule{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.9rem 0 .5rem;margin-top:1rem;border-top:1px solid var(--filet);scrollbar-width:thin}
+.pellicule .groupe{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-variant:small-caps;letter-spacing:.1em;font-size:.72rem;color:var(--rubrique);border-left:1px solid var(--filet);padding-left:.3rem;margin-left:.3rem;text-align:center}
+.pellicule .groupe:first-child{margin-left:0;scroll-snap-align:start}
+.pellicule button{flex:0 0 112px;scroll-snap-align:start;background:none;border:2px solid transparent;padding:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit;border-radius:2px;opacity:.75;transition:opacity .2s,border-color .2s}
+.pellicule button img,.pellicule .sans-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:grayscale(1) sepia(.25);background:var(--papier-creux)}
+.pellicule button span:last-child{display:block;font-size:.8rem;line-height:1.25;padding:.25rem .2rem .1rem}
+.pellicule button:hover{opacity:1}
+.pellicule button.on{border-color:var(--liturgie);opacity:1}
+.pellicule button.on img{filter:none}
+@media(min-width:1100px){
+  body{transition:padding-right .35s ease}
+  .compagnon{top:0;right:0;bottom:0;width:460px;padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
+  body.panneau{padding-right:460px}
+  #basculer-theme,#carte{transition:right .35s ease}
+  body.panneau #basculer-theme,body.panneau #carte{right:calc(460px + 1rem)}
+  body.panneau .barre-portes{left:calc((100vw - 460px)/2)}
+}
+@media(max-width:1099px){
+  .compagnon{left:0;right:0;bottom:0;max-height:78vh;padding:1.6rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+}
+.compagnon.ouvert{transform:none}
 </style>
 </head>
 <body>
@@ -230,7 +292,10 @@ footer a{color:var(--rubrique)}
     <h1>Compter<span class="it"> nos jours</span></h1>
     <p class="chapeau">Vieillir, mourir, ne pas comprendre — et pourtant garder la parole reçue</p>
     <figure class="gravure" aria-label="Un sablier presque vide posé sur le rebord d'une fenêtre aux volets à demi fermés ; dehors, un amandier en fleur se détache contre un ciel qui s'assombrit, et un oiseau s'envole au-dessus d'un chemin désert."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M15 112 H290"/><path d="M90 108 V27 H270 V108"/><path d="M90 27 L122 31 L122 106 L90 110 M92 47 L120 49 M92 67 L120 69 M92 87 L120 89"/><path d="M270 27 L238 31 L238 106 L270 110 M268 47 L240 49 M268 67 L240 69 M268 87 L240 89"/><path d="M35 70 L65 70 L50 90 L65 110 L35 110 L50 90 Z"/><path d="M44 103 Q50 97 56 103 M50 90 L50 95"/><path d="M190 110 Q186 75 195 55 Q198 43 210 35 M196 70 Q206 63 216 65 M197 57 Q187 49 177 51"/><path d="M130 33 l10 6 M145 30 l10 6 M160 35 l10 6"/><path d="M145 45 q5 -7 10 0 q5 -7 10 0"/><path d="M135 110 Q168 95 205 91 M175 110 Q190 99 205 95"/></g><g class="trait-liturgie"><path d="M208 33 q2 -4 4 0 q-2 4 -4 0 M214 63 q2 -4 4 0 q-2 4 -4 0 M175 49 q2 -4 4 0 q-2 4 -4 0 M193 53 q2 -4 4 0 q-2 4 -4 0"/></g></svg></figure>
-    <a class="descendre" href="#textes">Entrer dans le texte</a>
+    <nav class="portes" aria-label="Entrées de lecture">
+      <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
+      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+    </nav>
   </header>
 
   <!-- ② TEXTES (rail) -->
@@ -334,10 +399,17 @@ footer a{color:var(--rubrique)}
     Références : lectionnaire romain (AELF), 25ème Semaine du Temps Ordinaire — Qo 11, 9 – 12, 8 ; Lc 9, 43b-45.<br>
     Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
     <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+    <span class="mention-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</span>
   </footer>
 
 </div>
 </div>
+
+<nav class="barre-portes" aria-label="Entrées de lecture">
+  <a href="#textes" data-porte="lire">Lire</a>
+  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+</nav>
+
 
 <script>
 (function(){
@@ -382,6 +454,54 @@ var obsCarte=new IntersectionObserver(function(es){
 cibles.forEach(function(c){if(c)obsCarte.observe(c)});
 var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+// Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
+// Voir est un interrupteur qui déplie ou replie le compagnon.
+(function(){
+  var portes=document.querySelectorAll('[data-porte]');
+  var comp=document.getElementById('compagnon'),ecran=document.getElementById('ecran');
+  var mq=matchMedia('(min-width:1100px)');
+  var ouvert=null,position='lire',verrou=0;
+  function peindre(){portes.forEach(function(e){var p=e.dataset.porte;
+    e.classList.toggle('on',!ouvert&&p===position);
+    e.classList.toggle('ouvert-voir',ouvert==='voir'&&p==='voir');
+    if(p==='voir')e.setAttribute('aria-expanded',ouvert==='voir'?'true':'false')})}
+  function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
+    var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
+    else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
+    var l=document.createElement('span');l.className='lire';l.textContent='Regarder';ecran.appendChild(f);ecran.appendChild(l)}
+  function ouvrir(o){ouvert=o;
+    if(comp){comp.classList.toggle('ouvert',!!o);document.body.classList.toggle('panneau',!!o&&mq.matches);
+      if(!o&&ecran.querySelector('iframe'))facade()}  // replier coupe la vidéo
+    peindre()}
+  portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
+    if(p==='voir'){ev.preventDefault();ouvrir(ouvert==='voir'?null:'voir');return}
+    position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
+  var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&Date.now()-verrou>900){position=zones[e.target.id];peindre()}})},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(zones).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  peindre();
+  if(!comp)return;
+  var replier=comp.querySelector('.replier');
+  function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
+  fleche();mq.addEventListener('change',fleche);
+  replier.addEventListener('click',function(){ouvrir(null)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
+  function lancer(){var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(ecran.dataset.yt)+'?autoplay=1&rel=0&hl=fr';
+    f.title=ecran.dataset.titre;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+    ecran.textContent='';ecran.appendChild(f)}
+  ecran.addEventListener('click',function(){if(!ecran.querySelector('iframe'))lancer()});
+  ecran.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&!ecran.querySelector('iframe')){e.preventDefault();lancer()}});
+  var films=comp.querySelectorAll('.pellicule button');
+  films.forEach(function(b){b.addEventListener('click',function(){
+    ['yt','titre','vignette'].forEach(function(k){ecran.dataset[k]=b.dataset[k]});lancer();
+    document.getElementById('ecran-titre').textContent=b.dataset.titre;
+    document.getElementById('ecran-raison').textContent=b.dataset.raison;
+    document.getElementById('ecran-yt').href='https://www.youtube.com/watch?v='+encodeURIComponent(b.dataset.yt);
+    document.getElementById('compteur').textContent='Vidéo '+(+b.dataset.i+1)+' sur '+films.length;
+    films.forEach(function(x){x.classList.toggle('on',x===b)})})});
+})();
 </script>
 </body>
 </html>

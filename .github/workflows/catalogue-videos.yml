@@ -1,0 +1,49 @@
+name: Rafraîchir le catalogue des vidéos
+
+# Chaque lundi, relit la page publique de la chaîne BibleProject - Français
+# (pas d'API YouTube Data : ni clé ni quota) et propose le catalogue mis à
+# jour en PR. Un format YouTube changé fait échouer le run sans toucher au
+# catalogue (videos.py refuse d'écrire moins de 100 vidéos).
+
+on:
+  schedule:
+    - cron: "40 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  catalogue:
+    name: Relire la chaîne et proposer le catalogue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Installer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installer les dépendances verrouillées
+        run: uv sync --locked
+
+      - name: Rafraîchir data/videos.json
+        run: make catalogue
+
+      - name: Ouvrir la pull request si le catalogue a changé
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: catalogue/videos
+          base: main
+          title: "Catalogue des vidéos — mise à jour"
+          commit-message: "Met à jour le catalogue des vidéos BibleProject - Français"
+          body: |
+            Catalogue relu sur la page publique de la chaîne
+            [BibleProject - Français](https://www.youtube.com/@BibleProject-Fran%C3%A7ais).
+            Les brouillons suivants pourront choisir les nouvelles vidéos.
+          add-paths: |
+            data/videos.json
