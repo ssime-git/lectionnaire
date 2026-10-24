@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-10",
+  "date_humaine": "jeudi",
+  "semaine": "23ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 8, 1b-7.10-13 ; Lc 6, 27-38",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M170 24 v34\"/><path d=\"M140 58 h60\"/><path d=\"M170 58 v10\"/><path d=\"M110 68 l60 -3 l60 3\"/><path d=\"M110 68 q-3 26 -24 30 q-21 -4 -24 -30 z\"/><path d=\"M170 65 q-3 26 -24 30 q-21 -4 -24 -30\"/><path d=\"M170 68 q3 26 24 30 q21 -4 24 -30 z\"/><path d=\"M170 65 q3 26 24 30 q21 -4 24 -30\"/><path d=\"M148 100 h44\"/><path d=\"M160 100 v14\"/><path d=\"M180 100 v14\"/><path d=\"M155 120 h30\"/></g><g class=\"trait-liturgie\"><path d=\"M170 12 q-9 8 -18 0 q9 -8 18 0 q9 -8 18 0 q-9 8 -18 0 z\"/><path d=\"M170 8 v8\"/><path d=\"M158 12 h24\"/></g><g class=\"trait-rubrique\"><path d=\"M30 40 q10 -10 22 -6\"/><path d=\"M30 40 q4 8 14 8\"/><path d=\"M52 34 l4 10 l-14 3\"/><path d=\"M298 40 q-10 -10 -22 -6\"/><path d=\"M298 40 q-4 8 -14 8\"/><path d=\"M276 34 l-4 10 l14 3\"/><path d=\"M60 30 q30 8 40 20\"/><path d=\"M268 30 q-30 8 -40 20\"/></g></svg>",
+  "titre": "Sans mesure",
+  "titre_html": "Sans <span class=\"it\">mesure</span>",
+  "sous_titre": "Ce que le cœur mesure, Dieu le connaît déjà",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois représentant une balance ancienne aux deux plateaux vides et penchés, suspendue sous un œil rayonnant entouré de mains ouvertes qui versent du grain sans le retenir — la mesure humaine et le regard qui connaît tout, réunis dans un même trait.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 8, 1b-7.10-13",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> ... la <button class=\"mot\" data-g=\"g-gnosis\">connaissance</button> enfle, mais l'amour <button class=\"mot\" data-g=\"g-oikodomei\">édifie</button>. <span class=\"s\">2</span> Si quelqu'un croit savoir quelque chose, il n'a pas encore connu comme il faut connaître. <span class=\"s\">3</span> Mais si quelqu'un aime Dieu, celui-là est connu de lui. <span class=\"s\">4</span> Pour ce qui est donc de manger des viandes sacrifiées aux idoles, nous savons qu'il n'y a point d'idole dans le monde, et qu'il n'y a qu'un seul Dieu. <span class=\"s\">5</span> Car, quand il y aurait des dieux, soit dans le ciel, soit sur la terre, comme il existe réellement plusieurs dieux et plusieurs seigneurs, <span class=\"s\">6</span> néanmoins pour nous il n'y a qu'un seul Dieu, le Père, de qui viennent toutes choses et pour qui nous sommes, et un seul Seigneur, Jésus-Christ, par qui sont toutes choses et par qui nous sommes. <span class=\"s\">7</span> Mais cette connaissance n'est pas chez tous. Quelques-uns, d'après la manière dont ils envisagent encore l'idole, mangent de ces viandes comme étant sacrifiées aux idoles, et leur <button class=\"mot\" data-g=\"g-syneidesis\">conscience</button>, qui est faible, en est souillée. <span class=\"s\">10</span> Car, si quelqu'un te voit, toi qui as de la connaissance, assis à table dans un temple d'idoles, sa conscience, à lui qui est faible, ne le portera-t-elle pas à manger des viandes sacrifiées aux idoles? <span class=\"s\">11</span> Et ainsi le frère faible périra par ta connaissance, le frère pour lequel Christ est mort! <span class=\"s\">12</span> En péchant de la sorte contre les frères, et en blessant leur conscience faible, vous péchez contre Christ. <span class=\"s\">13</span> C'est pourquoi, si un aliment <button class=\"mot\" data-g=\"g-skandalizo\">scandalise</button> mon frère, je ne mangerai jamais de viande, afin de ne pas scandaliser mon frère.",
+      "gloses": [
+        {
+          "id": "g-gnosis",
+          "lemme": "gnōsis",
+          "html": "Le mot grec <span class=\"gr\">gnōsis</span> désigne la connaissance, mais dans le vocabulaire des sagesses hellénistiques et des cercles corinthiens il connote un savoir qui distingue, qui hiérarchise les initiés et les ignorants. Segond traduit simplement par « connaissance », effaçant la charge polémique du terme : Paul cite presque un mot d'ordre corinthien pour aussitôt le retourner contre ceux qui s'en prévalent. Chrysostome note que Paul ne condamne pas le savoir en soi, mais le savoir séparé de la charité, car « la science sans l'amour enfle, quand l'amour édifie même sans grand savoir »."
+        },
+        {
+          "id": "g-oikodomei",
+          "lemme": "oikodomeō",
+          "html": "Le verbe <span class=\"gr\">oikodomeō</span> signifie littéralement bâtir une maison ; Paul l'emploie constamment dans les lettres aux Corinthiens pour désigner l'édification de la communauté comme un chantier commun. Segond traduit par « édifie », choix fidèle mais qui a perdu en français courant sa concrétude architecturale — on n'entend plus le chantier derrière le mot. Calvin insiste, dans son commentaire sur ce passage, sur le fait que nul n'édifie l'Église pour soi seul, mais chacun pour les autres, et que la charité seule sait construire sans écraser personne."
+        },
+        {
+          "id": "g-syneidesis",
+          "lemme": "syneidēsis",
+          "html": "<span class=\"gr\">Syneidēsis</span>, la conscience, est un mot rare dans l'Ancien Testament grec mais central dans le vocabulaire moral hellénistique repris par Paul — littéralement, un « savoir avec soi-même », un témoin intérieur qui accompagne l'acte. Segond garde « conscience », traduction si courante qu'elle masque la nouveauté du terme, appliqué ici non au fort mais au faible, dont le jugement intérieur peut être blessé par la liberté d'un autre. Chrysostome relève que Paul ne reproche jamais au frère fort de savoir, mais de faire de son savoir une pierre d'achoppement pour une conscience encore mal affermie."
+        },
+        {
+          "id": "g-skandalizo",
+          "lemme": "skandalizō",
+          "html": "Le verbe <span class=\"gr\">skandalizō</span> vient de <span class=\"gr\">skandalon</span>, le piège à ressort qui fait trébucher le gibier — Segond traduit « scandalise », mot devenu abstrait en français alors que l'image paulinienne est celle d'un obstacle matériel jeté sous les pas d'un frère mal assuré. Ce n'est pas une offense à la sensibilité qui est visée, mais une chute réelle, une foi qui se brise sur ce que la liberté d'un autre a laissé en travers du chemin. Calvin qualifie la conclusion de Paul — renoncer pour toujours à la viande — d'« amour qui ne calcule pas ce qu'il en coûte, mais ce qu'il en coûterait à l'autre »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 138 (139), 1-3, 13-14ab, 23-24",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Éternel! tu me <button class=\"mot\" data-g=\"g-chaqar\">sondes</button> et tu me <button class=\"mot\" data-g=\"g-yada\">connais</button>, <span class=\"s\">2</span> Tu sais quand je m'assieds et quand je me lève, Tu pénètres de loin ma pensée; <span class=\"s\">3</span> Tu sais quand je marche et quand je me couche, Et tu pénètres toutes mes voies. <span class=\"s\">13</span> C'est toi qui as <button class=\"mot\" data-g=\"g-qanah\">formé</button> mes reins, Qui m'as tissé dans le sein de ma mère. <span class=\"s\">14</span> Je te loue de ce que je suis une créature si merveilleuse. Tes œuvres sont admirables. <span class=\"s\">23</span> Sonde-moi, ô Dieu, et connais mon cœur! Éprouve-moi, et connais mes pensées! <span class=\"s\">24</span> Regarde si je suis sur une mauvaise voie, Et conduis-moi sur la voie de l'éternité!",
+      "gloses": [
+        {
+          "id": "g-chaqar",
+          "lemme": "chaqar",
+          "html": "Le verbe hébreu <span class=\"gr\">chaqar</span> évoque la fouille minière, l'exploration d'un terrain jusqu'à ses veines les plus profondes — c'est le mot qu'emploie Job pour l'homme qui creuse la roche à la recherche de l'or. Segond traduit « tu me sondes », image maritime qui garde quelque chose de cette profondeur mais perd la dureté du terrain fouillé : le psalmiste ne se donne pas, il se laisse extraire. Les commentateurs juifs classiques y lisent moins une intrusion qu'un aveu : Dieu seul mène cette fouille jusqu'au bout, là où l'homme s'arrête toujours devant lui-même."
+        },
+        {
+          "id": "g-yada",
+          "lemme": "yada",
+          "html": "<span class=\"gr\">Yada</span>, connaître, est en hébreu un verbe d'expérience et non de seule information — il désigne aussi bien la connaissance intellectuelle que l'intimité la plus charnelle, comme en Genèse 4 où « Adam connut Ève ». Segond traduit uniformément par « connaître », ce qui aplatit en français un mot qui, en hébreu, engage tout l'être et pas seulement l'esprit. Calvin, commentant ce psaume, insiste sur le fait que cette connaissance divine n'est pas une surveillance froide mais un lien antérieur à toute conscience que l'homme pourrait en avoir : on est connu avant de savoir qu'on l'est."
+        },
+        {
+          "id": "g-qanah",
+          "lemme": "qanah",
+          "html": "Le verbe traduit par « tu as formé » recouvre en hébreu l'idée d'acquérir, de façonner, de faire naître quelque chose qui devient propre à son auteur — le même verbe ouvre Genèse 4 quand Ève dit avoir « acquis » un homme avec l'aide de l'Éternel. Segond choisit « former », qui insiste sur le geste de l'artisan mais efface le lien de possession intime porté par le mot hébreu : ce que Dieu façonne dans le sein maternel lui appartient déjà avant que la mère elle-même ne le connaisse. La tradition rabbinique en tire que la vie de chacun est voulue avant même la naissance, tissée dans le secret."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 6, 27-38",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">27</span> Mais je vous dis, à vous qui m'écoutez: <button class=\"mot\" data-g=\"g-agapao\">Aimez</button> vos ennemis, faites du bien à ceux qui vous haïssent, <span class=\"s\">28</span> bénissez ceux qui vous maudissent, priez pour ceux qui vous maltraitent. <span class=\"s\">29</span> Si quelqu'un te frappe sur une joue, présente-lui aussi l'autre. Si quelqu'un prend ton manteau, ne l'empêche pas de prendre encore ta tunique. <span class=\"s\">30</span> Donne à quiconque te demande, et ne réclame pas ton bien à celui qui s'en empare. <span class=\"s\">31</span> Ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux. <span class=\"s\">32</span> Si vous aimez ceux qui vous aiment, quel gré vous en saura-t-on? Les pécheurs aussi aiment ceux qui les aiment. <span class=\"s\">33</span> Si vous faites du bien à ceux qui vous font du bien, quel gré vous en saura-t-on? Les pécheurs aussi agissent ainsi. <span class=\"s\">34</span> Et si vous prêtez à ceux de qui vous espérez recevoir, quel gré vous en saura-t-on? Les pécheurs aussi prêtent aux pécheurs, afin de recevoir la pareille. <span class=\"s\">35</span> Mais aimez vos ennemis, faites du bien, et prêtez sans rien espérer. Et votre récompense sera grande, et vous serez fils du Très-Haut, car il est bon pour les ingrats et pour les méchants. <span class=\"s\">36</span> Soyez donc <button class=\"mot\" data-g=\"g-oiktirmon\">miséricordieux</button>, comme votre Père est miséricordieux. <span class=\"s\">37</span> Ne <button class=\"mot\" data-g=\"g-krino\">jugez</button> point, et vous ne serez point jugés; ne condamnez point, et vous ne serez point condamnés; absolvez, et vous serez absous. <span class=\"s\">38</span> Donnez, et il vous sera donné: on vous donnera, dans votre sein, une bonne <button class=\"mot\" data-g=\"g-metron\">mesure</button>, tassée, secouée, et qui déborde; car on vous mesurera avec la mesure dont vous vous serez servis.",
+      "gloses": [
+        {
+          "id": "g-agapao",
+          "lemme": "agapaō",
+          "html": "Le verbe <span class=\"gr\">agapaō</span>, que Segond traduit « aimez », désigne dans le grec biblique un amour de volonté et de choix plutôt que d'affection spontanée — il diffère de <span class=\"gr\">phileō</span>, l'amitié chaleureuse, et plus encore d'<span class=\"gr\">erōs</span>, absent du Nouveau Testament. Appliqué aux ennemis, ce choix lexical est délibéré : Jésus ne demande pas d'éprouver pour l'ennemi la tendresse qu'on a pour un ami, mais de lui vouloir et de lui faire le bien par une décision qui ne dépend d'aucun sentiment. Chrysostome souligne que c'est précisément parce qu'agapē ne réclame pas d'émotion préalable qu'elle peut être commandée, là où l'affection, elle, ne se commande pas."
+        },
+        {
+          "id": "g-oiktirmon",
+          "lemme": "oiktirmōn",
+          "html": "<span class=\"gr\">Oiktirmōn</span>, miséricordieux, vient d'une racine qui évoque les entrailles émues, la compassion viscérale plus que la simple clémence juridique — c'est le mot que la Septante emploie pour traduire les attributs de tendresse de Dieu envers Israël. Segond garde « miséricordieux », fidèle mais qui, en français, penche vers le pardon d'une faute plutôt que vers cette compassion qui prend l'autre dans ses entrailles avant même qu'il ait péché. Le verset renvoie implicitement au Lévitique, « soyez saints comme je suis saint », que Luc transforme : la sainteté de Dieu se donne ici à imiter dans la miséricorde envers l'ingrat, non dans la séparation."
+        },
+        {
+          "id": "g-krino",
+          "lemme": "krinō",
+          "html": "<span class=\"gr\">Krinō</span>, juger, est le même verbe qui donne le mot crise en français — il désigne l'acte de trancher, de séparer dans un jugement qui prétend clore le débat sur autrui. Segond traduit « juger », choix direct et juste, mais qui en français moderne s'est affadi en simple opinion alors que le verbe grec porte le poids d'une sentence. Chrysostome remarque que Jésus ne défend pas de discerner le bien du mal, mais de s'ériger en tribunal sur la personne même du frère, place que l'Évangile réserve à Dieu seul."
+        },
+        {
+          "id": "g-metron",
+          "lemme": "metron",
+          "html": "Le mot grec <span class=\"gr\">metron</span>, la mesure, appartient au vocabulaire du marché, de la mesure de grain qu'on verse au client — Segond traduit fidèlement, et l'image reste vivante en français : tassée, secouée, débordante, c'est la mesure du marchand honnête qui donne plus que le juste compte. Jésus retourne cette image commerciale contre toute logique de calcul : la mesure qu'on emploie envers autrui devient, par une loi mystérieuse, celle dont Dieu se sert envers nous. Calvin y voit moins une transaction qu'un miroir : Dieu ne fait que renvoyer à l'homme l'image de sa propre largesse ou de sa propre étroitesse."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, la viande et les faibles",
+      "corps_html": "À Corinthe, la viande vendue au marché provenait le plus souvent des sacrifices offerts aux idoles dans les temples voisins ; un chrétien converti du paganisme pouvait donc, sans le vouloir, manger un aliment associé à son ancien culte. Paul écrit vers 54-55, depuis Éphèse, à une Église déchirée entre « forts », qui revendiquent leur liberté au nom d'un savoir théologique correct — un seul Dieu, donc les idoles ne sont rien — et « faibles » récemment sortis de l'idolâtrie, pour qui ce geste reste chargé de sens religieux réel. Chrysostome note que Paul ne tranche pas la question doctrinale, qu'il accorde d'ailleurs aux forts, mais la subordonne entièrement à la charité envers le frère fragile."
+    },
+    {
+      "titre": "Le sermon dans la plaine",
+      "corps_html": "Contrairement au sermon sur la montagne de Matthieu, Luc situe cet enseignement sur un lieu plat, entouré d'une foule venue de toute la Judée et même de Tyr et de Sidon, terres païennes — le cadre géographique dit déjà l'universalité du propos. L'exigence d'aimer l'ennemi n'est pas une maxime isolée : elle prolonge le renversement annoncé dans les béatitudes qui précèdent immédiatement, où les pauvres et les affamés sont déclarés heureux avant même que le monde ne soit changé. Calvin y voit la marque distinctive du christianisme par rapport à toute morale naturelle, qui s'arrête toujours à la réciprocité."
+    }
+  ],
+  "analogie": {
+    "titre": "Sans calcul",
+    "variantes": [
+      "Tu as peut-être commencé, un jour, à prier pour quelqu'un qui t'avait blessé, non parce que tu le voulais, mais parce qu'on t'avait dit qu'il le fallait, et les premiers mots sonnaient creux, presque hostiles envers toi-même qui les prononçais. Rien ne change tout de suite : le ressentiment reste intact, et la prière semble n'être qu'un exercice de récitation sans emprise sur ce que tu portes en toi. Puis, des mois ou des années plus tard, tu t'aperçois avec une sorte de surprise que le nom ne pèse plus de la même façon — non que tu aies forcé un pardon, mais qu'une mesure autre que la tienne a fait son travail pendant que tu ne regardais pas, et c'est devant cette mesure-là que tu te retrouves, sans l'avoir méritée ni même vraiment voulue jusqu'au bout.",
+      "Il t'est peut-être arrivé de comprendre, bien après coup, qu'une part de toi avait été vue avant que tu ne saches la nommer toi-même — une inclination, une peur, un manque que tu croyais avoir caché et qui, en réalité, n'avait jamais été un secret pour personne d'autre que toi. Ce n'est pas une intrusion que tu ressens alors, mais une forme de soulagement inattendu : être connu ainsi, jusque dans ce qu'on n'a pas encore formulé, retire un poids que la dissimulation seule rendait lourd. Tu te tiens alors devant quelqu'un qui te connaît plus loin que tu ne te connais, et cette connaissance-là, loin de juger d'abord, semble avoir façonné une place pour toi avant même que tu aies eu de quoi la mériter.",
+      "Tu as sans doute rendu un service, un jour, à quelqu'un dont tu savais qu'il ne pourrait jamais te le rendre, et tu l'as fait presque malgré toi, en te disant que ce geste resterait sans suite, une dépense pure. Ce qui te revient ensuite, s'il revient, ne vient presque jamais de la même main : un inconnu, une circonstance imprévue, un soutien reçu au moment où tu ne l'attendais plus, comme si le compte n'avait pas été tenu par ceux à qui tu avais donné, mais par une justice plus large que tu n'avais pas prévue. Tu comprends alors que la mesure dont tu t'étais servi sans calcul t'a été rendue par une main que tu n'avais pas visée, et c'est devant cette main-là, et non devant ton propre geste, que tu te retrouves finalement redevable."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte de ce jour ne demande pas d'abord un effort de volonté, mais un déplacement de regard : cesser de mesurer pour se laisser mesurer, cesser de juger pour se laisser connaître.",
+    "geste": "Reprends verset par verset la prière du psaume — « Sonde-moi, ô Dieu, et connais mon cœur » — et nomme devant Dieu, sans les corriger ni les justifier, un jugement ou un ressentiment que tu portes envers quelqu'un.",
+    "note": "Il ne s'agit pas de produire un sentiment d'amour immédiat pour un ennemi, mais de remettre la mesure entre des mains autres que les tiennes — c'est ce déplacement que le texte appelle miséricorde."
+  },
+  "question": "Quelle mesure emploies-tu envers ceux que tu ne peux pas aimer par affection, et qu'est-ce que cela dit de la mesure que tu attends, toi, de la part de Dieu ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la science qui enfle",
+      "corps_html": "Chrysostome, dans ses homélies sur la première épître aux Corinthiens, observe que Paul commence par concéder aux forts qu'ils ont raison sur le fond — il n'y a qu'un seul Dieu — avant de leur retirer aussitôt tout droit de s'en prévaloir contre un frère. Il y montre que la connaissance qui ne s'accompagne pas de charité rend l'homme semblable à un corps enflé, qui paraît grand mais n'a rien de sain, tandis que l'édification suppose un abaissement volontaire vers celui qui sait moins.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens"
+    },
+    {
+      "titre": "Calvin : sondé avant de savoir",
+      "corps_html": "Calvin, dans son Commentaire sur le livre des Psaumes, insiste sur le fait que David ne cherche pas ici à fuir Dieu comme on le ferait d'un juge redouté, mais se réjouit d'être connu jusque dans des profondeurs qu'il ignore lui-même. Cette connaissance divine, écrit-il, devrait être le plus ferme appui de la foi, puisqu'elle précède toute œuvre et tout mérite : Dieu nous forme avant que nous ayons rien fait pour mériter d'être formés.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, Psaume 139"
+    },
+    {
+      "titre": "Ambroise : la mesure qui revient",
+      "corps_html": "Ambroise de Milan, dans son commentaire sur l'Évangile de Luc, relève que Jésus ne promet pas seulement une récompense future à qui aime sans calcul, mais décrit une loi déjà à l'œuvre : la mesure que l'on emploie envers autrui façonne, dès maintenant, la mesure dont on est soi-même l'objet. Il y voit un avertissement contre toute charité qui resterait un calcul déguisé, puisque Dieu regarde moins le geste que la mesure intérieure d'où il procède.",
+      "attribution": "Ambroise de Milan, Exposition de l'Évangile selon saint Luc"
+    }
+  ]
+}

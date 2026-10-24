@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sans mesure — jeudi 10 septembre 2026</title>
+<meta name="description" content="Ce que le cœur mesure, Dieu le connaît déjà">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">jeudi 10 septembre 2026 · 23ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Sans <span class="it">mesure</span></h1>
+    <p class="chapeau">Ce que le cœur mesure, Dieu le connaît déjà</p>
+    <figure class="gravure" aria-label="Gravure sur bois représentant une balance ancienne aux deux plateaux vides et penchés, suspendue sous un œil rayonnant entouré de mains ouvertes qui versent du grain sans le retenir — la mesure humaine et le regard qui connaît tout, réunis dans un même trait."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M170 24 v34"/><path d="M140 58 h60"/><path d="M170 58 v10"/><path d="M110 68 l60 -3 l60 3"/><path d="M110 68 q-3 26 -24 30 q-21 -4 -24 -30 z"/><path d="M170 65 q-3 26 -24 30 q-21 -4 -24 -30"/><path d="M170 68 q3 26 24 30 q21 -4 24 -30 z"/><path d="M170 65 q3 26 24 30 q21 -4 24 -30"/><path d="M148 100 h44"/><path d="M160 100 v14"/><path d="M180 100 v14"/><path d="M155 120 h30"/></g><g class="trait-liturgie"><path d="M170 12 q-9 8 -18 0 q9 -8 18 0 q9 -8 18 0 q-9 8 -18 0 z"/><path d="M170 8 v8"/><path d="M158 12 h24"/></g><g class="trait-rubrique"><path d="M30 40 q10 -10 22 -6"/><path d="M30 40 q4 8 14 8"/><path d="M52 34 l4 10 l-14 3"/><path d="M298 40 q-10 -10 -22 -6"/><path d="M298 40 q-4 8 -14 8"/><path d="M276 34 l-4 10 l14 3"/><path d="M60 30 q30 8 40 20"/><path d="M268 30 q-30 8 -40 20"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — 1 Co 8, 1b-7.10-13 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> ... la <button class="mot" data-g="g-gnosis">connaissance</button> enfle, mais l'amour <button class="mot" data-g="g-oikodomei">édifie</button>. <span class="s">2</span> Si quelqu'un croit savoir quelque chose, il n'a pas encore connu comme il faut connaître. <span class="s">3</span> Mais si quelqu'un aime Dieu, celui-là est connu de lui. <span class="s">4</span> Pour ce qui est donc de manger des viandes sacrifiées aux idoles, nous savons qu'il n'y a point d'idole dans le monde, et qu'il n'y a qu'un seul Dieu. <span class="s">5</span> Car, quand il y aurait des dieux, soit dans le ciel, soit sur la terre, comme il existe réellement plusieurs dieux et plusieurs seigneurs, <span class="s">6</span> néanmoins pour nous il n'y a qu'un seul Dieu, le Père, de qui viennent toutes choses et pour qui nous sommes, et un seul Seigneur, Jésus-Christ, par qui sont toutes choses et par qui nous sommes. <span class="s">7</span> Mais cette connaissance n'est pas chez tous. Quelques-uns, d'après la manière dont ils envisagent encore l'idole, mangent de ces viandes comme étant sacrifiées aux idoles, et leur <button class="mot" data-g="g-syneidesis">conscience</button>, qui est faible, en est souillée. <span class="s">10</span> Car, si quelqu'un te voit, toi qui as de la connaissance, assis à table dans un temple d'idoles, sa conscience, à lui qui est faible, ne le portera-t-elle pas à manger des viandes sacrifiées aux idoles? <span class="s">11</span> Et ainsi le frère faible périra par ta connaissance, le frère pour lequel Christ est mort! <span class="s">12</span> En péchant de la sorte contre les frères, et en blessant leur conscience faible, vous péchez contre Christ. <span class="s">13</span> C'est pourquoi, si un aliment <button class="mot" data-g="g-skandalizo">scandalise</button> mon frère, je ne mangerai jamais de viande, afin de ne pas scandaliser mon frère.</div>
+        <div class="glose" id="g-gnosis"><span class="lemme">gnōsis</span> Le mot grec <span class="gr">gnōsis</span> désigne la connaissance, mais dans le vocabulaire des sagesses hellénistiques et des cercles corinthiens il connote un savoir qui distingue, qui hiérarchise les initiés et les ignorants. Segond traduit simplement par « connaissance », effaçant la charge polémique du terme : Paul cite presque un mot d'ordre corinthien pour aussitôt le retourner contre ceux qui s'en prévalent. Chrysostome note que Paul ne condamne pas le savoir en soi, mais le savoir séparé de la charité, car « la science sans l'amour enfle, quand l'amour édifie même sans grand savoir ».</div>
+        <div class="glose" id="g-oikodomei"><span class="lemme">oikodomeō</span> Le verbe <span class="gr">oikodomeō</span> signifie littéralement bâtir une maison ; Paul l'emploie constamment dans les lettres aux Corinthiens pour désigner l'édification de la communauté comme un chantier commun. Segond traduit par « édifie », choix fidèle mais qui a perdu en français courant sa concrétude architecturale — on n'entend plus le chantier derrière le mot. Calvin insiste, dans son commentaire sur ce passage, sur le fait que nul n'édifie l'Église pour soi seul, mais chacun pour les autres, et que la charité seule sait construire sans écraser personne.</div>
+        <div class="glose" id="g-syneidesis"><span class="lemme">syneidēsis</span> <span class="gr">Syneidēsis</span>, la conscience, est un mot rare dans l'Ancien Testament grec mais central dans le vocabulaire moral hellénistique repris par Paul — littéralement, un « savoir avec soi-même », un témoin intérieur qui accompagne l'acte. Segond garde « conscience », traduction si courante qu'elle masque la nouveauté du terme, appliqué ici non au fort mais au faible, dont le jugement intérieur peut être blessé par la liberté d'un autre. Chrysostome relève que Paul ne reproche jamais au frère fort de savoir, mais de faire de son savoir une pierre d'achoppement pour une conscience encore mal affermie.</div>
+        <div class="glose" id="g-skandalizo"><span class="lemme">skandalizō</span> Le verbe <span class="gr">skandalizō</span> vient de <span class="gr">skandalon</span>, le piège à ressort qui fait trébucher le gibier — Segond traduit « scandalise », mot devenu abstrait en français alors que l'image paulinienne est celle d'un obstacle matériel jeté sous les pas d'un frère mal assuré. Ce n'est pas une offense à la sensibilité qui est visée, mais une chute réelle, une foi qui se brise sur ce que la liberté d'un autre a laissé en travers du chemin. Calvin qualifie la conclusion de Paul — renoncer pour toujours à la viande — d'« amour qui ne calcule pas ce qu'il en coûte, mais ce qu'il en coûterait à l'autre ».</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 138 (139), 1-3, 13-14ab, 23-24 — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Éternel! tu me <button class="mot" data-g="g-chaqar">sondes</button> et tu me <button class="mot" data-g="g-yada">connais</button>, <span class="s">2</span> Tu sais quand je m'assieds et quand je me lève, Tu pénètres de loin ma pensée; <span class="s">3</span> Tu sais quand je marche et quand je me couche, Et tu pénètres toutes mes voies. <span class="s">13</span> C'est toi qui as <button class="mot" data-g="g-qanah">formé</button> mes reins, Qui m'as tissé dans le sein de ma mère. <span class="s">14</span> Je te loue de ce que je suis une créature si merveilleuse. Tes œuvres sont admirables. <span class="s">23</span> Sonde-moi, ô Dieu, et connais mon cœur! Éprouve-moi, et connais mes pensées! <span class="s">24</span> Regarde si je suis sur une mauvaise voie, Et conduis-moi sur la voie de l'éternité!</div>
+        <div class="glose" id="g-chaqar"><span class="lemme">chaqar</span> Le verbe hébreu <span class="gr">chaqar</span> évoque la fouille minière, l'exploration d'un terrain jusqu'à ses veines les plus profondes — c'est le mot qu'emploie Job pour l'homme qui creuse la roche à la recherche de l'or. Segond traduit « tu me sondes », image maritime qui garde quelque chose de cette profondeur mais perd la dureté du terrain fouillé : le psalmiste ne se donne pas, il se laisse extraire. Les commentateurs juifs classiques y lisent moins une intrusion qu'un aveu : Dieu seul mène cette fouille jusqu'au bout, là où l'homme s'arrête toujours devant lui-même.</div>
+        <div class="glose" id="g-yada"><span class="lemme">yada</span> <span class="gr">Yada</span>, connaître, est en hébreu un verbe d'expérience et non de seule information — il désigne aussi bien la connaissance intellectuelle que l'intimité la plus charnelle, comme en Genèse 4 où « Adam connut Ève ». Segond traduit uniformément par « connaître », ce qui aplatit en français un mot qui, en hébreu, engage tout l'être et pas seulement l'esprit. Calvin, commentant ce psaume, insiste sur le fait que cette connaissance divine n'est pas une surveillance froide mais un lien antérieur à toute conscience que l'homme pourrait en avoir : on est connu avant de savoir qu'on l'est.</div>
+        <div class="glose" id="g-qanah"><span class="lemme">qanah</span> Le verbe traduit par « tu as formé » recouvre en hébreu l'idée d'acquérir, de façonner, de faire naître quelque chose qui devient propre à son auteur — le même verbe ouvre Genèse 4 quand Ève dit avoir « acquis » un homme avec l'aide de l'Éternel. Segond choisit « former », qui insiste sur le geste de l'artisan mais efface le lien de possession intime porté par le mot hébreu : ce que Dieu façonne dans le sein maternel lui appartient déjà avant que la mère elle-même ne le connaisse. La tradition rabbinique en tire que la vie de chacun est voulue avant même la naissance, tissée dans le secret.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 6, 27-38 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">27</span> Mais je vous dis, à vous qui m'écoutez: <button class="mot" data-g="g-agapao">Aimez</button> vos ennemis, faites du bien à ceux qui vous haïssent, <span class="s">28</span> bénissez ceux qui vous maudissent, priez pour ceux qui vous maltraitent. <span class="s">29</span> Si quelqu'un te frappe sur une joue, présente-lui aussi l'autre. Si quelqu'un prend ton manteau, ne l'empêche pas de prendre encore ta tunique. <span class="s">30</span> Donne à quiconque te demande, et ne réclame pas ton bien à celui qui s'en empare. <span class="s">31</span> Ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux. <span class="s">32</span> Si vous aimez ceux qui vous aiment, quel gré vous en saura-t-on? Les pécheurs aussi aiment ceux qui les aiment. <span class="s">33</span> Si vous faites du bien à ceux qui vous font du bien, quel gré vous en saura-t-on? Les pécheurs aussi agissent ainsi. <span class="s">34</span> Et si vous prêtez à ceux de qui vous espérez recevoir, quel gré vous en saura-t-on? Les pécheurs aussi prêtent aux pécheurs, afin de recevoir la pareille. <span class="s">35</span> Mais aimez vos ennemis, faites du bien, et prêtez sans rien espérer. Et votre récompense sera grande, et vous serez fils du Très-Haut, car il est bon pour les ingrats et pour les méchants. <span class="s">36</span> Soyez donc <button class="mot" data-g="g-oiktirmon">miséricordieux</button>, comme votre Père est miséricordieux. <span class="s">37</span> Ne <button class="mot" data-g="g-krino">jugez</button> point, et vous ne serez point jugés; ne condamnez point, et vous ne serez point condamnés; absolvez, et vous serez absous. <span class="s">38</span> Donnez, et il vous sera donné: on vous donnera, dans votre sein, une bonne <button class="mot" data-g="g-metron">mesure</button>, tassée, secouée, et qui déborde; car on vous mesurera avec la mesure dont vous vous serez servis.</div>
+        <div class="glose" id="g-agapao"><span class="lemme">agapaō</span> Le verbe <span class="gr">agapaō</span>, que Segond traduit « aimez », désigne dans le grec biblique un amour de volonté et de choix plutôt que d'affection spontanée — il diffère de <span class="gr">phileō</span>, l'amitié chaleureuse, et plus encore d'<span class="gr">erōs</span>, absent du Nouveau Testament. Appliqué aux ennemis, ce choix lexical est délibéré : Jésus ne demande pas d'éprouver pour l'ennemi la tendresse qu'on a pour un ami, mais de lui vouloir et de lui faire le bien par une décision qui ne dépend d'aucun sentiment. Chrysostome souligne que c'est précisément parce qu'agapē ne réclame pas d'émotion préalable qu'elle peut être commandée, là où l'affection, elle, ne se commande pas.</div>
+        <div class="glose" id="g-oiktirmon"><span class="lemme">oiktirmōn</span> <span class="gr">Oiktirmōn</span>, miséricordieux, vient d'une racine qui évoque les entrailles émues, la compassion viscérale plus que la simple clémence juridique — c'est le mot que la Septante emploie pour traduire les attributs de tendresse de Dieu envers Israël. Segond garde « miséricordieux », fidèle mais qui, en français, penche vers le pardon d'une faute plutôt que vers cette compassion qui prend l'autre dans ses entrailles avant même qu'il ait péché. Le verset renvoie implicitement au Lévitique, « soyez saints comme je suis saint », que Luc transforme : la sainteté de Dieu se donne ici à imiter dans la miséricorde envers l'ingrat, non dans la séparation.</div>
+        <div class="glose" id="g-krino"><span class="lemme">krinō</span> <span class="gr">Krinō</span>, juger, est le même verbe qui donne le mot crise en français — il désigne l'acte de trancher, de séparer dans un jugement qui prétend clore le débat sur autrui. Segond traduit « juger », choix direct et juste, mais qui en français moderne s'est affadi en simple opinion alors que le verbe grec porte le poids d'une sentence. Chrysostome remarque que Jésus ne défend pas de discerner le bien du mal, mais de s'ériger en tribunal sur la personne même du frère, place que l'Évangile réserve à Dieu seul.</div>
+        <div class="glose" id="g-metron"><span class="lemme">metron</span> Le mot grec <span class="gr">metron</span>, la mesure, appartient au vocabulaire du marché, de la mesure de grain qu'on verse au client — Segond traduit fidèlement, et l'image reste vivante en français : tassée, secouée, débordante, c'est la mesure du marchand honnête qui donne plus que le juste compte. Jésus retourne cette image commerciale contre toute logique de calcul : la mesure qu'on emploie envers autrui devient, par une loi mystérieuse, celle dont Dieu se sert envers nous. Calvin y voit moins une transaction qu'un miroir : Dieu ne fait que renvoyer à l'homme l'image de sa propre largesse ou de sa propre étroitesse.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Corinthe, la viande et les faibles</h3><p>À Corinthe, la viande vendue au marché provenait le plus souvent des sacrifices offerts aux idoles dans les temples voisins ; un chrétien converti du paganisme pouvait donc, sans le vouloir, manger un aliment associé à son ancien culte. Paul écrit vers 54-55, depuis Éphèse, à une Église déchirée entre « forts », qui revendiquent leur liberté au nom d'un savoir théologique correct — un seul Dieu, donc les idoles ne sont rien — et « faibles » récemment sortis de l'idolâtrie, pour qui ce geste reste chargé de sens religieux réel. Chrysostome note que Paul ne tranche pas la question doctrinale, qu'il accorde d'ailleurs aux forts, mais la subordonne entièrement à la charité envers le frère fragile.</p></div>
+      <div><h3>Le sermon dans la plaine</h3><p>Contrairement au sermon sur la montagne de Matthieu, Luc situe cet enseignement sur un lieu plat, entouré d'une foule venue de toute la Judée et même de Tyr et de Sidon, terres païennes — le cadre géographique dit déjà l'universalité du propos. L'exigence d'aimer l'ennemi n'est pas une maxime isolée : elle prolonge le renversement annoncé dans les béatitudes qui précèdent immédiatement, où les pauvres et les affamés sont déclarés heureux avant même que le monde ne soit changé. Calvin y voit la marque distinctive du christianisme par rapport à toute morale naturelle, qui s'arrête toujours à la réciprocité.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Sans calcul</h2>
+<p>Tu as peut-être commencé, un jour, à prier pour quelqu'un qui t'avait blessé, non parce que tu le voulais, mais parce qu'on t'avait dit qu'il le fallait, et les premiers mots sonnaient creux, presque hostiles envers toi-même qui les prononçais. Rien ne change tout de suite : le ressentiment reste intact, et la prière semble n'être qu'un exercice de récitation sans emprise sur ce que tu portes en toi. Puis, des mois ou des années plus tard, tu t'aperçois avec une sorte de surprise que le nom ne pèse plus de la même façon — non que tu aies forcé un pardon, mais qu'une mesure autre que la tienne a fait son travail pendant que tu ne regardais pas, et c'est devant cette mesure-là que tu te retrouves, sans l'avoir méritée ni même vraiment voulue jusqu'au bout.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Le texte de ce jour ne demande pas d'abord un effort de volonté, mais un déplacement de regard : cesser de mesurer pour se laisser mesurer, cesser de juger pour se laisser connaître.</p>
+      <p class="geste">Reprends verset par verset la prière du psaume — « Sonde-moi, ô Dieu, et connais mon cœur » — et nomme devant Dieu, sans les corriger ni les justifier, un jugement ou un ressentiment que tu portes envers quelqu'un.</p>
+      <small>Il ne s'agit pas de produire un sentiment d'amour immédiat pour un ennemi, mais de remettre la mesure entre des mains autres que les tiennes — c'est ce déplacement que le texte appelle miséricorde.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quelle mesure emploies-tu envers ceux que tu ne peux pas aimer par affection, et qu'est-ce que cela dit de la mesure que tu attends, toi, de la part de Dieu ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome : la science qui enfle</h3>
+          <p>Chrysostome, dans ses homélies sur la première épître aux Corinthiens, observe que Paul commence par concéder aux forts qu'ils ont raison sur le fond — il n'y a qu'un seul Dieu — avant de leur retirer aussitôt tout droit de s'en prévaloir contre un frère. Il y montre que la connaissance qui ne s'accompagne pas de charité rend l'homme semblable à un corps enflé, qui paraît grand mais n'a rien de sain, tandis que l'édification suppose un abaissement volontaire vers celui qui sait moins.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la Première épître aux Corinthiens</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : sondé avant de savoir</h3>
+          <p>Calvin, dans son Commentaire sur le livre des Psaumes, insiste sur le fait que David ne cherche pas ici à fuir Dieu comme on le ferait d'un juge redouté, mais se réjouit d'être connu jusque dans des profondeurs qu'il ignore lui-même. Cette connaissance divine, écrit-il, devrait être le plus ferme appui de la foi, puisqu'elle précède toute œuvre et tout mérite : Dieu nous forme avant que nous ayons rien fait pour mériter d'être formés.</p>
+<p class="attrib">Jean Calvin, Commentaire sur le livre des Psaumes, Psaume 139</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Ambroise : la mesure qui revient</h3>
+          <p>Ambroise de Milan, dans son commentaire sur l'Évangile de Luc, relève que Jésus ne promet pas seulement une récompense future à qui aime sans calcul, mais décrit une loi déjà à l'œuvre : la mesure que l'on emploie envers autrui façonne, dès maintenant, la mesure dont on est soi-même l'objet. Il y voit un avertissement contre toute charité qui resterait un calcul déguisé, puisque Dieu regarde moins le geste que la mesure intérieure d'où il procède.</p>
+<p class="attrib">Ambroise de Milan, Exposition de l'Évangile selon saint Luc</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 23ème Semaine du Temps Ordinaire — 1 Co 8, 1b-7.10-13 ; Lc 6, 27-38.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
