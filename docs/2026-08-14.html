@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -219,14 +219,15 @@ footer a{color:var(--rubrique)}
 .portes .ouvert-voir{background:var(--liturgie)}
 .portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
 .portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-@media(max-width:560px){.portes .d{display:none}}
+@media(max-width:560px){.portes .d{display:none}.portes a{padding:.85rem .3rem;text-align:center}.portes .n{font-size:1.02rem}}
 .barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
-.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;transition:background .3s,color .3s}
+.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.35rem .6rem;letter-spacing:.04em}}
 .barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
 footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 /* ---------- COMPAGNON : une vidéo à la fois ---------- */
-.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:auto;transition:transform .35s ease}
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
 .compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
 .compagnon .entete .rubrique{margin:0}
 .compagnon .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
@@ -254,16 +255,32 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .pellicule button:hover{opacity:1}
 .pellicule button.on{border-color:var(--liturgie);opacity:1}
 .pellicule button.on img{filter:none}
+/* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
+   plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
+.compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.poignee{position:absolute;z-index:2;display:grid;place-items:center;touch-action:none}
+.poignee span{display:block;background:var(--filet);border-radius:999px;transition:background .2s}
+.poignee:hover span,.poignee:focus-visible span,.poignee.tire span{background:var(--liturgie)}
+.poignee:focus-visible{outline:none}
+body.redim,body.redim *{user-select:none;-webkit-user-select:none}
+body.redim .video iframe{pointer-events:none}
+body.redim,body.redim .compagnon,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
 @media(min-width:1100px){
   body{transition:padding-right .35s ease}
-  .compagnon{top:0;right:0;bottom:0;width:460px;padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
-  body.panneau{padding-right:460px}
+  .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
+  .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
+  .poignee span{width:3px;height:48px}
+  body.redim{cursor:col-resize}
+  body.panneau{padding-right:var(--panneau,460px)}
   #basculer-theme,#carte{transition:right .35s ease}
-  body.panneau #basculer-theme,body.panneau #carte{right:calc(460px + 1rem)}
-  body.panneau .barre-portes{left:calc((100vw - 460px)/2)}
+  body.panneau #basculer-theme,body.panneau #carte{right:calc(var(--panneau,460px) + 1rem)}
+  body.panneau .barre-portes{left:calc((100vw - var(--panneau,460px))/2)}
 }
 @media(max-width:1099px){
-  .compagnon{left:0;right:0;bottom:0;max-height:78vh;padding:1.6rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
+  .poignee span{width:44px;height:5px}
+  body.redim{cursor:row-resize}
 }
 .compagnon.ouvert{transform:none}
 .barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
@@ -459,10 +476,12 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
 <aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="compagnon" aria-label="Agrandir ou réduire le compagnon (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour agrandir"><span></span></div>
   <div class="entete">
 <div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
     <button class="replier" aria-label="Replier">→</button>
   </div>
+  <div class="corps">
   <div class="vitre" data-vitre="voir">
     <div class="video" id="ecran" role="button" tabindex="0" data-yt="FVzc7zXuQzA" data-titre="Alliances" data-vignette="vignettes/FVzc7zXuQzA.jpg" aria-label="Lire la vidéo Alliances"><img src="vignettes/FVzc7zXuQzA.jpg" alt=""><span class="lire">Regarder</span></div>
 <p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Alliances</p>
@@ -484,6 +503,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
       <div class="libre-reponse r" hidden><div class="libre-texte"></div><div class="libre-sources sources" hidden></div><p class="ia">Réponse générée par IA, non relue — à vérifier.</p></div>
     </form>
     <p class="libre-ferme" hidden></p>
+  </div>
   </div>
 </aside>
 
@@ -568,6 +588,34 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
   fleche();mq.addEventListener('change',fleche);
   replier.addEventListener('click',function(){ouvrir(null)});
+  // Poignée : glisser pour agrandir ; sur mobile, un tap bascule mi-hauteur /
+  // plein écran, le relâcher s'aimante à 45, 78 ou 92 % et tirer tout en bas
+  // replie. Double-clic : taille d'origine. Flèches au clavier. Taille gardée.
+  var poignee=comp.querySelector('.poignee'),rac=document.documentElement,depart=null;
+  function cle(){return mq.matches?'panneau':'volet'}
+  function poser(v){var large=mq.matches,min=large?340:15,max=large?Math.max(340,innerWidth*.7):92;
+    v=Math.min(max,Math.max(min,v));rac.style.setProperty('--'+cle(),v+(large?'px':'vh'));return v}
+  function garder(v){try{localStorage.setItem('compagnon-'+cle(),Math.round(v))}catch(e){}}
+  function taille(){return mq.matches?comp.offsetWidth:comp.offsetHeight/innerHeight*100}
+  function retrouver(){try{var v=localStorage.getItem('compagnon-'+cle());if(v)poser(+v)}catch(e){}}
+  retrouver();mq.addEventListener('change',retrouver);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,y:e.clientY,t:taille()};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(!depart)return;
+    poser(mq.matches?depart.t+depart.x-e.clientX:depart.t+(depart.y-e.clientY)/innerHeight*100)});
+  function lacher(e){if(!depart)return;var d=depart;depart=null;
+    poignee.classList.remove('tire');document.body.classList.remove('redim');
+    if(mq.matches){garder(taille());return}
+    var h=d.t+(d.y-e.clientY)/innerHeight*100,tap=Math.abs(d.y-e.clientY)<6;
+    if(tap)h=d.t>70?45:92;
+    else if(h<30){poser(d.t);ouvrir(null);return}
+    else h=[45,78,92].reduce(function(a,b){return Math.abs(b-h)<Math.abs(a-h)?b:a});
+    garder(poser(h))}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--'+cle());try{localStorage.removeItem('compagnon-'+cle())}catch(e){}});
+  poignee.addEventListener('keydown',function(e){var pas={ArrowLeft:40,ArrowRight:-40,ArrowUp:8,ArrowDown:-8}[e.key];
+    if(!pas||(mq.matches!==(e.key==='ArrowLeft'||e.key==='ArrowRight')))return;
+    e.preventDefault();garder(poser(taille()+pas))});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
   comp.querySelectorAll('[data-onglet]').forEach(function(b){b.addEventListener('click',function(){ouvrir(b.dataset.onglet)})});
   var qs=comp.querySelectorAll('.q-btn');

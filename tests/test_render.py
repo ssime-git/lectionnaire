@@ -66,6 +66,13 @@ def _jour(videos: list[dict]) -> dict:
 
 
 class TemplateCompagnonTests(unittest.TestCase):
+    def test_compagnon_redimensionnable(self) -> None:
+        html = render.rendre_html(_jour([_video("1g4u57TSY0g", "Shema / Écouter")]))
+        self.assertIn('<div class="poignee" role="separator" tabindex="0"', html)
+        self.assertIn('<div class="corps">', html)  # l'en-tête reste visible, le corps défile
+        self.assertIn("width:var(--panneau,460px)", html)
+        self.assertIn("height:var(--volet,78vh)", html)
+
     def test_sans_videos_compagnon_pour_demander(self) -> None:
         html = render.rendre_html(_jour([]))
         self.assertNotIn('data-porte="voir"', html)
