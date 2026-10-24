@@ -1,0 +1,142 @@
+{
+  "date": "2026-09-02",
+  "date_humaine": "mercredi",
+  "semaine": "22ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co  3, 1-9 ; Lc 4, 38-44",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M4 18 h30 M44 18 h40 M94 18 h24 M128 20 h36 M4 32 h20 M34 32 h50 M94 32 h30 M134 32 h20\"/><path d=\"M20 118 h300\"/><path d=\"M20 118 q40 -6 80 -1 q40 5 80 -1 q40 -6 80 0 q30 4 60 0\"/><path d=\"M8 132 h14 M8 132 v10 M22 132 v10 M8 137 h14 M40 130 h14 M40 130 v12 M54 130 v12 M40 136 h14 M300 131 h14 M300 131 v11 M314 131 v11 M300 137 h14\"/><path d=\"M232 40 q10 -6 18 -2 q4 -10 -4 -18 q-2 10 -14 8 q-4 8 0 12\"/><path d=\"M246 40 l12 30\"/><path d=\"M244 68 q8 -4 16 4\"/><path d=\"M170 100 v-16\"/><path d=\"M170 84 q-8 -10 -2 -20\"/><path d=\"M170 88 q10 -6 8 -18\"/></g><g class=\"trait-liturgie\"><path d=\"M258 70 q6 14 -4 26 q6 -2 8 -8 q2 10 -6 16\"/></g><g class=\"trait-rubrique\"><path d=\"M170 118 q-2 -10 0 -18\"/></g></svg>",
+  "titre": "La croissance donnée",
+  "titre_html": "La croissance <span class=\"it\">donnée</span>",
+  "sous_titre": "1 Corinthiens 3, 1-9 — Psaume 32 (33) — Luc 4, 38-44",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une main verse l'eau d'une cruche sur une jeune pousse sortant d'un sillon labouré, dans un champ délimité par une clôture basse, sous un ciel strié de fines hachures.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 3, 1-9",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Pour moi, frères, ce n'est pas comme à des hommes spirituels que j'ai pu vous parler, mais comme à des hommes <button class=\"mot\" data-g=\"g-sarkikoi\">charnels</button>, comme à des enfants en Christ. <span class=\"s\">2</span> Je vous ai donné du lait, non de la nourriture solide, car vous ne pouviez pas la supporter; et vous ne le pouvez pas même à présent, parce que vous êtes encore charnels. <span class=\"s\">3</span> En effet, puisqu'il y a parmi vous de la jalousie et des disputes, n'êtes-vous pas charnels, et ne marchez-vous pas selon l'homme? <span class=\"s\">4</span> Quand l'un dit: Moi, je suis de Paul! et un autre: Moi, d'Apollos! n'êtes-vous pas des hommes? <span class=\"s\">5</span> Qu'est-ce donc qu'Apollos, et qu'est-ce que Paul? Des <button class=\"mot\" data-g=\"g-diakonoi\">serviteurs</button>, par le moyen desquels vous avez cru, selon que le Seigneur l'a donné à chacun. <span class=\"s\">6</span> J'ai planté, Apollos a arrosé, mais Dieu a <button class=\"mot\" data-g=\"g-auxano\">fait croître</button>, <span class=\"s\">7</span> en sorte que ce n'est pas celui qui plante qui est quelque chose, ni celui qui arrose, mais Dieu qui fait croître. <span class=\"s\">8</span> Celui qui plante et celui qui arrose sont égaux, et chacun recevra sa propre récompense selon son propre travail. <span class=\"s\">9</span> Car nous sommes <button class=\"mot\" data-g=\"g-synergoi\">ouvriers avec Dieu</button>. Vous êtes le champ de Dieu, l'édifice de Dieu.",
+      "gloses": [
+        {
+          "id": "g-sarkikoi",
+          "lemme": "sarkikos",
+          "html": "Grec <span class=\"gr\">sarkikos</span>. Paul n'oppose pas ici l'âme et le corps, mais deux façons d'exister : selon la chair, principe replié sur lui-même, ou selon l'Esprit. Segond traduit « charnels », mot qui en français glisse facilement vers une faute morale ou sexuelle, alors que Paul vise très précisément la jalousie et les rivalités de clans. Chrysostome, dans sa huitième homélie sur cette épître, note que Paul appelle « charnels » des gens dont il ne critique pas la doctrine mais l'appartenance à des partis humains plutôt qu'au Christ."
+        },
+        {
+          "id": "g-diakonoi",
+          "lemme": "diakonoi",
+          "html": "Grec <span class=\"gr\">diakonoi</span>, mot du service de table, sans aucun prestige attaché. Segond traduit justement « serviteurs », mais le français perd l'image concrète, presque domestique, que le terme évoquait pour un lecteur grec. Paul choisit délibérément ce mot bas pour désamorcer les partis « je suis de Paul, je suis d'Apollos » : ni l'un ni l'autre n'est un maître à suivre. Calvin, commentant ce passage, insiste sur le fait que le ministre n'est rien par lui-même et que toute la gloire doit remonter à Dieu seul."
+        },
+        {
+          "id": "g-auxano",
+          "lemme": "auxanō",
+          "html": "Grec <span class=\"gr\">auxanō</span>, croître de l'intérieur — le même verbe employé pour la croissance de l'enfant Jésus en Luc 2,40. Segond traduit « a fait croître » au passé composé, ce qui risque de figer en un geste ponctuel ce que le grec présente comme une action divine continue. Chrysostome souligne que Paul choisit ce verbe pour couper court à toute fierté humaine : ni la semence ni l'eau ne produisent la vie, seule la puissance de Dieu fait lever ce qui est planté."
+        },
+        {
+          "id": "g-synergoi",
+          "lemme": "synergoi",
+          "html": "Grec <span class=\"gr\">theou synergoi</span>, littéralement « co-travailleurs de Dieu ». Segond traduit « ouvriers avec Dieu », rendu correct mais qui aplanit une ambiguïté féconde du génitif grec, lisible aussi bien comme « travaillant pour Dieu » que « travaillant avec Dieu ». Le même terme désigne ailleurs Apollos et Timothée (1 Co 16,16; Rm 16,3) : Paul range ainsi tout ministère, y compris le sien, sous cette même dignité modeste de collaborateur, jamais de propriétaire de l'œuvre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 32 (33), 12-13, 14-15, 20-21",
+      "traduction": "Louis Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">12</span> Heureuse la nation dont l'Éternel est le Dieu! Heureux le peuple qu'il choisit pour son héritage! <span class=\"s\">13</span> L'Éternel <button class=\"mot\" data-g=\"g-shaqaph\">regarde du haut des cieux</button>, Il voit tous les fils de l'homme; <span class=\"s\">14</span> Du lieu de sa demeure il observe Tous les habitants de la terre, <span class=\"s\">15</span> Lui qui <button class=\"mot\" data-g=\"g-yatsar\">forme</button> leur cœur à tous, Qui est attentif à toutes leurs actions. <span class=\"s\">20</span> Notre âme <button class=\"mot\" data-g=\"g-qavah\">espère</button> en l'Éternel; Il est notre secours et notre bouclier. <span class=\"s\">21</span> Car notre cœur met en lui sa joie, Car nous avons confiance en son saint nom.",
+      "gloses": [
+        {
+          "id": "g-shaqaph",
+          "lemme": "shaqaph",
+          "html": "Hébreu <span class=\"gr\">shaqaph</span>, se pencher depuis une hauteur pour regarder en bas, presque à la manière de quelqu'un accoudé à une fenêtre. Segond traduit « regarde du haut des cieux », ce qui rend le mouvement mais perd l'image physique du buste penché vers le bas. Le même verbe décrit Sara observant par la fenêtre (Gn 26,8) ou Dieu regardant vers Sodome (Gn 18,16) : un regard qui s'approche et se penche, non un regard distant et froid."
+        },
+        {
+          "id": "g-yatsar",
+          "lemme": "yatsar",
+          "html": "Hébreu <span class=\"gr\">yatsar</span>, façonner comme le potier façonne l'argile — le même verbe qu'en Genèse 2,7 pour la formation de l'homme tiré de la poussière. Segond traduit « forme leur cœur », gardant heureusement l'image du modelage, mais un lecteur français ne perçoit pas d'emblée le lien avec le récit de la création qu'un lecteur hébreu entendait aussitôt. Le psalmiste affirme ainsi que le Dieu qui observe chaque homme du haut des cieux est le même qui l'a pétri de ses mains."
+        },
+        {
+          "id": "g-qavah",
+          "lemme": "qavah",
+          "html": "Hébreu <span class=\"gr\">qavah</span>, dont la racine évoque la corde tendue plutôt qu'un espoir vague — une attente qui tient bon sous tension. Segond traduit « espère », terme plus doux que l'original, qui suggère en hébreu un attachement presque physique, tiré vers Dieu comme une amarre. Les rabbins ont rapproché ce verbe de la racine de « qav », le fil à plomb, comme si l'âme qui espère se tenait droite, alignée par une tension qui ne cède pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 4, 38-44",
+      "traduction": "Louis Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">38</span> En sortant de la synagogue, il se rendit à la maison de Simon. La belle-mère de Simon avait une violente fièvre, et ils le prièrent en sa faveur. <span class=\"s\">39</span> S'étant penché sur elle, il <button class=\"mot\" data-g=\"g-epitimao\">menaça</button> la fièvre, et la fièvre la quitta. A l'instant elle se leva, et les <button class=\"mot\" data-g=\"g-diekonei\">servit</button>. <span class=\"s\">40</span> Après le coucher du soleil, tous ceux qui avaient des malades atteints de diverses maladies les lui amenèrent. Il imposa les mains à chacun d'eux, et il les guérit. <span class=\"s\">41</span> Des démons aussi sortirent de beaucoup de personnes, en criant et en disant: Tu es le Fils de Dieu. Mais il les menaçait et ne leur permettait pas de parler, parce qu'ils savaient qu'il était le Christ. <span class=\"s\">42</span> Dès que le jour parut, il sortit et alla dans un lieu désert. Une foule de gens se mirent à sa recherche, et arrivèrent jusqu'à lui; ils voulaient le retenir, afin qu'il ne les quittât pas. <span class=\"s\">43</span> Mais il leur dit: <button class=\"mot\" data-g=\"g-dei\">Il faut</button> aussi que j'annonce aux autres villes la bonne nouvelle du royaume de Dieu; car c'est pour cela que j'ai été envoyé. <span class=\"s\">44</span> Et il prêchait dans les synagogues de la Galilée.",
+      "gloses": [
+        {
+          "id": "g-epitimao",
+          "lemme": "epitimaō",
+          "html": "Grec <span class=\"gr\">epitimaō</span>, réprimander avec autorité — le même verbe reviendra deux versets plus loin pour les démons (v.41) et ailleurs pour la tempête apaisée (Lc 8,24). Segond traduit « menaça la fièvre », fidèle mais surprenant : Luc emploie pour une fièvre le vocabulaire même de l'exorcisme et du combat contre des puissances hostiles. Les commentateurs anciens des évangiles synoptiques notaient déjà que maladie et emprise du mal n'y sont pas nettement séparées : l'une et l'autre reculent devant la même parole souveraine."
+        },
+        {
+          "id": "g-diekonei",
+          "lemme": "diēkonei",
+          "html": "Grec <span class=\"gr\">diēkonei</span>, imparfait du verbe servir, qui marque une action qui se prolonge et non un geste isolé — « elle se mit à les servir » plutôt qu'un service ponctuel refermé sur lui-même. Segond traduit « les servit » au passé simple, ce qui referme l'action, alors que le grec laisse entendre une diaconie qui continue. C'est le même mot que Luc emploiera pour les femmes qui servaient Jésus en Galilée (Lc 8,3) : la guérison n'est pas une fin en soi, elle ouvre à un service durable."
+        },
+        {
+          "id": "g-dei",
+          "lemme": "dei",
+          "html": "Grec <span class=\"gr\">dei</span>, « il faut », verbe impersonnel qui chez Luc marque toujours une nécessité voulue par Dieu et non une contrainte extérieure — le même mot introduira la nécessité de la Passion (Lc 9,22) ou celle de chercher Jésus au temple (Lc 2,49). Segond traduit littéralement « il faut », ce qui est exact, mais un lecteur français peut y entendre une obligation morale là où le grec désigne un dessein divin déjà à l'œuvre. Jésus refuse ainsi de se laisser retenir par le succès de Capharnaüm : ce « il faut » le pousse plus loin que la demande de la foule."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, une Église fracturée",
+      "corps_html": "Paul écrit depuis Éphèse, vers 54-55, à une communauté qu'il a fondée trois ans plus tôt et qui se déchire en clans autour des noms d'Apollos, de Céphas et du sien propre. Apollos, juif d'Alexandrie formé à la rhétorique, avait succédé à Paul comme prédicateur à Corinthe (Ac 18,24-28); sa parole plus brillante avait suscité des comparaisons dont Paul refuse le principe même, rappelant que ni lui ni Apollos ne sont la source de la foi, seulement des intermédiaires par qui elle est venue."
+    },
+    {
+      "titre": "Le silence imposé aux démons",
+      "corps_html": "Cyrille d'Alexandrie, dans son commentaire sur Luc, relève que Jésus refuse le témoignage des démons alors même qu'ils disent vrai en le confessant « Fils de Dieu » : une vérité proclamée par une bouche impure reste suspecte et risque de brouiller l'annonce plutôt que de la servir. Le même geste revient à Capharnaüm et dans tout le ministère galiléen : Jésus construit sa reconnaissance messianique par les signes donnés aux hommes, non par les aveux arrachés aux puissances qu'il combat."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu ne peux pas faire grandir",
+    "variantes": [
+      "Tu as consacré des années à une tâche discrète — accompagner un enfant qui n'apprend pas vite, visiter quelqu'un qui ne semble jamais aller mieux, prier pour une personne dont la vie ne change pas sous tes yeux — et tu as fini par te demander si ton geste servait à quelque chose. Rien dans ce que tu fais ne produit la preuve visible que tu voudrais tenir en main, et pourtant tu continues, parce qu'une fidélité intérieure te retient là où l'absence de résultat te ferait fuir. Ce que le texte de ce jour te rappelle, c'est que planter et arroser ne t'ont jamais appartenu que pour un temps très court : la croissance elle-même a toujours été hors de ta portée, confiée à un autre que toi, et c'est devant lui, non devant le fruit, que ton travail trouve sa mesure.",
+      "Il y a des moments où tu reçois quelque chose — un pardon reçu, une force revenue après un épuisement que tu croyais définitif, une parole qui te relève alors que tu n'attendais plus rien — et presque aussitôt, sans calcul, tu te retrouves à vouloir donner à ton tour, comme si le don appelait le don. Ce mouvement ne vient pas d'un devoir que tu te serais imposé après coup; il jaillit du geste même qui t'a relevé, comme si la main qui t'avait touché continuait d'agir en toi vers les autres. Le texte de ce jour te montre ce même passage, sans intervalle, de la fièvre à la table servie — et t'invite à reconnaître que ce qui te relève aujourd'hui ne s'arrête jamais à toi seul.",
+      "Tu connais cette attente qui n'a rien de passif — celle où tu tiens bon dans une décision à prendre, un diagnostic à recevoir, une réponse qui tarde, sans rien pouvoir précipiter, et où pourtant tu restes tendu vers ce qui doit venir plutôt que de te laisser tomber dans le renoncement. Cette tension-là, qui ne cède pas mais qui ne force rien non plus, ressemble à une corde tirée entre deux points fixes plus qu'à un vague souhait. Le psaume de ce jour donne un nom à cette posture et te dit vers qui elle se tend légitimement : non vers l'issue elle-même, que tu ne maîtrises pas, mais vers celui qui regarde déjà, depuis sa demeure, jusqu'au fond de ce cœur qu'il a lui-même formé."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre les tâches de ce mercredi, arrête-toi un instant sur ce que tu crois devoir faire grandir par tes seules forces.",
+    "geste": "Nomme, en silence ou à voix basse, une chose que tu portes sans en voir le fruit, et confie-en la croissance à Dieu par une phrase simple : « Tu feras croître ce que je ne peux pas voir. »",
+    "note": "Ce geste ne dispense pas de planter ni d'arroser; il rend seulement à Dieu ce qui n'a jamais été à toi."
+  },
+  "question": "Qu'est-ce que tu continues d'arroser aujourd'hui sans avoir vu, depuis longtemps, le moindre signe que cela pousse ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : l'égalité des ouvriers",
+      "corps_html": "Chrysostome, dans sa huitième homélie sur la première épître aux Corinthiens, insiste sur le verset 8 : « celui qui plante et celui qui arrose sont égaux ». Il y voit un correctif direct à la hiérarchie que les Corinthiens établissaient entre les prédicateurs selon leur éloquence ou leur ancienneté; pour lui, la récompense se mesure au travail fourni et à l'amour qui l'anime, non au rang occupé dans la chaîne de la mission.",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens, VIII"
+    },
+    {
+      "titre": "Calvin : le cœur façonné et regardé",
+      "corps_html": "Calvin, commentant ce psaume, relie étroitement le verset 15 (« qui forme leur cœur à tous ») à la doctrine de la providence : le Dieu qui a façonné chaque cœur en connaît le fond mieux que l'homme lui-même, et ce savoir n'est pas une menace mais le fondement de l'espérance chantée aux versets suivants. Il invite le lecteur à ne pas séparer la création du gouvernement continu que Dieu exerce sur ce qu'il a formé.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes, Ps 33"
+    },
+    {
+      "titre": "Note historique : la maison de Simon",
+      "corps_html": "Les fouilles franciscaines menées à Capharnaüm à partir de 1968 ont mis au jour, sous l'église octogonale du Ve siècle, les vestiges d'une maison du Ier siècle vénérée très tôt comme celle de Pierre, couverte de graffitis chrétiens antérieurs à la construction de l'édifice. Cette continuité archéologique donne un ancrage concret au récit lucanien : la guérison de la belle-mère de Simon ne se déroule pas dans un lieu générique, mais dans une maison précise, désignée comme telle par la mémoire chrétienne la plus ancienne.",
+      "attribution": "Fouilles de V. Corbo et S. Loffreda, Studium Biblicum Franciscanum, 1968-1985"
+    }
+  ]
+}
