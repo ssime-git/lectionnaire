@@ -47,9 +47,26 @@ PAGES: dict[str, tuple[str, list[str]]] = {
     "Ep": ("l'Épître aux Éphésiens", ["Commentaire sur l’Épître de saint Paul aux Éphésiens"]),
     "1Th": ("la première Épître aux Thessaloniciens",
             ["Commentaire sur la première Épître de saint Paul aux Thessaloniciens"]),
+    # Indexés au besoin, la première nuit où le livre est lu.
+    "Ac": ("les Actes des Apôtres", ["Jean Chrysostome/Commentaire sur les Actes des Apôtres"]),
+    "1Co": ("la première Épître aux Corinthiens", ["Commentaire sur la première Épître de saint Paul aux Corinthiens"]),
+    "2Co": ("la deuxième Épître aux Corinthiens", ["Commentaire sur la deuxième Épître de saint Paul aux Corinthiens"]),
+    "Ga": ("l'Épître aux Galates", ["Commentaire sur l’Épître de saint Paul aux Galates"]),
+    "Ph": ("l'Épître aux Philippiens", ["Commentaire sur l’Épître de saint Paul aux Philippiens"]),
+    "Col": ("l'Épître aux Colossiens", ["Commentaire sur l’Épître de saint Paul aux Colossiens"]),
+    "2Th": ("la deuxième Épître aux Thessaloniciens", ["Commentaire sur la deuxième Épître de saint Paul aux Thessaloniciens"]),
+    "1Tm": ("la première Épître à Timothée", ["Commentaire sur la première Épître de saint Paul à Timothée"]),
+    "2Tm": ("la deuxième Épître à Timothée", ["Commentaire sur la deuxième Épître de saint Paul à Timothée"]),
+    "Tt": ("l'Épître à Tite", ["Commentaire sur l’Épître de saint Paul à Tite"]),
+    "Phm": ("l'Épître à Philémon", ["Commentaire sur l’Épître de saint Paul à Philémon"]),
+    "He": ("l'Épître aux Hébreux", ["Commentaire sur l’Épître aux Hébreux"]),
+    "Gn": ("la Genèse", ["Jean Chrysostome/Homélies sur la Genèse I à XXXIII",
+                         "Jean Chrysostome/Homélies sur la Genèse XXXIV à LXVIII"]),
 }
 
-NB_CHAPITRES = {"Mt": 28, "Jn": 21, "Rm": 16, "Ep": 6, "1Th": 5}
+NB_CHAPITRES = {"Mt": 28, "Jn": 21, "Rm": 16, "Ep": 6, "1Th": 5, "Ac": 28, "1Co": 16, "2Co": 13,
+                "Ga": 6, "Ph": 4, "Col": 4, "2Th": 3, "1Tm": 6, "2Tm": 4, "Tt": 3, "Phm": 1,
+                "He": 13, "Gn": 50}
 
 _ROMAINS = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
 
@@ -261,7 +278,8 @@ def _html_de_la_page(page: str, cache: Path) -> str:
         return fichier.read_text(encoding="utf-8")
     for essai in range(4):
         r = requests.get(API, params={"action": "parse", "prop": "text", "format": "json",
-                                      "maxlag": 5, "page": page}, headers=ENTETES, timeout=120)
+                                      "maxlag": 5, "redirects": 1, "page": page},
+                         headers=ENTETES, timeout=120)
         if r.ok:
             d = r.json()
             if "error" in d:
@@ -283,45 +301,114 @@ def _texte_de_html(html: str) -> str:
     return html_lib.unescape(sans)
 
 
-def importer(sigle: str, sortie: Path = TEXTES, cache: Path = CACHE) -> dict[str, Any]:
-    """Importe les homélies d'un livre. Tout est lu avant d'écrire : une
-    panne réseau ne laisse jamais de fichier à moitié rempli."""
-    nom, pages = PAGES[sigle]
-    unites, ignorees = [], []
+CORRECTIONS = TEXTES / "corrections.json"
+MAX_PAR_JOUR = 4
+
+
+def _lire_livre(sigle: str, cache: Path) -> tuple[list[dict], list[str]]:
+    """Toutes les homélies d'un livre, texte compris (réseau ou cache)."""
+    _, pages = PAGES[sigle]
+    unites: list[dict] = []
+    ignorees: list[str] = []
     for page in pages:
         url = "https://fr.wikisource.org/wiki/" + page.replace(" ", "_")
         u, ig = decouper_homelies(_texte_de_html(_html_de_la_page(page, cache)), sigle, url,
                                   nb_chapitres=NB_CHAPITRES.get(sigle), precedentes=unites)
         unites += u
         ignorees += ig
-    fichier_corr = TEXTES / "corrections.json"
-    if fichier_corr.exists():
-        appliquer_corrections(unites, json.loads(fichier_corr.read_text(encoding="utf-8")).get(sigle, {}))
-    sortie.mkdir(parents=True, exist_ok=True)
-    (sortie / f"{sigle}.json").write_text(json.dumps({
+    if CORRECTIONS.exists():
+        appliquer_corrections(unites, json.loads(CORRECTIONS.read_text(encoding="utf-8")).get(sigle, {}))
+    return unites, ignorees
+
+
+def _ecrire_index(sigle: str, unites: list[dict], ignorees: list[str], dossier: Path) -> None:
+    dossier.mkdir(parents=True, exist_ok=True)
+    (dossier / f"{sigle}.index.json").write_text(json.dumps({
         "oeuvre": "chrysostome-homelies",
         "livre": sigle,
-        "titre": f"Homélies sur {nom}",
-        "unites": unites,
+        "titre": f"Homélies sur {PAGES[sigle][0]}",
+        "ignorees": ignorees,
+        "unites": [{k: v for k, v in u.items() if k != "texte"} for u in unites],
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def _ecrire_homelie(u: dict, dossier: Path) -> None:
+    (dossier / "homelies").mkdir(parents=True, exist_ok=True)
+    (dossier / "homelies" / f"{u['id']}.json").write_text(
+        json.dumps({"id": u["id"], "texte": u["texte"]}, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def indexer(sigle: str, dossier: Path = TEXTES, cache: Path = CACHE) -> dict[str, Any]:
+    """Lit un livre et enregistre son index (références, résumés), sans le
+    texte. Tout est lu avant d'écrire : une panne ne laisse rien à moitié."""
+    unites, ignorees = _lire_livre(sigle, cache)
+    _ecrire_index(sigle, unites, ignorees, dossier)
     return {"indexees": len(unites), "ignorees": ignorees}
 
 
-def charger_unites(dossier: Path = TEXTES) -> dict[str, list[dict]]:
-    """Toutes les homélies indexées, par sigle de livre."""
+def charger_index(dossier: Path = TEXTES) -> dict[str, list[dict]]:
+    """Les homélies indexées (sans texte), par sigle de livre."""
     if not dossier.exists():
         return {}
-    return {f.stem: json.loads(f.read_text(encoding="utf-8"))["unites"]
-            for f in sorted(dossier.glob("*.json")) if f.stem != "corrections"}
+    return {f.name.removesuffix(".index.json"): json.loads(f.read_text(encoding="utf-8"))["unites"]
+            for f in sorted(dossier.glob("*.index.json"))}
+
+
+def texte_homelie(ident: str, dossier: Path = TEXTES) -> str | None:
+    f = dossier / "homelies" / f"{ident}.json"
+    return json.loads(f.read_text(encoding="utf-8"))["texte"] if f.exists() else None
+
+
+def preparer(references: list[str], dossier: Path = TEXTES, cache: Path = CACHE,
+             reseau: bool = True) -> list[dict]:
+    """Les homélies qui commentent les lectures du jour, texte compris.
+    Un livre jamais lu est indexé à ce moment-là ; seules les homélies
+    utilisées sont gardées. Une panne réseau ne bloque jamais la nuit."""
+    index = charger_index(dossier)
+    lus: dict[str, list[dict]] = {}
+    choisies: list[dict] = []
+    for ref in references:
+        e = etendue(ref)
+        if not e or e[0] not in PAGES:
+            continue
+        sigle = e[0]
+        if sigle not in index:
+            if not reseau:
+                continue
+            try:
+                lus[sigle], ignorees = _lire_livre(sigle, cache)
+            except (RuntimeError, requests.RequestException) as exc:
+                print(f"⚠  Chrysostome sur {sigle} indisponible ce soir ({exc}).")
+                continue
+            _ecrire_index(sigle, lus[sigle], ignorees, dossier)
+            index = charger_index(dossier)
+        for u in passages_pour(ref, index):
+            if len(choisies) >= MAX_PAR_JOUR or any(c["id"] == u["id"] for c in choisies):
+                continue
+            texte = texte_homelie(u["id"], dossier)
+            if texte is None and reseau:
+                try:
+                    if sigle not in lus:
+                        lus[sigle], _ = _lire_livre(sigle, cache)
+                except (RuntimeError, requests.RequestException) as exc:
+                    print(f"⚠  Texte de {u['id']} indisponible ce soir ({exc}).")
+                    continue
+                complete = next((x for x in lus[sigle] if x["id"] == u["id"]), None)
+                if complete:
+                    _ecrire_homelie(complete, dossier)
+                    texte = complete["texte"]
+            if texte is not None:
+                choisies.append({**u, "texte": texte})
+    return choisies
+
+
+# Compatibilité : l'index fait foi pour la recherche par référence.
+charger_unites = charger_index
 
 
 if __name__ == "__main__":
-    lignes = ["# Couverture du corpus Chrysostome", "",
-              "Homélies indexées par référence biblique ; les ignorées ont une "
-              "référence illisible et ne sont jamais devinées.", ""]
-    for s in PAGES:
-        b = importer(s)
-        lignes.append(f"- **{s}** ({PAGES[s][0]}) : {b['indexees']} indexées"
-                      + (f", ignorées : {', '.join(b['ignorees'])}" if b["ignorees"] else ""))
-        print(lignes[-1])
-    (TEXTES / "RAPPORT.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
+    import sys
+    for s in sys.argv[1:] or list(PAGES):
+        b = indexer(s)
+        print(f"- {s} ({PAGES[s][0]}) : {b['indexees']} indexées"
+              + (f", ignorées : {', '.join(b['ignorees'])}" if b["ignorees"] else ""))

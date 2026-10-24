@@ -107,30 +107,61 @@ class PassagesTests(unittest.TestCase):
         self.assertEqual(corpus.passages_pour("Lc 6, 12-19", self.UNITES), [])
 
 
-class ImporterTests(unittest.TestCase):
-    def test_echec_reseau_n_ecrit_rien(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            sortie, cache = Path(tmp) / "textes", Path(tmp) / "cache"
-            erreur = Mock(status_code=429, ok=False)
-            with patch("corpus.requests.get", return_value=erreur), patch("corpus.time.sleep"):
-                with self.assertRaises(RuntimeError):
-                    corpus.importer("Rm", sortie=sortie, cache=cache)
-            self.assertFalse(sortie.exists() and any(sortie.iterdir()))
+class AuBesoinTests(unittest.TestCase):
+    """Le corpus grandit chaque nuit : index du livre à la première lecture,
+    texte gardé seulement pour les homélies utilisées."""
 
-    def test_importe_depuis_le_cache_et_ecrit_le_livre(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            sortie, cache = Path(tmp) / "textes", Path(tmp) / "cache"
-            cache.mkdir()
-            page = corpus.PAGES["Rm"][1][0]
-            (cache / corpus._nom_cache(page)).write_text("<p>" + TEXTE + "</p>", encoding="utf-8")
-            with patch("corpus.requests.get") as get:
-                bilan = corpus.importer("Rm", sortie=sortie, cache=cache)
-            get.assert_not_called()
-            d = json.loads((sortie / "Rm.json").read_text(encoding="utf-8"))
-        self.assertEqual(bilan, {"indexees": 2, "ignorees": ["III"]})
-        self.assertEqual(d["oeuvre"], "chrysostome-homelies")
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dossier = Path(self._tmp.name) / "chrysostome"
+        self.cache = Path(self._tmp.name) / "cache"
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def test_indexer_ecrit_un_index_sans_texte(self) -> None:
+        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
+            bilan = corpus.indexer("Rm", dossier=self.dossier, cache=self.cache)
+        self.assertEqual(bilan["ignorees"], ["III"])
+        d = json.loads((self.dossier / "Rm.index.json").read_text(encoding="utf-8"))
         self.assertEqual([u["homelie"] for u in d["unites"]], ["I", "II"])
+        self.assertTrue(all("texte" not in u for u in d["unites"]))
+        self.assertEqual(d["unites"][0]["analyse"], "1. Explication très-détaillée. 2. Du salut.")
+        self.assertFalse((self.dossier / "homelies").exists())
 
+    def test_preparer_indexe_au_besoin_et_ne_garde_que_l_utile(self) -> None:
+        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>") as lire:
+            extraits = corpus.preparer(["Rm 1, 8-10", "Lc 6, 12-19"], dossier=self.dossier, cache=self.cache)
+        self.assertEqual([u["id"] for u in extraits], ["chrysostome-Rm-II"])
+        self.assertTrue(extraits[0]["texte"].startswith("1. Corps de la deuxième homélie."))
+        self.assertEqual(lire.call_count, 1)  # une page Wikisource pour Romains, rien pour Luc
+        homelies = sorted(p.name for p in (self.dossier / "homelies").iterdir())
+        self.assertEqual(homelies, ["chrysostome-Rm-II.json"])
+
+    def test_preparer_reutilise_le_stocke_sans_reseau(self) -> None:
+        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
+            corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
+        with patch("corpus._html_de_la_page") as lire:
+            extraits = corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
+        lire.assert_not_called()
+        self.assertEqual([u["id"] for u in extraits], ["chrysostome-Rm-II"])
+
+    def test_panne_reseau_ne_bloque_pas_la_nuit(self) -> None:
+        with patch("corpus._html_de_la_page", side_effect=RuntimeError("Wikisource indisponible")):
+            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache), [])
+        self.assertFalse((self.dossier / "Rm.index.json").exists())
+
+    def test_hors_ligne_rien_n_est_lu(self) -> None:
+        with patch("corpus._html_de_la_page") as lire:
+            self.assertEqual(corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache, reseau=False), [])
+        lire.assert_not_called()
+
+    def test_texte_et_index_relus(self) -> None:
+        with patch("corpus._html_de_la_page", return_value="<p>" + TEXTE + "</p>"):
+            corpus.preparer(["Rm 1, 8-10"], dossier=self.dossier, cache=self.cache)
+        self.assertEqual(sorted(corpus.charger_index(self.dossier)), ["Rm"])
+        self.assertTrue(corpus.texte_homelie("chrysostome-Rm-II", self.dossier).startswith("1. Corps"))
+        self.assertIsNone(corpus.texte_homelie("chrysostome-Rm-I", self.dossier))
 
 class DecouperCasReelsTests(unittest.TestCase):
     def test_parenthese_ouvrante_manquante(self) -> None:
@@ -264,7 +295,7 @@ class CorrectionsTests(unittest.TestCase):
         self.assertNotIn("correction", unites[1])
 
     def test_fichier_de_corrections_jean(self) -> None:
-        c = json.loads((corpus.TEXTES / "corrections.json").read_text(encoding="utf-8"))["Jn"]
+        c = json.loads(corpus.CORRECTIONS.read_text(encoding="utf-8"))["Jn"]
         self.assertEqual(c["LXXXVII"]["debut"], [20, 24])
         self.assertTrue(all(v.get("motif") for v in c.values()))
 

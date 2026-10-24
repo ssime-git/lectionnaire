@@ -24,7 +24,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from videos import CHAINE, charger_catalogue, telecharger_vignette
 from valider import charger_oeuvres
-from corpus import PAGES as LIVRES_CHRYSOSTOME, charger_unites, passages_pour
+from corpus import PAGES as LIVRES_CHRYSOSTOME, charger_index, passages_pour, texte_homelie
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -151,18 +151,26 @@ CREDIT_CHRYSOSTOME = "trad. Jeannin (1864-1867), Wikisource, CC BY-SA"
 
 def _tradition(d: dict) -> list[dict]:
     """Les homélies qui commentent les lectures du jour, recopiées telles
-    quelles avec leur source : le carnet libre ne cite que cela."""
-    unites, vues, extraits = charger_unites(), set(), []
+    quelles avec leur source : le carnet libre ne cite que cela. Aucun accès
+    réseau ici — le corpus se complète la nuit (corpus.preparer). Si le
+    brouillon a confirmé ses homélies (champ « homelies »), elles font foi."""
+    index, vues, extraits = charger_index(), set(), []
+    confirmees = d.get("homelies")
     for lec in d.get("lectures", []):
-        for u in passages_pour(lec.get("reference", ""), unites):
+        for u in passages_pour(lec.get("reference", ""), index):
             if u["id"] in vues or len(extraits) >= MAX_TRADITION:
+                continue
+            if confirmees is not None and u["id"] not in confirmees:
+                continue
+            texte = texte_homelie(u["id"])
+            if texte is None:
                 continue
             vues.add(u["id"])
             extraits.append({
                 "titre": f"Jean Chrysostome, Homélie {u['homelie']} sur {LIVRES_CHRYSOSTOME[u['livre']][0]}",
                 "lecture": lec.get("reference", ""),
                 "analyse": u.get("analyse", ""),
-                "extrait": u.get("texte", "")[:1500],
+                "extrait": texte[:1500],
                 "url": u.get("source_url", ""),
                 "credit": CREDIT_CHRYSOSTOME,
             })

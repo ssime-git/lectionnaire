@@ -121,6 +121,7 @@ jobs:
             - [ ] Gravure : vérifier le bois gravé (généré ; le retoucher à la main si besoin)
             - [ ] Vidéos : chaque vidéo a un lien réel avec le jour (sinon la retirer de `videos`)
             - [ ] Carnet : réponses justes, sources de la tradition vérifiées (rien d'inventé)
+            - [ ] Chrysostome : les homélies retenues (`homelies`) commentent bien les lectures du jour
 
             Pour corriger : éditer `data/jours/${{ steps.date.outputs.date }}.json`
             directement dans la PR — le HTML est re-rendu automatiquement à
@@ -133,3 +134,4 @@ jobs:
             docs/${{ steps.date.outputs.date }}.html
             docs/vignettes/
             docs/contexte/${{ steps.date.outputs.date }}.json
+            data/tradition/textes/

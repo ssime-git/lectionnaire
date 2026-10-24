@@ -104,5 +104,17 @@ class CarnetTests(unittest.TestCase):
         self.assertEqual(valider.charger_oeuvres()["heidelberg"], "Catéchisme de Heidelberg (1563)")
 
 
+class HomeliesValidationTests(unittest.TestCase):
+    def test_homelie_inconnue_refusee(self) -> None:
+        d = copy.deepcopy(BASE)
+        d["homelies"] = ["chrysostome-Mt-INVENTEE"]
+        self.assertTrue(any("homélie inconnue" in f for f in valider.valider_contrat(d, catalogue=CATALOGUE)))
+
+    def test_homelie_enregistree_acceptee(self) -> None:
+        d = copy.deepcopy(BASE)
+        d["homelies"] = ["chrysostome-Mt-LXXI"]
+        self.assertEqual(valider.valider_contrat(d, catalogue=CATALOGUE), [])
+
+
 if __name__ == "__main__":
     unittest.main()
