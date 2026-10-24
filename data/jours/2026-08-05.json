@@ -1,0 +1,142 @@
+{
+  "date": "2026-08-05",
+  "date_humaine": "mercredi",
+  "semaine": "18ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 31, 1-7 ; Jr 31, 10, 11-12ab, 13 ; Mt 15, 21-28",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 132 h90\"/><path d=\"M50 132 v-16 q0 -8 8 -8 q8 0 8 8 v16\"/><path d=\"M58 108 q-2 -10 4 -16 q7 8 3 18\"/><path d=\"M20 132 q22 -4 30 -22\"/><path d=\"M20 132 q26 2 38 -10\"/><path d=\"M95 70 h48 v4 h-48 z\"/><path d=\"M99 74 v10\"/><path d=\"M139 74 v10\"/></g><g class=\"trait-rubrique\"><path d=\"M100 84 q3 10 -2 16\"/><path d=\"M112 84 q2 8 -3 14\"/><path d=\"M124 84 q3 9 -1 15\"/></g><g class=\"trait-liturgie\"><path d=\"M210 132 q40 -50 100 -60\"/><path d=\"M228 118 q6 -10 2 -20\"/><path d=\"M248 108 q6 -9 2 -19\"/><path d=\"M268 99 q6 -9 1 -18\"/><path d=\"M286 93 q5 -8 1 -16\"/><path d=\"M255 60 v22\"/><path d=\"M247 68 q8 -8 16 0\"/><path d=\"M250 66 q-9 6 -3 16\"/><path d=\"M260 66 q9 6 3 16\"/><path d=\"M255 82 q-4 8 -12 10\"/><path d=\"M255 82 q4 8 12 10\"/></g></svg>",
+  "titre": "Amour éternel",
+  "titre_html": "Amour <span class=\"it\">éternel</span>",
+  "sous_titre": "Jérémie 31 et Matthieu 15 : la promesse qui déborde les frontières d'Israël",
+  "suite_hier": null,
+  "gravure_alt": "Une femme agenouillée, le visage levé, tend les mains vers une table haute où quelques miettes tombent ; à l'arrière-plan, des collines plantées de vignes et une silhouette dansant au tambourin, comme deux temps d'une même promesse.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 31, 1-7",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> En ce temps-là, dit l'Éternel, je serai le Dieu de toutes les familles d'Israël, et ils seront mon peuple. <span class=\"s\">2</span> Ainsi parle l'Éternel : il a trouvé grâce dans le désert, le peuple de ceux qui ont échappé au glaive ; Israël marche vers son lieu de repos. <span class=\"s\">3</span> De loin l'Éternel se montre à moi : Je t'aime d'un <button class=\"mot\" data-g=\"g-ahava\">amour éternel</button> ; c'est pourquoi je te conserve ma bonté. <span class=\"s\">4</span> Je te rétablirai encore, et tu seras rétablie, <button class=\"mot\" data-g=\"g-vierge\">vierge d'Israël</button> ! Tu auras encore tes tambourins pour parure, et tu sortiras au milieu des danses joyeuses. <span class=\"s\">5</span> Tu planteras encore des vignes sur les montagnes de Samarie ; les planteurs planteront, et cueilleront les fruits. <span class=\"s\">6</span> Car le jour vient où les gardes crieront sur la montagne d'Éphraïm : Levez-vous, montons à Sion, vers l'Éternel, notre Dieu ! <span class=\"s\">7</span> Car ainsi parle l'Éternel : Poussez des cris de joie sur Jacob, éclatez d'allégresse à la tête des nations ! Élevez vos voix, chantez des louanges, et dites : Éternel, délivre ton peuple, le <button class=\"mot\" data-g=\"g-reste\">reste</button> d'Israël !",
+      "gloses": [
+        {
+          "id": "g-ahava",
+          "lemme": "ahavat ‘olam",
+          "html": "En hébreu, <span class=\"gr\">ahavat ‘olam</span>, littéralement « amour de la durée sans terme visible ». Segond traduit par « amour éternel », ce qui est juste mais risque de faire entendre l'éternité philosophique, l'intemporalité, alors que <span class=\"gr\">‘olam</span> désigne plutôt une durée qui dépasse l'horizon qu'on peut voir — un amour qui a toujours été là et dont on n'aperçoit pas la fin. Calvin, commentant ce verset, insiste sur le fait que cet amour ne se fonde sur aucun mérite d'Israël : il précède et il demeure, alors même que le peuple a rompu l'alliance."
+        },
+        {
+          "id": "g-vierge",
+          "lemme": "betoulat Israël",
+          "html": "L'hébreu porte <span class=\"gr\">betoulat Israël</span>, « vierge d'Israël », une expression que Jérémie avait déjà employée pour désigner le peuple comme une jeune fille qu'on va reconduire à la danse. Le choix est frappant si l'on se souvient que quelques chapitres plus tôt, le même prophète décrit Israël comme une épouse infidèle, livrée à l'adultère envers son Dieu (Jr 3, 1-10). Segond garde le mot tel quel, sans l'adoucir : la restauration promise n'efface pas la faute en la niant, elle la traverse et rend neuf ce qui était souillé."
+        },
+        {
+          "id": "g-reste",
+          "lemme": "she'erit",
+          "html": "<span class=\"gr\">She'erit</span>, « le reste » — l'un des mots théologiques les plus chargés de la prophétie hébraïque, qu'on retrouve chez Ésaïe et Michée : non pas la totalité du peuple, mais une part qui échappe au jugement et porte seule la promesse plus loin. Segond traduit sobrement par « reste ». Paul reprendra l'idée presque mot pour mot en Romains 11, 5, parlant d'« un reste, selon l'élection de la grâce » : la même logique traverse les deux Testaments."
+        }
+      ]
+    },
+    {
+      "etiquette": "Cantique",
+      "reference": "Jr 31, 10, 11-12ab, 13",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">10</span> Nations, écoutez la parole de l'Éternel, et publiez-la dans les îles lointaines ! Dites : Celui qui a dispersé Israël le <button class=\"mot\" data-g=\"g-rassembler\">rassemblera</button>, et il le gardera comme le berger garde son troupeau. <span class=\"s\">11</span> Car l'Éternel <button class=\"mot\" data-g=\"g-rachete\">rachète</button> Jacob, il le délivre de la main d'un plus fort que lui. <span class=\"s\">12</span> Ils viendront, et pousseront des cris de joie sur les hauteurs de Sion ; ils accourront vers les biens de l'Éternel, le blé, le moût, l'huile, les brebis et les bœufs. <span class=\"s\">13</span> Alors les jeunes filles se réjouiront à la danse, les jeunes hommes et les vieillards se réjouiront aussi ; je changerai leur <button class=\"mot\" data-g=\"g-deuil\">deuil</button> en allégresse, et je les consolerai, je leur donnerai de la joie après leurs souffrances.",
+      "gloses": [
+        {
+          "id": "g-rassembler",
+          "lemme": "qibbets",
+          "html": "Le verbe hébreu est <span class=\"gr\">qibbets</span>, « rassembler », choisi en écho exact au verbe qui précède, « disperser » (<span class=\"gr\">hephits</span>) : celui qui a dispersé est celui-là même qui rassemble, ce n'est pas une main étrangère qui répare ce qu'une autre aurait brisé. Segond rend bien ce balancement en français. L'image du berger qui suit reprend un vocabulaire qu'Ézéchiel 34 développera longuement contre les mauvais bergers d'Israël."
+        },
+        {
+          "id": "g-rachete",
+          "lemme": "ga'al",
+          "html": "<span class=\"gr\">Ga'al</span>, « racheter », est un terme de droit familial avant d'être un terme religieux : c'est l'acte du <span class=\"gr\">go'el</span>, le proche parent qui a le devoir de racheter le champ, la personne ou la dette d'un membre de sa famille tombé dans le malheur, comme Boaz pour Ruth. En l'appliquant à lui-même, l'Éternel se déclare parent le plus proche de Jacob, engagé par le sang et non par un contrat extérieur. Segond traduit fidèlement, mais le mot français « racheter » a perdu cette chaleur de parenté que l'hébreu garde intacte."
+        },
+        {
+          "id": "g-deuil",
+          "lemme": "'evel",
+          "html": "« Deuil », <span class=\"gr\">'evel</span>, s'oppose dans la phrase à la joie qui suit, exactement comme au Psaume 30, 12 : « tu as changé mon deuil en allégresse ». Ce n'est pas une consolation qui viendrait s'ajouter au deuil pour l'alléger, mais un renversement du mot lui-même, la même situation nommée autrement parce que Dieu y est entré. Segond garde ce contraste net, sans l'affaiblir par une paraphrase."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 15, 21-28",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">21</span> Jésus, étant parti de là, se retira dans le territoire de Tyr et de Sidon. <span class=\"s\">22</span> Et voici, une femme <button class=\"mot\" data-g=\"g-cananeenne\">cananéenne</button>, qui venait de ces contrées, lui cria : Aie pitié de moi, Seigneur, Fils de David ! Ma fille est cruellement tourmentée par le démon. <span class=\"s\">23</span> Il ne lui répondit pas un mot, et ses disciples s'approchèrent, et lui dirent avec insistance : Renvoie-la, car elle crie derrière nous. <span class=\"s\">24</span> Il répondit : Je n'ai été envoyé qu'aux <button class=\"mot\" data-g=\"g-brebis\">brebis perdues</button> de la maison d'Israël. <span class=\"s\">25</span> Mais elle vint se prosterner devant lui, disant : Seigneur, secours-moi ! <span class=\"s\">26</span> Il répondit : Il n'est pas bien de prendre le pain des enfants, et de le jeter aux <button class=\"mot\" data-g=\"g-chiens\">petits chiens</button>. <span class=\"s\">27</span> Oui, Seigneur, dit-elle, mais les petits chiens mangent les miettes qui tombent de la table de leurs maîtres. <span class=\"s\">28</span> Alors Jésus lui dit : Femme, ta <button class=\"mot\" data-g=\"g-foi\">foi</button> est grande ; qu'il te soit fait comme tu veux. Et, à l'heure même, sa fille fut guérie.",
+      "gloses": [
+        {
+          "id": "g-cananeenne",
+          "lemme": "Chananaia",
+          "html": "Matthieu écrit <span class=\"gr\">Chananaia</span>, « Cananéenne », un terme archaïque qu'on n'employait plus au premier siècle pour désigner les habitants de la région — Marc, racontant le même épisode, dit plus simplement « Syrophénicienne » (Mc 7, 26). En choisissant ce mot vieilli, Matthieu convoque le souvenir des peuples de Canaan, les ennemis ancestraux d'Israël depuis la conquête de Josué : c'est cette femme-là, l'étrangère par excellence, qui vient réclamer le Messie d'Israël. Segond conserve le mot sans l'expliquer, laissant au lecteur la charge de reconnaître l'écart."
+        },
+        {
+          "id": "g-brebis",
+          "lemme": "probata apolôlota",
+          "html": "« Brebis perdues », en grec <span class=\"gr\">ta probata ta apolôlota</span>, reprend une expression prophétique bien connue, celle d'Ézéchiel 34 et de Jérémie 50, 6, où le peuple dispersé est comparé à un troupeau sans berger. Jésus ne nie pas sa mission première envers Israël ; il la rappelle, presque comme une objection qu'il se fait à lui-même avant de la dépasser. Chrysostome note que cette réponse, en apparence un refus, sert en réalité à faire monter la foi de la femme, non à la décourager."
+        },
+        {
+          "id": "g-chiens",
+          "lemme": "kynaria",
+          "html": "Le grec porte <span class=\"gr\">kynaria</span>, diminutif de « chien » — les petits chiens de la maison, presque des animaux domestiques, et non les chiens errants et méprisés des rues (<span class=\"gr\">kynes</span>) que l'insulte visait d'ordinaire. Segond traduit « petits chiens », gardant le diminutif, ce qui adoucit sensiblement la dureté apparente du mot. Chrysostome lit toute la scène comme une épreuve pédagogique : Jésus teste la femme pour révéler aux disciples une foi qu'ils n'auraient pas soupçonnée chez une étrangère."
+        },
+        {
+          "id": "g-foi",
+          "lemme": "pistis megalê",
+          "html": "« Ta foi est grande » — en grec <span class=\"gr\">megalê sou hê pistis</span> — est l'une des deux seules fois, dans tout l'Évangile de Matthieu, où Jésus qualifie une foi de « grande » : l'autre est celle du centurion romain, en Matthieu 8, 10. Les deux fois, c'est un païen, quelqu'un d'extérieur à Israël, qui reçoit cet éloge qu'aucun disciple ne recevra dans l'Évangile. Ce rapprochement n'est sans doute pas un hasard de composition chez Matthieu, très attentif à ces échos internes."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le Livre de la consolation",
+      "corps_html": "Les chapitres 30 et 31 de Jérémie forment un ensemble que les commentateurs appellent depuis longtemps le « Livre de la consolation », tranchant nettement avec les oracles de jugement qui les entourent. Le texte s'adresse d'abord à Éphraïm, le royaume du Nord déporté par l'Assyrie dès 722 avant J.-C., bien avant la chute de Juda : la promesse de retour précède donc de plus d'un siècle sa propre réalisation partielle, adressée à un peuple qui, humainement, avait toute raison de croire l'espérance close."
+    },
+    {
+      "titre": "Juste avant, la controverse sur le pur et l'impur",
+      "corps_html": "L'épisode de la Cananéenne suit immédiatement, dans l'Évangile de Matthieu, une dispute avec les pharisiens sur le pur et l'impur : Jésus vient de déclarer que rien de ce qui entre par la bouche ne souille l'homme, mais ce qui sort du cœur (Mt 15, 1-20). Il part aussitôt après vers Tyr et Sidon, terre païenne entre toutes, et c'est là qu'une femme, étrangère et donc rituellement « impure » selon les catégories qu'il vient de discuter, devient l'occasion concrète de vérifier sa propre parole."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui ne se mérite pas",
+    "variantes": [
+      "Tu as prié pour quelque chose d'urgent, avec des mots précis, et il ne s'est rien passé — pas de refus net, pas de porte fermée, juste ce silence qui est pire qu'un non parce qu'il ne dit rien du tout. Tu as continué quand même, sans savoir si c'était de la foi ou de l'entêtement, et c'est souvent à ce moment-là, quand tu ne t'y attendais plus, qu'une réponse est venue, différente de ce que tu avais demandé mais plus juste. Ce silence-là n'était pas un jugement sur toi : c'était l'espace où ta prière devenait vraiment tienne.",
+      "Il t'est arrivé de lire une promesse de l'Écriture et de sentir, presque physiquement, qu'elle n'était pas pour toi — qu'elle appartenait à des gens plus fidèles, plus anciens dans la foi, plus en règle que toi avec Dieu. Tu t'es tenu à la lisière, prêt à repartir avec les miettes si on t'en laissait. Et c'est précisément là, à la lisière, sans titre à faire valoir, que la promesse t'a rejoint — non pas parce que tu avais fini par mériter d'entrer, mais parce que la miséricorde de Dieu n'a jamais été réservée à ceux qui étaient déjà dedans.",
+      "Il y a un chagrin que tu portes depuis longtemps, dont tu as cessé d'attendre qu'il s'en aille, et qui un jour se trouve changé sans que tu saches dire quand ni comment — non pas oublié, non pas résolu, mais devenu autre chose, une matière que tu peux enfin tenir sans qu'elle te déchire. Tu n'as rien fait pour provoquer ce basculement ; tu l'as seulement constaté, un matin, comme une chose déjà accomplie. C'est cette main-là, discrète et antérieure à ta propre force, que Jérémie ose nommer quand il dit que Dieu change le deuil en allégresse."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Rejoins, pour un instant, la scène : ni tout à fait dedans, ni tout à fait dehors, une main tendue vers une table qui n'est pas la tienne.",
+    "geste": "Nomme devant Dieu, en silence, un endroit précis où tu te sens sans titre à réclamer sa bonté — et demande-lui, comme la Cananéenne, sans détour ni argument.",
+    "note": "Il n'est pas nécessaire d'avoir la bonne formule : la femme de l'Évangile n'a que son insistance et son manque."
+  },
+  "question": "Où, dans ta vie, attends-tu encore la permission de croire que cet amour te concerne, toi aussi ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : un silence qui instruit",
+      "corps_html": "Dans son homélie sur ce passage, Jean Chrysostome refuse de lire le silence de Jésus puis sa réponse rude comme un mépris : il y voit une pédagogie, un moyen de faire apparaître au grand jour une foi que personne, pas même les disciples, n'aurait devinée chez une étrangère. La dureté apparente sert la femme elle-même, en la faisant persévérer jusqu'à une confession de foi plus profonde que celle de bien des fils d'Israël.",
+      "attribution": "Jean Chrysostome, Homélies sur l'Évangile de Matthieu, homélie LII"
+    },
+    {
+      "titre": "Calvin : un amour sans condition antérieure",
+      "corps_html": "Commentant Jérémie 31, 3, Calvin insiste sur le fait que l'amour de Dieu pour Israël n'a jamais été la récompense d'une fidélité du peuple : il précède toute alliance et la fonde, ce qui seul explique qu'il puisse survivre à une rupture aussi grave que celle qu'a décrite tout le livre. C'est, écrit-il en substance, la seule raison pour laquelle Dieu revient vers un peuple qui n'avait rien mérité que le jugement.",
+      "attribution": "Jean Calvin, Commentaires sur le livre de Jérémie"
+    },
+    {
+      "titre": "Paul reprend le mot « reste »",
+      "corps_html": "En Romains 11, 5, Paul écrit qu'« il y a aussi maintenant un reste, selon l'élection de la grâce », reprenant presque littéralement le vocabulaire de Jérémie et d'Ésaïe pour penser la place d'Israël au moment où l'Évangile s'ouvre aux nations. Le même mot traverse ainsi les deux Testaments pour dire une seule chose : la fidélité de Dieu ne dépend jamais du nombre de ceux qui répondent.",
+      "attribution": "Romains 11, 5 (verset parallèle)"
+    }
+  ]
+}
