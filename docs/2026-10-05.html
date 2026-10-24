@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ce qui ne s'invente pas — lundi 5 octobre 2026</title>
+<meta name="description" content="Galates 1 et Luc 10 : l'Évangile qu'on reçoit, le prochain qu'on devient">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#345E44;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#6E9B7C;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 5 octobre 2026 · 27ème Semaine du Temps Ordinaire · <span class="couleur">vert · </span>
+</p>
+    <h1>Ce qui ne s'<span class="it">invente</span> pas</h1>
+    <p class="chapeau">Galates 1 et Luc 10 : l'Évangile qu'on reçoit, le prochain qu'on devient</p>
+    <figure class="gravure" aria-label="Gravure sur bois : un homme laissé à terre sur un chemin de montagne en lacets, un passant penché sur lui et versant l'huile d'une fiole sur ses plaies, une mule chargée attendant à l'écart, et au loin le profil d'une ville fortifiée sur une hauteur."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M10 130 q40 -10 80 -26 q40 -16 70 -40 q30 -24 60 -34 q35 -11 60 -6"/><path d="M60 118 l20 -8 l10 10 l-14 10 l-18 2 z"/><path d="M68 110 q-4 -8 2 -14"/><path d="M95 92 l-4 10 l6 6"/><path d="M96 88 q2 -5 7 -4"/><path d="M178 76 q10 -14 22 -10 q6 10 -4 16 q4 8 14 4 q10 10 -6 14 q-18 2 -22 -10 q-6 -6 -4 -14"/><path d="M186 100 v18"/><path d="M176 118 h20"/><path d="M250 56 h10 v-10 h8 v10 h10 v16 h-28 z"/><path d="M256 72 v-8 h6 v8"/><path d="M244 72 h40"/><path d="M240 72 l4 -6 h32 l4 6"/></g><g class="trait-rubrique"><path d="M90 102 q-4 6 0 12"/></g><g class="trait-liturgie"><path d="M68 112 q4 -3 8 0"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ga 1, 6-12 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">6</span> Je m'étonne que vous vous détourniez si promptement de celui qui vous a appelés par la grâce de Christ, pour passer à un <button class="mot" data-g="g-heteron">autre Évangile</button>. <span class="s">7</span> Non pas qu'il y ait un autre Évangile, mais il y a des gens qui vous troublent, et qui veulent renverser l'Évangile de Christ. <span class="s">8</span> Si quelqu'un vous annonce un autre Évangile que celui que nous avons prêché, qu'il soit <button class="mot" data-g="g-anathema">anathème</button>! <span class="s">9</span> Nous l'avons dit précédemment, et je le répète à cette heure: si quelqu'un vous annonce un autre Évangile que celui que vous avez <button class="mot" data-g="g-parelabon">reçu</button>, qu'il soit anathème! <span class="s">10</span> Et maintenant, est-ce la faveur des hommes que je désire, ou celle de Dieu? Est-ce des hommes que je veux plaire? Si je plaisais encore aux hommes, je ne serais pas serviteur de Christ. <span class="s">11</span> Je vous déclare, frères, que l'Évangile que j'ai annoncé ne vient pas de l'homme; <span class="s">12</span> car je ne l'ai ni reçu ni appris d'un homme, mais par une <button class="mot" data-g="g-apokalypsis">révélation</button> de Jésus-Christ.</div>
+        <div class="glose" id="g-heteron"><span class="lemme">heteron</span> Paul emploie deux adjectifs grecs différents que le français confond sous le même mot. Au verset 6, <span class="gr">heteron</span> (ἕτερον) désigne un autre d'une espèce différente, pas simplement un second exemplaire de la même chose; au verset 7, il précise qu'il n'y a pas d'<span class="gr">allo</span> (ἄλλο), un autre de même nature, à côté. Segond traduit les deux par « autre Évangile », effaçant ce jeu de mots: pour Paul, ce que les Galates ont reçu n'est pas une variante parmi d'autres, c'est d'une autre nature — donc ce n'en est pas un du tout. Jean Chrysostome, dans son commentaire sur l'épître aux Galates, relève cette violence volontaire du vocabulaire paulinien.</div>
+        <div class="glose" id="g-anathema"><span class="lemme">anathème</span> Le mot grec <span class="gr">anathema</span> désignait à l'origine ce qui est mis à part, consacré ou voué à la destruction — un objet qu'on retire de l'usage commun pour le remettre à Dieu, en bien ou en mal. Segond garde le mot grec sans le traduire, comme un terme déjà reçu dans l'usage ecclésial de son temps, plutôt que de risquer « maudit », qui en durcirait encore le sens. Chrysostome note que Paul ne maudit pas les personnes mais déclare la chose — l'autre évangile — exclue, retranchée du corps commun de la foi; la répétition du mot en deux versets consécutifs signale une frontière, non une colère.</div>
+        <div class="glose" id="g-parelabon"><span class="lemme">parelabon</span> Le verbe grec <span class="gr">paralambanō</span> est un terme technique de la transmission, qu'on retrouve en 1 Corinthiens 11, 23 et 15, 3 pour la cène et pour la résurrection: il désigne ce qu'on reçoit d'un autre comme un dépôt, à charge de le transmettre intact. Segond traduit simplement « reçu », ce qui est juste mais laisse de côté l'arrière-plan de chaîne de transmission, proche de ce que les rabbins appelaient la qabbalah orale. Paul l'utilise au verset 9 pour l'Évangile que les Galates ont reçu de lui, et au verset 12 pour nier qu'il l'ait lui-même reçu d'un homme: le même verbe sert à affirmer une fidélité et à couper toute origine humaine.</div>
+        <div class="glose" id="g-apokalypsis"><span class="lemme">apokalypsis</span> Le mot grec signifie littéralement un dévoilement, de <span class="gr">apo</span> (loin de) et <span class="gr">kalyptō</span> (couvrir, voiler) — c'est le même mot qui donnera son titre à l'Apocalypse. Segond traduit « révélation », fidèle au sens, mais l'image française perd le geste concret du voile qu'on arrache. Paul oppose ainsi deux manières radicalement différentes de recevoir une vérité: l'enseignement qui se transmet de bouche à oreille, et le dévoilement qui vient d'en haut sans intermédiaire humain — c'est cette seconde origine qu'il revendique pour son Évangile.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 110 (111), 1-2, 7-8, 9.10c — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> Louez l'Éternel! Je louerai l'Éternel de tout mon cœur, dans la compagnie des hommes droits et dans l'assemblée. <span class="s">2</span> Les <button class="mot" data-g="g-maasim">œuvres</button> de l'Éternel sont grandes, recherchées par tous ceux qui les aiment. <span class="s">7</span> Les œuvres de ses mains sont vérité et justice, tous ses préceptes sont solides. <span class="s">8</span> Ils sont affermis pour toujours, à perpétuité, ils sont faits avec fidélité et droiture. <span class="s">9</span> Il a envoyé la <button class="mot" data-g="g-pedout">rédemption</button> à son peuple, il a établi pour toujours son alliance; son nom est <button class="mot" data-g="g-qadosh">saint</button> et redoutable. <span class="s">10c</span> Sa gloire subsiste à jamais.</div>
+        <div class="glose" id="g-maasim"><span class="lemme">ma'asim</span> Le mot hébreu <span class="gr">ma'asim</span> vient de la racine <span class="gr">'asah</span>, faire, agir — il désigne des actes concrets, non une qualité abstraite. Segond traduit « œuvres », ce qui est exact, mais le pluriel insiste sur une accumulation de gestes précis dans l'histoire, de la création à la sortie d'Égypte, plutôt que sur une action générale de Dieu. Le psaume est un acrostiche alphabétique en hébreu — chaque verset commence par la lettre suivante — comme pour égrener la fidélité de Dieu fait après fait, lettre après lettre, et non la proclamer d'un bloc.</div>
+        <div class="glose" id="g-pedout"><span class="lemme">pedout</span> Ce mot, de la racine <span class="gr">padah</span>, racheter, décrit le prix payé pour libérer un esclave, un captif ou un premier-né — le même vocabulaire que celui du rachat d'un champ engagé en Lévitique 25. Segond traduit « rédemption », du latin redemptio, qui garde l'idée du prix versé, plutôt que « délivrance » qui ne dirait que le résultat sans le coût. Les targums associent ce mot à l'Exode, événement fondateur rejoué chaque Pâque: Dieu ne libère pas par un simple décret, il paie pour reprendre ce qui lui appartient.</div>
+        <div class="glose" id="g-qadosh"><span class="lemme">qadosh</span> La racine signifie séparer, mettre à part: le nom de Dieu est « saint » en ce sens qu'il est d'un autre ordre que tout le reste, inaccessible et pourtant nommé. Segond garde « saint », traduction constante depuis la Vulgate (sanctus) et reçue par toute la tradition chrétienne, mais le mot hébreu porte davantage l'idée d'une altérité radicale que celle, plus morale en français, de pureté. Calvin, commentant les psaumes, insiste sur le fait que craindre ce nom-là n'est pas terreur servile mais reconnaissance de la distance infinie entre créateur et créature.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 10, 25-37 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">25</span> Un <button class="mot" data-g="g-nomikos">docteur de la loi</button> se leva, et dit à Jésus, pour l'<button class="mot" data-g="g-ekpeirazo">éprouver</button>: Maître, que dois-je faire pour hériter la vie éternelle? <span class="s">26</span> Jésus lui dit: Qu'est-il écrit dans la loi? Qu'y lis-tu? <span class="s">27</span> Il répondit: Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta force, et de toute ta pensée; et ton <button class="mot" data-g="g-plesion">prochain</button> comme toi-même. <span class="s">28</span> Tu as bien répondu, lui dit Jésus. Fais cela, et tu vivras. <span class="s">29</span> Mais lui, voulant se justifier, dit à Jésus: Et qui est mon prochain? <span class="s">30</span> Jésus reprit la parole, et dit: Un homme descendait de Jérusalem à Jéricho. Il tomba au milieu des brigands, qui le dépouillèrent, le chargèrent de coups, et s'en allèrent, le laissant à demi mort. <span class="s">31</span> Un sacrificateur, qui par hasard descendait par le même chemin, ayant vu cet homme, passa outre. <span class="s">32</span> Un Lévite, qui arriva aussi dans ce lieu, l'ayant vu, passa outre. <span class="s">33</span> Mais un Samaritain, qui voyageait, étant venu là, fut <button class="mot" data-g="g-splagchnizomai">saisi de compassion</button> lorsqu'il le vit. <span class="s">34</span> Il s'approcha, et banda ses plaies, en y versant de l'huile et du vin; puis il le mit sur sa propre monture, le conduisit à une hôtellerie, et prit soin de lui. <span class="s">35</span> Le lendemain, il tira deux deniers, les donna à l'hôte, et dit: Aie soin de lui, et ce que tu dépenseras de plus, je te le rendrai quand je repasserai. <span class="s">36</span> Lequel de ces trois te semble avoir été le prochain de celui qui était tombé au milieu des brigands? <span class="s">37</span> C'est celui qui a exercé la compassion envers lui, répondit le docteur de la loi. Et Jésus lui dit: Va, et fais de même.</div>
+        <div class="glose" id="g-nomikos"><span class="lemme">nomikos</span> Le mot grec désigne un spécialiste de la <span class="gr">nomos</span>, la Loi — un professionnel capable de la citer et de l'interpréter, pas un simple pratiquant. Segond traduit « docteur de la loi », fonction proche du « scribe » des autres synoptiques. Luc met ainsi en scène quelqu'un qui connaît déjà la réponse: c'est lui-même, et non Jésus, qui citera le Deutéronome et le Lévitique au verset suivant — ce qui déplace tout l'enjeu du savoir vers la pratique.</div>
+        <div class="glose" id="g-ekpeirazo"><span class="lemme">ekpeirazō</span> Ce verbe composé renforce le simple <span class="gr">peirazō</span>, éprouver, par le préfixe <span class="gr">ek</span>: il s'agit de mettre à l'épreuve jusqu'au bout, de tester pour faire trébucher. Le même verbe apparaît en Luc 4, 12, lorsque Jésus refuse de « tenter » Dieu au désert en citant le Deutéronome — Luc établit ainsi un écho entre la tentation du diable et celle du docteur de la loi. Segond traduit simplement « éprouver », ce qui adoucit un peu la charge polémique du terme grec.</div>
+        <div class="glose" id="g-plesion"><span class="lemme">plēsion</span> L'adjectif, substantivé, signifie littéralement « celui qui est proche, à côté » — il vient de la préposition <span class="gr">pelas</span>, près de. Segond traduit « prochain », choix ancien qui remonte à la Vulgate (proximus) et que toute la tradition chrétienne a reçu; mais le mot dit une proximité, pas un lien de sang ou de religion commune — c'est précisément ce que le docteur de la loi cherche à restreindre en demandant « qui est mon prochain », et que la parabole va retourner en demandant qui s'est fait proche.</div>
+        <div class="glose" id="g-splagchnizomai"><span class="lemme">splagchnizomai</span> Le verbe vient de <span class="gr">splagchna</span>, les entrailles, siège physique de l'émotion la plus profonde dans l'anthropologie grecque antique — Segond traduit « fut saisi de compassion », juste mais qui perd la viscéralité du terme original. Dans les évangiles, ce verbe n'est jamais employé pour un geste humain ordinaire: on le trouve pour le père du fils prodigue en Luc 15, 20, et pour Jésus devant les foules — jamais pour les prêtres ni les lévites. Origène, dans son homélie trente-quatre sur Luc, en tire que le Samaritain figure le Christ lui-même, seul capable de cette compassion-là, et non un simple modèle à imiter à la force de nos propres sentiments.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une crise, pas une nuance</h3><p>Galates est la lettre la plus abrupte de Paul, écrite dans l'urgence vers 50-55, probablement depuis Éphèse ou Antioche, à des communautés de Galatie que des prédicateurs judéo-chrétiens poussaient à se faire circoncire pour être pleinement sauvés. Paul n'argumente pas d'abord: il s'étonne, il s'indigne, il profère deux fois l'anathème avant même d'avoir exposé sa théologie du chapitre 3. C'est le ton d'un homme qui voit une fondation se fissurer, pas d'un théoricien qui nuance.</p></div>
+      <div><h3>Une route, une frontière</h3><p>La route de Jérusalem à Jéricho descendait en lacets abrupts sur près de mille mètres de dénivelé en moins de trente kilomètres, réputée dangereuse et infestée de brigands — Jérôme, au IVe siècle, situe encore là l'auberge du bon Samaritain pour les pèlerins. Mais le choix du personnage pèse plus que le décor: Samaritains et Juifs se tenaient pour schismatiques les uns des autres depuis des siècles — en Jean 4, 9, la Samaritaine s'étonne même qu'un Juif lui adresse la parole.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce que tu reçois avant de le choisir</h2>
+<p>Il y a des moments où tu voudrais pouvoir te convaincre toi-même d'une vérité que tu n'as pas reçue — te persuader par la force de ta propre logique que telle parole est juste, alors qu'au fond tu sais que si elle est vraie, ce n'est pas parce que tu l'as construite. Tu peux retravailler un argument des heures, l'habiller, le rendre cohérent, et sentir malgré tout qu'il sonne creux, parce qu'il vient de toi et non d'ailleurs. Ce jour où, au contraire, une parole s'impose à toi sans que tu l'aies cherchée ni fabriquée, qui te traverse avec une autorité que tu n'as pas à lui donner — c'est ce jour-là seulement que tu touches à ce que Paul appelle une révélation, et non une opinion de plus.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre ta journée, reste un instant sur la question que Jésus retourne: pas « qui dois-je aimer » mais « qui s'est fait proche ».</p>
+      <p class="geste">Repense à une personne envers qui tu as senti, sans l'avoir décidé, un mouvement de compassion cette semaine — et demande à Dieu ce que ce mouvement a à voir avec sa propre vie en toi.</p>
+      <small>L'Évangile reçu de Galates et le prochain reconnu dans Luc ne sont pas rapprochés par hasard: les deux textes refusent qu'on redéfinisse seul les limites de ce qui nous est donné.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Où, cette semaine, as-tu senti une compassion te précéder, avant même d'avoir décidé si elle était raisonnable — et qu'as-tu fait de ce mouvement?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le Samaritain, figure du Christ</h3>
+          <p>Origène lit toute la parabole comme une allégorie du salut: l'homme qui descend de Jérusalem à Jéricho, c'est Adam qui descend de la cité de paix vers la corruption; les brigands sont les puissances adverses; le prêtre et le lévite, c'est la Loi et les prophètes, impuissants à guérir; le Samaritain, c'est le Christ lui-même, qui ne passe pas son chemin. Cette lecture, reprise ensuite par Augustin, a longtemps dominé l'exégèse occidentale avant qu'une lecture plus directement éthique ne lui soit préférée.</p>
+<p class="attrib">Origène, Homélies sur Luc, XXXIV</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Un miroir, pas une promesse tenable seul</h3>
+          <p>Calvin, commentant ce passage, relève que « fais cela, et tu vivras » n'est pas une promesse que l'homme puisse réellement tenir par ses propres forces, mais un miroir qui révèle son incapacité: la loi, selon lui, ne condamne personne qu'elle n'ait d'abord sommé d'aimer parfaitement. Le docteur de la loi croit pouvoir se justifier en répondant correctement; Calvin y voit au contraire la preuve qu'il n'a pas encore compris ce que la loi exige vraiment de lui.</p>
+<p class="attrib">Calvin, Commentaire sur l'harmonie évangélique, sur Luc 10, 28</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La vigilance d'un médecin</h3>
+          <p>Jean Chrysostome s'étonne que Paul, d'ordinaire si patient avec les faiblesses des croyants, ne laisse ici aucune place à la nuance: il y voit non la dureté d'un homme susceptible, mais la vigilance d'un médecin devant une gangrène — certaines erreurs, laissées à leur pente, ne corrompent pas un point de doctrine mais tout l'Évangile reçu. C'est pourquoi, selon lui, Paul préfère prononcer deux fois l'anathème que de laisser croire que la question est négociable.</p>
+<p class="attrib">Jean Chrysostome, Commentaire sur l'épître aux Galates</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 27ème Semaine du Temps Ordinaire — Ga 1, 6-12 ; Lc 10, 25-37.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
