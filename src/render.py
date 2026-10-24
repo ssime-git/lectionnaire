@@ -62,6 +62,7 @@ def charger_jour(jour: str) -> dict:
     _preparer_videos(donnees, charger_catalogue(), DOCS / "vignettes")
     donnees.setdefault("carnet", [])
     donnees["oeuvres"] = charger_oeuvres()
+    donnees["peres"] = _tradition(donnees)  # sources du fil du jour
     return donnees
 
 
@@ -262,6 +263,9 @@ def reconstruire_index() -> None:
 
     index = _INDEX_AVANT + "\n".join(liens) + _INDEX_APRES
     (DOCS / "index.html").write_text(index, encoding="utf-8")
+    # Liste des jours publiés : le fil du jour y trouve la veille et le
+    # lendemain sans re-rendre les pages voisines à chaque publication.
+    (DOCS / "jours.json").write_text(json.dumps(sorted(jours)), encoding="utf-8")
     print(f"✓ docs/index.html  ({len(jours)} jour·s)")
 
 

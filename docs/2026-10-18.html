@@ -230,8 +230,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
 .compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
 .compagnon .entete .rubrique{margin:0}
-.compagnon .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
-.compagnon .replier:hover{color:var(--ink);border-color:var(--ink)}
+.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier:hover,.fil .replier:hover{color:var(--ink);border-color:var(--ink)}
 .video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
 .video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
 .video:hover img,.video:focus-visible img{filter:none;opacity:1}
@@ -255,6 +255,49 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .pellicule button:hover{opacity:1}
 .pellicule button.on{border-color:var(--liturgie);opacity:1}
 .pellicule button.on img{filter:none}
+/* ---------- LE FIL DU JOUR : volet gauche, se repérer ----------
+   Le jour, les lectures, le plan, les sources. Ouvert sur grand écran (il
+   pousse la page), tiroir sur mobile. Repliable, redimensionnable. */
+.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-size:.92rem;transform:translateX(-105%);transition:transform .35s ease}
+.fil.ouvert{transform:none}
+.fil .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 1.4rem 2rem}
+.fil-tete{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem .6rem}
+.fil-tete .rubrique{margin:0}
+.fil h3{font-family:inherit;font-variant:small-caps;letter-spacing:.12em;font-size:.8rem;font-weight:400;color:var(--muet);margin:1.5rem 0 .45rem}
+.fil p{margin:0}
+.fil-jour .date{font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.3}
+.fil-jour .temps{color:var(--muet);margin-top:.25rem}
+.fil-jour .pastille{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
+.fil-jour .suite{font-style:italic;color:var(--glose-ink);margin-top:.5rem;line-height:1.4}
+.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem!important;font-size:.85rem}
+.fil a{color:var(--muet);text-decoration:none;transition:color .2s}
+.fil a:hover{color:var(--ink)}
+.fil ol{list-style:none;margin:0;padding:0}
+.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:2px solid var(--filet);padding:.28rem .7rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
+.fil ol small{display:block;font-size:.75rem;font-variant:small-caps;letter-spacing:.06em}
+.fil ol .on{color:var(--ink);border-left-color:var(--liturgie)}
+.fil-sources .groupe{border-left:2px solid var(--filet);padding:.1rem 0 .1rem .7rem;margin-bottom:.7rem;color:var(--muet);line-height:1.4;transition:border-color .2s}
+.fil-sources .groupe.on{border-left-color:var(--liturgie)}
+.fil-sources .groupe.on .nom{color:var(--ink)}
+.fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
+.fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
+.fil-sources small{display:block;font-size:.75rem}
+.fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
+#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
+#ouvrir-fil:hover{border-color:var(--ink)}
+.fil .poignee{right:0;top:0;bottom:0;width:14px;cursor:col-resize}
+.fil .poignee span{width:3px;height:48px}
+@media(min-width:1280px){
+  body{transition:padding .35s ease}
+  body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
+  body.fil-ouvert #carte{display:none}
+}
+@media(max-width:1279px){
+  .fil{z-index:95;width:min(86vw,320px);box-shadow:20px 0 40px rgba(0,0,0,.14)}
+  .fil .corps{padding-bottom:5rem}
+  .fil .poignee{display:none}
+}
+
 /* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
    plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
 .compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
@@ -264,22 +307,23 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .poignee:focus-visible{outline:none}
 body.redim,body.redim *{user-select:none;-webkit-user-select:none}
 body.redim .video iframe{pointer-events:none}
-body.redim,body.redim .compagnon,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
+body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
 @media(min-width:1100px){
-  body{transition:padding-right .35s ease}
+  body{transition:padding .35s ease}
   .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
-  .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
-  .poignee span{width:3px;height:48px}
+  .compagnon .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
+  .compagnon .poignee span{width:3px;height:48px}
   body.redim{cursor:col-resize}
   body.panneau{padding-right:var(--panneau,460px)}
   #basculer-theme,#carte{transition:right .35s ease}
   body.panneau #basculer-theme,body.panneau #carte{right:calc(var(--panneau,460px) + 1rem)}
-  body.panneau .barre-portes{left:calc((100vw - var(--panneau,460px))/2)}
+  body.panneau{--droite:var(--panneau,460px)}
+  .barre-portes{left:calc(var(--gauche,0px) + (100vw - var(--gauche,0px) - var(--droite,0px))/2)}
 }
 @media(max-width:1099px){
   .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
-  .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
-  .poignee span{width:44px;height:5px}
+  .compagnon .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
+  .compagnon .poignee span{width:44px;height:5px}
   body.redim{cursor:row-resize}
 }
 .compagnon.ouvert{transform:none}
@@ -333,6 +377,44 @@ body.redim,body.redim .compagnon,body.redim .barre-portes,body.redim #basculer-t
   <a href="#question" title="La question"></a><span class="fil"></span>
   <a href="#racines" class="lateral" title="Les racines"></a>
 </nav>
+
+<!-- LE FIL DU JOUR : volet gauche pour se repérer. Repliable, redimensionnable. -->
+<button id="ouvrir-fil" aria-controls="fil" aria-expanded="false" hidden>☰ Le fil</button>
+<aside class="fil" id="fil" aria-label="Le fil du jour">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="fil" aria-label="Élargir ou réduire le fil du jour (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour élargir"><span></span></div>
+  <div class="fil-tete"><p class="rubrique">Le fil du jour</p><button class="replier" aria-label="Replier le fil du jour">←</button></div>
+  <div class="corps">
+    <div class="fil-jour">
+      <p class="date">dimanche 18 octobre 2026</p>
+      <p class="temps"><span class="pastille"></span>29ème Semaine du Temps Ordinaire</p>
+      <p class="fil-voisins"><a id="fil-veille" hidden>← la veille</a><a href="./">archive</a><a id="fil-lendemain" hidden>le lendemain →</a></p>
+    </div>
+    <h3>Les lectures</h3>
+    <ol class="fil-lectures">
+<li><button data-lecture="0" class="on"><small>Première lecture</small>Is 45, 1.4-6</button></li>
+<li><button data-lecture="1"><small>Psaume</small>Ps 95 (96), 1.3, 4-5, 7-8, 9-10ac</button></li>
+<li><button data-lecture="2"><small>Deuxième lecture</small>1 Th 1, 1-5b</button></li>
+<li><button data-lecture="3"><small>Évangile</small>Mt 22, 15-21</button></li>
+    </ol>
+    <h3>La page</h3>
+    <ol class="fil-plan">
+      <li><a href="#textes" data-plan>Le texte</a></li>
+      <li><a href="#contexte" data-plan>Le sol</a></li>
+      <li><a href="#analogie" data-plan>Le pont</a></li>
+      <li><a href="#invitation" data-plan>Le geste</a></li>
+      <li><a href="#question" data-plan>La question</a></li>
+      <li><a href="#racines" data-plan>Les racines</a></li>
+    </ol>
+    <h3>Les sources</h3>
+    <div class="fil-sources">
+      <div class="groupe" data-pour="textes"><p class="nom">Textes</p>
+<p>Segond, 1910, domaine public</p>        <p><a href="https://www.aelf.org/2026-10-18/romain/messe" target="_blank" rel="noopener">Lectionnaire romain (AELF)</a></p>
+      </div>
+<div class="groupe" data-pour="racines contexte"><p class="nom">Les anciens</p>
+<p>Tertullien, De l'idolâtrie</p><p>Calvin, Commentaire sur le livre d'Ésaïe</p><p>Jean Chrysostome, Homélies sur l'évangile de Matthieu</p><p><a href="https://fr.wikisource.org/wiki/Jean_Chrysostome/Commentaire_sur_l’Évangile_selon_saint_Matthieu/Homélie_XL" target="_blank" rel="noopener">Jean Chrysostome, Homélie LXX sur Matthieu</a> <small>trad. Jeannin (1864-1867), Wikisource, CC BY-SA</small></p>      </div>      <p class="fil-ia">Gloses, contexte et carnet rédigés avec l'aide d'une IA : à relire et vérifier.</p>
+    </div>
+  </div>
+</aside>
 
 <div class="mesure">
 <div class="dedans">
@@ -533,6 +615,55 @@ var obsCarte=new IntersectionObserver(function(es){
   });
 },{rootMargin:'-40% 0px -50% 0px'});
 cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+// Le fil du jour : ouvert sur grand écran (sauf si on l'a replié), tiroir sur
+// mobile. Il suit la lecture (lecture affichée, section, sources) et trouve la
+// veille et le lendemain dans jours.json.
+(function(){
+  var fil=document.getElementById('fil'),btn=document.getElementById('ouvrir-fil');if(!fil)return;
+  var large=matchMedia('(min-width:1280px)'),rac=document.documentElement;
+  function lire(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function ecrire(k,v){try{v===null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}
+  function etat(o){fil.classList.toggle('ouvert',o);document.body.classList.toggle('fil-ouvert',o&&large.matches);
+    btn.hidden=o;btn.setAttribute('aria-expanded',o?'true':'false')}
+  function defaut(){etat(large.matches&&lire('fil')!=='replie')}
+  defaut();large.addEventListener('change',defaut);
+  btn.addEventListener('click',function(){etat(true);if(large.matches)ecrire('fil',null)});
+  fil.querySelector('.replier').addEventListener('click',function(){etat(false);if(large.matches)ecrire('fil','replie')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!large.matches&&fil.classList.contains('ouvert'))etat(false)});
+  document.addEventListener('click',function(e){if(!large.matches&&fil.classList.contains('ouvert')&&!fil.contains(e.target)&&e.target!==btn)etat(false)});
+  // Lectures : un clic amène la bonne carte ; le défilement du rail l'allume.
+  var rail=document.getElementById('r-textes'),lecs=fil.querySelectorAll('[data-lecture]');
+  function pas(){return rail.firstElementChild.offsetWidth+32}
+  lecs.forEach(function(b){b.addEventListener('click',function(){
+    document.getElementById('textes').scrollIntoView({behavior:'smooth'});
+    rail.scrollTo({left:pas()*+b.dataset.lecture,behavior:'smooth'});if(!large.matches)etat(false)})});
+  if(rail)rail.addEventListener('scroll',function(){var i=Math.round(rail.scrollLeft/pas());
+    lecs.forEach(function(b){b.classList.toggle('on',+b.dataset.lecture===i)})},{passive:true});
+  // Plan et sources : suivent la section à l'écran.
+  var plan=fil.querySelectorAll('[data-plan]'),groupes=fil.querySelectorAll('.fil-sources .groupe');
+  plan.forEach(function(a){a.addEventListener('click',function(){if(!large.matches)etat(false)})});
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
+    plan.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+    groupes.forEach(function(g){g.classList.toggle('on',g.dataset.pour.split(' ').indexOf(id)>=0)})})},{rootMargin:'-40% 0px -50% 0px'});
+  ['haut','textes','contexte','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  // Veille et lendemain parmi les jours publiés.
+  var ici=location.pathname.split('/').pop().replace('.html','');
+  fetch('jours.json').then(function(r){return r.ok?r.json():[]}).then(function(js){var i=js.indexOf(ici);if(i<0)return;
+    [['fil-veille',js[i-1]],['fil-lendemain',js[i+1]]].forEach(function(x){var a=document.getElementById(x[0]);
+      if(x[1]){a.href='./'+x[1]+'.html';a.hidden=false}})}).catch(function(){});
+  // Poignée (grand écran) : glisser pour élargir, double-clic pour revenir.
+  var poignee=fil.querySelector('.poignee'),depart=null;
+  function poser(v){v=Math.min(Math.max(220,innerWidth*.3),Math.max(220,v));rac.style.setProperty('--fil',v+'px');return v}
+  var garde=lire('fil-largeur');if(garde)poser(+garde);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,t:fil.offsetWidth};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(depart)poser(depart.t+e.clientX-depart.x)});
+  function lacher(){if(!depart)return;depart=null;poignee.classList.remove('tire');document.body.classList.remove('redim');ecrire('fil-largeur',fil.offsetWidth)}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--fil');ecrire('fil-largeur',null)});
+  poignee.addEventListener('keydown',function(e){var d={ArrowLeft:-30,ArrowRight:30}[e.key];if(!d)return;
+    e.preventDefault();ecrire('fil-largeur',poser(fil.offsetWidth+d))});
+})();
 var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
 // Portes : la pastille suit la position (Lire / Comprendre) et le clic ;

@@ -271,5 +271,51 @@ class PrioriteEvangileTests(unittest.TestCase):
         self.assertEqual(ids, ["chrysostome-Mt-LXXI", "chrysostome-Ep-IV"])
 
 
+class FilDuJourTests(unittest.TestCase):
+    """Volet gauche : se repérer (jour, lectures, plan, sources)."""
+
+    def setUp(self) -> None:
+        self.html = render.rendre_html(_jour([_video("1g4u57TSY0g", "Shema / Écouter")]))
+
+    def test_volet_present_et_repliable(self) -> None:
+        self.assertIn('<aside class="fil" id="fil"', self.html)
+        self.assertIn('id="ouvrir-fil"', self.html)
+        self.assertIn('class="replier"', self.html)
+        self.assertIn("width:var(--fil,270px)", self.html)
+
+    def test_lectures_cliquables(self) -> None:
+        for i, ref in enumerate(["Ex 22, 20-26", "Mt 22, 34-40"]):
+            self.assertIn(ref, self.html)
+        self.assertIn('data-lecture="3"', self.html)
+
+    def test_plan_de_la_page(self) -> None:
+        for ancre in ("#textes", "#contexte", "#analogie", "#invitation", "#question", "#racines"):
+            self.assertIn(f'<a href="{ancre}" data-plan', self.html)
+
+    def test_sources(self) -> None:
+        self.assertIn("Segond 1910", self.html)
+        self.assertIn("https://www.aelf.org/2026-10-25/romain/messe", self.html)
+        self.assertIn("De la doctrine chrétienne", self.html)  # attribution d'une racine
+        self.assertIn("BibleProject - Français", self.html)
+
+    def test_peres_du_corpus_avec_lien(self) -> None:
+        d = _jour([])
+        d["peres"] = [{"titre": "Jean Chrysostome, Homélie LXXI sur Matthieu", "url": "https://fr.wikisource.org/wiki/X",
+                       "credit": "trad. Jeannin (1864-1867), Wikisource, CC BY-SA"}]
+        html = render.rendre_html(d)
+        self.assertIn('<a href="https://fr.wikisource.org/wiki/X" target="_blank" rel="noopener">Jean Chrysostome, Homélie LXXI sur Matthieu</a>', html)
+
+
+class ListeDesJoursTests(unittest.TestCase):
+    def test_index_ecrit_la_liste_des_jours(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            docs = Path(tmp)
+            for j in ("2026-10-24", "2026-10-25"):
+                (docs / f"{j}.html").write_text("x", encoding="utf-8")
+            with patch("render.DOCS", docs):
+                render.reconstruire_index()
+            self.assertEqual(json.loads((docs / "jours.json").read_text(encoding="utf-8")),
+                             ["2026-10-24", "2026-10-25"])
+
 if __name__ == "__main__":
     unittest.main()
