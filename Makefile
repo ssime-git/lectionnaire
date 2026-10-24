@@ -15,6 +15,7 @@ setup:
 
 test:
 	$(PYTHON) -m unittest discover -s tests -v
+	node --test 'tests/js/*.test.mjs'
 
 check: test
 	@for day in $(DEMO_DAYS); do $(PYTHON) src/valider.py data/jours/$$day.json; done

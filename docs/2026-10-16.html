@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -219,18 +219,19 @@ footer a{color:var(--rubrique)}
 .portes .ouvert-voir{background:var(--liturgie)}
 .portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
 .portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-@media(max-width:560px){.portes .d{display:none}}
+@media(max-width:560px){.portes .d{display:none}.portes a{padding:.85rem .3rem;text-align:center}.portes .n{font-size:1.02rem}}
 .barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
-.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;transition:background .3s,color .3s}
+.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.35rem .6rem;letter-spacing:.04em}}
 .barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
 footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 /* ---------- COMPAGNON : une vidéo à la fois ---------- */
-.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:auto;transition:transform .35s ease}
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
 .compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
 .compagnon .entete .rubrique{margin:0}
-.compagnon .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
-.compagnon .replier:hover{color:var(--ink);border-color:var(--ink)}
+.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier:hover,.fil .replier:hover{color:var(--ink);border-color:var(--ink)}
 .video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
 .video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
 .video:hover img,.video:focus-visible img{filter:none;opacity:1}
@@ -254,18 +255,117 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 .pellicule button:hover{opacity:1}
 .pellicule button.on{border-color:var(--liturgie);opacity:1}
 .pellicule button.on img{filter:none}
+/* ---------- LE FIL DU JOUR : volet gauche, se repérer ----------
+   Le jour, les lectures, le plan, les sources. Ouvert sur grand écran (il
+   pousse la page), tiroir sur mobile. Repliable, redimensionnable. */
+.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-size:.92rem;transform:translateX(-105%);transition:transform .35s ease}
+.fil.ouvert{transform:none}
+.fil .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 1.4rem 2rem}
+.fil-tete{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem .6rem}
+.fil-tete .rubrique{margin:0}
+.fil h3{font-family:inherit;font-variant:small-caps;letter-spacing:.12em;font-size:.8rem;font-weight:400;color:var(--muet);margin:1.5rem 0 .45rem}
+.fil p{margin:0}
+.fil-jour .date{font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.3}
+.fil-jour .temps{color:var(--muet);margin-top:.25rem}
+.fil-jour .pastille{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
+.fil-jour .suite{font-style:italic;color:var(--glose-ink);margin-top:.5rem;line-height:1.4}
+.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem!important;font-size:.85rem}
+.fil a{color:var(--muet);text-decoration:none;transition:color .2s}
+.fil a:hover{color:var(--ink)}
+.fil ol{list-style:none;margin:0;padding:0}
+.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:2px solid var(--filet);padding:.28rem .7rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
+.fil ol small{display:block;font-size:.75rem;font-variant:small-caps;letter-spacing:.06em}
+.fil ol .on{color:var(--ink);border-left-color:var(--liturgie)}
+.fil-sources .groupe{border-left:2px solid var(--filet);padding:.1rem 0 .1rem .7rem;margin-bottom:.7rem;color:var(--muet);line-height:1.4;transition:border-color .2s}
+.fil-sources .groupe.on{border-left-color:var(--liturgie)}
+.fil-sources .groupe.on .nom{color:var(--ink)}
+.fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
+.fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
+.fil-sources small{display:block;font-size:.75rem}
+.fil-note{font-size:.78rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
+.fil-liens{font-size:.82rem;margin-top:.8rem!important}
+.fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
+#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
+#ouvrir-fil:hover{border-color:var(--ink)}
+.fil .poignee{right:0;top:0;bottom:0;width:14px;cursor:col-resize}
+.fil .poignee span{width:3px;height:48px}
+@media(min-width:1280px){
+  body{transition:padding .35s ease}
+  body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
+  body.fil-ouvert #carte{display:none}
+  /* Le fil porte déjà références, sources et mention IA. */
+  body.fil-ouvert footer{display:none}
+}
+@media(max-width:1279px){
+  .fil{z-index:95;width:min(86vw,320px);box-shadow:20px 0 40px rgba(0,0,0,.14)}
+  .fil .corps{padding-bottom:5rem}
+  .fil .poignee{display:none}
+}
+
+/* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
+   plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
+.compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.poignee{position:absolute;z-index:2;display:grid;place-items:center;touch-action:none}
+.poignee span{display:block;background:var(--filet);border-radius:999px;transition:background .2s}
+.poignee:hover span,.poignee:focus-visible span,.poignee.tire span{background:var(--liturgie)}
+.poignee:focus-visible{outline:none}
+body.redim,body.redim *{user-select:none;-webkit-user-select:none}
+body.redim .video iframe{pointer-events:none}
+body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
 @media(min-width:1100px){
-  body{transition:padding-right .35s ease}
-  .compagnon{top:0;right:0;bottom:0;width:460px;padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
-  body.panneau{padding-right:460px}
+  body{transition:padding .35s ease}
+  .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
+  .compagnon .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
+  .compagnon .poignee span{width:3px;height:48px}
+  body.redim{cursor:col-resize}
+  body.panneau{padding-right:var(--panneau,460px)}
   #basculer-theme,#carte{transition:right .35s ease}
-  body.panneau #basculer-theme,body.panneau #carte{right:calc(460px + 1rem)}
-  body.panneau .barre-portes{left:calc((100vw - 460px)/2)}
+  body.panneau #basculer-theme,body.panneau #carte{right:calc(var(--panneau,460px) + 1rem)}
+  body.panneau{--droite:var(--panneau,460px)}
+  .barre-portes{left:calc(var(--gauche,0px) + (100vw - var(--gauche,0px) - var(--droite,0px))/2)}
 }
 @media(max-width:1099px){
-  .compagnon{left:0;right:0;bottom:0;max-height:78vh;padding:1.6rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
+  .compagnon .poignee span{width:44px;height:5px}
+  body.redim{cursor:row-resize}
 }
 .compagnon.ouvert{transform:none}
+.barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
+.barre-portes .ouvert-demander,.portes .ouvert-demander{background:var(--rubrique);color:var(--papier)}
+.portes .ouvert-demander .n,.portes .ouvert-demander .d{color:var(--papier)}
+.compagnon .onglets{display:flex;gap:.25rem;padding:.25rem;border:1px solid var(--filet);border-radius:999px}
+.compagnon .onglets button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;background:none;border:0;padding:.3rem 1rem;border-radius:999px;cursor:pointer;color:var(--ink);transition:background .3s,color .3s}
+.compagnon .onglets button.on{background:var(--liturgie);color:var(--papier)}
+.compagnon .onglets button[data-onglet=demander].on{background:var(--rubrique)}
+.carnet .avert{font-size:.86rem;line-height:1.4;color:var(--rubrique);border:1px solid var(--rubrique);padding:.45rem .7rem;margin:0 0 .9rem;border-radius:1px;background:var(--papier-creux)}
+.carnet .qr{border-top:1px solid var(--filet)}
+.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-style:italic;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.75rem 1.4rem .75rem 0;cursor:pointer;position:relative}
+.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.7rem;color:var(--rubrique);font-style:normal}
+.carnet .q-btn[aria-expanded=true]::after{content:"−"}
+.carnet .q-btn:hover{color:var(--liturgie)}
+.carnet .q-btn:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.carnet .r{font-size:1.02rem;color:var(--ctx-ink);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
+.carnet .r p{margin-bottom:.5rem}
+.carnet .sources{display:grid;gap:.3rem;margin-top:.6rem}
+.carnet .sources p{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--muet);margin:0}
+.carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
+.carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
+.carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
+.carnet .sources .trad a{color:inherit;text-decoration:none}
+.carnet .sources .trad a:hover{text-decoration:underline}
+.carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre{border-top:1px solid var(--filet);padding-top:1rem;margin-top:.4rem}
+.carnet-libre .libre-titre{font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;color:var(--rubrique);margin-bottom:.5rem}
+.carnet-libre .libre-saisie{display:flex;gap:.6rem}
+.carnet-libre input{flex:1;font:inherit;font-size:1.05rem;background:none;border:0;border-bottom:1px solid var(--muet);color:var(--ink);padding:.3rem 0}
+.carnet-libre input:focus{outline:none;border-bottom-color:var(--liturgie)}
+.carnet-libre button{font:inherit;font-variant:small-caps;letter-spacing:.08em;background:none;border:1px solid var(--rubrique);color:var(--rubrique);padding:.2rem .8rem;cursor:pointer}
+.carnet-libre button:disabled{opacity:.5;cursor:wait}
+.carnet-libre .libre-turnstile{margin-top:.7rem}
+.carnet-libre .libre-etat{font-size:.85rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre .libre-reponse{margin-top:.7rem}
+.carnet .libre-ferme{font-style:italic;color:var(--muet);border-top:1px solid var(--filet);padding-top:.9rem;margin-top:.4rem}
 </style>
 </head>
 <body>
@@ -282,6 +382,45 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   <a href="#racines" class="lateral" title="Les racines"></a>
 </nav>
 
+<!-- LE FIL DU JOUR : volet gauche pour se repérer. Repliable, redimensionnable. -->
+<button id="ouvrir-fil" aria-controls="fil" aria-expanded="false" hidden>☰ Le fil</button>
+<aside class="fil" id="fil" aria-label="Le fil du jour">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="fil" aria-label="Élargir ou réduire le fil du jour (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour élargir"><span></span></div>
+  <div class="fil-tete"><p class="rubrique">Le fil du jour</p><button class="replier" aria-label="Replier le fil du jour">←</button></div>
+  <div class="corps">
+    <div class="fil-jour">
+      <p class="date">vendredi 16 octobre 2026</p>
+      <p class="temps"><span class="pastille"></span>28ème Semaine du Temps Ordinaire</p>
+      <p class="fil-voisins"><a id="fil-veille" hidden>← la veille</a><a href="./">archive</a><a id="fil-lendemain" hidden>le lendemain →</a></p>
+    </div>
+    <h3>Les lectures</h3>
+    <ol class="fil-lectures">
+<li><button data-lecture="0" class="on"><small>Première lecture</small>Ep 1, 11-14</button></li>
+<li><button data-lecture="1"><small>Psaume</small>Ps 32 (33), 1-2, 4-5, 12-13</button></li>
+<li><button data-lecture="2"><small>Évangile</small>Lc 12, 1-7</button></li>
+    </ol>
+    <h3>La page</h3>
+    <ol class="fil-plan">
+      <li><a href="#textes" data-plan>Le texte</a></li>
+      <li><a href="#contexte" data-plan>Le sol</a></li>
+      <li><a href="#analogie" data-plan>Le pont</a></li>
+      <li><a href="#invitation" data-plan>Le geste</a></li>
+      <li><a href="#question" data-plan>La question</a></li>
+      <li><a href="#racines" data-plan>Les racines</a></li>
+    </ol>
+    <h3>Les sources</h3>
+    <div class="fil-sources">
+      <div class="groupe" data-pour="textes"><p class="nom">Textes</p>
+<p>Segond 1910, domaine public</p>        <p><a href="https://www.aelf.org/2026-10-16/romain/messe" target="_blank" rel="noopener">Lectionnaire romain (AELF)</a></p>
+      </div>
+<div class="groupe" data-pour="racines contexte"><p class="nom">Les anciens</p>
+<p>Jean Chrysostome, Homélies sur l'épître aux Éphésiens, IVe siècle</p><p>Jean Calvin, Commentaire sur l'épître aux Éphésiens, 1548</p><p>Cyrille d'Alexandrie, Commentaire sur l'évangile de Luc, sermon 89</p><p><a href="https://fr.wikisource.org/wiki/Commentaire_sur_l’Épître_de_saint_Paul_aux_Éphésiens" target="_blank" rel="noopener">Jean Chrysostome, Homélie II sur l&#39;Épître aux Éphésiens</a> <small>trad. Jeannin (1864-1867), Wikisource, CC BY-SA</small></p>      </div><div class="groupe" data-pour="voir"><p class="nom">Vidéos</p><p><a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a></p></div>      <p class="fil-note">Objet d'étude, pas une autorité — chaque affirmation reste traçable.</p>
+      <p class="fil-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</p>
+      <p class="fil-liens"><a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a></p>
+    </div>
+  </div>
+</aside>
+
 <div class="mesure">
 <div class="dedans">
 
@@ -294,7 +433,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <figure class="gravure" aria-label="Un sceau de cire pressé sur un parchemin déroulé, et au-dessus, une volée de passereaux comptés un à un par une main qui sort d'une nuée."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M40 100 q130 -14 260 0"/><path d="M40 128 q130 14 260 0"/><path d="M40 100 q-20 0 -20 14 q0 14 20 14"/><path d="M300 100 q20 0 20 14 q0 14 -20 14"/><path d="M110 106 q6 8 0 16"/><path d="M230 106 q-6 8 0 16"/><path d="M135 42 q0 -14 14 -14 q2 -10 16 -8 q6 -10 20 -2 q14 -2 14 10 q10 0 8 10 q-2 6 -10 6 h-54 q-10 0 -8 -2 z"/><path d="M172 42 v10"/><path d="M163 52 q9 -5 18 0 q2 5 -2 8 h-14 q-4 -3 -2 -8 z"/><path d="M165 52 v-9"/><path d="M171 52 v-11"/><path d="M177 52 v-9"/><path d="M163 55 q-5 2 -4 6"/></g><g class="trait-rubrique"><path d="M158 112 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 z"/><path d="M166 124 q4 6 8 0"/><path d="M164 112 h16 M172 104 v16"/></g><g class="trait-liturgie"><path d="M30 25 q5 -7 10 0 q5 -7 10 0"/><path d="M70 18 q5 -7 10 0 q5 -7 10 0"/><path d="M250 20 q5 -7 10 0 q5 -7 10 0"/><path d="M290 15 q5 -7 10 0 q5 -7 10 0"/></g></svg></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
-      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">1 vidéo pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+      <a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions sur ces textes</span></a>
     </nav>
   </header>
 
@@ -408,9 +548,38 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
-  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+  <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
 </nav>
 
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="compagnon" aria-label="Agrandir ou réduire le compagnon (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour agrandir"><span></span></div>
+  <div class="entete">
+<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="corps">
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="wktA2VE4yhY" data-titre="Grâce" data-vignette="vignettes/wktA2VE4yhY.jpg" aria-label="Lire la vidéo Grâce"><img src="vignettes/wktA2VE4yhY.jpg" alt=""><span class="lire">Regarder</span></div>
+    <p class="vtitre" id="ecran-titre">Grâce</p>
+    <p class="raison" id="ecran-raison">Grâce éclaire 'scellés du gage de l'Esprit' en Ep 1, 11-14.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=wktA2VE4yhY" target="_blank" rel="noopener">voir sur YouTube</a></p>
+  </div>
+  <div class="vitre carnet" data-vitre="demander">
+    <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
+    <!-- Question libre : visible seulement si /api/carnet est ouvert (voir JS). -->
+    <form class="carnet-libre" hidden data-date="2026-10-16">
+      <p class="libre-titre">Ta question sur les textes du jour</p>
+      <div class="libre-saisie"><input name="question" maxlength="400" minlength="3" required placeholder="Pourquoi… ?" aria-label="Ta question sur les textes du jour"><button type="submit">Poser</button></div>
+      <div class="libre-turnstile"></div>
+      <p class="libre-etat" aria-live="polite"></p>
+      <div class="libre-reponse r" hidden><div class="libre-texte"></div><div class="libre-sources sources" hidden></div><p class="ia">Réponse générée par IA, non relue — à vérifier.</p></div>
+    </form>
+    <p class="libre-ferme" hidden></p>
+  </div>
+  </div>
+</aside>
 
 <script>
 (function(){
@@ -453,10 +622,60 @@ var obsCarte=new IntersectionObserver(function(es){
   });
 },{rootMargin:'-40% 0px -50% 0px'});
 cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+// Le fil du jour : ouvert sur grand écran (sauf si on l'a replié), tiroir sur
+// mobile. Il suit la lecture (lecture affichée, section, sources) et trouve la
+// veille et le lendemain dans jours.json.
+(function(){
+  var fil=document.getElementById('fil'),btn=document.getElementById('ouvrir-fil');if(!fil)return;
+  var large=matchMedia('(min-width:1280px)'),rac=document.documentElement;
+  function lire(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function ecrire(k,v){try{v===null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}
+  function etat(o){fil.classList.toggle('ouvert',o);document.body.classList.toggle('fil-ouvert',o&&large.matches);
+    btn.hidden=o;btn.setAttribute('aria-expanded',o?'true':'false')}
+  function defaut(){etat(large.matches&&lire('fil')!=='replie')}
+  defaut();large.addEventListener('change',defaut);
+  btn.addEventListener('click',function(){etat(true);if(large.matches)ecrire('fil',null)});
+  fil.querySelector('.replier').addEventListener('click',function(){etat(false);if(large.matches)ecrire('fil','replie')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!large.matches&&fil.classList.contains('ouvert'))etat(false)});
+  document.addEventListener('click',function(e){if(!large.matches&&fil.classList.contains('ouvert')&&!fil.contains(e.target)&&e.target!==btn)etat(false)});
+  // Lectures : un clic amène la bonne carte ; le défilement du rail l'allume.
+  var rail=document.getElementById('r-textes'),lecs=fil.querySelectorAll('[data-lecture]');
+  function pas(){return rail.firstElementChild.offsetWidth+32}
+  lecs.forEach(function(b){b.addEventListener('click',function(){
+    document.getElementById('textes').scrollIntoView({behavior:'smooth'});
+    rail.scrollTo({left:pas()*+b.dataset.lecture,behavior:'smooth'});if(!large.matches)etat(false)})});
+  if(rail)rail.addEventListener('scroll',function(){var i=Math.round(rail.scrollLeft/pas());
+    lecs.forEach(function(b){b.classList.toggle('on',+b.dataset.lecture===i)})},{passive:true});
+  // Plan et sources : suivent la section à l'écran.
+  var plan=fil.querySelectorAll('[data-plan]'),groupes=fil.querySelectorAll('.fil-sources .groupe');
+  plan.forEach(function(a){a.addEventListener('click',function(){if(!large.matches)etat(false)})});
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
+    plan.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+    groupes.forEach(function(g){g.classList.toggle('on',g.dataset.pour.split(' ').indexOf(id)>=0)})})},{rootMargin:'-40% 0px -50% 0px'});
+  ['haut','textes','contexte','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  // Veille et lendemain parmi les jours publiés.
+  var ici=location.pathname.split('/').pop().replace('.html','');
+  fetch('jours.json').then(function(r){return r.ok?r.json():[]}).then(function(js){var i=js.indexOf(ici);if(i<0)return;
+    [['fil-veille',js[i-1]],['fil-lendemain',js[i+1]]].forEach(function(x){var a=document.getElementById(x[0]);
+      if(x[1]){a.href='./'+x[1]+'.html';a.hidden=false}})}).catch(function(){});
+  // Poignée (grand écran) : glisser pour élargir, double-clic pour revenir.
+  var poignee=fil.querySelector('.poignee'),depart=null;
+  function poser(v){v=Math.min(Math.max(220,innerWidth*.3),Math.max(220,v));rac.style.setProperty('--fil',v+'px');return v}
+  var garde=lire('fil-largeur');if(garde)poser(+garde);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,t:fil.offsetWidth};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(depart)poser(depart.t+e.clientX-depart.x)});
+  function lacher(){if(!depart)return;depart=null;poignee.classList.remove('tire');document.body.classList.remove('redim');ecrire('fil-largeur',fil.offsetWidth)}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--fil');ecrire('fil-largeur',null)});
+  poignee.addEventListener('keydown',function(e){var d={ArrowLeft:-30,ArrowRight:30}[e.key];if(!d)return;
+    e.preventDefault();ecrire('fil-largeur',poser(fil.offsetWidth+d))});
+})();
 var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
 // Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
-// Voir est un interrupteur qui déplie ou replie le compagnon.
+// Voir et Demander sont des interrupteurs qui déplient ou replient le
+// compagnon ; passer de l'un à l'autre change d'onglet sans replier.
 (function(){
   var portes=document.querySelectorAll('[data-porte]');
   var comp=document.getElementById('compagnon'),ecran=document.getElementById('ecran');
@@ -465,17 +684,22 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function peindre(){portes.forEach(function(e){var p=e.dataset.porte;
     e.classList.toggle('on',!ouvert&&p===position);
     e.classList.toggle('ouvert-voir',ouvert==='voir'&&p==='voir');
-    if(p==='voir')e.setAttribute('aria-expanded',ouvert==='voir'?'true':'false')})}
+    e.classList.toggle('ouvert-demander',ouvert==='demander'&&p==='demander');
+    if(p==='voir'||p==='demander')e.setAttribute('aria-expanded',ouvert===p?'true':'false')});
+    if(!comp)return;
+    comp.querySelectorAll('[data-vitre]').forEach(function(v){v.hidden=!!ouvert&&v.dataset.vitre!==ouvert});
+    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')})}
   function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
     var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
     else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
     var l=document.createElement('span');l.className='lire';l.textContent='Regarder';ecran.appendChild(f);ecran.appendChild(l)}
   function ouvrir(o){ouvert=o;
     if(comp){comp.classList.toggle('ouvert',!!o);document.body.classList.toggle('panneau',!!o&&mq.matches);
-      if(!o&&ecran.querySelector('iframe'))facade()}  // replier coupe la vidéo
+      if(o!=='voir'&&ecran&&ecran.querySelector('iframe'))facade();  // quitter Voir coupe la vidéo
+      if(o==='demander')initLibre()}
     peindre()}
   portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
-    if(p==='voir'){ev.preventDefault();ouvrir(ouvert==='voir'?null:'voir');return}
+    if(p==='voir'||p==='demander'){ev.preventDefault();ouvrir(ouvert===p?null:p);return}
     position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
   var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){
@@ -487,7 +711,73 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
   fleche();mq.addEventListener('change',fleche);
   replier.addEventListener('click',function(){ouvrir(null)});
+  // Poignée : glisser pour agrandir ; sur mobile, un tap bascule mi-hauteur /
+  // plein écran, le relâcher s'aimante à 45, 78 ou 92 % et tirer tout en bas
+  // replie. Double-clic : taille d'origine. Flèches au clavier. Taille gardée.
+  var poignee=comp.querySelector('.poignee'),rac=document.documentElement,depart=null;
+  function cle(){return mq.matches?'panneau':'volet'}
+  function poser(v){var large=mq.matches,min=large?340:15,max=large?Math.max(340,innerWidth*.7):92;
+    v=Math.min(max,Math.max(min,v));rac.style.setProperty('--'+cle(),v+(large?'px':'vh'));return v}
+  function garder(v){try{localStorage.setItem('compagnon-'+cle(),Math.round(v))}catch(e){}}
+  function taille(){return mq.matches?comp.offsetWidth:comp.offsetHeight/innerHeight*100}
+  function retrouver(){try{var v=localStorage.getItem('compagnon-'+cle());if(v)poser(+v)}catch(e){}}
+  retrouver();mq.addEventListener('change',retrouver);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,y:e.clientY,t:taille()};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(!depart)return;
+    poser(mq.matches?depart.t+depart.x-e.clientX:depart.t+(depart.y-e.clientY)/innerHeight*100)});
+  function lacher(e){if(!depart)return;var d=depart;depart=null;
+    poignee.classList.remove('tire');document.body.classList.remove('redim');
+    if(mq.matches){garder(taille());return}
+    var h=d.t+(d.y-e.clientY)/innerHeight*100,tap=Math.abs(d.y-e.clientY)<6;
+    if(tap)h=d.t>70?45:92;
+    else if(h<30){poser(d.t);ouvrir(null);return}
+    else h=[45,78,92].reduce(function(a,b){return Math.abs(b-h)<Math.abs(a-h)?b:a});
+    garder(poser(h))}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--'+cle());try{localStorage.removeItem('compagnon-'+cle())}catch(e){}});
+  poignee.addEventListener('keydown',function(e){var pas={ArrowLeft:40,ArrowRight:-40,ArrowUp:8,ArrowDown:-8}[e.key];
+    if(!pas||(mq.matches!==(e.key==='ArrowLeft'||e.key==='ArrowRight')))return;
+    e.preventDefault();garder(poser(taille()+pas))});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
+  comp.querySelectorAll('[data-onglet]').forEach(function(b){b.addEventListener('click',function(){ouvrir(b.dataset.onglet)})});
+  var qs=comp.querySelectorAll('.q-btn');
+  qs.forEach(function(b){b.addEventListener('click',function(){var ouvre=b.getAttribute('aria-expanded')!=='true';
+    qs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    if(ouvre){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false}})});
+  // Question libre : on demande d'abord si le carnet est ouvert ; Turnstile
+  // n'est chargé qu'à ce moment-là, jamais à l'ouverture de la page.
+  var libre=comp.querySelector('.carnet-libre'),demande=false,widget=null;
+  function fermeLibre(msg){var f=comp.querySelector('.libre-ferme');if(libre)libre.hidden=true;if(msg&&f){f.textContent=msg;f.hidden=false}}
+  function initLibre(){if(!libre||demande)return;demande=true;
+    fetch('/api/carnet',{headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json():null}).then(function(e){
+      if(!e||!e.ouvert){fermeLibre(e&&e.message||'Les questions en direct ne sont pas disponibles pour le moment.');return}
+      var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
+      s.onload=function(){widget=window.turnstile.render(libre.querySelector('.libre-turnstile'),{sitekey:e.sitekey,size:'flexible'});libre.hidden=false};
+      document.head.appendChild(s)}).catch(function(){fermeLibre('Les questions en direct ne sont pas disponibles pour le moment.')})}
+  if(libre)libre.addEventListener('submit',function(ev){ev.preventDefault();
+    var etat=libre.querySelector('.libre-etat'),btn=libre.querySelector('button'),q=libre.question.value.trim();
+    var jeton=window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';
+    if(!jeton){etat.textContent='Merci de valider la vérification anti-robot.';return}
+    btn.disabled=true;etat.textContent='Le carnet cherche dans les textes du jour…';
+    fetch('/api/carnet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({date:libre.dataset.date,question:q,jeton:jeton})})
+      .then(function(r){return r.json().then(function(c){return {s:r.status,c:c}})}).then(function(x){
+        if(x.c.raison==='plafond'){fermeLibre(x.c.message);return}
+        if(x.s!==200){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.';return}
+        var zone=libre.querySelector('.libre-texte');zone.textContent='';
+        x.c.reponse.split(/\n\s*\n/).forEach(function(par){var p=document.createElement('p');p.textContent=par.trim();zone.appendChild(p)});
+        var src=libre.querySelector('.libre-sources');src.textContent='';
+        if(x.c.sources&&x.c.sources.length){var t=document.createElement('p');t.textContent='Pères et Réformateurs';src.appendChild(t);
+          var l=document.createElement('div');l.className='trad';
+          x.c.sources.forEach(function(s){var a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';
+            a.textContent=s.titre+' ('+s.credit+')';var sp=document.createElement('span');sp.appendChild(a);l.appendChild(sp)});
+          src.appendChild(l);src.hidden=false}else{src.hidden=true}
+        libre.querySelector('.libre-reponse').hidden=false;
+        etat.textContent=x.c.restant>0?'Encore '+x.c.restant+' question'+(x.c.restant>1?'s':'')+' aujourd\'hui.':'C\'était ta dernière question pour aujourd\'hui.';
+        if(x.c.restant<=0)libre.querySelector('.libre-saisie').hidden=true})
+      .catch(function(){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.'})
+      .then(function(){btn.disabled=false;if(window.turnstile&&widget!==null)window.turnstile.reset(widget)})});
+  if(!ecran)return;
   function lancer(){var f=document.createElement('iframe');
     f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(ecran.dataset.yt)+'?autoplay=1&rel=0&hl=fr';
     f.title=ecran.dataset.titre;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;

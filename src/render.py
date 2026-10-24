@@ -13,7 +13,9 @@ main, le template est validé. Ensuite seulement on branche generate.py.
 """
 
 from __future__ import annotations
+import html as html_lib
 import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -21,6 +23,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from videos import CHAINE, charger_catalogue, telecharger_vignette
+from valider import charger_oeuvres
+from corpus import AUTEURS, MAX_PAR_AUTEUR, charger_passages, passages_pour
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -56,6 +60,9 @@ def charger_jour(jour: str) -> dict:
     _resoudre_analogie(donnees)
     _valider(donnees, chemin)
     _preparer_videos(donnees, charger_catalogue(), DOCS / "vignettes")
+    donnees.setdefault("carnet", [])
+    donnees["oeuvres"] = charger_oeuvres()
+    donnees["peres"] = _tradition(donnees)  # sources du fil du jour
     return donnees
 
 
@@ -132,6 +139,68 @@ def _valider(d: dict, chemin: Path) -> None:
                 )
 
 
+def _texte(fragment: str) -> str:
+    """HTML → texte brut, espaces normalisés."""
+    blocs = re.sub(r"</(p|div|li|h\d)>|<br\s*/?>", " ", fragment or "")
+    sans = re.sub(r"<[^>]+>", "", blocs)  # balises en ligne : aucun espace ajouté
+    return re.sub(r"\s+", " ", html_lib.unescape(sans)).strip()
+
+
+MAX_TRADITION = 4
+
+
+def _tradition(d: dict) -> list[dict]:
+    """Les passages des Pères qui commentent les lectures du jour — plusieurs
+    auteurs peuvent se croiser —, recopiés tels quels avec leur source : le
+    carnet libre ne cite que cela. Aucun accès réseau ici (le corpus se
+    complète la nuit). Si le brouillon a confirmé ses passages
+    (« passages_tradition »), eux seuls font foi."""
+    confirmes = d.get("passages_tradition")
+    extraits: list[dict] = []
+    for cle, auteur in AUTEURS.items():
+        stock, pris = charger_passages(cle), 0
+        # L'évangile d'abord (dernière lecture), puis on remonte ; un passage
+        # par lecture et par auteur, le plus proche du texte.
+        for lec in reversed(d.get("lectures", [])):
+            for u in passages_pour(lec.get("reference", ""), stock)[:1]:
+                if pris >= MAX_PAR_AUTEUR or len(extraits) >= MAX_TRADITION \
+                        or any(e["id"] == u["id"] for e in extraits):
+                    continue
+                if confirmes is not None and u["id"] not in confirmes:
+                    continue
+                texte = u.get("texte", "")
+                pris += 1
+                extraits.append({
+                    "id": u["id"],
+                    "titre": f"{auteur.nom}, {u['titre']}",
+                    "lecture": lec.get("reference", ""),
+                    "analyse": u.get("analyse", ""),
+                    "extrait": texte[:1500],
+                    "url": u.get("source_url", ""),
+                    "credit": auteur.credit,
+                })
+    return extraits
+
+
+def contexte_du_jour(d: dict) -> dict:
+    """Ce que le carnet libre sait du jour : le contenu de la page, en texte.
+    Publié en statique, lu côté serveur — jamais envoyé par le navigateur."""
+    return {
+        "date": d.get("date", ""),
+        "titre": d.get("titre", ""),
+        "references": d.get("references_brutes", ""),
+        "lectures": [{"etiquette": l.get("etiquette", ""), "reference": l.get("reference", ""),
+                      "texte": _texte(l.get("corps_html", ""))} for l in d.get("lectures", [])],
+        "gloses": [{"lemme": g.get("lemme", ""), "texte": _texte(g.get("html", ""))}
+                   for l in d.get("lectures", []) for g in l.get("gloses", [])],
+        "contexte": [{"titre": c.get("titre", ""), "texte": _texte(c.get("corps_html", ""))}
+                     for c in d.get("contexte", [])],
+        "carnet": [{"question": q.get("question", ""), "reponse": _texte(q.get("reponse_html", ""))}
+                   for q in d.get("carnet") or []],
+        "tradition": _tradition(d),
+    }
+
+
 def rendre_html(donnees: dict) -> str:
     """Rend la page d'un jour déjà chargé, sans rien écrire."""
     env = Environment(
@@ -153,7 +222,12 @@ def rendre_html(donnees: dict) -> str:
 
 
 def rendre(jour: str) -> Path:
-    html = rendre_html(charger_jour(jour))
+    donnees = charger_jour(jour)
+    html = rendre_html(donnees)
+    (DOCS / "contexte").mkdir(parents=True, exist_ok=True)
+    (DOCS / "contexte" / f"{jour}.json").write_text(
+        json.dumps(contexte_du_jour(donnees), ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8")
 
     DOCS.mkdir(exist_ok=True)
     sortie = DOCS / f"{jour}.html"
@@ -189,6 +263,9 @@ def reconstruire_index() -> None:
 
     index = _INDEX_AVANT + "\n".join(liens) + _INDEX_APRES
     (DOCS / "index.html").write_text(index, encoding="utf-8")
+    # Liste des jours publiés : le fil du jour y trouve la veille et le
+    # lendemain sans re-rendre les pages voisines à chaque publication.
+    (DOCS / "jours.json").write_text(json.dumps(sorted(jours)), encoding="utf-8")
     print(f"✓ docs/index.html  ({len(jours)} jour·s)")
 
 

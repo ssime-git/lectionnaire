@@ -31,6 +31,9 @@ TRAITS_AUTORISES = {"trait-encre", "trait-liturgie", "trait-rubrique"}
 GROUPES_VIDEO = {"mot", "livre"}
 MAX_VIDEOS = 8
 CATALOGUE_VIDEOS = Path(__file__).resolve().parent.parent / "data" / "videos.json"
+OEUVRES_TRADITION = Path(__file__).resolve().parent.parent / "data" / "tradition" / "oeuvres.json"
+MAX_CARNET = 5
+TEXTES_TRADITION = Path(__file__).resolve().parent.parent / "data" / "tradition" / "textes"
 SOURCES_INTERDITES = re.compile(
     r"\b(TOB|Bible de Jérusalem|Segond 21|traduction liturgique)\b", re.I)
 
@@ -50,7 +53,19 @@ def _ids_du_catalogue() -> set[str]:
     return {v["id"] for v in d.get("videos", [])}
 
 
-def valider_contrat(d: dict, catalogue: set[str] | None = None) -> list[str]:
+def charger_oeuvres(chemin: Path = OEUVRES_TRADITION) -> dict[str, str]:
+    """La liste blanche des œuvres citables : id → « Auteur, Titre (date) »."""
+    if not chemin.exists():
+        return {}
+    oeuvres = {}
+    for o in json.loads(chemin.read_text(encoding="utf-8")).get("oeuvres", []):
+        nom = f"{o['auteur']}, {o['titre']}" if o.get("auteur") else o["titre"]
+        oeuvres[o["id"]] = f"{nom} ({o['date']})" if o.get("date") else nom
+    return oeuvres
+
+
+def valider_contrat(d: dict, catalogue: set[str] | None = None,
+                    oeuvres: set[str] | None = None) -> list[str]:
     """Même contrôle que `valider`, mais sur un dict déjà chargé — pour que
     generate.py puisse refuser (et faire réparer) un contrat avant de l'écrire."""
     fautes: list[str] = []
@@ -154,6 +169,34 @@ def valider_contrat(d: dict, catalogue: set[str] | None = None) -> list[str]:
             if v.get("groupe") not in GROUPES_VIDEO:
                 fautes.append(f"vidéo {vid!r} : groupe inconnu {v.get('groupe')!r} "
                               f"({' ou '.join(sorted(GROUPES_VIDEO))}).")
+
+    # 10. Carnet (optionnel) : réponses sourcées, œuvres de la liste blanche
+    carnet = d.get("carnet") or []
+    if carnet:
+        permises = set(charger_oeuvres()) if oeuvres is None else oeuvres
+        if len(carnet) > MAX_CARNET:
+            fautes.append(f"carnet : {len(carnet)} questions, au plus {MAX_CARNET}.")
+        for qr in carnet:
+            q = str(qr.get("question", "")).strip()
+            etiquette = f"carnet {q[:40]!r}"
+            if not q or not str(qr.get("reponse_html", "")).strip():
+                fautes.append(f"{etiquette} : question ou réponse vide.")
+            sources = qr.get("sources") or {}
+            jour, tradition = sources.get("jour") or [], sources.get("tradition") or []
+            if not jour and not tradition:
+                fautes.append(f"{etiquette} : réponse sans source.")
+            for t in tradition:
+                if t.get("oeuvre") not in permises:
+                    fautes.append(f"{etiquette} : œuvre {t.get('oeuvre')!r} hors liste blanche "
+                                  f"(data/tradition/oeuvres.json).")
+                if not str(t.get("reference", "")).strip():
+                    fautes.append(f"{etiquette} : référence manquante pour {t.get('oeuvre')!r}.")
+
+    # 11. Passages des Pères confirmés (optionnel) : uniquement des textes enregistrés
+    for p in d.get("passages_tradition") or []:
+        chemin = TEXTES_TRADITION / str(p).split("-", 1)[0] / "passages" / f"{p}.json"
+        if not isinstance(p, str) or not chemin.exists():
+            fautes.append(f"passage inconnu {p!r} (absent de data/tradition/textes/<auteur>/passages).")
 
     return fautes
 

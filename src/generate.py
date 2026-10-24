@@ -26,8 +26,10 @@ import requests
 
 from refs import recuperer, texte_segond  # type: ignore
 from liturgie import depuis_aelf  # type: ignore
-from valider import CLASSES_CONNUES, GROUPES_VIDEO, MAX_VIDEOS, valider_contrat  # type: ignore
+from valider import (CLASSES_CONNUES, GROUPES_VIDEO, MAX_CARNET, MAX_VIDEOS,  # type: ignore
+                     charger_oeuvres, valider_contrat)
 from videos import charger_catalogue  # type: ignore
+from corpus import AUTEURS, oublier as oublier_passage, preparer as preparer_passages  # type: ignore
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -279,7 +281,7 @@ Tu réponds STRICTEMENT avec le JSON complet corrigé, sans texte autour."""
 # Ce qui ne vient pas du modèle n'est jamais repris de sa réponse.
 CHAMPS_DETERMINISTES = (
     "date", "date_humaine", "semaine", "ferie", "liturgie", "deuterocanonique",
-    "references_brutes", "traduction_globale", "gravure_svg",
+    "references_brutes", "traduction_globale", "gravure_svg", "passages_tradition",
 )
 
 
@@ -299,7 +301,8 @@ def _normaliser_classes(contenu: dict) -> None:
 
 
 def _reparer(contrat: dict, fautes: list[str], essais: int = 2,
-             catalogue: dict[str, str] | None = None) -> dict:
+             catalogue: dict[str, str] | None = None,
+             oeuvres: dict[str, str] | None = None) -> dict:
     """Renvoie le contrat au modèle avec ses fautes jusqu'à ce que la
     validation passe. Lève ValueError une fois les essais épuisés."""
     for essai in range(essais):
@@ -321,6 +324,8 @@ def _reparer(contrat: dict, fautes: list[str], essais: int = 2,
         _normaliser_classes(repare)
         if catalogue is not None:
             _filtrer_videos(repare, catalogue)
+        if oeuvres is not None:
+            _filtrer_carnet(repare, oeuvres)
         contrat = repare
         fautes = valider_contrat(contrat)
         if not fautes:
@@ -456,6 +461,11 @@ def construire_json(date_iso: str) -> dict:
     }
     catalogue = charger_catalogue()
     _ajouter_catalogue(demande, catalogue)
+    oeuvres = charger_oeuvres()
+    _ajouter_carnet(demande, oeuvres)
+    # Le corpus se complète ici, au besoin : seules les homélies du jour.
+    candidates = preparer_passages([lec.reference_courte for lec in jour.lectures])
+    _ajouter_passages(demande, candidates)
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
     # Si le modèle rédacteur a produit un SVG malgré la consigne, on l'écarte :
@@ -491,9 +501,11 @@ def construire_json(date_iso: str) -> dict:
     #    réparation, au lieu de faire échouer le workflow deux étapes plus loin.
     _normaliser_classes(contrat)
     _filtrer_videos(contrat, catalogue)
+    _filtrer_carnet(contrat, oeuvres)
+    _filtrer_passages(contrat, candidates)
     fautes = valider_contrat(contrat)
     if fautes:
-        contrat = _reparer(contrat, fautes, catalogue=catalogue)
+        contrat = _reparer(contrat, fautes, catalogue=catalogue, oeuvres=oeuvres)
     if contrat["gravure_svg"] is _GRAVURE_ABSENTE:
         print("⚠  Pas de bois gravé pour ce jour : la page paraîtra sans image. "
               "Ajoute 'gravure_svg' à la main dans le JSON.")
@@ -542,6 +554,77 @@ def _filtrer_videos(contrat: dict, catalogue: dict[str, str]) -> None:
         vues.add(vid)
         gardees.append({"id": vid, "raison": str(v["raison"]).strip(), "groupe": v["groupe"]})
     contrat["videos"] = gardees[:MAX_VIDEOS]
+
+
+def _ajouter_carnet(demande: dict, oeuvres: dict[str, str]) -> None:
+    """Le carnet ne cite que la liste blanche : Pères et Réformateurs."""
+    demande["oeuvres_tradition"] = [f"{i} | {t}" for i, t in oeuvres.items()]
+    demande["consigne"] += (
+        " Ajoute aussi la clé carnet (3 à 5 {question, reponse_html, sources: "
+        "{jour: [références ou éléments de la page], tradition: [{oeuvre, "
+        "reference}]}}) : les questions qu'un lecteur se pose vraiment sur ces "
+        "textes ; réponse de 3 à 6 phrases, sobre, qui s'appuie sur les textes "
+        "du jour et, quand c'est juste, sur une œuvre de oeuvres_tradition "
+        "(oeuvre = son id) avec une référence précise (chapitre, question, "
+        "homélie), sans répéter le titre de l'œuvre (ex. « sur Luc 6, 12 », "
+        "« Q. 4 », « homélie V sur Éphésiens ») ; n'invente aucune citation ; mieux vaut aucune source de "
+        "tradition qu'une source douteuse."
+    )
+
+
+def _filtrer_carnet(contrat: dict, oeuvres: dict[str, str]) -> None:
+    """Une question mal formée ou qui cite une œuvre hors liste est retirée,
+    plutôt que de faire échouer la nuit."""
+    gardees = []
+    for qr in contrat.get("carnet") or []:
+        if not isinstance(qr, dict):
+            continue
+        q, r = str(qr.get("question", "")).strip(), str(qr.get("reponse_html", "")).strip()
+        sources = qr.get("sources") if isinstance(qr.get("sources"), dict) else {}
+        jour = [str(x) for x in sources.get("jour") or [] if str(x).strip()]
+        tradition = sources.get("tradition") or []
+        if not q or not r or not (jour or tradition):
+            continue
+        if any(not isinstance(t, dict) or t.get("oeuvre") not in oeuvres
+               or not str(t.get("reference", "")).strip() for t in tradition):
+            continue
+        gardees.append({"question": q, "reponse_html": r, "sources": {
+            "jour": jour,
+            "tradition": [{"oeuvre": t["oeuvre"], "reference": str(t["reference"]).strip()} for t in tradition],
+        }})
+    contrat["carnet"] = gardees[:MAX_CARNET]
+
+
+def _ajouter_passages(demande: dict, candidates: list[dict]) -> None:
+    """Les passages des Pères trouvés par référence (Chrysostome, Augustin…) :
+    Claude confirme ceux qui commentent vraiment les lectures, et peut les
+    faire dialoguer dans le carnet."""
+    demande["passages_tradition"] = [{
+        "id": u["id"],
+        "titre": f"{AUTEURS[u['auteur']].nom}, {u['titre']}",
+        "oeuvre": AUTEURS[u["auteur"]].oeuvre,
+        "verset_cite": u.get("lemme", ""),
+        "resume": u.get("analyse", ""),
+        "extrait": u.get("texte", "")[:1200],
+    } for u in candidates]
+    demande["consigne"] += (
+        " Ajoute aussi la clé passages_tradition (liste des id de passages_tradition "
+        "qui commentent réellement un passage lu aujourd'hui : compare verset_cite et "
+        "resume aux lectures ; liste vide si aucun). Dans le carnet, tu peux citer et "
+        "faire dialoguer ces Pères (oeuvre = leur « oeuvre », reference = leur titre "
+        "sans le nom de l'auteur) uniquement d'après les passages confirmés."
+    )
+
+
+def _filtrer_passages(contrat: dict, candidates: list[dict]) -> None:
+    """Seuls les passages proposés et confirmés restent ; rien par défaut.
+    Un passage lu cette nuit et non confirmé n'entre pas dans le corpus."""
+    permis = {u["id"] for u in candidates}
+    contrat["passages_tradition"] = [p for p in contrat.get("passages_tradition") or []
+                                     if isinstance(p, str) and p in permis]
+    for u in candidates:
+        if u.get("nouveau") and u["id"] not in contrat["passages_tradition"]:
+            oublier_passage(u["id"])
 
 
 def _cles_manquantes(contrat: dict) -> list[str]:

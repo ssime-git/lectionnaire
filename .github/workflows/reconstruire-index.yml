@@ -5,7 +5,7 @@ name: Reconstruire l'index après fusion
 # portent plus que leur JSON et leur page ; l'index est reconstruit ici, sur
 # main, après chaque fusion. Le push déclenche le déploiement Cloudflare Pages.
 #
-# Pas de boucle : ce commit ne touche que docs/index.html, et le déclencheur
+# Pas de boucle : ce commit ne touche que docs/index.html et docs/jours.json, et le déclencheur
 # ne surveille que data/jours/.
 
 on:
@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html
+          git add docs/index.html docs/jours.json
           if git diff --cached --quiet; then
             echo "Index déjà à jour."
           else
