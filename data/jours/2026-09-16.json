@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-16",
+  "date_humaine": "mercredi",
+  "semaine": "24ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 12, 31 – 13, 13 ; Lc 7, 31-35",
+  "traduction_globale": "Louis Segond 1910",
+  "titre": "Ce qui demeure",
+  "titre_html": "Ce qui <span class=\"it\">demeure</span>",
+  "sous_titre": "L'hymne à la charité, et la sagesse justifiée par ses enfants",
+  "suite_hier": null,
+  "gravure_alt": "Un miroir de bronze corinthien, poli mais trouble, tenu à bout de bras ; dans son reflet à peine deviné, un visage se penche vers lui comme pour le reconnaître un jour face à face.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Première lecture",
+      "reference": "1 Co 12, 31 – 13, 13",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">31</span> Aspirez aux dons les meilleurs. Et je vais encore vous montrer une voie par excellence.</p><p><span class=\"s\">1</span> Quand je parlerais les langues des hommes et des anges, si je n'ai pas la <button class=\"mot\" data-g=\"g-agape\">charité</button>, je suis un <button class=\"mot\" data-g=\"g-airain\">airain qui résonne</button>, ou une cymbale qui retentit. <span class=\"s\">2</span> Et quand j'aurais le don de prophétie, la science de tous les mystères et toute la connaissance, quand j'aurais même toute la foi jusqu'à transporter des montagnes, si je n'ai pas la charité, je ne suis rien. <span class=\"s\">3</span> Et quand je distribuerais tous mes biens pour la nourriture des pauvres, quand je livrerais même mon corps pour être brûlé, si je n'ai pas la charité, cela ne me sert de rien.</p><p><span class=\"s\">4</span> La charité est patiente, elle est pleine de bonté; la charité n'est point envieuse; la charité ne se vante point, elle <button class=\"mot\" data-g=\"g-physioutai\">ne s'enfle point d'orgueil</button>, <span class=\"s\">5</span> elle ne fait rien de malhonnête, elle ne cherche point son intérêt, elle ne s'irrite point, elle ne soupçonne point le mal, <span class=\"s\">6</span> elle ne se réjouit point de l'injustice, mais elle se réjouit de la vérité; <span class=\"s\">7</span> elle excuse tout, elle croit tout, elle espère tout, elle supporte tout.</p><p><span class=\"s\">8</span> La charité ne périt jamais. Les prophéties prendront fin, les langues cesseront, la connaissance disparaîtra. <span class=\"s\">9</span> Car nous connaissons en partie, et nous prophétisons en partie, <span class=\"s\">10</span> mais quand ce qui est parfait sera venu, ce qui est partiel disparaîtra. <span class=\"s\">11</span> Lorsque j'étais enfant, je parlais comme un enfant, je pensais comme un enfant, je raisonnais comme un enfant; lorsque je suis devenu homme, j'ai fait disparaître ce qui était de l'enfant. <span class=\"s\">12</span> Aujourd'hui nous voyons au moyen d'un <button class=\"mot\" data-g=\"g-esoptron\">miroir</button>, d'une manière obscure, mais alors nous verrons face à face; aujourd'hui je connais en partie, mais alors je connaîtrai comme j'ai été connu. <span class=\"s\">13</span> Maintenant donc ces trois choses demeurent: la foi, l'espérance, la charité; mais la plus grande de ces choses, c'est la charité.</p>",
+      "gloses": [
+        {
+          "id": "g-agape",
+          "lemme": "agapè",
+          "html": "Le mot grec est <span class=\"gr\">agapē</span>, terme rare dans le grec profane, que Paul choisit précisément parce qu'il n'est pas chargé de l'ambiguïté d'<span class=\"gr\">erōs</span> ni de la simple familiarité de <span class=\"gr\">philia</span>. Segond traduit par « charité », suivant le caritas de la Vulgate et le « charity » de la Bible du roi Jacques, plutôt que par « amour » — choix que corrigeront plus tard les traductions modernes, au risque de couper ce mot du langage courant de l'amour humain. Jean Chrysostome, dans ses homélies sur cette épître, insiste que Paul parle ici d'un amour qui ne prend pas sa source en nous mais vient habiter et transformer jusqu'aux dons les plus spectaculaires. Calvin va plus loin : sans cette charité, écrit-il, « toutes choses, tant excellentes soient-elles, ne sont rien » — elle n'est pas une vertu parmi d'autres mais la forme que doit prendre toute vertu véritable."
+        },
+        {
+          "id": "g-airain",
+          "lemme": "airain qui résonne",
+          "html": "« Airain qui résonne » traduit <span class=\"gr\">chalkos ēchōn</span>, image empruntée aux grands vases de bronze que les théâtres antiques employaient pour amplifier la voix des acteurs — et Corinthe était précisément renommée dans tout l'empire pour son bronze. Segond garde le mot ancien « airain » là où le français moderne dirait simplement « bronze », conservant la solennité un peu datée du texte. Chrysostome note que Paul vise ici les dons les plus admirés de l'assemblée — langues, prophétie, connaissance — pour dire qu'exercés sans charité, ils ne transmettent rien de celui qui parle, à la manière d'un écho qui amplifie un son sans jamais devenir une parole adressée."
+        },
+        {
+          "id": "g-physioutai",
+          "lemme": "s'enfler d'orgueil",
+          "html": "Le verbe grec est <span class=\"gr\">physioutai</span>, littéralement « elle se gonfle », comme un soufflet ou une outre qu'on remplit d'air. Paul l'a déjà employé en 1 Corinthiens 8,1 : « la connaissance enfle, la charité édifie » — l'opposition entre gonfler et construire est volontaire et vise directement les Corinthiens fiers de leur savoir. Segond explicite en traduisant « elle ne s'enfle point d'orgueil » là où le grec dit seulement « elle ne se gonfle pas », resserrant le sens vers la vanité précisément dénoncée quelques chapitres plus tôt."
+        },
+        {
+          "id": "g-esoptron",
+          "lemme": "miroir",
+          "html": "« Miroir » traduit <span class=\"gr\">esoptron</span>, et « d'une manière obscure » traduit une expression plus forte, <span class=\"gr\">en ainigmati</span>, « en énigme » — le mot même qui donnera notre « énigme » en français. Corinthe fabriquait des miroirs de bronze poli réputés dans tout le monde antique, mais même les meilleurs ne rendaient qu'un reflet trouble comparé au verre. Segond adoucit « en énigme » en « d'une manière obscure », ce qui rend le sens mais efface l'image d'un texte qui se donne lui-même comme une devinette à déchiffrer. Chrysostome comme Calvin lisent ce verset comme la définition même de la condition croyante ici-bas : connaître vraiment, mais dans un reflet, en attendant le face à face."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 32 (33), 2-3, 4-5, 12.22",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">2</span> Louez l'Éternel avec la harpe, Célébrez-le sur le luth à dix cordes. <span class=\"s\">3</span> Chantez-lui un <button class=\"mot\" data-g=\"g-chadash\">cantique nouveau</button>! Faites retentir vos instruments et vos voix!</p><p><span class=\"s\">4</span> Car la parole de l'Éternel est droite, Et toutes ses œuvres s'accomplissent avec fidélité; <span class=\"s\">5</span> Il aime la justice et la droiture; La bonté de l'Éternel remplit la terre.</p><p><span class=\"s\">12</span> Heureuse la nation dont l'Éternel est le Dieu! Heureux le peuple qu'il choisit pour son héritage! <span class=\"s\">22</span> Éternel! que ta <button class=\"mot\" data-g=\"g-chesed\">grâce</button> soit sur nous, Comme nous espérons en toi!</p>",
+      "gloses": [
+        {
+          "id": "g-chadash",
+          "lemme": "cantique nouveau",
+          "html": "L'hébreu est <span class=\"gr\">shir chadash</span>, « chant nouveau », expression qui revient dans plusieurs psaumes (33, 96, 98, 144, 149) toujours liée à un acte de Dieu qui vient de se produire — <span class=\"gr\">chadash</span> évoque moins l'inédit que le renouvelé, ce qui reprend vie. Segond traduit simplement « cantique nouveau », fidèle au sens mais sans pouvoir restituer cette nuance de renouvellement plutôt que de pure nouveauté. L'expression sera reprise dans l'Apocalypse (5,9) pour le cantique que chantent les rachetés devant l'Agneau — signe que les premiers lecteurs juifs de ce psaume l'entendaient déjà comme tourné vers un accomplissement à venir."
+        },
+        {
+          "id": "g-chesed",
+          "lemme": "grâce",
+          "html": "L'hébreu est <span class=\"gr\">chesed</span>, mot que ce même psaume traduit deux fois différemment : « bonté » au verset 5, « grâce » au verset 22 — signe que Segond, comme la plupart des traducteurs, renonce à trouver un seul mot français pour cette fidélité tenace de Dieu envers son alliance. Les rabbins en ont fait l'une des treize qualités divines proclamées à Moïse en Exode 34,6-7, et la tradition juive continue d'en faire l'attribut par excellence de Dieu envers sa création. Le psalmiste ne demande donc pas une faveur ponctuelle mais l'engagement fidèle que Dieu a déjà montré, espéré sans être jamais acquis d'avance."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Lc 7, 31-35",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">31</span> À qui donc comparerai-je les hommes de cette <button class=\"mot\" data-g=\"g-genea\">génération</button>, et à qui ressemblent-ils? <span class=\"s\">32</span> Ils ressemblent aux enfants assis dans une place publique, et qui, se parlant les uns aux autres, disent: Nous vous avons joué de la flûte, et vous n'avez pas dansé; nous avons chanté des complaintes, et vous n'avez pas pleuré.</p><p><span class=\"s\">33</span> Car Jean Baptiste est venu, ne mangeant pas de pain et ne buvant pas de vin, et vous dites: Il a un démon. <span class=\"s\">34</span> Le Fils de l'homme est venu, mangeant et buvant, et vous dites: C'est un <button class=\"mot\" data-g=\"g-phagos\">mangeur et un buveur</button>, un ami des publicains et des gens de mauvaise vie. <span class=\"s\">35</span> Mais la <button class=\"mot\" data-g=\"g-sophia\">sagesse</button> a été justifiée par tous ses enfants.</p>",
+      "gloses": [
+        {
+          "id": "g-genea",
+          "lemme": "génération",
+          "html": "Le grec est <span class=\"gr\">genea</span>, que Segond rend par « génération » — mais dans les évangiles ce mot désigne moins une tranche d'âge qu'une disposition morale, comme dans « génération incrédule et perverse » (Matthieu 17,17). C'est l'équivalent de l'hébreu <span class=\"gr\">dor</span>, employé par les prophètes pour désigner non un ensemble de contemporains mais une manière collective de refuser Dieu, quel que soit l'âge de chacun. Jésus ne vise donc pas une classe d'âge précise mais tous ceux, de tout temps, qui exigent que Dieu se conforme d'abord à ce qu'ils attendent de lui avant de le reconnaître."
+        },
+        {
+          "id": "g-phagos",
+          "lemme": "mangeur et un buveur",
+          "html": "« Mangeur et buveur » traduit <span class=\"gr\">phagos kai oinopotēs</span>, une insulte qui reprend presque mot pour mot Deutéronome 21,20, où les parents d'un fils rebelle le dénoncent aux anciens de la ville comme « glouton et ivrogne » — accusation qui, dans la Loi, pouvait conduire à la lapidation. Segond adoucit le grec en « mangeur et un buveur », perdant la violence d'une accusation qui n'est pas une simple moquerie de bon vivant mais une charge à portée légale. La sagesse dont parle le verset suivant est donc littéralement justifiée contre une accusation capitale, par les fruits mêmes de la vie qu'elle a suscitée."
+        },
+        {
+          "id": "g-sophia",
+          "lemme": "sagesse",
+          "html": "Le mot est <span class=\"gr\">sophia</span>, la Sagesse que les livres des Proverbes (8) et du Siracide (24) présentent comme une figure quasi personnelle, envoyée par Dieu et rejetée par les hommes. Paul appellera plus tard le Christ lui-même « la sagesse de Dieu » (1 Corinthiens 1,24) ; Luc semble déjà l'entendre ainsi, puisque cette sagesse se manifeste sous deux formes opposées — l'ascèse de Jean, la convivialité de Jésus — également rejetées par cette génération. Elle n'a pas besoin d'être approuvée par ceux qui la refusent : elle « est justifiée par tous ses enfants », c'est-à-dire par les fruits qu'elle porte réellement, indépendamment du jugement porté sur elle."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Entre le chapitre 12 et le chapitre 14",
+      "corps_html": "À Corinthe, l'assemblée se déchire sur la hiérarchie des dons spirituels : qui parle en langues paraît supérieur à qui sert discrètement. Paul vient de décrire l'Église comme un corps aux membres divers (ch. 12) ; il ouvre ici une « voie par excellence » — non un don de plus, mais la manière dont tout don doit s'exercer. Le chapitre suivant revient aussitôt aux langues et à la prophétie : 13 n'est pas un intermède lyrique, mais leur critère."
+    },
+    {
+      "titre": "La sagesse rejetée deux fois",
+      "corps_html": "Juste avant ce passage, les envoyés de Jean demandent à Jésus s'il est celui qui doit venir (Lc 7,18-23) ; juste après, une pécheresse lui baigne les pieds de larmes chez un pharisien scandalisé (7,36-50). Entre ces deux scènes, Jésus commente le refus qu'il connaît, semblable à celui de Jean : deux styles de vie opposés, également repoussés, parce que ce n'est jamais le style qui gêne cette génération, mais Dieu qui s'approche."
+    }
+  ],
+  "analogie": {
+    "titre": "Le miroir et le visage",
+    "variantes": [
+      "Il y a des matins où tu pries les mêmes mots que toujours, et rien ne vient : ni ferveur, ni certitude, ni ce sentiment d'être entendu qui portait autrefois ta prière. Tu continues pourtant, non par habitude vide mais parce que quelque chose en toi tient encore, alors même que tout ce qui se sentait, se comprenait, s'éprouvait comme une preuve s'est retiré. C'est peut-être cela que Paul appelle la charité qui ne périt pas : non l'émotion qui accompagnait ta foi à ses débuts, mais ce qui continue de te tourner vers Dieu quand l'émotion elle-même a disparu — la seule chose, dit le texte, qui ne cessera jamais.",
+      "Tu as accompagné quelqu'un pendant des années — un enfant, un malade, une personne qui ne changeait pas — sans jamais voir ce que tu donnais produire un résultat que tu pouvais montrer. À certains moments tu t'es demandé si cela servait à quoi que ce soit, si ce temps donné n'était pas simplement perdu dans le silence de l'autre. Le texte ne promet pourtant pas que la charité se prouve par ses fruits visibles ; il dit qu'elle « supporte tout, croit tout, espère tout » — qu'elle tient, précisément là où rien ne vient la confirmer, parce qu'elle ne s'appuyait pas d'abord sur ce qu'elle pouvait voir.",
+      "Il y a une personne que tu as aimée avec l'évidence des débuts, quand chaque parole semblait limpide et chaque geste compris sans effort — et puis les années ont passé, et ce qui reste entre vous ressemble davantage à un reflet trouble qu'à cette clarté première. Tu ne sais plus toujours ce que l'autre pense, ni ce que Dieu fait en toi à travers cette fidélité devenue plus obscure que lumineuse. Paul dit pourtant que c'est notre condition entière, ici-bas : nous voyons « au moyen d'un miroir, d'une manière obscure » — et que ce trouble n'est pas un échec de l'amour, mais la forme qu'il prend en attendant le jour où nous verrons face à face."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Relis lentement les versets 4 à 7, mais remplace chaque fois « la charité » par « Christ » — non pour te comparer à cette liste et t'en trouver coupable, mais pour reconnaître, trait après trait, qui vient à ta rencontre.",
+    "geste": "Prends deux minutes en silence après cette lecture, sans rien demander ni rien ajouter — laisse simplement ce portrait reposer devant toi.",
+    "note": "Ce texte est souvent lu aux mariages, mais Paul l'écrit à une Église qui se déchire sur des questions de préséance et de dons spirituels ; ce n'est pas un texte sur le sentiment amoureux, mais sur ce que devient toute relation humaine — y compris dans l'Église — quand la charité s'y retire ou s'y installe."
+  },
+  "question": "Quand ce qui te faisait tenir — une certitude, une émotion, une preuve visible — se retire, qu'est-ce qui, en toi, continue malgré tout de se tourner vers Dieu ?",
+  "racines": [
+    {
+      "titre": "Chrysostome et le sommet de l'argument",
+      "corps_html": "Prêchant sur ce texte à Antioche, Jean Chrysostome fait de l'hymne à la charité le sommet vers lequel tendaient les deux chapitres précédents sur les dons spirituels : tous les dons, dit-il, sont donnés « pour l'utilité commune », et la charité seule garantit qu'ils le restent, plutôt que de devenir matière à rivalité entre frères.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, Homélie XXXII-XXXIII"
+    },
+    {
+      "titre": "Calvin : la mesure de tout don",
+      "corps_html": "Calvin lit ce chapitre comme un miroir tendu à l'Église de son temps, tout occupée de savoir et de doctrine : « la science sans la charité enfle l'homme d'une vaine opinion de soi-même ». Il refuse toute lecture sentimentale du texte — la charité qu'il décrit est une discipline concrète du rapport à l'autre, non une émotion.",
+      "attribution": "Jean Calvin, Commentaire sur la première épître aux Corinthiens, chapitre 13"
+    },
+    {
+      "titre": "Flûtes et lamentations : un usage attesté",
+      "corps_html": "La Mishna prescrit que même le mari le plus pauvre embauche, pour les funérailles de son épouse, « au moins deux joueurs de flûte et une pleureuse » — pratique déjà en vigueur du temps de Jésus. L'image des enfants qui jouent de la flûte pour des noces ou chantent des complaintes funèbres dans la rue n'est donc pas une image abstraite : c'est le jeu même que les enfants de Palestine imitaient, vu et entendu chaque semaine au village.",
+      "attribution": "Mishna, Ketouvot 4,4"
+    }
+  ],
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M170 24 v14\"/><path d=\"M170 112 v14\"/><path d=\"M140 38 q30 -10 60 0 q14 32 0 74 q-30 10 -60 0 q-14 -42 0 -74 z\"/><path d=\"M147 44 q23 -7 46 0\"/><path d=\"M147 106 q23 7 46 0\"/><path d=\"M137 74 q4 -3 8 0\"/><path d=\"M195 74 q4 -3 8 0\"/></g><g class=\"trait-liturgie\"><path d=\"M152 62 q18 -14 36 0\"/><path d=\"M156 76 q14 14 28 0\"/><path d=\"M163 62 v10\"/><path d=\"M177 62 v10\"/></g><g class=\"trait-rubrique\"><path d=\"M158 96 q12 8 24 0\"/></g></svg>"
+}

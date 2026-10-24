@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ce qui demeure — mercredi 16 septembre 2026</title>
+<meta name="description" content="L'hymne à la charité, et la sagesse justifiée par ses enfants">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C2B22;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D2685A;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mercredi 16 septembre 2026 · 24ème Semaine du Temps Ordinaire · <span class="couleur">rouge · </span>
+</p>
+    <h1>Ce qui <span class="it">demeure</span></h1>
+    <p class="chapeau">L'hymne à la charité, et la sagesse justifiée par ses enfants</p>
+    <figure class="gravure" aria-label="Un miroir de bronze corinthien, poli mais trouble, tenu à bout de bras ; dans son reflet à peine deviné, un visage se penche vers lui comme pour le reconnaître un jour face à face."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M170 24 v14"/><path d="M170 112 v14"/><path d="M140 38 q30 -10 60 0 q14 32 0 74 q-30 10 -60 0 q-14 -42 0 -74 z"/><path d="M147 44 q23 -7 46 0"/><path d="M147 106 q23 7 46 0"/><path d="M137 74 q4 -3 8 0"/><path d="M195 74 q4 -3 8 0"/></g><g class="trait-liturgie"><path d="M152 62 q18 -14 36 0"/><path d="M156 76 q14 14 28 0"/><path d="M163 62 v10"/><path d="M177 62 v10"/></g><g class="trait-rubrique"><path d="M158 96 q12 8 24 0"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — 1 Co 12, 31 – 13, 13 — Segond 1910</p>
+        <div class="ecriture "><p><span class="s">31</span> Aspirez aux dons les meilleurs. Et je vais encore vous montrer une voie par excellence.</p><p><span class="s">1</span> Quand je parlerais les langues des hommes et des anges, si je n'ai pas la <button class="mot" data-g="g-agape">charité</button>, je suis un <button class="mot" data-g="g-airain">airain qui résonne</button>, ou une cymbale qui retentit. <span class="s">2</span> Et quand j'aurais le don de prophétie, la science de tous les mystères et toute la connaissance, quand j'aurais même toute la foi jusqu'à transporter des montagnes, si je n'ai pas la charité, je ne suis rien. <span class="s">3</span> Et quand je distribuerais tous mes biens pour la nourriture des pauvres, quand je livrerais même mon corps pour être brûlé, si je n'ai pas la charité, cela ne me sert de rien.</p><p><span class="s">4</span> La charité est patiente, elle est pleine de bonté; la charité n'est point envieuse; la charité ne se vante point, elle <button class="mot" data-g="g-physioutai">ne s'enfle point d'orgueil</button>, <span class="s">5</span> elle ne fait rien de malhonnête, elle ne cherche point son intérêt, elle ne s'irrite point, elle ne soupçonne point le mal, <span class="s">6</span> elle ne se réjouit point de l'injustice, mais elle se réjouit de la vérité; <span class="s">7</span> elle excuse tout, elle croit tout, elle espère tout, elle supporte tout.</p><p><span class="s">8</span> La charité ne périt jamais. Les prophéties prendront fin, les langues cesseront, la connaissance disparaîtra. <span class="s">9</span> Car nous connaissons en partie, et nous prophétisons en partie, <span class="s">10</span> mais quand ce qui est parfait sera venu, ce qui est partiel disparaîtra. <span class="s">11</span> Lorsque j'étais enfant, je parlais comme un enfant, je pensais comme un enfant, je raisonnais comme un enfant; lorsque je suis devenu homme, j'ai fait disparaître ce qui était de l'enfant. <span class="s">12</span> Aujourd'hui nous voyons au moyen d'un <button class="mot" data-g="g-esoptron">miroir</button>, d'une manière obscure, mais alors nous verrons face à face; aujourd'hui je connais en partie, mais alors je connaîtrai comme j'ai été connu. <span class="s">13</span> Maintenant donc ces trois choses demeurent: la foi, l'espérance, la charité; mais la plus grande de ces choses, c'est la charité.</p></div>
+        <div class="glose" id="g-agape"><span class="lemme">agapè</span> Le mot grec est <span class="gr">agapē</span>, terme rare dans le grec profane, que Paul choisit précisément parce qu'il n'est pas chargé de l'ambiguïté d'<span class="gr">erōs</span> ni de la simple familiarité de <span class="gr">philia</span>. Segond traduit par « charité », suivant le caritas de la Vulgate et le « charity » de la Bible du roi Jacques, plutôt que par « amour » — choix que corrigeront plus tard les traductions modernes, au risque de couper ce mot du langage courant de l'amour humain. Jean Chrysostome, dans ses homélies sur cette épître, insiste que Paul parle ici d'un amour qui ne prend pas sa source en nous mais vient habiter et transformer jusqu'aux dons les plus spectaculaires. Calvin va plus loin : sans cette charité, écrit-il, « toutes choses, tant excellentes soient-elles, ne sont rien » — elle n'est pas une vertu parmi d'autres mais la forme que doit prendre toute vertu véritable.</div>
+        <div class="glose" id="g-airain"><span class="lemme">airain qui résonne</span> « Airain qui résonne » traduit <span class="gr">chalkos ēchōn</span>, image empruntée aux grands vases de bronze que les théâtres antiques employaient pour amplifier la voix des acteurs — et Corinthe était précisément renommée dans tout l'empire pour son bronze. Segond garde le mot ancien « airain » là où le français moderne dirait simplement « bronze », conservant la solennité un peu datée du texte. Chrysostome note que Paul vise ici les dons les plus admirés de l'assemblée — langues, prophétie, connaissance — pour dire qu'exercés sans charité, ils ne transmettent rien de celui qui parle, à la manière d'un écho qui amplifie un son sans jamais devenir une parole adressée.</div>
+        <div class="glose" id="g-physioutai"><span class="lemme">s'enfler d'orgueil</span> Le verbe grec est <span class="gr">physioutai</span>, littéralement « elle se gonfle », comme un soufflet ou une outre qu'on remplit d'air. Paul l'a déjà employé en 1 Corinthiens 8,1 : « la connaissance enfle, la charité édifie » — l'opposition entre gonfler et construire est volontaire et vise directement les Corinthiens fiers de leur savoir. Segond explicite en traduisant « elle ne s'enfle point d'orgueil » là où le grec dit seulement « elle ne se gonfle pas », resserrant le sens vers la vanité précisément dénoncée quelques chapitres plus tôt.</div>
+        <div class="glose" id="g-esoptron"><span class="lemme">miroir</span> « Miroir » traduit <span class="gr">esoptron</span>, et « d'une manière obscure » traduit une expression plus forte, <span class="gr">en ainigmati</span>, « en énigme » — le mot même qui donnera notre « énigme » en français. Corinthe fabriquait des miroirs de bronze poli réputés dans tout le monde antique, mais même les meilleurs ne rendaient qu'un reflet trouble comparé au verre. Segond adoucit « en énigme » en « d'une manière obscure », ce qui rend le sens mais efface l'image d'un texte qui se donne lui-même comme une devinette à déchiffrer. Chrysostome comme Calvin lisent ce verset comme la définition même de la condition croyante ici-bas : connaître vraiment, mais dans un reflet, en attendant le face à face.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Ps 32 (33), 2-3, 4-5, 12.22 — Segond 1910</p>
+        <div class="ecriture psaume"><p><span class="s">2</span> Louez l'Éternel avec la harpe, Célébrez-le sur le luth à dix cordes. <span class="s">3</span> Chantez-lui un <button class="mot" data-g="g-chadash">cantique nouveau</button>! Faites retentir vos instruments et vos voix!</p><p><span class="s">4</span> Car la parole de l'Éternel est droite, Et toutes ses œuvres s'accomplissent avec fidélité; <span class="s">5</span> Il aime la justice et la droiture; La bonté de l'Éternel remplit la terre.</p><p><span class="s">12</span> Heureuse la nation dont l'Éternel est le Dieu! Heureux le peuple qu'il choisit pour son héritage! <span class="s">22</span> Éternel! que ta <button class="mot" data-g="g-chesed">grâce</button> soit sur nous, Comme nous espérons en toi!</p></div>
+        <div class="glose" id="g-chadash"><span class="lemme">cantique nouveau</span> L'hébreu est <span class="gr">shir chadash</span>, « chant nouveau », expression qui revient dans plusieurs psaumes (33, 96, 98, 144, 149) toujours liée à un acte de Dieu qui vient de se produire — <span class="gr">chadash</span> évoque moins l'inédit que le renouvelé, ce qui reprend vie. Segond traduit simplement « cantique nouveau », fidèle au sens mais sans pouvoir restituer cette nuance de renouvellement plutôt que de pure nouveauté. L'expression sera reprise dans l'Apocalypse (5,9) pour le cantique que chantent les rachetés devant l'Agneau — signe que les premiers lecteurs juifs de ce psaume l'entendaient déjà comme tourné vers un accomplissement à venir.</div>
+        <div class="glose" id="g-chesed"><span class="lemme">grâce</span> L'hébreu est <span class="gr">chesed</span>, mot que ce même psaume traduit deux fois différemment : « bonté » au verset 5, « grâce » au verset 22 — signe que Segond, comme la plupart des traducteurs, renonce à trouver un seul mot français pour cette fidélité tenace de Dieu envers son alliance. Les rabbins en ont fait l'une des treize qualités divines proclamées à Moïse en Exode 34,6-7, et la tradition juive continue d'en faire l'attribut par excellence de Dieu envers sa création. Le psalmiste ne demande donc pas une faveur ponctuelle mais l'engagement fidèle que Dieu a déjà montré, espéré sans être jamais acquis d'avance.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Lc 7, 31-35 — Segond 1910</p>
+        <div class="ecriture evangile"><p><span class="s">31</span> À qui donc comparerai-je les hommes de cette <button class="mot" data-g="g-genea">génération</button>, et à qui ressemblent-ils? <span class="s">32</span> Ils ressemblent aux enfants assis dans une place publique, et qui, se parlant les uns aux autres, disent: Nous vous avons joué de la flûte, et vous n'avez pas dansé; nous avons chanté des complaintes, et vous n'avez pas pleuré.</p><p><span class="s">33</span> Car Jean Baptiste est venu, ne mangeant pas de pain et ne buvant pas de vin, et vous dites: Il a un démon. <span class="s">34</span> Le Fils de l'homme est venu, mangeant et buvant, et vous dites: C'est un <button class="mot" data-g="g-phagos">mangeur et un buveur</button>, un ami des publicains et des gens de mauvaise vie. <span class="s">35</span> Mais la <button class="mot" data-g="g-sophia">sagesse</button> a été justifiée par tous ses enfants.</p></div>
+        <div class="glose" id="g-genea"><span class="lemme">génération</span> Le grec est <span class="gr">genea</span>, que Segond rend par « génération » — mais dans les évangiles ce mot désigne moins une tranche d'âge qu'une disposition morale, comme dans « génération incrédule et perverse » (Matthieu 17,17). C'est l'équivalent de l'hébreu <span class="gr">dor</span>, employé par les prophètes pour désigner non un ensemble de contemporains mais une manière collective de refuser Dieu, quel que soit l'âge de chacun. Jésus ne vise donc pas une classe d'âge précise mais tous ceux, de tout temps, qui exigent que Dieu se conforme d'abord à ce qu'ils attendent de lui avant de le reconnaître.</div>
+        <div class="glose" id="g-phagos"><span class="lemme">mangeur et un buveur</span> « Mangeur et buveur » traduit <span class="gr">phagos kai oinopotēs</span>, une insulte qui reprend presque mot pour mot Deutéronome 21,20, où les parents d'un fils rebelle le dénoncent aux anciens de la ville comme « glouton et ivrogne » — accusation qui, dans la Loi, pouvait conduire à la lapidation. Segond adoucit le grec en « mangeur et un buveur », perdant la violence d'une accusation qui n'est pas une simple moquerie de bon vivant mais une charge à portée légale. La sagesse dont parle le verset suivant est donc littéralement justifiée contre une accusation capitale, par les fruits mêmes de la vie qu'elle a suscitée.</div>
+        <div class="glose" id="g-sophia"><span class="lemme">sagesse</span> Le mot est <span class="gr">sophia</span>, la Sagesse que les livres des Proverbes (8) et du Siracide (24) présentent comme une figure quasi personnelle, envoyée par Dieu et rejetée par les hommes. Paul appellera plus tard le Christ lui-même « la sagesse de Dieu » (1 Corinthiens 1,24) ; Luc semble déjà l'entendre ainsi, puisque cette sagesse se manifeste sous deux formes opposées — l'ascèse de Jean, la convivialité de Jésus — également rejetées par cette génération. Elle n'a pas besoin d'être approuvée par ceux qui la refusent : elle « est justifiée par tous ses enfants », c'est-à-dire par les fruits qu'elle porte réellement, indépendamment du jugement porté sur elle.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Entre le chapitre 12 et le chapitre 14</h3><p>À Corinthe, l'assemblée se déchire sur la hiérarchie des dons spirituels : qui parle en langues paraît supérieur à qui sert discrètement. Paul vient de décrire l'Église comme un corps aux membres divers (ch. 12) ; il ouvre ici une « voie par excellence » — non un don de plus, mais la manière dont tout don doit s'exercer. Le chapitre suivant revient aussitôt aux langues et à la prophétie : 13 n'est pas un intermède lyrique, mais leur critère.</p></div>
+      <div><h3>La sagesse rejetée deux fois</h3><p>Juste avant ce passage, les envoyés de Jean demandent à Jésus s'il est celui qui doit venir (Lc 7,18-23) ; juste après, une pécheresse lui baigne les pieds de larmes chez un pharisien scandalisé (7,36-50). Entre ces deux scènes, Jésus commente le refus qu'il connaît, semblable à celui de Jean : deux styles de vie opposés, également repoussés, parce que ce n'est jamais le style qui gêne cette génération, mais Dieu qui s'approche.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le miroir et le visage</h2>
+<p>Il y a des matins où tu pries les mêmes mots que toujours, et rien ne vient : ni ferveur, ni certitude, ni ce sentiment d'être entendu qui portait autrefois ta prière. Tu continues pourtant, non par habitude vide mais parce que quelque chose en toi tient encore, alors même que tout ce qui se sentait, se comprenait, s'éprouvait comme une preuve s'est retiré. C'est peut-être cela que Paul appelle la charité qui ne périt pas : non l'émotion qui accompagnait ta foi à ses débuts, mais ce qui continue de te tourner vers Dieu quand l'émotion elle-même a disparu — la seule chose, dit le texte, qui ne cessera jamais.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Relis lentement les versets 4 à 7, mais remplace chaque fois « la charité » par « Christ » — non pour te comparer à cette liste et t'en trouver coupable, mais pour reconnaître, trait après trait, qui vient à ta rencontre.</p>
+      <p class="geste">Prends deux minutes en silence après cette lecture, sans rien demander ni rien ajouter — laisse simplement ce portrait reposer devant toi.</p>
+      <small>Ce texte est souvent lu aux mariages, mais Paul l'écrit à une Église qui se déchire sur des questions de préséance et de dons spirituels ; ce n'est pas un texte sur le sentiment amoureux, mais sur ce que devient toute relation humaine — y compris dans l'Église — quand la charité s'y retire ou s'y installe.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quand ce qui te faisait tenir — une certitude, une émotion, une preuve visible — se retire, qu'est-ce qui, en toi, continue malgré tout de se tourner vers Dieu ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome et le sommet de l'argument</h3>
+          <p>Prêchant sur ce texte à Antioche, Jean Chrysostome fait de l'hymne à la charité le sommet vers lequel tendaient les deux chapitres précédents sur les dons spirituels : tous les dons, dit-il, sont donnés « pour l'utilité commune », et la charité seule garantit qu'ils le restent, plutôt que de devenir matière à rivalité entre frères.</p>
+<p class="attrib">Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, Homélie XXXII-XXXIII</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin : la mesure de tout don</h3>
+          <p>Calvin lit ce chapitre comme un miroir tendu à l'Église de son temps, tout occupée de savoir et de doctrine : « la science sans la charité enfle l'homme d'une vaine opinion de soi-même ». Il refuse toute lecture sentimentale du texte — la charité qu'il décrit est une discipline concrète du rapport à l'autre, non une émotion.</p>
+<p class="attrib">Jean Calvin, Commentaire sur la première épître aux Corinthiens, chapitre 13</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Flûtes et lamentations : un usage attesté</h3>
+          <p>La Mishna prescrit que même le mari le plus pauvre embauche, pour les funérailles de son épouse, « au moins deux joueurs de flûte et une pleureuse » — pratique déjà en vigueur du temps de Jésus. L'image des enfants qui jouent de la flûte pour des noces ou chantent des complaintes funèbres dans la rue n'est donc pas une image abstraite : c'est le jeu même que les enfants de Palestine imitaient, vu et entendu chaque semaine au village.</p>
+<p class="attrib">Mishna, Ketouvot 4,4</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), 24ème Semaine du Temps Ordinaire — 1 Co 12, 31 – 13, 13 ; Lc 7, 31-35.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
