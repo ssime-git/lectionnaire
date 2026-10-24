@@ -21,6 +21,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from videos import CHAINE, charger_catalogue, telecharger_vignette
+from valider import charger_oeuvres
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -56,6 +57,8 @@ def charger_jour(jour: str) -> dict:
     _resoudre_analogie(donnees)
     _valider(donnees, chemin)
     _preparer_videos(donnees, charger_catalogue(), DOCS / "vignettes")
+    donnees.setdefault("carnet", [])
+    donnees["oeuvres"] = charger_oeuvres()
     return donnees
 
 

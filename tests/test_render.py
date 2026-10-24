@@ -111,5 +111,53 @@ class TemplateCompagnonTests(unittest.TestCase):
         self.assertIn('class="facade-titre"', html)
 
 
+def _qr(question: str = "Pourquoi deux commandements ?") -> dict:
+    return {"question": question, "reponse_html": "<p>Jésus récite le Shema.</p>",
+            "sources": {"jour": ["Mt 22, 34-40"],
+                        "tradition": [{"oeuvre": "heidelberg", "reference": "Q. 4"}]}}
+
+
+class TemplateCarnetTests(unittest.TestCase):
+    def _jour(self, videos: list[dict], carnet: list[dict]) -> str:
+        d = _jour(videos)
+        d["carnet"] = carnet
+        return render.rendre_html(d)
+
+    def test_carnet_affiche_avertissement_et_sources(self) -> None:
+        html = self._jour([_video("1g4u57TSY0g", "Shema / Écouter")], [_qr(), _qr("Qui est mon prochain ?")])
+        self.assertIn('data-porte="demander"', html)
+        self.assertIn('class="onglets"', html)
+        self.assertIn("Généré par intelligence artificielle. Les réponses peuvent se tromper : "
+                      "relis-les et vérifie toujours dans les textes cités.", html)
+        self.assertEqual(html.count("Réponse générée par IA — à vérifier."), 2)
+        self.assertIn("Pères et Réformateurs", html)
+        self.assertIn("Catéchisme de Heidelberg (1563), Q. 4", html)
+        self.assertIn("<p>Jésus récite le Shema.</p>", html)
+        self.assertNotIn("<input", html)
+
+    def test_carnet_sans_videos(self) -> None:
+        html = self._jour([], [_qr()])
+        self.assertIn('class="compagnon"', html)
+        self.assertIn('data-porte="demander"', html)
+        self.assertNotIn('data-porte="voir"', html)
+        self.assertNotIn('class="onglets"', html)
+        self.assertNotIn('id="ecran"', html)
+
+    def test_videos_sans_carnet_pas_d_onglets(self) -> None:
+        html = self._jour([_video("1g4u57TSY0g", "Shema / Écouter")], [])
+        self.assertNotIn('class="onglets"', html)
+        self.assertNotIn('data-porte="demander"', html)
+        self.assertIn('id="ecran"', html)
+
+    def test_sans_carnet_pas_de_porte_demander(self) -> None:
+        html = self._jour([], [])
+        self.assertNotIn('data-porte="demander"', html)
+        self.assertNotIn('class="compagnon"', html)
+
+    def test_question_echappee(self) -> None:
+        html = self._jour([], [_qr('Pourquoi "semblable" <et> pas égal ?')])
+        self.assertIn("Pourquoi &#34;semblable&#34; &lt;et&gt; pas égal ?", html)
+
+
 if __name__ == "__main__":
     unittest.main()

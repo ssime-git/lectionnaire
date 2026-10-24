@@ -200,7 +200,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat({{ 3 if videos else 2 }},1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat({{ 2 + (1 if videos else 0) + (1 if carnet else 0) }},1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -258,6 +258,28 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   .compagnon{left:0;right:0;bottom:0;max-height:78vh;padding:1.6rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
 }
 .compagnon.ouvert{transform:none}
+.barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
+.barre-portes .ouvert-demander,.portes .ouvert-demander{background:var(--rubrique);color:var(--papier)}
+.portes .ouvert-demander .n,.portes .ouvert-demander .d{color:var(--papier)}
+.compagnon .onglets{display:flex;gap:.25rem;padding:.25rem;border:1px solid var(--filet);border-radius:999px}
+.compagnon .onglets button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;background:none;border:0;padding:.3rem 1rem;border-radius:999px;cursor:pointer;color:var(--ink);transition:background .3s,color .3s}
+.compagnon .onglets button.on{background:var(--liturgie);color:var(--papier)}
+.compagnon .onglets button[data-onglet=demander].on{background:var(--rubrique)}
+.carnet .avert{font-size:.86rem;line-height:1.4;color:var(--rubrique);border:1px solid var(--rubrique);padding:.45rem .7rem;margin:0 0 .9rem;border-radius:1px;background:var(--papier-creux)}
+.carnet .qr{border-top:1px solid var(--filet)}
+.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-style:italic;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.75rem 1.4rem .75rem 0;cursor:pointer;position:relative}
+.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.7rem;color:var(--rubrique);font-style:normal}
+.carnet .q-btn[aria-expanded=true]::after{content:"−"}
+.carnet .q-btn:hover{color:var(--liturgie)}
+.carnet .q-btn:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.carnet .r{font-size:1.02rem;color:var(--ctx-ink);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
+.carnet .r p{margin-bottom:.5rem}
+.carnet .sources{display:grid;gap:.3rem;margin-top:.6rem}
+.carnet .sources p{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--muet);margin:0}
+.carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
+.carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
+.carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
+.carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
 </style>
 </head>
 <body>
@@ -289,6 +311,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
       {% if videos %}<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">{{ videos | length }} vidéo{{ 's' if videos | length > 1 }} pour ce jour</span></a>{% endif %}
       <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+      {% if carnet %}<a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions relues sur ces textes</span></a>{% endif %}
     </nav>
   </header>
 
@@ -386,24 +409,52 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   <a href="#textes" data-porte="lire">Lire</a>
   {% if videos %}<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>{% endif %}
   <a href="#contexte" data-porte="comprendre">Comprendre</a>
+  {% if carnet %}<button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>{% endif %}
 </nav>
 
-{% if videos %}
-{% macro facade(v) %}{% if v.vignette %}<img src="{{ v.vignette | e }}" alt="">{% else %}<span class="facade-titre">{{ v.titre }}</span>{% endif %}<span class="lire">Regarder</span>{% endmacro %}
-{% set v0 = videos[0] %}
-<!-- COMPAGNON : Voir. Vignettes locales ; YouTube (nocookie) ne charge qu'au clic. -->
-<aside class="compagnon" id="compagnon" aria-label="Voir : vidéos du jour">
-  <div class="entete"><p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p><button class="replier" aria-label="Replier">→</button></div>
-  <div class="video" id="ecran" role="button" tabindex="0" data-yt="{{ v0.id | e }}" data-titre="{{ v0.titre | e }}" data-vignette="{{ (v0.vignette or '') | e }}" aria-label="Lire la vidéo {{ v0.titre | e }}">{{ facade(v0) }}</div>
-  {% if videos | length > 1 %}<p class="compteur" id="compteur">Vidéo 1 sur {{ videos | length }}</p>{% endif %}
-  <p class="vtitre" id="ecran-titre">{{ v0.titre }}</p>
-  <p class="raison" id="ecran-raison">{{ v0.raison }}</p>
-  <p class="credit">Vidéo : <a href="{{ chaine.url }}" target="_blank" rel="noopener">{{ chaine.nom }}</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v={{ v0.id | e }}" target="_blank" rel="noopener">voir sur YouTube</a></p>
-  {% if videos | length > 1 %}
-  <div class="pellicule" aria-label="Autres vidéos du jour">
-    {% for v in videos %}
-    {% if loop.first or v.groupe != loop.previtem.groupe %}<span class="groupe">{{ 'Les mots du jour' if v.groupe == 'mot' else 'Situer les livres' }}</span>{% endif %}
-    <button data-i="{{ loop.index0 }}" data-yt="{{ v.id | e }}" data-titre="{{ v.titre | e }}" data-raison="{{ v.raison | e }}" data-vignette="{{ (v.vignette or '') | e }}"{% if loop.first %} class="on"{% endif %}>{% if v.vignette %}<img src="{{ v.vignette | e }}" alt="" loading="lazy">{% else %}<span class="sans-image"></span>{% endif %}<span>{{ v.titre }}</span></button>
+{% if videos or carnet %}
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="entete">
+    {% if videos and carnet %}<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
+    {% elif videos %}<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    {% else %}<p class="rubrique">Demander <span class="axe">questions sur les textes du jour</span></p>{% endif %}
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  {% if videos %}
+  {% macro facade(v) %}{% if v.vignette %}<img src="{{ v.vignette | e }}" alt="">{% else %}<span class="facade-titre">{{ v.titre }}</span>{% endif %}<span class="lire">Regarder</span>{% endmacro %}
+  {% set v0 = videos[0] %}
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="{{ v0.id | e }}" data-titre="{{ v0.titre | e }}" data-vignette="{{ (v0.vignette or '') | e }}" aria-label="Lire la vidéo {{ v0.titre | e }}">{{ facade(v0) }}</div>
+    {% if videos | length > 1 %}<p class="compteur" id="compteur">Vidéo 1 sur {{ videos | length }}</p>{% endif %}
+    <p class="vtitre" id="ecran-titre">{{ v0.titre }}</p>
+    <p class="raison" id="ecran-raison">{{ v0.raison }}</p>
+    <p class="credit">Vidéo : <a href="{{ chaine.url }}" target="_blank" rel="noopener">{{ chaine.nom }}</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v={{ v0.id | e }}" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    {% if videos | length > 1 %}
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+      {% for v in videos %}
+      {% if loop.first or v.groupe != loop.previtem.groupe %}<span class="groupe">{{ 'Les mots du jour' if v.groupe == 'mot' else 'Situer les livres' }}</span>{% endif %}
+      <button data-i="{{ loop.index0 }}" data-yt="{{ v.id | e }}" data-titre="{{ v.titre | e }}" data-raison="{{ v.raison | e }}" data-vignette="{{ (v.vignette or '') | e }}"{% if loop.first %} class="on"{% endif %}>{% if v.vignette %}<img src="{{ v.vignette | e }}" alt="" loading="lazy">{% else %}<span class="sans-image"></span>{% endif %}<span>{{ v.titre }}</span></button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if carnet %}
+  <div class="vitre carnet" data-vitre="demander">
+    <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
+    {% for qr in carnet %}
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-{{ loop.index }}">{{ qr.question | e }}</button>
+      <div class="r" id="r-{{ loop.index }}" hidden>
+        {{ qr.reponse_html | safe }}
+        <div class="sources">
+          {% if qr.sources.jour %}<p>Textes du jour</p><div>{% for s in qr.sources.jour %}<span>{{ s | e }}</span>{% endfor %}</div>{% endif %}
+          {% if qr.sources.tradition %}<p>Pères et Réformateurs</p><div class="trad">{% for t in qr.sources.tradition %}<span>{{ oeuvres.get(t.oeuvre, t.oeuvre) | e }}, {{ t.reference | e }}</span>{% endfor %}</div>{% endif %}
+        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
     {% endfor %}
   </div>
   {% endif %}
@@ -454,7 +505,8 @@ cibles.forEach(function(c){if(c)obsCarte.observe(c)});
 var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
 // Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
-// Voir est un interrupteur qui déplie ou replie le compagnon.
+// Voir et Demander sont des interrupteurs qui déplient ou replient le
+// compagnon ; passer de l'un à l'autre change d'onglet sans replier.
 (function(){
   var portes=document.querySelectorAll('[data-porte]');
   var comp=document.getElementById('compagnon'),ecran=document.getElementById('ecran');
@@ -463,17 +515,21 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function peindre(){portes.forEach(function(e){var p=e.dataset.porte;
     e.classList.toggle('on',!ouvert&&p===position);
     e.classList.toggle('ouvert-voir',ouvert==='voir'&&p==='voir');
-    if(p==='voir')e.setAttribute('aria-expanded',ouvert==='voir'?'true':'false')})}
+    e.classList.toggle('ouvert-demander',ouvert==='demander'&&p==='demander');
+    if(p==='voir'||p==='demander')e.setAttribute('aria-expanded',ouvert===p?'true':'false')});
+    if(!comp)return;
+    comp.querySelectorAll('[data-vitre]').forEach(function(v){v.hidden=!!ouvert&&v.dataset.vitre!==ouvert});
+    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')})}
   function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
     var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
     else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
     var l=document.createElement('span');l.className='lire';l.textContent='Regarder';ecran.appendChild(f);ecran.appendChild(l)}
   function ouvrir(o){ouvert=o;
     if(comp){comp.classList.toggle('ouvert',!!o);document.body.classList.toggle('panneau',!!o&&mq.matches);
-      if(!o&&ecran.querySelector('iframe'))facade()}  // replier coupe la vidéo
+      if(o!=='voir'&&ecran&&ecran.querySelector('iframe'))facade()}  // quitter Voir coupe la vidéo
     peindre()}
   portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
-    if(p==='voir'){ev.preventDefault();ouvrir(ouvert==='voir'?null:'voir');return}
+    if(p==='voir'||p==='demander'){ev.preventDefault();ouvrir(ouvert===p?null:p);return}
     position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
   var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){
@@ -486,6 +542,12 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   fleche();mq.addEventListener('change',fleche);
   replier.addEventListener('click',function(){ouvrir(null)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
+  comp.querySelectorAll('[data-onglet]').forEach(function(b){b.addEventListener('click',function(){ouvrir(b.dataset.onglet)})});
+  var qs=comp.querySelectorAll('.q-btn');
+  qs.forEach(function(b){b.addEventListener('click',function(){var ouvre=b.getAttribute('aria-expanded')!=='true';
+    qs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    if(ouvre){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false}})});
+  if(!ecran)return;
   function lancer(){var f=document.createElement('iframe');
     f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(ecran.dataset.yt)+'?autoplay=1&rel=0&hl=fr';
     f.title=ecran.dataset.titre;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
