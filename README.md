@@ -1,5 +1,7 @@
 # Lectionnaire
 
+**Le site : <https://lectionnaire.pages.dev/>**
+
 Un site quotidien d'étude biblique. Chaque jour, les lectures du lectionnaire
 romain rendues vivantes et digestes — **sans être diluées** — et une invitation
 à se laisser rejoindre par le Christ, sans moralisme.
