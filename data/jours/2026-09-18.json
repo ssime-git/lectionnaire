@@ -1,0 +1,142 @@
+{
+  "date": "2026-09-18",
+  "date_humaine": "vendredi",
+  "semaine": "24ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co 15, 12-20 ; Lc 8, 1-3",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 128 h320\"/><path d=\"M28 32 h50 v66 h-50 z\"/><path d=\"M53 32 v66\"/><path d=\"M28 65 h50\"/><path d=\"M268 45 q-38 -14 -70 8 q-18 12 -16 32 q1 12 12 20 q10 8 15 9 q20 8 42 1 q20 -7 24 -25 q4 -18 -3 -33 q-2 -6 -4 -12 z\"/><path d=\"M188 66 q7 -5 15 0 q-7 5 -15 0\"/><path d=\"M182 78 q-9 2 -10 9 q5 3 10 -1\"/><path d=\"M186 96 q7 3 14 0\"/><path d=\"M235 40 q12 -7 24 -2\"/></g><g class=\"trait-rubrique\"><path d=\"M80 50 l58 14\"/><path d=\"M80 68 l66 3\"/><path d=\"M80 88 l58 -12\"/></g><g class=\"trait-liturgie\"><path d=\"M196 65 v6\"/><path d=\"M194.5 63 q1.5 -1.5 3 0\"/></g></svg>",
+  "titre": "Le réveil",
+  "titre_html": "Le <span class=\"it\">réveil</span>",
+  "sous_titre": "1 Corinthiens 15 — la foi qui ne tourne pas à vide",
+  "suite_hier": null,
+  "gravure_alt": "Un visage endormi tourné vers une fenêtre par laquelle entre la première lumière ; dans la pupille entrouverte se reflète, minuscule et debout, une silhouette qu'on dirait relevée.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 15, 12-20",
+      "traduction": "Louis Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> Or, si l'on prêche que Christ est <button class=\"mot\" data-g=\"g-egeiro\">ressuscité</button> des morts, comment quelques-uns parmi vous disent-ils qu'il n'y a point de résurrection des morts ? <span class=\"s\">13</span> S'il n'y a point de résurrection des morts, Christ non plus n'est pas ressuscité. <span class=\"s\">14</span> Et si Christ n'est pas ressuscité, notre prédication est donc <button class=\"mot\" data-g=\"g-kenon\">vaine</button>, et votre foi aussi est vaine. <span class=\"s\">15</span> Il se trouve même que nous sommes de faux témoins à l'égard de Dieu, puisque nous avons témoigné contre Dieu qu'il a ressuscité Christ, tandis qu'il ne l'aurait pas ressuscité, si les morts ne ressuscitent point. <span class=\"s\">16</span> Car si les morts ne ressuscitent point, Christ non plus n'est pas ressuscité. <span class=\"s\">17</span> Et si Christ n'est pas ressuscité, votre foi est vaine, vous êtes encore dans vos péchés, <span class=\"s\">18</span> et par conséquent aussi ceux qui sont <button class=\"mot\" data-g=\"g-koimao\">morts en Christ</button> sont perdus. <span class=\"s\">19</span> Si c'est dans cette vie seulement que nous espérons en Christ, nous sommes les plus <button class=\"mot\" data-g=\"g-eleeinoteroi\">malheureux</button> de tous les hommes. <span class=\"s\">20</span> Mais maintenant, Christ est ressuscité des morts, il est les <button class=\"mot\" data-g=\"g-aparche\">prémices</button> de ceux qui sont morts.",
+      "gloses": [
+        {
+          "id": "g-egeiro",
+          "lemme": "ressuscité",
+          "html": "<span class=\"gr\">ἐγήγερται</span> (egēgertai) est un parfait passif du verbe ἐγείρω, « éveiller, relever ». Le parfait grec ne dit pas seulement qu'un fait a eu lieu, mais qu'il continue de porter ses effets dans le présent — chose que le français « est ressuscité » de Segond rend mal, puisque notre passé composé s'entend souvent comme clos. Jean Chrysostome, dans son homélie sur ce chapitre, insiste sur ce temps : Paul ne dit pas que le Christ a été relevé un jour pour que cela s'arrête là, mais qu'il se tient désormais, en permanence, dans cet état de relevé. Toute l'argumentation de Paul tient à ce détail grammatical : une résurrection close sur elle-même ne fonderait aucune espérance pour les morts d'aujourd'hui."
+        },
+        {
+          "id": "g-kenon",
+          "lemme": "vaine",
+          "html": "<span class=\"gr\">κενόν</span> (kenon, verset 14) puis <span class=\"gr\">ματαία</span> (mataia, verset 17) : Segond traduit les deux par « vaine », mais Paul change de mot. Kenon dit le vide, une prédication qui n'aurait rien à l'intérieur d'elle-même ; mataia dit l'inefficace, une foi qui ne produirait aucun fruit, qui tournerait à vide. Calvin, dans son commentaire sur cette épître, relève que Paul frappe ainsi deux fois, d'abord la parole annoncée puis la foi qui la reçoit — rien n'est épargné si la résurrection tombe. La répétition en deux termes distincts, effacée par une traduction unique, est pourtant le nerf de toute l'argumentation."
+        },
+        {
+          "id": "g-koimao",
+          "lemme": "endormis",
+          "html": "<span class=\"gr\">κεκοιμημένοι</span>, de <span class=\"gr\">κοιμάομαι</span>, « s'endormir » : c'est le mot que le grec chrétien choisit très tôt pour parler des morts, d'où vient notre mot « cimetière » (koimētērion, « dortoir »). Segond traduit ici platement par « morts », effaçant l'image du sommeil que Paul choisit exprès. Le sommeil suppose un réveil, comme le veilleur qui attend l'aube, et c'est précisément ce que Paul va nommer au verset suivant par le mot « prémices ». Les Pères grecs, Chrysostome en tête, ont beaucoup insisté sur ce vocabulaire du sommeil pour combattre toute crainte devant la mort des croyants."
+        },
+        {
+          "id": "g-eleeinoteroi",
+          "lemme": "malheureux",
+          "html": "<span class=\"gr\">ἐλεεινότεροι</span>, comparatif de <span class=\"gr\">ἐλεεινός</span>, lui-même bâti sur ἔλεος, « la pitié ». Segond traduit « les plus malheureux », ce qui dit la détresse, mais perd le regard extérieur qu'implique le mot grec : ἐλεεινός désigne moins ce qu'on ressent que ce qu'on inspire à autrui, l'objet d'une pitié portée sur nous du dehors. Paul ne dit donc pas seulement que les croyants sans résurrection seraient tristes, mais qu'ils deviendraient, aux yeux de quiconque les regarderait, la preuve vivante d'une espérance ridicule. C'est un aveu rare chez Paul, qui mesure ainsi tout le poids que porte, à lui seul, l'article de la résurrection."
+        },
+        {
+          "id": "g-aparche",
+          "lemme": "prémices",
+          "html": "<span class=\"gr\">ἀπαρχή</span> (aparchē) désigne dans le culte juif la première part de la récolte, offerte à Dieu avant tout le reste et qui, rituellement, consacre la moisson entière (Lv 23, 10). Segond traduit fidèlement par « prémices », mais le mot a perdu en français son enracinement agricole et cultuel que tout auditeur juif de Paul percevait aussitôt. En appelant le Christ ressuscité « prémices de ceux qui sont morts », Paul affirme que sa résurrection n'est pas un cas isolé mais le premier geste d'une moisson déjà commencée, dont le reste doit nécessairement suivre. Chrysostome développe cette image en comparant le Christ ressuscité à la racine dont tout le corps tire sa vie."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 16 (17), 1, 6-7, 8.15",
+      "traduction": "Louis Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Prière de David. Éternel! écoute la droite, sois attentif à mes cris, prête l'oreille à ma <button class=\"mot\" data-g=\"g-tephilla\">prière</button> faite avec des lèvres sans tromperie! <span class=\"s\">6</span> Je t'invoque, car tu m'exauces, ô Dieu! Incline vers moi ton oreille, écoute ma parole! <span class=\"s\">7</span> Signale ta bonté, toi qui sauves ceux qui cherchent un refuge, et qui par ta droite les délivres de leurs adversaires. <span class=\"s\">8</span> Garde-moi comme la <button class=\"mot\" data-g=\"g-ishon\">prunelle</button> de l'oeil; protège-moi, à l'ombre de tes ailes, <span class=\"s\">15</span> Pour moi, dans mon innocence, je verrai ta face; dès le <button class=\"mot\" data-g=\"g-haqits\">réveil</button>, je me rassasierai de ton image.",
+      "gloses": [
+        {
+          "id": "g-tephilla",
+          "lemme": "prière",
+          "html": "<span class=\"gr\">tephillah</span> (תְּפִלָּה), de la racine <span class=\"gr\">palal</span>, qui porte l'idée de trancher, d'intercéder, parfois de s'exposer soi-même au jugement. Segond traduit simplement « prière », mot neutre en français, alors que l'hébreu suppose un acte où l'orant se place devant le tribunal de Dieu et plaide sa cause — ce psaume est classé par les commentateurs juifs parmi les psaumes de plainte judiciaire, où David en appelle à la droiture de Dieu comme on en appelle à un juge. Les lèvres « sans tromperie » du même verset confirment ce registre : ce n'est pas une prière d'émotion mais une déposition."
+        },
+        {
+          "id": "g-ishon",
+          "lemme": "prunelle",
+          "html": "<span class=\"gr\">ishon</span> (אִישׁוֹן) signifie littéralement « le petit homme », diminutif de <span class=\"gr\">ish</span>, « homme » — c'est le nom que l'hébreu donne à la pupille parce qu'on y voit se refléter, minuscule, l'image de celui qui regarde. Segond traduit par « prunelle », ce qui garde l'idée de fragilité mais perd cette image concrète du reflet d'un visage dans l'œil d'un autre. Demander à Dieu d'être gardé « comme la prunelle de l'œil », c'est demander à être porté si près de son regard que l'on s'y trouve soi-même reflété — l'image reviendra, inversée, au verset 15, quand le psalmiste espère se rassasier non plus de son propre reflet mais du visage de Dieu."
+        },
+        {
+          "id": "g-haqits",
+          "lemme": "réveil",
+          "html": "<span class=\"gr\">haqits</span>, de la racine <span class=\"gr\">qits</span>, « s'éveiller » : Segond traduit « dès le réveil », formule discrète que certains lecteurs, juifs comme chrétiens, ont entendue au-delà du simple matin qui suit une nuit. Le mot peut désigner aussi bien le réveil quotidien que celui, eschatologique, dont parle Daniel 12, 2, quand ceux qui dorment dans la poussière de la terre s'éveilleront. Le rapprochement liturgique de ce psaume avec 1 Corinthiens 15 ne fait qu'expliciter un lien déjà présent dans le texte hébreu : le réveil du dormeur et la résurrection du mort partagent le même champ de mots."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 8, 1-3",
+      "traduction": "Louis Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Ensuite, Jésus allait de ville en ville et de village en village, prêchant et annonçant la bonne nouvelle du royaume de Dieu. Les douze étaient avec lui, <span class=\"s\">2</span> et quelques femmes qui avaient été guéries d'esprits malins et de maladies: Marie, dite de Magdala, de laquelle étaient sortis sept démons, <span class=\"s\">3</span> Jeanne, femme de Chuza, intendant d'Hérode, Susanne, et plusieurs autres, qui l'<button class=\"mot\" data-g=\"g-diekonoun\">assistaient</button> de leurs <button class=\"mot\" data-g=\"g-hyparchonta\">biens</button>.",
+      "gloses": [
+        {
+          "id": "g-diekonoun",
+          "lemme": "assistaient",
+          "html": "<span class=\"gr\">διηκόνουν</span> (diēkonoun), imparfait du verbe <span class=\"gr\">διακονέω</span>, dont vient notre mot « diacre ». Segond traduit par « assistaient », mot correct mais qui efface la parenté avec le vocabulaire du service que Luc, puis les Actes, appliqueront ensuite aux Sept, et à tout ministère dans l'Église naissante. L'imparfait indique en outre une action continue, répétée, non un geste ponctuel : ces femmes n'accomplissent pas un don isolé mais accompagnent durablement l'annonce du royaume. Chrysostome, dans ses homélies sur cet évangile, y voit l'indice que le service matériel des femmes appartient de plein droit à l'annonce de la Parole, non à sa marge."
+        },
+        {
+          "id": "g-hyparchonta",
+          "lemme": "biens",
+          "html": "<span class=\"gr\">ὑπαρχόντων</span> (hyparchontōn), participe substantivé du verbe <span class=\"gr\">ὑπάρχω</span>, « être là, appartenir en propre ». Segond traduit par « biens », ce qui est juste mais neutre, alors que le grec dit littéralement « ce qui leur appartenait en propre », insistant sur le fait que ces femmes disposaient de leurs propres ressources, gérées par elles-mêmes. C'est un détail social notable pour l'époque : Jeanne, épouse de l'intendant d'Hérode, et les autres nommées avaient une autonomie économique réelle, qu'elles mettent au service de l'annonce de Jésus. Luc, seul parmi les évangélistes à rapporter ce détail, prend soin de nommer ces femmes — geste rare dans l'Antiquité."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe et le corps",
+      "corps_html": "Vers l'an 55, depuis Éphèse, Paul répond à des chrétiens de Corinthe qui, imprégnés de culture grecque, acceptaient volontiers l'idée d'une âme immortelle mais se heurtaient à celle d'un corps relevé d'entre les morts — pensée étrangère au dualisme platonicien alors répandu dans la ville. Paul ne discute pas la question en philosophe : il ancre toute sa réponse dans un fait qu'il dit avoir reçu et transmis, la résurrection du Christ, attestée par des témoins encore vivants (15, 6)."
+    },
+    {
+      "titre": "Les femmes qui suivaient",
+      "corps_html": "Luc est le seul évangéliste à dresser cette liste de femmes qui accompagnent Jésus dès la Galilée jusqu'à la croix (23, 49) et au tombeau vide (24, 10) — Marie de Magdala, Jeanne et Susanne y reviennent alors, preuve que Luc les tient pour des témoins constants et fiables. Leur présence dément l'idée d'un mouvement composé des seuls Douze : dès le début, femmes et hommes y annoncent et y servent ensemble le royaume."
+    }
+  ],
+  "analogie": {
+    "titre": "Le réveil qu'on n'a pas vu venir",
+    "variantes": [
+      "Tu as pu, un jour de lassitude, te demander si tout ce temps donné à prier, à espérer, à tenir bon dans une fidélité que personne ne remarquait, ne relevait pas d'une illusion pieuse — comme si, la promesse retirée, ta patience se réduisait à un effort perdu. C'est exactement l'aveu que Paul ose faire à la communauté de Corinthe : sans résurrection, votre foi ne tient à rien, et nous sommes les plus à plaindre. Il ne console pas cette inquiétude par un discours rassurant, il la prend au sérieux jusqu'au bout, pour que ta foi ne repose pas sur un besoin de te sentir bien, mais sur un fait qui la précède et la porte, que tu le ressentes ou non ce matin.",
+      "Il y a des matins où tu ouvres les yeux avant même d'avoir rouvert ta pensée, et où quelque chose en toi sait déjà, avant que tu te sois reformé à coups d'inquiétudes, qu'une chose est réglée qui ne l'était pas hier soir — un chagrin qui a perdu sa force, une décision qui s'est prise sans toi pendant la nuit. Tu n'as rien produit de ce répit, il t'a été rendu comme un état déjà là, retrouvé plutôt que fabriqué. Le psalmiste attend ainsi son réveil pour se rassasier d'un visage qu'il n'a pas construit lui-même à force de mérite : la promesse n'est pas un exploit spirituel à réussir, mais un don, comme la nuit rend au matin un visage reposé.",
+      "Tu as peut-être rendu, un jour, un service que personne n'a remarqué — un temps donné, une présence discrète à quelqu'un qui traversait une épreuve — sans qu'aucun résultat visible ne vienne te dire que cela a compté. Ce genre de geste ne se solde jamais par une preuve immédiate ; il faut du temps, parfois des années, pour qu'on apprenne qu'il a porté quelque chose chez l'autre, ou qu'on ne l'apprenne jamais. Les femmes qui suivaient Jésus et l'assistaient de leurs biens n'avaient, au moment où elles le faisaient, aucune promesse écrite qu'on raconterait un jour leur nom ; leur service tenait tout entier à la confiance qu'il n'était pas perdu, la même confiance que Paul demande à Corinthe de ne pas abandonner."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer ce jour, reste un instant avec cette question que Paul pose sans détour : et si la foi ne servait vraiment à rien sans la résurrection ?",
+    "geste": "Redis lentement, à voix basse, le verset du psaume — « dès le réveil, je me rassasierai de ton image » — comme une phrase que tu voudrais avoir sur les lèvres à ton propre réveil, demain matin.",
+    "note": "Il n'est pas nécessaire de ressentir quoi que ce soit pour que ce geste soit vrai : la parole prononcée porte, même quand rien ne se passe en toi au moment où tu la dis."
+  },
+  "question": "Qu'est-ce qui, dans ta vie, tient uniquement parce que tu crois qu'il y aura un réveil — et que ferais-tu de cela si tu apprenais qu'il n'y en aura pas ?",
+  "racines": [
+    {
+      "titre": "Chrysostome, la racine et le corps",
+      "corps_html": "Dans son homélie sur cette épître, Jean Chrysostome compare le Christ ressuscité, prémices des morts, à une racine dont dépend toute la plante : si la racine vit, dit-il, on ne s'inquiète pas du sort des branches, même si elles paraissent encore sèches. L'image répond directement à l'objection corinthienne, qui jugeait la résurrection des corps impossible à concevoir : on ne voit pas non plus, en hiver, la sève qui prépare déjà la feuille du printemps.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens"
+    },
+    {
+      "titre": "Calvin, la foi qui ne tourne pas à vide",
+      "corps_html": "Calvin, commentant ce passage, remarque que Paul ne craint pas de faire dépendre toute la foi chrétienne d'un seul fait, la résurrection, plutôt que de la fonder sur un sentiment intérieur ou une morale : si ce fait tombe, dit-il, il ne reste rien de la piété chrétienne qu'une illusion, si vertueuse paraisse-t-elle. C'est, selon lui, ce qui distingue la foi biblique d'une sagesse purement humaine, toujours capable de se reconstruire un sens sans avoir besoin d'un fait extérieur qui l'ait vraiment fondée.",
+      "attribution": "Jean Calvin, Commentaire sur la Première épître aux Corinthiens, ch. 15"
+    },
+    {
+      "titre": "Une femme de la cour d'Hérode",
+      "corps_html": "Jeanne est dite femme de Chuza, « intendant » (epitropos) d'Hérode Antipas — un titre que l'on retrouve chez l'historien juif Flavius Josèphe pour désigner les hauts fonctionnaires chargés de la gestion des biens à la cour des Hérodiens. Qu'une femme si proche du pouvoir mette ses propres ressources au service d'un prédicateur itinérant est un détail que Luc seul rapporte, et qui traverse tout son évangile puis les Actes des Apôtres : la cour d'Hérode et les périphéries galiléennes s'y croisent sans qu'aucune hiérarchie sociale ne soit mentionnée.",
+      "attribution": "Flavius Josèphe, Antiquités judaïques (sur les intendants de la cour hérodienne) ; cf. Luc 24, 10"
+    }
+  ]
+}
