@@ -66,10 +66,10 @@ def _jour(videos: list[dict]) -> dict:
 
 
 class TemplateCompagnonTests(unittest.TestCase):
-    def test_sans_videos_pas_de_compagnon(self) -> None:
+    def test_sans_videos_compagnon_pour_demander(self) -> None:
         html = render.rendre_html(_jour([]))
         self.assertNotIn('data-porte="voir"', html)
-        self.assertNotIn('class="compagnon"', html)
+        self.assertTrue('class="compagnon"' in html, 'Le carnet libre doit avoir son panneau sans vidéos ni questions relues')
         self.assertIn('data-porte="lire"', html)
         self.assertIn('data-porte="comprendre"', html)
         self.assertIn("Gloses, contexte et réponses du carnet rédigés avec l'aide d'une "
@@ -145,16 +145,16 @@ class TemplateCarnetTests(unittest.TestCase):
         self.assertNotIn('class="onglets"', html)
         self.assertNotIn('id="ecran"', html)
 
-    def test_videos_sans_carnet_pas_d_onglets(self) -> None:
+    def test_videos_sans_carnet_avec_onglet_demander(self) -> None:
         html = self._jour([_video("1g4u57TSY0g", "Shema / Écouter")], [])
-        self.assertNotIn('class="onglets"', html)
-        self.assertNotIn('data-porte="demander"', html)
+        self.assertTrue('class="onglets"' in html, 'Les vidéos et le carnet libre ont deux onglets')
+        self.assertTrue('data-porte="demander"' in html, 'Demander doit rester accessible sans questions relues')
         self.assertIn('id="ecran"', html)
 
-    def test_sans_carnet_pas_de_porte_demander(self) -> None:
+    def test_sans_carnet_porte_demander_presente(self) -> None:
         html = self._jour([], [])
-        self.assertNotIn('data-porte="demander"', html)
-        self.assertNotIn('class="compagnon"', html)
+        self.assertTrue('data-porte="demander"' in html, 'Demander doit rester accessible sans questions relues')
+        self.assertTrue('class="compagnon"' in html, 'Le carnet libre doit avoir son panneau sans vidéos ni questions relues')
 
     def test_question_echappee(self) -> None:
         html = self._jour([], [_qr('Pourquoi "semblable" <et> pas égal ?')])
@@ -195,8 +195,13 @@ class TemplateCarnetLibreTests(unittest.TestCase):
         self.assertNotIn("challenges.cloudflare.com/turnstile/v0/api.js\"", html)  # pas de <script src>
         self.assertNotIn('<script src="https://challenges.cloudflare.com', html)
 
-    def test_pas_de_formulaire_sans_carnet(self) -> None:
-        self.assertNotIn('class="carnet-libre"', render.rendre_html(_jour([])))
+    def test_formulaire_cache_present_sans_carnet(self) -> None:
+        for videos in ([], [_video("1g4u57TSY0g", "Shema / Écouter")]):
+            with self.subTest(videos=bool(videos)):
+                html = render.rendre_html(_jour(videos))
+                self.assertTrue('<form class="carnet-libre" hidden' in html,
+                                "Le champ libre doit exister même sans questions relues")
+                self.assertNotIn('<script src="https://challenges.cloudflare.com', html)
 
 
 class ContexteTraditionTests(unittest.TestCase):

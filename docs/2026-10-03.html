@@ -208,7 +208,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -330,6 +330,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
 <a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+      <a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions sur ces textes</span></a>
     </nav>
   </header>
 
@@ -446,12 +447,13 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 <nav class="barre-portes" aria-label="Entrées de lecture">
   <a href="#textes" data-porte="lire">Lire</a>
 <button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+  <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
 </nav>
 
 <!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
 <aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
   <div class="entete">
-<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
     <button class="replier" aria-label="Replier">→</button>
   </div>
   <div class="vitre" data-vitre="voir">
@@ -463,6 +465,18 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 <span class="groupe">Situer les livres</span>      <button data-i="0" data-yt="xRQ5ctHjhBs" data-titre="Job - Panorama" data-raison="Job 42,1-3.5-6.12-17, la conclusion du livre, se lit dans le panorama de Job." data-vignette="vignettes/xRQ5ctHjhBs.jpg" class="on"><img src="vignettes/xRQ5ctHjhBs.jpg" alt="" loading="lazy"><span>Job - Panorama</span></button>
       <button data-i="1" data-yt="O-Za0jggT8Q" data-titre="Luc 10–24 - Panorama" data-raison="Luc 10,17-24, le retour des disciples et la joie de Jésus, appartient au panorama de Luc 10-24." data-vignette="vignettes/O-Za0jggT8Q.jpg"><img src="vignettes/O-Za0jggT8Q.jpg" alt="" loading="lazy"><span>Luc 10–24 - Panorama</span></button>
     </div>
+  </div>
+  <div class="vitre carnet" data-vitre="demander">
+    <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
+    <!-- Question libre : visible seulement si /api/carnet est ouvert (voir JS). -->
+    <form class="carnet-libre" hidden data-date="2026-10-03">
+      <p class="libre-titre">Ta question sur les textes du jour</p>
+      <div class="libre-saisie"><input name="question" maxlength="400" minlength="3" required placeholder="Pourquoi… ?" aria-label="Ta question sur les textes du jour"><button type="submit">Poser</button></div>
+      <div class="libre-turnstile"></div>
+      <p class="libre-etat" aria-live="polite"></p>
+      <div class="libre-reponse r" hidden><div class="libre-texte"></div><div class="libre-sources sources" hidden></div><p class="ia">Réponse générée par IA, non relue — à vérifier.</p></div>
+    </form>
+    <p class="libre-ferme" hidden></p>
   </div>
 </aside>
 
@@ -559,10 +573,10 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function fermeLibre(msg){var f=comp.querySelector('.libre-ferme');if(libre)libre.hidden=true;if(msg&&f){f.textContent=msg;f.hidden=false}}
   function initLibre(){if(!libre||demande)return;demande=true;
     fetch('/api/carnet',{headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json():null}).then(function(e){
-      if(!e)return;if(!e.ouvert){fermeLibre(e.message);return}
+      if(!e||!e.ouvert){fermeLibre(e&&e.message||'Les questions en direct ne sont pas disponibles pour le moment.');return}
       var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
       s.onload=function(){widget=window.turnstile.render(libre.querySelector('.libre-turnstile'),{sitekey:e.sitekey,size:'flexible'});libre.hidden=false};
-      document.head.appendChild(s)}).catch(function(){})}
+      document.head.appendChild(s)}).catch(function(){fermeLibre('Les questions en direct ne sont pas disponibles pour le moment.')})}
   if(libre)libre.addEventListener('submit',function(ev){ev.preventDefault();
     var etat=libre.querySelector('.libre-etat'),btn=libre.querySelector('button'),q=libre.question.value.trim();
     var jeton=window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';

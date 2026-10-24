@@ -200,7 +200,7 @@ footer a{color:var(--rubrique)}
 /* ---------- PORTES & BARRE : les entrées de lecture ----------
    Lire / Comprendre suivent la position ; Voir est un interrupteur qui
    déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat({{ 2 + (1 if videos else 0) + (1 if carnet else 0) }},1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
+.portes{display:grid;grid-template-columns:repeat({{ 3 + (1 if videos else 0) }},1fr);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0}
 .portes a{border-right:1px solid var(--filet);padding:1rem .7rem;color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
 .portes a:last-child{border-right:0}
 .portes .n{display:block;font-family:'Fraunces',serif;font-size:1.35rem;line-height:1}
@@ -324,7 +324,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
       {% if videos %}<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">{{ videos | length }} vidéo{{ 's' if videos | length > 1 }} pour ce jour</span></a>{% endif %}
       <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
-      {% if carnet %}<a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions relues sur ces textes</span></a>{% endif %}
+      <a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions sur ces textes</span></a>
     </nav>
   </header>
 
@@ -422,15 +422,13 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   <a href="#textes" data-porte="lire">Lire</a>
   {% if videos %}<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>{% endif %}
   <a href="#contexte" data-porte="comprendre">Comprendre</a>
-  {% if carnet %}<button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>{% endif %}
+  <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
 </nav>
 
-{% if videos or carnet %}
 <!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
 <aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
   <div class="entete">
-    {% if videos and carnet %}<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
-    {% elif videos %}<p class="rubrique">Voir <span class="axe">une vidéo à la fois</span></p>
+    {% if videos %}<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
     {% else %}<p class="rubrique">Demander <span class="axe">questions sur les textes du jour</span></p>{% endif %}
     <button class="replier" aria-label="Replier">→</button>
   </div>
@@ -453,7 +451,6 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     {% endif %}
   </div>
   {% endif %}
-  {% if carnet %}
   <div class="vitre carnet" data-vitre="demander">
     <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
     {% for qr in carnet %}
@@ -479,9 +476,7 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
     </form>
     <p class="libre-ferme" hidden></p>
   </div>
-  {% endif %}
 </aside>
-{% endif %}
 
 <script>
 (function(){
@@ -576,10 +571,10 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   function fermeLibre(msg){var f=comp.querySelector('.libre-ferme');if(libre)libre.hidden=true;if(msg&&f){f.textContent=msg;f.hidden=false}}
   function initLibre(){if(!libre||demande)return;demande=true;
     fetch('/api/carnet',{headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json():null}).then(function(e){
-      if(!e)return;if(!e.ouvert){fermeLibre(e.message);return}
+      if(!e||!e.ouvert){fermeLibre(e&&e.message||'Les questions en direct ne sont pas disponibles pour le moment.');return}
       var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
       s.onload=function(){widget=window.turnstile.render(libre.querySelector('.libre-turnstile'),{sitekey:e.sitekey,size:'flexible'});libre.hidden=false};
-      document.head.appendChild(s)}).catch(function(){})}
+      document.head.appendChild(s)}).catch(function(){fermeLibre('Les questions en direct ne sont pas disponibles pour le moment.')})}
   if(libre)libre.addEventListener('submit',function(ev){ev.preventDefault();
     var etat=libre.querySelector('.libre-etat'),btn=libre.querySelector('button'),q=libre.question.value.trim();
     var jeton=window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';
