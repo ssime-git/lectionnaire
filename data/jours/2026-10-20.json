@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-20",
+  "date_humaine": "mardi",
+  "semaine": "29ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 2, 12-22 ; Lc 12, 35-38",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M15 130 H325\"/><path d=\"M30 128 V22 H95 V128\"/><path d=\"M30 128 L68 120 L66 28 L30 22\"/><path d=\"M122 128 q0 -9 8 -9 q8 0 8 9 Z\"/><path d=\"M130 119 v-5\"/><path d=\"M190 45 H280\"/><path d=\"M190 72 H288\"/><path d=\"M190 100 H270\"/><path d=\"M220 45 V72 M250 72 V100\"/><path d=\"M280 45 L290 60 L270 100 L286 118\"/></g><g class=\"trait-rubrique\"><path d=\"M130 114 q-3 -7 0 -12 q3 5 0 12\"/><path d=\"M128 112 q1 -4 2 -7\"/><path d=\"M100 128 a30 9 0 1 0 60 0 a30 9 0 1 0 -60 0\"/></g><g class=\"trait-liturgie\"><path d=\"M245 95 H295 V120 H245 Z\"/><path d=\"M250 101 L290 114\"/><path d=\"M252 109 L285 119\"/></g></svg>",
+  "titre": "Maison vivante",
+  "titre_html": "Maison <span class=\"it\">vivante</span>",
+  "sous_titre": "D'Éphèse à la nuit des veilleurs : ce que signifie être rapproché",
+  "suite_hier": null,
+  "gravure_alt": "Une porte de bois entrebâillée sur la nuit ; sur le seuil, une lampe à huile posée à même la pierre projette un rond de lumière qui déborde légèrement à l'extérieur. En arrière-plan, un mur de pierres s'interrompt net, comme rompu, laissant voir au travers une seule pierre d'angle plus large que les autres, taillée en léger relief.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 2, 12-22",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> puisqu'en ce temps-là vous étiez sans Christ, sans droit de cité en Israël, étrangers aux alliances de la promesse, sans espérance et sans Dieu dans le monde. <span class=\"s\">13</span> Mais maintenant, en Jésus-Christ, vous qui étiez jadis éloignés, vous avez été rapprochés par le sang de Christ. <span class=\"s\">14</span> Car il est notre paix, lui qui a fait des deux un seul peuple, en détruisant le <button class=\"mot\" data-g=\"g-mesotoichon\">mur de séparation</button>, <span class=\"s\">15</span> l'inimitié, ayant anéanti par sa chair la loi des ordonnances avec ses commandements ; pour créer en lui-même avec les deux un seul homme nouveau, en faisant la paix, <span class=\"s\">16</span> et réconcilier les deux avec Dieu en un seul corps par la croix, en détruisant par elle l'inimitié. <span class=\"s\">17</span> Il est venu annoncer la paix à vous qui étiez loin, et la paix à ceux qui étaient près ; <span class=\"s\">18</span> car par lui nous avons les uns et les autres accès auprès du Père, dans un même Esprit. <span class=\"s\">19</span> Ainsi donc vous n'êtes plus des étrangers, ni des <button class=\"mot\" data-g=\"g-paroikoi\">gens du dehors</button> ; mais vous êtes concitoyens des saints, gens de la maison de Dieu. <span class=\"s\">20</span> Vous avez été édifiés sur le fondement des apôtres et des prophètes, Jésus-Christ lui-même étant la <button class=\"mot\" data-g=\"g-akrogoniaios\">pierre angulaire</button>. <span class=\"s\">21</span> C'est en lui que tout l'édifice, bien coordonné, s'élève pour être un temple saint dans le Seigneur, <span class=\"s\">22</span> et c'est en lui que vous êtes aussi <button class=\"mot\" data-g=\"g-oikodome\">édifiés</button> pour être, par le Saint-Esprit, une maison où Dieu habite.",
+      "gloses": [
+        {
+          "id": "g-mesotoichon",
+          "lemme": "mesotoichon",
+          "html": "Le grec emploie ici un composé rare, <span class=\"gr\">mesotoichon tou phragmou</span>, littéralement « le mur mitoyen de la clôture ». Segond simplifie en « mur de séparation », traduction honnête mais qui perd la double image d'un mur ET d'une clôture. Beaucoup y ont vu une allusion au soreg du Temple de Jérusalem, la balustrade qui interdisait aux non-juifs d'approcher le sanctuaire — Jean Chrysostome lit ainsi ce verset comme la destruction d'une frontière à la fois réelle et spirituelle."
+        },
+        {
+          "id": "g-paroikoi",
+          "lemme": "paroikoi",
+          "html": "Segond traduit par « gens du dehors » le grec <span class=\"gr\">paroikoi</span>, terme de droit civique qui désignait, dans une cité grecque, les résidents étrangers privés des droits de citoyen — à distinguer des pleins citoyens, les <span class=\"gr\">politai</span>. Paul vient d'employer un autre mot pour « étrangers » (<span class=\"gr\">xenoi</span>) dans la même phrase, empilant les statuts d'exclusion avant de les renverser d'un coup par « concitoyens ». Chrysostome insiste sur ce vocabulaire de la cité : c'est bien un changement de statut légal, et non seulement de sentiment, que Paul annonce."
+        },
+        {
+          "id": "g-akrogoniaios",
+          "lemme": "akrogoniaios",
+          "html": "« Pierre angulaire » traduit le grec <span class=\"gr\">akrogoniaios</span>, terme technique de la construction pour la pierre qui, à l'angle des fondations, porte et aligne deux murs à la fois. L'image reprend Ésaïe 28, 16 et le Psaume 118, 22, que Pierre applique lui-même au Christ devant le sanhédrin (Actes 4, 11). Les Pères, Augustin en tête dans ses commentaires sur les psaumes, insistent sur ce détail architectural : une pierre d'angle ne décore rien, elle est le point sans lequel deux murs bâtis séparément — celui d'Israël, celui des nations — ne tiendraient pas ensemble."
+        },
+        {
+          "id": "g-oikodome",
+          "lemme": "oikodome",
+          "html": "Le verbe grec vient de <span class=\"gr\">oikodomeo</span>, « bâtir une maison » (<span class=\"gr\">oikos</span>), et garde ici sa forme passive et son temps continu : on est « en train d'être édifiés ». Segond rend fidèlement la racine, mais le français « édifiés » a glissé vers un sens moral — être édifié, c'est être instruit ou touché — qui efface la rudesse concrète de l'image, celle d'une maçonnerie qui monte course après course. Calvin, dans son commentaire sur cette épître, souligne que le temple n'est jamais fini tant que l'Église dure : chaque génération de croyants en est une assise supplémentaire."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 84 (85), 9ab.10, 11-12, 13-14",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">9</span> J'écouterai ce que dira Dieu, l'Éternel ; car il parle de <button class=\"mot\" data-g=\"g-shalom\">paix</button> à son peuple et à ses saints, pourvu qu'ils ne retombent pas dans la folie. <span class=\"s\">10</span> Oui, le salut est proche de ceux qui le craignent, et la <button class=\"mot\" data-g=\"g-kavod\">gloire</button> habitera dans notre pays. <span class=\"s\">11</span> La <button class=\"mot\" data-g=\"g-hesed\">bonté et la fidélité</button> se rencontrent, la justice et la paix s'embrassent ; <span class=\"s\">12</span> la fidélité germe de la terre, et la justice regarde du haut des cieux. <span class=\"s\">13</span> L'Éternel accordera le bonheur, et notre terre donnera ses fruits. <span class=\"s\">14</span> La justice marchera devant lui, et le bonheur suivra ses pas.",
+      "gloses": [
+        {
+          "id": "g-shalom",
+          "lemme": "shalom",
+          "html": "« Il parle de paix » traduit l'hébreu <span class=\"gr\">shalom</span>, qui désigne beaucoup plus que l'absence de conflit : un état d'intégrité, de choses remises à leur juste place. Segond traduit juste mais de façon appauvrie, car le mot suivant, « salut », n'est presque qu'un synonyme de shalom dans la bouche des psalmistes. Calvin note, en commentant ce psaume, que Dieu n'y promet pas seulement de cesser sa colère mais d'instaurer un bien positif — la paix biblique n'est jamais une simple absence."
+        },
+        {
+          "id": "g-kavod",
+          "lemme": "kavod",
+          "html": "« La gloire » traduit l'hébreu <span class=\"gr\">kavod</span>, dont la racine signifie « poids, lourdeur » : ce qui est glorieux est d'abord ce qui pèse, ce qui a assez de substance pour s'imposer. Segond choisit le sens tardif et abstrait, « gloire », perdant l'image concrète d'une présence dense qui s'installe, comme la nuée qui remplit le Temple de Salomon. Les rabbins ont lu ce verset en lien avec la Shekina, la présence de Dieu qui vient habiter la terre — le même verbe « habiter » que l'on retrouve en Éphésiens pour la maison où Dieu demeure."
+        },
+        {
+          "id": "g-hesed",
+          "lemme": "hesed",
+          "html": "« La bonté et la fidélité » traduisent une paire fixe de l'hébreu biblique, <span class=\"gr\">hesed we'emet</span>, qui décrit la loyauté d'alliance de Dieu — un amour qui tient ses engagements, non une simple gentillesse. Segond choisit « bonté », mot plus doux que ce que porte hesed, qui suppose un partenaire qui ne lâche pas prise. Le Midrash sur les Psaumes, comme Calvin après lui, remarque que le verset personnifie quatre réalités — bonté, fidélité, justice, paix — comme des amies qui se rencontrent et s'embrassent, image que les rabbins ont lue comme celle d'un monde enfin réconcilié."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 12, 35-38",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">35</span> Que vos reins soient <button class=\"mot\" data-g=\"g-zonnymi\">ceints</button>, et vos lampes allumées. <span class=\"s\">36</span> Et vous, soyez semblables à des hommes qui attendent que leur maître revienne des noces, afin de lui ouvrir dès qu'il arrivera et frappera. <span class=\"s\">37</span> Heureux ces <button class=\"mot\" data-g=\"g-doulos\">serviteurs</button> que le maître, à son arrivée, trouvera veillant ! Je vous le dis en vérité, il se ceindra, les fera mettre à table, et s'approchera pour les servir. <span class=\"s\">38</span> Qu'il arrive à la deuxième ou à la troisième <button class=\"mot\" data-g=\"g-phylake\">veille</button>, heureux ces serviteurs, s'il les trouve veillant !",
+      "gloses": [
+        {
+          "id": "g-zonnymi",
+          "lemme": "perizonnymi",
+          "html": "« Que vos reins soient ceints » traduit le grec <span class=\"gr\">perizonnymi</span>, « ceindre tout autour ». L'image ne parle plus directement à l'oreille moderne, mais tout lecteur juif y reconnaissait l'ordre donné pour la nuit de la Pâque : « vous ceindrez vos reins » (Exode 12, 11), robe relevée et attachée pour pouvoir partir sans délai. Chrysostome lit ce geste comme un ordre à la fois militaire et liturgique : on ne ceint ses reins ni pour dormir ni pour se reposer, mais pour marcher ou pour travailler."
+        },
+        {
+          "id": "g-doulos",
+          "lemme": "doulos",
+          "html": "Segond traduit « serviteurs » le grec <span class=\"gr\">douloi</span>, qui désigne au sens propre des esclaves, et non des employés libres. Ce choix adoucit la dureté du mot, mais efface ce qui rend le verset suivant si renversant : c'est le maître lui-même qui « se ceindra », posture d'esclave, pour servir ceux qui étaient ses esclaves. Le contraste ne se perçoit pleinement qu'en retrouvant le mot grec exact derrière la traduction policée."
+        },
+        {
+          "id": "g-phylake",
+          "lemme": "phylake",
+          "html": "« Veille » traduit le grec <span class=\"gr\">phylake</span>, l'une des quatre tranches de trois heures qui divisaient la nuit selon l'usage romain. La « deuxième » et la « troisième veille » couvrent les heures les plus creuses, celles où le sommeil est le plus lourd et où l'on attend le moins un maître revenant de noces. L'énumération rejoint Marc 13, 35, qui détaille les quatre veilles — soir, minuit, chant du coq, matin — comme autant de moments où le Fils de l'homme peut surprendre."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une muraille bien réelle",
+      "corps_html": "Au Temple de Jérusalem, une balustrade de pierre nommée le soreg séparait le parvis des nations du parvis d'Israël ; Flavius Josèphe rapporte qu'une inscription y menaçait de mort tout étranger qui la franchirait — une inscription grecque de ce type a d'ailleurs été retrouvée à Jérusalem en 1871. C'est cette frontière concrète, et non une simple image, que Paul désigne en parlant du mur abattu par la croix."
+    },
+    {
+      "titre": "Une lettre pour plus qu'Éphèse",
+      "corps_html": "Les plus anciens manuscrits de cette lettre, comme les codex Sinaiticus et Vaticanus, ne portent pas les mots « à Éphèse » au verset 1 ; beaucoup d'exégètes y voient une lettre circulaire, destinée à plusieurs Églises d'Asie Mineure composées à la fois de juifs et de païens devenus croyants. Le propos sur la réconciliation des deux peuples en un seul ne répond donc pas à une thèse abstraite, mais à une tension bien réelle dans ces communautés naissantes."
+    }
+  ],
+  "analogie": {
+    "titre": "Attendre d'être trouvé",
+    "variantes": [
+      "Il y a des nuits où l'on reste habillé, la lumière allumée, sans savoir si la personne qu'on attend viendra à minuit ou au chant du coq — on ne dort pas vraiment, on ne travaille pas non plus, on est seulement disponible, dans une attente qui ne produit rien et qu'on ne peut montrer à personne. Tu as peut-être connu cette veille-là, pour un appel qui ne vient pas, pour une nouvelle qu'on redoute ou qu'on espère, pour quelqu'un dont on ne contrôle ni l'heure ni le chemin. C'est cette disponibilité sans garantie, cette lampe qu'on ne laisse pas s'éteindre même quand plus rien ne semble se passer, qui est devant Dieu ta prière la plus vraie — bien avant les mots que tu saurais dire.",
+      "Tu as peut-être connu cette sensation de prier depuis le dehors, de frapper à une porte qui ne semblait pas faite pour toi, comme si la foi, la paix, la communauté des croyants appartenaient de droit à d'autres et que toi, tu restais sur le seuil, toléré plutôt qu'attendu. Puis un jour, sans qu'aucun argument ne t'ait convaincu, tu t'es trouvé à l'intérieur — non pas parce que tu avais enfin mérité d'entrer, mais parce que quelque chose, en amont de toi, avait déjà aboli la distance. Ce basculement, que tu ne peux ni dater avec précision ni reproduire à volonté, est le lieu exact où Dieu te rejoint : non à la force de ton approche, mais par la sienne.",
+      "Il arrive qu'on se prépare longtemps à servir quelqu'un — un parent vieillissant, un enfant malade, une communauté qu'on croit devoir soutenir seul — et que ce soit finalement cette personne, ou une présence qu'on n'attendait pas, qui se penche vers toi au moment où tu t'y attends le moins, pour faire pour toi ce que tu pensais être ton rôle de faire pour elle. Tu ne sais alors que faire de cette gratitude déplacée, de ce service reçu là où tu comptais seulement donner. C'est pourtant devant ce renversement, et nulle part ailleurs, que se tient le Dieu de l'évangile de ce jour : celui qui trouve ses veilleurs non pour les juger, mais pour se ceindre et les servir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer ce temps de lecture, reste un instant avec une question simple.",
+    "geste": "Allume une lumière, même petite — une bougie, l'écran d'un téléphone, une lampe qu'on laisse sciemment sur une table — et nomme en silence un lieu où tu te sens encore à l'extérieur. Ne cherche pas à le résoudre, laisse seulement la lumière rester allumée plus longtemps que d'habitude.",
+    "note": "Rien n'oblige à ressentir quoi que ce soit : la vigilance, dans l'Évangile, ne dépend d'aucune émotion mais d'une disponibilité tenue, même sans résultat visible."
+  },
+  "question": "Qu'est-ce qui, en toi, continue d'attendre d'être rapproché — et qu'as-tu cessé d'espérer voir s'ouvrir ?",
+  "racines": [
+    {
+      "titre": "Le mur et la chair",
+      "corps_html": "Chrysostome s'arrête sur le choix des mots : ce n'est pas la Loi elle-même que le Christ détruit, dit-il, mais « l'inimitié », et il le fait « dans sa chair » — par sa propre mort, non par un décret extérieur. Pour lui, cela signifie que la paix entre juifs et païens n'est pas un compromis négocié mais un fait accompli dans un corps crucifié, antérieur à toute décision des hommes de se réconcilier entre eux.",
+      "attribution": "Jean Chrysostome, Homélies sur l'épître aux Éphésiens"
+    },
+    {
+      "titre": "Quatre amies qui s'embrassent",
+      "corps_html": "Calvin, commentant ce psaume, refuse de lire la rencontre de la bonté et de la vérité, de la justice et de la paix, comme une simple figure de style : il y voit l'ordre même du salut, où Dieu ne restaure son peuple qu'en accordant ensemble ce que les hommes séparent sans cesse — la miséricorde sans la justice, ou la justice sans la paix. Pour lui, le psaume prie précisément pour que ces deux séparations guérissent à la fois.",
+      "attribution": "Jean Calvin, Commentaire sur le livre des Psaumes"
+    },
+    {
+      "titre": "Le maître qui se ceint",
+      "corps_html": "Ambroise, commentant cet évangile, rapproche le maître qui « se ceindra » pour servir ses serviteurs de celui qui, à la veille de sa passion, prend un linge et se ceint pour laver les pieds des siens : le maître attendu dans la parabole n'est pas seulement un juge qui vérifie, c'est celui qui s'abaisse en arrivant. La vigilance demandée au serviteur trouve ainsi sa récompense dans un geste, non dans un jugement.",
+      "attribution": "Ambroise de Milan, Traité sur l'Évangile de Luc"
+    }
+  ]
+}
