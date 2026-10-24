@@ -298,7 +298,8 @@ def _normaliser_classes(contenu: dict) -> None:
             lec["classe"] = aplati
 
 
-def _reparer(contrat: dict, fautes: list[str], essais: int = 2) -> dict:
+def _reparer(contrat: dict, fautes: list[str], essais: int = 2,
+             catalogue: dict[str, str] | None = None) -> dict:
     """Renvoie le contrat au modèle avec ses fautes jusqu'à ce que la
     validation passe. Lève ValueError une fois les essais épuisés."""
     for essai in range(essais):
@@ -318,6 +319,8 @@ def _reparer(contrat: dict, fautes: list[str], essais: int = 2) -> dict:
             if cle in contrat:
                 repare[cle] = contrat[cle]
         _normaliser_classes(repare)
+        if catalogue is not None:
+            _filtrer_videos(repare, catalogue)
         contrat = repare
         fautes = valider_contrat(contrat)
         if not fautes:
@@ -490,7 +493,7 @@ def construire_json(date_iso: str) -> dict:
     _filtrer_videos(contrat, catalogue)
     fautes = valider_contrat(contrat)
     if fautes:
-        contrat = _reparer(contrat, fautes)
+        contrat = _reparer(contrat, fautes, catalogue=catalogue)
     if contrat["gravure_svg"] is _GRAVURE_ABSENTE:
         print("⚠  Pas de bois gravé pour ce jour : la page paraîtra sans image. "
               "Ajoute 'gravure_svg' à la main dans le JSON.")
@@ -537,7 +540,7 @@ def _filtrer_videos(contrat: dict, catalogue: dict[str, str]) -> None:
                 or v.get("groupe") not in GROUPES_VIDEO):
             continue
         vues.add(vid)
-        gardees.append({"id": vid, "raison": v["raison"].strip(), "groupe": v["groupe"]})
+        gardees.append({"id": vid, "raison": str(v["raison"]).strip(), "groupe": v["groupe"]})
     contrat["videos"] = gardees[:MAX_VIDEOS]
 
 
