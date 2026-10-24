@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depuis toujours — mardi 8 septembre 2026</title>
+<meta name="description" content="Ce que Dieu avait résolu avant les origines s'accomplit dans une liste de noms imparfaits et une naissance à Bethléem.">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">mardi 8 septembre 2026 · None · <span class="couleur">blanc · Fête</span>
+</p>
+    <h1>Depuis <span class="it">toujours</span></h1>
+    <p class="chapeau">Ce que Dieu avait résolu avant les origines s'accomplit dans une liste de noms imparfaits et une naissance à Bethléem.</p>
+    <figure class="gravure" aria-label="Gravure sur bois : un arbre généalogique noueux dont chaque branche porte un nom gravé, montant vers une étoile unique au sommet ; au pied du tronc, un homme endormi près duquel se tient un ange, une main posée sur son épaule."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 138 h324"/><path d="M200 138 q-8 -10 0 -20 q8 -10 0 -20 q-8 -10 0 -20"/><path d="M200 78 q-20 -8 -34 -30"/><path d="M200 78 q20 -8 34 -30"/><path d="M166 48 q-10 -14 -22 -20 M166 48 q6 -16 -4 -26"/><path d="M234 48 q10 -14 22 -20 M234 48 q-6 -16 4 -26"/><path d="M64 136 q30 6 62 0 q8 -1 16 -6"/><path d="M148 116 q6 -9 15 -3 q3 7 -5 11 q-8 3 -10 -8 z"/><path d="M186 136 v-34 q0 -12 6 -14"/><path d="M188 82 q5 -7 11 0 q-1 8 -6 8 q-6 0 -5 -8 z"/><path d="M188 104 q-16 4 -28 10"/></g><g class="trait-rubrique"><path d="M192 96 q-18 -8 -22 -26 q15 2 23 16 q5 7 -1 10 z"/></g><g class="trait-liturgie"><path d="M200 4 v16 M192 12 h16 M195 7 l10 10 M205 7 l-10 10"/></g></svg></figure>
+    <a class="descendre" href="#textes">Entrer dans le texte</a>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Michée 5, 1-4a — Segond, 1910</p>
+        <div class="ecriture "><span class="s">1</span> Et toi, Bethléem <button class="mot" data-g="g-ephrata">Éphrata</button>, petite entre les milliers de Juda, de toi sortira pour moi celui qui dominera sur Israël, et dont l'<button class="mot" data-g="g-origine">origine</button> remonte aux temps anciens, aux jours de l'éternité. <span class="s">2</span> C'est pourquoi il les livrera jusqu'au temps où enfantera celle qui doit enfanter, et le reste de ses frères reviendra auprès des enfants d'Israël. <span class="s">3</span> Il se présentera, et il gouvernera avec la force de l'Éternel, avec la majesté du nom de l'Éternel, son Dieu ; et ils auront une demeure assurée, car il sera glorifié jusqu'aux extrémités de la terre. <span class="s">4</span> C'est lui qui sera la paix.</div>
+        <div class="glose" id="g-ephrata"><span class="lemme">Éphrata</span> Le texte hébreu double le nom : Beit-Léhem <span class="gr">Ephratah</span>, comme pour distinguer ce hameau de Juda d'un autre Bethléem, en Zabulon. Éphrata, la « féconde », est aussi le nom du clan dont est issu Jessé, le père de David — Segond garde le mot tel quel, sans le traduire, gardant ainsi la trace généalogique que le simple toponyme « Bethléem » aurait effacée. Les rabbins y lisaient déjà l'annonce que le Messie sortirait, comme David, de cette petite bourgade et de ce clan précis, non de Jérusalem la capitale.</div>
+        <div class="glose" id="g-origine"><span class="lemme">origine</span> Le texte porte <span class="gr">motsaotav</span>, littéralement « ses sorties » ou « ses issues », que Segond adoucit en « son origine ». Le mot suggère moins une date de naissance qu'un mouvement, une provenance active — celui qui doit sortir de Bethléem sort lui-même d'un lieu plus lointain encore, « depuis les jours d'éternité » (<span class="gr">olam</span>). Jérôme, dans son commentaire sur Michée, y voyait déjà la préexistence du Fils, lue par les chrétiens dans un texte que les Juifs de son temps appliquaient au seul roi messianique terrestre.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture (forme alternative) — Romains 8, 28-30 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">28</span> Nous savons, du reste, que toutes choses concourent au bien de ceux qui aiment Dieu, de ceux qui sont appelés selon son dessein. <span class="s">29</span> Car ceux qu'il a <button class="mot" data-g="g-connus">connus d'avance</button>, il les a aussi prédestinés à être semblables à l'image de son Fils, afin que son Fils fût le <button class="mot" data-g="g-premierne">premier-né</button> entre plusieurs frères. <span class="s">30</span> Et ceux qu'il a prédestinés, il les a aussi appelés ; et ceux qu'il a appelés, il les a aussi justifiés ; et ceux qu'il a justifiés, il les a aussi glorifiés.</div>
+        <div class="glose" id="g-connus"><span class="lemme">connus d'avance</span> Segond traduit <span class="gr">proegnō</span> par « il a connus d'avance », mais le verbe grec <span class="gr">ginōskō</span> porte dans toute la Bible le sens hébraïque de connaître par relation intime, non par simple information — c'est le verbe de Genèse 4,1, « Adam connut Ève ». Paul ne dit donc pas que Dieu a prévu intellectuellement qui croirait, mais qu'il a aimé d'avance, choisi dans une relation antérieure à tout mérite. Calvin, dans son commentaire sur l'épître aux Romains, insiste sur ce point contre toute lecture qui ferait de la prescience un simple calcul divin appuyé sur la foi prévue de l'homme.</div>
+        <div class="glose" id="g-premierne"><span class="lemme">premier-né</span> <span class="gr">prōtotokos</span> ne désigne pas ici un rang de naissance biologique — Segond garde le mot composé tel quel — mais un statut d'héritier et de chef de lignée, comme dans le Psaume 89 où David lui-même est appelé « premier-né » sans être l'aîné selon la chair. Le Christ devient ainsi l'aîné d'une famille de frères qui lui ressembleront, ce qui relie discrètement ce verset à la généalogie de Matthieu lue le même jour : une autre manière de compter une descendance.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Psaume 13 (12), 6 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">6</span> Moi, je me confie en ta <button class="mot" data-g="g-bonte">bonté</button>, j'ai de l'allégresse dans le cœur, à cause de ton <button class="mot" data-g="g-salut">salut</button> ; je chante à l'Éternel, car il m'a fait du bien.</div>
+        <div class="glose" id="g-bonte"><span class="lemme">bonté</span> Le mot hébreu est <span class="gr">hesed</span>, que Segond rend tour à tour par « bonté », « grâce » ou « fidélité » selon les psaumes, faute d'équivalent français unique. Il désigne la loyauté d'alliance, l'attachement que Dieu ne retire pas même quand l'homme a tout lieu de douter de lui — ce qui explique le retournement brutal du psaume, qui commençait par « jusques à quand, Éternel, m'oublieras-tu ? » et se referme sur cette confiance. Luther, dans ses leçons sur les psaumes, y voyait le mouvement même de la foi : croire le hesed avant d'en voir l'effet.</div>
+        <div class="glose" id="g-salut"><span class="lemme">salut</span> <span class="gr">yeshuah</span> en hébreu, de la même racine que le nom Josué — et donc que Jésus, comme le rappellera l'ange à Joseph dans l'évangile de ce jour : « tu lui donneras le nom de Jésus, car c'est lui qui sauvera son peuple ». Le salut du psalmiste, encore vague et existentiel, trouve son nom propre dans l'enfant de Bethléem. Ce n'est pas une lecture forcée : les premiers chrétiens lisaient systématiquement les psaumes de détresse et de délivrance comme préparant ce nom précis.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Matthieu 1, 1-16.18-23 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">1</span> Généalogie de Jésus-Christ, fils de David, fils d'Abraham. <span class="s">2</span> Abraham <button class="mot" data-g="g4-engendra">engendra</button> Isaac ; Isaac engendra Jacob ; Jacob engendra Juda et ses frères ; <span class="s">3</span> Juda engendra de <button class="mot" data-g="g4-thamar">Thamar</button> Pharès et Zara ; Pharès engendra Esrom ; Esrom engendra Aram ; <span class="s">4</span> Aram engendra Aminadab ; Aminadab engendra Naasson ; Naasson engendra Salmon ; <span class="s">5</span> Salmon engendra Boaz de Rahab ; Boaz engendra Obed de Ruth ; Obed engendra Isaï ; <span class="s">6</span> Isaï engendra David. Le roi David engendra Salomon de la femme d'Urie ; <span class="s">7</span> Salomon engendra Roboam ; Roboam engendra Abia ; Abia engendra Asa ; <span class="s">8</span> Asa engendra Josaphat ; Josaphat engendra Joram ; Joram engendra Ozias ; <span class="s">9</span> Ozias engendra Joatham ; Joatham engendra Achaz ; Achaz engendra Ézéchias ; <span class="s">10</span> Ézéchias engendra Manassé ; Manassé engendra Amon ; Amon engendra Josias ; <span class="s">11</span> Josias engendra Jéchonias et ses frères, au temps de la déportation à Babylone. <span class="s">12</span> Après la déportation à Babylone, Jéchonias engendra Salathiel ; Salathiel engendra Zorobabel ; <span class="s">13</span> Zorobabel engendra Abiud ; Abiud engendra Éliakim ; Éliakim engendra Azor ; <span class="s">14</span> Azor engendra Sadok ; Sadok engendra Achim ; Achim engendra Éliud ; <span class="s">15</span> Éliud engendra Éléazar ; Éléazar engendra Matthan ; Matthan engendra Jacob ; <span class="s">16</span> Jacob engendra Joseph, l'époux de Marie, de laquelle est né Jésus, qui est appelé Christ. <span class="s">18</span> Voici de quelle manière arriva la naissance de Jésus-Christ. Marie, sa mère, était fiancée à Joseph ; et, avant qu'ils eussent habité ensemble, elle se trouva enceinte par la vertu du Saint-Esprit. <span class="s">19</span> Joseph, son époux, qui était un homme de bien et qui ne voulait pas la diffamer, se proposa de rompre secrètement avec elle. <span class="s">20</span> Comme il y pensait, voici, un ange du Seigneur lui apparut en songe, et dit : Joseph, fils de David, ne crains pas de prendre avec toi Marie, ta femme, car l'enfant qu'elle a conçu vient du Saint-Esprit ; <span class="s">21</span> elle enfantera un fils, et tu lui donneras le nom de Jésus ; c'est lui qui sauvera son peuple de ses péchés. <span class="s">22</span> Tout cela arriva afin que s'accomplît ce que le Seigneur avait annoncé par le prophète : <span class="s">23</span> Voici, la vierge sera enceinte, elle enfantera un fils, et on lui donnera le nom d'<button class="mot" data-g="g4-emmanuel">Emmanuel</button>, ce qui signifie Dieu avec nous.</div>
+        <div class="glose" id="g4-engendra"><span class="lemme">engendra</span> Le verbe grec est <span class="gr">egennēsen</span>, répété une quarantaine de fois dans ces seize versets comme un martèlement volontaire — Matthieu écrit une liturgie autant qu'une liste. Segond le traduit uniformément par « engendra », gardant la sécheresse répétitive de l'original plutôt que de varier le vocabulaire, ce qui restitue l'effet voulu : chaque nom n'est qu'un maillon, aucun n'importe plus que la chaîne elle-même. Jean Chrysostome, dans ses homélies sur Matthieu, note que cette litanie de générations humaines et pécheresses est précisément ce que le Verbe assume en se faisant chair — non une lignée choisie pour sa pureté, mais une histoire réelle.</div>
+        <div class="glose" id="g4-thamar"><span class="lemme">Thamar</span> Matthieu nomme quatre femmes dans cette généalogie — Thamar, Rahab, Ruth, et « la femme d'Urie » sans même dire son nom, Bath-Shéba — toutes étrangères ou mêlées à un scandale : Thamar s'est fait passer pour une prostituée pour obtenir justice de Juda (Genèse 38), Rahab tenait une maison close à Jéricho, Bath-Shéba fut prise par David au mépris de son mari. Segond ne les distingue pas des hommes de la liste, se contentant de « engendra de Thamar » — c'est le texte grec lui-même qui choisit de les nommer, contre l'usage juif qui aurait tracé la lignée par les seuls pères. Jérôme y voyait déjà une préparation délibérée à l'entrée de Marie, elle aussi soupçonnée, dans cette même liste.</div>
+        <div class="glose" id="g4-emmanuel"><span class="lemme">Emmanuel</span> L'hébreu <span class="gr">Immanou El</span> se décompose littéralement en « avec-nous Dieu », et Matthieu prend soin de traduire lui-même le mot pour son lecteur grec, comme le fait Segond à sa suite. Le nom vient d'Ésaïe 7,14, donné à l'origine comme signe pour le roi Achaz en un temps de guerre, bien avant tout horizon messianique explicite — Matthieu opère donc une relecture qui n'était pas la seule possible, mais que toute la tradition chrétienne, depuis Justin de Rome au IIe siècle, a reçue comme la clé du texte d'Ésaïe.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile (forme brève) — Matthieu 1, 18-23 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">18</span> Voici de quelle manière arriva la naissance de Jésus-Christ. Marie, sa mère, était <button class="mot" data-g="g5-fiancee">fiancée</button> à Joseph ; et, avant qu'ils eussent habité ensemble, elle se trouva enceinte par la vertu du Saint-Esprit. <span class="s">19</span> Joseph, son époux, qui était un homme de bien et qui ne voulait pas la diffamer, se proposa de rompre secrètement avec elle. <span class="s">20</span> Comme il y pensait, voici, un ange du Seigneur lui apparut en <button class="mot" data-g="g5-songe">songe</button>, et dit : Joseph, fils de David, ne crains pas de prendre avec toi Marie, ta femme, car l'enfant qu'elle a conçu vient du Saint-Esprit ; <span class="s">21</span> elle enfantera un fils, et tu lui donneras le nom de Jésus ; c'est lui qui sauvera son peuple de ses péchés. <span class="s">22</span> Tout cela arriva afin que s'accomplît ce que le Seigneur avait annoncé par le prophète : <span class="s">23</span> Voici, la vierge sera enceinte, elle enfantera un fils, et on lui donnera le nom d'Emmanuel, ce qui signifie Dieu avec nous.</div>
+        <div class="glose" id="g5-fiancee"><span class="lemme">fiancée</span> Le grec <span class="gr">emnēsteumenēs</span> désigne les fiançailles juives du premier siècle, qui n'avaient rien d'un simple projet : elles engageaient légalement les deux familles, donnaient à l'homme le titre d'« époux » employé au verset suivant, et ne pouvaient être rompues que par un acte de répudiation en règle. C'est pourquoi Joseph, découvrant la grossesse, ne songe pas à annuler un projet mais à rédiger un divorce — Segond traduit avec justesse en gardant le mot « fiancée » puis « son époux » deux versets plus loin, sans lisser cette tension juridique réelle.</div>
+        <div class="glose" id="g5-songe"><span class="lemme">songe</span> Le mot grec <span class="gr">onar</span> revient cinq fois dans les deux premiers chapitres de Matthieu, toujours pour Joseph, jamais pour Marie qui reçoit sa parole d'un ange en plein jour chez Luc. Segond traduit simplement « songe », sans chercher à distinguer ce type de vision du rêve ordinaire, alors que la tradition juive du songe-message remonte à Joseph fils de Jacob, autre rêveur nommé Joseph que Matthieu semble délibérément faire résonner. Calvin note dans son commentaire que Dieu parle ici à un homme juste mais silencieux dans tout l'évangile — Joseph n'y prononce pas un mot, il obéit.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i><i ></i></span> 5 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Bethléem contre Jérusalem</h3><p>Michée prophétise au VIIIe siècle avant notre ère, sous la menace assyrienne, quand Jérusalem et sa dynastie déçoivent — Michée 3 vise directement les chefs corrompus de la capitale. Annoncer que le futur pasteur d'Israël sortira de Bethléem, bourgade sans rempart ni titre, c'est déjà juger la grande ville par le petit village de Jessé. Le targoum araméen de Michée lira ce texte comme messianique dès avant l'ère chrétienne.</p></div>
+      <div><h3>Une généalogie qui n'en est pas tout à fait une</h3><p>Les listes généalogiques structuraient l'identité et l'héritage dans le judaïsme du Second Temple, comme en témoignent les longues listes d'Esdras et des Chroniques. Matthieu en emprunte la forme mais la travaille : par les quatre femmes citées, par le compte volontairement stylisé en trois séries de quatorze (verset 17, omis ici), et par la formule finale qui, seule dans toute la liste, ne dit plus que Joseph engendra Jésus.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Ce qui portait déjà ton nom</h2>
+<p>Il y a dans ta propre histoire un nom que tu préférerais ne pas prononcer devant les autres — une rupture, une dépendance, une génération qui a mal transmis ce qu'elle avait reçu. Tu as pu croire longtemps qu'il fallait effacer cette page avant de pouvoir te tenir devant Dieu, comme si la sainteté exigeait d'abord une généalogie propre. Mais la liste que Matthieu ouvre avec le nom du Christ garde, sans les gommer, Thamar et Rahab et la femme prise à un autre — ce n'est pas malgré cette histoire que Dieu vient, c'est dedans.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de refermer ce jour, reprends lentement la liste des noms — non celle de Matthieu, la tienne. Remonte trois ou quatre générations dans ta propre famille, autant que tu le peux : ce que tu sais des vies qui t'ont précédé, leurs échecs comme leurs fidélités.</p>
+      <p class="geste">Écris ces noms sur une feuille, dans l'ordre, jusqu'au tien laissé en dernier — puis reste un instant en silence devant cette liste, sans rien changer aux noms qui te dérangent.</p>
+      <small>Rien n'oblige à comprendre ce silence ; il suffit de l'habiter une minute, en sachant qu'une généalogie a déjà accueilli pire que la tienne.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Quel nom de ta propre histoire crois-tu encore trop abîmé pour que Dieu l'inscrive dans la sienne ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Chrysostome, sur la lignée des pécheurs</h3>
+          <p>« Pourquoi donc l'évangéliste, se proposant de rapporter la généalogie du Christ, a-t-il fait mention de femmes, et pas seulement des femmes vertueuses, mais de celles qui ont commis des fautes, afin de montrer que le Christ est venu effacer tous les péchés et qu'il ne devait point rougir de la parenté des pécheurs. »</p>
+<p class="attrib">Jean Chrysostome, Homélies sur l'évangile de Matthieu, IVe siècle</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Calvin, contre la prescience nue</h3>
+          <p>« Il ne dit pas simplement qu'ils ont été connus, mais connus d'avance : par où il signifie l'amour gratuit dont Dieu nous a prévenus avant que nous fussions nés, et non point une simple prescience regardant à quelque digne mérite qu'il aurait prévu en nous. »</p>
+<p class="attrib">Jean Calvin, Commentaire sur l'épître aux Romains, 1556</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Jérôme, sur l'origine ancienne</h3>
+          <p>Commentant Michée, Jérôme rapproche « ses origines dès les jours d'éternité » du prologue de Jean, lisant dans le prophète une préexistence que le judaïsme de son temps réservait au seul décret divin, non à une personne. Il note que les habitants de Bethléem, de son vivant, montraient encore aux pèlerins la grotte de la nativité sans nécessairement y reconnaître ce sens.</p>
+<p class="attrib">Jérôme de Stridon, Commentaire sur Michée, IVe-Ve siècle</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Mi 5, 1-4a ; Rm 8, 28,30 ; Mt 1, 1-16.18-23 ; Mt 1, 18-23.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+</script>
+</body>
+</html>
