@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-17",
+  "date_humaine": "samedi",
+  "semaine": "28ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 1, 15-23 ; Lc 12, 8-12",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 140 h328\"/><path d=\"M30 14 v8 M26 18 h8 M70 10 v8 M66 14 h8 M200 12 v8 M196 16 h8 M270 16 v8 M266 20 h8 M310 10 v8 M306 14 h8\"/><path d=\"M150 72 v-27 h40 v27 M150 60 h40\"/><path d=\"M148 112 q22 -30 44 0 q-22 30 -44 0 z\"/><path d=\"M158 103 q4 4 8 0 M174 103 q4 4 8 0\"/><path d=\"M85 92 q10 -12 22 -8 M92 84 l3 -7 M98 82 l3 -8 M104 83 l3 -7\"/><path d=\"M255 92 q-10 -12 -22 -8 M248 84 l-3 -7 M242 82 l-3 -8 M236 83 l-3 -7\"/></g><g class=\"trait-rubrique\"><path d=\"M100 85 q35 5 48 30 q-20 -8 -40 -2 q-10 -15 -8 -28 z\"/><path d=\"M240 85 q-35 5 -48 30 q20 -8 40 -2 q10 -15 8 -28 z\"/></g><g class=\"trait-liturgie\"><path d=\"M148 38 h44 M150 38 l5 -16 l5 16 M165 38 l5 -16 l5 16 M180 38 l5 -16 l5 16\"/></g></svg>",
+  "titre": "Les yeux du cœur",
+  "titre_html": "Les yeux <span class=\"it\">du cœur</span>",
+  "sous_titre": "La prière de Paul pour des yeux enfin ouverts",
+  "suite_hier": null,
+  "gravure_alt": "Deux mains écartent un voile sombre devant un visage aux yeux clos tourné vers un ciel chargé d'étoiles, où une couronne reste suspendue au-dessus d'un trône encore vide.",
+  "lectures": [
+    {
+      "etiquette": "Lecture de la lettre de saint Paul aux Éphésiens",
+      "reference": "Ep 1, 15-23",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">15</span> C'est pourquoi moi aussi, ayant entendu parler de votre foi au Seigneur Jésus et de votre charité pour tous les saints, <span class=\"s\">16</span> je ne cesse de rendre grâces pour vous, faisant mention de vous dans mes prières, <span class=\"s\">17</span> afin que le Dieu de notre Seigneur Jésus-Christ, le Père de gloire, vous donne un esprit de sagesse et de <button class=\"mot\" data-g=\"g-apokalypse\">révélation</button>, pour le connaître, <span class=\"s\">18</span> et qu'il <button class=\"mot\" data-g=\"g-photizo\">illumine</button> les yeux de votre cœur, pour que vous sachiez quelle est l'espérance qui s'attache à son appel, quelle est la richesse de la gloire de son héritage qu'il réserve aux saints, <span class=\"s\">19</span> et quelle est envers nous qui croyons l'infinie grandeur de sa puissance, se manifestant avec efficace par la vertu de sa force. <span class=\"s\">20</span> Il l'a déployée en Christ, lorsqu'il l'a ressuscité des morts, et qu'il l'a fait asseoir à sa droite dans les lieux célestes, <span class=\"s\">21</span> au-dessus de toute domination, de toute autorité, de toute puissance, de toute dignité, et de tout nom qui se nomme, non seulement dans ce siècle, mais encore dans le siècle à venir. <span class=\"s\">22</span> Il a tout mis sous ses pieds, et il l'a donné pour chef suprême à l'Église, <span class=\"s\">23</span> qui est son corps, la <button class=\"mot\" data-g=\"g-pleroma\">plénitude</button> de celui qui remplit tout en tous.",
+      "gloses": [
+        {
+          "id": "g-apokalypse",
+          "lemme": "révélation",
+          "html": "Le mot grec <span class=\"gr\">apokalypsis</span> signifie proprement un dévoilement, l'action d'enlever un voile — c'est ce même mot qui donne son titre au dernier livre du Nouveau Testament. Segond traduit par « révélation », ce qui est juste mais peut faire entendre un contenu doctrinal nouveau, alors que Paul demande un don intérieur : que les Éphésiens voient ce qui leur a déjà été donné en Christ, non qu'ils reçoivent une information supplémentaire. Chrysostome, dans ses homélies sur cette épître, insiste sur ce point : la révélation demandée ici n'ajoute rien à l'Évangile déjà prêché, elle ouvre les yeux sur lui. Calvin note de même que cette connaissance n'est pas spéculative mais pratique, puisqu'elle doit conduire à l'espérance et à l'action de grâces."
+        },
+        {
+          "id": "g-photizo",
+          "lemme": "illumine",
+          "html": "Le verbe <span class=\"gr\">phōtizō</span>, qu'on retrouve en Hébreux 6,4 et 10,32 pour désigner le baptême des premiers chrétiens, signifie littéralement « mettre en lumière ». Segond choisit « illumine », qui garde l'image de la lumière mais efface le lien avec ce vocabulaire baptismal que les premiers lecteurs auraient entendu. Il ne s'agit pas d'une illumination mystique réservée à quelques-uns : c'est le don commun fait à tout baptisé, pour que le regard intérieur — « les yeux du cœur », expression sans parallèle exact dans l'Ancien Testament — se porte enfin sur ce qu'il possède déjà en Christ."
+        },
+        {
+          "id": "g-pleroma",
+          "lemme": "plénitude",
+          "html": "<span class=\"gr\">Plērōma</span> deviendra, un siècle plus tard, un terme technique des gnostiques valentiniens pour désigner la totalité des puissances divines émanées : c'est précisément contre cet usage qu'Irénée de Lyon défendra la lecture paulinienne du mot dans son traité Contre les hérésies. Segond traduit fidèlement par « plénitude », mais il faut entendre que Paul dit quelque chose d'audacieux : l'Église, corps du Christ, est le lieu où se déploie la totalité de celui qui remplit tout l'univers. Ce n'est pas le Christ qui complète l'Église ; c'est l'Église qui reçoit, comme un vase reçoit ce qui le remplit, la plénitude de celui qui est déjà parfait."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 8, 2-3a, 4-5, 6-7",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Éternel, notre Seigneur! Que ton nom est <button class=\"mot\" data-g=\"g-addir\">magnifique</button> sur toute la terre! Ta majesté s'élève au-dessus des cieux. <span class=\"s\">3</span> Par la bouche des enfants et de ceux qui sont à la mamelle tu as fondé ta gloire. <span class=\"s\">4</span> Quand je contemple les cieux, ouvrage de tes mains, la lune et les étoiles que tu as créées: <span class=\"s\">5</span> Qu'est-ce que l'homme, pour que tu te souviennes de lui? Et le <button class=\"mot\" data-g=\"g-benadam\">fils de l'homme</button>, pour que tu prennes garde à lui? <span class=\"s\">6</span> Tu l'as fait de peu inférieur à Dieu, et tu l'as <button class=\"mot\" data-g=\"g-atar\">couronné</button> de gloire et de magnificence. <span class=\"s\">7</span> Tu lui as donné la domination sur les œuvres de tes mains, tu as tout mis sous ses pieds.",
+      "gloses": [
+        {
+          "id": "g-addir",
+          "lemme": "magnifique",
+          "html": "L'hébreu <span class=\"gr\">addir</span> qualifie ailleurs les grands de ce monde, les puissants, les flots déchaînés de la mer (Ps 93,4) : c'est un mot de force et de majesté redoutable, pas seulement de beauté. Segond traduit par « magnifique », ce qui est esthétiquement juste mais adoucit la puissance presque menaçante du terme hébreu. Les commentateurs juifs classiques, comme Rachi, relèvent que ce nom est magnifique précisément parce qu'il se répand jusque dans la bouche des plus faibles — les enfants et les nourrissons du verset suivant —, contraste voulu entre la force du Nom et la fragilité de ses témoins."
+        },
+        {
+          "id": "g-benadam",
+          "lemme": "fils de l'homme",
+          "html": "L'hébreu emploie ici deux mots différents pour « homme » : <span class=\"gr\">enosh</span>, qui désigne le mortel dans sa fragilité, et <span class=\"gr\">ben-adam</span>, « fils d'Adam », qui souligne son origine terreuse. Segond rend les deux par la même famille d'expressions françaises, ce qui laisse heureusement percevoir le parallélisme hébraïque. L'épître aux Hébreux (2,6-9) cite ce verset et l'applique explicitement à Jésus : c'est lui, le fils de l'homme par excellence, qui reçoit la domination promise à l'humanité déchue. Luc reprend ce même titre dans l'Évangile de ce jour pour désigner celui devant qui toute confession se fera."
+        },
+        {
+          "id": "g-atar",
+          "lemme": "couronné",
+          "html": "Le verbe hébreu <span class=\"gr\">atar</span>, « ceindre, couronner », appartient au vocabulaire royal : c'est le geste par lequel on pose la couronne sur la tête d'un roi. Segond traduit justement par « couronné », mais il faut entendre que ce couronnement n'est pas métaphorique au sens faible : le psaume attribue à l'homme, créature de poussière, une dignité royale reçue et non méritée. Hébreux 2,9 lit ce verset comme accompli en Jésus, « couronné de gloire et d'honneur » à cause de sa mort, déplaçant la promesse faite à Adam vers son accomplissement dans le Christ exalté."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile de Jésus Christ selon saint Luc",
+      "reference": "Lc 12, 8-12",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">8</span> Je vous le dis, quiconque me <button class=\"mot\" data-g=\"g-homologeo\">confessera</button> devant les hommes, le <button class=\"mot\" data-g=\"g-huios-anthropou\">Fils de l'homme</button> le confessera aussi devant les anges de Dieu; <span class=\"s\">9</span> mais quiconque me reniera devant les hommes sera renié devant les anges de Dieu. <span class=\"s\">10</span> Et quiconque parlera contre le Fils de l'homme, il lui sera pardonné; mais à celui qui <button class=\"mot\" data-g=\"g-blasphemeo\">blasphémera</button> contre le Saint-Esprit il ne sera point pardonné. <span class=\"s\">11</span> Quand on vous mènera devant les synagogues, les magistrats et les autorités, ne vous inquiétez pas comment vous répondrez pour votre défense, ni de ce que vous direz; <span class=\"s\">12</span> car le Saint-Esprit vous enseignera à l'heure même ce que vous devrez dire.",
+      "gloses": [
+        {
+          "id": "g-homologeo",
+          "lemme": "confessera",
+          "html": "Le verbe grec <span class=\"gr\">homologeō</span> est composé de « même » et de « parole » : confesser, c'est littéralement dire la même chose que quelqu'un, se tenir d'accord avec lui en public. Segond traduit par « confessera », terme à la fois juridique et liturgique, qui convient bien puisque le contexte est celui d'un procès — les versets suivants parlent des synagogues et des magistrats. Calvin souligne dans son commentaire que cette confession n'est pas d'abord une proclamation de foi intérieure mais un acte public, risqué, qui engage le corps devant les autorités de ce monde."
+        },
+        {
+          "id": "g-blasphemeo",
+          "lemme": "blasphémera",
+          "html": "Le verbe <span class=\"gr\">blasphēmeō</span> désigne une parole qui nuit à la réputation, qui calomnie — ici, calomnier l'action même de l'Esprit. Segond garde le mot « blasphémera », presque transcrit du grec, ce qui a l'avantage de signaler la gravité unique de cette parole. Augustin, dans sa lecture de ce passage reprise par de nombreux commentateurs ultérieurs, refuse d'y voir un acte précis et imparable : il y voit plutôt l'endurcissement final qui refuse jusqu'à la mort de reconnaître l'œuvre de Dieu — non une parole isolée, mais un refus entêté qui se ferme lui-même au pardon."
+        },
+        {
+          "id": "g-huios-anthropou",
+          "lemme": "Fils de l'homme",
+          "html": "Cette expression, calquée sur l'hébreu <span class=\"gr\">ben-adam</span> du Psaume 8 et du livre de Daniel (7,13), est le titre que Jésus préfère pour se désigner lui-même dans les évangiles synoptiques. Segond la traduit littéralement, « Fils de l'homme », conservant l'étrangeté sémitique de l'expression plutôt que de la remplacer par un équivalent plus clair. Chrysostome relève que Jésus choisit ce titre d'humilité — et non « Fils de Dieu » — précisément au moment où il annonce qu'il reconnaîtra devant les anges ceux qui l'auront reconnu : la gloire promise passe par l'aveu de la condition commune."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre de prisonnier",
+      "corps_html": "Éphésiens appartient aux lettres dites « de la captivité », écrites selon la tradition depuis une prison romaine vers 60-62. Paul n'a sans doute jamais rencontré en personne la plupart de ces chrétiens d'Éphèse : sa prière d'intercession, rapportée ici, est le seul geste pastoral possible pour un apôtre enchaîné envers une Église qu'il ne peut plus visiter."
+    },
+    {
+      "titre": "Le procès qui vient",
+      "corps_html": "Luc place cette parole juste après l'annonce des persécutions à venir (Lc 12,4-7) : les disciples seront traînés devant les synagogues, comme le sera Étienne en Actes 6-7. Les Actes des Apôtres montreront cette promesse tenue — l'Esprit donnant aux accusés, dans l'instant même, les mots qu'ils n'avaient pas préparés."
+    }
+  ],
+  "analogie": {
+    "titre": "Des yeux qui s'ouvrent",
+    "variantes": [
+      "Tu as pu lire et relire un passage de l'Écriture sans qu'il te dise rien de particulier, comme un mur blanc qu'on traverse du regard sans le voir. Puis un jour, sans que rien d'extérieur ait changé — ni la traduction, ni les mots —, la même phrase se met debout devant toi et te regarde. Ce n'est pas qu'elle contenait une information cachée que tu aurais enfin décodée : c'est que quelque chose en toi s'est ouvert pour recevoir ce qui était déjà là, offert depuis toujours. C'est exactement ce que Paul demande pour les Éphésiens : non une révélation nouvelle, mais des yeux assez dessillés pour voir l'héritage qui leur appartient déjà.",
+      "Il y a des moments où il faut parler — devant quelqu'un qui attend une réponse, dans une conversation où se dérober serait plus simple — et où tu sens par avance que tu n'as rien de prêt, aucune phrase solide à offrir. Tu avances malgré tout, et ce qui sort de ta bouche te surprend toi-même : une justesse, une paix, que tu n'avais pas fabriquées à l'avance et que tu ne saurais pas refaire sur commande. Tu n'as pas eu plus de courage que d'habitude ; quelque chose t'a porté au moment précis où tu en avais besoin, pas avant. C'est la promesse faite aux disciples menés devant les tribunaux : l'Esprit n'enseigne pas à l'avance, par précaution, mais à l'heure même, dans l'instant du besoin.",
+      "Certaines nuits, sous un ciel dégagé, la quantité d'étoiles suffit à te rendre minuscule, presque inexistant, un détail sans conséquence dans une immensité qui ne te doit rien. Et pourtant, au cœur même de ce vertige, une certitude peut se lever qui ne vient pas de toi : que tu comptes, que tu es regardé, que cette immensité a un centre qui te connaît par ton nom. Le psalmiste a connu ce même vertige devant les mêmes cieux, et il en a tiré, non une leçon d'humilité résignée, mais un cri d'étonnement devant la dignité démesurée que Dieu fait à l'homme — dignité que Dieu, dans le Christ ressuscité, vient confirmer et porter à son comble."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reprends la prière de Paul comme la tienne : demande, non une connaissance nouvelle, mais des yeux de cœur enfin ouverts sur ce qui t'est déjà donné.",
+    "geste": "Choisis un verset que tu connais par cœur depuis longtemps — un psaume, un Notre Père — et redis-le une fois, lentement, en demandant seulement : Seigneur, ouvre mes yeux sur ce que je redis depuis si longtemps sans le voir.",
+    "note": "Rien ne garantit un effet immédiat : l'illumination demandée par Paul est un don, pas une technique, et elle peut se faire attendre."
+  },
+  "question": "Devant qui, aujourd'hui, hésites-tu encore à dire que le Christ compte pour toi — et qu'est-ce que cette hésitation dit de ce que tu attends vraiment de lui ?",
+  "racines": [
+    {
+      "titre": "Les lettres de prière",
+      "corps_html": "Les quatre grandes lettres de la captivité (Éphésiens, Philippiens, Colossiens, Philémon) ouvrent presque toutes sur ce même geste : l'apôtre rapporte sa prière d'intercession avant d'enseigner quoi que ce soit. Ce choix n'est pas rhétorique : il signifie que la connaissance de Dieu demandée pour l'Église ne peut être enseignée comme une doctrine, elle doit d'abord être demandée comme une grâce.",
+      "attribution": "Cf. Colossiens 1,9-14 ; Philippiens 1,9-11"
+    },
+    {
+      "titre": "Le mot que les gnostiques ont détourné",
+      "corps_html": "Au IIe siècle, les disciples de Valentin ont fait du mot grec plérôme le nom technique de la totalité des puissances divines émanées, un système étranger à Paul. Irénée de Lyon consacre plusieurs livres de son traité Contre les hérésies à restituer au mot son sens paulinien : non une hiérarchie d'émanations, mais la plénitude du Christ reçue par l'Église, son corps.",
+      "attribution": "Irénée de Lyon, Contre les hérésies, livre I"
+    },
+    {
+      "titre": "Les mots donnés dans l'instant",
+      "corps_html": "Le récit du martyre de l'évêque Polycarpe de Smyrne, au IIe siècle, montre un vieillard conduit devant le proconsul romain répondre avec une fermeté et une clarté qu'aucune préparation humaine n'explique entièrement. Les Actes des Apôtres racontent la même chose d'Étienne devant le sanhédrin (Ac 6-7) : la postérité chrétienne a lu ces scènes comme l'accomplissement visible de la promesse de Luc 12,11-12.",
+      "attribution": "Martyre de Polycarpe ; Actes des Apôtres 6-7"
+    }
+  ]
+}
