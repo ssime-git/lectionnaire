@@ -124,3 +124,4 @@ jobs:
           add-paths: |
             data/jours/${{ steps.date.outputs.date }}.json
             docs/${{ steps.date.outputs.date }}.html
+            docs/vignettes/
