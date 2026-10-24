@@ -83,7 +83,7 @@ def _nombre(s: str) -> int:
     return int(s) if s.isdigit() else _romain(s)
 
 
-_CHAP = r"(?:CHAP(?:ITRE)?\.?\s*([IVXLC]+|\d+)|\b([IVXLC]+)\b(?=\s*,))"
+_CHAP = r"(?:\bCH(?:AP(?:ITRE)?)?\.?\s*([IVXLC]+|\d+)\b|\b([IVXLC]+)\b(?=\s*,))"
 
 
 def _chapitres(s: str) -> list[tuple[int, int]]:
@@ -125,7 +125,7 @@ def parser_reference(txt: str, chapitre_precedent: int | None, verset_suivant: i
 
     if fin_txt:
         chap_fin = _chapitres(fin_txt)
-        du_chap = re.search(r"DU\s+CHAP(?:ITRE)?\.?\s*([IVXLC]+|\d+)", fin_txt)
+        du_chap = re.search(r"DU\s+CH(?:AP(?:ITRE)?)?\.?\s*([IVXLC]+|\d+)", fin_txt)
         nombres_fin = [int(n) for n in re.findall(r"\d+", re.sub(_CHAP, " ", fin_txt))]
         if not nombres_fin:
             return None
@@ -154,6 +154,7 @@ def decouper_homelies(texte: str, sigle: str, url: str,
     """Découpe un commentaire en homélies indexées par référence biblique.
     Renvoie (unités indexées, numéros des homélies ignorées)."""
     texte = _propre(texte)
+    texte = re.sub(r"HOMÉLIE PREMIÈRE\b", "HOMÉLIE I", texte)
     reperes = list(re.finditer(r"HOMÉLIE ([IVXLC]+)\b\.?", texte))
     # Un commentaire suivi commence au chapitre 1 : « (VERSET 1) » en tête
     # de livre vaut donc 1, 1.

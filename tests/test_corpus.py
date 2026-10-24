@@ -300,5 +300,18 @@ class CorrectionsTests(unittest.TestCase):
         self.assertTrue(all(v.get("motif") for v in c.values()))
 
 
+class AbreviationsPhilippiensTests(unittest.TestCase):
+    def test_ch_abrege(self) -> None:
+        self.assertEqual(corpus.parser_reference("(CH. 1,8 – 11 JUSQU’À 19)", None), ((1, 8), (1, 19), False))
+        self.assertEqual(corpus.parser_reference("(CH. 1,18-20)", None), ((1, 18), (1, 20), False))
+
+    def test_homelie_premiere(self) -> None:
+        t = ("HOMÉLIE PREMIÈRE. [ modifier ] PAUL ET TIMOTHÉE. (CH. 1,1-7) Analyse. 1. A. 1. Corps. "
+             "HOMÉLIE II. [ modifier ] CAR DIEU M’EST TÉMOIN. (CH. 1,8 – 11 JUSQU’À 19) Analyse. 1. B. 1. Corps.")
+        unites, ignorees = corpus.decouper_homelies(t, "Ph", "u", nb_chapitres=4)
+        self.assertEqual([(u["id"], u["debut"], u["fin"]) for u in unites],
+                         [("chrysostome-Ph-I", [1, 1], [1, 7]), ("chrysostome-Ph-II", [1, 8], [1, 19])])
+
+
 if __name__ == "__main__":
     unittest.main()
