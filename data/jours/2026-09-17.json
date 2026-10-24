@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-17",
+  "date_humaine": "jeudi",
+  "semaine": "24ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co  15, 1-11 ; Lc 7, 36-50",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M128 65 h102\"/><path d=\"M134 65 v30\"/><path d=\"M224 65 v30\"/><path d=\"M182 92 q3 -32 18 -32 q15 0 18 32 z\"/><path d=\"M191 43 a9 8 0 1 0 18 0 a9 8 0 1 0 -18 0\"/><path d=\"M192 92 q-8 4 -14 10\"/><path d=\"M118 128 q4 -28 22 -38 q14 -8 24 -6 q-12 8 -22 18 q-14 14 -24 26 z\"/><path d=\"M172 90 q7 -6 12 0 q-2 7 -12 3\"/><path d=\"M118 128 q10 -8 22 -6\"/><path d=\"M35 95 q4 -22 16 -24 q11 2 13 18\"/><path d=\"M43 58 q-7 -7 -14 -2 q2 9 9 9 q5 0 5 -7\"/></g><g class=\"trait-rubrique\"><path d=\"M168 85 q-3 10 2 18\"/><path d=\"M172 83 q-2 13 6 20\"/><path d=\"M176 81 q0 15 10 20\"/></g><g class=\"trait-liturgie\"><path d=\"M100 118 q-3 -8 6 -11 q9 -3 11 5 q2 7 -5 10 q-8 3 -12 -4 z\"/><path d=\"M117 114 q9 3 14 9\"/></g></svg>",
+  "titre": "Beaucoup aimer",
+  "titre_html": "Beaucoup <span class=\"it\">aimer</span>",
+  "sous_titre": "Ce que la grâce, reçue sans mérite, produit dans une vie",
+  "suite_hier": null,
+  "gravure_alt": "Une femme agenouillée aux pieds d'un homme attablé, les cheveux dénoués épongeant ce que ses larmes viennent de mouiller ; à ses côtés, un vase d'albâtre renversé, tandis qu'un convive du fond détourne le regard.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 15, 1-11",
+      "traduction": "Segond",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Je vous rappelle, frères, l'<button class=\"mot\" data-g=\"g-evangile\">Évangile</button> que je vous ai annoncé, que vous avez reçu, dans lequel vous avez persévéré, <span class=\"s\">2</span> et par lequel vous êtes sauvés, si vous le retenez tel que je vous l'ai annoncé ; autrement, vous auriez cru en vain.</p><p><span class=\"s\">3</span> Je vous ai <button class=\"mot\" data-g=\"g-paradosis\">enseigné</button> avant tout, comme je l'avais aussi reçu, que Christ est mort pour nos péchés, selon les Écritures ; <span class=\"s\">4</span> qu'il a été enseveli, et qu'il est ressuscité le troisième jour, selon les Écritures ; <span class=\"s\">5</span> et qu'il est apparu à Céphas, puis aux douze. <span class=\"s\">6</span> Ensuite, il est apparu à plus de cinq cents frères à la fois, dont la plupart sont encore vivants, et dont quelques-uns sont morts. <span class=\"s\">7</span> Ensuite, il est apparu à Jacques, puis à tous les apôtres.</p><p><span class=\"s\">8</span> Après eux tous, il m'est aussi apparu à moi, comme à l'<button class=\"mot\" data-g=\"g-avorton\">avorton</button> ; <span class=\"s\">9</span> car je suis le moindre des apôtres, je ne suis pas digne d'être appelé apôtre, parce que j'ai persécuté l'Église de Dieu. <span class=\"s\">10</span> Par la <button class=\"mot\" data-g=\"g-charis\">grâce</button> de Dieu je suis ce que je suis, et sa grâce envers moi n'a pas été vaine ; loin de là, j'ai travaillé plus qu'eux tous, non pas moi toutefois, mais la grâce de Dieu qui est avec moi. <span class=\"s\">11</span> Ainsi donc, que ce soit moi, que ce soient eux, voilà ce que nous prêchons, et c'est ce que vous avez cru.</p>",
+      "gloses": [
+        {
+          "id": "g-evangile",
+          "lemme": "euangelion",
+          "html": "Le grec <span class=\"gr\">euangelion</span> désignait d'abord, dans l'usage impérial, l'annonce d'une victoire ou d'une naissance royale — un mot politique avant d'être religieux. Segond garde le mot grec francisé, « Évangile », plutôt que de le traduire par « bonne nouvelle » ; ce choix, hérité du latin evangelium, risque de figer en nom propre ce qui reste chez Paul un événement annoncé et reçu. Chrysostome insiste, dans son commentaire sur cette épître, sur le fait que Paul rappelle ici non une doctrine mais un événement daté, transmis de main en main comme un dépôt vivant."
+        },
+        {
+          "id": "g-paradosis",
+          "lemme": "paredōka",
+          "html": "Le verbe grec est <span class=\"gr\">paredōka</span>, « j'ai transmis », exact pendant du <span class=\"gr\">parelabon</span>, « j'ai reçu », au même verset. Segond traduit par « je vous ai enseigné », ce qui est défendable mais estompe le vocabulaire technique de la transmission rabbinique — recevoir puis remettre une tradition comme un dépôt. Les exégètes reconnaissent ici l'une des plus anciennes formules de foi du Nouveau Testament, antérieure de plusieurs années à la lettre elle-même. Calvin note que Paul se présente moins comme auteur que comme messager fidèle d'une parole qui ne lui appartient pas."
+        },
+        {
+          "id": "g-avorton",
+          "lemme": "ektrōma",
+          "html": "Le grec <span class=\"gr\">ektrōma</span> désigne littéralement un enfant mort-né ou une fausse couche, un mot dur, presque médical. Segond le rend par « avorton », conservant la violence du terme là où d'autres traductions adoucissent en « celui né hors terme ». Chrysostome relève que Paul choisit lui-même ce mot infamant pour dire l'irrégularité de son apostolat, apparu après coup, hors de l'ordre normal des témoins oculaires. Le mot dit une naissance qui n'aurait pas dû compter, et qui pourtant est comptée."
+        },
+        {
+          "id": "g-charis",
+          "lemme": "charis",
+          "html": "Le grec <span class=\"gr\">charis</span>, que Segond traduit régulièrement par « grâce », porte dans le grec profane l'idée d'une faveur accordée sans mérite, souvent liée à l'agrément ou à la beauté. Paul en fait le mot central de sa théologie de la justification et le répète trois fois dans ce seul verset, comme s'il ne pouvait se dire autrement qu'à partir de ce don reçu. Augustin, dans sa controverse avec Pélage, s'appuiera précisément sur ce verset pour soutenir qu'aucun mérite antérieur n'explique l'apostolat de Paul."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 117 (118), 1-2, 16-17, 28.21",
+      "traduction": "Segond",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Louez l'Éternel, car il est bon, Car sa <button class=\"mot\" data-g=\"g-hesed\">miséricorde</button> dure à toujours ! <span class=\"s\">2</span> Qu'Israël dise : Sa miséricorde dure à toujours !</p><p><span class=\"s\">16</span> La droite de l'Éternel est élevée, La droite de l'Éternel manifeste sa puissance. <span class=\"s\">17</span> Je ne mourrai pas, je vivrai, Et je raconterai les œuvres de l'Éternel.</p><p><span class=\"s\">28</span> Tu es mon Dieu, et je te louerai ; Mon Dieu ! je t'exalterai. <span class=\"s\">21</span> Je te loue, parce que tu m'as <button class=\"mot\" data-g=\"g-anah\">exaucé</button>, Parce que tu m'as sauvé.</p>",
+      "gloses": [
+        {
+          "id": "g-hesed",
+          "lemme": "chesed",
+          "html": "L'hébreu <span class=\"gr\">chesed</span>, ici traduit « miséricorde », ne désigne pas d'abord un sentiment de pitié mais la fidélité tenace d'un partenaire d'alliance — un amour qui tient bon. Segond, suivant la tradition de la Vulgate latine (misericordia), oriente le mot vers la compassion, quand l'hébreu insiste davantage sur la constance que sur l'émotion. Calvin, commentant ce psaume, souligne que le refrain répété — « car sa miséricorde dure à toujours » — n'est pas un ornement liturgique mais l'affirmation que Dieu ne se dédit jamais de son alliance, même quand Israël faillit."
+        },
+        {
+          "id": "g-anah",
+          "lemme": "anah",
+          "html": "Le verbe hébreu <span class=\"gr\">anah</span>, « répondre » ou « exaucer », suppose un appel préalable resté par définition sans réponse immédiate : on ne dit exaucé que celui qui a d'abord crié dans le silence. Segond traduit fidèlement par « exaucé », mais perd la construction hébraïque qui enchaîne littéralement « je t'ai appelé... tu m'as répondu », plus proche du dialogue que de l'octroi d'une faveur. Ce verset, chanté dans le Hallel juif à la fête de Pâque, est aussi celui que les évangiles associent, quelques versets plus loin dans le même psaume, à l'entrée de Jésus à Jérusalem."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 7, 36-50",
+      "traduction": "Segond",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">36</span> Un pharisien pria Jésus de manger avec lui. Jésus entra dans la maison du pharisien, et se mit à table. <span class=\"s\">37</span> Et voici, une femme <button class=\"mot\" data-g=\"g-hamartolos\">pécheresse</button> qui se trouvait dans la ville, ayant su qu'il était à table dans la maison du pharisien, apporta un vase d'albâtre plein de parfum, <span class=\"s\">38</span> et se tint derrière, aux pieds de Jésus. Elle pleurait ; et bientôt elle lui mouilla les pieds de ses larmes, puis les essuya avec ses cheveux, les couvrit de baisers, et les oignit de parfum.</p><p><span class=\"s\">39</span> Le pharisien qui l'avait invité, voyant cela, dit en lui-même : Si cet homme était prophète, il connaîtrait qui et de quelle espèce est la femme qui le touche, il connaîtrait que c'est une pécheresse. <span class=\"s\">40</span> Jésus prit la parole, et lui dit : Simon, j'ai quelque chose à te dire. — Maître, parle, répondit-il. — <span class=\"s\">41</span> Un créancier avait deux débiteurs : l'un devait cinq cents deniers, et l'autre cinquante. <span class=\"s\">42</span> Comme ils n'avaient pas de quoi payer, il leur remit à tous deux leur dette. Lequel l'aimera le plus ? <span class=\"s\">43</span> Simon répondit : Celui, je pense, auquel il a le plus remis. Jésus lui dit : Tu as bien jugé.</p><p><span class=\"s\">44</span> Puis, se tournant vers la femme, il dit à Simon : Vois-tu cette femme ? Je suis entré dans ta maison, et tu ne m'as point donné d'eau pour laver mes pieds ; mais elle, elle les a mouillés de ses larmes, et les a essuyés avec ses cheveux. <span class=\"s\">45</span> Tu ne m'as point donné de baiser ; mais elle, depuis que je suis entré, elle n'a point cessé de me baiser les pieds. <span class=\"s\">46</span> Tu n'as point versé d'huile sur ma tête ; mais elle, elle a versé du parfum sur mes pieds. <span class=\"s\">47</span> C'est pourquoi, je te le dis, ses nombreux péchés ont été pardonnés : car elle a <button class=\"mot\" data-g=\"g-agapao\">beaucoup aimé</button>. Mais celui à qui l'on pardonne peu aime peu.</p><p><span class=\"s\">48</span> Et il dit à la femme : Tes péchés sont pardonnés. <span class=\"s\">49</span> Ceux qui étaient à table avec lui se mirent à dire en eux-mêmes : Qui est celui-ci, qui pardonne même les péchés ? <span class=\"s\">50</span> Mais Jésus dit à la femme : Ta <button class=\"mot\" data-g=\"g-pistis\">foi</button> t'a sauvée, va en paix.</p>",
+      "gloses": [
+        {
+          "id": "g-hamartolos",
+          "lemme": "hamartōlos",
+          "html": "Le grec <span class=\"gr\">hamartōlos</span> vient du verbe <span class=\"gr\">hamartanein</span>, « manquer la cible » — l'image est balistique avant d'être morale. Segond traduit sobrement « pécheresse », mais le mot porte, dans le contexte social de l'époque, la connotation de la femme publiquement connue, exclue de la table des justes. Luc précise seulement « qui se trouvait dans la ville », formule discrète que la tradition patristique, dès Origène, a parfois lue comme une allusion à une réputation de prostitution, sans jamais l'affirmer noir sur blanc."
+        },
+        {
+          "id": "g-agapao",
+          "lemme": "agapan",
+          "html": "Le verbe grec est <span class=\"gr\">ēgapēsen</span>, de <span class=\"gr\">agapan</span>, l'amour qui se donne plutôt que celui qui désire (<span class=\"gr\">erōs</span>) ou celui de l'amitié (<span class=\"gr\">philia</span>). Segond traduit justement par « aimer », mais l'ordre logique de la phrase a fait débat depuis les Pères : le pardon précède-t-il l'amour, ou l'amour manifeste-t-il un pardon déjà reçu ? Augustin tranche pour la seconde lecture, appuyé sur la parabole des deux débiteurs que Jésus vient de raconter, où c'est la remise de la dette qui produit l'amour, non l'inverse."
+        },
+        {
+          "id": "g-pistis",
+          "lemme": "pistis",
+          "html": "Le grec <span class=\"gr\">pistis</span>, que Segond rend par « foi », désigne moins une adhésion intellectuelle qu'une confiance qui s'engage, un appui qu'on prend sur quelqu'un. Jésus ne dit pas à la femme « ton amour t'a sauvée », alors qu'il vient de louer son amour devant Simon — il déplace le dernier mot vers la foi. Calvin y voit la preuve que l'amour manifesté n'était que le fruit visible d'une confiance déjà accordée avant même d'entrer dans la maison ; le verbe grec au parfait, <span class=\"gr\">sesōken</span>, indique un salut acquis et durable, non une émotion du moment."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une formule antérieure à la lettre",
+      "corps_html": "Quand Paul écrit vers 55 aux Corinthiens, l'Église y discute pour savoir s'il existe une résurrection des morts. Il ne développe pas d'abord un argument : il rappelle une formule qu'il a lui-même reçue, sans doute lors de sa visite à Jérusalem chez Pierre et Jacques quelques années après sa conversion (Ga 1, 18-19). Les exégètes s'accordent à y reconnaître l'un des textes les plus anciens du Nouveau Testament, antérieur même aux évangiles écrits."
+    },
+    {
+      "titre": "Un repas chez un pharisien",
+      "corps_html": "Simon, comme le précise Luc plus loin (v. 40), invite Jésus par curiosité ou par égard social plutôt que par affection : il omet les gestes d'hospitalité ordinaires — eau pour les pieds, baiser d'accueil, huile parfumée sur la tête — que la femme accomplit en excès. Les convives, selon l'usage antique, mangeaient allongés sur le côté, pieds tournés vers l'extérieur du triclinium, ce qui rendait son geste à la fois possible et publiquement visible de tous."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qu'on doit ne se rembourse pas, il se reçoit",
+    "variantes": [
+      "Il y a des moments où tu mesures, bien après coup, l'ampleur de ce qui t'a été pardonné sans que tu l'aies même demandé — une parole dure que tu regrettes depuis des années, remise sans condition par quelqu'un qui aurait eu toutes les raisons de te la faire payer. Tu ne peux rien reprendre de ce don, seulement le reconnaître, et cette reconnaissance change la manière dont tu te tiens désormais devant cette personne, et devant Dieu qui l'a rendue capable de te pardonner ainsi. Ce n'est pas ta bonne conduite qui a précédé ce pardon : c'est le pardon qui, en te rejoignant sans condition, a fini par produire en toi un amour que tu n'aurais pas su fabriquer seul.",
+      "Tu as peut-être connu ce moment où l'on te confie une responsabilité, une parole à porter, une place dans une communauté, alors que tu sais mieux que quiconque tout ce qui, dans ton passé, aurait dû t'en écarter. Il n'y a aucune façon de mériter rétroactivement cette place : tu ne peux que la recevoir comme un dépôt, avec la conscience aiguë que ce n'est pas ta valeur qui l'a obtenue. Cette conscience-là, loin de t'écraser, devient peu à peu ce qui te fait travailler sans relâche, non pour rembourser une dette impayable, mais parce que la grâce reçue continue d'agir en toi bien après que tu l'as reconnue.",
+      "Il arrive qu'on se tienne devant Dieu sans un mot de défense possible, seulement des larmes ou un silence qui ne cherche même plus à s'expliquer — plus de raisonnement, plus de mérite à faire valoir, juste une présence tendue vers lui. Ce dénuement-là, qui ressemble à un échec, est souvent le lieu exact où une confiance nue se met à exister, détachée de toute preuve qu'on pourrait apporter de sa propre valeur. C'est cette confiance seule, et non l'effort qui l'aurait précédée, que Dieu reconnaît et qu'il appelle, contre toute attente, une foi qui sauve."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec la question de savoir ce que la grâce a déjà produit en toi sans que tu l'aies mérité.",
+    "geste": "Nomme devant Dieu, en silence, une chose qui t'a été pardonnée sans condition, et laisse monter ce qu'elle a réellement produit en toi depuis.",
+    "note": "Le verset 21 du psaume, « tu m'as exaucé », appartient au Hallel chanté à Pâque dans la tradition juive : il n'a donc jamais été prié seul, mais toujours au sein d'une action de grâce communautaire."
+  },
+  "question": "Qu'est-ce qui, en toi, n'a jamais fini de se convertir depuis que tu as reçu ce que tu n'avais pas mérité ?",
+  "racines": [
+    {
+      "titre": "Chrysostome et le mot infamant",
+      "corps_html": "Dans ses Homélies sur la première épître aux Corinthiens, Jean Chrysostome s'arrête longuement sur l'emploi du mot « avorton » par Paul lui-même. Il y voit non une fausse humilité mais l'exactitude d'un homme qui refuse de gommer l'irrégularité de son entrée dans l'apostolat, apparue après la mort et la résurrection, hors de l'ordre normal des Douze. Cette exactitude, note Chrysostome, est elle-même une forme de la grâce qu'il proclame.",
+      "attribution": "Jean Chrysostome, Homélies sur la Première épître aux Corinthiens, XXXVIIIe homélie"
+    },
+    {
+      "titre": "Calvin et l'ordre du pardon",
+      "corps_html": "Calvin, dans son commentaire sur l'évangile selon Luc, insiste sur l'ordre exact de la parabole des deux débiteurs : ce n'est pas l'amour de la femme qui obtient le pardon, c'est le pardon déjà accordé qui se manifeste en amour. Il met en garde contre une lecture qui ferait du zèle de cette femme la cause de sa justification, alors que Jésus la fonde tout entière sur la foi qu'il salue au dernier verset.",
+      "attribution": "Jean Calvin, Commentaire sur l'harmonie évangélique, sur Luc 7"
+    },
+    {
+      "titre": "Le Hallel pascal",
+      "corps_html": "Le psaume 118 conclut le Hallel, la série de psaumes 113 à 118 chantés à Pâque dans la tradition juive, attestée dès l'époque du Second Temple. C'est très probablement ce même psaume que Jésus et ses disciples chantent après le dernier repas, selon Matthieu 26, 30, juste avant de se rendre au mont des Oliviers.",
+      "attribution": "Tradition liturgique juive du Hallel ; cf. Mt 26, 30"
+    }
+  ]
+}
