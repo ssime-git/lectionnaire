@@ -1,0 +1,142 @@
+{
+  "date": "2026-08-19",
+  "date_humaine": "mercredi",
+  "semaine": "20ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 34, 1-11 ; Mt 20, 1-16",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M4 122 h100\"/><path d=\"M4 100 v22\"/><path d=\"M4 100 h34\"/><path d=\"M38 78 v44\"/><path d=\"M38 78 q30 -10 62 6\"/><path d=\"M118 122 q60 -6 120 -2\"/><path d=\"M150 108 q4 -8 12 -4\"/><path d=\"M190 112 q5 -7 12 -3\"/><path d=\"M225 106 q4 -7 11 -4\"/><path d=\"M118 122 v-58\"/><path d=\"M118 64 l16 26 h-16 z\"/><path d=\"M118 90 v32\"/><path d=\"M100 122 q8 -30 18 -32\"/></g><g class=\"trait-liturgie\"><path d=\"M266 92 q20 -14 46 0 q-23 -4 -46 0\"/></g></svg>",
+  "titre": "Sortir chercher",
+  "titre_html": "Sortir <span class=\"it\">chercher</span>",
+  "sous_titre": "Le pasteur qui sort chercher, jusqu'à la dernière heure",
+  "suite_hier": null,
+  "gravure_alt": "Un berger franchit le seuil d'un enclos de pierres sèches, bâton en main, tourné vers des collines nues où quelques brebis dispersées se devinent au loin; le soleil est bas sur l'horizon, comme si cette sortie avait lieu à une heure tardive du jour.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 34, 1-11",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> La parole de l'Éternel me fut adressée, en ces mots:</p><p><span class=\"s\">2</span> Fils de l'homme, prophétise contre les <button class=\"mot\" data-g=\"g-roim\">pasteurs</button> d'Israël! Prophétise, et dis-leur, aux pasteurs: Ainsi parle le Seigneur, l'Éternel: Malheur aux pasteurs d'Israël qui se paissent eux-mêmes! Les pasteurs ne doivent-ils pas paître le troupeau?</p><p><span class=\"s\">3</span> Vous avez mangé la graisse, vous vous êtes vêtus avec la laine, vous avez tué ce qui était gras, vous n'avez point fait paître les brebis.</p><p><span class=\"s\">4</span> Vous n'avez pas fortifié celles qui étaient faibles, guéri celle qui était malade, pansé celle qui était blessée; vous n'avez pas ramené celle qui s'égarait, <button class=\"mot\" data-g=\"g-baqash\">cherché</button> celle qui était perdue; mais vous les avez dominées avec violence et avec dureté.</p><p><span class=\"s\">5</span> Elles se sont dispersées, parce qu'elles n'avaient pas de pasteur; elles sont devenues la proie de toutes les bêtes des champs, elles se sont dispersées.</p><p><span class=\"s\">6</span> Mon troupeau erre sur toutes les montagnes et sur toutes les collines élevées, mon troupeau est dispersé sur toute la face du pays; nul n'en prend souci, nul ne va à sa recherche.</p><p><span class=\"s\">7</span> C'est pourquoi, pasteurs, écoutez la parole de l'Éternel!</p><p><span class=\"s\">8</span> Je suis vivant! dit le Seigneur, l'Éternel, parce que mes brebis sont au pillage, et qu'elles sont devenues la proie de toutes les bêtes des champs, faute de pasteur, parce que mes pasteurs ne cherchaient pas mes brebis, qu'ils se paissaient eux-mêmes, et ne faisaient point paître mes brebis, —</p><p><span class=\"s\">9</span> à cause de cela, pasteurs, écoutez la parole de l'Éternel!</p><p><span class=\"s\">10</span> Ainsi parle le Seigneur, l'Éternel: Voici, j'en veux aux pasteurs! Je reprendrai mes brebis d'entre leurs mains, je ne les laisserai plus paître mes brebis, et les pasteurs ne se paîtront plus eux-mêmes; je délivrerai mes brebis de leur bouche, et elles ne leur serviront plus de nourriture.</p><p><span class=\"s\">11</span> Car ainsi parle le Seigneur, l'Éternel: Voici, j'irai moi-même <button class=\"mot\" data-g=\"g-darash\">chercher</button> mes brebis, et j'en aurai soin.</p>",
+      "gloses": [
+        {
+          "id": "g-roim",
+          "lemme": "ro'im",
+          "html": "En hébreu <span class=\"gr\">רֹעִים</span> (ro'im), participe du verbe <span class=\"gr\">רָעָה</span> (ra'ah), « faire paître, mener au pâturage » — le même verbe qui donne, trois mots plus loin, « qui se paissent eux-mêmes ». Segond traduit fidèlement par « pasteurs », mais perd en français le jeu de mots du texte hébreu, où l'accusation tient presque en un seul mot répété : les ro'im ne font plus ra'ah le troupeau, ils se ra'ah eux-mêmes. Jérémie reprend le même oracle presque mot pour mot (Jr 23, 1-4), preuve que la dénonciation des mauvais bergers était un lieu commun prophétique avant que Jean ne la retourne en promesse : « Je suis le bon berger » (Jn 10, 11)."
+        },
+        {
+          "id": "g-baqash",
+          "lemme": "biqqesh",
+          "html": "Le verbe hébreu <span class=\"gr\">בִּקֵּשׁ</span> (biqqesh) désigne une recherche active, celle qu'on mène quand on ne sait pas où trouver ce qu'on cherche. Segond le rend simplement par « cherché », ce qui est juste mais ne dit pas l'intensité du geste : c'est le même verbe que la bien-aimée du Cantique emploie pour dire son amant absent, « je l'ai cherché et je ne l'ai pas trouvé » (Ct 3, 1). Le reproche fait aux pasteurs n'est donc pas seulement administratif — ils n'ont pas géré le troupeau — mais affectif : ils n'ont pas eu ce désir inquiet de celui qui manque."
+        },
+        {
+          "id": "g-darash",
+          "lemme": "darash",
+          "html": "Ici le texte change de verbe sans que le français s'en aperçoive : ce n'est plus <span class=\"gr\">בִּקֵּשׁ</span> (biqqesh) du verset 4, mais <span class=\"gr\">דָּרַשׁ</span> (darash), qui signifie chercher au sens de s'enquérir, réclamer des comptes, se soucier juridiquement de quelqu'un — la racine qui donnera plus tard le mot midrash, la recherche du sens de l'Écriture. Segond traduit les deux verbes par le même « chercher », effaçant une nuance que le texte hébreu marque exprès : là où les bergers n'ont montré aucun désir (biqqesh), Dieu s'engage avec l'autorité de celui qui revendique son bien (darash). Ce n'est plus une compassion diffuse, c'est une prise en charge en règle."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 22 (23), 1-2ab, 2c-3, 4, 5, 6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> L'Éternel est mon <button class=\"mot\" data-g=\"g-roi\">berger</button>: je ne manquerai de rien.</p><p><span class=\"s\">2</span> Il me fait reposer dans de verts pâturages, Il me dirige près des eaux paisibles.</p><p><span class=\"s\">3</span> Il <button class=\"mot\" data-g=\"g-shuv\">restaure</button> mon <button class=\"mot\" data-g=\"g-nefesh\">âme</button>, Il me conduit dans les sentiers de la justice, À cause de son nom.</p><p><span class=\"s\">4</span> Quand je marche dans la vallée de l'ombre de la mort, Je ne crains aucun mal, car tu es avec moi: Ta houlette et ton bâton me rassurent.</p><p><span class=\"s\">5</span> Tu dresses devant moi une table, En face de mes adversaires; Tu oins d'huile ma tête, Et ma coupe déborde.</p><p><span class=\"s\">6</span> Oui, le bonheur et la grâce m'accompagneront Tous les jours de ma vie, Et j'habiterai dans la maison de l'Éternel Jusqu'à la fin de mes jours.</p>",
+      "gloses": [
+        {
+          "id": "g-roi",
+          "lemme": "ro'i",
+          "html": "Le même mot hébreu <span class=\"gr\">רֹעִי</span> (ro'i) qu'Ézéchiel employait au pluriel pour accuser les chefs d'Israël revient ici au singulier et au possessif : non plus « les pasteurs », mais « mon berger ». Segond garde la simplicité du texte, sans gloser ce déplacement grammatical qui est pourtant tout l'enjeu théologique du psaume : là où le chapitre 34 dénonçait une fonction collective défaillante, le psaume répond par une relation personnelle, comme si le psalmiste priait précisément la promesse d'Ézéchiel 34, 11. Les Pères y liront une prophétie du Christ pasteur, en écho à Jean 10."
+        },
+        {
+          "id": "g-shuv",
+          "lemme": "shuv",
+          "html": "Le verbe hébreu <span class=\"gr\">יְשׁוֹבֵב</span> (yeshovev) vient de <span class=\"gr\">שׁוב</span> (shuv), « revenir, faire revenir » — exactement la racine qu'Ézéchiel employait en accusant les mauvais bergers de n'avoir « pas ramené celle qui s'égarait » (Ez 34, 4, littéralement : vous ne l'avez pas fait shuv). Segond traduit ici par « restaure », un mot plus abstrait et plus beau, mais qui masque ce lien : le psaume dit littéralement que Dieu « fait revenir mon âme », accomplissant en un seul geste ce que les pasteurs infidèles avaient refusé de faire. Calvin note, dans son commentaire, que ce ramènement concerne d'abord l'âme égarée par ses propres fautes avant de concerner le corps en péril."
+        },
+        {
+          "id": "g-nefesh",
+          "lemme": "nephesh",
+          "html": "<span class=\"gr\">נֶפֶשׁ</span> (nephesh), que Segond traduit par « âme », ne désigne pas dans l'hébreu biblique une partie immatérielle opposée au corps, comme le laisse entendre le grec platonicien : c'est l'être vivant tout entier, le souffle qui fait qu'on est en vie — le même mot qu'emploie la Genèse quand l'homme « devint une âme vivante » (nephesh hayyah, Gn 2, 7). Traduire par « âme » n'est donc pas faux mais risque un contresens de lecteur : ce n'est pas seulement l'intérieur pieux de l'homme que Dieu restaure, c'est la personne entière, à bout de souffle, qu'il fait revivre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 20, 1-16",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Car le royaume des cieux est semblable à un maître de maison qui <button class=\"mot\" data-g=\"g-exerchomai\">sortit</button> dès le matin, afin de louer des ouvriers pour sa vigne.</p><p><span class=\"s\">2</span> Il convint avec eux d'un <button class=\"mot\" data-g=\"g-denarion\">denier</button> par jour, et il les envoya à sa vigne.</p><p><span class=\"s\">3</span> Il sortit vers la troisième heure, et il en vit d'autres qui étaient sur la place sans rien faire.</p><p><span class=\"s\">4</span> Il leur dit: Allez aussi à ma vigne, et je vous donnerai ce qui sera raisonnable. Et ils y allèrent.</p><p><span class=\"s\">5</span> Il sortit de nouveau vers la sixième heure et vers la neuvième heure, et il fit de même.</p><p><span class=\"s\">6</span> Étant sorti vers la onzième heure, il en trouva d'autres qui étaient sur la place, et il leur dit: Pourquoi vous tenez-vous ici toute la journée sans rien faire?</p><p><span class=\"s\">7</span> Ils lui répondirent: C'est que personne ne nous a loués. Allez aussi à ma vigne, leur dit-il.</p><p><span class=\"s\">8</span> Quand le soir fut venu, le maître de la vigne dit à son intendant: Appelle les ouvriers, et paie-leur le salaire, en allant des derniers aux premiers.</p><p><span class=\"s\">9</span> Ceux de la onzième heure vinrent, et reçurent chacun un denier.</p><p><span class=\"s\">10</span> Les premiers vinrent ensuite, croyant recevoir davantage; mais ils reçurent aussi chacun un denier.</p><p><span class=\"s\">11</span> En le recevant, ils <button class=\"mot\" data-g=\"g-gongyzo\">murmurèrent</button> contre le maître de la maison,</p><p><span class=\"s\">12</span> et dirent: Ces derniers n'ont travaillé qu'une heure, et tu les traites à l'égal de nous, qui avons supporté la fatigue du jour et la chaleur.</p><p><span class=\"s\">13</span> Il répondit à l'un d'eux: Mon ami, je ne te fais pas tort; n'es-tu pas convenu avec moi d'un denier?</p><p><span class=\"s\">14</span> Prends ce qui te revient, et va-t'en. Je veux donner à ce dernier autant qu'à toi.</p><p><span class=\"s\">15</span> Ne m'est-il pas permis de faire de mon bien ce que je veux? Ou vois-tu de <button class=\"mot\" data-g=\"g-ophthalmos\">mauvais œil</button> que je sois bon? —</p><p><span class=\"s\">16</span> Ainsi les derniers seront les premiers, et les premiers seront les derniers, car il y a beaucoup d'appelés, mais peu d'élus.</p>",
+      "gloses": [
+        {
+          "id": "g-exerchomai",
+          "lemme": "exerchomai",
+          "html": "Le grec <span class=\"gr\">ἐξῆλθεν</span> (exēlthen), de <span class=\"gr\">ἐξέρχομαι</span>, « sortir », revient cinq fois dans la parabole — à l'aube, à la troisième, à la sixième, à la neuvième et à la onzième heure — une répétition propre à Matthieu qu'aucun autre évangile ne reprend. Segond traduit chaque occurrence par le même verbe simple, ce qui est juste, mais l'insistance du texte grec sur ce mouvement répété est elle-même le message : ce maître ne loue pas une fois pour toutes au petit matin, il revient chercher jusqu'à la dernière heure, comme le berger d'Ézéchiel qui promettait d'aller lui-même à la recherche de ses brebis."
+        },
+        {
+          "id": "g-denarion",
+          "lemme": "dēnarion",
+          "html": "Le <span class=\"gr\">δηνάριον</span> (dēnarion) est la pièce romaine du salaire d'une journée ordinaire, celle qui permettait à un ouvrier de nourrir sa famille jusqu'au lendemain — ni plus, ni moins. Segond garde le mot tel quel, en transcription, faute d'équivalent français exact ; le choix est heureux car il évite d'actualiser artificiellement une somme dont la seule signification biblique est « de quoi vivre un jour ». Que le premier et le dernier embauché reçoivent exactement ce denier-là, et non un multiple, dit que ce qui est donné n'est pas un salaire proportionné au mérite mais une subsistance offerte à tous ceux qui, à quelque heure que ce soit, ont été appelés."
+        },
+        {
+          "id": "g-gongyzo",
+          "lemme": "gongyzō",
+          "html": "Le verbe grec <span class=\"gr\">ἐγόγγυζον</span> (egongyzon), de <span class=\"gr\">γογγύζω</span>, est précisément celui que la Septante emploie pour décrire les Hébreux murmurant contre Moïse au désert, faute de pain ou d'eau (Ex 16, 2; Nb 14, 2). Segond traduit avec justesse par « murmurèrent », un mot qui en français a perdu sa charge biblique mais que Paul, lui, entendait encore : il avertit les Corinthiens « ne murmurez point, comme murmurèrent quelques-uns d'entre eux » (1 Co 10, 10), renvoyant explicitement à cette tradition du désert. Les ouvriers de la première heure rejouent ainsi, sans le savoir, la scène d'Israël devant la manne : recevoir sans mesure de la seule bonté de Dieu, et s'en plaindre."
+        },
+        {
+          "id": "g-ophthalmos",
+          "lemme": "ophthalmos ponēros",
+          "html": "L'expression grecque <span class=\"gr\">ὁ ὀφθαλμός σου πονηρός ἐστιν</span>, littéralement « ton œil est-il mauvais », traduit un idiome sémitique bien attesté : « l'œil mauvais » (ayin ra'ah) désigne l'envie et l'avarice, par opposition à « l'œil bon » (ayin tovah), la générosité qui se réjouit du bien d'autrui — la Mishna oppose justement les deux comme les disciples d'Abraham et ceux de Balaam (Pirqé Avot 5, 19). Segond traduit littéralement par « vois-tu de mauvais œil », ce qui rend bien l'image mais peut se lire comme une simple métaphore de la jalousie ; le texte vise plus précisément ce réflexe intérieur qui mesure le don fait à l'autre à l'aune de ce qu'on estime lui être dû à soi-même."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Les rois qui n'ont pas nourri le troupeau",
+      "corps_html": "L'oracle est prononcé peu avant ou pendant l'exil à Babylone, vers 587 avant notre ère. Les « pasteurs » visés sont les derniers rois de Juda — Yoyakim, Sédécias — dont le livre des Rois raconte l'incurie politique et l'idolâtrie. Ézéchiel, lui-même déporté, parle depuis la communauté des exilés : dénoncer les bergers d'hier, c'est déjà annoncer que Dieu prendra en main un peuple sans institution ni terre."
+    },
+    {
+      "titre": "Une parabole propre à Matthieu",
+      "corps_html": "Cette parabole n'a pas d'équivalent chez Marc ou Luc ; elle suit immédiatement la question de Pierre, « Voici que nous avons tout quitté... que nous sera-t-il donc donné? » (Mt 19, 27). Chrysostome, dans ses homélies sur Matthieu, y voit une réponse directe à ce calcul : le Christ ne récompense pas la durée du service, mais répond à un appel que lui seul décide d'adresser, à l'heure qu'il choisit."
+    }
+  ],
+  "analogie": {
+    "titre": "L'heure où l'on croyait ne plus compter",
+    "variantes": [
+      "Il y a des saisons où tu regardes en arrière et tu comptes : les années perdues, celles où tu n'as rien cherché, où prier ne te disait rien, où tu passais devant l'Écriture sans t'arrêter. Et quand quelque chose enfin se met à bouger en toi, une attention nouvelle, un désir de revenir, une secousse de vérité — tu te dis que c'est tard, que tu arrives après tout le monde, que ta part sera forcément la plus petite, à la mesure de ce retard. Le texte de ce jour ne te promet pas de rattraper le temps perdu : il te dit qu'à l'heure où tu es enfin trouvé, tu reçois exactement ce que reçoivent ceux qui n'ont jamais cessé de chercher.",
+      "Il t'arrive de sentir, devant la joie ou la paix visible de quelqu'un d'autre, un mouvement en toi qui n'est pas de la joie — quelque chose qui compte, qui compare, qui se demande pourquoi lui et pas moi, pourquoi si vite pour elle et si lentement pour moi qui prie depuis si longtemps. Ce n'est pas de la méchanceté, c'est presque de la justice blessée : tu as l'impression d'avoir mérité davantage par la durée de ton effort. Le texte de ce jour ne condamne pas cette blessure, il la met à nu : ce que Dieu donne n'est jamais la solde d'un service, et découvrir cela peut d'abord faire mal avant de devenir, un jour, un repos.",
+      "Certains jours, tu ne cherches rien — tu es simplement fatigué, distrait, incapable même de formuler une prière, loin de toute ferveur et n'en éprouvant aucune culpabilité particulière, juste une absence. Et puis quelque chose te rejoint sans que tu l'aies appelé : un mot, un verset qui te revient sans que tu l'aies convoqué, une paix qui n'a pas de cause repérable. Tu n'as rien fait pour la mériter ni même pour la chercher. Le texte de ce jour dit que c'est ainsi que Dieu procède depuis le commencement : ce n'est pas toi qui as trouvé, c'est lui qui est sorti te chercher, à l'heure qu'il a choisie et non à celle que tu aurais fixée."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reste un instant avec cette question : à quelle heure du jour te sens-tu, aujourd'hui, appelé — celle de l'aube, ou celle, tardive, où tu croyais que plus personne ne viendrait te chercher?",
+    "geste": "Prends deux minutes de silence et nomme, sans les juger, les heures de ta vie où tu t'es cru trop en retard pour compter encore.",
+    "note": "Le psaume peut se prier lentement, verset après verset, comme une respiration plutôt que comme un texte à comprendre."
+  },
+  "question": "Qu'est-ce qui, en toi, mesure encore ce que Dieu donne à la durée de ton mérite — et que se passerait-il si tu cessais de compter?",
+  "racines": [
+    {
+      "titre": "Le denier de la grâce",
+      "corps_html": "Chrysostome, commentant cette parabole dans ses Homélies sur l'évangile de Matthieu, insiste sur le fait que le maître ne trompe personne : chacun reçoit ce qui avait été convenu, ou davantage. Le murmure des premiers ouvriers, dit-il, ne vient pas d'une injustice subie mais d'une comparaison qu'ils ont eux-mêmes introduite — preuve que le mal n'est pas dans le don reçu mais dans le regard porté sur le don fait à l'autre.",
+      "attribution": "Jean Chrysostome, Homélies sur Matthieu"
+    },
+    {
+      "titre": "La règle du pasteur",
+      "corps_html": "Grégoire le Grand fonde sa Règle pastorale sur ce chapitre d'Ézéchiel : gouverner des âmes, écrit-il, ce n'est pas dominer mais porter le souci de chacune, y compris — surtout — de celle qui s'égare loin du troupeau. Il lit le « moi-même » du verset 11 comme l'annonce que Dieu ne confiera plus cette charge à des mains humaines sans y demeurer lui-même engagé.",
+      "attribution": "Grégoire le Grand, Règle pastorale"
+    },
+    {
+      "titre": "Une table dressée devant les ennemis",
+      "corps_html": "Calvin, commentant le psaume 23, s'arrête sur l'image du repas dressé « en face des adversaires » : ce n'est pas l'absence de danger que Dieu promet, mais sa présence au milieu du danger. Il refuse d'y voir une paix sans épreuve — le psalmiste marche dans la vallée de l'ombre de la mort avant de s'asseoir à la table — et voit dans cette suite le résumé exact de toute vie de foi.",
+      "attribution": "Jean Calvin, Commentaire sur les Psaumes"
+    }
+  ]
+}
