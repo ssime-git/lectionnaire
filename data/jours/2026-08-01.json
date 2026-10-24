@@ -1,0 +1,142 @@
+{
+  "date": "2026-08-01",
+  "date_humaine": "samedi",
+  "semaine": "17ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jr 26, 11-16.24 ; Mt 14, 1-12",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M74 38 q6 -10 12 0 q-6 10 -12 0 z\"/><path d=\"M80 50 v55 M80 64 l-16 12 M80 64 l14 8\"/><path d=\"M62 118 q18 10 36 0\"/><path d=\"M150 34 q6 -9 12 0 q-6 9 -12 0 z M154 38 l-6 48\"/><path d=\"M195 30 q6 -9 12 0 q-6 9 -12 0 z M199 34 l-8 50\"/><path d=\"M248 36 q6 -9 12 0 q-6 9 -12 0 z M252 40 l-10 48\"/><path d=\"M298 32 q6 -9 12 0 q-6 9 -12 0 z M302 36 v50\"/><path d=\"M158 33 l-4 -2 M203 29 l-4 -2 M256 35 l-4 -2\"/></g><g class=\"trait-rubrique\"><path d=\"M318 128 v-28 q-2 -10 8 -14 M322 88 l6 -10 M318 90 l3 -12 M312 92 l-1 -12 M308 96 l-6 -10\"/></g></svg>",
+  "titre": "Le prix de la vérité",
+  "titre_html": "Le prix de la <span class=\"it\">vérité</span>",
+  "sous_titre": "Jérémie échappe à la mort pour avoir parlé ; Jean-Baptiste, pour la même fidélité, ne lui échappe pas.",
+  "suite_hier": null,
+  "gravure_alt": "Jérémie debout sur le parvis du Temple, entouré de sacrificateurs et de chefs dont les visages se penchent vers lui, hostiles ; au bord de la foule, une main se détache déjà, celle d'Achikam, esquissant un geste de protection avant même que la sentence ne soit rendue.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jr 26, 11-16.24",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">11</span> Alors les sacrificateurs et les prophètes parlèrent ainsi aux chefs et à tout le peuple : Cet homme mérite la mort ; car il a <button class=\"mot\" data-g=\"g-naba\">prophétisé</button> contre cette ville, comme vous l'avez entendu de vos oreilles. <span class=\"s\">12</span> Jérémie dit à tous les chefs et à tout le peuple : L'Éternel m'a envoyé pour prophétiser contre cette maison et contre cette ville, toutes les choses que vous avez entendues. <span class=\"s\">13</span> Maintenant réformez vos voies et vos œuvres, écoutez la voix de l'Éternel, votre Dieu, et l'Éternel se <button class=\"mot\" data-g=\"g-yinnahem\">repentira</button> du mal qu'il a prononcé contre vous. <span class=\"s\">14</span> Pour moi, me voici entre vos mains ; traitez-moi comme il vous semblera bon et juste. <span class=\"s\">15</span> Seulement sachez que, si vous me faites mourir, vous vous chargez du <button class=\"mot\" data-g=\"g-dam-naqi\">sang innocent</button>, vous, cette ville, et ses habitants ; car l'Éternel m'a véritablement envoyé vers vous pour prononcer à vos oreilles toutes ces paroles. <span class=\"s\">16</span> Les chefs et tout le peuple dirent aux sacrificateurs et aux prophètes : Cet homme ne mérite point la mort ; car c'est au nom de l'Éternel, notre Dieu, qu'il nous a parlé. <span class=\"s\">24</span> Cependant la <button class=\"mot\" data-g=\"g-yad\">main</button> d'Achikam, fils de Schaphan, fut avec Jérémie, et empêcha qu'il ne fût livré au peuple pour être mis à mort.",
+      "gloses": [
+        {
+          "id": "g-naba",
+          "lemme": "nibba",
+          "html": "Le verbe hébreu <span class=\"gr\">nibba</span> désigne l'action de parler sous la contrainte d'un souffle qui n'est pas le sien : le prophète ne parle pas depuis lui-même, il est parlé. Segond traduit uniformément par « prophétiser », ce qui aplanit une nuance : le mot partage sa racine avec <span class=\"gr\">nabî</span>, celui qui est appelé, presque malgré lui, comme Jérémie l'avait été enfant (Jr 1, 6-7). Calvin, dans son commentaire sur ce chapitre, insiste sur le fait que les sacrificateurs traitent comme un crime ce qui est en réalité une obéissance : ils jugent la forme du message sans jamais interroger sa source."
+        },
+        {
+          "id": "g-yinnahem",
+          "lemme": "niham",
+          "html": "L'hébreu <span class=\"gr\">niham</span>, ici au futur, ne signifie pas que Dieu change d'avis comme un homme inconstant, mais qu'il se détourne d'un jugement annoncé lorsque les conditions qui le motivaient ont changé — le même verbe décrit le regret de Dieu avant le déluge (Gn 6, 6). Segond traduit par « se repentira », ce qui prête à Dieu un vocabulaire moral humain que Calvin juge nécessaire par accommodation : Dieu, dit-il dans son commentaire sur Jérémie, « parle à notre manière » pour que nous comprenions qu'aucune sentence n'est fermée tant que la conversion est possible. Le mot porte ainsi tout le suspens du chapitre : la mort de Jérémie n'est pas jouée d'avance."
+        },
+        {
+          "id": "g-dam-naqi",
+          "lemme": "dam naqi",
+          "html": "L'expression <span class=\"gr\">dam naqi</span>, littéralement « sang innocent », appartient au vocabulaire juridique du Deutéronome (Dt 19, 10.13) : verser ce sang rend coupable, de façon quasi automatique, la ville entière et pas seulement la main qui frappe. Segond garde la litote hébraïque presque mot à mot, sans l'adoucir. Jérémie ne plaide pas son innocence par sentiment, il invoque une catégorie de droit sacré que ses juges connaissent par cœur — c'est ce qui retourne l'assemblée au verset suivant."
+        },
+        {
+          "id": "g-yad",
+          "lemme": "yad",
+          "html": "La <span class=\"gr\">yad</span>, la main, désigne dans l'hébreu biblique bien plus que le membre : c'est l'instrument du pouvoir agissant, celle qui protège ou qui frappe. Achikam, fils de Schaphan, appartient à une famille de hauts fonctionnaires déjà associée à la découverte du livre de la Loi sous Josias (2 R 22, 12) : sa main n'est pas un geste isolé mais celle d'un homme dont l'autorité pèse à la cour de Jojakim. Le texte ne dit rien du motif d'Achikam ; il note seulement que la main a suffi — Dieu se sert ici d'un fonctionnaire, non d'un miracle."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 68 (69), 15, 16, 30-31, 33-34",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">15</span> Retire-moi de la <button class=\"mot\" data-g=\"g-boue\">boue</button>, et que je n'enfonce plus ! Que je sois délivré de mes ennemis et du gouffre des eaux ! <span class=\"s\">16</span> Que les flots ne m'inondent plus, Que l'abîme ne m'engloutisse pas, Et que la fosse ne se ferme pas sur moi ! <span class=\"s\">30</span> Moi, je suis malheureux et souffrant : Que ton secours, ô Dieu, me relève ! <span class=\"s\">31</span> Je célébrerai le nom de Dieu par des cantiques, Je l'exalterai par des louanges. <span class=\"s\">33</span> Les <button class=\"mot\" data-g=\"g-anawim\">malheureux</button> le voient et se réjouissent ; Vous qui cherchez Dieu, que votre cœur vive ! <span class=\"s\">34</span> Car l'Éternel écoute les pauvres, Et il ne méprise point ses <button class=\"mot\" data-g=\"g-captifs\">captifs</button>.",
+      "gloses": [
+        {
+          "id": "g-boue",
+          "lemme": "tit",
+          "html": "Le mot hébreu <span class=\"gr\">tit</span> désigne la boue du fond des puits ou des citernes désaffectées — celle-là même où Jérémie sera plus tard enfoncé par ses accusateurs (Jr 38, 6), jusqu'aux aisselles, sans pouvoir s'en sortir seul. Segond traduit simplement par « boue », terme neutre qui ne rend pas le caractère carcéral de l'image : ce n'est pas la boue d'un chemin mais celle d'une fosse dont on ne remonte pas par ses propres forces. Les Pères ont lu ce psaume comme la voix du juste innocent enfoncé par la calomnie plutôt que par le péché, lecture qu'Augustin développe longuement dans ses Enarrationes in Psalmos."
+        },
+        {
+          "id": "g-anawim",
+          "lemme": "anawim",
+          "html": "Le mot traduit ici par « malheureux » est <span class=\"gr\">anawim</span>, terme central du Psautier qui désigne moins la pauvreté matérielle que la condition de celui qui n'a plus d'appui que Dieu, ployé et sans recours humain. Segond varie ses traductions selon les psaumes — ici « malheureux », ailleurs « humbles » ou « pauvres » — ce qui disperse en français un mot que l'hébreu garde comme une catégorie stable, presque un titre pour les fidèles sans pouvoir. C'est ce même mot qui nourrit les Béatitudes, où les « pauvres en esprit » reçoivent le royaume (Mt 5, 3)."
+        },
+        {
+          "id": "g-captifs",
+          "lemme": "asirim",
+          "html": "Ses <span class=\"gr\">asirim</span>, littéralement ceux qui sont liés, enchaînés — le mot renvoie très concrètement à la prison, non à une image spirituelle vague. Segond traduit par « captifs », ce qui garde la dureté du terme sans l'édulcorer en simple infortune. Dans le contexte de ce samedi, le mot résonne durement : c'est un homme enchaîné dans une forteresse, Jean dans la prison de Machéronte, que ce verset semble déjà décrire d'avance."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 14, 1-12",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> En ce temps-là, Hérode le <button class=\"mot\" data-g=\"g-tetrarque\">tétrarque</button>, ayant entendu parler de Jésus, <span class=\"s\">2</span> dit à ses serviteurs : C'est Jean-Baptiste ! Il est ressuscité des morts, et c'est pour cela qu'il se fait par lui des miracles. <span class=\"s\">3</span> Car Hérode, qui avait fait arrêter Jean, l'avait lié et mis en prison, à cause d'Hérodias, femme de Philippe, son frère, <span class=\"s\">4</span> parce que Jean lui disait : Il ne t'est pas permis de l'avoir pour femme. <span class=\"s\">5</span> Hérode voulait le faire mourir, mais il craignait la foule, parce qu'elle regardait Jean comme un prophète. <span class=\"s\">6</span> Or, lorsqu'on célébra l'anniversaire de la naissance d'Hérode, la fille d'Hérodias dansa au milieu des convives, et plut à Hérode, <span class=\"s\">7</span> de sorte qu'il promit avec <button class=\"mot\" data-g=\"g-serment\">serment</button> de lui donner ce qu'elle demanderait. <span class=\"s\">8</span> Elle, sur l'instigation de sa mère, dit : Donne-moi ici, sur un plat, la tête de Jean-Baptiste. <span class=\"s\">9</span> Le roi fut attristé ; mais, à cause de ses serments et des convives, il commanda qu'on la lui donne, <span class=\"s\">10</span> et il envoya <button class=\"mot\" data-g=\"g-decapiter\">décapiter</button> Jean dans la prison. <span class=\"s\">11</span> Sa tête fut apportée sur un plat, et donnée à la jeune fille, qui la porta à sa mère. <span class=\"s\">12</span> Les disciples de Jean vinrent prendre son corps, et l'ensevelirent. Puis ils allèrent l'annoncer à Jésus.",
+      "gloses": [
+        {
+          "id": "g-tetrarque",
+          "lemme": "tetrarchēs",
+          "html": "Le grec <span class=\"gr\">tetrarchēs</span> désigne littéralement celui qui gouverne un quart d'un territoire : à la mort d'Hérode le Grand, son royaume fut partagé entre ses fils, et Hérode Antipas ne reçut que la Galilée et la Pérée, sans jamais recevoir le titre de roi (comparer Mc 6, 14, qui l'appelle pourtant « roi » par usage populaire). Segond garde le terme technique plutôt que de le franciser, ce qui est plus exact mais efface la nuance d'usurpation que le peuple lui prêtait déjà. Flavius Josèphe, dans les Antiquités judaïques (XVIII, 5, 2), confirme ce titre et situe la prison de Jean à la forteresse de Machéronte, à l'est de la mer Morte."
+        },
+        {
+          "id": "g-serment",
+          "lemme": "horkos",
+          "html": "Le mot grec <span class=\"gr\">horkos</span> désigne un serment prêté devant témoins, donc juridiquement contraignant aux yeux de l'assemblée, même s'il engage à un mal. Segond traduit simplement « serment », sans pouvoir rendre le pluriel de reprise au verset 9 qui insiste : ce ne sont pas un mais plusieurs serments qui lient Hérode. Chrysostome, dans son homélie sur ce passage, s'arrête précisément là : un serment qui engage au crime ne doit jamais être tenu, et le vrai courage aurait été de le rompre plutôt que de tuer un juste pour ne pas paraître inconstant devant ses convives."
+        },
+        {
+          "id": "g-decapiter",
+          "lemme": "apekephalisen",
+          "html": "Le verbe grec <span class=\"gr\">apekephalisen</span>, à l'aoriste, note la rapidité froide de l'exécution — un ordre donné et exécuté dans l'instant, sans procès ni délai, à l'intérieur même de la forteresse où Jean était enfermé. Segond traduit par « décapiter », fidèle au sens, mais le grec inclut dans le seul verbe ce que le français doit dire en deux mots. Ce moment silencieux, sans parole rapportée de Jean, contraste avec toute la place que l'évangéliste lui avait donnée jusque-là comme voix qui crie et qui dérange — la voix se tait d'un coup, dans la phrase même qui la nomme."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le prophète Urie, l'autre issue",
+      "corps_html": "Le chapitre 26 ne s'arrête pas à Jérémie : entre les versets 16 et 24, que la liturgie saute, se trouve l'histoire d'Urie, fils de Shemaya, qui prophétisa les mêmes menaces contre Jérusalem. Poursuivi par le roi Jojakim jusqu'en Égypte où il s'était réfugié, il fut ramené, exécuté et jeté dans la fosse commune du peuple (Jr 26, 20-23). Le texte place ainsi côte à côte deux prophètes qui ont dit exactement la même chose : l'un meurt, l'autre est sauvé par une main humaine, sans qu'aucune différence de foi ou de mérite ne l'explique."
+    },
+    {
+      "titre": "Hérode Antipas selon Flavius Josèphe",
+      "corps_html": "L'historien juif Flavius Josèphe raconte lui aussi la mort de Jean-Baptiste (Antiquités judaïques, XVIII, 5, 2), mais il en donne une autre raison : Hérode craignait qu'un prédicateur si populaire ne soulève le peuple contre lui, et non l'humiliation d'un reproche sur son mariage. Les deux récits ne se contredisent pas nécessairement, ils datent l'événement vers 28-30 après Jésus-Christ, dans la forteresse de Machéronte. Matthieu, en retenant la version morale, inscrit la mort de Jean dans la lignée des prophètes tués pour avoir dit une parole que le pouvoir ne supportait pas — la même lignée que Jérémie."
+    }
+  ],
+  "analogie": {
+    "titre": "Parler sans filet",
+    "variantes": [
+      "Tu as déjà retenu une parole que tu savais juste, dans une pièce où la prononcer aurait suffi à te rendre suspect — un repas de famille, une réunion, un silence collectif que rompre t'aurait coûté l'approbation de ceux qui t'entourent. Tu sais alors, avant même d'ouvrir la bouche, que dire vrai ne te vaudra ni remerciement ni protection, seulement l'isolement immédiat de ceux qui préféraient ne pas entendre. Jérémie se tient dans cette solitude exacte devant les chefs et les prêtres, sans une seule voix pour le défendre avant qu'il n'ait fini de parler — et c'est seulement après, jamais avant, que le silence se retourne.",
+      "Il t'est arrivé de dire une chose vraie et de sentir aussitôt la pièce se refermer contre toi, sans qu'aucun geste ne vienne encore te protéger — puis, des heures ou des jours plus tard, sans que tu l'aies provoqué ni mérité, quelqu'un que tu n'attendais pas a pris ta défense, a tourné en ta faveur une décision qui te semblait perdue. Tu n'avais rien fait pour cela ; tu avais seulement tenu la parole que tu devais tenir, et un autre, à ton insu, en a porté les conséquences à ta place. C'est la main d'Achikam, discrète, presque administrative, qui se referme sur Jérémie condamné et l'empêche de mourir — Dieu agissant non par miracle spectaculaire mais par un homme dont on ignore encore les raisons.",
+      "Tu connais aussi l'autre versant, plus dur : avoir dit ou fait ce qu'il fallait, être resté fidèle à ce que tu croyais devoir à Dieu, et n'avoir vu venir aucune main pour te sauver — la situation qui s'aggrave au lieu de se dénouer, sans qu'aucune intervention providentielle ne vienne l'arrêter à temps. Le psaume ne promet pas que la fosse ne se refermera jamais, il supplie seulement qu'elle ne se referme pas ; Jean-Baptiste, lui, meurt dans cette prison où sa parole l'avait conduit, sans qu'aucun Achikam n'intervienne pour lui. La foi ne consiste pas à croire que la délivrance viendra toujours à temps, mais à continuer de crier vers celui qui, même dans le silence, écoute les captifs — comme le dit le psaume lui-même jusqu'au bout."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Ce texte ne promet pas que dire vrai te protégera. Avant de refermer cette page, tu peux simplement nommer devant Dieu une parole que tu retiens depuis longtemps, sans savoir encore si elle sera entendue, protégée, ou si elle te coûtera quelque chose.",
+    "geste": "Reste un instant en silence avec cette question : quelle parole vraie est-ce que je retiens aujourd'hui, par prudence plus que par sagesse ? Ne cherche pas à la dire encore — dépose-la seulement devant Dieu.",
+    "note": "Le psaume que nous avons lu est l'un de ceux que le Nouveau Testament applique le plus souvent au Christ souffrant (Jn 2, 17 ; Jn 19, 28-29) : la prière du juste abandonné n'est donc jamais loin de la sienne."
+  },
+  "question": "Qu'est-ce qui, en toi, continuerait de dire vrai même si tu savais que, cette fois, personne ne viendrait te protéger ?",
+  "racines": [
+    {
+      "titre": "Un serment qui n'aurait pas dû être tenu",
+      "corps_html": "Chrysostome s'attarde sur la logique perverse d'Hérode : il redoute de passer pour un homme de parole inconstante devant ses convives, et préfère pour cela devenir un meurtrier. Le Père d'Antioche note qu'un serment qui engage au mal n'oblige jamais moralement à être tenu — la vraie fidélité aurait été de le rompre. Il voit dans ce texte un avertissement pour tout chrétien tenté de sacrifier une vie, ou une vérité, à la seule crainte du regard des autres.",
+      "attribution": "Jean Chrysostome, Homélies sur l'évangile de saint Matthieu, homélie XLVIII"
+    },
+    {
+      "titre": "La voix du juste souffrant",
+      "corps_html": "Augustin lit ce psaume comme la voix du Christ parlant par avance dans la bouche de son juste souffrant, en s'appuyant sur les versets que le Nouveau Testament lui-même applique à la Passion — le zèle qui dévore (Jn 2, 17), le fiel et le vinaigre offerts sur la croix (Jn 19, 28-29 ; Ps 68, 22). Pour lui, chaque fidèle qui crie depuis sa propre boue peut reconnaître dans ce psaume une prière qui l'a précédé et qui continue de porter sa plainte jusqu'à Dieu. Ce n'est donc pas seulement David, ni seulement Jérémie ou Jean, qui parlent ici, mais le Christ lui-même, dans tous ceux qui souffrent pour avoir dit vrai.",
+      "attribution": "Augustin, Enarrationes in Psalmos, sur le Psaume 68"
+    },
+    {
+      "titre": "La liberté de la parole prophétique devant les puissants",
+      "corps_html": "Calvin insiste sur le fait que Jérémie ne rétracte rien de son message pour sauver sa vie : il répète devant l'assemblée exactement ce qu'il avait dit dans le Temple, et fonde sa défense non sur la prudence mais sur l'origine divine de sa parole. Pour Calvin, ce texte enseigne que les ministres de la Parole doivent parler avec la même liberté devant les grands que devant le peuple, quitte à s'en remettre entièrement, comme Jérémie, entre les mains de ceux qui les jugent. Il note aussi que la délivrance de Jérémie par les chefs eux-mêmes montre que Dieu peut fléchir les cœurs les plus hostiles sans que le prophète n'ait rien négocié.",
+      "attribution": "Calvin, Commentaires sur le prophète Jérémie, sur Jr 26"
+    }
+  ]
+}
