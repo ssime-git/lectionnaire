@@ -29,6 +29,7 @@ from liturgie import depuis_aelf  # type: ignore
 from valider import (CLASSES_CONNUES, GROUPES_VIDEO, MAX_CARNET, MAX_VIDEOS,  # type: ignore
                      charger_oeuvres, valider_contrat)
 from videos import charger_catalogue  # type: ignore
+from corpus import PAGES as LIVRES_CHRYSOSTOME, preparer as preparer_homelies  # type: ignore
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -280,7 +281,7 @@ Tu réponds STRICTEMENT avec le JSON complet corrigé, sans texte autour."""
 # Ce qui ne vient pas du modèle n'est jamais repris de sa réponse.
 CHAMPS_DETERMINISTES = (
     "date", "date_humaine", "semaine", "ferie", "liturgie", "deuterocanonique",
-    "references_brutes", "traduction_globale", "gravure_svg",
+    "references_brutes", "traduction_globale", "gravure_svg", "homelies",
 )
 
 
@@ -462,6 +463,9 @@ def construire_json(date_iso: str) -> dict:
     _ajouter_catalogue(demande, catalogue)
     oeuvres = charger_oeuvres()
     _ajouter_carnet(demande, oeuvres)
+    # Le corpus se complète ici, au besoin : seules les homélies du jour.
+    candidates = preparer_homelies([lec.reference_courte for lec in jour.lectures])
+    _ajouter_homelies(demande, candidates)
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
     # Si le modèle rédacteur a produit un SVG malgré la consigne, on l'écarte :
@@ -498,6 +502,7 @@ def construire_json(date_iso: str) -> dict:
     _normaliser_classes(contrat)
     _filtrer_videos(contrat, catalogue)
     _filtrer_carnet(contrat, oeuvres)
+    _filtrer_homelies(contrat, candidates)
     fautes = valider_contrat(contrat)
     if fautes:
         contrat = _reparer(contrat, fautes, catalogue=catalogue, oeuvres=oeuvres)
@@ -588,6 +593,32 @@ def _filtrer_carnet(contrat: dict, oeuvres: dict[str, str]) -> None:
             "tradition": [{"oeuvre": t["oeuvre"], "reference": str(t["reference"]).strip()} for t in tradition],
         }})
     contrat["carnet"] = gardees[:MAX_CARNET]
+
+
+def _ajouter_homelies(demande: dict, candidates: list[dict]) -> None:
+    """Les homélies de Chrysostome trouvées par référence : Claude confirme
+    celles qui commentent vraiment les lectures, et peut s'en servir."""
+    demande["homelies_chrysostome"] = [{
+        "id": u["id"],
+        "titre": f"Homélie {u['homelie']} sur {LIVRES_CHRYSOSTOME[u['livre']][0]}",
+        "verset_cite": u.get("lemme", ""),
+        "resume": u.get("analyse", ""),
+        "extrait": u.get("texte", "")[:1200],
+    } for u in candidates]
+    demande["consigne"] += (
+        " Ajoute aussi la clé homelies (liste des id de homelies_chrysostome qui "
+        "commentent réellement un passage lu aujourd'hui : compare verset_cite "
+        "aux lectures ; liste vide si aucune). Dans le carnet, tu peux citer "
+        "Chrysostome (oeuvre « chrysostome-homelies », reference « Homélie LXXI "
+        "sur Matthieu ») uniquement d'après ces textes confirmés."
+    )
+
+
+def _filtrer_homelies(contrat: dict, candidates: list[dict]) -> None:
+    """Seules les homélies proposées et confirmées restent ; rien par défaut."""
+    permises = {u["id"] for u in candidates}
+    contrat["homelies"] = [h for h in contrat.get("homelies") or []
+                           if isinstance(h, str) and h in permises]
 
 
 def _cles_manquantes(contrat: dict) -> list[str]:

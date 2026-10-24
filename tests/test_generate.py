@@ -483,5 +483,31 @@ class CarnetGenerationTests(unittest.TestCase):
         self.assertEqual([q["question"] for q in resultat["carnet"]], ["Question 2 ?"])
 
 
+class HomeliesGenerationTests(unittest.TestCase):
+    CANDIDATES = [{"id": "chrysostome-Mt-LXXI", "livre": "Mt", "homelie": "LXXI", "debut": [22, 34], "fin": [22, 999],
+                   "lemme": "LES PHARISIENS, AYANT APPRIS QUE JÉSUS AVAIT FERMÉ LA BOUCHE AUX SADDUCÉENS",
+                   "analyse": "1. Du premier et du second commandement.", "texte": "1. " + "Corps. " * 400}]
+
+    def test_demande_contient_les_homelies_candidates(self) -> None:
+        demande = {"consigne": "Produis le JSON."}
+        generate._ajouter_homelies(demande, self.CANDIDATES)
+        h = demande["homelies_chrysostome"][0]
+        self.assertEqual(h["id"], "chrysostome-Mt-LXXI")
+        self.assertEqual(h["titre"], "Homélie LXXI sur Matthieu")
+        self.assertIn("PHARISIENS", h["verset_cite"])
+        self.assertLessEqual(len(h["extrait"]), 1200)
+        self.assertIn("homelies (liste des id", demande["consigne"])
+
+    def test_filtrer_ne_garde_que_les_candidates(self) -> None:
+        contrat = {"homelies": ["chrysostome-Mt-LXXI", "chrysostome-Mt-INVENTEE", 7]}
+        generate._filtrer_homelies(contrat, self.CANDIDATES)
+        self.assertEqual(contrat["homelies"], ["chrysostome-Mt-LXXI"])
+
+    def test_rien_confirme_par_defaut(self) -> None:
+        contrat: dict = {}
+        generate._filtrer_homelies(contrat, self.CANDIDATES)
+        self.assertEqual(contrat["homelies"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
