@@ -561,7 +561,8 @@ def _ajouter_carnet(demande: dict, oeuvres: dict[str, str]) -> None:
         "textes ; réponse de 3 à 6 phrases, sobre, qui s'appuie sur les textes "
         "du jour et, quand c'est juste, sur une œuvre de oeuvres_tradition "
         "(oeuvre = son id) avec une référence précise (chapitre, question, "
-        "homélie) ; n'invente aucune citation ; mieux vaut aucune source de "
+        "homélie), sans répéter le titre de l'œuvre (ex. « sur Luc 6, 12 », "
+        "« Q. 4 », « homélie V sur Éphésiens ») ; n'invente aucune citation ; mieux vaut aucune source de "
         "tradition qu'une source douteuse."
     )
 

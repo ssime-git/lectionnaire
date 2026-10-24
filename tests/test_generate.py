@@ -471,6 +471,7 @@ class CarnetGenerationTests(unittest.TestCase):
         generate._ajouter_carnet(demande, {"heidelberg": "Catéchisme de Heidelberg (1563)"})
         self.assertEqual(demande["oeuvres_tradition"], ["heidelberg | Catéchisme de Heidelberg (1563)"])
         self.assertIn("carnet (3 à 5", demande["consigne"])
+        self.assertIn("sans répéter le titre de l'œuvre", demande["consigne"])
 
     def test_reparer_refiltre_le_carnet(self) -> None:
         casse = ReparerTests._casser(ReparerTests(), _contrat_valide())
