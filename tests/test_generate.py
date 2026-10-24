@@ -483,31 +483,42 @@ class CarnetGenerationTests(unittest.TestCase):
         self.assertEqual([q["question"] for q in resultat["carnet"]], ["Question 2 ?"])
 
 
-class HomeliesGenerationTests(unittest.TestCase):
-    CANDIDATES = [{"id": "chrysostome-Mt-LXXI", "livre": "Mt", "homelie": "LXXI", "debut": [22, 34], "fin": [22, 999],
-                   "lemme": "LES PHARISIENS, AYANT APPRIS QUE JÉSUS AVAIT FERMÉ LA BOUCHE AUX SADDUCÉENS",
-                   "analyse": "1. Du premier et du second commandement.", "texte": "1. " + "Corps. " * 400}]
+class PassagesTraditionTests(unittest.TestCase):
+    CANDIDATES = [
+        {"id": "chrysostome-Mt-LXXI", "auteur": "chrysostome", "titre": "Homélie LXXI sur Matthieu",
+         "lemme": "LES PHARISIENS, AYANT APPRIS QUE JÉSUS AVAIT FERMÉ LA BOUCHE AUX SADDUCÉENS",
+         "analyse": "1. Du premier et du second commandement.", "texte": "1. " + "Corps. " * 400},
+        {"id": "augustin-Ps-17", "auteur": "augustin", "titre": "Discours sur le psaume 17",
+         "lemme": "CHANT DE DÉLIVRANCE.", "analyse": "Le Christ et l’Église.", "texte": "1. Je vous aimerai."},
+    ]
 
-    def test_demande_contient_les_homelies_candidates(self) -> None:
+    def test_demande_contient_les_passages_des_deux_auteurs(self) -> None:
         demande = {"consigne": "Produis le JSON."}
-        generate._ajouter_homelies(demande, self.CANDIDATES)
-        h = demande["homelies_chrysostome"][0]
-        self.assertEqual(h["id"], "chrysostome-Mt-LXXI")
-        self.assertEqual(h["titre"], "Homélie LXXI sur Matthieu")
-        self.assertIn("PHARISIENS", h["verset_cite"])
-        self.assertLessEqual(len(h["extrait"]), 1200)
-        self.assertIn("homelies (liste des id", demande["consigne"])
+        generate._ajouter_passages(demande, self.CANDIDATES)
+        p = demande["passages_tradition"]
+        self.assertEqual([x["id"] for x in p], ["chrysostome-Mt-LXXI", "augustin-Ps-17"])
+        self.assertEqual(p[0]["titre"], "Jean Chrysostome, Homélie LXXI sur Matthieu")
+        self.assertEqual(p[1]["titre"], "Augustin d’Hippone, Discours sur le psaume 17")
+        self.assertIn("PHARISIENS", p[0]["verset_cite"])
+        self.assertLessEqual(len(p[0]["extrait"]), 1200)
+        self.assertIn("passages_tradition (liste des id", demande["consigne"])
 
-    def test_filtrer_ne_garde_que_les_candidates(self) -> None:
-        contrat = {"homelies": ["chrysostome-Mt-LXXI", "chrysostome-Mt-INVENTEE", 7]}
-        generate._filtrer_homelies(contrat, self.CANDIDATES)
-        self.assertEqual(contrat["homelies"], ["chrysostome-Mt-LXXI"])
+    def test_filtrer_ne_garde_que_les_candidats(self) -> None:
+        contrat = {"passages_tradition": ["augustin-Ps-17", "augustin-Ps-INVENTE", 7]}
+        generate._filtrer_passages(contrat, self.CANDIDATES)
+        self.assertEqual(contrat["passages_tradition"], ["augustin-Ps-17"])
 
     def test_rien_confirme_par_defaut(self) -> None:
         contrat: dict = {}
-        generate._filtrer_homelies(contrat, self.CANDIDATES)
-        self.assertEqual(contrat["homelies"], [])
+        generate._filtrer_passages(contrat, self.CANDIDATES)
+        self.assertEqual(contrat["passages_tradition"], [])
 
+    def test_nouveaux_passages_non_confirmes_oublies(self) -> None:
+        candidates = [{**self.CANDIDATES[0], "nouveau": True}, {**self.CANDIDATES[1], "nouveau": True}]
+        contrat = {"passages_tradition": ["augustin-Ps-17"]}
+        with patch("generate.oublier_passage") as oublier:
+            generate._filtrer_passages(contrat, candidates)
+        oublier.assert_called_once_with("chrysostome-Mt-LXXI")
 
 if __name__ == "__main__":
     unittest.main()

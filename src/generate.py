@@ -29,7 +29,7 @@ from liturgie import depuis_aelf  # type: ignore
 from valider import (CLASSES_CONNUES, GROUPES_VIDEO, MAX_CARNET, MAX_VIDEOS,  # type: ignore
                      charger_oeuvres, valider_contrat)
 from videos import charger_catalogue  # type: ignore
-from corpus import PAGES as LIVRES_CHRYSOSTOME, preparer as preparer_homelies  # type: ignore
+from corpus import AUTEURS, oublier as oublier_passage, preparer as preparer_passages  # type: ignore
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -281,7 +281,7 @@ Tu réponds STRICTEMENT avec le JSON complet corrigé, sans texte autour."""
 # Ce qui ne vient pas du modèle n'est jamais repris de sa réponse.
 CHAMPS_DETERMINISTES = (
     "date", "date_humaine", "semaine", "ferie", "liturgie", "deuterocanonique",
-    "references_brutes", "traduction_globale", "gravure_svg", "homelies",
+    "references_brutes", "traduction_globale", "gravure_svg", "passages_tradition",
 )
 
 
@@ -464,8 +464,8 @@ def construire_json(date_iso: str) -> dict:
     oeuvres = charger_oeuvres()
     _ajouter_carnet(demande, oeuvres)
     # Le corpus se complète ici, au besoin : seules les homélies du jour.
-    candidates = preparer_homelies([lec.reference_courte for lec in jour.lectures])
-    _ajouter_homelies(demande, candidates)
+    candidates = preparer_passages([lec.reference_courte for lec in jour.lectures])
+    _ajouter_passages(demande, candidates)
     brut = _appel(VOIX, json.dumps(demande, ensure_ascii=False))
     contenu = _json_propre(brut)
     # Si le modèle rédacteur a produit un SVG malgré la consigne, on l'écarte :
@@ -502,7 +502,7 @@ def construire_json(date_iso: str) -> dict:
     _normaliser_classes(contrat)
     _filtrer_videos(contrat, catalogue)
     _filtrer_carnet(contrat, oeuvres)
-    _filtrer_homelies(contrat, candidates)
+    _filtrer_passages(contrat, candidates)
     fautes = valider_contrat(contrat)
     if fautes:
         contrat = _reparer(contrat, fautes, catalogue=catalogue, oeuvres=oeuvres)
@@ -595,30 +595,36 @@ def _filtrer_carnet(contrat: dict, oeuvres: dict[str, str]) -> None:
     contrat["carnet"] = gardees[:MAX_CARNET]
 
 
-def _ajouter_homelies(demande: dict, candidates: list[dict]) -> None:
-    """Les homélies de Chrysostome trouvées par référence : Claude confirme
-    celles qui commentent vraiment les lectures, et peut s'en servir."""
-    demande["homelies_chrysostome"] = [{
+def _ajouter_passages(demande: dict, candidates: list[dict]) -> None:
+    """Les passages des Pères trouvés par référence (Chrysostome, Augustin…) :
+    Claude confirme ceux qui commentent vraiment les lectures, et peut les
+    faire dialoguer dans le carnet."""
+    demande["passages_tradition"] = [{
         "id": u["id"],
-        "titre": f"Homélie {u['homelie']} sur {LIVRES_CHRYSOSTOME[u['livre']][0]}",
+        "titre": f"{AUTEURS[u['auteur']].nom}, {u['titre']}",
+        "oeuvre": AUTEURS[u["auteur"]].oeuvre,
         "verset_cite": u.get("lemme", ""),
         "resume": u.get("analyse", ""),
         "extrait": u.get("texte", "")[:1200],
     } for u in candidates]
     demande["consigne"] += (
-        " Ajoute aussi la clé homelies (liste des id de homelies_chrysostome qui "
-        "commentent réellement un passage lu aujourd'hui : compare verset_cite "
-        "aux lectures ; liste vide si aucune). Dans le carnet, tu peux citer "
-        "Chrysostome (oeuvre « chrysostome-homelies », reference « Homélie LXXI "
-        "sur Matthieu ») uniquement d'après ces textes confirmés."
+        " Ajoute aussi la clé passages_tradition (liste des id de passages_tradition "
+        "qui commentent réellement un passage lu aujourd'hui : compare verset_cite et "
+        "resume aux lectures ; liste vide si aucun). Dans le carnet, tu peux citer et "
+        "faire dialoguer ces Pères (oeuvre = leur « oeuvre », reference = leur titre "
+        "sans le nom de l'auteur) uniquement d'après les passages confirmés."
     )
 
 
-def _filtrer_homelies(contrat: dict, candidates: list[dict]) -> None:
-    """Seules les homélies proposées et confirmées restent ; rien par défaut."""
-    permises = {u["id"] for u in candidates}
-    contrat["homelies"] = [h for h in contrat.get("homelies") or []
-                           if isinstance(h, str) and h in permises]
+def _filtrer_passages(contrat: dict, candidates: list[dict]) -> None:
+    """Seuls les passages proposés et confirmés restent ; rien par défaut.
+    Un passage lu cette nuit et non confirmé n'entre pas dans le corpus."""
+    permis = {u["id"] for u in candidates}
+    contrat["passages_tradition"] = [p for p in contrat.get("passages_tradition") or []
+                                     if isinstance(p, str) and p in permis]
+    for u in candidates:
+        if u.get("nouveau") and u["id"] not in contrat["passages_tradition"]:
+            oublier_passage(u["id"])
 
 
 def _cles_manquantes(contrat: dict) -> list[str]:

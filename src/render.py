@@ -24,7 +24,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from videos import CHAINE, charger_catalogue, telecharger_vignette
 from valider import charger_oeuvres
-from corpus import PAGES as LIVRES_CHRYSOSTOME, charger_index, passages_pour, texte_homelie
+from corpus import AUTEURS, MAX_PAR_AUTEUR, charger_passages, passages_pour
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
@@ -146,34 +146,38 @@ def _texte(fragment: str) -> str:
 
 
 MAX_TRADITION = 4
-CREDIT_CHRYSOSTOME = "trad. Jeannin (1864-1867), Wikisource, CC BY-SA"
 
 
 def _tradition(d: dict) -> list[dict]:
-    """Les homélies qui commentent les lectures du jour, recopiées telles
-    quelles avec leur source : le carnet libre ne cite que cela. Aucun accès
-    réseau ici — le corpus se complète la nuit (corpus.preparer). Si le
-    brouillon a confirmé ses homélies (champ « homelies »), elles font foi."""
-    index, vues, extraits = charger_index(), set(), []
-    confirmees = d.get("homelies")
-    for lec in d.get("lectures", []):
-        for u in passages_pour(lec.get("reference", ""), index):
-            if u["id"] in vues or len(extraits) >= MAX_TRADITION:
-                continue
-            if confirmees is not None and u["id"] not in confirmees:
-                continue
-            texte = texte_homelie(u["id"])
-            if texte is None:
-                continue
-            vues.add(u["id"])
-            extraits.append({
-                "titre": f"Jean Chrysostome, Homélie {u['homelie']} sur {LIVRES_CHRYSOSTOME[u['livre']][0]}",
-                "lecture": lec.get("reference", ""),
-                "analyse": u.get("analyse", ""),
-                "extrait": texte[:1500],
-                "url": u.get("source_url", ""),
-                "credit": CREDIT_CHRYSOSTOME,
-            })
+    """Les passages des Pères qui commentent les lectures du jour — plusieurs
+    auteurs peuvent se croiser —, recopiés tels quels avec leur source : le
+    carnet libre ne cite que cela. Aucun accès réseau ici (le corpus se
+    complète la nuit). Si le brouillon a confirmé ses passages
+    (« passages_tradition »), eux seuls font foi."""
+    confirmes = d.get("passages_tradition")
+    extraits: list[dict] = []
+    for cle, auteur in AUTEURS.items():
+        stock, pris = charger_passages(cle), 0
+        # L'évangile d'abord (dernière lecture), puis on remonte ; un passage
+        # par lecture et par auteur, le plus proche du texte.
+        for lec in reversed(d.get("lectures", [])):
+            for u in passages_pour(lec.get("reference", ""), stock)[:1]:
+                if pris >= MAX_PAR_AUTEUR or len(extraits) >= MAX_TRADITION \
+                        or any(e["id"] == u["id"] for e in extraits):
+                    continue
+                if confirmes is not None and u["id"] not in confirmes:
+                    continue
+                texte = u.get("texte", "")
+                pris += 1
+                extraits.append({
+                    "id": u["id"],
+                    "titre": f"{auteur.nom}, {u['titre']}",
+                    "lecture": lec.get("reference", ""),
+                    "analyse": u.get("analyse", ""),
+                    "extrait": texte[:1500],
+                    "url": u.get("source_url", ""),
+                    "credit": auteur.credit,
+                })
     return extraits
 
 
