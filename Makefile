@@ -5,10 +5,10 @@ DEMO_DAYS := 2026-07-08 2026-12-17 2026-02-21
 # Moteur de rédaction : claude (abonnement Pro) ; MOTEUR=workers-ai pour Workers AI.
 MOTEUR ?= claude
 
-.PHONY: help setup test check validate render index generate serve
+.PHONY: help setup test check validate render index catalogue generate serve
 
 help:
-	@echo "make setup | test | check | validate DATE=AAAA-MM-JJ | render DATE=AAAA-MM-JJ | index | generate DATE=AAAA-MM-JJ | serve"
+	@echo "make setup | test | check | validate DATE=AAAA-MM-JJ | render DATE=AAAA-MM-JJ | index | catalogue | generate DATE=AAAA-MM-JJ | serve"
 
 setup:
 	uv sync
@@ -29,6 +29,9 @@ render:
 
 index:
 	$(PYTHON) -c "import sys; sys.path.insert(0, 'src'); import render; render.reconstruire_index()"
+
+catalogue:
+	$(PYTHON) src/videos.py
 
 generate:
 	@test -n "$(DATE)" || (echo "DATE=AAAA-MM-JJ requis"; exit 2)
