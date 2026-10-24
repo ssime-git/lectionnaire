@@ -437,5 +437,50 @@ class VideosTests(unittest.TestCase):
         self.assertIn("videos (0 à 8", demande["consigne"])
 
 
+class CarnetGenerationTests(unittest.TestCase):
+    OEUVRES = {"heidelberg": "Catéchisme de Heidelberg (1563)", "augustin-confessions": "Augustin d'Hippone, Confessions (397-401)"}
+
+    @staticmethod
+    def _qr(i: int, oeuvre: str = "heidelberg", jour: list | None = None) -> dict:
+        return {"question": f"Question {i} ?", "reponse_html": "<p>Réponse.</p>",
+                "sources": {"jour": ["Mt 22, 37"] if jour is None else jour,
+                            "tradition": [{"oeuvre": oeuvre, "reference": "Q. 4"}]}}
+
+    def test_filtrer_carnet_retire_oeuvre_inconnue_et_tronque(self) -> None:
+        contrat = {"carnet": [self._qr(0, "pseudo-denys")] + [self._qr(i) for i in range(1, 8)]}
+        generate._filtrer_carnet(contrat, self.OEUVRES)
+        self.assertEqual(len(contrat["carnet"]), 5)
+        self.assertEqual(contrat["carnet"][0]["question"], "Question 1 ?")
+
+    def test_filtrer_carnet_retire_entree_sans_source_ou_vide(self) -> None:
+        sans = self._qr(1, jour=[])
+        sans["sources"]["tradition"] = []
+        vide = self._qr(2)
+        vide["reponse_html"] = " "
+        contrat = {"carnet": [sans, vide, "pas un objet", self._qr(3)]}
+        generate._filtrer_carnet(contrat, self.OEUVRES)
+        self.assertEqual([q["question"] for q in contrat["carnet"]], ["Question 3 ?"])
+
+    def test_filtrer_carnet_absent_donne_liste_vide(self) -> None:
+        contrat: dict = {}
+        generate._filtrer_carnet(contrat, self.OEUVRES)
+        self.assertEqual(contrat["carnet"], [])
+
+    def test_demande_contient_les_oeuvres(self) -> None:
+        demande = {"consigne": "Produis le JSON."}
+        generate._ajouter_carnet(demande, {"heidelberg": "Catéchisme de Heidelberg (1563)"})
+        self.assertEqual(demande["oeuvres_tradition"], ["heidelberg | Catéchisme de Heidelberg (1563)"])
+        self.assertIn("carnet (3 à 5", demande["consigne"])
+
+    def test_reparer_refiltre_le_carnet(self) -> None:
+        casse = ReparerTests._casser(ReparerTests(), _contrat_valide())
+        fautes = valider.valider_contrat(casse)
+        repare = {k: v for k, v in _contrat_valide().items() if k != "gravure_svg"}
+        repare["carnet"] = [self._qr(1, "pseudo-denys"), self._qr(2)]
+        with patch("generate._appel", return_value=generate.json.dumps(repare, ensure_ascii=False)):
+            resultat = generate._reparer(casse, fautes, oeuvres=self.OEUVRES)
+        self.assertEqual([q["question"] for q in resultat["carnet"]], ["Question 2 ?"])
+
+
 if __name__ == "__main__":
     unittest.main()
