@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-01",
+  "date_humaine": "jeudi",
+  "semaine": "26ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Jb 19, 21-27 ; Lc 10, 1-12",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h150\"/><path d=\"M60 130 q-2 -18 10 -26 q10 -7 20 -2 q8 4 6 14 q-1 9 -10 14 q-9 5 -20 5 q-4 0 -6 -5 z\"/><path d=\"M91 90 q4 -10 13 -8 q7 2 5 10 q-2 7 -10 6 q-7 -1 -8 -8 z\"/><path d=\"M45 130 l8 -5 l4 6 z M100 132 l-7 -3 l1 -6 z\"/><path d=\"M170 145 L280 65\"/><path d=\"M340 148 L280 65\"/><path d=\"M230 100 v16 M226 116 l-4 8 M234 116 l4 8 M224 94 l14 26\"/><path d=\"M244 99 v15 M240 114 l-3 7 M248 114 l3 7 M238 93 l13 25\"/><path d=\"M276 70 v8 M274 78 l-2 4 M278 78 l2 4 M272 68 l8 12\"/><path d=\"M282 69 v8 M280 77 l-2 4 M284 77 l2 4 M278 67 l8 12\"/></g><g class=\"trait-rubrique\"><path d=\"M30 24 q14 -9 28 -1 q14 -9 28 -1 M140 16 q18 -10 36 0 q18 -10 36 0\"/></g><g class=\"trait-liturgie\"><path d=\"M88 100 q8 -10 18 -18 q3 -3 6 -2\"/><path d=\"M112 80 l4 -3 M114 78 l1 -5 M110 79 l-1 -5\"/></g></svg>",
+  "titre": "Voir sa face",
+  "titre_html": "Voir <span class=\"it\">sa face</span>",
+  "sous_titre": "Job espère un témoin qui se lève ; le psalmiste cherche un visage ; les soixante-dix annoncent un règne déjà proche.",
+  "suite_hier": null,
+  "gravure_alt": "Job assis à même la terre parmi des tessons, le visage renversé vers un ciel voilé de nuées, une main ouverte comme pour saisir une présence qu'il ne voit pas ; à l'arrière-plan, sur une route qui se perd à l'horizon, des silhouettes marchant deux par deux, bâton à la main, sans bagage.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Jb 19, 21-27",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">21</span> Ayez pitié, ayez pitié de moi, vous, mes amis ! Car la main de Dieu m'a frappé. <span class=\"s\">22</span> Pourquoi me poursuivre comme Dieu me poursuit ? Pourquoi vous montrer insatiables de ma chair ? <span class=\"s\">23</span> Oh ! je voudrais que mes paroles fussent écrites, qu'elles fussent écrites dans un livre ; <span class=\"s\">24</span> je voudrais qu'avec un <button class=\"mot\" data-g=\"g-burin\">burin de fer</button> et avec du plomb elles fussent pour toujours gravées dans le roc... <span class=\"s\">25</span> Mais je sais que mon <button class=\"mot\" data-g=\"g-goel\">rédempteur</button> est vivant, et qu'il se lèvera le dernier sur la terre. <span class=\"s\">26</span> Quand ma peau sera détruite, il se lèvera ; quand je n'aurai plus de <button class=\"mot\" data-g=\"g-basar\">chair</button>, je verrai Dieu. <span class=\"s\">27</span> Je le verrai, et il me sera favorable ; mes yeux le verront, et non ceux d'un autre ; mon âme <button class=\"mot\" data-g=\"g-kalah\">languit</button> d'attente au dedans de moi.",
+      "gloses": [
+        {
+          "id": "g-burin",
+          "lemme": "burin de fer",
+          "html": "L'hébreu אֵט בַּרְזֶל וְעוֹפָרֶת associe deux instruments : le stylet de fer qui grave la pierre, et le plomb dont on ignore s'il servait à couler le trait gravé pour le rendre indélébile, ou à écrire sur une tablette de plomb, matière courante dans l'Antiquité pour les textes qu'on voulait durables. Segond joint les deux par « et », lissant une construction hébraïque plus heurtée. Jérôme, dans la Vulgate, garde cette dualité (« stylo ferreo et plumbi lamina »), signe que dès l'Antiquité chrétienne le sens exact de l'association restait discuté."
+        },
+        {
+          "id": "g-goel",
+          "lemme": "rédempteur",
+          "html": "Le mot hébreu est גֹּאֵל (go'el), terme de droit familial : le proche parent tenu de racheter la terre vendue, de venger le sang versé, d'épouser la veuve sans enfant — c'est ainsi que Boaz agit pour Ruth. En appelant Dieu son go'el, Job ne formule pas encore une doctrine du salut : il dit qu'il n'a plus, pour plaider sa cause, que celui-là même qui semble le frapper. Calvin, dans ses sermons sur Job, refuse d'y lire une confession de résurrection déjà formée, mais y reconnaît une certitude arrachée à l'épreuve même, plus forte qu'aucun raisonnement."
+        },
+        {
+          "id": "g-basar",
+          "lemme": "chair",
+          "html": "L'hébreu מִבְּשָׂרִי (mi-besari) est ambigu : la préposition מִן peut signifier « loin de ma chair » (sans corps, après la mort) ou « depuis ma chair » (par le moyen du corps). Segond tranche pour la première lecture : « quand je n'aurai plus de chair ». La Vulgate de Jérôme choisit l'inverse, « in carne mea videbo Deum », lecture qui nourrira toute une tradition liturgique de la résurrection des corps. L'ambiguïté même du texte hébreu est au cœur du débat, jamais clos, sur ce que Job entrevoit exactement."
+        },
+        {
+          "id": "g-kalah",
+          "lemme": "languit",
+          "html": "Le verbe הecte כָּלוּ (kalu), de la racine כלה (kalah), dit l'épuisement, le fait d'être consumé jusqu'à défaillir. Segond traduit « mon âme languit », mais l'hébreu nomme littéralement les reins (כִּלְיוֹתַי), organe que l'ancien Israël situait au siège des émotions les plus intimes, et non l'âme au sens grec du terme. En substituant « âme » à « reins », la traduction adoucit une image beaucoup plus viscérale : ce sont ses entrailles mêmes que Job dit consumées par cette attente."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 26 (27), 7-8a, 8b.9abc, 13-14",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">7</span> Éternel, écoute ma voix, je t'invoque : aie pitié de moi et exauce-moi ! <span class=\"s\">8</span> Mon cœur dit de ta part : Cherchez ma <button class=\"mot\" data-g=\"g-panim\">face</button> ! Je cherche ta face, ô Éternel ! <span class=\"s\">9</span> Ne me cache point ta face, ne repousse pas avec colère ton serviteur ! Tu es mon secours, ne me laisse pas, ne m'abandonne pas, Dieu de mon salut ! <span class=\"s\">13</span> Oh ! si je n'étais pas sûr de voir la <button class=\"mot\" data-g=\"g-tuv\">bonté</button> de l'Éternel sur la terre des vivants !... <span class=\"s\">14</span> <button class=\"mot\" data-g=\"g-qavah\">Espère</button> en l'Éternel ! Fortifie-toi et que ton cœur s'affermisse ! Espère en l'Éternel !",
+      "gloses": [
+        {
+          "id": "g-panim",
+          "lemme": "face",
+          "html": "L'hébreu פָּנֶיךָ (panekha) est un pluriel, littéralement « tes faces », comme le mot פָּנִים l'est toujours en hébreu. Segond traduit au singulier, effaçant une trace ancienne selon laquelle le visage divin ne se donne jamais d'un seul tenant. C'est le même mot qu'entend Moïse en Exode 33, quand Dieu lui refuse de voir « ma face » tout en le laissant voir son dos : chercher les panim, ce n'est pas chercher un trait fixe mais une présence qui se tourne, ou non, vers celui qui la cherche."
+        },
+        {
+          "id": "g-tuv",
+          "lemme": "bonté",
+          "html": "L'hébreu בְּטוּב (be-tuv) vient de טוֹב, « bon », et non de חֶסֶד (hessed), la fidélité d'alliance souvent rendue ailleurs par « bonté » ou « grâce ». Ici c'est le bien concret, presque tangible, que le psalmiste espère voir plutôt qu'un attribut abstrait de Dieu. Calvin, commentant ce verset, insiste sur « la terre des vivants » : ce n'est pas d'abord un au-delà que le psalmiste attend, mais l'expérience, dès ici-bas, que Dieu ne l'a pas abandonné."
+        },
+        {
+          "id": "g-qavah",
+          "lemme": "espère",
+          "html": "L'impératif hébreu קַוֵּה (qavveh) vient de la racine קוה, qui désigne d'abord un cordeau tendu, une corde tirée sans mou. L'image sous-jacente n'est pas celle d'un optimisme intérieur mais d'une tension du corps entier, comme une corde qui résiste sans céder. Segond traduit par « espère », verbe plus calme et plus intériorisé que l'hébreu, qui garde quelque chose de physique et de presque douloureux dans l'attente."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 10, 1-12",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Après cela, le Seigneur désigna encore <button class=\"mot\" data-g=\"g-septante\">soixante-dix</button> autres disciples, et il les envoya deux à deux devant lui dans toutes les villes et dans tous les lieux où lui-même devait aller. <span class=\"s\">2</span> Il leur dit : La <button class=\"mot\" data-g=\"g-moisson\">moisson</button> est grande, mais il y a peu d'ouvriers. Priez donc le maître de la moisson d'envoyer des ouvriers dans sa moisson. <span class=\"s\">3</span> Allez ; voici, je vous envoie comme des agneaux au milieu des loups. <span class=\"s\">4</span> Ne portez ni bourse, ni sac, ni souliers, et ne saluez personne en chemin. <span class=\"s\">5</span> Dans quelque maison que vous entriez, dites d'abord : Que la paix soit sur cette maison ! <span class=\"s\">6</span> Et s'il se trouve là un <button class=\"mot\" data-g=\"g-fils-paix\">enfant de paix</button>, votre paix reposera sur lui ; sinon, elle reviendra à vous. <span class=\"s\">7</span> Demeurez dans cette maison-là, mangeant et buvant ce qu'on vous donnera ; car l'ouvrier mérite son salaire. N'allez pas de maison en maison. <span class=\"s\">8</span> Dans quelque ville que vous entriez, et où l'on vous recevra, mangez ce qui vous sera présenté, <span class=\"s\">9</span> guérissez les malades qui s'y trouveront, et dites-leur : Le royaume de Dieu <button class=\"mot\" data-g=\"g-eggiken\">s'est approché</button> de vous. <span class=\"s\">10</span> Mais dans quelque ville que vous entriez, et où l'on ne vous recevra pas, allez dans ses rues, et dites : <span class=\"s\">11</span> Nous secouons contre vous la poussière même de votre ville qui s'est attachée à nos pieds ; sachez cependant que le royaume de Dieu s'est approché. <span class=\"s\">12</span> Je vous dis qu'en ce jour Sodome sera traitée moins rigoureusement que cette ville-là.",
+      "gloses": [
+        {
+          "id": "g-septante",
+          "lemme": "soixante-dix",
+          "html": "Le grec porte ἑβδομήκοντα (hebdomēkonta), mais une partie importante des manuscrits anciens, dont le Codex Vaticanus, donne ἑβδομήκοντα δύο, « soixante-douze ». Segond suit le Texte Reçu et choisit soixante-dix ; la critique textuelle moderne penche plutôt pour soixante-douze. Les deux chiffres restent chargés de sens : soixante-dix rappelle les anciens choisis par Moïse en Nombres 11, et une tradition juive ancienne y associait aussi le nombre symbolique des nations issues de Genèse 10, ce qui ferait de cette mission un geste débordant déjà les frontières d'Israël."
+        },
+        {
+          "id": "g-moisson",
+          "lemme": "moisson",
+          "html": "Le grec θερισμός (therismos) n'est pas d'abord un mot agricole neutre : chez les prophètes, la moisson désigne le jugement de Dieu qui vient à son heure, comme en Joël 4,13. En reprenant ce terme, Jésus ne décrit donc pas une tâche qui reste à organiser, mais un temps déjà mûr, déjà là, qui déborde les mains disponibles pour le recueillir — ce qui explique que l'ordre donné soit d'abord de prier, avant d'agir."
+        },
+        {
+          "id": "g-fils-paix",
+          "lemme": "enfant de paix",
+          "html": "Le grec υἱὸς εἰρήνης (huios eirēnēs) calque exactement un hébraïsme, בֶּן־שָׁלוֹם (ben-shalom), « fils de paix ». Segond traduit « enfant » plutôt que « fils », sans signaler l'hébraïsme sous-jacent. L'expression ne décrit pas un caractère pacifique mais une disposition d'accueil, presque une filiation : la paix envoyée par les disciples trouve en un tel homme une maison, ou, faute de cet accueil, elle « revient » vers eux, comme un message resté sans destinataire."
+        },
+        {
+          "id": "g-eggiken",
+          "lemme": "s'est approché",
+          "html": "Le grec ἤγγικεν (ēngiken) est un parfait, temps qui ne dit pas un mouvement en cours mais un événement accompli dont l'effet demeure : le règne n'est pas en train d'approcher, il est arrivé et il reste là. C'est le même verbe, au même temps, que Marc met dans la première parole publique de Jésus (Mc 1,15). Grégoire le Grand, commentant ce passage, y voit la raison pour laquelle les envoyés n'ont ni provisions ni détours à faire : ce qu'ils annoncent n'est pas une promesse lointaine mais une proximité déjà effective."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le procès sans juge",
+      "corps_html": "Nous sommes au cœur du troisième cycle de discours, quand l'échange avec les amis s'épuise sans rien dénouer. Job a déjà réclamé un arbitre, un témoin capable de trancher entre lui et Dieu (Jb 9,33) ; il ne l'a trouvé du côté d'aucun homme. Le texte hébreu de ce passage compte parmi les plus abîmés du livre — traducteurs anciens et modernes s'accordent sur l'incertitude de plusieurs mots — ce qui rend d'autant plus frappante la stabilité de transmission du verset 25, porté intact à travers les siècles."
+    },
+    {
+      "titre": "Un envoi qui double celui des Douze",
+      "corps_html": "Luc est le seul évangéliste à rapporter cet envoi, distinct de celui des Douze au chapitre précédent. Jean Chrysostome, commentant le parallèle de Matthieu 10, note que Jésus n'envoie pas des hommes déjà affermis mais des débutants, sans provisions, afin que leur assurance vienne de Celui qui les envoie et non de leurs propres moyens. Cette duplication, propre à Luc, annonce déjà la mission qui, dans les Actes, débordera les frontières d'Israël."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu ne peux pas encore voir",
+    "variantes": [
+      "Il y a ces moments où tu parles à Dieu sans qu'aucune réponse ne vienne, où la prière semble se perdre dans un silence qui dure des semaines, parfois des années, et où tu continues pourtant, sans bien savoir pourquoi, à adresser ta plainte plutôt qu'à te taire. Ce n'est pas qu'une preuve t'importe : c'est qu'une part de toi refuse de croire que personne n'écoute, même quand tout, autour de toi, semble le confirmer. Job, accusé par ceux qui devraient le soutenir, ne cesse pas de parler à Dieu contre Dieu lui-même — et c'est au cœur de cette plainte non résolue qu'il pose, sans transition, la certitude la plus nue du livre : quelqu'un se lèvera pour moi, et mes yeux, à moi, le verront.",
+      "Tu as peut-être ressenti ce désir qui ne demande rien de précis — ni réponse, ni faveur, seulement une présence tournée vers toi, comme un manque que rien d'autre ne comble et que tu ne saurais nommer avant de l'avoir reconnu. Ce désir ne naît pas d'un besoin identifiable ; il te précède, et il resurgit parfois sans lien apparent avec ce que tu traverses, comme s'il avait toujours été là, en attente d'un mot pour se dire. C'est ce mouvement antérieur à toute demande que le psaume nomme lorsqu'il affirme que le cœur, avant même d'ouvrir la bouche, a déjà entendu Dieu lui dire de chercher sa face — comme si cette quête n'était, depuis le commencement, qu'une réponse à un appel déjà lancé.",
+      "Tu as sans doute vécu cela : donner quelque chose de toi-même — une parole vraie, un service rendu, une prière portée pour quelqu'un — sans jamais savoir si cela a été reçu, ni ce qu'il en est advenu ensuite. La tentation, alors, est de mesurer ce que tu as donné à ce qu'il en reste visible, et de conclure, faute de fruit apparent, que le don s'est perdu en chemin. Mais Jésus dit aux envoyés que si la maison ne reçoit pas la paix qu'ils apportent, elle leur revient intacte — rien n'est vain de ce qui est offert en son nom ; même ce qui semble refusé continue d'exister devant Dieu, gardé par celui qui l'a inspiré plutôt que par celui qui le reçoit."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer ce texte, reste un instant avec la question qu'il te pose plutôt qu'avec une réponse à formuler.",
+    "geste": "Reprends lentement le verset 25 de Job (« mon rédempteur est vivant ») ou le verset 8 du psaume (« je cherche ta face ») et redis-le, sans rien y ajouter, jusqu'à ce qu'il cesse d'être une phrase que tu lis pour devenir une phrase que tu dis.",
+    "note": "Rien n'exige d'y ressentir quoi que ce soit : le texte n'attend pas une émotion, mais une adresse."
+  },
+  "question": "Qu'est-ce qui, en toi, continue d'espérer une présence même quand rien ne semble y répondre ?",
+  "racines": [
+    {
+      "titre": "Calvin et l'espérance sans système",
+      "corps_html": "Dans son sermon sur ce passage, Calvin refuse de faire dire à Job une doctrine achevée de la résurrection : le patriarche, dépourvu de l'Écriture que nous avons reçue, s'accroche pourtant à Dieu avec une fermeté que bien des chrétiens mieux instruits n'atteignent pas. Ce que Job possède, écrit Calvin, n'est pas un savoir mais une certitude arrachée au milieu même de l'épreuve — c'est cela, plus qu'aucun raisonnement théologique, qui donne au verset 25 sa force.",
+      "attribution": "Jean Calvin, Sermons sur le livre de Job, 1554-1555"
+    },
+    {
+      "titre": "Augustin : chercher un visage qu'on ne voit pas encore",
+      "corps_html": "Commentant ce psaume, qu'il connaît sous le numéro 26 de la Septante et de la Vulgate, Augustin distingue chercher de trouver : le cœur qui dit « cherchez ma face » est déjà, selon lui, sous l'effet d'une grâce reçue, car on ne se met en quête d'un visage que si l'on a déjà été regardé. Chercher la face de Dieu ici-bas, écrit-il, c'est marcher par la foi vers ce qu'on ne voit pas encore par la vue.",
+      "attribution": "Augustin, Enarrationes in Psalmos, Ps. 26"
+    },
+    {
+      "titre": "Grégoire le Grand : pourquoi deux par deux",
+      "corps_html": "Dans son homélie sur cet évangile, Grégoire le Grand remarque que Jésus n'envoie personne seul : la charité, dit-il, ne peut exister à moins d'un, il en faut toujours deux. Le nombre même des envoyés désigne pour lui l'Église tout entière, appelée par avance à cette mission — ce que chaque prédicateur fait seul, l'Église entière, unie deux par deux, le fait avec lui.",
+      "attribution": "Grégoire le Grand, Homélies sur l'Évangile, homélie 17"
+    }
+  ]
+}
