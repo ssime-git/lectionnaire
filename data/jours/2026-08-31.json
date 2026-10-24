@@ -1,0 +1,147 @@
+{
+  "date": "2026-08-31",
+  "date_humaine": "lundi",
+  "semaine": "22ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "1 Co  2, 1-5 ; Lc 4, 16-30",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M20 140 h300\"/><path d=\"M30 140 v-90 q0 -8 8 -8 h250 q8 0 8 8 v90\"/><path d=\"M60 42 v98\"/><path d=\"M280 42 v98\"/><path d=\"M100 95 q60 14 130 -6\"/><path d=\"M100 95 q3 -30 -2 -50\"/><path d=\"M230 89 q4 -28 0 -46\"/><path d=\"M150 60 v-20 h20 v20 z\"/></g><g class=\"trait-liturgie\"><path d=\"M160 8 v20\"/><path d=\"M160 8 l10 22 l-20 0 z\"/></g><g class=\"trait-rubrique\"><path d=\"M112 92 q10 -6 22 -2 q6 2 10 -2 q5 5 12 2\"/><path d=\"M112 92 q-4 6 -2 12\"/><path d=\"M156 90 q4 5 2 12\"/></g></svg>",
+  "titre": "Sans éclat",
+  "titre_html": "Sans <span class=\"it\">éclat</span>",
+  "sous_titre": "Paul renonce à l'art du discours ; Jésus, reconnu de tous à Nazareth, n'y est pas reçu ; le psalmiste tient sa sagesse non de ses maîtres mais de la loi méditée jour et nuit.",
+  "suite_hier": null,
+  "gravure_alt": "Un rouleau déroulé sur un lutrin nu, dans une synagogue sombre ; une main aux doigts légèrement tremblants le tient ouvert, et par une haute fenêtre étroite tombe un rai de lumière qui n'éclaire pas le texte mais la main elle-même.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "1 Co 2, 1-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Pour moi, frères, lorsque je suis allé chez vous, ce n'est pas avec une <button class=\"mot\" data-g=\"g-hyperoche\">supériorité</button> de langage ou de <button class=\"mot\" data-g=\"g-sophia\">sagesse</button> que je suis allé vous annoncer le témoignage de Dieu.</p><p><span class=\"s\">2</span> Car je n'ai pas eu la pensée de savoir parmi vous autre chose que Jésus Christ, et Jésus Christ crucifié.</p><p><span class=\"s\">3</span> Moi-même j'étais auprès de vous dans un état de faiblesse, de crainte, et de grand <button class=\"mot\" data-g=\"g-tromos\">tremblement</button>;</p><p><span class=\"s\">4</span> et ma parole et ma prédication ne reposaient pas sur les discours persuasifs de la sagesse, mais sur une <button class=\"mot\" data-g=\"g-apodeixis\">démonstration</button> d'Esprit et de puissance,</p><p><span class=\"s\">5</span> afin que votre foi fût fondée, non sur la sagesse des hommes, mais sur la puissance de Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-hyperoche",
+          "lemme": "hyperochè",
+          "html": "Le grec porte καθ' ὑπεροχήν (kath' hyperochēn), un terme de rhétorique et de politique qui désigne le surplomb, l'avantage qu'on tient sur une assemblée — le même mot sert ailleurs pour désigner les autorités constituées (1 Tm 2, 2). Segond traduit par « supériorité », ce qui est correct mais efface l'image: Paul dit qu'il n'est pas venu dominer les Corinthiens du haut d'une tribune de mots. Jean Chrysostome, dans ses homélies sur cette épître, note que Paul renonce sciemment à l'art du sophiste, alors même qu'il en connaît les ressorts, pour ne laisser paraître que la croix. Ce renoncement n'est pas de la fausse modestie: c'est une stratégie théologique, afin que la foi des Corinthiens ne s'appuie sur aucun homme."
+        },
+        {
+          "id": "g-sophia",
+          "lemme": "sophia",
+          "html": "Sophia, la sagesse, est le mot-clé de toute la controverse corinthienne: la ville comptait des maîtres de rhétorique payés pour former des orateurs brillants, et l'Église y avait importé ce goût du beau discours. Segond garde « sagesse » sans note, mais le mot grec recouvre autant l'habileté du raisonnement que l'art de convaincre — ce que nous appellerions aujourd'hui la persuasion. Paul ne condamne pas l'intelligence: il refuse qu'elle serve de fondement à la foi, position qu'il développe dès 1 Co 1, 17 (« non avec la sagesse du langage, afin que la croix de Christ ne soit pas rendue vaine »). Calvin, dans son commentaire sur cette épître, y voit l'exemple même du ministère qui doit s'effacer devant l'Esprit."
+        },
+        {
+          "id": "g-tromos",
+          "lemme": "tromos",
+          "html": "Phobos kai tromos, « crainte et tremblement », est une paire de mots que Paul reprend ailleurs (2 Co 7, 15; Ép 6, 5) pour dire un état physique, presque incontrôlable, non une simple émotion. Segond traduit fidèlement, mais le lecteur français risque d'entendre une métaphore là où le texte grec décrit un corps saisi. Ce tremblement n'est pas la faiblesse d'un mauvais orateur: c'est, selon Chrysostome, la marque de celui qui sait porter un trésor qui ne lui appartient pas. Paul l'assume comme une preuve, non comme un aveu d'échec."
+        },
+        {
+          "id": "g-apodeixis",
+          "lemme": "apodeixis",
+          "html": "Apodeixis appartient au vocabulaire de la logique grecque, celui d'Aristote: c'est la démonstration rigoureuse, par déduction nécessaire, qu'on oppose justement à la persuasion (peithō), art de faire croire sans prouver. Segond traduit « démonstration », qui est exact, mais il faut entendre que Paul retourne contre les sophistes leur propre vocabulaire: là où eux vendent la persuasion, lui revendique la preuve — mais une preuve qui n'est pas d'ordre rhétorique, elle est « d'Esprit et de puissance ». Le paradoxe est volontaire: la seule démonstration valable, pour Paul, est celle que l'homme ne peut pas produire lui-même."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 118 (119), 97-98, 99-100, 101-102",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">97</span> Combien j'aime ta loi! Elle est tout le jour l'objet de ma <button class=\"mot\" data-g=\"g-siha\">méditation</button>.</p><p><span class=\"s\">98</span> Tes commandements me rendent plus sage que mes ennemis, car je les ai toujours avec moi.</p><p><span class=\"s\">99</span> Je suis plus instruit que tous mes maîtres, car tes <button class=\"mot\" data-g=\"g-edot\">préceptes</button> sont l'objet de ma méditation.</p><p><span class=\"s\">100</span> J'ai plus d'intelligence que les vieillards, car j'observe tes ordonnances.</p><p><span class=\"s\">101</span> Je retiens mon pied loin de tout mauvais chemin, afin de garder ta parole.</p><p><span class=\"s\">102</span> Je ne m'écarte pas de tes lois, car c'est toi qui m'<button class=\"mot\" data-g=\"g-horah\">instruis</button>.</p>",
+      "gloses": [
+        {
+          "id": "g-siha",
+          "lemme": "śîḥâh",
+          "html": "Le mot hébreu שִׂיחָה (śîḥâh), que Segond rend par « méditation », vient d'une racine qui signifie aussi bien parler, se plaindre, ruminer intérieurement — le même verbe sert pour décrire la prière murmurée d'Anne (1 S 1, 13) ou la plainte de Job. Traduire par « méditation » est juste mais trop calme: le mot hébreu porte l'idée d'un ressassement presque physique, une parole qu'on remâche toute la journée sans bruit. Les rabbins ont vu dans ce verset, ouverture de la section Mem de l'alphabet du psaume, la preuve que l'étude de la Torah n'est jamais achevée, mais reprise sans cesse, comme on reprend un même mot dans sa bouche."
+        },
+        {
+          "id": "g-edot",
+          "lemme": "‘edôt",
+          "html": "עֵדוֹת (‘edôt), que Segond traduit ici par « préceptes », signifie proprement « témoignages » — le même mot désigne l'arche du témoignage (Ex 25, 22). Ce n'est donc pas d'abord une règle qu'on obéit, mais une parole qui atteste, qui rend témoignage à ce que Dieu a fait. En traduisant par « préceptes », Segond aligne ce verset sur le vocabulaire plus neutre de la loi, au risque d'effacer la dimension de mémoire vivante que porte le mot hébreu — on n'observe pas un témoignage comme on observe une règle, on s'en souvient."
+        },
+        {
+          "id": "g-horah",
+          "lemme": "hôrani",
+          "html": "Le verbe hébreu de la fin du verset, הוֹרֵתָנִי (hôrētanî, « tu m'instruis »), vient de la racine ירה (yarah), celle-là même dont dérive le mot תּוֹרָה, Torah — « instruction ». Segond traduit correctement par « instruire », mais la parenté verbale se perd en français: le psalmiste ne dit pas seulement que Dieu lui enseigne des lois, il dit que Dieu est l'auteur même de la Torah en train de se faire en lui, à chaque instant. C'est ce jeu de mots que la tradition rabbinique a toujours entendu dans ce verset, en le citant pour dire que l'étude véritable ne vient jamais de l'homme seul mais toujours, en dernier ressort, de Dieu qui instruit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 4, 16-30",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">16</span> Il se rendit à Nazareth, où il avait été élevé, et, selon sa coutume, il entra dans la synagogue le jour du sabbat. Il se leva pour faire la lecture,</p><p><span class=\"s\">17</span> et on lui remit le livre du prophète Ésaïe. L'ayant déroulé, il trouva l'endroit où il était écrit:</p><p><span class=\"s\">18</span> L'Esprit du Seigneur est sur moi, parce qu'il m'a <button class=\"mot\" data-g=\"g-echrisen\">oint</button> pour annoncer une bonne nouvelle aux pauvres; il m'a envoyé pour guérir ceux qui ont le cœur brisé, pour proclamer aux captifs la délivrance, et aux aveugles le recouvrement de la vue, pour renvoyer libres les opprimés,</p><p><span class=\"s\">19</span> pour publier une année de grâce du Seigneur.</p><p><span class=\"s\">20</span> Ensuite, il roula le livre, le remit au serviteur, et s'assit. Tous ceux qui se trouvaient dans la synagogue avaient les regards fixés sur lui.</p><p><span class=\"s\">21</span> Alors il commença à leur dire: Aujourd'hui cette parole de l'Écriture, que vous venez d'entendre, est <button class=\"mot\" data-g=\"g-peplerotai\">accomplie</button>.</p><p><span class=\"s\">22</span> Et tous lui rendaient témoignage; ils étaient étonnés des paroles de grâce qui sortaient de sa bouche, et ils disaient: N'est-ce pas le fils de Joseph?</p><p><span class=\"s\">23</span> Jésus leur dit: Sans doute vous m'appliquerez ce proverbe: Médecin, guéris-toi toi-même; et vous me direz: Fais ici, dans ta <button class=\"mot\" data-g=\"g-patridi\">patrie</button>, tout ce que nous avons appris que tu as fait à Capernaüm.</p><p><span class=\"s\">24</span> Mais, ajouta-t-il, je vous le dis en vérité, aucun prophète n'est bien reçu dans sa patrie.</p><p><span class=\"s\">25</span> Je vous le dis en vérité: il y avait plusieurs veuves en Israël du temps d'Élie, lorsque le ciel fut fermé trois ans et six mois et qu'il y eut une grande famine sur toute la terre;</p><p><span class=\"s\">26</span> et cependant Élie ne fut envoyé vers aucune d'elles, si ce n'est vers une femme veuve, à Sarepta, dans le pays de Sidon.</p><p><span class=\"s\">27</span> Il y avait aussi plusieurs lépreux en Israël du temps d'Élisée, le prophète; et cependant aucun d'eux ne fut purifié, si ce n'est Naaman le Syrien.</p><p><span class=\"s\">28</span> Ils furent tous remplis de <button class=\"mot\" data-g=\"g-thymos\">colère</button> dans la synagogue, lorsqu'ils entendirent ces choses.</p><p><span class=\"s\">29</span> Et s'étant levés, ils le chassèrent de la ville, et le menèrent jusqu'au sommet de la montagne sur laquelle leur ville était bâtie, afin de le précipiter en bas.</p><p><span class=\"s\">30</span> Mais Jésus, passant au milieu d'eux, s'en alla.</p>",
+      "gloses": [
+        {
+          "id": "g-echrisen",
+          "lemme": "échrisen",
+          "html": "Le verbe grec ἔχρισεν (echrisen), « il m'a oint », partage sa racine avec χριστός (christos), « l'oint » — le titre même de Jésus. En citant Ésaïe 61, Jésus applique donc à lui-même, devant l'assemblée de sa propre ville, le mot qui deviendra son nom. Segond traduit fidèlement « oint », mais un lecteur français n'entend plus ce que tout auditeur grec percevait aussitôt: que Jésus vient de prononcer, sans le nommer, le mot « Christ ». C'est cette identification silencieuse, et non une provocation explicite, qui prépare le scandale des versets suivants."
+        },
+        {
+          "id": "g-peplerotai",
+          "lemme": "peplèrôtai",
+          "html": "Πεπλήρωται (peplērōtai), « est accomplie », est un parfait grec, temps qui décrit une action passée dont l'effet demeure pleinement présent — non un événement clos, mais un état qui continue d'agir. Segond traduit par « est accomplie », qui rend bien le sens mais perd la nuance de durée: le texte dit plutôt « se trouve accomplie, et le demeure, au moment même où je vous parle ». C'est le même verbe que Jean choisit pour le cri de la croix, « tout est accompli » (Jn 19, 30) — Luc, dès la synagogue de Nazareth, place ce mot dans la bouche de Jésus pour désigner tout son ministère à venir."
+        },
+        {
+          "id": "g-patridi",
+          "lemme": "patris",
+          "html": "Πατρίς (patris), la patrie, dérive de πατήρ, le père: c'est la terre des pères, le lieu où l'on est fils de quelqu'un avant d'être soi-même. Segond traduit simplement « patrie », mais le mot grec porte exactement l'objection de la foule: pour eux, Jésus reste « le fils de Joseph » avant d'être l'oint de l'Esprit. Le mot choisi par Luc dit donc, mieux qu'aucune explication, pourquoi Nazareth ne peut pas recevoir ce que Capernaüm, ville étrangère, a reçu sans difficulté."
+        },
+        {
+          "id": "g-thymos",
+          "lemme": "thymos",
+          "html": "Θυμός (thymos) désigne, dans le grec classique, une colère brûlante et quasi organique, le siège même de la passion — le mot qu'Homère emploie pour la fureur d'Achille. Segond traduit sobrement par « colère », ce qui est exact, mais atténue la violence physique que le texte décrit: toute l'assemblée, un instant plus tôt « étonnée des paroles de grâce », bascule d'un seul mouvement dans une fureur qui va jusqu'au meurtre. Ce renversement brutal, souligné par le choix du mot grec, est au cœur du texte: la grâce entendue de trop près devient intolérable."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Corinthe, capitale de l'éloquence",
+      "corps_html": "<p>Corinthe, refondée par Rome en 44 av. J.-C., était une ville de nouveaux riches où proliféraient les maîtres de rhétorique, payés pour enseigner l'art de convaincre en public. Paul y arrive selon Actes 18, 1, juste après son échec oratoire à l'Aréopage d'Athènes (Ac 17, 32-34). Ce double contexte — une ville où l'on juge un message à la qualité de son orateur, et un apôtre qui vient d'essuyer un refus après un discours pourtant soigné — éclaire sa décision délibérée, dès son arrivée, de renoncer à l'art du discours.</p>"
+    },
+    {
+      "titre": "La lecture synagogale et le rouleau d'Ésaïe",
+      "corps_html": "<p>Dans la synagogue du premier siècle, tout homme adulte pouvait être appelé à lire l'Écriture debout, puis à s'asseoir pour la commenter — position qu'occupe ici Jésus. Il lit un texte composite, Ésaïe 61, 1-2 mêlé à une expression d'Ésaïe 58, 6 (« renvoyer libres les opprimés »), signe d'une lecture déjà méditée et non improvisée. La Mishna (traité Meguila) atteste cette liberté de choix du prophète lu après la Torah, à la différence de la lecture fixe du Pentateuque.</p>"
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui n'éblouit pas",
+    "variantes": [
+      "Tu te souviens peut-être d'une discussion où l'on t'a submergé d'arguments solides, enchaînés sans faille, et où tu es reparti convaincu sur le papier mais intact au fond de toi, comme si rien n'avait vraiment touché. Et tu te souviens sans doute aussi d'un instant tout différent: quelqu'un, devant toi, a parlé sans assurance, la voix un peu cassée, avouant presque ne pas savoir comment le dire — et c'est cette parole-là, fragile, sans art, qui est descendue en toi et qui y est restée. Ce que tu as reçu ce jour-là n'était pas une démonstration de sagesse humaine; c'était une puissance qui ne venait manifestement pas de celui qui parlait, et c'est peut-être ainsi, plus que par aucun raisonnement, que Dieu s'est frayé un chemin jusqu'à toi.",
+      "Il y a quelqu'un, dans ta vie, que tu connais depuis si longtemps que tu as cessé de t'attendre à ce qu'il te dise encore quelque chose de neuf — un parent, un vieil ami, quelqu'un dont tu crois avoir fait le tour. Et un jour cette personne te dit une parole juste, une parole qui te concerne au plus près, mais tu la repousses presque aussitôt, non parce qu'elle est fausse, mais précisément parce qu'elle vient de quelqu'un que tu penses trop bien connaître pour qu'il puisse encore t'apprendre quoi que ce soit. C'est cette même fermeture, retournée cette fois vers Dieu, qu'il faut reconnaître: lui aussi peut te parler par une bouche trop familière, un jour trop ordinaire, et te trouver sourd non par incrédulité mais par habitude.",
+      "Il existe des vérités qu'on t'a enseignées une fois, correctement, par quelqu'un de compétent, et que tu as comprises alors comme on comprend une explication: de l'extérieur, intellectuellement, sans qu'elles te changent. Puis il y a ces mêmes vérités, ou d'autres, que tu as portées seul pendant des années, y revenant sans le vouloir dans les moments creux, les retournant sans professeur ni méthode — et qui un jour se sont ouvertes de l'intérieur, avec une clarté que ton premier maître ne t'avait pas donnée, parce qu'elle n'était pas transmissible, seulement mûrie. Ce n'est pas que tu sois devenu plus savant que lui: c'est qu'une fréquentation patiente, tenue devant Dieu seul, produit une intelligence qu'aucun enseignement ponctuel ne peut remplacer."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, tu peux laisser de côté l'idée de bien prier, de trouver les mots justes.",
+    "geste": "Reste simplement en silence quelques minutes, sans chercher à formuler une pensée impressionnante, en redisant seulement si tu le veux le verset 98: « tes commandements me rendent plus sage ».",
+    "note": "Ce n'est pas un exercice de vide mental, mais un renoncement voulu à l'éloquence intérieure — la même que Paul refuse au chapitre 2."
+  },
+  "question": "Y a-t-il, dans ta vie, une parole vraie que tu as refusée uniquement parce qu'elle venait de quelqu'un que tu croyais trop bien connaître ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la faiblesse choisie",
+      "corps_html": "<p>Commentant 1 Co 2, Jean Chrysostome insiste sur le fait que Paul, formé et capable, choisit librement de taire son habileté: « il ne dit pas qu'il ne pouvait parler avec sagesse, mais qu'il ne l'a pas voulu », afin que la puissance de la croix reste seule visible. Cette lecture patristique déplace la question: le texte ne loue pas l'ignorance, mais le renoncement volontaire à ce qui pourrait faire écran à l'Évangile.</p>",
+      "attribution": "Jean Chrysostome, Homélies sur la première épître aux Corinthiens, homélie 4, IVe siècle."
+    },
+    {
+      "titre": "Calvin : nul n'est prophète chez les siens",
+      "corps_html": "<p>Calvin, commentant Luc 4 dans son Harmonie des évangiles, note que la familiarité engendre le mépris précisément parce qu'elle nourrit une fausse connaissance: les gens de Nazareth croient savoir qui est Jésus parce qu'ils connaissent son père, sa maison, son métier, et cette prétendue connaissance leur ferme l'accès à ce qu'ils ne savaient pas encore de lui. Calvin y voit un avertissement permanent contre la présomption qui accompagne l'habitude.</p>",
+      "attribution": "Jean Calvin, Harmonie des trois évangélistes, commentaire sur Luc 4, 1555."
+    },
+    {
+      "titre": "Les rabbins et la section Mem",
+      "corps_html": "<p>Le Talmud (traité Taanit 7a) commente ce type de verset en disant que celui qui étudie pour lui-même, en silence et sans relâche, finit par dépasser en intelligence ceux qui n'ont fait que lui enseigner une fois — non par orgueil, mais parce que la méditation continuelle façonne une compréhension que l'instruction ponctuelle ne donne pas. Cette tradition éclaire pourquoi le psalmiste ose dire qu'il surpasse ses maîtres: ce n'est pas un jugement sur leur valeur, mais sur la nature différente de la fidélité répétée.</p>",
+      "attribution": "Talmud de Babylone, traité Taanit 7a; cf. Pirqé Avot 4, 1."
+    }
+  ]
+}
