@@ -1,0 +1,56 @@
+name: Reconstruire l'index après fusion
+
+# L'index liste tous les jours. Quand chaque brouillon le modifiait, deux PR
+# ouvertes entraient forcément en conflit sur docs/index.html. Les PR ne
+# portent plus que leur JSON et leur page ; l'index est reconstruit ici, sur
+# main, après chaque fusion. Le push déclenche le déploiement Cloudflare Pages.
+#
+# Pas de boucle : ce commit ne touche que docs/index.html, et le déclencheur
+# ne surveille que data/jours/.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/jours/*.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reconstruire-index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    name: Reconstruire docs/index.html
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Installer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installer les dépendances verrouillées
+        run: uv sync --locked
+
+      - name: Reconstruire l'index
+        run: make index
+
+      - name: Commiter l'index s'il a changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          if git diff --cached --quiet; then
+            echo "Index déjà à jour."
+          else
+            git commit -m "Reconstruit l'index après fusion"
+            git pull --rebase origin main
+            git push
+          fi
