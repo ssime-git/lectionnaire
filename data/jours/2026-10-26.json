@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-26",
+  "date_humaine": "lundi",
+  "semaine": "30ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 4, 32 – 5, 8 ; Lc 13, 10-17",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h260\"/><path d=\"M18 128 v-40 q0 -20 22 -20 q22 0 22 20 v40\"/><path d=\"M40 128 v-55\"/><path d=\"M26 115 l8 -5\"/><path d=\"M30 105 l8 -5\"/><path d=\"M80 65 q20 2 28 22 q4 16 -12 26 q-12 9 -24 9\"/><path d=\"M92 122 q1 -10 4 -16\"/><path d=\"M104 122 q-1 -8 2 -14\"/><path d=\"M160 40 v85\"/><path d=\"M150 55 q-20 10 -38 36\"/><path d=\"M300 125 v-60\"/><path d=\"M300 65 q-7 -9 -15 -6\"/><path d=\"M300 67 q8 -11 16 -4\"/><path d=\"M266 124 h68\"/><path d=\"M264 129 h70\"/><path d=\"M268 134 h62\"/></g><g class=\"trait-liturgie\"><path d=\"M108 88 q6 -3 10 2\"/></g></svg>",
+  "titre": "Se redresser",
+  "titre_html": "Se <span class=\"it\">redresser</span>",
+  "sous_titre": "Une femme courbée depuis dix-huit ans, un arbre planté près de l'eau, un pardon déjà reçu — trois manières de se tenir debout sans l'avoir mérité.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois représentant une femme voûtée dans l'ombre d'une synagogue, la main du Christ posée sur son dos courbé, tandis qu'au loin un arbre élancé se dresse près d'un filet d'eau gravé en traits parallèles.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 4, 32 – 5, 8",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">32</span> Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ. <span class=\"s\">1</span> Devenez donc les <button class=\"mot\" data-g=\"g-mimetai\">imitateurs</button> de Dieu, comme des enfants bien-aimés ; <span class=\"s\">2</span> et marchez dans la <button class=\"mot\" data-g=\"g-agape\">charité</button>, à l'exemple de Christ, qui nous a aimés, et qui s'est livré lui-même à Dieu pour nous comme une <button class=\"mot\" data-g=\"g-prosphora\">offrande</button> et un sacrifice de bonne odeur. <span class=\"s\">3</span> Que l'impudicité, qu'aucune espèce d'impureté, ou l'avarice, ne soient même pas nommées parmi vous, ainsi qu'il convient à des saints. <span class=\"s\">4</span> Qu'on n'entende ni paroles déshonnêtes, ni propos insensés, ni plaisanteries, choses qui sont contraires à la bienséance ; qu'on entende plutôt des actions de grâces. <span class=\"s\">5</span> Car, sachez-le bien, aucun impudique, ou impur, ou cupide, c'est-à-dire, idolâtre, n'a d'héritage dans le royaume de Christ et de Dieu. <span class=\"s\">6</span> Que personne ne vous séduise par de vains discours ; car c'est à cause de ces choses que la colère de Dieu vient sur les fils de la rébellion. <span class=\"s\">7</span> N'ayez donc aucune part avec eux. <span class=\"s\">8</span> Autrefois vous étiez <button class=\"mot\" data-g=\"g-skotos\">ténèbres</button>, et maintenant vous êtes lumière dans le Seigneur. Marchez comme des enfants de lumière !",
+      "gloses": [
+        {
+          "id": "g-mimetai",
+          "lemme": "mimètai",
+          "html": "Le grec dit <span class=\"gr\">μιμηταί</span> (mimètai), de la même racine que « mime » : il ne s'agit pas d'imitation extérieure et appliquée, mais de jouer si intimement le rôle qu'on devient ce que l'on représente. Segond traduit par « imitateurs », fidèle au mot, mais le terme français a perdu la force théâtrale de l'original. Chrysostome insiste sur ce point dans son homélie : imiter Dieu n'est pas un commandement de plus, c'est la réponse logique d'un enfant à un Père dont il porte déjà la ressemblance par grâce."
+        },
+        {
+          "id": "g-agape",
+          "lemme": "agapè",
+          "html": "Segond traduit <span class=\"gr\">ἀγάπη</span> (agapè) par « charité », suivant une tradition latine (caritas) reprise par la Vulgate et par la Bible du roi Jacques (« charity »). Le choix est discutable : en français moderne, « charité » s'est rétréci à l'aumône, alors qu'agapè désigne chez Paul l'amour qui se donne sans retour, celui-là même que le Christ a montré en s'offrant. Les traductions postérieures reviendront au mot plus large d'« amour »."
+        },
+        {
+          "id": "g-prosphora",
+          "lemme": "prosphora",
+          "html": "<span class=\"gr\">προσφορά</span> (prosphora) est le terme technique du culte, celui que la Septante emploie pour les offrandes présentées sur l'autel. En l'appliquant au Christ lui-même, Paul fait de la croix le véritable sacrifice dont les offrandes lévitiques n'étaient que la figure — une lecture que développera longuement l'épître aux Hébreux. Segond garde le mot concret « offrande » plutôt qu'une paraphrase, laissant au lecteur la charge de faire le lien avec le culte de l'Ancien Testament."
+        },
+        {
+          "id": "g-skotos",
+          "lemme": "skotos",
+          "html": "<span class=\"gr\">σκότος</span> (skotos), les ténèbres, et <span class=\"gr\">φῶς</span> (phôs), la lumière : ce couple appartient au vocabulaire baptismal le plus ancien de l'Église, celui des catéchumènes dépouillés de leurs vieux vêtements avant d'être revêtus de blanc. Paul ne décrit pas un progrès moral graduel mais un changement d'état déjà accompli — « vous étiez », « vous êtes » — que l'exhortation « marchez » vient seulement mettre en actes. Augustin reprendra ce contraste pour opposer les deux cités, celle de la lumière et celle des ténèbres."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 1, 1-2, 3, 4.6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> <button class=\"mot\" data-g=\"g-heureux\">Heureux</button> l'homme qui ne marche pas selon le conseil des méchants, Qui ne s'arrête pas sur la voie des pécheurs, Et qui ne s'assied pas en compagnie des moqueurs, <span class=\"s\">2</span> Mais qui trouve son plaisir dans la <button class=\"mot\" data-g=\"g-torah\">loi</button> de l'Éternel, Et qui la médite jour et nuit ! <span class=\"s\">3</span> Il est comme un <button class=\"mot\" data-g=\"g-arbre\">arbre</button> planté près d'un courant d'eau, Qui donne son fruit en sa saison, Et dont le feuillage ne se dessèche point : Tout ce qu'il fait lui réussit. <span class=\"s\">4</span> Il n'en est pas ainsi des méchants : Ils sont comme la paille que le vent dissipe. <span class=\"s\">6</span> Car l'Éternel connaît la voie des justes, Et la voie des pécheurs mène à la ruine.",
+      "gloses": [
+        {
+          "id": "g-heureux",
+          "lemme": "ashrei",
+          "html": "L'hébreu <span class=\"gr\">אַשְׁרֵי</span> (ashrei) ouvre le psautier tout entier ; c'est un pluriel construit sans verbe, littéralement « bonheurs de l'homme qui... », une exclamation plus qu'une déclaration. Segond traduit par « heureux », au risque de faire entendre un sentiment, alors que le mot décrit plutôt une condition objective, celle de qui marche dans la bonne direction. Les rabbins y lisaient une porte d'entrée délibérée au livre : le premier mot du Psautier répond au dernier mot de la Torah."
+        },
+        {
+          "id": "g-torah",
+          "lemme": "torah",
+          "html": "<span class=\"gr\">תּוֹרָה</span> (torah) vient d'une racine qui signifie enseigner, montrer le chemin — bien plus qu'une liste de lois, c'est une instruction vivante donnée par un maître. Segond traduit systématiquement par « loi », suivant la Septante (nomos) et la Vulgate (lex), un choix qui a durci dans les langues européennes l'image d'un code plutôt que celle d'une parole qui forme. Calvin, dans son commentaire sur ce psaume, insiste sur la méditation « jour et nuit » : la torah n'instruit que celui qui y revient sans cesse, non celui qui la consulte une fois."
+        },
+        {
+          "id": "g-arbre",
+          "lemme": "arbre planté",
+          "html": "L'image de l'arbre planté près d'un courant d'eau reprend presque mot pour mot Jérémie 17, 8, où le même contraste oppose l'homme qui se confie dans l'Éternel à celui qui se confie dans la chair. Le verbe hébreu sous-jacent évoque une transplantation, un arbre déplacé puis enraciné là où il ne pouvait pas grandir seul : la stabilité du juste n'est donc pas une vertu native, mais le fruit d'un geste qui l'a mis près de l'eau."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 13, 10-17",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">10</span> Jésus enseignait dans une des synagogues, le jour du sabbat. <span class=\"s\">11</span> Et voici, il y avait une femme <button class=\"mot\" data-g=\"g-pneuma-astheneia\">possédée d'un esprit</button> qui la rendait infirme depuis dix-huit ans ; elle était courbée, et ne pouvait pas du tout se redresser. <span class=\"s\">12</span> Jésus, l'ayant vue, l'appela, et lui dit : Femme, tu es <button class=\"mot\" data-g=\"g-apolelusai\">délivrée</button> de ton infirmité. <span class=\"s\">13</span> Et il lui imposa les mains. A l'instant elle se redressa, et glorifia Dieu. <span class=\"s\">14</span> Le chef de la synagogue, irrité de ce que Jésus avait opéré cette guérison le jour du sabbat, dit : Il y a six jours pour travailler ; venez donc vous faire guérir ces jours-là, et non pas le jour du sabbat. <span class=\"s\">15</span> Mais le Seigneur lui répondit : <button class=\"mot\" data-g=\"g-hypocrites\">Hypocrites</button> ! est-ce que chacun de vous, le jour du sabbat, ne détache pas son bœuf ou son âne de la crèche, pour le mener boire ? <span class=\"s\">16</span> Et cette femme, qui est fille d'Abraham, et que <button class=\"mot\" data-g=\"g-satan\">Satan</button> tenait liée depuis dix-huit ans, ne fallait-il pas la délivrer de cette chaîne le jour du sabbat ? <span class=\"s\">17</span> Pendant qu'il parlait ainsi, tous ses adversaires étaient confus, et toute la foule se réjouissait de toutes les choses glorieuses qu'il faisait.",
+      "gloses": [
+        {
+          "id": "g-pneuma-astheneia",
+          "lemme": "pneuma astheneias",
+          "html": "Le texte grec dit littéralement qu'elle avait « un esprit de faiblesse » (<span class=\"gr\">πνεῦμα ἀσθενείας</span>), une expression que Segond déplie en « possédée d'un esprit qui la rendait infirme » pour la rendre intelligible en français. Luc, médecin de profession selon la tradition, distingue cette infirmité d'origine spirituelle d'une maladie purement physique, sans pour autant la réduire à une simple possession démoniaque comme ailleurs dans son évangile."
+        },
+        {
+          "id": "g-apolelusai",
+          "lemme": "lelusai",
+          "html": "Jésus dit <span class=\"gr\">λέλυσαι</span> (lelusai), parfait passif du verbe <span class=\"gr\">λύω</span>, « délier » — le même verbe qu'il emploie au verset 15 pour l'âne qu'on détache de la crèche, et que l'on retrouve au verset 16 pour la chaîne que Satan avait nouée. Segond traduit par « tu es délivrée », ce qui est juste sur le fond mais efface le fil verbal que Luc a tissé exprès entre les trois versets : lier et délier sont le vrai sujet de la scène, bien avant la question du jour."
+        },
+        {
+          "id": "g-hypocrites",
+          "lemme": "hypokritai",
+          "html": "<span class=\"gr\">ὑποκριταί</span> désigne à l'origine les acteurs du théâtre grec, ceux qui jouent un rôle derrière un masque. Jésus ne vise pas ici une fausse piété ostentatoire, comme en Matthieu 6, mais un décalage concret entre la règle invoquée et son application : on délie son bétail le jour du sabbat sans scrupule, mais on refuserait de délier une fille d'Abraham. Le mot grec appartient au vocabulaire du jugement que Jésus porte, dans les évangiles, sur l'écart entre le dire et le faire."
+        },
+        {
+          "id": "g-satan",
+          "lemme": "Satan / deô",
+          "html": "Le texte dit que Satan « tenait liée » (<span class=\"gr\">δέω</span>, le même verbe que pour la chaîne) cette femme depuis dix-huit ans — Luc nomme explicitement l'adversaire, là où un diagnostic moderne parlerait seulement d'une maladie du dos. Ce n'est pas une explication causale au sens médical, mais une qualification théologique : toute force qui courbe un être humain et l'empêche de se tenir debout devant Dieu relève, pour Luc, du règne que le Christ est venu démanteler."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre à de jeunes baptisés",
+      "corps_html": "L'épître aux Éphésiens appartient à ce que l'on appelle les « lettres de la captivité », écrites depuis une prison romaine vers 60-62. Ses trois premiers chapitres déploient une doctrine de l'Église comme corps du Christ ; à partir du chapitre 4, le ton change : c'est l'instruction morale qui suit la catéchèse baptismale, avec ses listes de vices à quitter et de vertus à revêtir, un genre littéraire que l'on retrouve aussi bien chez les moralistes stoïciens que dans les premières communautés chrétiennes."
+    },
+    {
+      "titre": "Le sabbat, jour de la miséricorde ou du repos ?",
+      "corps_html": "La guérison de Luc 13 s'inscrit dans la section du voyage vers Jérusalem (Luc 9, 51 – 19, 27), traversée de controverses sur le sabbat (6, 1-11 ; 14, 1-6). Le chef de synagogue n'invoque pas un caprice : la Mishna elle-même, codifiée plus tard mais reflétant des usages anciens, encadre strictement les soins autorisés ce jour-là. Jésus ne nie pas la règle, il déplace la question : s'agit-il ici de travail, ou de délivrance ?"
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu ne peux pas redresser toi-même",
+    "variantes": [
+      "Il y a des blessures que tu portes si longtemps qu'elles finissent par devenir ta façon de te tenir debout — une rancune ancienne, une honte jamais dite, qui te courbe sans que tu t'en rendes bien compte, jusqu'à ce que te redresser devienne presque impossible par ta seule volonté. Tu as beau te raisonner, te dire qu'il faudrait pardonner ou lâcher, rien ne se déplace. Ce n'est pas un effort supplémentaire qui te manque, mais une parole qui vienne de l'extérieur de toi et touche ce que tu ne peux pas atteindre seul — la même parole qui redresse la femme courbée sans qu'elle ait rien demandé d'autre que d'être là, un jour de sabbat, dans la synagogue.",
+      "Prier chaque jour sans qu'il se passe rien de visible, lire un texte qui ne te dit rien ce matin-là, continuer malgré tout parce que c'est l'heure et que c'est ainsi — tu ne sais pas ce que ces jours répétés fabriquent en toi, et souvent tu doutes qu'ils fabriquent quoi que ce soit. Puis vient un moment d'épreuve où tu te découvres étrangement stable, nourri par une racine que tu ne te souviens pas avoir creusée. C'est la promesse silencieuse du premier psaume : l'arbre ne sait pas qu'il porte du fruit en sa saison, il est seulement resté planté près de l'eau qu'on lui a donnée.",
+      "Tu as déjà reçu un pardon qui ne t'était pas dû, une patience que tu n'avais pas méritée de la part de quelqu'un qui aurait eu toutes les raisons de te la refuser. Tu t'en souviens encore, longtemps après, non pas comme d'une dette que tu devrais rembourser, mais comme d'une manière d'être que cela a ouverte en toi, presque sans que tu le décides. C'est de là, et non d'un effort de vertu, que Paul parle quand il demande d'imiter Dieu : on devient bon envers les autres non pour mériter le pardon reçu, mais parce qu'on l'a réellement reçu, et que cela déplace en nous quelque chose qui ressemble à de la lumière."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le Christ ne demande à la femme courbée ni un effort ni une explication : il lui dit seulement qu'elle est délivrée, et il pose les mains sur elle. Avant de chercher à te redresser toi-même, laisse-toi regarder.",
+    "geste": "Nomme, en silence devant Dieu, une chose précise qui te tient courbé depuis longtemps — et dis-la, sans l'excuser ni l'aggraver, comme on dépose un poids.",
+    "note": "Rien n'oblige à ressentir un changement immédiat : la femme de l'évangile a attendu dix-huit ans un jour ordinaire de sabbat."
+  },
+  "question": "Qu'est-ce qui, en toi, attend depuis longtemps une parole que tu ne peux pas te dire toi-même ?",
+  "racines": [
+    {
+      "titre": "Imiter avant de comprendre",
+      "corps_html": "Chrysostome ne cherche pas d'abord à expliquer le pardon, mais pourquoi Paul fonde l'exhortation sur un fait déjà accompli plutôt que sur une menace à venir. Les Éphésiens n'ont pas à être terrorisés par des peines futures : ils doivent se souvenir de ce que Dieu a déjà fait pour eux en Christ. Imiter Dieu n'est pas un effort moral isolé, dit-il, c'est la réponse d'un enfant à un Père dont il porte déjà, par grâce, la ressemblance.",
+      "attribution": "Jean Chrysostome, Homélie XVII sur l'Épître aux Éphésiens"
+    },
+    {
+      "titre": "L'homme céleste planté",
+      "corps_html": "Augustin lit le premier psaume non comme une morale générale sur le juste et l'impie, mais comme un portrait du Christ lui-même, l'homme céleste qui n'a pas suivi le conseil des impies là où Adam, l'homme terrestre, a cédé. L'arbre planté près du courant d'eau devient alors une image christologique avant d'être une promesse pour le lecteur : c'est en étant greffé à cet homme-là, dans l'Église qu'il engendre, que le psaume devient vrai pour chacun.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 1"
+    },
+    {
+      "titre": "Deux fois dix-huit ans",
+      "corps_html": "Luc place cette guérison juste après l'appel à la repentance et l'image du figuier stérile (13, 1-9) : les dix-huit victimes de la tour de Siloé (13, 4) et les dix-huit années de cette femme courbée se répondent délibérément dans la construction du chapitre. Là où la mort avait frappé sans explication, ici la miséricorde agit sans délai — Jésus n'attend pas un jour plus opportun que le sabbat pour délier ce que Satan avait lié.",
+      "attribution": "Note sur la composition de Luc 13"
+    }
+  ],
+  "videos": [
+    {
+      "id": "wktA2VE4yhY",
+      "raison": "Éphésiens 4, 32 fonde tout le passage sur le pardon déjà reçu en Christ, avant toute exhortation morale.",
+      "groupe": "mot"
+    },
+    {
+      "id": "6CByTcTzbKI",
+      "raison": "Paul demande de « marcher dans la charité » (Éphésiens 5, 2) : cette vidéo explore le mot grec agapè que Segond traduit par charité.",
+      "groupe": "mot"
+    },
+    {
+      "id": "dFLNnAF0Kno",
+      "raison": "Étude consacrée exactement au psaume lu aujourd'hui, sur l'image de l'arbre planté près de l'eau (Psaume 1, 3).",
+      "groupe": "mot"
+    },
+    {
+      "id": "6lowTdQ61Y4",
+      "raison": "Le conflit de Luc 13, 14-16 porte tout entier sur le sens du sabbat, que cette vidéo retrace depuis la Genèse et l'Exode.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Situe la guérison de Luc 13, 10-17 dans la grande section du voyage de Jésus vers Jérusalem.",
+      "groupe": "livre"
+    },
+    {
+      "id": "7pUE5wvhbBI",
+      "raison": "Montre comment les exhortations d'Éphésiens 4-5 découlent de la doctrine de l'Église exposée dans les trois premiers chapitres.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Jésus traite-t-il le chef de synagogue d'« hypocrite » pour une objection qui semble, après tout, respecter la Loi ?",
+      "reponse_html": "Le chef de synagogue ne dit rien de faux sur le plan de la règle : six jours sont donnés pour le travail, le septième pour le repos. Mais Jésus relève que la même communauté détache chaque sabbat son bœuf ou son âne pour l'abreuver, sans y voir de transgression — la règle est donc appliquée avec souplesse dès qu'il s'agit d'un animal utile. Le mot « hypocrite » ne porte pas sur une insincérité de façade, il nomme cet écart précis : on accepte de délier une bête un jour de sabbat, on refuse de délier une fille d'Abraham. Luc construit toute la scène autour du verbe lier-délier, du verset 12 au verset 16, pour que cet écart devienne visible.",
+      "sources": {
+        "jour": [
+          "Luc 13, 14-16"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le pardon de Dieu en Éphésiens 4, 32 est-il vraiment sans condition préalable ?",
+      "reponse_html": "Le texte place le pardon reçu avant tout commandement : « comme Dieu vous a pardonné en Christ » fonde l'exhortation, il n'en est pas la récompense. Chrysostome remarque que Paul choisit délibérément d'argumenter à partir d'un fait déjà accompli plutôt que d'une menace à venir, parce que rappeler ce que Dieu a fait persuade davantage que décrire ce qu'il pourrait faire. Imiter Dieu, dans ce passage, n'est donc pas la condition du pardon mais sa conséquence naturelle, presque organique, chez celui qui l'a réellement reçu.",
+      "sources": {
+        "jour": [
+          "Éphésiens 4, 32 – 5, 1"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "homélie XVII sur l'Épître aux Éphésiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que signifie concrètement « marcher comme des enfants de lumière » (Éphésiens 5, 8) ?",
+      "reponse_html": "Paul ne demande pas de produire de la lumière par ses propres efforts, mais de marcher en cohérence avec un état déjà reçu : « vous étiez ténèbres... vous êtes lumière ». Le verbe « marcher » revient à plusieurs reprises dans ce passage (4, 1 ; 5, 2 ; 5, 8) et désigne chaque fois une conduite concrète et quotidienne, jamais une illumination intérieure isolée. Concrètement, le contexte immédiat donne le contenu de cette marche : la bonté, le pardon mutuel, et l'absence des paroles et des actes énumérés aux versets 3 à 5.",
+      "sources": {
+        "jour": [
+          "Éphésiens 5, 8",
+          "Éphésiens 4, 1"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le premier psaume promet-il que le juste ne connaîtra jamais l'échec ou le malheur ?",
+      "reponse_html": "« Tout ce qu'il fait lui réussit » n'est pas une promesse de prospérité matérielle ou d'absence d'épreuve, mais l'affirmation que la vie tournée vers la loi de Dieu porte du fruit en son temps, comme l'arbre planté près de l'eau, et non selon le calendrier qu'on voudrait lui imposer. Augustin va plus loin : il lit ce premier homme heureux comme une figure du Christ lui-même, le seul qui n'ait jamais suivi le conseil des impies, et fait de l'Église la postérité greffée sur cet arbre-là. Lu ainsi, le psaume ne promet pas l'épreuve évitée, mais une racine qui tient devant elle.",
+      "sources": {
+        "jour": [
+          "Psaume 1, 3"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "discours sur le psaume 1"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ep-XVII",
+    "augustin-Ps-1"
+  ]
+}
