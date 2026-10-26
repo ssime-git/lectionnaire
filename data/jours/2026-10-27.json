@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-27",
+  "date_humaine": "mardi",
+  "semaine": "30ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 5, 21-33 ; Lc 13, 18-21",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M120 130 v-55\"/><path d=\"M120 95 q-20 -10 -35 -25\"/><path d=\"M120 85 q18 -12 35 -20\"/><path d=\"M120 75 q3 -18 5 -30\"/><path d=\"M78 68 q5 -6 10 0 q5 -6 10 0\"/><path d=\"M118 40 q5 -6 10 0 q5 -6 10 0\"/><path d=\"M195 100 L240 55 L285 100\"/><path d=\"M195 100 v30\"/><path d=\"M285 100 v30\"/></g><g class=\"trait-rubrique\"><path d=\"M255 130 q10 -6 0 -12 q-10 -6 0 -12 q10 -6 0 -12\"/></g><g class=\"trait-liturgie\"><path d=\"M250 130 L225 122 L225 92 L250 100 Z\"/></g></svg>",
+  "titre": "Croissance cachée",
+  "titre_html": "Croissance <span class=\"it\">cachée</span>",
+  "sous_titre": "Un mystère qui travaille sans bruit, dans la maison comme dans la farine.",
+  "suite_hier": null,
+  "gravure_alt": "Un arbre vigoureux né d'un grain minuscule, des oiseaux nichés dans ses branches ; à ses pieds, une vigne s'enroule autour du seuil d'une maison dont la porte reste ouverte.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ep 5, 21-33",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">21</span> vous <button class=\"mot\" data-g=\"g-hypotassomenoi\">soumettant</button> les uns aux autres dans la crainte de Christ. <span class=\"s\">22</span> Femmes, soyez soumises à vos maris, comme au Seigneur ; <span class=\"s\">23</span> car le mari est le <button class=\"mot\" data-g=\"g-kephale\">chef</button> de la femme, comme Christ est le chef de l’Église, qui est son corps, et dont il est le Sauveur. <span class=\"s\">24</span> Or, de même que l’Église est soumise à Christ, les femmes aussi doivent l’être à leurs maris en toutes choses. <span class=\"s\">25</span> Maris, <button class=\"mot\" data-g=\"g-agapate\">aimez</button> vos femmes, comme Christ a aimé l’Église, et s’est livré lui-même pour elle, <span class=\"s\">26</span> afin de la sanctifier par la parole, après l’avoir purifiée par le baptême d’eau, <span class=\"s\">27</span> afin de faire paraître devant lui cette Église glorieuse, sans tache, sans ride, ni rien de semblable, mais sainte et irrépréhensible. <span class=\"s\">28</span> C’est ainsi que les maris doivent aimer leurs femmes comme leurs propres corps. Celui qui aime sa femme s’aime lui-même. <span class=\"s\">29</span> Car jamais personne n’a haï sa propre chair ; mais il la nourrit et en prend soin, comme Christ le fait pour l’Église, <span class=\"s\">30</span> parce que nous sommes membres de son corps. <span class=\"s\">31</span> C’est pourquoi l’homme quittera son père et sa mère, et s’attachera à sa femme, et les deux deviendront une seule chair. <span class=\"s\">32</span> Ce <button class=\"mot\" data-g=\"g-mysterion\">mystère</button> est grand ; je dis qu’il se rapporte à Christ et à l’Église. <span class=\"s\">33</span> Du reste, que chacun de vous aime sa femme comme lui-même, et que la femme respecte son mari.",
+      "gloses": [
+        {
+          "id": "g-hypotassomenoi",
+          "lemme": "hypotassomenoi",
+          "html": "Le verbe grec <span class=\"gr\">hypotassomenoi</span> vient du vocabulaire militaire : se ranger sous un ordre commun, prendre sa place dans une ligne. Segond traduit par « soumettant », qui en français évoque surtout l'écrasement d'une volonté, alors que le grec dit d'abord un ordre voulu et partagé. Le participe est au pluriel et vise « les uns aux autres » : avant de distinguer femmes et maris, Paul pose une réciprocité que la suite du texte vient seulement préciser, jamais abolir. Jean Chrysostome, dans son homélie XX sur cette épître, part de ce verset pour montrer que l'institution du mariage repose sur une concorde voulue, non sur une contrainte."
+        },
+        {
+          "id": "g-kephale",
+          "lemme": "kephalē",
+          "html": "<span class=\"gr\">Kephalē</span> signifie la tête, mais aussi, en grec courant, la source d'un fleuve ou l'origine d'une chose, sens que « chef » ne rend pas en français. Segond choisit la traduction la plus institutionnelle, celle qui a dominé la réception latine et occidentale du texte ; d'autres lecteurs préfèrent y entendre une origine plutôt qu'un rang. Chrysostome, dans son homélie XX, refuse en tout cas d'y lire une domination : le modèle donné au mari n'est pas un pouvoir mais le Christ qui se livre, verset 25, pour celle dont il est dit le chef."
+        },
+        {
+          "id": "g-agapate",
+          "lemme": "agapate",
+          "html": "Le verbe est à l'impératif présent : <span class=\"gr\">agapate</span> dit un amour continu, à recommencer chaque jour, et non un sentiment éprouvé une fois. Segond le traduit sobrement par « aimez », perdant la nuance de durée que porte le présent grec par opposition à un ordre ponctuel. Ce même mot, agapè, désignera dans toute la tradition chrétienne un amour qui se donne plutôt qu'un amour qui désire, distinction reprise constamment depuis les Pères jusqu'à aujourd'hui."
+        },
+        {
+          "id": "g-mysterion",
+          "lemme": "mystērion",
+          "html": "<span class=\"gr\">Mystērion</span> ne désigne pas un secret ésotérique mais, chez Paul, le plan de Dieu longtemps caché et maintenant dévoilé (cf. Ep 1, 9 ; 3, 4-6). Segond transpose simplement le mot grec plutôt que de le traduire, gardant intact son poids technique. La Vulgate latine, en revanche, l'a rendu par sacramentum, ce qui a conduit l'Occident médiéval à compter le mariage parmi les sept sacrements — lecture que Calvin, dans son Institution (IV, 19), a ensuite refusée, estimant que Paul parle d'une image et non d'un rite instituant la grâce."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 127 (128), 1-2, 3, 4-5",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Cantique des degrés. <button class=\"mot\" data-g=\"g-esher\">Heureux</button> tout homme qui craint l’Éternel, qui marche dans ses voies ! <span class=\"s\">2</span> Tu jouis alors du travail de tes mains, tu es heureux, tu prospères. <span class=\"s\">3</span> Ta femme est comme une <button class=\"mot\" data-g=\"g-poriyya\">vigne féconde</button>, dans l’intérieur de ta maison ; tes fils sont comme des plants d’olivier, autour de ta table. <span class=\"s\">4</span> C’est ainsi qu’est béni l’homme qui craint l’Éternel. <span class=\"s\">5</span> L’Éternel te bénira de Sion ; et tu verras le bonheur de Jérusalem tous les jours de ta vie.",
+      "gloses": [
+        {
+          "id": "g-esher",
+          "lemme": "ashrei",
+          "html": "<span class=\"gr\">Ashrei</span> ouvre nombre de psaumes de sagesse (cf. Ps 1, 1) ; ce n'est pas l'expression d'un sentiment mais une déclaration objective, proche de « en bonne voie est… ». Segond traduit par « heureux », suivant les Septante (<span class=\"gr\">makarios</span>) puis la Vulgate (beatus), vocabulaire qui deviendra celui des Béatitudes évangéliques. Augustin, dans son discours sur ce psaume, avertit que ce bonheur annoncé n'est pas d'abord terrestre : lu à la lettre, il scandaliserait ceux dont la piété ne reçoit pas ces biens visibles."
+        },
+        {
+          "id": "g-poriyya",
+          "lemme": "poriyyah",
+          "html": "<span class=\"gr\">Poriyyah</span> vient de la racine qui signifie porter du fruit ; Segond ajoute l'adjectif « féconde » pour expliciter ce que le participe hébreu contenait déjà en un seul mot. L'image de la vigne et des plants d'olivier autour de la table appartient au vocabulaire ordinaire de la bénédiction domestique dans l'Ancien Testament. Augustin refuse pourtant d'en rester à ce sens littéral : il y lit une allégorie de l'Église et de la Jérusalem céleste, pour que ce psaume console aussi ceux à qui la vie n'a pas donné cette prospérité-là."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 13, 18-21",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">18</span> Il dit encore : à quoi est semblable le royaume de Dieu, et à quoi le comparerai-je ? <span class=\"s\">19</span> Il est semblable à un <button class=\"mot\" data-g=\"g-kokkos\">grain de sénevé</button> qu’un homme a pris et jeté dans son jardin ; il pousse, devient un arbre, et les oiseaux du ciel habitent dans ses branches. <span class=\"s\">20</span> Il dit encore : à quoi comparerai-je le royaume de Dieu ? <span class=\"s\">21</span> Il est semblable à du <button class=\"mot\" data-g=\"g-zyme\">levain</button> qu’une femme a pris et mis dans trois mesures de farine, jusqu’à ce que toute la pâte soit levée.",
+      "gloses": [
+        {
+          "id": "g-kokkos",
+          "lemme": "kokkos sinapeōs",
+          "html": "Le <span class=\"gr\">kokkos sinapeōs</span>, le grain de moutarde, n'est pas botaniquement la plus petite graine du monde — les auditeurs galiléens le savaient bien — mais la plus petite de celles qu'on semait volontairement dans un jardin, pour obtenir un arbuste assez vigoureux pour abriter des oiseaux. Cette image de l'arbre qui héberge des oiseaux reprend volontairement celle d'Ézéchiel 17, 23 et de Daniel 4, 9, où un grand arbre figure un royaume puissant. Segond garde le mot vieilli « sénevé », déjà rare en français au moment de sa traduction."
+        },
+        {
+          "id": "g-zyme",
+          "lemme": "zymē",
+          "html": "<span class=\"gr\">Zymē</span>, le levain, est presque toujours une image négative dans l'Écriture, figure du péché ou de l'erreur qui corrompt toute la pâte (cf. Mt 16, 6 ; 1 Co 5, 6-8). Jésus retourne ici délibérément ce symbole habituel pour dire une croissance cachée et finalement irrésistible du règne de Dieu. Segond traduit simplement « levain », sans atténuer ce choix de comparaison volontairement déconcertant pour ses auditeurs."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un code de maison renversé",
+      "corps_html": "Les traités antiques sur l'économie domestique (Aristote, Politique I) enseignaient au maître comment commander à sa femme, ses enfants, ses esclaves. Paul reprend cette forme littéraire dite « code de maison », courante dans le monde gréco-romain, mais il en change le fondement : l'autorité n'y est plus un droit du plus fort, elle est mesurée à la mort du Christ pour l'Église (Ep 5, 25). La hiérarchie sociale demeure nommée, mais elle est intérieurement minée par l'exigence du don."
+    },
+    {
+      "titre": "Après une guérison contestée",
+      "corps_html": "Les deux paraboles de Lc 13, 18-21 suivent la controverse où Jésus guérit, un jour de sabbat, une femme courbée depuis dix-huit ans, provoquant l'indignation du chef de synagogue (Lc 13, 10-17). Luc les situe donc comme une réponse : là où l'institution religieuse veut mesurer et contrôler le temps de Dieu, Jésus annonce un règne qui grandit à son heure, sans demander la permission de personne."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce que tu ne vois pas grandir",
+    "variantes": [
+      "Tu as prié longtemps, des années peut-être, pour une chose qui ne venait pas, et tu as fini par croire que rien ne se passait en toi pendant ce temps d'attente apparemment vide. Puis un jour une colère qui montait autrefois sans effort ne monte plus, un pardon qui coûtait devient presque simple, une patience que tu n'avais pas s'est installée sans que tu l'aies vue s'installer. Personne ne t'a montré le moment précis où cela a changé. C'est ainsi, dit Jésus, que vient le règne de Dieu : comme un grain si petit qu'on l'oublie d'avoir semé, devenu assez grand pour porter d'autres vies que la tienne.",
+      "Il y a, dans une vie partagée de longues années, des matins où rien ne se sent, où l'amour promis le jour des noces ressemble à une habitude plutôt qu'à une flamme, où tu te demandes si quelque chose grandit vraiment entre vous deux. Et puis, sans cérémonie, tu te rends compte un soir que vous avez traversé un deuil, une maladie, une dispute ancienne, et que ce qui vous tient encore ensemble n'est plus ce qui vous attirait au commencement, mais quelque chose de plus patient, de plus donné, de presque invisible à force d'avoir été quotidien. C'est ce lien-là, caché dans la pâte de chaque jour, que l'Écriture ose comparer à celui du Christ et de son Église.",
+      "Tu as peut-être, enfant, reçu une bénédiction, une parole de bien sur toi, dont tu n'as rien senti ce jour-là, et que tu as presque oubliée. Des années plus tard, dans une pièce où tu ne t'y attendais pas, cette parole revient intacte et elle te tient debout, alors que tu étais sûr de l'avoir perdue. Ni toi ni celui qui l'a prononcée n'avez fait grandir ce qu'elle portait : elle a travaillé seule, sous la surface, comme le levain dans la farine que personne ne regarde lever."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Rien, aujourd'hui, ne te demande de forcer une croissance que tu ne commandes pas.",
+    "geste": "Ce soir, nomme devant Dieu une chose dans ta vie, ton couple, ta famille ou ta foi, que tu n'as pas vue grandir et qui pourtant a grandi ; remets-la-lui sans chercher à en mesurer l'avancement.",
+    "note": "Tu peux relire lentement Ps 128, 1-2, comme une bénédiction prononcée sur ta propre maison, même imparfaite."
+  },
+  "question": "Qu'est-ce qui, dans ta vie avec Dieu ou avec ceux que tu aimes, est en train de grandir sans que tu l'aies vu grandir ?",
+  "racines": [
+    {
+      "titre": "Mystère devenu sacrement",
+      "corps_html": "Le mot grec mystērion, en Ep 5, 32, désigne le plan caché de Dieu enfin dévoilé (cf. Ep 1, 9 ; 3, 4-6), non un rite. La Vulgate latine l'a pourtant traduit par sacramentum, et l'Occident médiéval y a trouvé l'un des sept sacrements de l'Église. Calvin, dans son Institution de la religion chrétienne (IV, 19), conteste ce comptage : Paul parle d'une image du lien Christ-Église, pas d'un signe instituant la grâce.",
+      "attribution": "Calvin, Institution de la religion chrétienne, IV, 19"
+    },
+    {
+      "titre": "Un chant pour la montée",
+      "corps_html": "Le psaume 128 appartient aux quinze « cantiques des degrés » (Ps 120-134), chantés, selon une tradition rapportée par la Mishna (Sukka 5, 4), sur les degrés du Temple, par des pèlerins montant trois fois l'an à Jérusalem pour les fêtes prescrites en Dt 16, 16. Le bonheur domestique qu'il décrit n'est donc pas une sagesse isolée mais un chant de route, destiné à soutenir ceux qui marchent vers le lieu de la présence de Dieu.",
+      "attribution": "tradition rabbinique, Mishna Sukka 5, 4"
+    },
+    {
+      "titre": "Deux paraboles, un seul geste",
+      "corps_html": "Luc place côte à côte un homme qui sème et une femme qui pétrit, un jardin et une cuisine, pour dire que le règne de Dieu traverse toute l'existence ordinaire, pas seulement le temple ou la synagogue. Ces versets suivent immédiatement la guérison, un jour de sabbat, d'une femme que dix-huit ans de maladie tenaient courbée (Lc 13, 10-17) : au contrôle religieux du temps, Jésus oppose une croissance que nul ne règle ni ne surveille.",
+      "attribution": "note de lecture sur la composition de Lc 13"
+    }
+  ],
+  "videos": [
+    {
+      "id": "6CByTcTzbKI",
+      "raison": "Pour entendre ce que le Nouveau Testament appelle agapè quand Paul écrit : « Maris, aimez vos femmes » (Ep 5, 25).",
+      "groupe": "mot"
+    },
+    {
+      "id": "7pUE5wvhbBI",
+      "raison": "Pour situer Ep 5, 21-33 dans l'ensemble de la lettre aux Éphésiens.",
+      "groupe": "livre"
+    },
+    {
+      "id": "u893rxHGrWU",
+      "raison": "Pour entendre comment le livre des Psaumes, dont le psaume 128 fait partie, chante la bénédiction ordinaire.",
+      "groupe": "livre"
+    },
+    {
+      "id": "txGfRrR9v_M",
+      "raison": "Pour comprendre ce que Jésus appelle le royaume de Dieu dans les deux paraboles de Lc 13, 18-21.",
+      "groupe": "mot"
+    },
+    {
+      "id": "NRG4AmocCPA",
+      "raison": "Pour replacer Lc 13, 18-21 dans la section de l'Évangile de Luc (ch. 9-19) consacrée à la montée vers Jérusalem.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul demande-t-il la soumission aux femmes, et pas symétriquement aux maris ?",
+      "reponse_html": "Le texte ne commence pourtant pas par ce commandement : le verset 21 pose d'abord une soumission mutuelle, « les uns aux autres », dans la crainte du Christ, avant toute distinction entre époux. Ce qui suit développe cette réciprocité sous deux formes différentes et, en un sens, également exigeantes : à la femme est demandée une soumission nommée telle, au mari un amour mesuré sur celui du Christ qui « s'est livré lui-même » pour l'Église, c'est-à-dire jusqu'à la mort. Chrysostome insiste sur ce déséquilibre apparent : le devoir du mari, l'amour jusqu'au don de soi, est en réalité le plus lourd des deux, et sans lui l'autre n'a pas de sens.",
+      "sources": {
+        "jour": [
+          "Ep 5, 21",
+          "Ep 5, 25"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "homélie XX sur l'Épître aux Éphésiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le mariage est-il un sacrement d'après Ep 5, 32 ?",
+      "reponse_html": "Le mot que Paul emploie, mystērion, désigne le dessein caché de Dieu enfin révélé, non un rite. C'est la traduction latine, sacramentum, qui a donné à l'Occident médiéval de compter le mariage parmi les sept sacrements de l'Église. Calvin reprend la question dans son Institution et refuse ce comptage : pour lui, Paul compare l'union de l'homme et de la femme au lien du Christ et de l'Église, il n'institue pas un rite qui confère la grâce. Le texte garde donc toute sa grandeur comme image, sans qu'il faille y lire une doctrine sacramentelle qu'il ne cherche pas à fonder.",
+      "sources": {
+        "jour": [
+          "Ep 5, 31-32"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-institution",
+            "reference": "IV, 19"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi ce psaume promet-il femme, enfants et prospérité, alors que tant de gens fidèles n'obtiennent rien de cela ?",
+      "reponse_html": "Augustin pose exactement cette objection dans son discours sur ce psaume : si ces biens étaient à prendre au pied de la lettre comme récompense de la piété, ceux qui craignent Dieu sans les recevoir auraient de quoi chanceler dans leur foi. Il lit donc le psaume comme une allégorie, où l'homme béni figure le Christ et où les biens promis sont ceux de la Jérusalem céleste, réservés à qui est uni à lui. Sans aller jusque là, on peut aussi entendre ces versets comme une bénédiction ordinaire, de l'ordre de la sagesse, qui décrit moins une promesse garantie qu'un portrait de la vie sous la crainte de l'Éternel.",
+      "sources": {
+        "jour": [
+          "Ps 127(128), 1-5"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "sur le psaume 127"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi deux paraboles si brèves, mises bout à bout, pour parler du royaume de Dieu ?",
+      "reponse_html": "Luc place côte à côte un homme qui sème dans son jardin et une femme qui pétrit dans sa cuisine, de sorte que le règne de Dieu touche toute l'existence ordinaire et non un seul lieu réservé. Les deux images insistent sur la disproportion entre un commencement presque rien, un grain, un peu de levain, et une fin qui dépasse toute mesure, un arbre qui abrite des oiseaux, une pâte toute entière soulevée. Elles suivent immédiatement la guérison d'une femme courbée depuis dix-huit ans un jour de sabbat, geste contesté par le chef de la synagogue : à ce désir de tout régler, Jésus répond par une croissance que personne ne commande ni ne surveille.",
+      "sources": {
+        "jour": [
+          "Lc 13, 18-21",
+          "Lc 13, 10-17"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ep-XX",
+    "augustin-Ps-127"
+  ]
+}
