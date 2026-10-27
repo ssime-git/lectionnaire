@@ -1,0 +1,224 @@
+{
+  "date": "2026-10-28",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Fête",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ep 2, 19-22 ; Lc 6, 12-19",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M5 95 L55 65 L100 80 L150 50 L190 40 L240 75 L285 55 L335 90\"/><path d=\"M182 40 L190 22 L198 40 Z\"/><path d=\"M186 16 q4 -5 8 0 q-4 5 -8 0\"/><path d=\"M190 12 q-3 -5 0 -9 q3 4 0 9\"/><path d=\"M10 128 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0\"/><path d=\"M184 128 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0 q12 -10 24 0\"/></g><g class=\"trait-liturgie\"><path d=\"M154 128 q15 -13 30 0\"/><path d=\"M169 109 v11 M164 115 h10\"/></g></svg>",
+  "titre": "Pierre angulaire",
+  "titre_html": "Pierre <span class=\"it\">angulaire</span>",
+  "sous_titre": "Simon et Jude, apôtres — bâtis sur un même fondement",
+  "suite_hier": null,
+  "gravure_alt": "Sur une montagne nocturne, Jésus seul, les mains jointes, tourné vers le ciel ; en contrebas, les silhouettes des douze disciples rangées comme des pierres de taille autour d'une pierre d'angle à peine plus grande, marquée d'une croix discrète.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Éphésiens 2, 19-22",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">19</span> Ainsi donc vous n'êtes plus des <button class=\"mot\" data-g=\"g-etrangers\">étrangers</button>, ni des gens du dehors ; mais vous êtes <button class=\"mot\" data-g=\"g-concitoyens\">concitoyens</button> des saints, gens de la maison de Dieu. <span class=\"s\">20</span> Vous avez été édifiés sur le fondement des apôtres et des prophètes, Jésus-Christ lui-même étant la <button class=\"mot\" data-g=\"g-pierre-angulaire\">pierre angulaire</button>. <span class=\"s\">21</span> C'est en lui que tout l'édifice, bien coordonné, s'élève, pour être un temple saint dans le Seigneur. <span class=\"s\">22</span> En lui vous êtes aussi édifiés pour être une <button class=\"mot\" data-g=\"g-habitation\">habitation</button> de Dieu en Esprit.",
+      "gloses": [
+        {
+          "id": "g-etrangers",
+          "lemme": "xenoi / paroikoi",
+          "html": "Le grec distingue deux mots que Segond fond presque en un seul geste : <span class=\"gr\">xenoi</span>, l'étranger total, celui qui n'a aucun lien avec la cité, et <span class=\"gr\">paroikoi</span>, le résident sans droits, le métèque toléré aux portes de la ville sans jamais y être chez lui. Paul emprunte le vocabulaire politique de la cité grecque, où ces deux statuts désignaient une exclusion juridique précise, pour dire ce qu'étaient les païens par rapport au peuple de l'alliance. Segond traduit le second par « gens du dehors », expression plus floue qui perd la technicité civique du terme mais garde l'essentiel : on était dehors, et on ne l'est plus."
+        },
+        {
+          "id": "g-concitoyens",
+          "lemme": "sympolitai",
+          "html": "<span class=\"gr\">Sympolitai</span> est un mot de la cité, non du temple : il désigne les citoyens d'une même polis, unis par les mêmes droits et les mêmes devoirs civiques. Segond le rend fidèlement par « concitoyens », mais l'image politique s'efface vite derrière l'image religieuse qui suit aussitôt, celle de la maison de Dieu. Chrysostome, dans son homélie VI sur l'épître aux Éphésiens, insiste sur ce même mouvement : ceux qui étaient loin et ceux qui étaient près reçoivent ensemble, par un seul Esprit, l'accès auprès du Père — la citoyenneté nouvelle abolit la distance ancienne entre Juifs et païens."
+        },
+        {
+          "id": "g-pierre-angulaire",
+          "lemme": "akrogoniaios",
+          "html": "<span class=\"gr\">Akrogoniaios</span> est composé de <span class=\"gr\">akron</span>, l'extrémité, et <span class=\"gr\">gonia</span>, l'angle : la pierre qui tient ensemble deux pans de mur à leur jonction. Segond traduit par « pierre angulaire », reprenant le mot employé en Ésaïe 28, 16 dans la version grecque des Septante, texte que Paul a manifestement en tête. Toute la portée de l'image tient à sa position : une pierre qu'on ne voit presque pas, mais dont dépend l'alignement de tout l'édifice — si elle bouge, rien ne tient droit."
+        },
+        {
+          "id": "g-habitation",
+          "lemme": "katoiketerion",
+          "html": "<span class=\"gr\">Katoiketerion</span> est un mot fort, réservé dans la Bible grecque à la demeure de Dieu lui-même, depuis la tente du désert jusqu'au Temple. Segond le traduit simplement par « habitation », ce qui est juste mais efface la mémoire liturgique du mot pour un lecteur français. Dire que les croyants assemblés deviennent cette <span class=\"gr\">katoiketerion</span>, c'est affirmer qu'ils reçoivent la fonction même du sanctuaire : non plus un lieu où l'on va pour rencontrer Dieu, mais un peuple dans lequel il habite."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 19 (18), 2-3, 4-5ab",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Les cieux <button class=\"mot\" data-g=\"g-racontent\">racontent</button> la gloire de Dieu, et l'étendue manifeste l'oeuvre de ses mains. <span class=\"s\">3</span> Un jour en instruit un autre jour, une nuit en donne connaissance à une autre nuit. <span class=\"s\">4</span> Ce n'est pas un langage, ce ne sont pas des paroles dont le son ne soit pas entendu : <span class=\"s\">5</span> leur <button class=\"mot\" data-g=\"g-qol\">voix</button> se fait entendre par toute la terre, leurs accents vont aux extrémités du monde.",
+      "gloses": [
+        {
+          "id": "g-racontent",
+          "lemme": "saphar",
+          "html": "Le verbe hébreu <span class=\"gr\">saphar</span>, dont est tiré « racontent », est aussi la racine de <span class=\"gr\">sepher</span>, le livre, l'écrit. Les cieux ne se contentent pas de parler : ils inscrivent, comme on grave un texte, la gloire de Dieu dans l'étendue visible à tous. Augustin, commentant ce psaume dans ses Enarrationes, voit dans ce langage silencieux des cieux une prédication universelle qui précède toute parole humaine et toute Écriture écrite."
+        },
+        {
+          "id": "g-qol",
+          "lemme": "qolam",
+          "html": "Le mot hébreu <span class=\"gr\">qolam</span>, « leur voix », porte toute l'ambiguïté du verset : le texte dit d'abord qu'il n'y a ni discours ni paroles, puis, presque dans le même souffle, que leur voix se fait entendre. Segond tranche en faveur d'une voix réelle mais sans langage articulé — les cieux prêchent sans mots, et pourtant tout homme, de toute langue, les comprend. Calvin, dans son commentaire sur ce psaume, insiste sur ce paradoxe : la création a une éloquence qui ne doit rien à la grammaire humaine, et c'est pour cela qu'elle est entendue de tous sans traducteur."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Luc 6, 12-19",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">12</span> En ce temps-là, Jésus s'en alla sur la montagne pour <button class=\"mot\" data-g=\"g-proseucheto\">prier</button>, et il passa toute la nuit à prier Dieu. <span class=\"s\">13</span> Quand le jour fut venu, il appela ses disciples, et il en choisit douze, auxquels il donna le nom d'<button class=\"mot\" data-g=\"g-apostoloi\">apôtres</button> : <span class=\"s\">14</span> Simon, qu'il nomma Pierre ; André, son frère ; Jacques ; Jean ; Philippe ; Barthélemy ; <span class=\"s\">15</span> Matthieu ; Thomas ; Jacques, fils d'Alphée ; Simon, appelé le <button class=\"mot\" data-g=\"g-zelote\">zélote</button> ; <span class=\"s\">16</span> Jude, fils de Jacques ; et Judas Iscariot, qui devint traître. <span class=\"s\">17</span> Il descendit ensuite avec eux, et s'arrêta sur un plateau, où se trouvaient une foule nombreuse de ses disciples, et une grande multitude de peuple, de la Judée, de Jérusalem, et de la contrée maritime de Tyr et de Sidon. <span class=\"s\">18</span> Ils étaient venus pour l'entendre, et pour être guéris de leurs maladies. Ceux qui étaient tourmentés par des esprits impurs étaient guéris. <span class=\"s\">19</span> Et toute la foule cherchait à le toucher, car une <button class=\"mot\" data-g=\"g-dynamis\">force</button> sortait de lui et les guérissait tous.",
+      "gloses": [
+        {
+          "id": "g-proseucheto",
+          "lemme": "proseuchomai",
+          "html": "Le verbe grec <span class=\"gr\">proseuchomai</span> est le terme le plus général pour la prière adressée à Dieu, mais Luc l'emploie ici à l'imparfait, temps qui décrit une action qui dure, non un acte ponctuel : Jésus ne dit pas une prière, il reste toute la nuit dans cet état de prière. Segond rend cela par « il passa toute la nuit à prier Dieu », ajoutant le mot « Dieu », absent du grec, pour clarifier le destinataire, au prix de masquer un peu la durée insistante du verbe. C'est un trait propre à Luc, seul évangéliste à mentionner si souvent les nuits de prière de Jésus avant les moments décisifs."
+        },
+        {
+          "id": "g-apostoloi",
+          "lemme": "apostoloi",
+          "html": "<span class=\"gr\">Apostoloi</span> vient du verbe <span class=\"gr\">apostellein</span>, envoyer avec mandat, et désigne non un simple messager mais un envoyé qui porte l'autorité même de celui qui l'envoie. Segond conserve le mot grec presque sans le traduire, en « apôtres », faute d'équivalent français satisfaisant. Les rabbins connaissaient une figure comparable, le <span class=\"gr\">shaliah</span>, dont on disait que l'envoyé vaut comme celui qui l'envoie — ce qui éclaire pourquoi Luc place ce choix juste après la nuit de prière : l'autorité des Douze ne leur appartient pas, elle vient de celui qui les a choisis."
+        },
+        {
+          "id": "g-zelote",
+          "lemme": "zelotes",
+          "html": "<span class=\"gr\">Zelotes</span> vient de <span class=\"gr\">zelos</span>, l'ardeur, la jalousie, le zèle. Segond garde le mot presque tel quel en « zélote », ce qui laisse deviner, sans le dire, l'appartenance possible de ce Simon à un courant juif farouchement opposé à l'occupation romaine. Que Jésus appelle un tel homme aux côtés d'un collecteur d'impôts comme Matthieu, suspect de collaborer avec cette même occupation, dit assez combien le choix des Douze ne suit aucune logique de parti."
+        },
+        {
+          "id": "g-dynamis",
+          "lemme": "dynamis",
+          "html": "<span class=\"gr\">Dynamis</span> est le mot grec de la puissance à l'oeuvre, celui-là même qui donnera plus tard le mot « dynamite » : non une force abstraite, mais une énergie qui agit et se dépense. Segond traduit simplement par « force », là où l'on pourrait lire aussi « puissance », mot que Luc emploie ailleurs pour l'Esprit qui agit en Jésus. Les Pères grecs lisaient dans ce verbe le signe que la divinité de Jésus se communique sans s'épuiser, comme une source qui ne diminue pas de ce qu'elle donne."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre destinée à circuler",
+      "corps_html": "L'épître aux Éphésiens ne porte peut-être pas son adresse originelle : plusieurs des plus anciens manuscrits grecs omettent « à Éphèse » au verset 1, 1. Beaucoup y voient une lettre circulaire destinée à plusieurs communautés d'Asie Mineure, composée durant une captivité (4, 1), ce qui expliquerait son ton général, presque liturgique, et son insistance sur l'unité d'Église au-delà d'une seule ville."
+    },
+    {
+      "titre": "La montagne, avant le choix",
+      "corps_html": "Luc est le seul évangéliste à situer l'élection des Douze après une nuit entière de prière sur la montagne, lieu où Moïse reçut l'alliance et où Jésus priera encore avant la Transfiguration et avant la Passion. Le calendrier latin associe aujourd'hui ce récit à la fête de Simon et de Jude, deux apôtres dont les Évangiles ne disent presque rien d'autre que leur nom dans cette liste."
+    }
+  ],
+  "analogie": {
+    "titre": "La pierre qu'on ne voit jamais",
+    "variantes": [
+      "Il y a des choix qui se prennent dans le silence, longtemps avant que personne ne les voie se réaliser : une nuit entière passée éveillé, à peser une décision qui engagera d'autres que toi — accepter une responsabilité, rompre avec une situation, dire oui à quelque chose qu'on ne te demandait pas vraiment de faire. Rien, dans l'instant, ne prouve que cette veille a servi à quelque chose ; le matin venu, tu agis, et ceux qui te voient agir ignorent tout de la nuit qui a rendu ce geste possible. C'est pourtant cette heure cachée, sans témoin, qui a tenu la suite debout, comme une pierre que l'on ne voit jamais dans un mur mais sans laquelle les autres pierres n'auraient rien eu pour s'aligner. Devant Dieu, l'essentiel de ta vie se décide peut-être ainsi, dans ce qui ne se voit pas et que lui seul connaît.",
+      "Tu as peut-être connu cette sensation précise de n'être nulle part vraiment chez toi : pas totalement d'ici, pas vraiment de là-bas, toléré plutôt qu'accueilli, dans une famille, un pays, une Église même. Et puis un jour, sans que tu aies rien changé ni rien mérité de plus, quelqu'un te dit, ou la vie te montre, que tu es désormais chez toi, que ce lieu t'appartient autant qu'aux autres qui y sont nés. Ce basculement intérieur, de l'hôte toléré au membre de plein droit, ne se raisonne pas : il se reçoit, et il change rétrospectivement le sens de toutes les années où tu attendais dehors. C'est ce déplacement, du dehors vers la maison, que le texte promet à qui le lit, non comme une récompense mais comme un fait déjà accompli.",
+      "Tu as peut-être servi, aidé, soutenu quelqu'un pendant des années sans jamais voir ce que cela produisait — un enfant élevé dont tu ne sauras jamais s'il a retenu ce que tu lui as donné, un travail discret dont les fruits se sont levés ailleurs, trop tard pour que tu les voies. L'absence de résultat visible ressemble à un échec, mais ce n'est souvent que la forme que prend un fondement : on ne voit jamais la pierre angulaire depuis l'intérieur de la maison qu'elle porte, elle est seulement là, portant, sans qu'on la remarque. Devant Dieu, ce que tu as porté sans le voir fructifier n'est pas perdu ; il arrive que ce soit précisément cela, le socle sur lequel quelque chose d'autre, bien plus tard, finit par tenir."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de refermer cette page, reste un instant avec cette image d'une nuit entière donnée à la prière, avant un choix qui n'appartenait qu'à Dieu.",
+    "geste": "Choisis un quart d'heure de silence réel, sans écran ni parole, pour poser devant Dieu une décision que tu portes seul, sans chercher à la trancher tout de suite.",
+    "note": "Ce n'est pas la durée de la veille qui compte, mais ce à quoi elle a été donnée."
+  },
+  "question": "Qu'est-ce que tu portes, en ce moment, sans en voir encore le fruit — et peux-tu croire que cela tient déjà quelque chose, ailleurs, sans que tu le saches ?",
+  "racines": [
+    {
+      "titre": "Le temple sans pierres",
+      "corps_html": "Depuis Salomon, le Temple de Jérusalem était le lieu unique où Dieu consentait à habiter visiblement parmi les hommes ; sa destruction en l'an 70 restait une blessure vive pour les premiers lecteurs de cette lettre. Paul ne promet pas un nouveau bâtiment de pierre, mais annonce que la communauté elle-même, Juifs et païens assemblés, devient ce lieu : non plus un sanctuaire que l'on visite, mais un peuple que Dieu habite.",
+      "attribution": "note historique — destruction du Temple de Jérusalem, 70"
+    },
+    {
+      "titre": "Douze, comme les tribus",
+      "corps_html": "Le nombre douze ne doit rien au hasard : il rappelle les douze fils de Jacob, les douze tribus d'Israël. Choisir douze apôtres après une nuit de prière, c'est signifier la reconstitution d'un peuple, non l'addition de quelques disciples parmi d'autres — une élection qui ne tient plus à la naissance mais à l'appel.",
+      "attribution": "note historique — les douze tribus d'Israël, Genèse 49"
+    },
+    {
+      "titre": "Prier avant de choisir",
+      "corps_html": "Luc associe presque systématiquement la prière de Jésus aux moments qui engagent l'avenir : son baptême, le choix des Douze, la Transfiguration, l'agonie de Gethsémané. Calvin, commentant ce type de scène, rappelle que la prière n'est pas chez Jésus un besoin de consolation mais l'exercice de sa dépendance filiale envers le Père, modèle offert à l'Église pour toute décision qui touche à l'appel et à l'envoi.",
+      "attribution": "Jean Calvin, Commentaires bibliques"
+    }
+  ],
+  "videos": [
+    {
+      "id": "7pUE5wvhbBI",
+      "raison": "Panorama du livre d'où vient la première lecture du jour, sur l'Église bâtie comme un temple (Éphésiens 2, 19-22).",
+      "groupe": "livre"
+    },
+    {
+      "id": "ZR6nFRw9JbQ",
+      "raison": "Couvre Luc 6, où Jésus choisit les Douze après une nuit de prière sur la montagne (Luc 6, 12-19).",
+      "groupe": "livre"
+    },
+    {
+      "id": "ZjoRCeqpUSA",
+      "raison": "Éphésiens 2, 21-22 annonce que l'Église devient elle-même le temple saint où Dieu habite ; cette étude retrace ce déplacement depuis la tente du désert.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Jésus a-t-il besoin de prier toute une nuit avant de choisir ses apôtres ?",
+      "reponse_html": "Luc ne dit jamais que Jésus a besoin de force pour choisir, mais toujours qu'il choisit après avoir prié : son baptême, les Douze, la Transfiguration, l'agonie de Gethsémané suivent tous un temps de prière prolongée. La nuit entière de Luc 6, 12 n'est donc pas un détail biographique, mais une indication théologique : le choix des apôtres n'est pas une décision stratégique de Jésus seul, elle naît de sa relation au Père. C'est seulement au matin, après cette veille, qu'il appelle, et le texte insiste sur l'ordre des gestes : prier d'abord, choisir ensuite.",
+      "sources": {
+        "jour": [
+          "Luc 6, 12-13"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que veut dire Paul quand il dit que l'Église est « édifiée » comme un bâtiment ?",
+      "reponse_html": "Paul emploie un vocabulaire de chantier : fondement, pierre angulaire, édifice bien coordonné, habitation. Chaque croyant n'est pas spectateur de ce bâtiment mais une pierre qui y est posée, reliée aux autres par le même Christ qui les relie tous au Père. Chrysostome, dans son homélie VI sur l'épître aux Éphésiens, insiste sur le fait que cet accès au Père, « dans un seul Esprit », concerne également ceux qui étaient loin et ceux qui étaient près : l'édifice ne tient que parce que ces deux groupes, Juifs et païens, sont désormais assemblés sur le même fondement, non côte à côte mais ensemble. L'image n'est donc pas décorative ; elle affirme qu'il n'existe plus, en Christ, de pierre qui serait moins essentielle qu'une autre.",
+      "sources": {
+        "jour": [
+          "Éphésiens 2, 19-22"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "homélie VI sur Éphésiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi cette liste des Douze mentionne-t-elle Judas Iscariot comme futur traître, dès le moment de son appel ?",
+      "reponse_html": "Luc écrit après les faits, et il ne cache pas, dès l'instant de l'appel, ce que deviendra Judas. Cette mention anticipée n'est pas un jugement rétroactif porté sur un homme qui n'aurait jamais eu de vraie vocation : Judas est appelé exactement comme les onze autres, choisi après la même nuit de prière, reçu dans le même cercle. Le texte laisse ainsi ouverte, sans l'expliquer, la possibilité qu'un appel authentique de Dieu puisse être trahi plus tard par celui qui l'a reçu.",
+      "sources": {
+        "jour": [
+          "Luc 6, 16"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume dit que les cieux « racontent » la gloire de Dieu sans un mot : comment une prédication silencieuse peut-elle être entendue de toute la terre ?",
+      "reponse_html": "Le psalmiste joue volontairement sur un paradoxe : il n'y a ni discours ni paroles, et pourtant une voix se fait entendre jusqu'aux extrémités du monde. Paul reprendra ce verset en Romains 10, 18 pour affirmer que l'annonce de l'Évangile a, elle aussi, atteint toute la terre, comme si la prédication silencieuse de la création préparait, par analogie, celle de la parole annoncée. Calvin, dans son commentaire sur ce psaume, remarque que cette voix sans langage est comprise par tous les peuples sans traduction, ce qu'aucune parole humaine ne peut faire.",
+      "sources": {
+        "jour": [
+          "Psaume 19, 2-5"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-commentaires",
+            "reference": "commentaire sur le Psaume 19"
+          }
+        ]
+      }
+    },
+    {
+      "question": "En quoi le fait d'être « concitoyens » change-t-il quelque chose par rapport à être simplement pardonné ?",
+      "reponse_html": "Être pardonné peut rester un acte ponctuel, refermé sur une faute effacée. Être fait concitoyen, c'est recevoir un statut permanent, avec les droits qui vont avec une appartenance pleine et entière à une cité. Paul ne dit pas seulement que les destinataires païens de la lettre sont réconciliés avec Dieu pour un instant : il dit qu'ils appartiennent désormais, de plein droit, à la même maison que les saints, aussi légitimement que s'ils y étaient nés.",
+      "sources": {
+        "jour": [
+          "Éphésiens 2, 19"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ep-VI"
+  ]
+}
