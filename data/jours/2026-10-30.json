@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-30",
+  "date_humaine": "vendredi",
+  "semaine": "30ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 1, 1-11 ; Lc 14, 1-6",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 122 h328\"/><path d=\"M18 122 v-97 h54 v97\"/><path d=\"M100 68 q0 -7 7 -7 q7 0 7 7 q0 7 -7 7 q-7 0 -7 -7 z\"/><path d=\"M103 76 q-23 9 -15 26 q-3 10 2 17 q20 5 44 1 q14 -12 8 -28 q-12 -17 -24 -14 q-8 -8 -15 -2 z\"/><path d=\"M225 115 l5 -45 q5 -6 10 0 l5 45 z M233 62 q0 -7 7 -7 q7 0 7 7 q0 7 -7 7 q-7 0 -7 -7 z\"/><path d=\"M260 118 l5 -48 q5 -6 10 0 l5 48 z M268 64 q0 -7 7 -7 q7 0 7 7 q0 7 -7 7 q-7 0 -7 -7 z\"/><path d=\"M292 116 l4 -42 q4 -5 8 0 l4 42 z M298 68 q0 -6 6 -6 q6 0 6 6 q0 6 -6 6 q-6 0 -6 -6 z\"/></g><g class=\"trait-liturgie\"><path d=\"M205 62 q-32 8 -58 28 M147 88 l7 5 M151 84 l8 3 M154 80 l7 0\"/></g></svg>",
+  "titre": "L'œuvre sans repos",
+  "titre_html": "L'œuvre <span class=\"it\">sans repos</span>",
+  "sous_titre": "Philippiens 1 ; Psaume 111 ; Luc 14 — ce que Dieu commence, il ne le laisse pas en suspens, pas même un jour de sabbat.",
+  "suite_hier": null,
+  "gravure_alt": "Un homme au corps gonflé d'eau, assis au seuil d'une maison de pierre un jour de sabbat ; une main s'avance vers lui depuis l'ombre, tandis que des hommes en robe se taisent, figés, à l'arrière-plan.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ph 1, 1-11",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Paul et Timothée, <button class=\"mot\" data-g=\"g-douloi\">serviteurs</button> de Jésus-Christ, à tous les saints en Jésus-Christ qui sont à Philippes, aux <button class=\"mot\" data-g=\"g-episkopoi\">évêques</button> et aux diacres.</p><p><span class=\"s\">2</span> Que la <button class=\"mot\" data-g=\"g-charis\">grâce</button> et la paix vous soient données de la part de Dieu notre Père et du Seigneur Jésus-Christ!</p><p><span class=\"s\">3</span> Je rends grâces à mon Dieu de tout le souvenir que je garde de vous,</p><p><span class=\"s\">4</span> ne cessant, dans toutes mes prières pour vous tous, de manifester ma joie</p><p><span class=\"s\">5</span> au sujet de la part que vous prenez à l'Évangile, depuis le premier jour jusqu'à maintenant.</p><p><span class=\"s\">6</span> Je suis persuadé que celui qui a commencé en vous cette bonne <button class=\"mot\" data-g=\"g-ergon\">œuvre</button> la rendra parfaite pour le jour de Jésus-Christ.</p><p><span class=\"s\">7</span> Il est juste que je pense ainsi de vous tous, parce que je vous porte dans mon cœur, soit dans mes liens, soit dans la défense et la confirmation de l'Évangile, vous qui tous participez à la même grâce que moi.</p><p><span class=\"s\">8</span> Car Dieu m'est témoin que je vous chéris tous avec la tendresse de Jésus-Christ.</p><p><span class=\"s\">9</span> Et ce que je demande dans mes prières, c'est que votre amour augmente de plus en plus en connaissance et en pleine intelligence</p><p><span class=\"s\">10</span> pour le discernement des choses les meilleures, afin que vous soyez purs et irréprochables pour le jour de Christ,</p><p><span class=\"s\">11</span> remplis du <button class=\"mot\" data-g=\"g-karpos\">fruit</button> de justice qui est par Jésus-Christ, à la gloire et à la louange de Dieu.</p>",
+      "gloses": [
+        {
+          "id": "g-douloi",
+          "lemme": "doulos",
+          "html": "Le mot grec est <span class=\"gr\">douloi</span>, pluriel de doulos, « esclave ». Segond adoucit en « serviteurs », un choix constant du XIXe siècle protestant qui évite la dureté du servage antique mais efface aussi la radicalité du mot : Paul ne se dit pas employé, il se dit propriété d'un maître. Chrysostome, dans sa première homélie sur cette épître, remarque que Paul, écrivant à des Philippiens qu'il honore entre tous, ne se nomme pas « apôtre » mais « esclave », un titre qu'il juge en réalité plus haut, puisqu'être vraiment l'esclave du Christ, c'est être affranchi de tout autre maître."
+        },
+        {
+          "id": "g-episkopoi",
+          "lemme": "episkopos",
+          "html": "Segond traduit <span class=\"gr\">episkopoi</span> par « évêques », un mot qui, au moment où il écrit, porte déjà toute l'histoire d'une charge unique dans chaque ville. Or le terme grec désigne au premier siècle un simple « surveillant », et il est ici au pluriel dans une toute petite Église : rien n'indique encore la fonction épiscopale que ce mot prendra plus tard. Chrysostome note justement que les noms d'évêques, de prêtres et de diacres n'étaient pas, à l'origine, parfaitement distincts, et se prenaient souvent les uns pour les autres."
+        },
+        {
+          "id": "g-charis",
+          "lemme": "charis",
+          "html": "<span class=\"gr\">Charis</span> est le mot le plus redit de l'épître, et Segond le rend toujours par « grâce », ce qui est juste mais use le mot à force de régularité : en grec profane, charis dit d'abord la faveur gratuite qu'on accorde sans y être tenu, l'agrément qu'on donne à qui ne peut rien exiger. Calvin, dans son commentaire sur ce verset, insiste sur l'ordre des deux dons : la paix ne vient qu'après la grâce, parce qu'on ne peut être en paix avec Dieu tant qu'on n'a pas reçu, sans l'avoir mérité, sa faveur."
+        },
+        {
+          "id": "g-ergon",
+          "lemme": "ergon",
+          "html": "Le mot est <span class=\"gr\">ergon</span>, « œuvre » ou « ouvrage », le même qui dira ailleurs les œuvres de la loi. Segond garde « œuvre » au singulier là où le grec pourrait aussi bien désigner un travail en cours, non un objet fini : Paul ne dit pas que Dieu a fait une chose chez les Philippiens, il dit que Dieu continue d'y travailler. Cette nuance verbale porte toute la confiance du verset : ce n'est pas la persévérance des Philippiens qui est promise, mais celle de l'ouvrier."
+        },
+        {
+          "id": "g-karpos",
+          "lemme": "karpos",
+          "html": "Segond traduit <span class=\"gr\">karpos</span> par « fruit », au singulier, comme dans la plupart des versions anciennes, alors que certains manuscrits portent le pluriel « fruits » : le choix du singulier unifie tout ce que l'amour discerné doit produire en une seule réalité, la justice, plutôt qu'en vertus dispersées. Le mot renvoie à l'image végétale constante de Paul, celle d'une vie qui pousse sans se voir pousser, et que seul le temps révèle."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 110 (111), 1-2, 3-4, 5-6",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Louez l'Éternel! <button class=\"mot\" data-g=\"g-yadah\">Je louerai</button> l'Éternel de tout mon cœur, Dans la compagnie des hommes droits et dans l'assemblée.</p><p><span class=\"s\">2</span> Les <button class=\"mot\" data-g=\"g-maasim\">œuvres</button> de l'Éternel sont grandes, Recherchées par tous ceux qui les aiment.</p><p><span class=\"s\">3</span> Son œuvre n'est que splendeur et magnificence, Et sa justice subsiste à perpétuité.</p><p><span class=\"s\">4</span> Il a laissé la mémoire de ses prodiges, L'Éternel est <button class=\"mot\" data-g=\"g-hanun\">miséricordieux</button> et compatissant.</p><p><span class=\"s\">5</span> Il a donné de la nourriture à ceux qui le craignent; Il se souvient toujours de son <button class=\"mot\" data-g=\"g-berit\">alliance</button>.</p><p><span class=\"s\">6</span> Il a manifesté à son peuple la puissance de ses œuvres, En lui livrant l'héritage des nations.</p>",
+      "gloses": [
+        {
+          "id": "g-yadah",
+          "lemme": "yadah",
+          "html": "Le verbe hébreu est <span class=\"gr\">odeh</span>, de la racine yadah, qui ne signifie pas d'abord « louer » au sens de faire un compliment, mais « confesser, reconnaître publiquement ». Segond traduit par « je louerai », ce qui est juste dans le résultat mais estompe le geste : le psalmiste ne dit pas seulement du bien de Dieu, il fait une déclaration devant témoins, « dans la compagnie des hommes droits et dans l'assemblée ». Les rabbins ont rattaché ce même verbe à la confession du péché, comme si louer et confesser procédaient du même mouvement de vérité dite tout haut."
+        },
+        {
+          "id": "g-maasim",
+          "lemme": "ma'asim",
+          "html": "<span class=\"gr\">Ma'assei</span>, « les œuvres », au pluriel : le mot est le même, en hébreu, qui désigne aussi bien l'acte de création que les hauts faits de l'histoire d'Israël. Segond garde le pluriel fidèlement, mais le français « œuvres » perd l'ambiguïté hébraïque entre le travail et son produit, le faire et la chose faite. Augustin, dans son discours sur ce psaume prononcé un jour de Pâques, relie ces œuvres grandes à l'Alléluia pascal : dire les œuvres de Dieu et crier Alléluia sont, pour lui, le même acte."
+        },
+        {
+          "id": "g-hanun",
+          "lemme": "hannun",
+          "html": "L'hébreu juxtapose deux mots, <span class=\"gr\">hannun</span> et <span class=\"gr\">rahum</span>, que Segond rend par « miséricordieux et compatissant ». Le premier vient d'une racine qui dit la faveur gratuite accordée à qui ne la mérite pas ; le second vient de rehem, le sein maternel, et désigne une compassion presque viscérale. La tradition rabbinique a fait de ce couple de mots l'un des piliers des treize attributs de miséricorde récités à Yom Kippour, preuve que ce verset a toujours été lu comme une définition même du nom de Dieu."
+        },
+        {
+          "id": "g-berit",
+          "lemme": "berit",
+          "html": "<span class=\"gr\">Berit</span>, « alliance », est le mot qui porte toute la théologie du psaume : ce n'est pas un attribut abstrait de Dieu qui est loué, mais sa fidélité à un engagement pris et jamais repris. Segond traduit simplement « son alliance », sans rendre la force du verbe hébreu qui précède, zakar, « se souvenir », lequel ne signifie pas un acte mental mais un acte qui rend présent et agissant ce dont on se souvient. Calvin insiste, dans son commentaire, sur le fait que cette mémoire divine est la seule garantie de la constance du salut, puisqu'elle ne dépend d'aucune mémoire humaine."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 14, 1-6",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Jésus entra, un jour de <button class=\"mot\" data-g=\"g-sabbaton\">sabbat</button>, dans la maison d'un chef des pharisiens, pour prendre un repas, et ces gens l'observaient.</p><p><span class=\"s\">2</span> Et voici, un homme <button class=\"mot\" data-g=\"g-hydropikos\">hydropique</button> se trouvait devant lui.</p><p><span class=\"s\">3</span> Jésus prit la parole, et dit aux pharisiens et aux <button class=\"mot\" data-g=\"g-nomikoi\">docteurs de la loi</button> : Est-il permis, ou non, de faire une guérison le jour du sabbat?</p><p><span class=\"s\">4</span> Ils gardèrent le silence. Alors Jésus avança la main sur cet homme, le guérit, et le congédia.</p><p><span class=\"s\">5</span> Puis il leur dit : Lequel de vous, si son fils ou son bœuf tombe dans un puits, ne l'en retirera pas aussitôt, le jour du sabbat?</p><p><span class=\"s\">6</span> Et ils ne purent lui répondre à cela.</p>",
+      "gloses": [
+        {
+          "id": "g-sabbaton",
+          "lemme": "sabbaton",
+          "html": "<span class=\"gr\">Sabbaton</span> transcrit lui-même l'hébreu shabbat, « cessation, repos ». Segond écrit « un jour de sabbat », respectant l'expression grecque qui compte ce jour-là, le septième, comme un jour parmi d'autres plutôt que comme une institution abstraite. Toute la scène tient sur ce mot : la loi de Moïse elle-même ne dit nulle part qu'il est interdit de guérir ce jour-là, c'est la tradition orale, codifiée plus tard dans la Mishna, qui en a détaillé les limites."
+        },
+        {
+          "id": "g-hydropikos",
+          "lemme": "hydropikos",
+          "html": "<span class=\"gr\">Hydropikos</span> ne revient qu'une seule fois dans tout le Nouveau Testament, ici même : c'est un mot de médecin, qui désigne l'hydropisie, cette rétention d'eau qui gonfle le corps. Segond le garde presque tel quel, en « hydropique », faute d'équivalent français courant, ce qui a l'avantage de préserver la précision clinique du terme grec plutôt que de le diluer en un vague « malade »."
+        },
+        {
+          "id": "g-nomikoi",
+          "lemme": "nomikos",
+          "html": "Le mot grec est <span class=\"gr\">nomikoi</span>, littéralement « ceux de la loi », de nomos, « loi » : Segond traduit par « docteurs de la loi », une périphrase nécessaire puisque le français n'a pas d'adjectif substantivé équivalent. Luc distingue ce mot de « scribes », qu'il emploie ailleurs, et les deux désignent sans doute le même groupe d'interprètes professionnels de la Torah, mais le choix de nomikoi ici souligne que c'est leur compétence juridique précise, et non leur seul savoir d'écriture, qui est mise à l'épreuve par la question de Jésus."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Philippes, une colonie de vétérans romains",
+      "corps_html": "Philippes doit son nom à Philippe II de Macédoine, mais c'est Rome qui façonne la ville que connaît Paul : après la bataille qui s'y joue en 42 avant notre ère, puis après Actium en 31, Octave y installe des vétérans et en fait une colonie de droit romain. Une Église faite en partie de citoyens romains explique pourquoi Paul, dans cette lettre, peut filer plus loin l'image d'une cité céleste dont on porte la citoyenneté."
+    },
+    {
+      "titre": "Le sabbat, la loi écrite et la loi orale",
+      "corps_html": "La Torah interdit le travail le jour du sabbat sans jamais énumérer ce qui constitue un travail : c'est la tradition orale, rassemblée plus tard dans le traité Shabbat de la Mishna, qui fixera trente-neuf catégories d'activités interdites. Soigner une maladie qui ne menace pas la vie n'y figure pas explicitement, ce qui rend le silence des pharisiens, en Luc 14, 4, moins un aveu qu'une prudence : aucune règle ne leur permet de condamner Jésus sans détour."
+    }
+  ],
+  "analogie": {
+    "titre": "L'œuvre qui continue sans bruit",
+    "variantes": [
+      "Il t'est arrivé de prier sans qu'aucun mot ne semble recevoir de réponse, sans qu'aucune émotion ne vienne te confirmer que quelque chose, en face, a entendu. Tu te relèves du silence avec la sensation d'avoir parlé dans le vide, et tu te demandes si la prière a seulement servi à autre chose qu'à t'apaiser toi-même. Et pourtant, des années plus tard, tu reconnais dans ta vie la trace exacte de ce que tu avais demandé ce jour-là, comme si quelque chose avait continué de travailler pendant tout le temps où tu croyais n'avoir reçu que du silence. C'est devant ce Dieu-là, qui achève sans attendre que tu sentes qu'il travaille, que Paul place les Philippiens : il a commencé, il achèvera.",
+      "Tu as connu ces périodes de maladie ou d'épuisement où rien ne semble avancer, où chaque jour ressemble au précédent, où toi-même tu ne sais plus dire si tu guéris ou si tu stagnes. Personne autour de toi n'ose trancher la question, et ce silence pèse plus que n'importe quel diagnostic, parce qu'il te laisse seul avec ton immobilité. C'est exactement ce silence que gardent les pharisiens devant l'homme hydropique : eux savent la règle, mais devant la souffrance réelle, ils ne savent plus que taire. Et c'est dans ce silence précis, pas après lui, que la main de Jésus se tend, sans attendre un jour plus favorable ni une permission.",
+      "Tu as donné du temps, de l'attention, de la patience à quelqu'un ou à une tâche, pendant des années où rien ne venait prouver que cela portait du fruit. Personne ne te remerciait, rien ne changeait visiblement, et tu en es venu à te demander si cette fidélité avait un sens ou si tu t'épuisais pour rien. Le psaume dit pourtant que Dieu « se souvient toujours de son alliance », non pas comme on se souvient d'un fait ancien, mais comme on tient une promesse en la tenant réellement, jour après jour, même sans témoin. Ce que tu n'as pas vu pousser, lui le voyait déjà pousser."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre non par une résolution, mais par une promesse : celle d'une œuvre commencée en toi qui ne dépend pas de ce que tu en sens aujourd'hui.",
+    "geste": "Reste une minute en silence, les mains ouvertes sur les genoux, et redis lentement : « Celui qui a commencé achèvera. »",
+    "note": "Rien à produire ici, rien à vérifier : seulement laisser ce verset descendre là où tu te crois immobile."
+  },
+  "question": "Quelle part de toi attend encore, en silence, que Dieu l'achève sans que tu aies à la forcer ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : pourquoi « esclave » plutôt qu'« apôtre »",
+      "corps_html": "Dans sa première homélie sur cette épître, Chrysostome observe que Paul, écrivant aux Romains comme aux Philippiens, se dit « serviteur », mais se dit « apôtre » en écrivant aux Corinthiens ou à Timothée. Ce n'est pas que les uns vaudraient moins que Timothée : c'est que Paul choisit toujours, pour ceux qu'il honore le plus, le titre qui dit sa propre soumission plutôt que son autorité.",
+      "attribution": "Jean Chrysostome, Homélie I sur l'épître aux Philippiens"
+    },
+    {
+      "titre": "Augustin : l'Alléluia de la terre et l'Alléluia du ciel",
+      "corps_html": "Prononçant ce discours un jour de Pâques, Augustin rapproche les quarante jours du Carême, image des épreuves de cette vie, et les cinquante jours qui les suivent jusqu'à la Pentecôte, image de la joie sans fin. Chanter ce psaume, pour lui, c'est déjà répéter sur terre, dans une langue imparfaite, l'Alléluia que l'on chantera sans interruption au jour où il n'y aura plus de lendemain qui chasse le jour présent.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 110"
+    },
+    {
+      "titre": "La règle du puits et du bœuf",
+      "corps_html": "L'argument de Jésus en Luc 14, 5 n'est pas rhétorique : sauver un animal tombé dans un puits le jour du sabbat était une pratique admise par plusieurs écoles pharisiennes de l'époque, au nom de la souffrance qu'il fallait abréger. Jésus n'invente donc pas une exception, il applique aux humains une compassion que ses adversaires accordaient déjà, sans discussion, aux bêtes.",
+      "attribution": "note historique sur les débats rabbiniques du premier siècle"
+    }
+  ],
+  "videos": [
+    {
+      "id": "wktA2VE4yhY",
+      "raison": "Au verset 2, Paul fait reposer toute la salutation sur un seul mot, la grâce, donnée avant même la paix.",
+      "groupe": "mot"
+    },
+    {
+      "id": "xqUPT7BoX-w",
+      "raison": "Le verset 6 promet que Dieu, fidèle, achèvera lui-même l'œuvre qu'il a commencée dans les Philippiens.",
+      "groupe": "mot"
+    },
+    {
+      "id": "H3-GGFM3WqM",
+      "raison": "Paul fait culminer sa prière, au verset 11, dans le fruit de justice que Dieu seul produit en eux.",
+      "groupe": "mot"
+    },
+    {
+      "id": "6lowTdQ61Y4",
+      "raison": "Toute la scène de Luc 14, 1-6 se joue sur ce que le sabbat permet ou interdit de faire.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Luc 14 appartient à la section de l'évangile, du chapitre 10 au chapitre 24, où Jésus monte vers Jérusalem en multipliant les controverses.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 111, lu aujourd'hui, s'inscrit dans l'ensemble du livre des Psaumes présenté ici.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul appelle-t-il les destinataires « évêques » alors que l'Église de Philippes est minuscule et toute jeune ?",
+      "reponse_html": "Le mot grec episkopoi désigne au premier siècle de simples surveillants locaux, et son pluriel ici montre qu'il n'y a pas encore, à Philippes, un responsable unique par ville. Ce n'est que plus tard que ce mot désignera la charge que l'on connaît sous le nom d'évêque. Chrysostome rappelle que les titres d'évêque, de prêtre et de diacre n'étaient, à cette date, pas encore nettement séparés, et se prenaient souvent les uns pour les autres. On ne peut donc pas lire dans ce verset l'organisation ecclésiale des siècles suivants.",
+      "sources": {
+        "jour": [
+          "Ph 1,1"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie I sur Philippiens, §1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Jésus a-t-il le droit de guérir un jour de sabbat, ou transgresse-t-il la loi ?",
+      "reponse_html": "Jésus pose lui-même la question aux spécialistes avant d'agir, en Luc 14, 3, ce qui montre qu'il ne contourne pas le débat mais l'assume publiquement. Le silence des pharisiens en dit plus que ne le ferait une réponse : aucune règle écrite ne leur permet de condamner un geste de guérison ce jour-là. L'argument qu'il ajoute ensuite, celui du fils ou du bœuf tombé dans un puits, part de leur propre pratique admise, pour montrer que la compassion qu'ils accordent déjà à un animal, ils la refusent à un homme.",
+      "sources": {
+        "jour": [
+          "Lc 14,3-5"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que veut dire Paul quand il affirme que Dieu « achèvera » une œuvre commencée en nous ? N'est-ce pas présomptueux ?",
+      "reponse_html": "Paul ne dit pas que les Philippiens persévéreront par eux-mêmes, il dit que c'est Dieu qui a commencé et que c'est lui, le même sujet, qui rendra l'œuvre parfaite. La confiance du verset ne repose donc pas sur une évaluation optimiste des Philippiens, mais sur l'identité de l'ouvrier. Le psaume du jour dit la même chose autrement, en affirmant que Dieu « se souvient toujours de son alliance » : la fidélité n'est jamais celle de l'homme qui tient bon, mais celle de Dieu qui ne lâche pas.",
+      "sources": {
+        "jour": [
+          "Ph 1,6",
+          "Ps 110(111),5"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi l'homme hydropique n'a-t-il ni nom ni parole dans tout le récit ?",
+      "reponse_html": "Luc le place « devant lui », au centre de la scène, sans jamais lui donner la parole ni même la possibilité de la demander : c'est autour de lui, et non par lui, que se joue tout le débat. Cette absence de voix accuse par contraste le bavardage juridique des pharisiens, qui discutent de sa guérison sans jamais s'adresser à lui. Jésus, lui, ne lui demande rien avant d'agir : le texte ne dit pas que l'homme a demandé à être guéri.",
+      "sources": {
+        "jour": [
+          "Lc 14,2.4"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume dit que Dieu « se souvient toujours de son alliance » — pourquoi faudrait-il le rappeler, comme si Dieu pouvait oublier ?",
+      "reponse_html": "Le verbe hébreu traduit par « se souvenir » ne décrit pas un mécanisme mental mais un acte qui rend présent et actif ce dont on se souvient : dire que Dieu se souvient de son alliance, c'est dire qu'il continue de la tenir, non qu'il risquait de l'oublier. Augustin, prononçant son discours sur ce psaume un jour de Pâques, relie cette mémoire des prodiges de Dieu à l'Alléluia que l'on chante déjà sur terre en attendant de le chanter sans fin. Le rappel n'est donc pas adressé à Dieu, il est adressé à nous, qui oublions plus souvent que lui.",
+      "sources": {
+        "jour": [
+          "Ps 110(111),4-5"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 110"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-I",
+    "augustin-Ps-110"
+  ]
+}
