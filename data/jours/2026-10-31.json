@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-31",
+  "date_humaine": "samedi",
+  "semaine": "30ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 1, 18b-26 ; Lc 14, 1.7-11",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M18 52 Q110 44 210 86\"/><path d=\"M22 55 v70 M205 84 v52\"/><path d=\"M30 48 q14 -18 28 -4 q20 -16 38 4 q18 -10 30 10\"/><path d=\"M195 84 q15 -4 28 2\"/><path d=\"M250 100 q18 -10 34 -2 q8 3 4 10 q-10 6 -16 16 q-5 8 -11 10 q-5 1 -6 -4\"/><path d=\"M258 112 v16 M276 108 v18 M282 97 l5 -6\"/><path d=\"M230 136 q15 -6 30 0 q15 6 30 0 q15 -6 25 0 M252 132 q3 -4 6 0 M272 133 q3 -3 6 0\"/></g><g class=\"trait-liturgie\"><path d=\"M210 58 v10 M199 66 l7 6 M221 66 l-7 6 M202 58 q8 -6 16 0\"/></g></svg>",
+  "titre": "Le gain de céder",
+  "titre_html": "Le gain de <span class=\"it\">céder</span>",
+  "sous_titre": "Entre vivre et mourir, entre la première et la dernière place, un seul Christ mesure tout.",
+  "suite_hier": null,
+  "gravure_alt": "Une table de banquet antique vue de côté, convives couchés en demi-cercle ; au bout le plus bas de la table, une place laissée vide et simplement éclairée, tandis qu'au loin un cerf penche la tête vers un ruisseau entre les pierres.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ph 1, 18b-26",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">18</span> … je m'en réjouis, et je m'en réjouirai encore. <span class=\"s\">19</span> Car je sais que cela tournera à mon salut, grâce à vos prières et à l'<button class=\"mot\" data-g=\"g-epichoregia\">assistance</button> de l'Esprit de Jésus-Christ, <span class=\"s\">20</span> selon ma ferme attente et mon espérance que je n'aurai honte de rien, mais que, parlant avec une <button class=\"mot\" data-g=\"g-parrhesia\">pleine assurance</button>, Christ sera, maintenant comme toujours, glorifié dans mon corps, soit par ma vie, soit par ma mort. <span class=\"s\">21</span> Car <button class=\"mot\" data-g=\"g-zein\">Christ est ma vie</button>, et la mort m'est un gain. <span class=\"s\">22</span> Mais s'il est utile pour vous que je demeure encore dans la chair, à cause de l'oeuvre, je ne sais lequel préférer. <span class=\"s\">23</span> Je suis <button class=\"mot\" data-g=\"g-synecho\">pressé</button> des deux côtés : j'ai le désir de m'en aller et d'être avec Christ, ce qui de beaucoup est le meilleur ; <span class=\"s\">24</span> mais à cause de vous il est plus nécessaire que je demeure dans la chair. <span class=\"s\">25</span> Et je suis persuadé, je sais que je demeurerai et que je resterai avec vous tous, pour votre avancement et pour votre joie dans la foi, <span class=\"s\">26</span> afin que, par mon retour auprès de vous, vous ayez en moi un abondant sujet de vous glorifier en Jésus-Christ.",
+      "gloses": [
+        {
+          "id": "g-epichoregia",
+          "lemme": "epichorēgia",
+          "html": "Le mot grec <span class=\"gr\">epichorēgia</span> appartient d'abord au théâtre : il désigne le financement généreux d'un chœur par un riche citoyen d'Athènes, la chorégie. Segond traduit platement par « assistance », quand Paul évoque une provision abondante, presque festive, fournie par l'Esprit à travers la prière des Philippiens. Calvin, dans son commentaire, insiste sur ce lien entre la prière de l'Église et l'action concrète de l'Esprit dans l'épreuve de l'apôtre : la prière des uns devient chorégie pour la persévérance de l'autre."
+        },
+        {
+          "id": "g-parrhesia",
+          "lemme": "parrēsia",
+          "html": "<span class=\"gr\">parrēsia</span> signifie d'abord la liberté de parler ouvertement à l'assemblée, le franc-parler du citoyen dans la cité grecque. Segond choisit « pleine assurance », qui déplace le mot vers un sentiment intérieur, alors que Paul parle d'abord d'une parole publique, sans mot retenu ni masque. Chrysostome loue précisément cette franchise de Paul devant Néron, qu'aucune menace ne réduit au silence ou à la demi-vérité."
+        },
+        {
+          "id": "g-zein",
+          "lemme": "to zēn",
+          "html": "Le texte grec ne dit pas « Christ est ma vie » mais littéralement <span class=\"gr\">to zēn</span> (l'infinitif substantivé « le vivre ») « Christ », et « le mourir, gain » : deux infinitifs nus, sans verbe être, presque une équation. Segond, pour la clarté française, transforme l'infinitif en sujet personnel et ajoute le verbe « est », ce qui resserre en formule ce qui chez Paul reste suspendu, presque haletant. On perd l'étrangeté syntaxique, mais on gagne la confession que la tradition a retenue telle quelle, de Chrysostome à Calvin."
+        },
+        {
+          "id": "g-synecho",
+          "lemme": "synechomai",
+          "html": "<span class=\"gr\">synechomai</span> décrit littéralement le fait d'être tenu serré des deux côtés, comme une ville assiégée ou un détroit resserré entre deux rives. Segond traduit par « pressé », qui garde l'idée de contrainte mais perd l'image spatiale très concrète du verbe. Le même verbe reparaît pour décrire l'amour du Christ qui « nous presse » en 2 Corinthiens 5,14 — Paul est tenu, non par l'indécision, mais par deux biens également réels."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 41 (42), 2, 3, 5abcd, 5efgh",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> Comme une <button class=\"mot\" data-g=\"g-ayyal\">biche</button> <button class=\"mot\" data-g=\"g-arag\">soupire</button> après des courants d'eau, ainsi mon âme soupire après toi, ô Dieu ! <span class=\"s\">3</span> Mon âme a soif de Dieu, du <button class=\"mot\" data-g=\"g-elchai\">Dieu vivant</button> : quand irai-je et paraîtrai-je devant la face de Dieu ? <span class=\"s\">5</span> Je me rappelle avec <button class=\"mot\" data-g=\"g-nefesh\">effusion de cœur</button>, quand je marchais entouré de la foule, et que je m'avançais à sa tête vers la maison de Dieu, au milieu des cris de joie et des actions de grâces d'une multitude en fête.",
+      "gloses": [
+        {
+          "id": "g-arag",
+          "lemme": "ta'arog",
+          "html": "Le verbe hébreu <span class=\"gr\">ta'arog</span>, de la racine ערג ('ARAG), est rarissime dans la Bible : il décrit le cri rauque et puissant de l'animal assoiffé, presque un halètement, non un soupir discret. Segond adoucit en « soupire », qui convient à la piété mais efface la violence physique du besoin. Les lexicographes rapprochent ce mot d'un terme voisin décrivant le brame du cerf en rut — le psalmiste ne murmure pas sa prière, il la crie comme on crie de soif."
+        },
+        {
+          "id": "g-ayyal",
+          "lemme": "ayyal",
+          "html": "Le substantif hébreu <span class=\"gr\">ayyal</span> est masculin — « le cerf », non « la biche » — alors que le verbe qui l'accompagne, <span class=\"gr\">ta'arog</span>, est conjugué au féminin. Cette discordance grammaticale a fait couler beaucoup d'encre rabbinique : certains y lisent un troupeau désigné au singulier collectif, d'autres une image volontairement brouillée du désir. Segond tranche en « biche », suivant la Vulgate, ce qui simplifie une tension que le texte hébreu préserve."
+        },
+        {
+          "id": "g-elchai",
+          "lemme": "El chai",
+          "html": "L'expression <span class=\"gr\">El chai</span>, « Dieu vivant », revient dans l'Ancien Testament surtout pour opposer le Dieu d'Israël aux idoles muettes et sans souffle (cf. Ps 115 ; Jr 10,10). Segond traduit littéralement, sans perdre le sens, mais le lecteur français n'entend plus l'écho polémique porté par ces deux mots : derrière eux se tient tout un procès contre les dieux qui ne respirent pas. Le psalmiste ne cherche pas une idée de Dieu, mais une présence qui a du souffle."
+        },
+        {
+          "id": "g-nefesh",
+          "lemme": "nafshi",
+          "html": "Le texte porte littéralement <span class=\"gr\">eshpekha nafshi alay</span>, « je répands mon âme (nèfèsh) sur moi-même », une formule étrange que Segond lisse en « avec effusion de cœur ». Le nèfèsh n'est pas l'âme immatérielle des philosophes grecs mais le souffle de vie tout entier, gorge et désir compris — on la « répand » comme un liquide. Augustin, commentant ce psaume, y entend la mémoire de l'Église tout entière qui se liquéfie de nostalgie pour la maison de Dieu qu'elle a quittée."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 14, 1.7-11",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Jésus entra un jour de sabbat dans la maison d'un chef des pharisiens, pour prendre un repas, et les pharisiens l'<button class=\"mot\" data-g=\"g-paratereo\">observaient</button>. <span class=\"s\">7</span> Il adressa ensuite une parabole à ceux qui étaient invités, parce qu'il avait remarqué qu'ils choisissaient les <button class=\"mot\" data-g=\"g-protoklisia\">premières places</button> ; et il leur dit : <span class=\"s\">8</span> Lorsque tu seras invité à des noces, ne te mets pas à la première place, de peur qu'un plus considérable que toi ne soit invité ; <span class=\"s\">9</span> et que celui qui vous a invités l'un et l'autre ne vienne te dire : Céde la place à cette personne-là. Alors tu auras la honte de prendre la dernière place. <span class=\"s\">10</span> Mais, lorsque tu seras invité, va te mettre à la dernière place, afin que, quand celui qui t'a invité viendra, il te dise : Mon ami, monte plus haut. Alors cela te fera honneur devant tous ceux qui seront à table avec toi. <span class=\"s\">11</span> Car quiconque <button class=\"mot\" data-g=\"g-hypsoo\">s'élève</button> sera abaissé, et quiconque <button class=\"mot\" data-g=\"g-tapeinoo\">s'abaisse</button> sera élevé.",
+      "gloses": [
+        {
+          "id": "g-paratereo",
+          "lemme": "paratēreō",
+          "html": "Le verbe grec <span class=\"gr\">paratēreō</span> signifie épier, surveiller de près dans l'intention de surprendre une faute — c'est le même verbe employé en Marc 3,2 et Luc 6,7 pour les pharisiens qui guettent Jésus un jour de sabbat afin de l'accuser. Segond traduit justement par « observaient », mais le français perd la nuance hostile : il ne s'agit pas d'une curiosité bienveillante, mais d'une surveillance rapprochée, presque policière, tendue vers l'accusation."
+        },
+        {
+          "id": "g-protoklisia",
+          "lemme": "prōtoklisia",
+          "html": "Le mot grec <span class=\"gr\">prōtoklisia</span> est un composé : <span class=\"gr\">prōtos</span> (premier) et <span class=\"gr\">klisis</span> (le fait de s'étendre sur un lit pour le repas). Il désigne concrètement le divan le plus proche de l'hôte dans la salle à manger antique, où l'on mangeait couché et non assis. Segond traduit correctement par « premières places », mais perd l'image très physique du corps qui se couche en position d'honneur — toute la scène suppose des convives allongés, jouant des coudes pour la meilleure inclinaison."
+        },
+        {
+          "id": "g-hypsoo",
+          "lemme": "hypsōn",
+          "html": "Le verbe <span class=\"gr\">hypsoō</span>, élever, rattache ce verset à l'hymne de Philippiens 2,9 où Dieu « élève souverainement » (<span class=\"gr\">hyperhypsōsen</span>) le Christ après son abaissement, et au cantique de Marie en Luc 1,52. Segond garde la même racine française dans ces textes, ce qui permet au lecteur attentif de reconnaître la même logique divine à l'œuvre dans un repas de pharisiens et dans la croix. Ce n'est pas une morale de savoir-vivre, mais la loi même de l'Évangile qui s'énonce ici en miniature."
+        },
+        {
+          "id": "g-tapeinoo",
+          "lemme": "tapeinōn",
+          "html": "<span class=\"gr\">tapeinoō</span>, s'abaisser, est le verbe que Paul emploie pour le Christ qui « s'est abaissé lui-même » jusqu'à la mort de la croix (Ph 2,8). Segond traduit sobrement « s'abaisse », fidèle au texte, mais l'écho avec l'hymne christologique donne au conseil de table une portée qu'aucune politesse mondaine ne possède. Chrysostome notait déjà que l'humilité chrétienne ne se mesure pas à la place qu'on choisit mais à celle qu'on accepte, fût-elle la dernière sans retour possible."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Paul, une lettre écrite depuis une cellule",
+      "corps_html": "Philippiens est vraisemblablement écrite depuis une captivité romaine, vers 61-62, Paul ignorant encore l'issue de son procès devant l'empereur. Ce n'est pas une méditation abstraite sur la mort : c'est une lettre de prisonnier qui ne sait pas s'il sera exécuté ou relâché, et qui choisit d'en faire, non une plainte, mais un acte de joie publique adressé à l'Église qu'il a fondée à Philippes, la première d'Europe."
+    },
+    {
+      "titre": "Un repas chez un chef des pharisiens",
+      "corps_html": "La scène de Luc 14 se déroule un jour de sabbat, dans la maison d'un notable pharisien — un repas de sabbat comportait traditionnellement une installation protocolaire des invités selon leur rang, et les places proches de l'hôte étaient activement recherchées. Luc situe cette parabole juste après une guérison opérée le même jour de sabbat (14,1-6) : l'observation hostile du verset 1 continue de peser sur toute la scène."
+    }
+  ],
+  "analogie": {
+    "titre": "La soif reconnue",
+    "variantes": [
+      "Il y a des jours où prier ne produit rien que tu puisses nommer : ni paix, ni élan, ni certitude d'être entendu. Tu continues pourtant, par habitude ou par fidélité nue, et c'est précisément là, dans cette sécheresse sans goût, que le psalmiste te rejoint : son âme a soif, elle ne dit pas qu'elle est comblée. La soif elle-même, reconnue et nommée devant Dieu plutôt que cachée ou noyée dans l'activité, devient déjà une forme de prière plus vraie que bien des paroles pleines.",
+      "Tu as rendu un service que personne n'a remarqué, occupé une place que personne ne t'aurait disputée, et tu as senti, l'espace d'un instant, l'amertume de n'être vu par aucun regard humain. C'est exactement ce lieu que le Christ désigne comme le sien : non pas la dernière place choisie en spectacle pour qu'on vienne t'en déloger, mais celle où tu te tiens vraiment, sans arrière-pensée de récompense. Dieu seul y descend te chercher, et c'est de là, non d'ailleurs, qu'il te relève.",
+      "Il t'est peut-être arrivé de traverser une épreuve ou une maladie où tu ne savais plus très bien ce que tu souhaitais au fond : continuer, ou que cela s'arrête enfin. Ce tiraillement, loin d'être un manque de foi, a pu devenir le lieu même où tu as cessé de décider pour toi-même et laissé le Christ être la mesure des deux issues. Paul connaît ce déchirement sans en être brisé, parce qu'il a déplacé le centre : non plus vivre ou mourir, mais Christ, quelle que soit la porte par laquelle il vient à sa rencontre."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse le Psaume dire pour toi ce que tu n'as peut-être pas encore les mots pour dire.",
+    "geste": "Relis lentement le verset 3 du psaume à voix basse, en remplaçant « mon âme » par ton propre nom, et reste en silence quelques instants avant de continuer ta journée.",
+    "note": "Aucune place n'est à conquérir aujourd'hui — seulement une soif à reconnaître."
+  },
+  "question": "Où situes-tu, ce matin, le centre de ta vie — toi-même en train de la mesurer, ou le Christ qui la traverse, au point que vivre et mourir en deviennent également un gain ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : une joie plus forte que la mort",
+      "corps_html": "Prêchant sur ce passage, Chrysostome décrit une âme « réfugiée comme au sommet d'une haute montagne », inaccessible aux traits que lancent contre elle inimitiés et calomnies. Il souligne que Paul avait pour ennemi Néron lui-même, et que sa joie ne dépend ni de l'issue du procès ni du jugement des hommes, mais d'un salut déjà assuré par la prière de l'Église et l'assistance de l'Esprit.",
+      "attribution": "Jean Chrysostome, Homélie III sur l'épître aux Philippiens"
+    },
+    {
+      "titre": "Augustin : le cerf et l'Église qui soupire",
+      "corps_html": "Commentant ce psaume, Augustin identifie le cerf altéré à l'Église tout entière, « corps du Christ », en marche vers la maison de Dieu dont elle se sent exilée. Il relève que ce désir n'est pas le privilège d'une âme exceptionnelle mais la vocation commune de quiconque a goûté la douceur du Seigneur, répandue, dit-il, « dans le champ du Seigneur par toute la terre ».",
+      "attribution": "Augustin d'Hippone, Discours sur le Psaume 41"
+    },
+    {
+      "titre": "Le banquet romain et la place du convive",
+      "corps_html": "Dans le monde gréco-romain du premier siècle, les convives d'un repas se couchaient sur des lits disposés en triclinium, et la place occupée — plus ou moins proche de l'hôte — signalait publiquement le rang social de chacun ; s'y tromper exposait à un déplacement humiliant devant témoins. En renversant ce code au bénéfice de la dernière place, Jésus ne propose pas une ruse de modestie calculée, mais une évaluation radicalement différente de ce qui fait la dignité d'un convive.",
+      "attribution": "note historique"
+    }
+  ],
+  "videos": [
+    {
+      "id": "A-eeOo_TgYk",
+      "raison": "« Les derniers seront les premiers » éclaire directement Lc 14,11 : quiconque s'élève sera abaissé, et quiconque s'abaisse sera élevé.",
+      "groupe": "mot"
+    },
+    {
+      "id": "KcenGEY1w-U",
+      "raison": "L'étude du mot grec joie (chara) rejoint Ph 1,18, où Paul fait de la joie, et non de la crainte, sa réponse à l'incertitude de son procès.",
+      "groupe": "mot"
+    },
+    {
+      "id": "NRG4AmocCPA",
+      "raison": "Ce panorama couvre les chapitres 9 à 19 de Luc, dont le repas chez le chef des pharisiens de Lc 14 fait partie.",
+      "groupe": "livre"
+    },
+    {
+      "id": "u893rxHGrWU",
+      "raison": "Présente le genre de la plainte et du désir de Dieu, dont le Psaume 41(42) lu aujourd'hui est un exemple central.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul peut-il appeler la mort un « gain » sans que cela ressemble à une lassitude de vivre ?",
+      "reponse_html": "Parce que pour Paul le point de référence n'est plus sa propre existence mais le Christ : « Christ est ma vie » au verset 21 signifie que mourir ne change pas l'objet de sa vie, seulement sa forme. Chrysostome insiste sur la fermeté d'une âme qui a pris position si haut qu'aucune menace, pas même celle de Néron, ne peut l'atteindre — la mort n'est un gain que parce que la vie l'était déjà. C'est pourquoi Paul peut, deux versets plus loin, préférer rester pour l'Église sans que cela contredise son désir de s'en aller : les deux issues sont mesurées au même Christ.",
+      "sources": {
+        "jour": [
+          "Ph 1,21-24"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie III sur l'épître aux Philippiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi Paul parle-t-il de « l'Esprit de Jésus-Christ » plutôt que simplement de l'Esprit de Dieu ?",
+      "reponse_html": "Cette expression, rare dans le Nouveau Testament, se retrouve presque à l'identique en Romains 8,9, où Paul tient pour équivalents l'Esprit de Dieu, l'Esprit du Christ et le Christ lui-même habitant le croyant. En Philippiens 1,19, il attribue à ce même Esprit la provision concrète qui soutient sa fermeté en prison — ce n'est donc pas une formule trinitaire savante, mais la reconnaissance que la présence qui l'assiste porte le visage précis du Christ qu'il a rencontré. La prière des Philippiens et l'action de l'Esprit ne sont pas deux causes séparées de son salut, mais une seule aide reçue par deux canaux.",
+      "sources": {
+        "jour": [
+          "Ph 1,19"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le cerf du Psaume 42 a soif d'eau : est-ce une image de la prière en général, ou de quelque chose de plus précis ?",
+      "reponse_html": "Le psaume précise l'objet du désir dès le verset 3 : ce n'est pas l'eau en général, mais « paraître devant la face de Dieu », c'est-à-dire se rendre au temple, dans la liturgie concrète qu'évoque le verset 5 avec les cris de joie de la foule en marche. Augustin identifie le cerf à l'Église tout entière, qui soupire après la maison de Dieu dont elle se sent provisoirement éloignée, non par abstraction spirituelle mais par un manque aussi réel que la soif physique. La prière de ce psaume est donc le désir d'un lieu et d'une assemblée, pas seulement d'un sentiment intérieur.",
+      "sources": {
+        "jour": [
+          "Ps 41(42),3.5"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le Psaume 41"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Jésus donne-t-il ici un conseil de savoir-vivre, ou vise-t-il autre chose que les usages de table ?",
+      "reponse_html": "La forme est bien celle d'un conseil pratique de banquet — où s'asseoir, comment éviter l'humiliation publique — appuyé sur un code social réellement observé, où la place attribuée signalait le rang de chacun. Mais la conclusion du verset 11 généralise brusquement au-delà de la table : « quiconque s'élève sera abaissé, et quiconque s'abaisse sera élevé » est un principe que Luc applique ailleurs à toute l'existence, non à la seule étiquette. Le repas chez le pharisien devient ainsi un cas particulier d'une loi plus large, celle par laquelle Dieu renverse les évaluations humaines de grandeur.",
+      "sources": {
+        "jour": [
+          "Lc 14,8-11"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-III",
+    "augustin-Ps-41"
+  ]
+}
