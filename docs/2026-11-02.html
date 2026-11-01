@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dans la main — lundi 2 novembre 2026</title>
+<meta name="description" content="Ce que la mort ne peut pas prendre">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#4C3A63;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#9B84B8;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#9B84B8;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+
+/* ---------- PORTES & BARRE : les entrées de lecture ----------
+   Lire / Comprendre suivent la position ; Voir est un interrupteur qui
+   déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
+.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0;container-type:inline-size}
+.portes a{min-width:0;border-right:1px solid var(--filet);padding:1rem clamp(.3rem,1.6cqi,.7rem);color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
+.portes a:last-child{border-right:0}
+.portes .n{display:block;font-family:'Fraunces',serif;font-size:clamp(.95rem,3.2cqi,1.35rem);line-height:1;white-space:nowrap}
+.portes .d{display:block;font-size:clamp(.72rem,2.1cqi,.85rem);color:var(--muet);font-style:italic;margin-top:.3rem;line-height:1.3}
+.portes a:hover .n,.portes .on .n{color:var(--liturgie)}
+.portes .on{background:var(--papier-creux)}
+.portes .voir .n{color:var(--rubrique)}
+.portes .ouvert-voir{background:var(--liturgie)}
+.portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
+.portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+@media(max-width:560px){.portes .d{display:none}.portes a{padding:.85rem .15rem;text-align:center}.portes .n{font-size:clamp(.56rem,3.6cqi,1.02rem)}}
+.barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
+.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.35rem .6rem;letter-spacing:.04em}}
+.barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
+footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
+
+/* ---------- COMPAGNON : une vidéo à la fois ---------- */
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
+.compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.compagnon .entete .rubrique{margin:0}
+.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier:hover,.fil .replier:hover{color:var(--ink);border-color:var(--ink)}
+.video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
+.video:hover img,.video:focus-visible img{filter:none;opacity:1}
+.video .facade-titre{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-family:'Fraunces',serif;font-size:1.3rem}
+.video .lire{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;background:var(--papier);color:var(--ink);padding:.35rem .8rem .35rem .45rem;border-radius:999px;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;border:1px solid var(--filet)}
+.video .lire::before{content:"▶";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--rubrique);color:var(--papier);font-size:.62rem}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video:focus-visible{outline:2px solid var(--liturgie);outline-offset:3px}
+.compteur{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.8rem;margin-top:.8rem}
+.vtitre{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-top:.4rem}
+.raison{font-size:1.02rem;color:var(--glose-ink);font-style:italic;margin-top:.3rem}
+.credit{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.8rem;margin-top:.45rem}
+.credit a{color:var(--muet);text-decoration:none;border-bottom:1px solid var(--filet)}
+.credit a:hover{color:var(--rubrique)}
+.pellicule{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.9rem 0 .5rem;margin-top:1rem;border-top:1px solid var(--filet);scrollbar-width:thin}
+.pellicule .groupe{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-variant:small-caps;letter-spacing:.1em;font-size:.72rem;color:var(--rubrique);border-left:1px solid var(--filet);padding-left:.3rem;margin-left:.3rem;text-align:center}
+.pellicule .groupe:first-child{margin-left:0;scroll-snap-align:start}
+.pellicule button{flex:0 0 112px;scroll-snap-align:start;background:none;border:2px solid transparent;padding:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit;border-radius:2px;opacity:.75;transition:opacity .2s,border-color .2s}
+.pellicule button img,.pellicule .sans-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:grayscale(1) sepia(.25);background:var(--papier-creux)}
+.pellicule button span:last-child{display:block;font-size:.8rem;line-height:1.25;padding:.25rem .2rem .1rem}
+.pellicule button:hover{opacity:1}
+.pellicule button.on{border-color:var(--liturgie);opacity:1}
+.pellicule button.on img{filter:none}
+/* ---------- LE FIL DU JOUR : volet gauche, se repérer ----------
+   Le jour, les lectures, le plan, les sources. Ouvert sur grand écran (il
+   pousse la page), tiroir sur mobile. Repliable, redimensionnable. */
+.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-size:.92rem;transform:translateX(-105%);transition:transform .35s ease}
+.fil.ouvert{transform:none}
+.fil .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 1.4rem 2rem}
+.fil-tete{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem .6rem}
+.fil-tete .rubrique{margin:0}
+.fil h3{font-family:inherit;font-variant:small-caps;letter-spacing:.12em;font-size:.8rem;font-weight:400;color:var(--muet);margin:1.5rem 0 .45rem}
+.fil p{margin:0}
+.fil-jour .date{font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.3}
+.fil-jour .temps{color:var(--muet);margin-top:.25rem}
+.fil-jour .pastille{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
+.fil-jour .suite{font-style:italic;color:var(--glose-ink);margin-top:.5rem;line-height:1.4}
+.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem!important;font-size:.85rem}
+.fil a{color:var(--muet);text-decoration:none;transition:color .2s}
+.fil a:hover{color:var(--ink)}
+.fil ol{list-style:none;margin:0;padding:0}
+.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:2px solid var(--filet);padding:.28rem .7rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
+.fil ol small{display:block;font-size:.75rem;font-variant:small-caps;letter-spacing:.06em}
+.fil ol .on{color:var(--ink);border-left-color:var(--liturgie)}
+.fil-sources .groupe{border-left:2px solid var(--filet);padding:.1rem 0 .1rem .7rem;margin-bottom:.7rem;color:var(--muet);line-height:1.4;transition:border-color .2s}
+.fil-sources .groupe.on{border-left-color:var(--liturgie)}
+.fil-sources .groupe.on .nom{color:var(--ink)}
+.fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
+.fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
+.fil-sources small{display:block;font-size:.75rem}
+.fil-note{font-size:.78rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
+.fil-liens{font-size:.82rem;margin-top:.8rem!important}
+.fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
+#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
+#ouvrir-fil:hover{border-color:var(--ink)}
+.fil .poignee{right:0;top:0;bottom:0;width:14px;cursor:col-resize}
+.fil .poignee span{width:3px;height:48px}
+@media(min-width:1280px){
+  body{transition:padding .35s ease}
+  body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
+  body.fil-ouvert #carte{display:none}
+  /* Le fil porte déjà références, sources et mention IA. */
+  body.fil-ouvert footer{display:none}
+}
+@media(max-width:1279px){
+  .fil{z-index:95;width:min(86vw,320px);box-shadow:20px 0 40px rgba(0,0,0,.14)}
+  .fil .corps{padding-bottom:5rem}
+  .fil .poignee{display:none}
+}
+
+/* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
+   plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
+.compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.poignee{position:absolute;z-index:2;display:grid;place-items:center;touch-action:none}
+.poignee span{display:block;background:var(--filet);border-radius:999px;transition:background .2s}
+.poignee:hover span,.poignee:focus-visible span,.poignee.tire span{background:var(--liturgie)}
+.poignee:focus-visible{outline:none}
+body.redim,body.redim *{user-select:none;-webkit-user-select:none}
+body.redim .video iframe{pointer-events:none}
+body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
+@media(min-width:1100px){
+  body{transition:padding .35s ease}
+  .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
+  .compagnon .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
+  .compagnon .poignee span{width:3px;height:48px}
+  body.redim{cursor:col-resize}
+  body.panneau{padding-right:var(--panneau,460px)}
+  #basculer-theme,#carte{transition:right .35s ease}
+  body.panneau #basculer-theme,body.panneau #carte{right:calc(var(--panneau,460px) + 1rem)}
+  body.panneau{--droite:var(--panneau,460px)}
+  .barre-portes{left:calc(var(--gauche,0px) + (100vw - var(--gauche,0px) - var(--droite,0px))/2)}
+}
+@media(max-width:1099px){
+  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
+  .compagnon .poignee span{width:44px;height:5px}
+  body.redim{cursor:row-resize}
+}
+.compagnon.ouvert{transform:none}
+.barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
+.barre-portes .ouvert-demander,.portes .ouvert-demander{background:var(--rubrique);color:var(--papier)}
+.portes .ouvert-demander .n,.portes .ouvert-demander .d{color:var(--papier)}
+.compagnon .onglets{display:flex;gap:.25rem;padding:.25rem;border:1px solid var(--filet);border-radius:999px}
+.compagnon .onglets button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;background:none;border:0;padding:.3rem 1rem;border-radius:999px;cursor:pointer;color:var(--ink);transition:background .3s,color .3s}
+.compagnon .onglets button.on{background:var(--liturgie);color:var(--papier)}
+.compagnon .onglets button[data-onglet=demander].on{background:var(--rubrique)}
+.carnet .avert{font-size:.86rem;line-height:1.4;color:var(--rubrique);border:1px solid var(--rubrique);padding:.45rem .7rem;margin:0 0 .9rem;border-radius:1px;background:var(--papier-creux)}
+.carnet .qr{border-top:1px solid var(--filet)}
+.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-style:italic;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.75rem 1.4rem .75rem 0;cursor:pointer;position:relative}
+.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.7rem;color:var(--rubrique);font-style:normal}
+.carnet .q-btn[aria-expanded=true]::after{content:"−"}
+.carnet .q-btn:hover{color:var(--liturgie)}
+.carnet .q-btn:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.carnet .r{font-size:1.02rem;color:var(--ctx-ink);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
+.carnet .r p{margin-bottom:.5rem}
+.carnet .sources{display:grid;gap:.3rem;margin-top:.6rem}
+.carnet .sources p{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--muet);margin:0}
+.carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
+.carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
+.carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
+.carnet .sources .trad a{color:inherit;text-decoration:none}
+.carnet .sources .trad a:hover{text-decoration:underline}
+.carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre{border-top:1px solid var(--filet);padding-top:1rem;margin-top:.4rem}
+.carnet-libre .libre-titre{font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;color:var(--rubrique);margin-bottom:.5rem}
+.carnet-libre .libre-saisie{display:flex;gap:.6rem}
+.carnet-libre input{flex:1;font:inherit;font-size:1.05rem;background:none;border:0;border-bottom:1px solid var(--muet);color:var(--ink);padding:.3rem 0}
+.carnet-libre input:focus{outline:none;border-bottom-color:var(--liturgie)}
+.carnet-libre button{font:inherit;font-variant:small-caps;letter-spacing:.08em;background:none;border:1px solid var(--rubrique);color:var(--rubrique);padding:.2rem .8rem;cursor:pointer}
+.carnet-libre button:disabled{opacity:.5;cursor:wait}
+.carnet-libre .libre-turnstile{margin-top:.7rem}
+.carnet-libre .libre-etat{font-size:.85rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre .libre-reponse{margin-top:.7rem}
+.carnet .libre-ferme{font-style:italic;color:var(--muet);border-top:1px solid var(--filet);padding-top:.9rem;margin-top:.4rem}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<!-- LE FIL DU JOUR : volet gauche pour se repérer. Repliable, redimensionnable. -->
+<button id="ouvrir-fil" aria-controls="fil" aria-expanded="false" hidden>☰ Le fil</button>
+<aside class="fil" id="fil" aria-label="Le fil du jour">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="fil" aria-label="Élargir ou réduire le fil du jour (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour élargir"><span></span></div>
+  <div class="fil-tete"><p class="rubrique">Le fil du jour</p><button class="replier" aria-label="Replier le fil du jour">←</button></div>
+  <div class="corps">
+    <div class="fil-jour">
+      <p class="date">lundi 2 novembre 2026</p>
+      <p class="temps"><span class="pastille"></span>None</p>
+      <p class="fil-voisins"><a id="fil-veille" hidden>← la veille</a><a href="./">archive</a><a id="fil-lendemain" hidden>le lendemain →</a></p>
+    </div>
+    <h3>Les lectures</h3>
+    <ol class="fil-lectures">
+<li><button data-lecture="0" class="on"><small>Première lecture</small>Sagesse 3, 1-6.9</button></li>
+<li><button data-lecture="1"><small>Psaume</small>Psaume 26 (27), 1, 4, 7-9a, 13-14</button></li>
+<li><button data-lecture="2"><small>Deuxième lecture</small>1 Corinthiens 15, 51-57</button></li>
+<li><button data-lecture="3"><small>Évangile</small>Jean 6, 37-40</button></li>
+    </ol>
+    <h3>La page</h3>
+    <ol class="fil-plan">
+      <li><a href="#textes" data-plan>Le texte</a></li>
+      <li><a href="#contexte" data-plan>Le sol</a></li>
+      <li><a href="#analogie" data-plan>Le pont</a></li>
+      <li><a href="#invitation" data-plan>Le geste</a></li>
+      <li><a href="#question" data-plan>La question</a></li>
+      <li><a href="#racines" data-plan>Les racines</a></li>
+    </ol>
+    <h3>Les sources</h3>
+    <div class="fil-sources">
+      <div class="groupe" data-pour="textes"><p class="nom">Textes</p>
+<p>Segond (Apocryphes), 1881, domaine public</p><p>Segond, 1910, domaine public</p>        <p><a href="https://www.aelf.org/2026-11-02/romain/messe" target="_blank" rel="noopener">Lectionnaire romain (AELF)</a></p>
+      </div>
+<div class="groupe" data-pour="racines contexte"><p class="nom">Les anciens</p>
+<p>note historique</p><p>iconographie paléochrétienne</p><p>Daniel 12, 2 ; 2 Maccabées 7</p>      </div><div class="groupe" data-pour="voir"><p class="nom">Vidéos</p><p><a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a></p></div>      <p class="fil-note">Objet d'étude, pas une autorité — chaque affirmation reste traçable.</p>
+      <p class="fil-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</p>
+      <p class="fil-liens"><a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a></p>
+    </div>
+  </div>
+</aside>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 2 novembre 2026 · None · <span class="couleur">violet · </span>
+</p>
+<span class="badge">Comprend un livre deutérocanonique</span>    <h1>Dans la <span class="it">main</span></h1>
+    <p class="chapeau">Ce que la mort ne peut pas prendre</p>
+    <figure class="gravure" aria-label="Une main largement ouverte, gravée en noir, qui tient dans sa paume de petites silhouettes endormies, serrées comme des graines ; au-dessus, une mince ligne de lumière naît à l’horizon."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M60 95 q10 -38 42 -46 q30 -7 48 10 q14 -9 26 2 q10 9 4 24 q24 2 20 24 q-3 18 -24 20 l-96 2 q-22 -2 -20 -20 q1 -11 10 -13 q-12 -2 -10 -3 z"/><path d="M78 86 q0 -9 7 -9 q7 0 7 9 q0 9 -7 9 q-7 0 -7 -9 z"/><path d="M102 84 q0 -9 7 -9 q7 0 7 9 q0 9 -7 9 q-7 0 -7 -9 z"/><path d="M126 88 q0 -8 6 -8 q6 0 6 8 q0 8 -6 8 q-6 0 -6 -8 z"/><path d="M152 90 q0 -8 6 -8 q6 0 6 8 q0 8 -6 8 q-6 0 -8 -8 z"/></g><g class="trait-rubrique"><path d="M20 120 h300"/><path d="M160 40 h20"/></g></svg></figure>
+    <nav class="portes" aria-label="Entrées de lecture">
+      <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">3 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+      <a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions sur ces textes</span></a>
+    </nav>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Sagesse 3, 1-6.9 — Segond (Apocryphes), 1881</p>
+        <div class="ecriture "><span class="s">1</span> Mais les âmes des justes sont dans la main de Dieu, et le <button class="mot" data-g="g-basanos">tourment</button> ne les atteindra pas.<br><span class="s">2</span> Aux yeux des insensés, ils ont paru mourir, et leur départ a été regardé comme un malheur,<br><span class="s">3</span> et leur sortie du milieu de nous comme une destruction ; mais eux sont en paix.<br><span class="s">4</span> Car si, devant les hommes, ils ont été châtiés, leur espérance est pleine d’immortalité ;<br><span class="s">5</span> et pour avoir été éprouvés en peu de choses, ils recevront de grands biens, parce que Dieu les a mis à l’épreuve et les a trouvés dignes de lui.<br><span class="s">6</span> Il les a éprouvés comme on éprouve l’or dans le creuset, et il les a reçus comme une <button class="mot" data-g="g-holokarpoma">offrande entière</button>.<br><span class="s">9</span> Ceux qui se confient en lui comprendront la vérité, et les fidèles demeureront avec lui dans l’amour ; car la grâce et la paix sont pour ses élus.</div>
+        <div class="glose" id="g-basanos"><span class="lemme">basanos</span> Le mot grec <span class="gr">βάσανος</span> (basanos) désignait d’abord la pierre de touche qui permet d’éprouver la pureté de l’or, avant de désigner la torture et le tourment. Segond traduit simplement « tourment », ce qui est juste mais efface l’image technique : le mot dit moins une souffrance gratuite qu’une épreuve qui révèle ce qu’un métal — ou une âme — a de véritable. Le verset suivant reprend exactement cette image en parlant de l’or éprouvé « dans le creuset » : le grec tient les deux emplois ensemble, ce que la traduction française doit reconstituer par le contexte.</div>
+        <div class="glose" id="g-holokarpoma"><span class="lemme">holokarpôma</span> Le grec <span class="gr">ὁλοκάρπωμα</span> (holokarpôma) est un composé de <span class="gr">ὅλος</span> (holos, « entier ») et de la racine du fruit offert : il désigne, dans le vocabulaire sacrificiel de la Septante, l’offrande entièrement consumée sur l’autel, par opposition aux sacrifices où une part revenait au prêtre. Segond traduit par « offrande entière », choix fidèle qui garde l’essentiel : rien n’est retenu, rien n’est partagé. Appliqué aux justes, le mot dit que leur épreuve ne les a pas seulement purifiés en partie, mais donnés tout entiers.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Psaume 26 (27), 1, 4, 7-9a, 13-14 — Segond, 1910</p>
+        <div class="ecriture psaume"><span class="s">1</span> L’Éternel est ma <button class="mot" data-g="g-or">lumière</button> et mon salut : de qui aurais-je crainte ? L’Éternel est le soutien de ma vie : de qui aurais-je peur ?<br><span class="s">4</span> Je demande à l’Éternel une chose, que je désire ardemment : je voudrais habiter toute ma vie dans la maison de l’Éternel, pour contempler la magnificence de l’Éternel et pour admirer son temple.<br><span class="s">7</span> Éternel, écoute ma voix, je t’invoque : aie pitié de moi et exauce-moi !<br><span class="s">8</span> Mon cœur dit de ta part : « Cherchez ma <button class="mot" data-g="g-panim">face</button> ! » Et je cherche ta face, ô Éternel !<br><span class="s">9a</span> Ne me cache point ta face, ne repousse pas ton serviteur dans ta colère ;<br><span class="s">13</span> Oh ! si je n’étais pas sûr de voir la bonté de l’Éternel sur la terre des vivants !...<br><span class="s">14</span> Espère en l’Éternel ! Fortifie-toi et que ton cœur s’affermisse ! Espère en l’Éternel !</div>
+        <div class="glose" id="g-or"><span class="lemme">or</span> L’hébreu <span class="gr">אוֹר</span> (or) est le mot même de la lumière créée au premier jour de la Genèse. Le psalmiste ne dit pas que Dieu donne une lumière, mais qu’il est, lui, cette lumière : Segond garde la construction directe « ma lumière », sans l’affaiblir par une comparaison. Calvin, dans son commentaire sur ce psaume, insiste sur le fait que cette confession n’est pas une image poétique mais l’aveu que, sans Dieu, le croyant serait livré aux ténèbres et à la peur qu’il vient pourtant de nommer.</div>
+        <div class="glose" id="g-panim"><span class="lemme">panim</span> L’hébreu <span class="gr">פָּנִים</span> (panim, « face ») est toujours grammaticalement pluriel, comme s’il n’y avait pas de visage sans la totalité de la présence qu’il porte. Segond traduit par le singulier « face », seule option naturelle en français, mais perd ainsi la nuance d’une présence totale et non d’un simple trait du visage. Calvin lit ce verset comme un dialogue réel : Dieu parle le premier et invite, le croyant répond ensuite — chercher la face n’est donc pas une initiative humaine mais une réponse.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 1 Corinthiens 15, 51-57 — Segond, 1910</p>
+        <div class="ecriture "><span class="s">51</span> Voici, je vous dis un <button class="mot" data-g="g-mysterion">mystère</button> : nous ne mourrons pas tous, mais tous nous serons changés,<br><span class="s">52</span> en un instant, en un clin d’œil, à la dernière trompette. La trompette sonnera, et les morts ressusciteront incorruptibles, et nous serons changés.<br><span class="s">53</span> Car il faut que ce corps corruptible revête l’incorruptibilité, et que ce corps mortel revête l’immortalité.<br><span class="s">54</span> Lorsque ce corps corruptible aura revêtu l’incorruptibilité, et que ce corps mortel aura revêtu l’immortalité, alors s’accomplira ce qui est écrit : la mort a été engloutie dans la victoire.<br><span class="s">55</span> Ô mort, où est ta victoire ? Ô mort, où est ton <button class="mot" data-g="g-kentron">aiguillon</button> ?<br><span class="s">56</span> L’aiguillon de la mort, c’est le péché ; et la puissance du péché, c’est la loi.<br><span class="s">57</span> Mais grâces soient rendues à Dieu, qui nous donne la victoire par notre Seigneur Jésus-Christ !</div>
+        <div class="glose" id="g-mysterion"><span class="lemme">mystêrion</span> Le grec <span class="gr">μυστήριον</span> (mystêrion) ne désigne pas, chez Paul, une énigme insoluble mais un dessein de Dieu longtemps caché et maintenant révélé. Segond traduit par « mystère », mot qui en français moderne évoque plutôt l’obscurité que la révélation, ce qui peut égarer le lecteur. Chrysostome, dans ses homélies sur cette épître, insiste sur le fait que Paul ne spécule pas ici mais transmet une certitude reçue, au même titre que l’évangile lui-même est appelé mystère révélé aux saints.</div>
+        <div class="glose" id="g-kentron"><span class="lemme">kentron</span> Le grec <span class="gr">κέντρον</span> (kentron) est l’aiguillon dont on pique le bœuf pour le faire avancer, ou le dard du scorpion : Segond traduit littéralement par « aiguillon », ce qui garde bien l’image d’une pointe qui blesse et qui pousse en avant. Le même mot revient dans les Actes, lorsque le Christ dit à Paul sur le chemin de Damas qu’il lui est dur de résister « aux aiguillons » — ce rapprochement suggère que la mort, comme la résistance de Paul, perd sa force de contrainte une fois le combat retourné.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Jean 6, 37-40 — Segond, 1910</p>
+        <div class="ecriture evangile"><span class="s">37</span> Tous ceux que le Père me donne viendront à moi, et je ne <button class="mot" data-g="g-ekballo">mettrai pas dehors</button> celui qui vient à moi ;<br><span class="s">38</span> car je suis descendu du ciel pour faire, non ma volonté, mais la volonté de celui qui m’a envoyé.<br><span class="s">39</span> Or, la volonté de celui qui m’a envoyé, c’est que je ne perde aucun de ceux qu’il m’a donnés, mais que je les ressuscite au <button class="mot" data-g="g-eschate">dernier jour</button>.<br><span class="s">40</span> La volonté de mon Père, c’est que celui qui voit le Fils et qui croit en lui ait la vie éternelle ; et je le ressusciterai au dernier jour.</div>
+        <div class="glose" id="g-ekballo"><span class="lemme">ekballô exô</span> Le grec <span class="gr">ἐκβάλω ἔξω</span> (ekbalô exô, littéralement « jeter hors ») porte une double négation dans le texte original, que Segond rend par « je ne mettrai pas dehors », formule un peu rigide mais fidèle à l’insistance grecque. Augustin, dans ses Traités sur l’Évangile de Jean, s’appuie sur ce verset pour affirmer que venir au Christ n’est jamais une démarche qui s’épuise d’elle-même : celui qui vient a déjà été donné par le Père, et ce don précède et porte la démarche elle-même.</div>
+        <div class="glose" id="g-eschate"><span class="lemme">eschatê hêmera</span> Le grec <span class="gr">ἐσχάτη ἡμέρα</span> (eschatê hêmera, « le jour dernier ») donne son nom à l’eschatologie, l’étude des choses dernières. Segond traduit littéralement par « dernier jour », fidèle à l’expression johannique qui revient quatre fois dans ce seul chapitre comme un refrain. Elle reprend l’espérance déjà formulée en Daniel, où plusieurs de ceux qui dorment dans la poussière se réveilleront : Jean ne l’invente pas, il situe Jésus comme celui qui accomplit cette attente déjà ancienne.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>Une liturgie pour les défunts</h3><p>Cette combinaison de lectures — la Sagesse, le psaume 27, 1 Corinthiens 15, Jean 6 — est celle que la liturgie romaine réserve à la Commémoration des fidèles défunts, le 2 novembre. L’usage remonte à l’abbé Odilon de Cluny qui, vers 998, institua dans son ordre une prière pour tous les morts au lendemain de la Toussaint ; Benoît XV l’a étendue à l’Église universelle en 1915.</p></div>
+      <div><h3>Une Église qui doutait de la résurrection</h3><p>Paul écrit à des Corinthiens où certains disaient qu’il n’y a pas de résurrection des morts (1 Co 15, 12), sans doute sous l’influence d’une sagesse grecque qui jugeait l’âme seule digne de survivre, non le corps. Chrysostome, dans ses homélies sur cette épître, relève que Paul ne discute pas cette opinion abstraitement mais remonte jusqu’à la résurrection du Christ lui-même, fondement sans lequel toute la prédication s’effondre.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>La main qui porte sans qu’on le sente</h2>
+<p>Il t’est sans doute arrivé de t’endormir, enfant, sur la banquette arrière d’une voiture pendant un trajet trop long, et de te réveiller déjà couché dans ton lit, sans avoir rien senti du portage, du passage de bras en bras, de la porte qu’on ouvre sans bruit. Tu n’as pas participé à ce transport ; tu l’as seulement reçu, plus tard, comme un fait accompli dont tu ne gardes aucune mémoire sensible. C’est cette qualité de garde — agissante quand tu ne la perçois pas, efficace sans ton assentiment — que la Sagesse ose dire de Dieu : les âmes des justes sont dans sa main, et le tourment ne les atteindra pas, non parce qu’elles l’auraient senti, mais parce qu’elles y sont, tenues, avant même de le savoir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de fermer cette page, laisse-toi rejoindre non par une pensée sur la mort, mais par la main qui tient.</p>
+      <p class="geste">Nomme intérieurement, en silence, une personne que tu as perdue ; ne demande rien pour elle, confie-la simplement, comme on dépose un poids dans une main plus grande que la tienne.</p>
+      <small>Rien à ressentir, rien à vérifier : le texte dit que la garde ne dépend pas de ta perception d’elle.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu’est-ce qui, en toi, continue de croire que tu dois tenir seul ce que le texte dit déjà tenu par une autre main ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Un livre entre deux Testaments</h3>
+          <p>La Sagesse de Salomon a été composée en grec, probablement à Alexandrie, environ un siècle avant notre ère. Les Églises d’Orient et de Rome l’ont reçue dans leur canon ; les Églises de la Réforme, suivant la distinction déjà posée par Jérôme entre livres canoniques et livres ecclésiastiques, l’ont tenue pour une lecture utile mais non pour une règle de foi.</p>
+<p class="attrib">note historique</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>La main qui tient (Dextera Domini)</h3>
+          <p>Dès le IIIe siècle, les peintures des catacombes et les sarcophages chrétiens représentent une main sortant d’un nuage, la Dextera Domini, pour signifier l’action de Dieu sur les vivants comme sur les morts. Cette image précède et accompagne le texte de la Sagesse : la main de Dieu n’y est pas un ornement mais la manière concrète dont les premiers chrétiens disaient la garde de Dieu sur ceux qu’ils enterraient.</p>
+<p class="attrib">iconographie paléochrétienne</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Une espérance qui s’est précisée</h3>
+          <p>La foi d’Israël en une vie après la mort s’est longtemps contentée du séjour incertain du shéol. Elle se précise nettement avec Daniel, qui annonce que plusieurs de ceux qui dorment dans la poussière se réveilleront (Daniel 12, 2), puis avec les martyrs des Maccabées qui meurent en espérant recevoir de nouveau, de la main de Dieu, le corps qu’on leur arrache (2 Maccabées 7).</p>
+<p class="attrib">Daniel 12, 2 ; 2 Maccabées 7</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Sg 3, 1-6.9 ; 1 Co 15, 51-57 ; Jn 6, 37-40.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+    <span class="mention-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</span>
+  </footer>
+
+</div>
+</div>
+
+<nav class="barre-portes" aria-label="Entrées de lecture">
+  <a href="#textes" data-porte="lire">Lire</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+  <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
+</nav>
+
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="compagnon" aria-label="Agrandir ou réduire le compagnon (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour agrandir"><span></span></div>
+  <div class="entete">
+<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="corps">
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="u-2dqyddp2o" data-titre="Vie Éternelle" data-vignette="vignettes/u-2dqyddp2o.jpg" aria-label="Lire la vidéo Vie Éternelle"><img src="vignettes/u-2dqyddp2o.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 3</p>    <p class="vtitre" id="ecran-titre">Vie Éternelle</p>
+    <p class="raison" id="ecran-raison">Jean 6, 40 promet la vie éternelle à qui voit le Fils et croit en lui ; cette vidéo explore ce que ce mot recouvre dans la Bible.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=u-2dqyddp2o" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="u-2dqyddp2o" data-titre="Vie Éternelle" data-raison="Jean 6, 40 promet la vie éternelle à qui voit le Fils et croit en lui ; cette vidéo explore ce que ce mot recouvre dans la Bible." data-vignette="vignettes/u-2dqyddp2o.jpg" class="on"><img src="vignettes/u-2dqyddp2o.jpg" alt="" loading="lazy"><span>Vie Éternelle</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="1" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="La lecture de 1 Corinthiens 15, 51-57 est le sommet du chapitre que cette vidéo replace dans l’ensemble de la lettre." data-vignette="vignettes/q99CrlpKBrw.jpg"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+      <button data-i="2" data-yt="T-DvRiiLS1Y" data-titre="Psaumes - Panorama" data-raison="Le psaume 27 lu aujourd’hui trouve sa place dans le panorama que cette vidéo donne du livre des Psaumes." data-vignette="vignettes/T-DvRiiLS1Y.jpg"><img src="vignettes/T-DvRiiLS1Y.jpg" alt="" loading="lazy"><span>Psaumes - Panorama</span></button>
+    </div>
+  </div>
+  <div class="vitre carnet" data-vitre="demander">
+    <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-1">Pourquoi lire un livre absent de la Bible protestante ?</button>
+      <div class="r" id="r-1" hidden>
+        La Sagesse de Salomon appartient aux livres que les protestants appellent apocryphes ou deutérocanoniques : utiles à lire, selon la tradition réformée, mais non reçus comme règle de foi. La Confession de La Rochelle énumère les livres canoniques de l’Ancien Testament et n’y range pas la Sagesse. Elle reste pourtant lue ici parce qu’aucun autre texte ne dit avec cette force que les âmes des justes sont dans la main de Dieu, image que le Nouveau Testament reprendra sans la citer formellement.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Sg 3, 1-6.9</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Confession de foi de La Rochelle (1559-1571), art. 3</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-2">Que veut dire Paul quand il écrit que la mort a été engloutie dans la victoire ?</button>
+      <div class="r" id="r-2" hidden>
+        Paul cite ici, en l’adaptant, une parole d’Ésaïe sur la mort anéantie pour toujours, et il l’applique à l’événement de la résurrection du Christ qui rend cette parole désormais vraie. Chrysostome, dans ses homélies sur cette épître, souligne que Paul ne parle pas d’une mort allégée mais d’une mort vaincue de l’intérieur, comme une chose qui avale sa propre destruction en avalant le Christ. Le verset suivant transforme cette victoire en défi chanté : « ô mort, où est ta victoire ? »
+        <div class="sources">
+<p>Textes du jour</p><div><span>1 Co 15, 54-55</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Jean Chrysostome, Homélies (IVe-Ve s.), Homélies sur la Première épître aux Corinthiens</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-3">Pourquoi Jésus parle-t-il d’un dernier jour, et non d’une résurrection immédiate après la mort ?</button>
+      <div class="r" id="r-3" hidden>
+        Jean répète quatre fois dans ce chapitre que Jésus ressuscitera les siens « au dernier jour », reprenant une attente déjà formulée par Daniel plutôt que d’improviser une doctrine nouvelle. Entre la mort et ce jour, la Sagesse situe les âmes des justes dans la main de Dieu, en repos, et non dans l’inexistence. Augustin, dans ses Traités sur l’Évangile de Jean, lit ce verset comme la garantie que rien de ceux que le Père a donnés au Fils ne sera perdu en chemin, quel que soit le temps que ce chemin prenne.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Jn 6, 39-40</span><span>Sg 3, 1</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Augustin d&#39;Hippone, Traités sur l&#39;Évangile de Jean (406-420), traité XXVI</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-4">Le corps ressuscité sera-t-il le même corps que celui que nous avons perdu ?</button>
+      <div class="r" id="r-4" hidden>
+        Paul ne dit pas que le corps sera remplacé mais qu’il revêtira l’incorruptibilité, comme un vêtement nouveau passé sur ce qui demeure identique à soi-même. Augustin consacre une large part du dernier livre de La Cité de Dieu à cette question, discutant notamment ce que deviennent les corps mutilés ou dévorés, pour conclure que la puissance qui a créé peut aussi bien reconstituer. La question reste légitimement difficile ; le texte n’offre pas un mécanisme mais une promesse.
+        <div class="sources">
+<p>Textes du jour</p><div><span>1 Co 15, 53-54</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Augustin d&#39;Hippone, La Cité de Dieu (413-426), livre XXII</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-5">Si tout dépend de ce que le Père donne au Fils, qu’en est-il de ma propre décision de croire ?</button>
+      <div class="r" id="r-5" hidden>
+        Le verset 37 affirme à la fois un don qui précède — « tous ceux que le Père me donne viendront à moi » — et un accueil sans condition — « je ne mettrai pas dehors celui qui vient ». Le Catéchisme de Heidelberg, interrogé sur le profit que nous retirons de la résurrection du Christ, répond par l’assurance de notre propre résurrection à venir plutôt que par une explication du mécanisme de l’élection. Le texte de Jean tient donc ensemble, sans les opposer, le don qui fonde et la venue qui est demandée.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Jn 6, 37</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Catéchisme de Heidelberg (1563), Q. 45</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <!-- Question libre : visible seulement si /api/carnet est ouvert (voir JS). -->
+    <form class="carnet-libre" hidden data-date="2026-11-02">
+      <p class="libre-titre">Ta question sur les textes du jour</p>
+      <div class="libre-saisie"><input name="question" maxlength="400" minlength="3" required placeholder="Pourquoi… ?" aria-label="Ta question sur les textes du jour"><button type="submit">Poser</button></div>
+      <div class="libre-turnstile"></div>
+      <p class="libre-etat" aria-live="polite"></p>
+      <div class="libre-reponse r" hidden><div class="libre-texte"></div><div class="libre-sources sources" hidden></div><p class="ia">Réponse générée par IA, non relue — à vérifier.</p></div>
+    </form>
+    <p class="libre-ferme" hidden></p>
+  </div>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+// Le fil du jour : ouvert sur grand écran (sauf si on l'a replié), tiroir sur
+// mobile. Il suit la lecture (lecture affichée, section, sources) et trouve la
+// veille et le lendemain dans jours.json.
+(function(){
+  var fil=document.getElementById('fil'),btn=document.getElementById('ouvrir-fil');if(!fil)return;
+  var large=matchMedia('(min-width:1280px)'),rac=document.documentElement;
+  function lire(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function ecrire(k,v){try{v===null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}
+  function etat(o){fil.classList.toggle('ouvert',o);document.body.classList.toggle('fil-ouvert',o&&large.matches);
+    btn.hidden=o;btn.setAttribute('aria-expanded',o?'true':'false')}
+  function defaut(){etat(large.matches&&lire('fil')!=='replie')}
+  defaut();large.addEventListener('change',defaut);
+  btn.addEventListener('click',function(){etat(true);if(large.matches)ecrire('fil',null)});
+  fil.querySelector('.replier').addEventListener('click',function(){etat(false);if(large.matches)ecrire('fil','replie')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!large.matches&&fil.classList.contains('ouvert'))etat(false)});
+  document.addEventListener('click',function(e){if(!large.matches&&fil.classList.contains('ouvert')&&!fil.contains(e.target)&&e.target!==btn)etat(false)});
+  // Lectures : un clic amène la bonne carte ; le défilement du rail l'allume.
+  var rail=document.getElementById('r-textes'),lecs=fil.querySelectorAll('[data-lecture]');
+  function pas(){return rail.firstElementChild.offsetWidth+32}
+  lecs.forEach(function(b){b.addEventListener('click',function(){
+    document.getElementById('textes').scrollIntoView({behavior:'smooth'});
+    rail.scrollTo({left:pas()*+b.dataset.lecture,behavior:'smooth'});if(!large.matches)etat(false)})});
+  if(rail)rail.addEventListener('scroll',function(){var i=Math.round(rail.scrollLeft/pas());
+    lecs.forEach(function(b){b.classList.toggle('on',+b.dataset.lecture===i)})},{passive:true});
+  // Plan et sources : suivent la section à l'écran.
+  var plan=fil.querySelectorAll('[data-plan]'),groupes=fil.querySelectorAll('.fil-sources .groupe');
+  plan.forEach(function(a){a.addEventListener('click',function(){if(!large.matches)etat(false)})});
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
+    plan.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+    groupes.forEach(function(g){g.classList.toggle('on',g.dataset.pour.split(' ').indexOf(id)>=0)})})},{rootMargin:'-40% 0px -50% 0px'});
+  ['haut','textes','contexte','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  // Veille et lendemain parmi les jours publiés.
+  var ici=location.pathname.split('/').pop().replace('.html','');
+  fetch('jours.json').then(function(r){return r.ok?r.json():[]}).then(function(js){var i=js.indexOf(ici);if(i<0)return;
+    [['fil-veille',js[i-1]],['fil-lendemain',js[i+1]]].forEach(function(x){var a=document.getElementById(x[0]);
+      if(x[1]){a.href='./'+x[1]+'.html';a.hidden=false}})}).catch(function(){});
+  // Poignée (grand écran) : glisser pour élargir, double-clic pour revenir.
+  var poignee=fil.querySelector('.poignee'),depart=null;
+  function poser(v){v=Math.min(Math.max(220,innerWidth*.3),Math.max(220,v));rac.style.setProperty('--fil',v+'px');return v}
+  var garde=lire('fil-largeur');if(garde)poser(+garde);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,t:fil.offsetWidth};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(depart)poser(depart.t+e.clientX-depart.x)});
+  function lacher(){if(!depart)return;depart=null;poignee.classList.remove('tire');document.body.classList.remove('redim');ecrire('fil-largeur',fil.offsetWidth)}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--fil');ecrire('fil-largeur',null)});
+  poignee.addEventListener('keydown',function(e){var d={ArrowLeft:-30,ArrowRight:30}[e.key];if(!d)return;
+    e.preventDefault();ecrire('fil-largeur',poser(fil.offsetWidth+d))});
+})();
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+// Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
+// Voir et Demander sont des interrupteurs qui déplient ou replient le
+// compagnon ; passer de l'un à l'autre change d'onglet sans replier.
+(function(){
+  var portes=document.querySelectorAll('[data-porte]');
+  var comp=document.getElementById('compagnon'),ecran=document.getElementById('ecran');
+  var mq=matchMedia('(min-width:1100px)');
+  var ouvert=null,position='lire',verrou=0;
+  function peindre(){portes.forEach(function(e){var p=e.dataset.porte;
+    e.classList.toggle('on',!ouvert&&p===position);
+    e.classList.toggle('ouvert-voir',ouvert==='voir'&&p==='voir');
+    e.classList.toggle('ouvert-demander',ouvert==='demander'&&p==='demander');
+    if(p==='voir'||p==='demander')e.setAttribute('aria-expanded',ouvert===p?'true':'false')});
+    if(!comp)return;
+    comp.querySelectorAll('[data-vitre]').forEach(function(v){v.hidden=!!ouvert&&v.dataset.vitre!==ouvert});
+    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')})}
+  function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
+    var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
+    else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
+    var l=document.createElement('span');l.className='lire';l.textContent='Regarder';ecran.appendChild(f);ecran.appendChild(l)}
+  function ouvrir(o){ouvert=o;
+    if(comp){comp.classList.toggle('ouvert',!!o);document.body.classList.toggle('panneau',!!o&&mq.matches);
+      if(o!=='voir'&&ecran&&ecran.querySelector('iframe'))facade();  // quitter Voir coupe la vidéo
+      if(o==='demander')initLibre()}
+    peindre()}
+  portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
+    if(p==='voir'||p==='demander'){ev.preventDefault();ouvrir(ouvert===p?null:p);return}
+    position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
+  var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&Date.now()-verrou>900){position=zones[e.target.id];peindre()}})},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(zones).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  peindre();
+  if(!comp)return;
+  var replier=comp.querySelector('.replier');
+  function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
+  fleche();mq.addEventListener('change',fleche);
+  replier.addEventListener('click',function(){ouvrir(null)});
+  // Poignée : glisser pour agrandir ; sur mobile, un tap bascule mi-hauteur /
+  // plein écran, le relâcher s'aimante à 45, 78 ou 92 % et tirer tout en bas
+  // replie. Double-clic : taille d'origine. Flèches au clavier. Taille gardée.
+  var poignee=comp.querySelector('.poignee'),rac=document.documentElement,depart=null;
+  function cle(){return mq.matches?'panneau':'volet'}
+  function poser(v){var large=mq.matches,min=large?340:15,max=large?Math.max(340,innerWidth*.7):92;
+    v=Math.min(max,Math.max(min,v));rac.style.setProperty('--'+cle(),v+(large?'px':'vh'));return v}
+  function garder(v){try{localStorage.setItem('compagnon-'+cle(),Math.round(v))}catch(e){}}
+  function taille(){return mq.matches?comp.offsetWidth:comp.offsetHeight/innerHeight*100}
+  function retrouver(){try{var v=localStorage.getItem('compagnon-'+cle());if(v)poser(+v)}catch(e){}}
+  retrouver();mq.addEventListener('change',retrouver);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,y:e.clientY,t:taille()};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(!depart)return;
+    poser(mq.matches?depart.t+depart.x-e.clientX:depart.t+(depart.y-e.clientY)/innerHeight*100)});
+  function lacher(e){if(!depart)return;var d=depart;depart=null;
+    poignee.classList.remove('tire');document.body.classList.remove('redim');
+    if(mq.matches){garder(taille());return}
+    var h=d.t+(d.y-e.clientY)/innerHeight*100,tap=Math.abs(d.y-e.clientY)<6;
+    if(tap)h=d.t>70?45:92;
+    else if(h<30){poser(d.t);ouvrir(null);return}
+    else h=[45,78,92].reduce(function(a,b){return Math.abs(b-h)<Math.abs(a-h)?b:a});
+    garder(poser(h))}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--'+cle());try{localStorage.removeItem('compagnon-'+cle())}catch(e){}});
+  poignee.addEventListener('keydown',function(e){var pas={ArrowLeft:40,ArrowRight:-40,ArrowUp:8,ArrowDown:-8}[e.key];
+    if(!pas||(mq.matches!==(e.key==='ArrowLeft'||e.key==='ArrowRight')))return;
+    e.preventDefault();garder(poser(taille()+pas))});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
+  comp.querySelectorAll('[data-onglet]').forEach(function(b){b.addEventListener('click',function(){ouvrir(b.dataset.onglet)})});
+  var qs=comp.querySelectorAll('.q-btn');
+  qs.forEach(function(b){b.addEventListener('click',function(){var ouvre=b.getAttribute('aria-expanded')!=='true';
+    qs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    if(ouvre){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false}})});
+  // Question libre : on demande d'abord si le carnet est ouvert ; Turnstile
+  // n'est chargé qu'à ce moment-là, jamais à l'ouverture de la page.
+  var libre=comp.querySelector('.carnet-libre'),demande=false,widget=null;
+  function fermeLibre(msg){var f=comp.querySelector('.libre-ferme');if(libre)libre.hidden=true;if(msg&&f){f.textContent=msg;f.hidden=false}}
+  function initLibre(){if(!libre||demande)return;demande=true;
+    fetch('/api/carnet',{headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json():null}).then(function(e){
+      if(!e||!e.ouvert){fermeLibre(e&&e.message||'Les questions en direct ne sont pas disponibles pour le moment.');return}
+      var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
+      s.onload=function(){widget=window.turnstile.render(libre.querySelector('.libre-turnstile'),{sitekey:e.sitekey,size:'flexible'});libre.hidden=false};
+      document.head.appendChild(s)}).catch(function(){fermeLibre('Les questions en direct ne sont pas disponibles pour le moment.')})}
+  if(libre)libre.addEventListener('submit',function(ev){ev.preventDefault();
+    var etat=libre.querySelector('.libre-etat'),btn=libre.querySelector('button'),q=libre.question.value.trim();
+    var jeton=window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';
+    if(!jeton){etat.textContent='Merci de valider la vérification anti-robot.';return}
+    btn.disabled=true;etat.textContent='Le carnet cherche dans les textes du jour…';
+    fetch('/api/carnet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({date:libre.dataset.date,question:q,jeton:jeton})})
+      .then(function(r){return r.json().then(function(c){return {s:r.status,c:c}})}).then(function(x){
+        if(x.c.raison==='plafond'){fermeLibre(x.c.message);return}
+        if(x.s!==200){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.';return}
+        var zone=libre.querySelector('.libre-texte');zone.textContent='';
+        x.c.reponse.split(/\n\s*\n/).forEach(function(par){var p=document.createElement('p');p.textContent=par.trim();zone.appendChild(p)});
+        var src=libre.querySelector('.libre-sources');src.textContent='';
+        if(x.c.sources&&x.c.sources.length){var t=document.createElement('p');t.textContent='Pères et Réformateurs';src.appendChild(t);
+          var l=document.createElement('div');l.className='trad';
+          x.c.sources.forEach(function(s){var a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';
+            a.textContent=s.titre+' ('+s.credit+')';var sp=document.createElement('span');sp.appendChild(a);l.appendChild(sp)});
+          src.appendChild(l);src.hidden=false}else{src.hidden=true}
+        libre.querySelector('.libre-reponse').hidden=false;
+        etat.textContent=x.c.restant>0?'Encore '+x.c.restant+' question'+(x.c.restant>1?'s':'')+' aujourd\'hui.':'C\'était ta dernière question pour aujourd\'hui.';
+        if(x.c.restant<=0)libre.querySelector('.libre-saisie').hidden=true})
+      .catch(function(){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.'})
+      .then(function(){btn.disabled=false;if(window.turnstile&&widget!==null)window.turnstile.reset(widget)})});
+  if(!ecran)return;
+  function lancer(){var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(ecran.dataset.yt)+'?autoplay=1&rel=0&hl=fr';
+    f.title=ecran.dataset.titre;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+    ecran.textContent='';ecran.appendChild(f)}
+  ecran.addEventListener('click',function(){if(!ecran.querySelector('iframe'))lancer()});
+  ecran.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&!ecran.querySelector('iframe')){e.preventDefault();lancer()}});
+  var films=comp.querySelectorAll('.pellicule button');
+  films.forEach(function(b){b.addEventListener('click',function(){
+    ['yt','titre','vignette'].forEach(function(k){ecran.dataset[k]=b.dataset[k]});lancer();
+    document.getElementById('ecran-titre').textContent=b.dataset.titre;
+    document.getElementById('ecran-raison').textContent=b.dataset.raison;
+    document.getElementById('ecran-yt').href='https://www.youtube.com/watch?v='+encodeURIComponent(b.dataset.yt);
+    document.getElementById('compteur').textContent='Vidéo '+(+b.dataset.i+1)+' sur '+films.length;
+    films.forEach(function(x){x.classList.toggle('on',x===b)})})});
+})();
+</script>
+</body>
+</html>

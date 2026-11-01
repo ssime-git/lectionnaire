@@ -1,0 +1,237 @@
+{
+  "date": "2026-11-02",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "",
+  "liturgie": {
+    "cle": "violet",
+    "nom": "violet",
+    "hex": "#4C3A63",
+    "hex_sombre": "#9B84B8"
+  },
+  "deuterocanonique": true,
+  "references_brutes": "Sg 3, 1-6.9 ; 1 Co 15, 51-57 ; Jn 6, 37-40",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M60 95 q10 -38 42 -46 q30 -7 48 10 q14 -9 26 2 q10 9 4 24 q24 2 20 24 q-3 18 -24 20 l-96 2 q-22 -2 -20 -20 q1 -11 10 -13 q-12 -2 -10 -3 z\"/><path d=\"M78 86 q0 -9 7 -9 q7 0 7 9 q0 9 -7 9 q-7 0 -7 -9 z\"/><path d=\"M102 84 q0 -9 7 -9 q7 0 7 9 q0 9 -7 9 q-7 0 -7 -9 z\"/><path d=\"M126 88 q0 -8 6 -8 q6 0 6 8 q0 8 -6 8 q-6 0 -6 -8 z\"/><path d=\"M152 90 q0 -8 6 -8 q6 0 6 8 q0 8 -6 8 q-6 0 -8 -8 z\"/></g><g class=\"trait-rubrique\"><path d=\"M20 120 h300\"/><path d=\"M160 40 h20\"/></g></svg>",
+  "titre": "Dans la main",
+  "titre_html": "Dans la <span class=\"it\">main</span>",
+  "sous_titre": "Ce que la mort ne peut pas prendre",
+  "suite_hier": null,
+  "gravure_alt": "Une main largement ouverte, gravée en noir, qui tient dans sa paume de petites silhouettes endormies, serrées comme des graines ; au-dessus, une mince ligne de lumière naît à l’horizon.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Sagesse 3, 1-6.9",
+      "traduction": "Segond (Apocryphes), 1881",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Mais les âmes des justes sont dans la main de Dieu, et le <button class=\"mot\" data-g=\"g-basanos\">tourment</button> ne les atteindra pas.<br><span class=\"s\">2</span> Aux yeux des insensés, ils ont paru mourir, et leur départ a été regardé comme un malheur,<br><span class=\"s\">3</span> et leur sortie du milieu de nous comme une destruction ; mais eux sont en paix.<br><span class=\"s\">4</span> Car si, devant les hommes, ils ont été châtiés, leur espérance est pleine d’immortalité ;<br><span class=\"s\">5</span> et pour avoir été éprouvés en peu de choses, ils recevront de grands biens, parce que Dieu les a mis à l’épreuve et les a trouvés dignes de lui.<br><span class=\"s\">6</span> Il les a éprouvés comme on éprouve l’or dans le creuset, et il les a reçus comme une <button class=\"mot\" data-g=\"g-holokarpoma\">offrande entière</button>.<br><span class=\"s\">9</span> Ceux qui se confient en lui comprendront la vérité, et les fidèles demeureront avec lui dans l’amour ; car la grâce et la paix sont pour ses élus.",
+      "gloses": [
+        {
+          "id": "g-basanos",
+          "lemme": "basanos",
+          "html": "Le mot grec <span class=\"gr\">βάσανος</span> (basanos) désignait d’abord la pierre de touche qui permet d’éprouver la pureté de l’or, avant de désigner la torture et le tourment. Segond traduit simplement « tourment », ce qui est juste mais efface l’image technique : le mot dit moins une souffrance gratuite qu’une épreuve qui révèle ce qu’un métal — ou une âme — a de véritable. Le verset suivant reprend exactement cette image en parlant de l’or éprouvé « dans le creuset » : le grec tient les deux emplois ensemble, ce que la traduction française doit reconstituer par le contexte."
+        },
+        {
+          "id": "g-holokarpoma",
+          "lemme": "holokarpôma",
+          "html": "Le grec <span class=\"gr\">ὁλοκάρπωμα</span> (holokarpôma) est un composé de <span class=\"gr\">ὅλος</span> (holos, « entier ») et de la racine du fruit offert : il désigne, dans le vocabulaire sacrificiel de la Septante, l’offrande entièrement consumée sur l’autel, par opposition aux sacrifices où une part revenait au prêtre. Segond traduit par « offrande entière », choix fidèle qui garde l’essentiel : rien n’est retenu, rien n’est partagé. Appliqué aux justes, le mot dit que leur épreuve ne les a pas seulement purifiés en partie, mais donnés tout entiers."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 26 (27), 1, 4, 7-9a, 13-14",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> L’Éternel est ma <button class=\"mot\" data-g=\"g-or\">lumière</button> et mon salut : de qui aurais-je crainte ? L’Éternel est le soutien de ma vie : de qui aurais-je peur ?<br><span class=\"s\">4</span> Je demande à l’Éternel une chose, que je désire ardemment : je voudrais habiter toute ma vie dans la maison de l’Éternel, pour contempler la magnificence de l’Éternel et pour admirer son temple.<br><span class=\"s\">7</span> Éternel, écoute ma voix, je t’invoque : aie pitié de moi et exauce-moi !<br><span class=\"s\">8</span> Mon cœur dit de ta part : « Cherchez ma <button class=\"mot\" data-g=\"g-panim\">face</button> ! » Et je cherche ta face, ô Éternel !<br><span class=\"s\">9a</span> Ne me cache point ta face, ne repousse pas ton serviteur dans ta colère ;<br><span class=\"s\">13</span> Oh ! si je n’étais pas sûr de voir la bonté de l’Éternel sur la terre des vivants !...<br><span class=\"s\">14</span> Espère en l’Éternel ! Fortifie-toi et que ton cœur s’affermisse ! Espère en l’Éternel !",
+      "gloses": [
+        {
+          "id": "g-or",
+          "lemme": "or",
+          "html": "L’hébreu <span class=\"gr\">אוֹר</span> (or) est le mot même de la lumière créée au premier jour de la Genèse. Le psalmiste ne dit pas que Dieu donne une lumière, mais qu’il est, lui, cette lumière : Segond garde la construction directe « ma lumière », sans l’affaiblir par une comparaison. Calvin, dans son commentaire sur ce psaume, insiste sur le fait que cette confession n’est pas une image poétique mais l’aveu que, sans Dieu, le croyant serait livré aux ténèbres et à la peur qu’il vient pourtant de nommer."
+        },
+        {
+          "id": "g-panim",
+          "lemme": "panim",
+          "html": "L’hébreu <span class=\"gr\">פָּנִים</span> (panim, « face ») est toujours grammaticalement pluriel, comme s’il n’y avait pas de visage sans la totalité de la présence qu’il porte. Segond traduit par le singulier « face », seule option naturelle en français, mais perd ainsi la nuance d’une présence totale et non d’un simple trait du visage. Calvin lit ce verset comme un dialogue réel : Dieu parle le premier et invite, le croyant répond ensuite — chercher la face n’est donc pas une initiative humaine mais une réponse."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Corinthiens 15, 51-57",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">51</span> Voici, je vous dis un <button class=\"mot\" data-g=\"g-mysterion\">mystère</button> : nous ne mourrons pas tous, mais tous nous serons changés,<br><span class=\"s\">52</span> en un instant, en un clin d’œil, à la dernière trompette. La trompette sonnera, et les morts ressusciteront incorruptibles, et nous serons changés.<br><span class=\"s\">53</span> Car il faut que ce corps corruptible revête l’incorruptibilité, et que ce corps mortel revête l’immortalité.<br><span class=\"s\">54</span> Lorsque ce corps corruptible aura revêtu l’incorruptibilité, et que ce corps mortel aura revêtu l’immortalité, alors s’accomplira ce qui est écrit : la mort a été engloutie dans la victoire.<br><span class=\"s\">55</span> Ô mort, où est ta victoire ? Ô mort, où est ton <button class=\"mot\" data-g=\"g-kentron\">aiguillon</button> ?<br><span class=\"s\">56</span> L’aiguillon de la mort, c’est le péché ; et la puissance du péché, c’est la loi.<br><span class=\"s\">57</span> Mais grâces soient rendues à Dieu, qui nous donne la victoire par notre Seigneur Jésus-Christ !",
+      "gloses": [
+        {
+          "id": "g-mysterion",
+          "lemme": "mystêrion",
+          "html": "Le grec <span class=\"gr\">μυστήριον</span> (mystêrion) ne désigne pas, chez Paul, une énigme insoluble mais un dessein de Dieu longtemps caché et maintenant révélé. Segond traduit par « mystère », mot qui en français moderne évoque plutôt l’obscurité que la révélation, ce qui peut égarer le lecteur. Chrysostome, dans ses homélies sur cette épître, insiste sur le fait que Paul ne spécule pas ici mais transmet une certitude reçue, au même titre que l’évangile lui-même est appelé mystère révélé aux saints."
+        },
+        {
+          "id": "g-kentron",
+          "lemme": "kentron",
+          "html": "Le grec <span class=\"gr\">κέντρον</span> (kentron) est l’aiguillon dont on pique le bœuf pour le faire avancer, ou le dard du scorpion : Segond traduit littéralement par « aiguillon », ce qui garde bien l’image d’une pointe qui blesse et qui pousse en avant. Le même mot revient dans les Actes, lorsque le Christ dit à Paul sur le chemin de Damas qu’il lui est dur de résister « aux aiguillons » — ce rapprochement suggère que la mort, comme la résistance de Paul, perd sa force de contrainte une fois le combat retourné."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Jean 6, 37-40",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">37</span> Tous ceux que le Père me donne viendront à moi, et je ne <button class=\"mot\" data-g=\"g-ekballo\">mettrai pas dehors</button> celui qui vient à moi ;<br><span class=\"s\">38</span> car je suis descendu du ciel pour faire, non ma volonté, mais la volonté de celui qui m’a envoyé.<br><span class=\"s\">39</span> Or, la volonté de celui qui m’a envoyé, c’est que je ne perde aucun de ceux qu’il m’a donnés, mais que je les ressuscite au <button class=\"mot\" data-g=\"g-eschate\">dernier jour</button>.<br><span class=\"s\">40</span> La volonté de mon Père, c’est que celui qui voit le Fils et qui croit en lui ait la vie éternelle ; et je le ressusciterai au dernier jour.",
+      "gloses": [
+        {
+          "id": "g-ekballo",
+          "lemme": "ekballô exô",
+          "html": "Le grec <span class=\"gr\">ἐκβάλω ἔξω</span> (ekbalô exô, littéralement « jeter hors ») porte une double négation dans le texte original, que Segond rend par « je ne mettrai pas dehors », formule un peu rigide mais fidèle à l’insistance grecque. Augustin, dans ses Traités sur l’Évangile de Jean, s’appuie sur ce verset pour affirmer que venir au Christ n’est jamais une démarche qui s’épuise d’elle-même : celui qui vient a déjà été donné par le Père, et ce don précède et porte la démarche elle-même."
+        },
+        {
+          "id": "g-eschate",
+          "lemme": "eschatê hêmera",
+          "html": "Le grec <span class=\"gr\">ἐσχάτη ἡμέρα</span> (eschatê hêmera, « le jour dernier ») donne son nom à l’eschatologie, l’étude des choses dernières. Segond traduit littéralement par « dernier jour », fidèle à l’expression johannique qui revient quatre fois dans ce seul chapitre comme un refrain. Elle reprend l’espérance déjà formulée en Daniel, où plusieurs de ceux qui dorment dans la poussière se réveilleront : Jean ne l’invente pas, il situe Jésus comme celui qui accomplit cette attente déjà ancienne."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une liturgie pour les défunts",
+      "corps_html": "Cette combinaison de lectures — la Sagesse, le psaume 27, 1 Corinthiens 15, Jean 6 — est celle que la liturgie romaine réserve à la Commémoration des fidèles défunts, le 2 novembre. L’usage remonte à l’abbé Odilon de Cluny qui, vers 998, institua dans son ordre une prière pour tous les morts au lendemain de la Toussaint ; Benoît XV l’a étendue à l’Église universelle en 1915."
+    },
+    {
+      "titre": "Une Église qui doutait de la résurrection",
+      "corps_html": "Paul écrit à des Corinthiens où certains disaient qu’il n’y a pas de résurrection des morts (1 Co 15, 12), sans doute sous l’influence d’une sagesse grecque qui jugeait l’âme seule digne de survivre, non le corps. Chrysostome, dans ses homélies sur cette épître, relève que Paul ne discute pas cette opinion abstraitement mais remonte jusqu’à la résurrection du Christ lui-même, fondement sans lequel toute la prédication s’effondre."
+    }
+  ],
+  "analogie": {
+    "titre": "La main qui porte sans qu’on le sente",
+    "variantes": [
+      "Il t’est sans doute arrivé de t’endormir, enfant, sur la banquette arrière d’une voiture pendant un trajet trop long, et de te réveiller déjà couché dans ton lit, sans avoir rien senti du portage, du passage de bras en bras, de la porte qu’on ouvre sans bruit. Tu n’as pas participé à ce transport ; tu l’as seulement reçu, plus tard, comme un fait accompli dont tu ne gardes aucune mémoire sensible. C’est cette qualité de garde — agissante quand tu ne la perçois pas, efficace sans ton assentiment — que la Sagesse ose dire de Dieu : les âmes des justes sont dans sa main, et le tourment ne les atteindra pas, non parce qu’elles l’auraient senti, mais parce qu’elles y sont, tenues, avant même de le savoir.",
+      "Tu as peut-être traversé une période où prier ne produisait plus rien de perceptible : ni paix, ni réponse, ni même cette tristesse qui au moins prouverait qu’on attend encore quelque chose. Les mots sortaient et semblaient retomber sans écho, et tu continuais pourtant, par habitude ou par entêtement, sans savoir si c’était de la foi ou seulement de l’inertie. Le psaume ne promet pas que cette traversée sera courte ; il dit « espère en l’Éternel, fortifie-toi », comme on se parle à soi-même dans le noir, et c’est précisément dans cette absence de preuve que la bonté de l’Éternel sur la terre des vivants reste à voir, non à sentir d’avance.",
+      "Tu connais peut-être ce moment, après un enterrement, où tout le monde est reparti et où la maison redevient silencieuse : rien n’a changé dans le monde visible, le corps manque toujours, la chaise reste vide. Puis, des semaines plus tard, sans que tu l’aies cherché, une phrase ancienne remonte et se pose autrement en toi — non pas une consolation facile, mais la certitude discrète que quelque chose, sous la douleur qui demeure, a déjà basculé. C’est ce renversement caché que Paul ose nommer victoire : la mort a été engloutie, dit-il, non pas niée ni allégée, mais avalée par une vie plus forte qu’elle, un instant, un clin d’œil, à la dernière trompette."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre non par une pensée sur la mort, mais par la main qui tient.",
+    "geste": "Nomme intérieurement, en silence, une personne que tu as perdue ; ne demande rien pour elle, confie-la simplement, comme on dépose un poids dans une main plus grande que la tienne.",
+    "note": "Rien à ressentir, rien à vérifier : le texte dit que la garde ne dépend pas de ta perception d’elle."
+  },
+  "question": "Qu’est-ce qui, en toi, continue de croire que tu dois tenir seul ce que le texte dit déjà tenu par une autre main ?",
+  "racines": [
+    {
+      "titre": "Un livre entre deux Testaments",
+      "corps_html": "La Sagesse de Salomon a été composée en grec, probablement à Alexandrie, environ un siècle avant notre ère. Les Églises d’Orient et de Rome l’ont reçue dans leur canon ; les Églises de la Réforme, suivant la distinction déjà posée par Jérôme entre livres canoniques et livres ecclésiastiques, l’ont tenue pour une lecture utile mais non pour une règle de foi.",
+      "attribution": "note historique"
+    },
+    {
+      "titre": "La main qui tient (Dextera Domini)",
+      "corps_html": "Dès le IIIe siècle, les peintures des catacombes et les sarcophages chrétiens représentent une main sortant d’un nuage, la Dextera Domini, pour signifier l’action de Dieu sur les vivants comme sur les morts. Cette image précède et accompagne le texte de la Sagesse : la main de Dieu n’y est pas un ornement mais la manière concrète dont les premiers chrétiens disaient la garde de Dieu sur ceux qu’ils enterraient.",
+      "attribution": "iconographie paléochrétienne"
+    },
+    {
+      "titre": "Une espérance qui s’est précisée",
+      "corps_html": "La foi d’Israël en une vie après la mort s’est longtemps contentée du séjour incertain du shéol. Elle se précise nettement avec Daniel, qui annonce que plusieurs de ceux qui dorment dans la poussière se réveilleront (Daniel 12, 2), puis avec les martyrs des Maccabées qui meurent en espérant recevoir de nouveau, de la main de Dieu, le corps qu’on leur arrache (2 Maccabées 7).",
+      "attribution": "Daniel 12, 2 ; 2 Maccabées 7"
+    }
+  ],
+  "videos": [
+    {
+      "id": "u-2dqyddp2o",
+      "raison": "Jean 6, 40 promet la vie éternelle à qui voit le Fils et croit en lui ; cette vidéo explore ce que ce mot recouvre dans la Bible.",
+      "groupe": "mot"
+    },
+    {
+      "id": "q99CrlpKBrw",
+      "raison": "La lecture de 1 Corinthiens 15, 51-57 est le sommet du chapitre que cette vidéo replace dans l’ensemble de la lettre.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 27 lu aujourd’hui trouve sa place dans le panorama que cette vidéo donne du livre des Psaumes.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi lire un livre absent de la Bible protestante ?",
+      "reponse_html": "La Sagesse de Salomon appartient aux livres que les protestants appellent apocryphes ou deutérocanoniques : utiles à lire, selon la tradition réformée, mais non reçus comme règle de foi. La Confession de La Rochelle énumère les livres canoniques de l’Ancien Testament et n’y range pas la Sagesse. Elle reste pourtant lue ici parce qu’aucun autre texte ne dit avec cette force que les âmes des justes sont dans la main de Dieu, image que le Nouveau Testament reprendra sans la citer formellement.",
+      "sources": {
+        "jour": [
+          "Sg 3, 1-6.9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "la-rochelle",
+            "reference": "art. 3"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire Paul quand il écrit que la mort a été engloutie dans la victoire ?",
+      "reponse_html": "Paul cite ici, en l’adaptant, une parole d’Ésaïe sur la mort anéantie pour toujours, et il l’applique à l’événement de la résurrection du Christ qui rend cette parole désormais vraie. Chrysostome, dans ses homélies sur cette épître, souligne que Paul ne parle pas d’une mort allégée mais d’une mort vaincue de l’intérieur, comme une chose qui avale sa propre destruction en avalant le Christ. Le verset suivant transforme cette victoire en défi chanté : « ô mort, où est ta victoire ? »",
+      "sources": {
+        "jour": [
+          "1 Co 15, 54-55"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélies sur la Première épître aux Corinthiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi Jésus parle-t-il d’un dernier jour, et non d’une résurrection immédiate après la mort ?",
+      "reponse_html": "Jean répète quatre fois dans ce chapitre que Jésus ressuscitera les siens « au dernier jour », reprenant une attente déjà formulée par Daniel plutôt que d’improviser une doctrine nouvelle. Entre la mort et ce jour, la Sagesse situe les âmes des justes dans la main de Dieu, en repos, et non dans l’inexistence. Augustin, dans ses Traités sur l’Évangile de Jean, lit ce verset comme la garantie que rien de ceux que le Père a donnés au Fils ne sera perdu en chemin, quel que soit le temps que ce chemin prenne.",
+      "sources": {
+        "jour": [
+          "Jn 6, 39-40",
+          "Sg 3, 1"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-traites-jean",
+            "reference": "traité XXVI"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le corps ressuscité sera-t-il le même corps que celui que nous avons perdu ?",
+      "reponse_html": "Paul ne dit pas que le corps sera remplacé mais qu’il revêtira l’incorruptibilité, comme un vêtement nouveau passé sur ce qui demeure identique à soi-même. Augustin consacre une large part du dernier livre de La Cité de Dieu à cette question, discutant notamment ce que deviennent les corps mutilés ou dévorés, pour conclure que la puissance qui a créé peut aussi bien reconstituer. La question reste légitimement difficile ; le texte n’offre pas un mécanisme mais une promesse.",
+      "sources": {
+        "jour": [
+          "1 Co 15, 53-54"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-cite-de-dieu",
+            "reference": "livre XXII"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Si tout dépend de ce que le Père donne au Fils, qu’en est-il de ma propre décision de croire ?",
+      "reponse_html": "Le verset 37 affirme à la fois un don qui précède — « tous ceux que le Père me donne viendront à moi » — et un accueil sans condition — « je ne mettrai pas dehors celui qui vient ». Le Catéchisme de Heidelberg, interrogé sur le profit que nous retirons de la résurrection du Christ, répond par l’assurance de notre propre résurrection à venir plutôt que par une explication du mécanisme de l’élection. Le texte de Jean tient donc ensemble, sans les opposer, le don qui fonde et la venue qui est demandée.",
+      "sources": {
+        "jour": [
+          "Jn 6, 37"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "heidelberg",
+            "reference": "Q. 45"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": []
+}
