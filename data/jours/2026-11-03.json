@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-03",
+  "date_humaine": "mardi",
+  "semaine": "31ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 2, 5-11 ; Lc 14, 15-24",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 H330\"/><path d=\"M190 120 H215 V106 H240 V92 H265 V78 H290 V64 H305 V50\"/><path d=\"M303 36 V48 M303 48 L297 54 M303 48 L309 54 M301 40 L291 46\"/><path d=\"M302 36 q-5 -3 -5 -8 q2 -4 7 -2 q3 4 -2 10\"/><path d=\"M20 40 V120 M20 40 H68\"/><path d=\"M20 120 L52 82\"/><path d=\"M85 120 q-2 -14 6 -20 q8 -5 10 4 q1 7 -5 9 q6 2 4 7 q-2 5 -8 5 q-6 0 -7 -5\"/><path d=\"M115 120 q-1 -16 9 -18 q8 -2 8 6 q0 6 -5 7 M127 108 L135 120\"/></g><g class=\"trait-rubrique\"><path d=\"M195 118 L200 106 L206 116 L212 104 L216 118 M194 119 H217\"/></g><g class=\"trait-liturgie\"><path d=\"M150 114 H180 M155 114 V120 M175 114 V120 M160 114 q2 -8 5 -8 q3 0 5 8\"/></g></svg>",
+  "titre": "Table ouverte",
+  "titre_html": "Table <span class=\"it\">ouverte</span>",
+  "sous_titre": "Du cantique de l'abaissement au festin où l'on fait entrer les exclus",
+  "suite_hier": null,
+  "gravure_alt": "Un roi gravit à rebours un escalier et dépose sa couronne sur la première marche, tandis qu'en bas une porte grande ouverte laisse entrer dans la nuit des pauvres et des boiteux vers une table dressée.",
+  "lectures": [
+    {
+      "etiquette": "Lecture de la lettre de saint Paul aux Philippiens",
+      "reference": "Ph 2, 5-11",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">5</span> Ayez en vous les sentiments qui étaient en Jésus-Christ, <span class=\"s\">6</span> lequel, existant en <button class=\"mot\" data-g=\"g-morphe\">forme</button> de Dieu, n'a point regardé comme un <button class=\"mot\" data-g=\"g-harpagmos\">butin</button> à sa disposition d'être égal avec Dieu, <span class=\"s\">7</span> mais <button class=\"mot\" data-g=\"g-ekenosen\">s'est dépouillé</button> lui-même, en prenant une forme de serviteur, en devenant semblable aux hommes ; <span class=\"s\">8</span> et ayant paru comme un simple homme, il s'est humilié lui-même, se rendant obéissant jusqu'à la mort, même jusqu'à la mort de la croix. <span class=\"s\">9</span> C'est pourquoi aussi Dieu l'a <button class=\"mot\" data-g=\"g-hyperypsosen\">souverainement élevé</button>, et lui a donné le nom qui est au-dessus de tout nom, <span class=\"s\">10</span> afin qu'au nom de Jésus tout <button class=\"mot\" data-g=\"g-genou\">genou fléchisse</button> dans les cieux, sur la terre et sous la terre, <span class=\"s\">11</span> et que toute langue confesse que Jésus-Christ est Seigneur, à la gloire de Dieu le Père.",
+      "gloses": [
+        {
+          "id": "g-morphe",
+          "lemme": "morphē",
+          "html": "Le grec dit <span class=\"gr\">morphē</span>, la forme qui manifeste l'être même de celui qui la porte, non un simple déguisement extérieur. Segond traduit « forme », ce qui reste fidèle mais risque d'affaiblir le mot pour une oreille moderne habituée à distinguer forme et fond : ici la forme de Dieu, c'est Dieu lui-même qui se montre. Chrysostome, dans son homélie VI sur cette épître, insiste sur ce point contre Arius et Sabellius : exister en forme de Dieu, c'est posséder réellement l'égalité avec le Père, sans quoi Paul n'aurait pas pu dire ensuite qu'il s'en est dépouillé par choix."
+        },
+        {
+          "id": "g-harpagmos",
+          "lemme": "harpagmos",
+          "html": "Le mot grec <span class=\"gr\">harpagmos</span> vient du verbe qui signifie ravir, s'emparer par force ; Segond traduit « butin », image juste d'une proie qu'on arrache à quelqu'un d'autre. Chrysostome lit ce verset comme une preuve, et non une concession : le Christ ne considère pas l'égalité avec Dieu comme une rapine, parce qu'elle n'en est pas une, elle lui appartient déjà en propre. La nuance est décisive : Paul ne dit pas que le Christ a renoncé à usurper une place, mais qu'il a refusé de s'accrocher à ce qui était légitimement sien."
+        },
+        {
+          "id": "g-ekenosen",
+          "lemme": "ekenōsen",
+          "html": "Le verbe grec, apparenté à <span class=\"gr\">kenos</span> (vide), donne le mot savant de « kénose » que la théologie a retenu pour nommer ce geste. Segond choisit « s'est dépouillé lui-même », traduction active et concrète, alors que d'autres versions disent « s'est vidé » ou « s'est anéanti », plus proches de la racine mais plus abstraites. Calvin, commentant ce passage, refuse d'y voir une perte de nature divine et y voit plutôt un voile jeté sur la gloire, le temps de l'incarnation."
+        },
+        {
+          "id": "g-hyperypsosen",
+          "lemme": "hyperypsōsen",
+          "html": "Le préfixe <span class=\"gr\">hyper</span> ajouté à « élever » forme un verbe que le français ne peut rendre d'un seul mot ; Segond tente « souverainement élevé ». Ce surcroît verbal répond exactement à l'abaissement du verset 7 : l'anéantissement volontaire appelle, par un mouvement symétrique chez Paul, une élévation qui dépasse toute mesure. Chrysostome y voit la preuve que l'humilité n'est jamais une perte devant Dieu, mais le chemin même de la gloire."
+        },
+        {
+          "id": "g-genou",
+          "lemme": "genou fléchisse",
+          "html": "L'image du genou qui fléchit devant Jésus reprend presque mot pour mot un oracle d'Ésaïe (45, 23) où c'est l'Éternel lui-même qui déclare : devant moi se ploira tout genou. Paul applique sans détour à Jésus ce qui, dans le texte hébreu, n'appartenait qu'au Dieu unique d'Israël. Ce déplacement, que les commentateurs juifs n'auraient jamais accepté, est au cœur de la confession chrétienne la plus haute : Jésus reçoit le nom et l'hommage réservés au Seigneur seul."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 21 (22), 26b-27, 28-29, 31-32",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">26b</span> J'accomplirai mes vœux en présence de ceux qui te craignent. <span class=\"s\">27</span> Les <button class=\"mot\" data-g=\"g-anawim\">malheureux</button> mangeront et se rassasieront, ceux qui cherchent l'Éternel le célébreront. Que votre cœur vive à toujours ! <span class=\"s\">28</span> Toutes les extrémités de la terre penseront à l'Éternel et se tourneront vers lui ; toutes les familles des nations se prosterneront devant ta face. <span class=\"s\">29</span> Car à l'Éternel appartient le <button class=\"mot\" data-g=\"g-regne\">règne</button> : il domine sur les nations. <span class=\"s\">31</span> La postérité le servira ; on parlera du Seigneur à la <button class=\"mot\" data-g=\"g-dor\">génération future</button>. <span class=\"s\">32</span> Ils viendront et proclameront sa justice, à la génération future ils annonceront cette œuvre : c'est lui qui a agi.",
+      "gloses": [
+        {
+          "id": "g-anawim",
+          "lemme": "anawim",
+          "html": "L'hébreu <span class=\"gr\">anawim</span> désigne les humbles autant que les pauvres, ceux que rien ne protège sinon Dieu lui-même. Segond traduit « malheureux », qui insiste sur la détresse matérielle plus que sur la posture intérieure d'humilité que porte le mot hébreu ; la Septante choisit plutôt le vocabulaire des doux ou des affligés. Ce double sens compte : le psalmiste promet un repas, non seulement aux affamés, mais à ceux qui se tiennent devant Dieu sans rien revendiquer — exactement la condition requise pour s'asseoir, dans l'évangile de ce jour, à la table du grand souper."
+        },
+        {
+          "id": "g-regne",
+          "lemme": "melukhah",
+          "html": "Le mot hébreu <span class=\"gr\">melukhah</span> désigne la royauté elle-même, non un simple territoire : ce n'est pas seulement que l'Éternel règne, c'est qu'à lui seul appartient en propre le fait de régner. Augustin, dans son discours sur ce psaume, s'appuie justement sur ce verset contre les donatistes, qui voulaient restreindre l'Église et son Seigneur à leur seul parti : si le règne appartient à l'Éternel sur toutes les nations, nul groupe ne peut s'en faire le seul propriétaire. Cette royauté universelle trouve son accomplissement dans l'hymne de Philippiens, où tout genou, dans les cieux comme sur la terre, fléchit devant le même Seigneur."
+        },
+        {
+          "id": "g-dor",
+          "lemme": "dor",
+          "html": "Le mot <span class=\"gr\">dor</span>, génération, revient deux fois dans ces derniers versets, comme pour insister sur une transmission qui traverse le temps sans se rompre. Segond garde la répétition, fidèle au texte hébreu, là où certaines traductions modernes l'auraient allégée par souci de style. Le psaume ne promet pas seulement une délivrance pour celui qui prie, mais une parole qui passera d'âge en âge — ce que l'Église a reconnu depuis les Pères comme l'annonce même de la prédication apostolique portant la justice de Dieu jusqu'aux extrémités de la terre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile de Jésus-Christ selon saint Luc",
+      "reference": "Lc 14, 15-24",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">15</span> Un de ceux qui étaient à table, après avoir entendu ces paroles, dit à Jésus : Heureux celui qui prendra son repas dans le royaume de Dieu ! <span class=\"s\">16</span> Et Jésus lui dit : Un homme fit un grand <button class=\"mot\" data-g=\"g-souper\">souper</button>, et il invita beaucoup de gens. <span class=\"s\">17</span> A l'heure du souper, il envoya son serviteur dire aux invités : Venez, car tout est déjà prêt. <span class=\"s\">18</span> Mais tous unanimement se mirent à <button class=\"mot\" data-g=\"g-excuser\">s'excuser</button>. Le premier lui dit : J'ai acheté un champ, et je suis obligé d'aller le voir ; excuse-moi, je te prie. <span class=\"s\">19</span> Un autre dit : J'ai acheté cinq paires de bœufs, et je vais les éprouver ; excuse-moi, je te prie. <span class=\"s\">20</span> Un autre dit : Je viens de me marier, et c'est pourquoi je ne puis aller. <span class=\"s\">21</span> Le serviteur, de retour, rapporta ces choses à son maître. Alors le maître de la maison irrité dit à son serviteur : Va promptement dans les places et dans les rues de la ville, et amène ici les pauvres, les estropiés, les aveugles et les boiteux. <span class=\"s\">22</span> Le serviteur dit : Maître, ce que tu as ordonné a été fait, et il y a encore de la place. <span class=\"s\">23</span> Et le maître dit au serviteur : Va dans les chemins et le long des haies, et ceux que tu trouveras, <button class=\"mot\" data-g=\"g-contrains\">contrains-les</button> d'entrer, afin que ma maison soit remplie. <span class=\"s\">24</span> Car, je vous le dis, aucun de ces hommes qui avaient été invités ne goûtera de mon souper.",
+      "gloses": [
+        {
+          "id": "g-souper",
+          "lemme": "deipnon",
+          "html": "Le grec <span class=\"gr\">deipnon</span> désigne le repas principal, celui du soir, pris au calme et en compagnie — non une collation rapide. Segond traduit « souper », mot encore juste en français classique mais qui a vieilli, perdant pour un lecteur d'aujourd'hui l'évidence d'un repas d'apparat où l'on prend le temps de s'étendre à table. Ce même mot grec désigne ailleurs la cène du Seigneur ; la tradition chrétienne a tôt vu dans ce grand souper une figure du repas eucharistique autant que du festin final du royaume."
+        },
+        {
+          "id": "g-excuser",
+          "lemme": "paraiteisthai",
+          "html": "Le verbe grec <span class=\"gr\">paraiteisthai</span> porte en lui l'idée de demander à être dispensé, de décliner poliment une obligation plutôt que de refuser brutalement. Segond traduit justement « s'excuser », et le mot est bien choisi : les trois invités ne disent pas non, ils demandent qu'on les tienne quittes, avec des raisons qui semblent de bon droit. Le Deutéronome (20, 5-7) prévoyait précisément ces trois motifs — champ, bêtes de labour, mariage récent — comme dispenses légitimes du service militaire ; Luc les détourne ici pour montrer des raisons honorables employées à refuser, non la guerre, mais la joie."
+        },
+        {
+          "id": "g-contrains",
+          "lemme": "anankason",
+          "html": "Le grec <span class=\"gr\">anankason</span>, de la même racine que <span class=\"gr\">anankē</span> (la nécessité), est un impératif fort : contrains, oblige. Segond garde cette force avec « contrains-les », refusant d'édulcorer en « invite-les » ou « persuade-les » comme certaines versions plus timides. Augustin s'est appuyé sur ce verbe, dans des pages restées célèbres, pour justifier une contrainte extérieure envers ceux qui s'égarent hors de l'Église ; mais le texte parle d'abord d'une insistance qui vient à bout des réticences de ceux qui, aux chemins et aux haies, ne croyaient même pas pouvoir être invités."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un hymne avant la lettre",
+      "corps_html": "Dès l'Antiquité, on a senti que Philippiens 2,6-11 se détache du reste de la lettre par son rythme et sa densité : les phrases s'organisent en couplets qui descendent (forme de Dieu, serviteur, mort de la croix) puis remontent (élevé, nom, genou, confession). Qu'il s'agisse d'un hymne déjà chanté dans les assemblées que Paul reprend, ou de sa propre composition portée par l'émotion, rien ne permet de l'affirmer avec certitude ; mais Chrysostome lui-même traite ce passage comme un morceau à part, destiné à frapper l'oreille autant que l'intelligence."
+    },
+    {
+      "titre": "Une table déjà préparée par la Loi",
+      "corps_html": "La scène du grand souper se greffe sur un repas chez un pharisien (Luc 14,1), après que Jésus a recommandé de choisir la dernière place (14,7-11) et d'inviter les pauvres plutôt que ceux qui peuvent rendre l'invitation (14,12-14). Les excuses des invités reprennent presque mot pour mot les trois dispenses du service militaire énumérées en Deutéronome 20,5-7 — champ, bœufs, mariage — signe que Luc construit sa parabole sur un texte que ses auditeurs connaissaient par cœur."
+    }
+  ],
+  "analogie": {
+    "titre": "L'excuse raisonnable",
+    "variantes": [
+      "Tu connais ce moment où une prière attend, où quelque chose en toi sait qu'il faudrait s'arrêter et se tenir devant Dieu, et où surgit pourtant une raison parfaitement honorable de ne pas le faire maintenant — un travail à finir, un appel à passer, une fatigue réelle. Aucune de ces raisons n'est un mensonge ; c'est bien ce qui les rend redoutables, elles ne demandent jamais qu'on les refuse en bloc, seulement qu'on les remette à plus tard, encore et encore, sans jamais dire non franchement. Et un jour, à force de remises honorables, tu t'aperçois que la place à laquelle tu étais invité est restée vide, non par révolte, mais par accumulation de bonnes raisons — c'est devant cette place vide que le texte de ce jour te ramène.",
+      "Tu as peut-être connu ce service rendu sans que personne ne le voie, cette tâche qui ne te vaudra ni remerciement ni reconnaissance, et au moment de l'accomplir, quelque chose en toi résiste, mesure ce que cela coûte à ton image, à la juste place que tu penses mériter. Accepter de descendre là, sans calcul de retour, n'est pas une humiliation subie du dehors, c'est un choix intérieur que personne ne peut t'arracher ; et c'est précisément ce que personne ne peut te prendre qui, un jour, se révèle avoir été la seule chose de valeur que tu aies vraiment donnée. Le Christ du cantique ne perd rien en s'abaissant ainsi, il donne ce qu'il possède en propre — et c'est devant cette liberté-là, jamais devant une contrainte, que tu es appelé à te tenir.",
+      "Tu as peut-être fait l'expérience, un jour, de recevoir une invitation que tu n'attendais pas et à laquelle tu ne pensais pas avoir droit — un mot, une main tendue, une place faite alors que tu te croyais définitivement hors du cercle, aux chemins, le long des haies. Rien, dans ce que tu étais ou avais fait, n'expliquait cette place ; elle venait d'ailleurs, d'une insistance plus forte que ta propre réticence à y croire. C'est cette même insistance, et non ton mérite, qui te tient encore aujourd'hui devant la table que Dieu dresse — tu n'y es pas parce que tu l'as méritée, tu y es parce qu'on est venu te chercher."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre par ce que le texte met sous tes yeux : une place à table, et la question de savoir si tu la prends.",
+    "geste": "Nomme, en silence, l'excuse honorable que tu donnes le plus souvent à Dieu — puis dis-lui simplement que tu viens.",
+    "note": "Ce n'est pas un examen de conscience à produire, seulement un nom à laisser monter, sans te juger toi-même."
+  },
+  "question": "Quelle place, à la table que Dieu dresse, as-tu cru devoir refuser au nom d'une bonne raison ?",
+  "racines": [
+    {
+      "titre": "Le festin promis aux peuples",
+      "corps_html": "Ésaïe annonçait déjà un repas offert par l'Éternel « sur cette montagne, à tous les peuples, un festin de mets succulents » (Ésaïe 25,6), où la mort elle-même serait engloutie. Le grand souper de Luc 14 reprend cette image d'un repas eschatologique, mais déplace la question : ce n'est plus seulement qui est invité, c'est qui accepte de venir.",
+      "attribution": "Ésaïe 25, 6"
+    },
+    {
+      "titre": "Le serviteur abaissé puis exalté",
+      "corps_html": "Le mouvement de descente puis d'élévation que chante Philippiens 2 suit presque trait pour trait le poème du Serviteur : « il n'avait ni beauté ni éclat » (Ésaïe 53,2), méprisé, puis « il sera élevé, grandi, haut placé » (Ésaïe 52,13). Paul ne cite pas Ésaïe, mais l'oreille de ses lecteurs ne pouvait manquer le rapprochement.",
+      "attribution": "Ésaïe 52, 13 – 53, 12"
+    },
+    {
+      "titre": "Le psaume que Jésus a prié sur la croix",
+      "corps_html": "Les versets lus aujourd'hui viennent après le cri d'abandon qui ouvre le psaume 22, celui-là même que Jésus reprend sur la croix (Matthieu 27,46). Augustin, dans son discours sur ce psaume, entend dans toute la pièce la voix du Crucifié qui se plaint d'abord, puis annonce, dans les versets que nous lisons, la réponse de Dieu portée jusqu'aux extrémités de la terre.",
+      "attribution": "Augustin, Discours sur le psaume 21"
+    }
+  ],
+  "videos": [
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Luc 14,15-24 appartient à la section du voyage vers Jérusalem que ce panorama parcourt, situant la parabole du grand souper dans l'ensemble de l'évangile.",
+      "groupe": "livre"
+    },
+    {
+      "id": "IT3LVWWuDDo",
+      "raison": "Lc 14,15-24 est l'une des paraboles de Jésus ; cette vidéo explique comment ces récits travaillent l'auditeur plutôt que de simplement l'informer.",
+      "groupe": "mot"
+    },
+    {
+      "id": "4eBBvA8zzxI",
+      "raison": "Ph 2,9-11 proclame Jésus exalté et confessé Seigneur par toute langue, l'accomplissement même de l'attente messianique.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Dieu demanderait-il à son propre Fils de descendre aussi bas ?",
+      "reponse_html": "Le texte ne dit pas que le Fils perd sa nature divine, mais qu'il refuse de s'accrocher à ce qui lui appartient déjà pour prendre, librement, la condition de serviteur (Ph 2,6-7). Chrysostome insiste, dans son homélie sur ce passage, sur le fait que cette descente est une preuve de la vraie égalité avec Dieu, non son contraire : seul celui qui possède réellement peut choisir de ne pas s'en servir. L'abaissement n'est donc pas imposé, il est le mode même par lequel la gloire se manifeste, jusqu'à la mort de la croix (Ph 2,8).",
+      "sources": {
+        "jour": [
+          "Ph 2, 6-8"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "homélie VI sur l'épître aux Philippiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Les excuses des invités sont-elles vraiment si graves ?",
+      "reponse_html": "Rien, en elles-mêmes, dans un champ, des bœufs ou un mariage récent ; ce sont même, en Deutéronome 20,5-7, des motifs légitimes de dispense. Ce qui est jugé, dans la parabole, n'est pas la légitimité de ces raisons mais l'ordre des priorités qu'elles révèlent : tout est prêt (Lc 14,17), et pourtant ces biens ordinaires passent avant le festin. Le maître ne reproche pas d'avoir un champ ou une famille, il s'irrite que ces choses bonnes deviennent la dernière excuse pour ne pas venir.",
+      "sources": {
+        "jour": [
+          "Lc 14, 17-20"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi le maître de la maison se met-il en colère ?",
+      "reponse_html": "Sa colère suit un refus collectif et poli, « tous unanimement » (Lc 14,18), qui transforme une fête en insulte silencieuse. Mais cette colère ne ferme rien : elle ouvre au contraire la maison aux pauvres, aux estropiés, aux aveugles et aux boiteux (Lc 14,21), ceux-là mêmes que Jésus avait recommandé d'inviter quelques versets plus haut (Lc 14,13). L'irritation du maître n'est donc pas vindicative, elle est le ressort même de la grâce qui refuse de laisser la table vide.",
+      "sources": {
+        "jour": [
+          "Lc 14, 13",
+          "Lc 14, 18-21"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume 22 est-il une plainte ou une action de grâce ?",
+      "reponse_html": "Les deux à la fois, mais pas dans l'ordre où nous les lisons aujourd'hui : le psaume commence par le cri d'abandon que Jésus reprendra sur la croix, et ce n'est qu'ensuite qu'il se retourne en louange, celle que nous lisons ce jour (Ps 21(22), 26b-32). Augustin, dans son discours sur ce psaume, entend dans cette bascule la voix même du Crucifié, dont la plainte devient, par la résurrection, annonce faite aux extrémités de la terre. Ce que le psalmiste espérait sans le voir, Philippiens 2 le proclame accompli : Dieu a entendu, et il a élevé.",
+      "sources": {
+        "jour": [
+          "Ps 21(22), 26b-29",
+          "Ph 2, 9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "discours sur le psaume 21"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire « tout genou fléchira » — est-ce une soumission forcée ?",
+      "reponse_html": "L'expression reprend un oracle où l'Éternel seul proclamait : devant moi se ploira tout genou (Ésaïe 45,23). Paul l'applique à Jésus sans en changer la radicalité, mais le mouvement qui y conduit n'est pas la contrainte : c'est l'abaissement volontaire des versets précédents qui rend cette reconnaissance possible, non une victoire imposée de l'extérieur. Le genou fléchit devant celui qui s'est lui-même abaissé le premier.",
+      "sources": {
+        "jour": [
+          "Ph 2, 7-10"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-VI",
+    "augustin-Ps-21"
+  ]
+}
