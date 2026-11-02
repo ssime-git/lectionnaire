@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-01",
+  "date_humaine": null,
+  "semaine": null,
+  "ferie": "Solennité",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ap 7, 2-4.9-14 ; 1 Jn 3, 1-3 ; Mt 5, 1-12a",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M14 80 L96 16 L178 80\"/><path d=\"M8 96 h324\"/><path d=\"M90 20 q4 -6 8 0 q-4 6 -8 0\"/><path d=\"M94 26 v14\"/><path d=\"M86 36 h16\"/><path d=\"M62 58 q6 -10 12 0\"/><path d=\"M80 62 q6 -10 12 0\"/><path d=\"M26 140 q8 -20 0 -32 q-8 12 0 32 M66 140 q8 -20 0 -32 q-8 12 0 32 M106 140 q8 -20 0 -32 q-8 12 0 32 M226 140 q8 -20 0 -32 q-8 12 0 32 M266 140 q8 -20 0 -32 q-8 12 0 32\"/><path d=\"M26 104 l-7 -16 M26 104 l7 -16 M66 104 l-7 -16 M66 104 l7 -16 M106 104 l-7 -16 M106 104 l7 -16 M226 104 l-7 -16 M226 104 l7 -16 M266 104 l-7 -16 M266 104 l7 -16\"/></g><g class=\"trait-rubrique\"><path d=\"M170 100 l-16 -8 M170 100 l-18 2 M170 100 l-14 16 M170 100 l14 -16 M170 100 l18 2 M170 100 l16 -8\"/></g><g class=\"trait-liturgie\"><path d=\"M158 112 h24 M158 112 v10 M182 112 v10 M158 122 h24\"/><path d=\"M164 96 q6 -8 12 0 q-6 8 -12 0\"/><path d=\"M176 92 q3 -4 6 0 q-3 4 -6 0\"/><path d=\"M166 104 v6 M172 104 v6\"/></g></svg>",
+  "titre": "Les bienheureux",
+  "titre_html": "Les <span class=\"it\">bienheureux</span>",
+  "sous_titre": "Toussaint — la montagne où monte une foule que nul ne peut compter",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : au sommet d'une montagne escarpée, une silhouette assise enseigne à des disciples agenouillés ; en contrebas, une foule immense aux robes amples lève des palmes vers un agneau debout sur un trône, entouré d'un sceau rayonnant.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Première lecture",
+      "reference": "Ap 7, 2-4.9-14",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">2</span> Et je vis un autre ange qui montait du côté du soleil levant, et qui tenait le <button class=\"mot\" data-g=\"g-sceau\">sceau</button> du Dieu vivant ; il cria d'une voix forte aux quatre anges à qui il avait été donné de faire du mal à la terre et à la mer, <span class=\"s\">3</span> et il dit : Ne faites point de mal à la terre, ni à la mer, ni aux arbres, jusqu'à ce que nous ayons marqué du sceau le front des serviteurs de notre Dieu. <span class=\"s\">4</span> Et j'entendis le nombre de ceux qui avaient été marqués du sceau, cent quarante-quatre mille, de toutes les tribus des fils d'Israël : <span class=\"s\">9</span> Après cela, je regardai, et voici, il y avait une <button class=\"mot\" data-g=\"g-foule\">grande foule</button>, que personne ne pouvait compter, de toute nation, de toute tribu, de tout peuple, et de toute langue. Ils se tenaient devant le trône et devant l'<button class=\"mot\" data-g=\"g-agneau\">agneau</button>, revêtus de <button class=\"mot\" data-g=\"g-robes\">robes blanches</button>, et des palmes dans leurs mains. <span class=\"s\">10</span> Et ils criaient d'une voix forte, en disant : Le salut est à notre Dieu qui est assis sur le trône, et à l'agneau. <span class=\"s\">11</span> Et tous les anges se tenaient autour du trône et des vieillards et des quatre êtres vivants ; et ils se prosternèrent sur leur face devant le trône, et ils adorèrent Dieu, <span class=\"s\">12</span> en disant : Amen ! La louange, la gloire, la sagesse, l'action de grâces, l'honneur, la puissance, et la force, soient à notre Dieu, aux siècles des siècles ! Amen ! <span class=\"s\">13</span> Et l'un des vieillards prit la parole et me dit : Ceux qui sont revêtus de robes blanches, qui sont-ils, et d'où sont-ils venus ? <span class=\"s\">14</span> Je lui dis : Mon seigneur, tu le sais. Et il me dit : Ce sont ceux qui viennent de la grande <button class=\"mot\" data-g=\"g-tribulation\">tribulation</button> ; ils ont lavé leurs robes, et les ont blanchies dans le sang de l'agneau.",
+      "gloses": [
+        {
+          "id": "g-sceau",
+          "lemme": "sphragis",
+          "html": "Le texte grec emploie <span class=\"gr\">sphragis</span>, le sceau de cire qui authentifie un acte et en garantit l'inviolabilité. Segond traduit fidèlement, mais perd l'arrière-plan vétérotestamentaire : en Ézéchiel 9, 4, c'est une marque sur le front qui distingue, au jour du jugement, ceux qui ont gémi devant les abominations de Jérusalem. L'image reprend aussi, plus lointainement, le sang sur les linteaux de la Pâque égyptienne (Exode 12, 13) : un signe qui ne protège pas de l'épreuve elle-même, mais de la destruction qu'elle pourrait emporter avec elle."
+        },
+        {
+          "id": "g-foule",
+          "lemme": "ochlos",
+          "html": "Le texte dit une <span class=\"gr\">ochlos</span>, une foule, que personne ne pouvait compter — à la différence des cent quarante-quatre mille du verset 4, nombre rond et clos, symbole d'Israël au complet. Le contraste n'est pas une contradiction mais un changement d'angle : le même salut, vu d'abord comme accomplissement de la promesse faite à Israël, puis comme multitude sans limite venue de toute nation. L'incalculable rappelle la promesse faite à Abraham, dont la descendance devait être innombrable comme les étoiles (Genèse 15, 5)."
+        },
+        {
+          "id": "g-agneau",
+          "lemme": "arnion",
+          "html": "Le grec de l'Apocalypse dit <span class=\"gr\">arnion</span>, un diminutif — « le petit agneau » —, alors que l'Évangile de Jean, pour désigner le même Christ au moment de sa mort, emploie le mot plus solennel <span class=\"gr\">amnos</span> (Jean 1, 29). Segond traduit les deux par « agneau », effaçant une nuance que le texte grec maintient avec insistance : ce même petit agneau immolé, l'Apocalypse le place vingt-huit fois sur le trône même de Dieu."
+        },
+        {
+          "id": "g-robes",
+          "lemme": "stolè",
+          "html": "« Robes blanches » traduit <span class=\"gr\">stolas leukas</span> : la stolè n'est pas un simple vêtement mais une robe longue et solennelle, celle que l'on revêt pour une fonction ou un honneur — celle du jeune homme en blanc au tombeau vide (Marc 16, 5), celle que le père fait porter au fils revenu (Luc 15, 22). Être vêtu de cette robe, ce n'est donc pas seulement être lavé : c'est recevoir une place, une dignité qu'on ne s'est pas donnée soi-même."
+        },
+        {
+          "id": "g-tribulation",
+          "lemme": "thlipsis",
+          "html": "« La grande tribulation » rend <span class=\"gr\">tès thlipseòs tès megalès</span>, littéralement « la détresse, la grande » — l'article répété insiste sur une épreuve précise, unique. L'expression reprend presque mot pour mot celle de Jésus en Matthieu 24, 21, et plus loin encore celle de Daniel 12, 1 selon la Septante, qui annonce une détresse sans précédent avant la délivrance finale. Segond garde le mot « tribulation », aujourd'hui vieilli, qui porte encore le sens latin de tribulum, la herse qui broie le grain."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 23 (24), 1-2, 3-4ab, 5-6",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> À l'<button class=\"mot\" data-g=\"g-eternel\">Éternel</button> la terre et ce qu'elle renferme, Le monde et ceux qui l'habitent. <span class=\"s\">2</span> Car il l'a fondée sur les mers, Il l'a établie sur les fleuves. <span class=\"s\">3</span> Qui pourra monter à la <button class=\"mot\" data-g=\"g-montagne\">montagne</button> de l'Éternel ? Qui s'élèvera jusqu'à son lieu saint ? <span class=\"s\">4</span> Celui qui a les <button class=\"mot\" data-g=\"g-mains-innocentes\">mains innocentes et le cœur pur</button> ; <span class=\"s\">5</span> Il obtiendra la bénédiction de l'Éternel, La miséricorde du Dieu de son salut. <span class=\"s\">6</span> Voilà le partage de la génération qui l'invoque, De ceux qui cherchent ta face, de Jacob !",
+      "gloses": [
+        {
+          "id": "g-eternel",
+          "lemme": "YHWH",
+          "html": "Segond transcrit le tétragramme <span class=\"gr\">YHWH</span> par « l'Éternel », choix propre aux traductions protestantes francophones depuis Olivétan, là où la Vulgate et les traductions catholiques préfèrent « le Seigneur ». Le nom ne désigne pas seulement la permanence dans le temps, mais une présence agissante : celui qui se révèle au buisson comme « je suis qui je suis » (Exode 3, 14). En le plaçant au tout premier mot du psaume, avant même le mot « terre », l'hébreu dit l'ordre des choses : tout appartient à l'Éternel avant d'être nommé."
+        },
+        {
+          "id": "g-montagne",
+          "lemme": "har YHWH",
+          "html": "« La montagne de l'Éternel » traduit <span class=\"gr\">har YHWH</span>, qui désignait très concrètement le mont Sion où montait le pèlerin de Jérusalem pour la fête. Mais la question « qui pourra monter » dépasse la géographie : elle demande qui a le droit de se tenir devant Dieu. Augustin, commentant ce psaume, y entend l'élévation de l'Église tout entière au-dessus des flots du siècle, et non la seule ascension d'un pèlerin isolé."
+        },
+        {
+          "id": "g-mains-innocentes",
+          "lemme": "neqi khapayim",
+          "html": "« Les mains innocentes et le cœur pur » traduit <span class=\"gr\">neqi khapayim ou-var levav</span> : des mains qui n'ont rien dérobé ni versé de sang innocent, un cœur sans mélange, non divisé entre deux fidélités. Les mêmes mots reviennent presque à l'identique dans la bouche de Jésus — « heureux ceux qui ont le cœur pur, car ils verront Dieu » (Matthieu 5, 8) — comme si l'Évangile répondait enfin à la question posée ici : qui peut monter ? Celui que Dieu lui-même rend pur."
+        }
+      ]
+    },
+    {
+      "type": "lecture_2",
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Jn 3, 1-3",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Voyez quel amour le Père nous a témoigné, pour que nous soyons appelés <button class=\"mot\" data-g=\"g-enfants-dieu\">enfants de Dieu</button> ! Et nous le sommes. Si le monde ne nous <button class=\"mot\" data-g=\"g-connaitre\">connaît</button> pas, c'est qu'il ne l'a pas connu. <span class=\"s\">2</span> Bien-aimés, nous sommes maintenant enfants de Dieu, et ce que nous serons n'a pas encore été <button class=\"mot\" data-g=\"g-manifeste\">manifesté</button> ; mais nous savons que, lorsque cela sera manifesté, nous serons semblables à lui, parce que nous le verrons tel qu'il est. <span class=\"s\">3</span> Quiconque a cette espérance en lui se <button class=\"mot\" data-g=\"g-pur\">purifie</button>, comme lui-même est pur.",
+      "gloses": [
+        {
+          "id": "g-enfants-dieu",
+          "lemme": "tekna theou",
+          "html": "Jean écrit <span class=\"gr\">tekna theou</span>, « enfants de Dieu », et non <span class=\"gr\">huioi</span>, « fils », le mot que Paul préfère pour dire l'adoption légale. Le tekna insiste sur la naissance, le lien de nature, non sur un statut juridique accordé : Jean a déjà dit, dans son prologue, que ceux qui reçoivent le Christ sont nés de Dieu (Jean 1, 12-13). Segond traduit justement « enfants », gardant cette nuance que « fils » aurait effacée."
+        },
+        {
+          "id": "g-connaitre",
+          "lemme": "ouk egnō",
+          "html": "« Le monde ne nous connaît pas » reprend <span class=\"gr\">ouk egnō auton</span>, déjà employé pour le Christ lui-même au prologue de l'Évangile : « le monde ne l'a point connu » (Jean 1, 10). Connaître, chez Jean, n'est jamais un simple savoir : c'est une reconnaissance qui engage, comme on connaît quelqu'un qu'on aime. Ne pas connaître les enfants de Dieu répète, chez le disciple, ce qui est arrivé d'abord au maître."
+        },
+        {
+          "id": "g-manifeste",
+          "lemme": "ephanerōthē",
+          "html": "« Ce que nous serons n'a pas encore été manifesté » traduit <span class=\"gr\">ephanerōthē</span>, de la même racine que les épiphanies du Christ dans cette lettre — sa venue dans la chair (1 Jean 1, 2), son retour attendu (1 Jean 2, 28). L'identité du croyant suit le même rythme que celle du Christ : cachée encore, elle attend un dévoilement, non une invention."
+        },
+        {
+          "id": "g-pur",
+          "lemme": "hagnos",
+          "html": "« Il se purifie, comme lui-même est pur » emploie deux fois <span class=\"gr\">hagnos</span>, un mot qui dit moins la sainteté rituelle (hagios) que l'intégrité morale, un cœur non partagé. Se purifier ainsi n'est pas gagner une place déjà promise, mais répondre, par toute une vie, à une espérance déjà reçue : on ne devient pas enfant pour être aimé, on se garde pur parce qu'on l'est déjà."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Mt 5, 1-12a",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Voyant la foule, Jésus monta sur la montagne ; et, après qu'il se fut assis, ses disciples s'approchèrent de lui. <span class=\"s\">2</span> Puis, ayant ouvert la bouche, il les enseigna, et dit : <span class=\"s\">3</span> <button class=\"mot\" data-g=\"g-heureux\">Heureux</button> les <button class=\"mot\" data-g=\"g-pauvres-esprit\">pauvres en esprit</button>, car le royaume des cieux est à eux ! <span class=\"s\">4</span> Heureux les affligés, car ils seront consolés ! <span class=\"s\">5</span> Heureux les débonnaires, car ils hériteront la terre ! <span class=\"s\">6</span> Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés ! <span class=\"s\">7</span> Heureux les miséricordieux, car ils obtiendront miséricorde ! <span class=\"s\">8</span> Heureux ceux qui ont le <button class=\"mot\" data-g=\"g-coeur-pur\">cœur pur</button>, car ils verront Dieu ! <span class=\"s\">9</span> Heureux ceux qui procurent la paix, car ils seront appelés fils de Dieu ! <span class=\"s\">10</span> Heureux ceux qui sont <button class=\"mot\" data-g=\"g-persecutes\">persécutés pour la justice</button>, car le royaume des cieux est à eux ! <span class=\"s\">11</span> Heureux serez-vous, lorsqu'on vous outragera, qu'on vous persécutera et qu'on dira faussement de vous toute sorte de mal, à cause de moi. <span class=\"s\">12</span> Réjouissez-vous et soyez dans l'allégresse, parce que votre récompense sera grande dans les cieux.",
+      "gloses": [
+        {
+          "id": "g-heureux",
+          "lemme": "makarios",
+          "html": "<span class=\"gr\">Makarios</span>, que Segond rend par « heureux », appartenait d'abord au vocabulaire grec du bonheur accompli, celui des dieux ou du sage parvenu à la pleine réussite de sa vie — Aristote s'en sert ainsi dans l'Éthique à Nicomaque. En plaçant ce mot sur des pauvres, des affligés, des persécutés, Jésus ne décrit pas un sentiment présent mais déclare une condition déjà scellée par Dieu, quels que soient les signes contraires. D'autres traductions francophones préfèrent « bienheureux », terme plus liturgique, pour marquer que ce bonheur n'a rien d'un état d'âme."
+        },
+        {
+          "id": "g-pauvres-esprit",
+          "lemme": "ptōchoi tō pneumati",
+          "html": "« Pauvres en esprit » traduit <span class=\"gr\">ptōchoi tō pneumati</span> : ptōchos désigne non le travailleur modeste (penēs) mais le mendiant totalement démuni, celui qui n'a rien et le sait. Luc, rapportant une version plus brève de cette parole, dit simplement « heureux les pauvres » (Luc 6, 20), sans préciser « en esprit » — Matthieu, en ajoutant ces mots, désigne moins une condition sociale qu'une disposition intérieure, celle des pauvres qu'annonce déjà Ésaïe 61, 1."
+        },
+        {
+          "id": "g-coeur-pur",
+          "lemme": "katharoi tē kardia",
+          "html": "« Le cœur pur » reprend presque mot pour mot l'hébreu du psaume de ce jour, « bar levav » (Psaume 24, 4) : Jésus ne crée pas une exigence nouvelle, il répond à une question vieille de mille ans — qui pourra monter vers Dieu et voir sa face ? Le grec dit <span class=\"gr\">katharoi tē kardia</span>, un cœur sans mélange, non divisé entre deux objets d'amour. La promesse — « ils verront Dieu » — est exactement celle que cherchait déjà le pèlerin montant vers le mont Sion."
+        },
+        {
+          "id": "g-persecutes",
+          "lemme": "dediōgmenoi",
+          "html": "« Persécutés pour la justice » traduit <span class=\"gr\">dediōgmenoi heneken dikaiosynès</span> : non une persécution subie au hasard, mais attirée par une fidélité précise à ce qui est juste devant Dieu. Le mot rejoint directement ceux qui, dans l'Apocalypse lue aujourd'hui, « viennent de la grande tribulation » et ont lavé leurs robes (Apocalypse 7, 14) : la même épreuve, vue de deux côtés du même jour de fête."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une fête tardive, une espérance ancienne",
+      "corps_html": "La fête de tous les saints n'apparaît comme fête générale qu'au VIIIe siècle : le pape Grégoire III dédie vers 731 une chapelle de Saint-Pierre de Rome à tous les saints, et Grégoire IV étend la fête à toute l'Église en 835, au 1er novembre. Les Églises de la Réforme en ont gardé la mémoire, non comme intercession aux saints, mais comme rappel de la communion des croyants de tous les temps unis dans l'espérance de la résurrection — ce que le Symbole des Apôtres appelle « la communion des saints »."
+    },
+    {
+      "titre": "Apocalypse 7 : une pause au milieu du jugement",
+      "corps_html": "Le livre de l'Apocalypse est écrit pour des Églises d'Asie Mineure soumises à la pression du culte impérial, sans doute sous le règne de Domitien, vers 95. Entre l'ouverture du sixième sceau, qui annonce le jugement, et celle du septième, le chapitre 7 suspend le récit : avant que rien ne soit déchaîné sur la terre, Dieu fait d'abord marquer et mettre à l'abri ceux qui lui appartiennent. La vision n'écarte pas l'épreuve ; elle en garantit l'issue."
+    }
+  ],
+  "analogie": {
+    "titre": "Le cœur qu'on ne peut plus cacher",
+    "variantes": [
+      "Tu as peut-être connu cette fatigue particulière, celle d'avoir tenu, des années durant, un visage ajusté à ce qu'on attendait de toi — dans ta famille, au travail, parfois même dans la prière. Puis un soir, seul, sans personne à qui donner le change, ce visage est tombé de lui-même, et tu t'es trouvé nu devant Dieu, sans argument ni posture, juste toi tel que tu es. Ce moment-là, que tu aurais pu croire une défaite, est exactement celui où le psaume et l'Évangile de ce jour te rejoignent : ce n'est pas celui qui a réussi à se rendre pur qui est heureux, c'est celui que plus rien ne protège, et à qui Dieu promet qu'il le verra quand même.",
+      "Tu as peut-être tenu la main d'un mourant, ou suivi un cercueil, et senti, à cet instant précis, que ton chagrin n'était pas seulement le tien : il rejoignait une file immense de deuils plus anciens que toi, remontant plus loin que ta mémoire ne peut aller. Tu n'as rien fait pour appartenir à cette foule-là ; elle t'a simplement absorbé, comme on entre sans l'avoir cherché dans une procession déjà commencée. C'est cette même foule, innombrable, vêtue de blanc, que l'Apocalypse donne à voir aujourd'hui — non pour consoler d'un deuil par une image, mais pour dire que ceux qui pleurent ne pleurent jamais seuls devant Dieu.",
+      "Tu as peut-être continué, pendant des années, à faire ce qui est juste sans que cela change rien de visible — une fidélité discrète, un service sans retour, une droiture que personne n'a remarquée ni récompensée. Il y a des soirs où cela ressemble à du gaspillage, où tu te demandes si cette part de toi qui tient bon sert à quelque chose. L'Évangile de ce jour ne te dit pas que cela se verra bientôt ; il te dit que la récompense est déjà grande dans les cieux, maintenant, pendant que rien n'est encore manifesté — exactement ce que l'épître de Jean appelle une espérance qui, déjà, te purifie avant même que tu voies ce que tu deviendras."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse-toi rejoindre par une seule question : qu'est-ce qui, en toi, demande encore à être rendu simple, non partagé, tourné vers Dieu seul ?",
+    "geste": "Nomme, en silence ou à voix basse, une personne qui t'a précédé dans la foi et qui t'a aidé à croire — remercie Dieu pour elle, sans rien lui demander.",
+    "note": "Ce n'est pas un bilan à produire, ni une liste de vertus à cocher : c'est une pause devant celui qui, seul, rend le cœur pur."
+  },
+  "question": "Qui, parmi ceux qui t'ont précédé dans la foi, continue de te porter sans que tu le voies ?",
+  "racines": [
+    {
+      "titre": "Augustin : la montagne qu'on ne gravit pas seul",
+      "corps_html": "Commentant ce psaume, Augustin lit dans la montée vers « la montagne du Seigneur » l'image de l'Église elle-même, fondée sur les flots du siècle et élevée au-dessus des fleuves de la convoitise humaine. Il demande, avec le psalmiste, qui pourra s'y maintenir, et répond que seule la grâce, en purifiant le cœur, permet de tenir sur ce sommet que la seule volonté ne peut atteindre.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 23"
+    },
+    {
+      "titre": "Calvin : une pureté qui n'est pas un rite",
+      "corps_html": "Dans ses commentaires sur les Psaumes, Calvin revient souvent sur ce point : l'accès au « lieu saint » n'est jamais affaire de cérémonie extérieure, mais de droiture intérieure devant Dieu seul, qui voit le cœur là où les hommes ne voient que les mains. Toute l'insistance de la Réforme sur la foi intérieure contre la seule observance rituelle trouve ici, bien avant elle, son texte fondateur.",
+      "attribution": "Jean Calvin, Commentaires bibliques"
+    },
+    {
+      "titre": "Heidelberg : ce que veut dire « communion des saints »",
+      "corps_html": "Le Catéchisme de Heidelberg demande ce qu'il faut entendre par la communion des saints, et répond d'abord que tout croyant, membre du Christ, participe à ses richesses et à ses dons comme à ceux de tous les autres membres de ce corps ; ensuite, que chacun doit employer ses dons pour le bien et le salut des autres membres. La fête de ce jour n'est donc pas la célébration d'exceptions héroïques, mais le rappel d'un lien déjà donné à chaque croyant.",
+      "attribution": "Catéchisme de Heidelberg (1563), Q. 55"
+    }
+  ],
+  "videos": [
+    {
+      "id": "FuQp4baBpPU",
+      "raison": "Cette étude du mot hébreu lev éclaire ce que Matthieu 5, 8 et le Psaume 24, 4 visent tous deux par « cœur pur ».",
+      "groupe": "mot"
+    },
+    {
+      "id": "cAOAPSfpbR4",
+      "raison": "Ce panorama d'Apocalypse 1 à 11 situe la vision de la foule innombrable d'Apocalypse 7 dans l'ensemble des sceaux et des visions du livre.",
+      "groupe": "livre"
+    },
+    {
+      "id": "N-q8TaM8opA",
+      "raison": "Ce panorama des épîtres de Jean replace 1 Jean 3, 1-3 dans l'ensemble de la lettre et son insistance sur la filiation divine.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Ce panorama des Psaumes aide à situer le Psaume 24 parmi les psaumes d'entrée au temple.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi fêter tous les saints quand on ne prie pas les saints ?",
+      "reponse_html": "<p>La Réforme a rejeté l'invocation des saints comme intercesseurs, mais jamais la conviction que les croyants de tous les temps forment un seul corps. Le Catéchisme de Heidelberg explique que chaque croyant participe aux richesses du Christ et de tous ses membres — c'est cela, la communion des saints, bien avant toute fête au calendrier. Jean, dans l'épître lue aujourd'hui, dit la même chose autrement : nous sommes déjà enfants de Dieu, et ce que nous deviendrons avec tous les autres n'est pas encore manifesté. Fêter ce jour, c'est se souvenir qu'on n'attend pas seul.</p>",
+      "sources": {
+        "jour": [
+          "1 Jn 3, 1-3"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "heidelberg",
+            "reference": "Q. 55"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Les cent quarante-quatre mille et la foule immense de l'Apocalypse sont-ils les mêmes ?",
+      "reponse_html": "<p>Le texte donne deux visions à la suite, non deux groupes séparés. Les cent quarante-quatre mille, douze mille de chacune des douze tribus, représentent Israël au complet par un nombre symbolique et clos. La foule immense qui vient ensuite, elle, vient « de toute nation, de toute tribu, de tout peuple et de toute langue » et personne ne peut la compter. C'est le même salut regardé deux fois : d'abord dans l'accomplissement de la promesse faite à Israël, puis dans son débordement vers toutes les nations.</p>",
+      "sources": {
+        "jour": [
+          "Ap 7, 2-4.9-14"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "« Pauvres en esprit », ça veut dire quoi au juste ?",
+      "reponse_html": "<p>Ce n'est pas la pauvreté matérielle, ni une fausse modestie. Le mot grec traduit par « pauvre » désigne le mendiant qui n'a strictement rien et qui le sait ; appliqué à l'esprit, il décrit celui qui se tient devant Dieu sans rien à faire valoir, sans ressource propre à présenter. Luc rapporte une version plus courte de cette parole, « heureux les pauvres » sans préciser (Luc 6, 20) ; Matthieu, en ajoutant « en esprit », déplace la pauvreté du compte en banque vers la posture du cœur devant Dieu.</p>",
+      "sources": {
+        "jour": [
+          "Mt 5, 1-12a"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Qui peut avoir les mains vraiment innocentes pour monter vers Dieu ?",
+      "reponse_html": "<p>Le psaume pose la question sans la résoudre lui-même — et c'est bien le problème : à la lettre, personne. Augustin, méditant ce texte, répond que seule la grâce permet de tenir sur cette montagne que la seule volonté ne peut gravir. L'épître de Jean, lue le même jour, ne dit pas autre chose : on ne se purifie pas pour devenir enfant de Dieu, on se purifie parce qu'on l'est déjà, et cette espérance précède tout effort.</p>",
+      "sources": {
+        "jour": [
+          "Ps 23 (24), 1-2, 3-4ab, 5-6",
+          "1 Jn 3, 1-3"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 23"
+          }
+        ]
+      }
+    },
+    {
+      "question": "La « grande tribulation » de l'Apocalypse, c'est pour plus tard ou déjà maintenant ?",
+      "reponse_html": "<p>L'Apocalypse s'adresse à des Églises déjà sous pression, à la fin du premier siècle, et non à un futur lointain seulement. L'expression « la grande tribulation » reprend presque mot pour mot celle que Jésus emploie lui-même (Matthieu 24, 21), et elle rejoint directement les persécutés de l'Évangile de ce jour, « heureux êtes-vous quand on vous persécutera ». Les deux textes parlent d'une épreuve réelle, traversée et non évitée, dont l'issue — la robe lavée, la récompense dans les cieux — est déjà promise avant même qu'elle s'achève.</p>",
+      "sources": {
+        "jour": [
+          "Ap 7, 2-4.9-14",
+          "Mt 5, 1-12a"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-23"
+  ]
+}
