@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-04",
+  "date_humaine": "mercredi",
+  "semaine": "31ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 2, 12-18 ; Lc 14, 25-33",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 132 h328\"/><path d=\"M175 132 v-98\"/><path d=\"M215 132 v-78\"/><path d=\"M175 112 h40\"/><path d=\"M175 90 h40\"/><path d=\"M175 68 h40\"/><path d=\"M175 112 l40 -22\"/><path d=\"M175 34 l-14 -6\"/><path d=\"M215 54 l16 -8\"/><path d=\"M68 132 q-1 -18 14 -21 q13 -2 17 10 q3 9 -4 11\"/><path d=\"M68 132 q6 -6 16 -2\"/><path d=\"M86 104 q4 -7 8 0 q-4 7 -8 0 z\"/><path d=\"M98 118 l10 -6\"/><path d=\"M108 112 l3 -3\"/><path d=\"M108 115 l4 -1\"/><path d=\"M107 121 l4 3\"/><path d=\"M50 128 q3 -4 6 0 q-3 4 -6 0 z\"/><path d=\"M58 130 q2 -3 5 0 q-2 3 -5 0 z\"/></g><g class=\"trait-liturgie\"><path d=\"M175 34 v-9\"/><path d=\"M170 25 q5 -10 10 0 q-5 8 -10 0 z\"/></g></svg>",
+  "titre": "Le vrai prix",
+  "titre_html": "Le vrai <span class=\"it\">prix</span>",
+  "sous_titre": "Compter, renoncer, espérer.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : une tour à demi achevée, échafaudages de bois à nu contre le ciel du soir ; à son pied, un homme assis compte des pierres sur ses doigts ; tout en haut de la tour inachevée, une petite lampe est pourtant allumée et brûle déjà dans la nuit naissante.",
+  "lectures": [
+    {
+      "etiquette": "Lecture de la lettre de saint Paul aux Philippiens",
+      "reference": "Ph 2, 12-18",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> Ainsi, mes bien-aimés, comme vous avez toujours obéi, travaillez à votre <button class=\"mot\" data-g=\"g-salut\">salut</button> avec <button class=\"mot\" data-g=\"g-crainte\">crainte et tremblement</button>, non seulement comme en ma présence, mais bien plus encore maintenant que je suis absent; <span class=\"s\">13</span> car c'est Dieu qui <button class=\"mot\" data-g=\"g-energeo\">produit</button> en vous le vouloir et le faire, pour son bon plaisir. <span class=\"s\">14</span> Faites toutes choses sans <button class=\"mot\" data-g=\"g-murmures\">murmures</button> ni hésitations, <span class=\"s\">15</span> afin que vous soyez irréprochables et purs, des enfants de Dieu irrépréhensibles au milieu d'une génération perverse et corrompue, parmi laquelle vous brillez comme des <button class=\"mot\" data-g=\"g-flambeaux\">flambeaux</button> dans le monde, <span class=\"s\">16</span> portant la parole de vie; et je pourrai me glorifier, au jour de Christ, de n'avoir pas couru en vain ni travaillé en vain. <span class=\"s\">17</span> Et même si je sers de <button class=\"mot\" data-g=\"g-libation\">libation</button> pour le sacrifice et pour le service de votre foi, je m'en réjouis, et je me réjouis avec vous tous. <span class=\"s\">18</span> Vous aussi, réjouissez-vous-en de même, et réjouissez-vous avec moi.",
+      "gloses": [
+        {
+          "id": "g-salut",
+          "lemme": "sōtēria",
+          "html": "Le mot grec <span class=\"gr\">sōtēria</span> désigne autant la délivrance que la santé, l'intégrité retrouvée d'un corps ou d'une cité. Segond traduit par « salut », ce qui est juste, mais fait moins entendre le verbe qui l'accompagne, <span class=\"gr\">katergazesthe</span>, « travaillez », à l'impératif présent : un travail continu, non un geste ponctuel. Chrysostome, dans son Homélie VIII sur cette épître, note que Paul ne nie pas la grâce en demandant cet effort : il concilie le vouloir donné par Dieu et le faire qui reste nôtre."
+        },
+        {
+          "id": "g-crainte",
+          "lemme": "phobou kai tromou",
+          "html": "L'expression grecque <span class=\"gr\">meta phobou kai tromou</span>, « avec crainte et tremblement », revient ailleurs chez Paul pour l'accueil de l'Évangile par les Corinthiens ou l'obéissance des esclaves. Segond garde la formule telle quelle plutôt que de l'adoucir en simple respect. Chrysostome y voit la posture de qui se sait responsable devant Dieu de sa propre persévérance, sans présomption ni désespoir : la crainte n'annule pas la confiance, elle empêche qu'elle devienne négligence."
+        },
+        {
+          "id": "g-energeo",
+          "lemme": "energōn",
+          "html": "Le verbe <span class=\"gr\">energein</span>, d'où vient notre mot « énergie », dit une action qui travaille de l'intérieur, qui met en mouvement. Segond traduit « c'est Dieu qui produit en vous », quand Calvin, dans son commentaire sur ce passage, souligne que le même verbe qualifie à la fois le vouloir et le faire : Dieu n'agit pas seulement sur la volonté en laissant l'exécution à l'homme, il opère les deux. C'est le verset que la tradition réformée a le plus cité contre toute idée d'un mérite humain premier."
+        },
+        {
+          "id": "g-murmures",
+          "lemme": "goggysmos",
+          "html": "Le nom <span class=\"gr\">goggysmos</span> est une onomatopée : il imite le grondement sourd, le murmure qui roule de bouche en bouche sans jamais s'adresser franchement à qui il vise. C'est le mot même du livre des Nombres pour les récriminations d'Israël au désert contre Moïse et contre Dieu. Segond le rend justement par « murmures », gardant le lien avec cette mémoire que Paul convoque un peu plus loin en parlant d'une « génération perverse »."
+        },
+        {
+          "id": "g-flambeaux",
+          "lemme": "phōstēres",
+          "html": "Le mot <span class=\"gr\">phōstēres</span> désigne proprement les luminaires du ciel, le soleil et les étoiles, le terme même que la Genèse emploie pour les corps célestes du quatrième jour. Segond traduit par « flambeaux », image plus domestique, alors que Paul vise un objet cosmique : les croyants comparés aux astres qui tiennent leur place fixe dans la nuit. Chrysostome relève que la gloire de l'étoile n'est pas la sienne mais celle de qui l'a allumée, et qu'elle ne brille pas pour elle-même mais pour ceux qui marchent dans l'obscurité."
+        },
+        {
+          "id": "g-libation",
+          "lemme": "spendomai",
+          "html": "Le verbe <span class=\"gr\">spendomai</span> appartient au vocabulaire sacrificiel grec : il désigne l'effusion du vin versé en offrande au moment même où la victime est immolée sur l'autel. Segond traduit « je sers de libation », gardant l'image du culte, alors que Paul parle de sa propre vie, peut-être de sa mort prochaine, versée en plus du sacrifice que les Philippiens offrent eux-mêmes par leur foi. Le même verbe reviendra, presque en écho, en 2 Timothée 4, 6."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 26 (27), 1, 4, 13-14",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> De David. L'Éternel est ma <button class=\"mot\" data-g=\"g-lumiere\">lumière</button> et mon salut: de qui aurais-je crainte? L'Éternel est le <button class=\"mot\" data-g=\"g-rocher\">rocher</button> de ma vie: de qui aurais-je peur? <span class=\"s\">4</span> Je demande à l'Éternel une chose, que je désire ardemment: je voudrais <button class=\"mot\" data-g=\"g-habiter\">habiter</button> dans la maison de l'Éternel tous les jours de ma vie, pour contempler la magnificence de l'Éternel et pour admirer son temple. <span class=\"s\">13</span> Ah! si je n'étais pas sûr de voir la <button class=\"mot\" data-g=\"g-bonte\">bonté</button> de l'Éternel sur la terre des vivants!... <span class=\"s\">14</span> <button class=\"mot\" data-g=\"g-espere\">Espère</button> en l'Éternel! Fortifie-toi et que ton cœur s'affermisse! Espère en l'Éternel!",
+      "gloses": [
+        {
+          "id": "g-lumiere",
+          "lemme": "'or",
+          "html": "Le mot hébreu <span class=\"gr\">'or</span>, « lumière », ouvre le psaume avant même le mot « salut ». Segond respecte cet ordre hébraïque en français. Augustin, commentant ce psaume, y voit moins une lumière extérieure qu'une illumination intérieure de l'intelligence, par laquelle Dieu se fait reconnaître à l'âme avant même qu'elle le voie agir dans les événements."
+        },
+        {
+          "id": "g-rocher",
+          "lemme": "ma'oz",
+          "html": "L'hébreu emploie ici <span class=\"gr\">ma'oz</span>, qui ne désigne pas le rocher nu — l'hébreu dispose pour cela de <span class=\"gr\">tsur</span> ou <span class=\"gr\">sela</span> — mais le rempart, la place forte où l'on se retranche en cas de siège. Segond traduit par « rocher », ce qui fusionne deux images bibliques voisines mais distinctes, l'appui stable et la forteresse qui protège. Calvin, dans son commentaire sur ce psaume, insiste sur le second sens : David ne dit pas seulement que Dieu est solide sous ses pieds, mais qu'il est l'enceinte même derrière laquelle sa vie est mise à l'abri."
+        },
+        {
+          "id": "g-habiter",
+          "lemme": "shevet",
+          "html": "Le verbe hébreu <span class=\"gr\">shevet</span> (de la racine <span class=\"gr\">yashav</span>) signifie s'asseoir, demeurer, tenir maison — le verbe de l'habitant sédentaire, non du voyageur de passage. Segond traduit « habiter », ce qui est exact, mais atténue la nuance de permanence que porte « tous les jours de ma vie » juste après : le psalmiste ne demande pas une visite au temple, il demande d'y être établi comme on s'établit chez soi."
+        },
+        {
+          "id": "g-bonte",
+          "lemme": "tuv",
+          "html": "Le mot hébreu <span class=\"gr\">tuv</span>, que Segond rend par « bonté », appartient au même champ que le <span class=\"gr\">tov</span> de la Genèse — « Dieu vit que cela était bon ». Il dit moins une qualité morale abstraite que la bonté sensible, goûtée, celle qu'on éprouve dans ce qui nourrit et fait vivre. Le texte hébreu porte une phrase suspendue, sans verbe principal, que Segond prolonge par des points de suspension, gardant la trace d'une émotion qui déborde la syntaxe."
+        },
+        {
+          "id": "g-espere",
+          "lemme": "qavah",
+          "html": "Le verbe <span class=\"gr\">qavah</span>, traduit « espère » par Segond, vient de la même racine que <span class=\"gr\">qav</span>, le cordeau tendu du bâtisseur ou du tisserand. Espérer, en hébreu, c'est se tenir tendu vers ce qui n'est pas encore, comme un fil tiré sans mou, non attendre mollement. La répétition du mot en ouverture et en clôture du verset, que Segond conserve, imite cette tension qui s'étire sans se rompre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile de Jésus Christ selon saint Luc",
+      "reference": "Lc 14, 25-33",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">25</span> De grandes foules faisaient route avec Jésus. Il se tourna, et leur dit: <span class=\"s\">26</span> Si quelqu'un vient à moi, et s'il ne <button class=\"mot\" data-g=\"g-hait\">hait</button> pas son père, sa mère, sa femme, ses enfants, ses frères, et ses sœurs, et même sa propre vie, il ne peut être mon <button class=\"mot\" data-g=\"g-disciple\">disciple</button>. <span class=\"s\">27</span> Et quiconque ne porte pas sa <button class=\"mot\" data-g=\"g-croix\">croix</button>, et ne me suit pas, ne peut être mon disciple. <span class=\"s\">28</span> Car, lequel de vous, s'il veut bâtir une tour, ne s'assied pas d'abord pour <button class=\"mot\" data-g=\"g-calculer\">calculer</button> la dépense et voir s'il a de quoi la terminer, <span class=\"s\">29</span> de peur qu'après avoir posé les fondements, il ne puisse l'achever, et que tous ceux qui le verront ne se mettent à le railler, <span class=\"s\">30</span> en disant: Cet homme a commencé à bâtir, et il n'a pu achever? <span class=\"s\">31</span> Ou quel roi, s'il va faire la guerre à un autre roi, ne s'assied pas d'abord pour examiner s'il peut, avec dix mille hommes, marcher à la rencontre de celui qui vient l'attaquer avec vingt mille? <span class=\"s\">32</span> S'il ne le peut, tandis que cet autre roi est encore loin, il lui envoie une ambassade pour demander la paix. <span class=\"s\">33</span> Ainsi donc, quiconque d'entre vous ne <button class=\"mot\" data-g=\"g-renonce\">renonce</button> pas à tout ce qu'il possède ne peut être mon disciple.",
+      "gloses": [
+        {
+          "id": "g-hait",
+          "lemme": "misei",
+          "html": "Le verbe grec <span class=\"gr\">misei</span>, « hait », traduit ici littéralement un idiome sémitique de préférence radicale : aimer moins, détester par comparaison. Matthieu rapporte le même enseignement en disant « celui qui aime son père ou sa mère plus que moi » (Matthieu 10, 37), ce qui confirme que Luc radicalise une expression dont le sens premier est comparatif. Segond garde le mot brut, fidèle au texte, et c'est cette dureté qu'il faut laisser résonner sans l'adoucir ni la prendre à la lettre contre l'amour des proches qu'ailleurs l'Écriture commande."
+        },
+        {
+          "id": "g-disciple",
+          "lemme": "mathētēs",
+          "html": "Le mot grec <span class=\"gr\">mathētēs</span> vient du verbe « apprendre » : le disciple est d'abord celui qui se met en position d'apprenant, non celui qui adhère à une doctrine achevée. Segond traduit simplement « disciple », transcription qui a fini par désigner en français un statut religieux figé, alors que le mot grec garde dans l'usage profane le sens plus large d'élève attaché à un maître, le suivant dans sa vie autant que dans son enseignement."
+        },
+        {
+          "id": "g-croix",
+          "lemme": "stauros",
+          "html": "Le mot <span class=\"gr\">stauros</span> désignait un instrument d'exécution romain, et « porter sa croix » évoquait, avant même la passion de Jésus, le condamné portant lui-même la pièce de bois jusqu'au lieu du supplice, exposé aux moqueries du trajet. Segond garde « croix » sans l'édulcorer en métaphore vague des épreuves de la vie, ce que l'usage courant du mot a pourtant fini par en faire. Dans la bouche de Jésus avant sa propre mort, l'image annonce littéralement ce qu'il va vivre."
+        },
+        {
+          "id": "g-calculer",
+          "lemme": "psēphizei",
+          "html": "Le verbe grec <span class=\"gr\">psēphizei</span> vient de <span class=\"gr\">psēphos</span>, le petit caillou qu'on déplaçait pour compter ou pour voter dans l'Antiquité : calculer, c'est manipuler ces jetons un par un, sans en sauter aucun. Segond traduit justement par « calculer », rendant ce geste concret de vérification méthodique plutôt qu'une simple estimation approximative. Le même verbe reviendra dans l'Apocalypse pour le calcul du nombre de la bête, preuve qu'il s'agit bien d'un travail de l'intelligence qui pèse chaque élément avant de conclure."
+        },
+        {
+          "id": "g-renonce",
+          "lemme": "apotassetai",
+          "html": "Le verbe grec <span class=\"gr\">apotassetai</span> signifie proprement se séparer d'une troupe, rompre les rangs, prendre congé — le mot qu'on emploie pour un soldat qui quitte l'armée ou un ami qui fait ses adieux. Segond traduit par « renonce », ce qui est juste mais plus abstrait que l'image militaire sous-jacente : il s'agit moins d'un détachement intérieur que d'une rupture effective et déclarée. Le même verbe décrit ailleurs dans Luc ceux qui disent adieu à leur famille avant de suivre Jésus (Luc 9, 61)."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre écrite depuis la prison",
+      "corps_html": "Paul écrit aux Philippiens depuis une captivité, probablement à Rome, vers 61-63, sans savoir s'il en sortira vivant (Philippiens 1, 20-23). Cette incertitude donne tout son poids à l'exhortation du jour : demander de « travailler son salut avec crainte et tremblement » n'est pas un conseil donné de loin, c'est celui d'un homme qui vit sa propre fin possible dans la même tension entre abandon à Dieu et responsabilité active."
+    },
+    {
+      "titre": "En marche vers Jérusalem, entouré de foules",
+      "corps_html": "Depuis Luc 9, 51, Jésus « marche résolument » vers Jérusalem, et les foules grossissent sans que leur enthousiasme soit interrogé. Le passage du jour suit de peu la parabole du grand festin, où beaucoup d'invités se dérobent par attachement à leurs biens : Jésus se tourne alors vers la foule qui le suit encore et lui adresse, sans ménagement, la question de ce qu'il en coûte réellement de le suivre jusqu'au bout."
+    }
+  ],
+  "analogie": {
+    "titre": "Le calcul qu'on ne peut pas tricher",
+    "variantes": [
+      "Il y a des engagements que tu as pris dans un moment de ferveur, sans mesurer ce qu'ils te demanderaient réellement — une promesse faite tôt, une vocation entendue dans l'enthousiasme d'un dimanche, un vœu qui te coûtait peu tant que tu ne l'avais pas tenu. Les années qui suivent ne reviennent pas sur la promesse, elles en révèlent lentement le prix véritable, bien après que l'élan du début s'est tu. C'est alors, dans cette usure qui pourrait devenir murmure, que tu découvres si ce que tu as voulu venait seulement de toi, ou si quelque chose d'autre, en toi, continue de vouloir à ta place — et c'est devant ce quelque chose, pas devant ta propre constance, qu'il te faut finalement te tenir.",
+      "Tu as peut-être connu ce moment où il a fallu laisser aller quelque chose que tu croyais indispensable à qui tu étais — une image de toi-même, une attente sur ta vie, une place que tu pensais devoir occuper — non parce qu'on te l'a arrachée, mais parce que garder les deux mains fermées sur elle t'empêchait d'en recevoir une autre que tu ne voyais pas encore. Le lâcher-prise n'a rien eu de spectaculaire ; il s'est fait dans une prière sans élan particulier, un soir ordinaire, presque sans mots. Et ce qui est resté ensuite, ce vide d'abord inconfortable, s'est révélé plus tard être exactement la place où Dieu pouvait enfin se tenir sans concurrence.",
+      "Tu as sans doute tenu, un temps, une fidélité que personne ne voyait et dont rien ne venait récompenser l'effort — une présence patiente auprès de quelqu'un qui ne s'améliorait pas, une prière reprise chaque jour sans qu'elle semble changer quoi que ce soit, un service rendu dans l'ombre pendant que d'autres recevaient la lumière. Il n'y avait alors aucune preuve que cela servait à quelque chose, seulement la question lancinante de savoir si continuer avait un sens. Ce que l'on découvre parfois bien plus tard, souvent sans témoin, c'est que cette fidélité obscure portait déjà sa propre joie, une joie qui ne dépendait pas du résultat visible, et que c'est précisément là que tu étais le plus proche de celui qui t'y avait appelé."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte de ce jour ne demande pas un sentiment, mais un calcul fait en vérité, puis un abandon fait en confiance.",
+    "geste": "Prends un moment de silence et nomme devant Dieu, sans l'enjoliver, ce que ton attachement au Christ t'a réellement coûté jusqu'ici — puis demande-lui la force d'aller plus loin, non la tienne, mais celle qu'il promet d'opérer en toi.",
+    "note": "Il n'est pas nécessaire que cette prière soit longue ; elle doit seulement être honnête."
+  },
+  "question": "Quel est, dans ta vie, le prix que tu n'as encore jamais vraiment pesé devant Dieu ?",
+  "racines": [
+    {
+      "titre": "Compter avant de bâtir, une sagesse ancienne",
+      "corps_html": "Le livre des Proverbes recommandait déjà d'achever d'abord les travaux des champs avant de bâtir sa maison, de peur de se ruiner en façade sans fondement (Proverbes 24, 27). La parabole de la tour inachevée, raillée par les passants, reprend cette sagesse de bon sens paysan pour la retourner vers le disciple : qui promet de suivre sans avoir mesuré le prix s'expose au même ridicule public.",
+      "attribution": "note historique — Proverbes 24, 27"
+    },
+    {
+      "titre": "La libation, un geste du culte quotidien",
+      "corps_html": "Dans le culte décrit au livre des Nombres, chaque sacrifice d'animal s'accompagnait d'une libation de vin versée au pied de l'autel, offrande qui ne se voyait presque pas, absorbée aussitôt (Nombres 15, 5-10). En se disant lui-même « versé en libation » sur le sacrifice de la foi des Philippiens, Paul se place dans ce geste discret, accessoire au regard du monde, et pourtant inséparable de l'offrande principale.",
+      "attribution": "note historique — Nombres 15, 5-10"
+    },
+    {
+      "titre": "Une seule chose demandée",
+      "corps_html": "Le psalmiste ne demande qu'une chose à l'Éternel, habiter sa maison ; Marthe, dans l'évangile de Luc, s'agite pour beaucoup de choses quand Marie, assise, en a choisi une seule, nécessaire (Luc 10, 41-42). Le rapprochement n'est pas forcé : dans les deux scènes, la vraie prière ne multiplie pas les demandes, elle les resserre jusqu'à ne plus vouloir que la présence même de Dieu.",
+      "attribution": "rapprochement scripturaire — Luc 10, 41-42"
+    }
+  ],
+  "videos": [
+    {
+      "id": "IT3LVWWuDDo",
+      "raison": "La parabole de la tour inachevée (Luc 14, 28-30) appartient au corpus des paraboles que cette vidéo resitue dans leur fonction d'appel à la décision.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Cette traversée de Luc 10 à 24 remet l'exigence du disciple de Luc 14, 25-33 dans la marche vers Jérusalem qui structure toute cette partie de l'évangile.",
+      "groupe": "livre"
+    },
+    {
+      "id": "u893rxHGrWU",
+      "raison": "Le psaume du jour appartient au recueil que cette vidéo présente dans son ensemble, entre lamentation et confiance.",
+      "groupe": "livre"
+    },
+    {
+      "id": "KcenGEY1w-U",
+      "raison": "Le mot grec que Paul répète en Philippiens 2, 17-18, traduit par « se réjouir », est précisément celui que cette vidéo explore.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Dieu opère-t-il tout, ou dois-je faire un effort ? Pourquoi Paul dit-il les deux ?",
+      "reponse_html": "Paul ne pose pas une alternative mais une conjonction : « travaillez à votre salut… car c'est Dieu qui produit en vous le vouloir et le faire » (Philippiens 2, 12-13). L'effort demandé n'est pas la cause du salut, il en est l'exercice, comme la respiration est l'exercice d'un souffle qu'on n'a pas soi-même créé. Chrysostome, dans son homélie sur ce passage, rappelle que l'apôtre concilie ainsi la grâce de Dieu et le libre arbitre, sans laisser l'un dévorer l'autre. Travailler son salut avec crainte, c'est donc prendre au sérieux ce que Dieu a déjà mis en mouvement en nous, non suppléer à ce qui lui manquerait.",
+      "sources": {
+        "jour": [
+          "Philippiens 2, 12-13"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie VIII sur l'Épître aux Philippiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Faut-il vraiment haïr sa famille pour suivre Jésus ?",
+      "reponse_html": "Le verbe traduit par « hait » reprend un tour sémitique de préférence comparative, le même que Matthieu rend plus clairement : « celui qui aime son père ou sa mère plus que moi n'est pas digne de moi » (Matthieu 10, 37). Luc garde la formule la plus rude parce qu'il écrit pour une communauté où suivre le Christ pouvait réellement couper d'une famille qui n'y adhérait pas. Il ne s'agit donc pas d'un ordre de détester les siens, ce que l'Écriture condamne ailleurs, mais de l'aveu qu'aucun lien, même le plus sacré, ne peut occuper la première place sans devenir une idole. La dureté du mot est volontaire : Jésus ne veut pas qu'on l'édulcore en une préférence raisonnable et confortable.",
+      "sources": {
+        "jour": [
+          "Luc 14, 26",
+          "Matthieu 10, 37"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi compter le coût avant de s'engager, alors que la foi est un don gratuit ?",
+      "reponse_html": "Calculer le coût ne précède pas la grâce, il la mesure : le bâtisseur de la parabole ne décide pas s'il veut la tour, il regarde en face ce qu'elle exige une fois le désir déjà là. De même, quand Paul demande aux Philippiens de travailler leur salut, il ne leur demande pas de le produire, mais de ne pas s'illusionner sur ce qu'il engage. La foi est un don gratuit, mais le don reçu à la légère, sans qu'on en pèse le poids, s'arrête souvent aux fondations, raillé par ceux qui regardent. Compter le prix est ainsi un acte de lucidité devant Dieu, non une condition posée à sa grâce.",
+      "sources": {
+        "jour": [
+          "Luc 14, 28-30",
+          "Philippiens 2, 12"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que signifie « habiter dans la maison de l'Éternel » si l'on ne vit pas au Temple ?",
+      "reponse_html": "Le psalmiste ne demande pas une adresse mais une présence constante : « habiter dans la maison de l'Éternel » dit le désir de ne plus jamais quitter ce lieu où Dieu se laisse contempler. Pour qui ne vit pas au Temple, et depuis sa destruction en l'an 70 pour personne, cette demande se déplace sans se perdre : elle devient le désir de vivre sans cesse sous le regard de Dieu, où qu'on se trouve. C'est ce que suggère la suite du psaume, qui espère voir la bonté de l'Éternel « sur la terre des vivants », et non seulement dans un sanctuaire. Habiter chez Dieu, finalement, c'est faire de sa présence le lieu permanent où l'on revient, plutôt qu'une étape parmi d'autres.",
+      "sources": {
+        "jour": [
+          "Psaume 26 (27), 4",
+          "Psaume 26 (27), 13"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Quand Paul parle de « libation », envisage-t-il déjà sa propre mort ?",
+      "reponse_html": "Paul envisage sa propre mort sans détour : « même si je sers de libation pour le sacrifice… de votre foi », il associe son sang versé, au sens propre peut-être, à l'offrande que les Philippiens font déjà d'eux-mêmes par leur fidélité. Chrysostome, commentant ce passage, rapproche cette disposition de celle de Job, qui bénit sans murmurer même dans la perte. Ce qui frappe est que Paul appelle cela une joie, répétée deux fois dans les deux derniers versets, et qu'il demande aux Philippiens de la partager plutôt que de le pleurer. La libation n'est pas une résignation triste : c'est un acte voulu, offert, qui s'ajoute librement au sacrifice d'un autre.",
+      "sources": {
+        "jour": [
+          "Philippiens 2, 17-18"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie VIII sur l'Épître aux Philippiens"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-VIII",
+    "augustin-Ps-26"
+  ]
+}
