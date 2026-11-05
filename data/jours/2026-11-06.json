@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-06",
+  "date_humaine": "vendredi",
+  "semaine": "31ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 3, 17 – 4, 1 ; Lc 16, 1-8",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 145 h328\"/><path d=\"M8 146 Q120 70 215 34\"/><path d=\"M15 140 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9 h20 v-9\"/><path d=\"M206 52 v-18 q0 -10 9 -10 q9 0 9 10 v18 M186 24 h20 M224 24 h20\"/><path d=\"M225 38 l9 -16 l9 16 l9 -18 l9 18 l9 -16 l9 16 l9 -14 l9 14\"/></g><g class=\"trait-liturgie\"><path d=\"M206 52 l-13 -10 M224 52 l13 -10\"/></g><g class=\"trait-rubrique\"><path d=\"M45 131 v-10 M42 121 q3 -5 6 0\"/><path d=\"M125 95 v-8 M122.7 87 q2.3 -4 4.6 0\"/><path d=\"M185 68 v-6 M183 62 q2 -3 4 0\"/></g></svg>",
+  "titre": "Les degrés",
+  "titre_html": "Les degrés<span class=\"it\"> de la maison</span>",
+  "sous_titre": "Un pèlerinage vers la maison qui ne passera pas.",
+  "suite_hier": null,
+  "gravure_alt": "Une route en escalier taillée à flanc de colline ; des pèlerins y montent en file vers une porte ouverte dans un mur de pierre ; au loin, au sommet, les toits serrés d'une ville se touchent presque, comme liés les uns aux autres.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Lecture",
+      "reference": "Ph 3, 17 – 4, 1",
+      "reference_courte": "Ph 3, 17 – 4, 1",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">17</span> Soyez mes <button class=\"mot\" data-g=\"g-imitateurs\">imitateurs</button>, frères, et portez les regards sur ceux qui marchent selon le modèle que vous avez en nous. <span class=\"s\">18</span> Car il en est plusieurs qui marchent en ennemis de la croix de Christ, je vous en ai souvent parlé, et j'en parle maintenant encore en pleurant. <span class=\"s\">19</span> Leur fin sera la perdition ; ils ont pour dieu leur ventre, ils mettent leur gloire dans ce qui fait leur honte, ils n'affectionnent que les choses de la terre. <span class=\"s\">20</span> Mais notre <button class=\"mot\" data-g=\"g-cite\">cité</button> à nous est dans les cieux, d'où nous attendons aussi un Sauveur, le Seigneur Jésus Christ, <span class=\"s\">21</span> qui <button class=\"mot\" data-g=\"g-transformera\">transformera</button> notre corps de misère, en le rendant semblable à son corps glorieux, par le pouvoir qu'il a de s'assujettir toutes choses. <span class=\"s\">1</span> C'est pourquoi, mes bien-aimés, et très chers frères, vous qui êtes ma joie et ma couronne, demeurez ainsi fermes dans le Seigneur.",
+      "gloses": [
+        {
+          "id": "g-imitateurs",
+          "lemme": "symmimêtai",
+          "html": "Le grec <span class=\"gr\">symmimêtai</span> semble forgé par Paul lui-même : on ne le trouve nulle part ailleurs dans le Nouveau Testament, ni dans le grec profane connu de son temps. Segond traduit simplement « imitateurs », mais le préfixe <span class=\"gr\">syn-</span> (« avec ») indique une imitation partagée, en communauté, non un face-à-face solitaire avec l'apôtre. Chrysostome, commentant ce passage, insiste sur le fait que Paul ne demande pas qu'on l'imite lui en tant qu'homme, mais le Christ qu'il porte en lui — on imite ensemble le même modèle, on ne copie pas un maître."
+        },
+        {
+          "id": "g-cite",
+          "lemme": "politeuma",
+          "html": "Le mot grec est <span class=\"gr\">politeuma</span>, qui ne désigne pas d'abord un lieu mais un corps de citoyens organisés, avec ses lois et son administration propres — exactement ce qu'était Philippes elle-même, colonie romaine fière de son statut civique. Segond traduit par « cité », ce qui est juste mais adoucit la pointe politique du mot : Paul ne dit pas seulement que les croyants habitent ailleurs, il affirme qu'ils relèvent d'une autre citoyenneté, avec d'autres lois que celles de Rome. Calvin, dans son commentaire de ce passage, rappelle que cette citoyenneté céleste n'exempte pourtant pas de vivre honnêtement ici-bas."
+        },
+        {
+          "id": "g-transformera",
+          "lemme": "metaschêmatisei",
+          "html": "Le verbe grec <span class=\"gr\">metaschêmatisei</span> ne dit pas que Dieu remplace notre corps par un autre, mais qu'il lui donne une autre forme extérieure (<span class=\"gr\">schêma</span>), comme on change d'habit sans changer la personne qui le porte. Segond choisit « transformera », traduction large qui masque cette image du schéma reprise aussitôt dans « corps glorieux » (<span class=\"gr\">summorphon</span>, littéralement « configuré avec »). Les Pères grecs ont insisté sur cette continuité : ce n'est pas un autre corps qui ressuscite, mais le même, reconfiguré selon la gloire du Christ."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 121 (122), 1-2, 3-4ab, 4cd-5",
+      "reference_courte": "Ps 121 (122), 1-2, 3-4ab, 4cd-5",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Cantique des <button class=\"mot\" data-g=\"g-degres\">degrés</button>. De David. Je suis dans la joie quand on me dit : Allons à la maison de l'Éternel ! <span class=\"s\">2</span> Nos pieds s'arrêtent dans tes portes, Jérusalem ! <span class=\"s\">3</span> Jérusalem, tu es bâtie comme une ville dont les parties sont <button class=\"mot\" data-g=\"g-liee\">liées</button> ensemble. <span class=\"s\">4</span> C'est là que montent les tribus, les tribus de l'Éternel, selon la loi d'Israël, pour louer le nom de l'Éternel. <span class=\"s\">5</span> Car là sont les trônes pour le jugement, les trônes de la maison de David.",
+      "gloses": [
+        {
+          "id": "g-degres",
+          "lemme": "Shir ha-Ma'aloth",
+          "html": "Le titre hébreu porte <span class=\"gr\">Shir ha-Ma'aloth</span>, « cantique des montées » : les psaumes 120 à 134 portent tous cet en-tête et formaient le recueil que les pèlerins chantaient en montant à Jérusalem, peut-être marche après marche sur les degrés du Temple. Segond traduit « degrés », ce qui garde l'image de l'ascension mais perd le mouvement du pèlerinage lui-même, suggéré par le participe hébreu. Les rabbins y ont vu aussi les quinze marches reliant la cour des femmes à celle des hommes au Temple de Jérusalem."
+        },
+        {
+          "id": "g-liee",
+          "lemme": "kechubbarah",
+          "html": "Le texte hébreu dit littéralement que Jérusalem est bâtie <span class=\"gr\">kechubbarah</span>, « comme ce qui est joint, assemblé » — le même verbe sert pour les tentures du tabernacle cousues ensemble en une seule pièce (Exode 26, 3). Segond traduit « dont les parties sont liées ensemble », fidèle à l'image de l'assemblage mais sans l'écho avec le sanctuaire du désert. Les commentateurs juifs ont lu dans ce resserrement des pierres l'image d'un peuple uni malgré ses douze tribus, convergeant vers un seul lieu."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Lc 16, 1-8",
+      "reference_courte": "Lc 16, 1-8",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Jésus dit aussi à ses disciples : Un homme riche avait un <button class=\"mot\" data-g=\"g-intendant\">intendant</button>, qui lui fut dénoncé comme dissipant ses biens. <span class=\"s\">2</span> Il l'appela, et lui dit : Qu'est-ce que j'entends dire de toi ? Rends compte de ton administration, car tu ne pourras plus désormais être mon intendant. <span class=\"s\">3</span> L'intendant dit en lui-même : Que ferai-je, puisque mon maître m'ôte l'administration de ses biens ? Je ne puis pas labourer la terre, j'ai honte de demander l'aumône. <span class=\"s\">4</span> Je sais ce que je ferai, pour qu'il y en ait qui me reçoivent dans leurs maisons quand je serai destitué de mon emploi. <span class=\"s\">5</span> Et, faisant venir chacun des débiteurs de son maître, il dit au premier : Combien dois-tu à mon maître ? <span class=\"s\">6</span> Cent mesures d'huile, répondit-il. Et il lui dit : Prends ton <button class=\"mot\" data-g=\"g-billet\">billet</button>, assieds-toi, écris cinquante. <span class=\"s\">7</span> Il dit ensuite à un autre : Et toi, combien dois-tu ? Cent mesures de blé, répondit-il. Et il lui dit : Prends ton billet, et écris quatre-vingts. <span class=\"s\">8</span> Le maître loua l'intendant infidèle de ce qu'il avait agi <button class=\"mot\" data-g=\"g-prudemment\">prudemment</button>. Car les enfants de ce siècle sont plus prudents à l'égard de leurs semblables que ne le sont les enfants de la lumière.",
+      "gloses": [
+        {
+          "id": "g-intendant",
+          "lemme": "oikonomos",
+          "html": "Le grec <span class=\"gr\">oikonomos</span> désigne l'esclave ou l'affranchi chargé de gérer les biens d'un maître — ni propriétaire, ni simple serviteur, mais responsable devant un autre de ce qui ne lui appartient pas. Segond traduit « intendant », fidèle au sens, mais le français perd la racine <span class=\"gr\">oikos</span>, la maison, qui rattache la fonction à l'ensemble du foyer. Chrysostome rappelle que l'intendant n'a de pouvoir que délégué, et que c'est cette délégation, non la richesse elle-même, qui est mise en jeu dans la parabole."
+        },
+        {
+          "id": "g-billet",
+          "lemme": "grammata",
+          "html": "Le mot grec est simplement <span class=\"gr\">grammata</span>, « les lettres », « l'écrit » — un terme neutre pour désigner un contrat ou une reconnaissance de dette, sans précision juridique particulière. Segond traduit par « billet », qui évoque un document concret et facilite la lecture, mais efface la sobriété du mot grec, centré sur le fait écrit lui-même. C'est bien ce pouvoir d'écrire et de réécrire qui est au cœur de la scène : l'intendant use, une dernière fois, de l'autorité qu'on est en train de lui retirer."
+        },
+        {
+          "id": "g-prudemment",
+          "lemme": "phronimôs",
+          "html": "L'adverbe grec <span class=\"gr\">phronimôs</span> vient de <span class=\"gr\">phronêsis</span>, l'intelligence pratique qui sait discerner ce qu'il convient de faire dans une situation donnée, plutôt que la ruse pure. Segond traduit « prudemment », choix défendable, mais qui peut faire entendre une prudence morale, alors que le texte loue surtout la lucidité de l'intendant devant l'urgence. Le maître ne loue pas la malhonnêteté de son gérant, mais cette clairvoyance précise, que Jésus souligne aussitôt en comparant les enfants de ce siècle et les enfants de la lumière."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Philippes, une colonie romaine",
+      "corps_html": "Philippes avait été fondée comme colonie militaire romaine après la bataille de 42 avant notre ère, et ses habitants, souvent des vétérans, étaient fiers de leur citoyenneté romaine, calquée sur celle de Rome elle-même. C'est dans cette ville que Paul écrit, probablement depuis une prison (Ph 1, 7.13), affirmant que la vraie <span class=\"gr\">politeuma</span> des croyants n'est pas celle, prestigieuse, de Rome, mais celle des cieux."
+    },
+    {
+      "titre": "Une parabole qui dérange",
+      "corps_html": "La parabole de Lc 16, 1-8 est l'une des plus discutées des évangiles, parce que Jésus semble louer une malhonnêteté. Elle appartient à la grande section du voyage vers Jérusalem (Lc 9-19), où Luc multiplie les paraboles sur l'argent et le jugement à venir. Chrysostome et d'autres commentateurs anciens ont insisté : ce n'est pas la fraude qui est louée, mais la promptitude à agir avant l'échéance, un trait que Jésus retourne aussitôt contre les « enfants de la lumière »."
+    }
+  ],
+  "analogie": {
+    "titre": "Le compte qu'on ne peut reculer",
+    "variantes": [
+      "Il arrive que tu saches, avant même qu'on te l'annonce, qu'une période de ta vie touche à sa fin — un travail qui ne durera plus, une amitié qui s'éloigne, une santé qui décline. Ce pressentiment ne console pas, il presse : il t'oblige à regarder en face ce que tu as vraiment entre les mains, et pour qui, pendant le temps qu'il reste. Tu ne choisis pas la fin, mais tu choisis encore ce que tu en fais — et c'est devant ce choix resserré que le Dieu qui t'attend au bout du compte te rejoint, non pour juger ta hâte, mais pour voir ce que, dans l'urgence, tu auras enfin laissé paraître de vrai.",
+      "Tu as peut-être connu ce sentiment de vivre dans un lieu, un milieu, une vie même, qui n'est pas vraiment le tien — où tu t'adaptes, où tu réussis parfois, mais où quelque chose en toi ne cesse de chercher ailleurs, sans savoir nommer cet ailleurs. Ce n'est pas de l'ingratitude envers ce que tu as reçu ici, c'est une mémoire plus profonde, presque physique, d'appartenir à autre chose. Paul ne dit pas autre chose à des gens fiers d'être citoyens de Rome : votre vraie cité, celle qui vous attend et qui vous réclame déjà, est ailleurs — et c'est elle qui donne son poids à tout ce que vous vivez ici.",
+      "Quand tu sais que le temps te manque — avec une personne qui s'en va, un projet qu'il faut clore, une énergie qui s'amenuise — tu cesses étrangement de calculer petitement ; tu deviens, pour une fois, généreux sans retenue, comme si plus rien ne valait la peine d'être gardé pour soi. Cette générosité de l'urgence, tu ne l'as pas en toi quand tout semble devoir durer toujours. C'est elle, pourtant, que Jésus pointe du doigt chez l'intendant malhonnête, et c'est elle qu'il attend aussi de toi devant un Dieu qui, lui, ne te prend jamais rien sans te donner en retour un corps selon sa propre gloire."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse-toi rejoindre par cette question simple : à quoi tiens-tu vraiment, et pour qui ?",
+    "geste": "Nomme, dans le silence, une chose à laquelle tu tiens trop pour la laisser aller — et confie-la, telle qu'elle est, entre les mains de Dieu.",
+    "note": "Ce n'est pas un renoncement à faire tout de suite, seulement un nom à prononcer devant Celui qui ne te le reprendra pas sans te donner mieux."
+  },
+  "question": "Qu'est-ce qui, dans ta vie, mérite d'être traité avec la même lucidité pressante que l'intendant met à sauver son avenir ?",
+  "racines": [
+    {
+      "titre": "Chrysostome : la milice de la croix",
+      "corps_html": "« Il n'est rien qui soit aussi peu d'accord avec la vie chrétienne que la recherche du repos et du bien-être », écrit Chrysostome en commentant ces versets : « Votre Dieu a été mis en croix, et vous cherchez votre tranquillité ! » Il voit dans le confort recherché pour soi-même, non dans telle ou telle faute isolée, la vraie inimitié envers la croix dont parle Paul en pleurant.",
+      "attribution": "Jean Chrysostome, Homélie XIII sur l'Épître aux Philippiens"
+    },
+    {
+      "titre": "Augustin : l'amour qui porte vers le haut",
+      "corps_html": "Commentant ce même psaume, Augustin décrit l'amour terrestre comme une glu qui colle les ailes de l'âme et l'empêche de voler, tandis que l'amour pour Dieu, une fois les affections grossières purifiées, « dégage ses plumes et ses ailes » pour monter, par le double précepte de l'amour de Dieu et du prochain, vers la cité d'en haut que chante le pèlerin.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 121"
+    },
+    {
+      "titre": "Philippes, colonie de vétérans",
+      "corps_html": "Fondée en 42 avant notre ère après la victoire d'Octave et Marc Antoine sur les assassins de César, Philippes reçut le statut de colonie romaine, et une partie de ses terres fut distribuée à des vétérans légionnaires. Ce statut donnait à ses habitants le droit de cité romain complet, privilège rare en Orient, que Paul retourne avec une pointe certaine en évoquant une autre cité, céleste cette fois.",
+      "attribution": "Note historique (fondation de Philippes, 42 av. J.-C.)"
+    }
+  ],
+  "videos": [
+    {
+      "id": "zv1LAco6pTk",
+      "raison": "Cette étude thématique de la cité dans la Bible éclaire ce que Paul veut dire en Ph 3, 20 : « notre cité à nous est dans les cieux ».",
+      "groupe": "mot"
+    },
+    {
+      "id": "mBJrqtG_Cdk",
+      "raison": "Cet enseignement de Jésus sur les richesses et les biens aide à lire sans moralisme la parabole de l'intendant en Lc 16, 1-8.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Ce panorama de Luc 10 à 24 replace la parabole de l'intendant malhonnête dans le grand récit du voyage de Jésus vers Jérusalem.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Ce panorama du livre des Psaumes situe le Psaume 122 dans le recueil des cantiques des montées chantés par les pèlerins.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Jésus fait-il l'éloge d'une fraude ?",
+      "reponse_html": "Non. Le verset final le dit clairement : le maître loue l'intendant « de ce qu'il avait agi prudemment », non de sa malhonnêteté, qui reste nommée comme telle juste avant. Ce que Jésus retient, c'est la rapidité de décision devant une échéance inévitable, une lucidité que les « enfants de la lumière », selon lui, ont bien du mal à montrer devant leur propre avenir devant Dieu. La parabole est dérangeante précisément parce qu'elle emprunte son exemple à la malhonnêteté ordinaire, pour mieux faire ressortir, par contraste, la rareté de cette sorte de clairvoyance spirituelle.",
+      "sources": {
+        "jour": [
+          "Lc 16, 8"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi Paul pleure-t-il en parlant de certains croyants ?",
+      "reponse_html": "Paul ne pleure pas sur des païens déclarés, mais sur des gens qui se disent chrétiens tout en vivant repliés sur leur confort et leur ventre, comme il le dit durement au verset 19. Chrysostome, commentant ce passage, voit dans cette installation tranquille, et non dans une faute isolée, la vraie trahison de la croix : on ne peut prétendre suivre un Dieu crucifié et chercher en même temps sa propre aise. Les larmes de Paul viennent de là : il ne s'agit pas d'ennemis extérieurs, mais de proches dont la vie dément ce qu'ils professent.",
+      "sources": {
+        "jour": [
+          "Ph 3, 18-19"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie XIII sur l'Épître aux Philippiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que signifie exactement « notre cité est dans les cieux » ?",
+      "reponse_html": "Le mot grec traduit par « cité », politeuma, désignait à Philippes, colonie romaine, le statut civique dont ses habitants étaient fiers. Paul ne dit pas seulement que les croyants habiteront un jour ailleurs ; il affirme que, dès maintenant, ils relèvent d'une autre autorité, d'autres lois, d'une autre appartenance que celle de l'empire sous lequel ils vivent. Cette citoyenneté n'annule pas la vie présente, elle lui donne son centre de gravité ailleurs que dans le succès ou la reconnaissance d'ici.",
+      "sources": {
+        "jour": [
+          "Ph 3, 20"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume 122 parle de Jérusalem terrestre : en quoi nous concerne-t-il aujourd'hui ?",
+      "reponse_html": "Le psaume chante d'abord une réalité concrète : la joie du pèlerin juif approchant de Jérusalem et de son Temple. Mais dès l'Église ancienne, ce chant de la montée a été relu comme l'image du désir qui porte l'âme vers Dieu lui-même. Augustin, commentant ce psaume, décrit cet amour comme ce qui permet à l'âme de « dégager ses plumes et ses ailes » une fois détachée des attaches terrestres, pour s'élever vers une autre cité que la ville de pierre. Le psaume garde ainsi sa réalité historique tout en devenant la prière de quiconque chemine encore vers une demeure qu'il n'a pas fini d'atteindre.",
+      "sources": {
+        "jour": [
+          "Ps 121 (122), 1-5"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 121"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi l'intendant n'est-il pas puni pour avoir réduit les dettes sans autorisation ?",
+      "reponse_html": "Le texte ne dit jamais que le maître a été financièrement perdant : une lecture plausible, défendue par plusieurs commentateurs anciens, est que l'intendant renonce simplement à sa propre commission, la part qu'il ajoutait aux dettes pour son profit personnel, ce qui expliquerait que le maître n'ait rien à redire sur le plan matériel. Ce que Jésus souligne de toute façon n'est pas la légalité du geste, mais la rapidité avec laquelle un homme sans scrupule sait agir quand son avenir est en jeu, rapidité que le texte invite à retourner vers des enjeux d'un autre ordre.",
+      "sources": {
+        "jour": [
+          "Lc 16, 5-7"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-XIII",
+    "augustin-Ps-121"
+  ]
+}
