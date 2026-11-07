@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-08",
+  "date_humaine": "dimanche",
+  "semaine": "32ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": true,
+  "references_brutes": "Sg 6, 12-16 ; 1 Th 4, 13-18 ; 1 Th 4, 13-14 ; Mt 25, 1-13",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M8 130 H332\"/><path d=\"M13 130 Q12 112 18 106 Q24 112 23 130 Z M43 130 Q42 112 48 106 Q54 112 53 130 Z M73 130 Q72 112 78 106 Q84 112 83 130 Z M103 130 Q102 112 108 106 Q114 112 113 130 Z M133 130 Q132 112 138 106 Q144 112 143 130 Z M167 130 Q166 112 172 106 Q178 112 177 130 Z M197 130 Q196 112 202 106 Q208 112 207 130 Z M227 130 Q226 112 232 106 Q238 112 237 130 Z M257 130 Q256 112 262 106 Q268 112 267 130 Z M287 130 Q286 112 292 106 Q298 112 297 130 Z\"/><path d=\"M25 119 L25 102 M55 119 L55 102 M85 119 L85 102 M115 119 L115 102 M145 119 L145 102 M179 119 L179 102 M209 119 L209 102 M239 119 L239 102 M269 119 L269 102 M299 119 L299 102\"/><path d=\"M294 40 L294 86 L320 86 L320 40 Z\"/><path d=\"M294 40 L305 44 L305 84\"/></g><g class=\"trait-rubrique\"><path d=\"M25 102 Q29 97 31 100 M55 102 Q59 97 61 100 M85 102 Q89 97 91 100 M115 102 Q119 97 121 100 M145 102 Q149 97 151 100\"/></g><g class=\"trait-liturgie\"><path d=\"M179 102 Q176 96 179 91 Q182 96 179 102 Z M209 102 Q206 96 209 91 Q212 96 209 102 Z M239 102 Q236 96 239 91 Q242 96 239 102 Z M269 102 Q266 96 269 91 Q272 96 269 102 Z M299 102 Q296 96 299 91 Q302 96 299 102 Z\"/><path d=\"M308 50 L292 44 M308 63 L286 60 M308 76 L290 80\"/></g></svg>",
+  "titre": "Ce qui ne se prête pas",
+  "titre_html": "Ce qui ne se <span class=\"it\">prête pas</span>",
+  "sous_titre": "Une sagesse qui vient à la rencontre, une huile qu'on ne peut pas emprunter, une espérance plus forte que le sommeil.",
+  "suite_hier": null,
+  "gravure_alt": "Dix silhouettes de jeunes filles rangées le long d'un chemin nocturne, chacune une lampe à la main ; cinq flammes vives, cinq mèches éteintes et penchées ; au loin, dans l'obscurité, une porte à peine entrouverte laisse filtrer la lumière d'une salle de noces.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Sg 6, 12-16",
+      "traduction": "Bible Crampon (1923)",
+      "classe": "",
+      "corps_html": "<span class=\"s\">12</span> La <button class=\"mot\" data-g=\"g-sophia\">Sagesse</button> est resplendissante, elle ne se flétrit point ; elle se laisse voir facilement par ceux qui l'aiment, et trouver par ceux qui la cherchent. <span class=\"s\">13</span> Elle <button class=\"mot\" data-g=\"g-prophthano\">prévient</button>, pour se faire connaître, ceux qui la désirent. <span class=\"s\">14</span> Celui qui, dès l'aurore, veille pour la chercher n'aura pas à se fatiguer, car il la trouvera assise à sa porte. <span class=\"s\">15</span> Penser à elle, c'est la parfaite prudence, et celui qui veille pour elle sera bientôt délivré de souci. <span class=\"s\">16</span> Car elle va elle-même de tous côtés, cherchant ceux qui sont dignes d'elle ; elle leur apparaît avec bienveillance sur leurs chemins, et elle les prévient dans toutes leurs pensées.",
+      "gloses": [
+        {
+          "id": "g-sophia",
+          "lemme": "Sagesse",
+          "html": "Le mot grec <span class=\"gr\">Sophia</span> (Σοφία) ouvre tout le passage. La Bible Segond, qui suit le canon hébraïque des Réformateurs, ne comporte pas ce livre ; c'est pourquoi cette page recourt à la traduction catholique de Crampon (1923), elle aussi de domaine public, qui rend <span class=\"gr\">Sophia</span> par « Sagesse » avec une majuscule, presque comme un nom propre. Toute la tradition chrétienne grecque a lu dans cette Sagesse personnifiée, qui se laisse chercher et trouver, une préfiguration du Christ que Paul appelle lui-même « sagesse de Dieu » en 1 Corinthiens 1, 24."
+        },
+        {
+          "id": "g-prophthano",
+          "lemme": "prévient",
+          "html": "Le verbe grec sous-jacent, <span class=\"gr\">phthanei</span> (φθάνει), signifie « devancer, arriver avant » ; Crampon le rend par « elle prévient », au sens vieilli de « venir au-devant de », et non au sens moderne d'« avertir ». Ce glissement de sens entre le français de 1923 et celui d'aujourd'hui peut faire perdre au lecteur l'essentiel : ce n'est pas l'homme qui devance Dieu dans la recherche, c'est la Sagesse elle-même qui prend l'initiative. On retrouve cette logique de préséance divine dans l'affirmation de 1 Jean 4, 19 : « nous l'aimons parce qu'il nous a aimés le premier »."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 62 (63), 2, 3-4, 5-6, 7-8",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> O Dieu ! tu es mon Dieu, je te cherche ; mon <button class=\"mot\" data-g=\"g-nephesh\">âme</button> a soif de toi, mon corps soupire après toi, dans une terre aride, desséchée, sans eau. <span class=\"s\">3</span> Ainsi je te contemple dans le sanctuaire, pour voir ta puissance et ta gloire. <span class=\"s\">4</span> Car ta <button class=\"mot\" data-g=\"g-hesed\">bonté</button> vaut mieux que la vie : mes lèvres célèbrent tes louanges. <span class=\"s\">5</span> Je te bénirai donc toute ma vie, j'élèverai mes mains vers toi. <span class=\"s\">6</span> Mon âme sera rassasiée comme par un mets gras et succulent, et, dans mon allégresse, ma bouche te célébrera. <span class=\"s\">7</span> Je pense à toi sur mon lit, je méditerai sur toi pendant les veilles de la nuit. <span class=\"s\">8</span> Car tu es mon secours, et je suis dans l'allégresse à l'ombre de tes ailes.",
+      "gloses": [
+        {
+          "id": "g-nephesh",
+          "lemme": "âme",
+          "html": "L'hébreu <span class=\"gr\">nephesh</span> (נֶפֶשׁ), que Segond traduit presque systématiquement par « âme », ne désigne pas une partie immatérielle de l'homme distincte du corps, mais l'être vivant tout entier, parfois jusqu'à la gorge qui respire et qui a faim ou soif. Le parallélisme du verset, « mon âme a soif... mon corps soupire », montre que les deux moitiés disent la même chose sous deux images : ce n'est pas une faculté spirituelle qui désire Dieu à part du corps, c'est toute la personne assoiffée. Calvin, commentant les psaumes, insiste sur cette intensité : David ne parle pas d'un vague désir religieux mais d'un manque physique."
+        },
+        {
+          "id": "g-hesed",
+          "lemme": "bonté",
+          "html": "<span class=\"gr\">Hesed</span> (חֶסֶד) est un des termes les plus chargés de l'Ancien Testament, associé au vocabulaire de l'alliance : il ne dit pas un sentiment passager mais une fidélité loyale, qui tient ses engagements. Segond le traduit tantôt par « bonté », tantôt par « grâce » ou « miséricorde », sans mot français unique capable de porter à la fois l'affection et l'engagement durable que ce terme suppose. Augustin, dans son commentaire de ce psaume, comprend cette préférence donnée à la bonté de Dieu sur la vie elle-même non comme un mépris de l'existence, mais comme la découverte que la vie ne tient que par cette fidélité-là."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Th 4, 13-18",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">13</span> Nous ne voulons pas, frères, que vous soyez dans l'ignorance au sujet de ceux qui <button class=\"mot\" data-g=\"g-koimomenon\">dorment</button>, afin que vous ne vous affligiez pas comme les autres qui n'ont point d'espérance. <span class=\"s\">14</span> Car, si nous croyons que Jésus est mort et qu'il est ressuscité, croyons aussi que Dieu ramènera avec Jésus ceux qui sont morts en lui. <span class=\"s\">15</span> Car nous vous déclarons, d'après la parole du Seigneur, que nous les vivants, restés pour l'<button class=\"mot\" data-g=\"g-parousia\">avènement</button> du Seigneur, ne précéderons pas ceux qui sont morts. <span class=\"s\">16</span> Car le Seigneur lui-même, à un signal donné, à la voix d'un archange, et au son de la trompette de Dieu, descendra du ciel, et les morts en Christ ressusciteront premièrement. <span class=\"s\">17</span> Ensuite, nous les vivants, qui serons restés, nous serons tous ensemble <button class=\"mot\" data-g=\"g-harpazo\">enlevés</button> avec eux sur des nuées, à la rencontre du Seigneur dans les airs, et ainsi nous serons toujours avec le Seigneur. <span class=\"s\">18</span> Consolez-vous donc les uns les autres par ces paroles.",
+      "gloses": [
+        {
+          "id": "g-koimomenon",
+          "lemme": "dorment",
+          "html": "Le participe grec <span class=\"gr\">koimōménōn</span> (κοιμωμένων), de <span class=\"gr\">koimaomai</span>, signifie littéralement « ceux qui se sont endormis » ; Segond traduit fidèlement « ceux qui dorment », reprenant un euphémisme déjà courant dans le grec profane, d'où vient notre mot « cimetière » (koimētērion, le « dortoir »). Chrysostome, dans son homélie sur ce passage, relève que Paul choisit ce mot précisément pour couper l'élan du chagrin : on ne pleure pas sur un sommeil comme sur une perte sans retour."
+        },
+        {
+          "id": "g-parousia",
+          "lemme": "avènement",
+          "html": "<span class=\"gr\">Parousia</span> (παρουσία) signifie d'abord « présence » ou « arrivée » ; c'était, à l'époque de Paul, le terme protocolaire pour la venue officielle d'un souverain ou d'un haut fonctionnaire dans une cité. Segond traduit par « avènement », qui garde la solennité mais efface l'image très concrète du texte : Paul emprunte le vocabulaire des visites impériales pour dire que la venue du Christ sera publique et manifeste, non un événement discret réservé à quelques initiés. Cette lecture politique du mot a été constamment reprise dans la prédication patristique."
+        },
+        {
+          "id": "g-harpazo",
+          "lemme": "enlevés",
+          "html": "<span class=\"gr\">Harpagēsometha</span> (ἁρπαγησόμεθα), futur passif du verbe <span class=\"gr\">harpazō</span>, « saisir avec force, ravir », est le même verbe qui sert ailleurs à décrire un rapt ou un vol. Segond traduit sobrement « enlevés », mais ce mot a servi de point d'appui, bien plus tard, à des théories de la « rapture » qui ne sont pas dans l'intention de Paul. Chrysostome, commentant ce chapitre, ramène l'attention au seul point que l'apôtre veut établir : la réunion définitive de tous les croyants, vivants et morts, avec le Seigneur — non les modalités spectaculaires de cette réunion."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture (forme brève)",
+      "reference": "1 Th 4, 13-14",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">13</span> Nous ne voulons pas, frères, que vous soyez dans l'ignorance au sujet de ceux qui <button class=\"mot\" data-g=\"g-koimomenon-brief\">dorment</button>, afin que vous ne vous affligiez pas comme les autres qui n'ont point d'espérance. <span class=\"s\">14</span> Car, si nous croyons que Jésus est mort et qu'il est ressuscité, croyons aussi que Dieu ramènera avec Jésus ceux qui sont morts en lui.",
+      "gloses": [
+        {
+          "id": "g-koimomenon-brief",
+          "lemme": "dorment",
+          "html": "Paul emploie ici le participe grec <span class=\"gr\">koimōménōn</span> (κοιμωμένων), « ceux qui se sont endormis », que Segond rend par « ceux qui dorment ». C'est un euphémisme déjà attesté dans le grec profane pour la mort, dont dérive notre mot « cimetière », littéralement un dortoir. En réduisant la citation à ces deux premiers versets, la liturgie retient l'affirmation centrale sans son développement : la mort des croyants reste, dans le vocabulaire même choisi par l'apôtre, un sommeil et non une rupture."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 25, 1-13",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Alors le royaume des cieux sera semblable à dix vierges qui, ayant pris leurs lampes, allèrent à la rencontre de l'<button class=\"mot\" data-g=\"g-nymphios\">époux</button>. <span class=\"s\">2</span> Cinq d'entre elles étaient <button class=\"mot\" data-g=\"g-moraiphronimoi\">folles</button>, et cinq sages. <span class=\"s\">3</span> Les folles, en prenant leurs lampes, ne prirent point d'<button class=\"mot\" data-g=\"g-elaion\">huile</button> avec elles ; <span class=\"s\">4</span> mais les sages prirent, avec leurs lampes, de l'huile dans des vases. <span class=\"s\">5</span> Comme l'époux tardait à venir, toutes s'assoupirent et s'endormirent. <span class=\"s\">6</span> Au milieu de la nuit, on entendit un cri : Voici l'époux, allez à sa rencontre ! <span class=\"s\">7</span> Alors toutes ces vierges se levèrent et préparèrent leurs lampes. <span class=\"s\">8</span> Les folles dirent aux sages : Donnez-nous de votre huile, car nos lampes s'éteignent. <span class=\"s\">9</span> Les sages répondirent : Non ; il n'y en aurait peut-être pas assez pour nous et pour vous ; allez plutôt chez ceux qui en vendent, et achetez-en pour vous. <span class=\"s\">10</span> Pendant qu'elles allaient en acheter, l'époux arriva ; celles qui étaient prêtes entrèrent avec lui dans la salle des noces, et la porte fut fermée. <span class=\"s\">11</span> Plus tard, les autres vierges arrivèrent, et dirent : Seigneur, Seigneur, ouvre-nous. <span class=\"s\">12</span> Mais il répondit : Je vous le dis en vérité, je ne vous connais pas. <span class=\"s\">13</span> <button class=\"mot\" data-g=\"g-gregoreite\">Veillez</button> donc, puisque vous ne savez ni le jour, ni l'heure.",
+      "gloses": [
+        {
+          "id": "g-nymphios",
+          "lemme": "époux",
+          "html": "<span class=\"gr\">Nymphios</span> (νυμφίος), « l'époux », reprend une figure prophétique ancienne — Dieu comme époux d'Israël en Osée 2 ou Ésaïe 62 — que Jésus s'applique à lui-même ailleurs dans Matthieu (9, 15 ; 22, 2). Segond traduit simplement « époux », sans glose savante nécessaire, mais le lecteur risque de ne pas entendre l'écho de toute cette tradition prophétique derrière le mot. Chrysostome, dans son homélie sur cette parabole, rappelle que c'est cette identité de l'époux, et non le seul motif du retard, qui donne son poids à l'attente des vierges."
+        },
+        {
+          "id": "g-moraiphronimoi",
+          "lemme": "folles",
+          "html": "Le grec oppose <span class=\"gr\">mōrai</span> (μωραί), « folles », d'où vient notre mot « moron », et <span class=\"gr\">phronimoi</span> (φρόνιμοι), « avisées », de <span class=\"gr\">phronēsis</span>, la prudence pratique plutôt que l'intelligence théorique — le même mot que Jésus emploie pour l'intendant « habile » de Luc 16, 8. Segond traduit par « folles » et « sages », ce qui introduit une connotation morale un peu appuyée, alors que le grec dit surtout une différence de prévoyance concrète. Chrysostome précise, dans son homélie LXXVIII sur Matthieu, que ce qui sépare les deux groupes n'est ni la vertu ni la virginité elles-mêmes, mais ce supplément qu'elles ont ou non emporté avec elles."
+        },
+        {
+          "id": "g-elaion",
+          "lemme": "huile",
+          "html": "<span class=\"gr\">Elaion</span> (ἔλαιον), l'huile d'olive qui alimentait les lampes antiques, est le détail apparemment technique sur lequel toute la parabole bascule. Segond traduit « huile » sans qu'il y ait matière à discussion lexicale, mais c'est l'interprétation du mot, plus que sa traduction, qui a occupé les Pères : pourquoi cette huile ne peut-elle pas se prêter au dernier moment ? Chrysostome répond que l'huile figure les œuvres de miséricorde, qui engagent la personne tout entière et ne se transmettent pas d'un cœur à l'autre par emprunt."
+        },
+        {
+          "id": "g-gregoreite",
+          "lemme": "veillez",
+          "html": "L'impératif grec <span class=\"gr\">grēgoreite</span> (γρηγορεῖτε), « restez éveillés, soyez vigilants », est le même verbe que Jésus emploie à Gethsémané pour demander à ses disciples de veiller avec lui (Mt 26, 41), et ailleurs dans le même discours eschatologique (Mt 24, 42). Segond traduit fidèlement « veillez », mais en français cette répétition verbale, perceptible en grec d'un chapitre à l'autre, disparaît derrière des équivalents parfois différents selon les versets. Augustin rappelle, à propos de textes voisins, que cette veille n'est pas une tension anxieuse mais une disposition stable du cœur tourné vers Dieu."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le livre de la Sagesse, une théologie en grec",
+      "corps_html": "Composé en grec vers le I<sup>er</sup> siècle avant notre ère, probablement à Alexandrie, le livre de la Sagesse se présente sous le nom de Salomon mais n'est pas de sa main : un juif hellénisé y montre à des frères tentés par la pensée grecque que la foi d'Israël a, elle aussi, sa sagesse. Absent du canon hébraïque, il ne figure pas dans la Bible de Segond ; cette page s'appuie donc sur la traduction catholique de Crampon (1923), elle aussi de domaine public."
+    },
+    {
+      "titre": "Thessalonique, une Église dans le deuil",
+      "corps_html": "Première lettre connue de Paul, écrite vers 50-51 depuis Corinthe à une communauté très jeune, convertie depuis quelques mois seulement. Des croyants sont morts entre-temps, et les Thessaloniciens craignent qu'ils soient exclus du retour du Seigneur, qu'on leur avait annoncé comme imminent. Paul ne corrige pas l'attente, il la purifie : il ne s'agit pas de calculer une date, mais de savoir que la mort ne sépare pas du Christ ceux qui lui appartiennent."
+    }
+  ],
+  "analogie": {
+    "titre": "La veille qui ne s'emprunte pas",
+    "variantes": [
+      "Il y a des années où prier ne produit rien que tu puisses montrer : pas d'émotion, pas de certitude, juste le geste répété d'ouvrir les mains ou la Bible dans le silence d'un matin pareil à tous les autres. Tu ne sais pas, en ces instants, à quoi cela sert, et personne ne pourrait te prêter la conviction qui te manque ce jour-là. Mais ce temps apparemment perdu devient, sans que tu l'aies cherché, la réserve à laquelle tu reviens le jour où tout vacille vraiment — une huile que nul ne t'a donnée au dernier moment, parce que tu l'avais, sans le savoir, depuis longtemps devant Dieu.",
+      "Tu as connu cette fatigue particulière de l'attente qui dépasse le délai qu'on s'était fixé : une décision qui ne vient pas, une guérison qui n'arrive pas, un deuil dont tu voudrais que la douleur s'arrête à une date raisonnable. La tentation, dans cette nuit prolongée, n'est pas de douter que la chose vienne, mais de t'endormir au sens où tu cesses d'espérer vraiment, par lassitude plus que par incroyance. Ce que le texte promet n'est pas que l'attente sera courte, mais qu'elle ne sera pas vaine : celui que tu attends tient parole même quand il tarde, et c'est devant lui, et non devant l'horloge, que se joue ta veille.",
+      "Il t'est arrivé de chercher quelque chose sans pouvoir le nommer : une paix, une présence, un sens que rien de ce que tu possédais déjà ne pouvait te donner, une soif qui ne venait pas d'un manque d'eau mais d'un manque de Dieu dont tu ne savais pas encore qu'il portait ce nom. Ce que tu as pris longtemps pour ta propre recherche, patiente ou maladroite, était déjà précédé : avant que tu te lèves pour chercher, quelqu'un s'était levé pour venir à ta rencontre. Ta soif n'était pas la preuve de ton absence de Dieu, mais le signe qu'il s'était déjà mis en marche vers toi."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Pas d'exploit à produire ce soir, seulement une vérité à laisser infuser : ce que tu ne peux pas prêter à quelqu'un d'autre au dernier moment, tu peux le recevoir dès maintenant, sans attendre la nuit.",
+    "geste": "Prends deux minutes de silence et nomme devant Dieu, sans les justifier, les attentes qui te fatiguent le plus ce soir.",
+    "note": "Il ne s'agit pas de faire des provisions par peur de manquer, mais de laisser la relation avec Dieu se nourrir avant que l'urgence ne s'impose."
+  },
+  "question": "Qu'est-ce qui, dans ta vie avec Dieu, ne pourrait pas se prêter à quelqu'un d'autre au dernier moment ?",
+  "racines": [
+    {
+      "titre": "Chokmah et Sophia, la Sagesse qui cherche l'homme",
+      "corps_html": "Dans les livres sapientiaux, la Sagesse n'est jamais une simple compétence : en Proverbes 8, elle est presque une personne, établie dès l'éternité auprès de Dieu, se réjouissant devant les fils des hommes. Le livre de la Sagesse radicalise cette image : c'est elle qui prend l'initiative, qui « va elle-même de tous côtés » chercher ceux qui sont dignes d'elle. Calvin, sans commenter ce livre absent de son canon, lit Proverbes 8 dans l'Institution comme une préfiguration du Verbe éternel par qui Dieu se communique aux hommes.",
+      "attribution": "Proverbes 8, 22-31 ; Calvin, Institution de la religion chrétienne, I, 13"
+    },
+    {
+      "titre": "Dormir, une métaphore plus vieille que Paul",
+      "corps_html": "Appeler la mort un « sommeil » n'est pas une invention chrétienne : l'expression figure déjà dans l'Ancien Testament (« il se coucha avec ses pères », 1 Rois 2, 10) et chez les auteurs grecs profanes, pour qui le cimetière (koimētērion) était un « dortoir ». Ce que Paul ajoute en 1 Thessaloniciens 4, c'est la raison de l'espérance : ce sommeil a un réveil garanti, parce que le Christ lui-même s'est « réveillé » le premier d'entre les morts. L'image ne console donc pas en voilant la mort, mais en annonçant son issue.",
+      "attribution": "1 Rois 2, 10 ; 1 Corinthiens 15, 20"
+    },
+    {
+      "titre": "L'Époux qui tarde, une figure du Royaume",
+      "corps_html": "L'image de Dieu comme Époux d'Israël traverse les prophètes (Osée 2 ; Ésaïe 62) avant que Jésus ne se l'applique à lui-même : il se désigne comme l'époux dont la venue, parfois retardée, requiert la vigilance des invités. La parabole des dix vierges prolonge cette tradition en insistant sur un délai réel : « l'époux tardait à venir » — le Royaume vient, mais pas selon le calendrier qu'on voudrait lui fixer.",
+      "attribution": "Osée 2, 21-22 ; Matthieu 9, 15 ; 22, 1-14"
+    }
+  ],
+  "videos": [
+    {
+      "id": "lTz0CuviQPE",
+      "raison": "1 Thessaloniciens est justement la lettre lue aujourd'hui, et ce panorama resitue l'exhortation de 4, 13-18 dans l'ensemble de la lettre adressée à une Église en plein questionnement sur l'avenir.",
+      "groupe": "livre"
+    },
+    {
+      "id": "mq0vO1vNVfY",
+      "raison": "La parabole des dix vierges de Matthieu 25, 1-13 appartient à la seconde moitié de l'évangile de Matthieu que ce panorama parcourt.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 62 (63) prié aujourd'hui trouve sa place dans ce parcours d'ensemble du livre des Psaumes.",
+      "groupe": "livre"
+    },
+    {
+      "id": "ILFWnQ3izNw",
+      "raison": "Yakhal, l'espérance active, éclaire le refus de Paul en 1 Thessaloniciens 4, 13 de s'affliger « comme les autres qui n'ont point d'espérance ».",
+      "groupe": "mot"
+    },
+    {
+      "id": "IT3LVWWuDDo",
+      "raison": "Une étude sur la forme même des paraboles de Jésus, dont celle des dix vierges en Matthieu 25, 1-13 est un exemple typique.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi les vierges sages ne partagent-elles pas leur huile ? N'est-ce pas contraire à la charité ?",
+      "reponse_html": "La question est légitime, et les Pères l'ont posée avant nous. Chrysostome répond que l'huile ne représente pas un bien matériel qu'on pourrait se partager sans perte, mais les œuvres de miséricorde elles-mêmes, qui engagent la personne tout entière et ne se transfèrent pas d'un cœur à l'autre au dernier moment. Ce n'est donc pas un défaut de charité des vierges sages, mais la mise en lumière d'une limite réelle : certaines choses, dans la relation avec Dieu, ne s'improvisent pas en emprunt. Le texte invite moins à juger les folles qu'à interroger, pour chacun, le temps où l'huile se constitue.",
+      "sources": {
+        "jour": [
+          "Mt 25, 8-9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie LXXVIII sur Matthieu"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi le Seigneur dit-il qu'il ne connaît pas les vierges folles, alors qu'elles l'ont attendu elles aussi ?",
+      "reponse_html": "Le verbe « connaître » dans la bouche de Jésus n'a pas le sens d'une simple information : on retrouve une formule proche ailleurs dans Matthieu (7, 23), où elle signale non une ignorance mais l'absence d'une relation vécue. Les vierges folles ont bien attendu, elles ont même dormi comme les autres, mais elles n'avaient rien constitué qui les relie effectivement à l'époux au moment décisif. Le texte ne dit donc pas qu'elles sont punies pour s'être endormies — les sages aussi se sont endormies — mais pour s'être présentées sans ce qui, en elles, aurait dû correspondre à l'attente.",
+      "sources": {
+        "jour": [
+          "Mt 25, 5.12"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Faut-il comprendre 1 Thessaloniciens 4 comme l'annonce d'un « enlèvement » (rapture) avant la fin du monde ?",
+      "reponse_html": "C'est de ce passage que certaines théologies du XIXe siècle, en particulier celle de John Nelson Darby, ont tiré la doctrine dite de la rapture, un enlèvement discret des croyants avant une grande tribulation. Rien dans le texte de Paul ne soutient ce scénario : il répond à une question très concrète, celle de Thessaloniciens endeuillés qui craignent que leurs morts soient exclus du retour du Christ, et non à une interrogation sur un calendrier de la fin des temps. Chrysostome, commentant ce même passage, insiste sur l'unique point que Paul veut établir : la réunion définitive et commune des vivants et des morts avec le Seigneur, et non les modalités de cette réunion.",
+      "sources": {
+        "jour": [
+          "1 Th 4, 13-17"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie VII sur la première épître aux Thessaloniciens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le livre de la Sagesse n'est pas dans ma Bible protestante : pourquoi le lire aujourd'hui ?",
+      "reponse_html": "Le livre de la Sagesse appartient à ce que les protestants appellent les apocryphes ou deutérocanoniques : des écrits juifs tardifs, conservés par l'Église catholique mais exclus du canon hébraïque que les réformateurs ont choisi de suivre. La Confession de La Rochelle énumère, à l'article 3, les livres reconnus comme canoniques et ne retient pas la Sagesse. Luther jugeait pourtant ces livres « utiles et bons à lire » sans leur accorder l'autorité des Écritures proprement dites ; c'est dans cet esprit, et non comme Parole à égalité avec le reste, que ce texte est proposé ici, en écho au lectionnaire commun avec l'Église catholique.",
+      "sources": {
+        "jour": [
+          "Sg 6, 12-16"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "la-rochelle",
+            "reference": "article 3"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le psaume dit que « ta bonté vaut mieux que la vie » (v. 4) : David méprise-t-il sa propre vie ?",
+      "reponse_html": "Rien dans le psaume n'indique un mépris de la vie : c'est au contraire un homme en plein désert, donc en pleine conscience de sa fragilité, qui parle. Augustin, commentant ce psaume, y entend la voix du Christ et de ses membres : le désert aride figure cette vie où rien ne peut combler le désir, et la préférence donnée à la bonté de Dieu sur la vie elle-même n'est pas un dédain de l'existence, mais la découverte que la vie ne vaut la peine d'être vécue que reçue de cette source. Ce n'est donc pas une hiérarchie entre deux biens comparables, mais la reconnaissance que l'un ne tient que par l'autre.",
+      "sources": {
+        "jour": [
+          "Ps 62 (63), 4"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 62"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Mt-LXXVIII",
+    "chrysostome-1Th-VII",
+    "augustin-Ps-62"
+  ]
+}
