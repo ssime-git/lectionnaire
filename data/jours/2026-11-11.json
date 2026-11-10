@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-11",
+  "date_humaine": "mercredi",
+  "semaine": "32ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Tt 3, 1-7 ; Lc 17, 11-19",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M270 90 l25 -35 l25 35 z\"/><path d=\"M265 98 h60\"/><path d=\"M278 90 v8 M288 90 v8 M298 90 v8 M308 90 v8\"/><path d=\"M130 120 l3 -20 M143 120 l2 -18 M155 120 l2 -16 M166 120 l2 -14 M176 120 l1 -12 M185 120 l1 -10 M193 120 l1 -8 M200 120 l1 -7 M206 120 l1 -6\"/><path d=\"M235 112 l0 16 M242 112 l0 16\"/></g><g class=\"trait-rubrique\"><path d=\"M75 116 q16 -12 30 2 q4 2 3 4\"/></g><g class=\"trait-liturgie\"><path d=\"M111 62 q4 -6 8 0 q-4 6 -8 0 z\"/><path d=\"M115 68 v26\"/><path d=\"M95 85 l20 -13 l20 13\"/><path d=\"M106 120 l9 -26 l9 26\"/></g></svg>",
+  "titre": "Le retour",
+  "titre_html": "Le <span class=\"it\">retour</span>",
+  "sous_titre": "Dix furent guéris ; un seul revint rendre grâce",
+  "suite_hier": null,
+  "gravure_alt": "Un chemin de crête entre deux pays ; neuf silhouettes qui s'éloignent vers le temple, une dixième qui se retourne et se jette aux pieds d'un homme debout, les bras ouverts.",
+  "lectures": [
+    {
+      "etiquette": "Lecture de la lettre de saint Paul à Tite",
+      "reference": "Tt 3, 1-7",
+      "traduction": "Segond",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">1</span> Rappelle-leur d'être soumis aux magistrats et aux autorités, d'obéir, d'être prêts à toute bonne œuvre, <span class=\"s\">2</span> de ne médire de personne, d'être pacifiques, modérés, pleins de douceur envers tous les hommes.</p><p><span class=\"s\">3</span> Car nous aussi, nous étions autrefois insensés, désobéissants, égarés, asservis à toute espèce de convoitises et de plaisirs, vivant dans la méchanceté et dans l'envie, dignes d'être haïs, et nous haïssant les uns les autres.</p><p><span class=\"s\">4</span> Mais, lorsque la <button class=\"mot\" data-g=\"g-chrestotes\">bonté</button> de Dieu notre Sauveur et son <button class=\"mot\" data-g=\"g-philanthropia\">amour pour les hommes</button> ont été manifestés, <span class=\"s\">5</span> il nous a sauvés, non à cause des œuvres de justice que nous aurions faites, mais selon sa miséricorde, par le baptême de la <button class=\"mot\" data-g=\"g-palingenesia\">régénération</button> et le <button class=\"mot\" data-g=\"g-anakainosis\">renouvellement</button> du Saint-Esprit, <span class=\"s\">6</span> qu'il a répandu sur nous avec abondance, par Jésus-Christ notre Sauveur, <span class=\"s\">7</span> afin que, <button class=\"mot\" data-g=\"g-dikaiothentes\">justifiés</button> par sa grâce, nous devenions, en espérance, héritiers de la vie éternelle.</p>",
+      "gloses": [
+        {
+          "id": "g-chrestotes",
+          "lemme": "chrēstotēs",
+          "html": "Le mot grec est <span class=\"gr\">chrēstotēs</span>, la bonté bienveillante, qualité de celui qui est doux et serviable. Segond traduit par « bonté », fidèle mais un peu froid : le terme évoque aussi la douceur d'un maître envers un esclave, une amabilité concrète plus qu'une vertu abstraite. Chrysostome, dans son homélie sur ce passage, insiste sur le contraste entre cette bonté patiente de Dieu et les mille fautes que nous accumulons avant qu'elle ne paraisse. C'est le même mot que Paul emploie en Romains 2,4 pour la bonté qui pousse à la repentance."
+        },
+        {
+          "id": "g-philanthropia",
+          "lemme": "philanthrôpia",
+          "html": "<span class=\"gr\">philanthrōpia</span>, littéralement l'amour de l'humain, l'amour pour les hommes en tant qu'hommes. Segond rend le mot par la périphrase « amour pour les hommes », faute d'équivalent français direct — notre « philanthropie » moderne a perdu la dimension théologique du terme. Dans le grec profane, il désignait la bienveillance d'un souverain envers ses sujets ; Paul l'applique à Dieu lui-même, renversant le rapport entre le puissant et les insensés qu'il vient de décrire au verset 3."
+        },
+        {
+          "id": "g-palingenesia",
+          "lemme": "palingenesia",
+          "html": "<span class=\"gr\">palingenesia</span>, composé de <span class=\"gr\">palin</span> (de nouveau) et <span class=\"gr\">genesis</span> (naissance, origine) : une re-genèse plus qu'une simple nouvelle naissance. Segond traduit par « régénération », mot rare dans sa Bible — on ne le retrouve qu'en Matthieu 19,28, pour la restauration finale du monde. Calvin, commentant ce verset, y voit l'image même du baptême comme mort et re-création de l'homme tout entier, et non un simple rite extérieur."
+        },
+        {
+          "id": "g-anakainosis",
+          "lemme": "anakainōsis",
+          "html": "<span class=\"gr\">anakainōsis</span>, le renouvellement, de <span class=\"gr\">kainos</span>, ce qui est neuf en qualité et non seulement en date. Segond le traduit littéralement par « renouvellement », associé ici au Saint-Esprit et non au baptême lui-même : deux réalités distinctes unies par un seul et même verbe, sauver. On retrouve le même mot en Romains 12,2, pour le renouvellement de l'intelligence — signe que, chez Paul, le salut touche aussi bien le rite que l'esprit."
+        },
+        {
+          "id": "g-dikaiothentes",
+          "lemme": "dikaiōthentes",
+          "html": "<span class=\"gr\">dikaiōthentes</span>, participe aoriste passif de <span class=\"gr\">dikaioō</span>, déclarer juste. Segond traduit « justifiés », terme devenu technique dans la théologie de la Réforme. Calvin en fait, dans l'Institution, la pierre de touche de toute la doctrine du salut : être justifié, ce n'est pas devenir juste par degrés, mais être déclaré tel gratuitement, « par sa grâce » précise aussitôt le texte, avant même d'être renouvelé."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "22 (23), 1-2a, 2b-3, 4, 5, 6",
+      "traduction": "Segond",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Cantique de David. L'Éternel est mon <button class=\"mot\" data-g=\"g-roi\">berger</button> : je ne manquerai de rien. <span class=\"s\">2</span> Il me fait reposer dans de verts pâturages, il me dirige près des eaux paisibles.</p><p><span class=\"s\">3</span> Il <button class=\"mot\" data-g=\"g-nefesh\">restaure mon âme</button>, il me conduit dans les sentiers de la justice, à cause de son nom.</p><p><span class=\"s\">4</span> Quand je marche dans la <button class=\"mot\" data-g=\"g-tsalmavet\">vallée de l'ombre de la mort</button>, je ne crains aucun mal, car tu es avec moi : ta houlette et ton bâton me rassurent.</p><p><span class=\"s\">5</span> Tu dresses devant moi une table, en face de mes adversaires ; tu oins d'huile ma tête, et ma coupe déborde.</p><p><span class=\"s\">6</span> Oui, le <button class=\"mot\" data-g=\"g-chesed\">bonheur et la grâce</button> m'accompagneront tous les jours de ma vie, et j'habiterai dans la maison de l'Éternel jusqu'à la fin de mes jours.</p>",
+      "gloses": [
+        {
+          "id": "g-roi",
+          "lemme": "ro'i",
+          "html": "<span class=\"gr\">ro'i</span>, « mon berger », du verbe <span class=\"gr\">ra'ah</span>, faire paître, conduire au pâturage. Segond garde l'image pastorale sans l'affaiblir, mais le mot hébreu porte aussi l'idée de gouverner un peuple — les rois d'Israël, à commencer par David lui-même, sont appelés bergers de leur peuple en Ézéchiel 34. Le psalmiste applique donc à Dieu le titre même que portait le roi, retournement que les Pères liront comme figure du Christ, bon berger selon Jean 10."
+        },
+        {
+          "id": "g-nefesh",
+          "lemme": "nefesh",
+          "html": "Le texte hébreu dit littéralement « il fait revenir mon <span class=\"gr\">nephesh</span> » — ce mot désignant moins l'âme immortelle à la grecque que la vie elle-même, le souffle qui anime. Segond traduit « il restaure mon âme », choix juste mais qui risque, pour une oreille moderne, d'évoquer un réconfort psychologique plutôt que la vie rendue tout entière. Les rabbins y lisent le retour d'un fugitif ramené sur le bon chemin, sens que porte aussi le même verbe <span class=\"gr\">shouv</span>, revenir, employé pour la conversion."
+        },
+        {
+          "id": "g-tsalmavet",
+          "lemme": "tsalmaveth",
+          "html": "<span class=\"gr\">tsalmaveth</span>, mot composé discuté : « ombre de mort » selon l'étymologie traditionnelle, ou simplement « obscurité profonde » selon certains hébraïsants modernes qui y voient un superlatif sans rapport direct avec la mort. Segond choisit la lecture traditionnelle, « vallée de l'ombre de la mort », qui est aussi celle de la Septante et de la Vulgate — et donc celle que les Pères ont commentée, voyant dans ce verset une traversée de toute épreuve mortelle sous la garde du berger, non une absence de danger réel."
+        },
+        {
+          "id": "g-chesed",
+          "lemme": "tov va-chesed",
+          "html": "<span class=\"gr\">tov va-chesed</span>, « le bien et le hesed » — ce dernier mot, intraduisible en un seul français, désigne la fidélité loyale de celui qui tient son engagement d'alliance, bien au-delà de la simple bonté. Segond le rend par « la grâce », au risque de l'aplatir en sentiment, alors qu'il s'agit d'un attachement actif et constant. Calvin, qui consacre à ce psaume un commentaire soigneux, souligne que ce hesed n'est pas mérité par le fidèle mais procède de l'alliance que Dieu a lui-même instituée."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 17, 11-19",
+      "traduction": "Segond",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">11</span> Jésus, se rendant à Jérusalem, passait par la frontière de la Samarie et de la Galilée. <span class=\"s\">12</span> Comme il entrait dans un village, dix lépreux le rencontrèrent. Ils se tinrent à distance, <span class=\"s\">13</span> et élevèrent la voix, disant : Jésus, Maître, <button class=\"mot\" data-g=\"g-eleeson\">aie pitié de nous</button> !</p><p><span class=\"s\">14</span> Dès qu'il les vit, il leur dit : Allez vous montrer aux sacrificateurs. Et, pendant qu'ils y allaient, ils furent guéris.</p><p><span class=\"s\">15</span> L'un d'eux, se voyant guéri, revint, glorifiant Dieu à haute voix. <span class=\"s\">16</span> Il se jeta à terre aux pieds de Jésus, et lui <button class=\"mot\" data-g=\"g-eucharisto\">rendit grâces</button>. Cet homme était <button class=\"mot\" data-g=\"g-allogenes\">Samaritain</button>.</p><p><span class=\"s\">17</span> Jésus prit la parole, et dit : Les dix n'ont-ils pas été guéris ? Et les neuf autres, où sont-ils ? <span class=\"s\">18</span> Ne s'est-il trouvé que cet étranger pour revenir et donner gloire à Dieu ?</p><p><span class=\"s\">19</span> Puis il lui dit : Lève-toi, va ; <button class=\"mot\" data-g=\"g-sesoken\">ta foi t'a sauvée</button>.</p>",
+      "gloses": [
+        {
+          "id": "g-eleeson",
+          "lemme": "eleēson",
+          "html": "<span class=\"gr\">eleēson hēmas</span>, « aie pitié de nous », impératif aoriste du verbe <span class=\"gr\">eleeō</span>, faire miséricorde. C'est le même cri que reprendra toute la tradition liturgique de l'Église sous le nom de Kyrie eleison. Segond traduit fidèlement « aie pitié », mais il faut entendre que les dix lépreux ne demandent rien de précis — ni la guérison, ni rien d'autre — ils remettent simplement leur détresse entre les mains de celui qu'ils appellent déjà « Maître »."
+        },
+        {
+          "id": "g-eucharisto",
+          "lemme": "eucharistōn",
+          "html": "<span class=\"gr\">eucharistōn</span>, participe présent de <span class=\"gr\">eucharisteō</span>, rendre grâces — le même verbe qui donnera son nom à l'eucharistie. Segond traduit « rendit grâces », choix exact, mais on perd en français le lien direct avec le repas dont l'Église fera mémoire en ce même mot. Chrysostome, dans ses homélies, remarque que ce seul homme accomplit en un geste ce que la Loi demandait par le sacrifice : reconnaître publiquement le don reçu."
+        },
+        {
+          "id": "g-allogenes",
+          "lemme": "allogenēs",
+          "html": "<span class=\"gr\">allogenēs</span>, littéralement « d'une autre race », mot rare que Luc est le seul évangéliste à employer, et qui ne revient dans tout le Nouveau Testament qu'ici, au verset 18. Segond le traduit par « étranger », atténuant la dureté du terme grec qui marquait une exclusion religieuse réelle — les Samaritains n'étaient pas de simples voisins mais des schismatiques aux yeux des Juifs. Le mot souligne, par contraste, que c'est précisément celui qui n'avait aucun droit au Temple de Jérusalem qui seul rend gloire à Dieu."
+        },
+        {
+          "id": "g-sesoken",
+          "lemme": "sesōken",
+          "html": "<span class=\"gr\">sesōken</span>, parfait de <span class=\"gr\">sōzō</span>, sauver — un temps grec qui marque une action achevée dont l'effet demeure. Segond traduit « t'a sauvée », mais il faut noter que la guérison elle-même, aux versets 14 et 15, est dite par deux autres verbes, <span class=\"gr\">katharizō</span>, purifier, et <span class=\"gr\">iaomai</span>, guérir. Seul celui qui revient reçoit ce troisième mot, plus large que les deux premiers : la tradition grecque y a toujours lu le salut au sens plein, distinct de la simple santé retrouvée."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Tite, l'évêque et l'île",
+      "corps_html": "Tite est laissé par Paul en Crète pour y organiser des Églises naissantes, au milieu d'une population que l'Antiquité jugeait réputée menteuse et indisciplinée (Tt 1,12, citant un poète crétois). Le chapitre 3 clôt la lettre : après les qualités requises des anciens et des femmes, Paul en vient à la place des chrétiens dans la cité païenne — soumis aux magistrats, mais fondés non sur la peur, sur la seule miséricorde reçue."
+    },
+    {
+      "titre": "Une frontière, un chemin vers Jérusalem",
+      "corps_html": "Depuis Lc 9,51, Jésus « marche résolument vers Jérusalem » : l'épisode des dix lépreux se place sur cette longue montée, à la limite floue entre Samarie et Galilée, terre de passage entre deux peuples qui s'évitent. Luc, seul des évangélistes, rapporte ce miracle — et seul aussi emploie, au verset 18, le mot grec rare « allogenès », l'étranger de race, pour désigner le seul qui revienne glorifier Dieu."
+    }
+  ],
+  "analogie": {
+    "titre": "Celui qui revient",
+    "variantes": [
+      "Il y a eu une saison où tu ne tenais plus debout seul — une maladie, un chagrin, une angoisse qui ne te lâchait pas — et où, sans que tu saches dire comment, les choses se sont dénouées. Tu as repris ta route, soulagé, déjà occupé par autre chose, sans jamais revenir consciemment déposer un merci là où il fallait. Ce n'est parfois que des années plus tard, en reconstituant ce moment, que tu mesures ce qui s'est vraiment passé : tu as été relevé avant même de savoir à qui le devoir. C'est devant ce Dieu-là, qui agit avant que tu ne penses à demander, que le texte de ce jour te replace.",
+      "Tu pries parfois sans rien attendre vraiment, par habitude, des mots qui tombent à plat. Puis un jour quelque chose a changé en toi — une paix inattendue, une porte qui s'ouvre, une peur qui se desserre — et tu continues ta journée sans même remarquer que c'était peut-être une réponse. Ce n'est qu'en y repensant, parfois longtemps après, que tu reconnais : c'était cela. Et c'est alors seulement que monte en toi, non un calcul ni un devoir, mais le besoin simple de revenir sur tes pas et de nommer devant Dieu ce que tu as reçu sans le voir venir.",
+      "Tu as pu donner, servir, tenir une promesse pendant des années sans voir ce que cela produisait, persuadé au fond que si quelque chose de bon t'arrivait un jour, ce serait parce que tu l'aurais enfin mérité. Puis, à un moment que tu n'avais pas choisi, tu as reçu bien plus que ce que tu attendais — un pardon, une porte rouverte, une paix — et tu as compris, presque à retardement, que cela n'avait jamais dépendu de ton mérite. Ce retournement n'est pas une leçon de morale : c'est la grâce elle-même qui te précède, comme ce jour où elle a précédé jusqu'à ta demande."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse-toi rejoindre par un seul geste.",
+    "geste": "Nomme, à voix haute ou par écrit, une seule chose reçue cette semaine que tu n'avais pas pensé à rapporter devant Dieu — pas une liste, une seule chose, avec ses mots à elle.",
+    "note": "Ce n'est pas un exercice de gratitude : c'est, comme pour le Samaritain, un retour sur ses pas."
+  },
+  "question": "Qu'as-tu reçu, dans ta vie, que tu n'as encore jamais pris le temps de nommer devant Dieu ?",
+  "racines": [
+    {
+      "titre": "La grâce qui précède toute œuvre",
+      "corps_html": "Chrysostome insiste : avant même de parler d'obéissance aux magistrats, Paul rappelle que nous étions nous-mêmes insensés et haineux (Tt 3,3) avant que paraisse la bonté de Dieu. Comme un maître qui, après mille offenses, pardonne tout à son esclave sans attendre, dit l'homélie, Dieu comble de biens celui qu'il aurait pu punir — c'est cet ordre, grâce puis obéissance, et jamais l'inverse, qui fonde toute la lettre.",
+      "attribution": "Jean Chrysostome, Homélie V sur l'épître à Tite"
+    },
+    {
+      "titre": "Être justifié, non devenir juste peu à peu",
+      "corps_html": "Calvin fait de Tt 3,5-7 un texte d'appui pour sa doctrine de la justification : être « justifiés par sa grâce » n'est pas le résultat d'un progrès moral mais une déclaration reçue d'emblée, par pure miséricorde. Dans l'Institution, il insiste sur le lien entre ce verset et l'impossibilité, affirmée au verset 5, de fonder le salut sur « les œuvres de justice que nous aurions faites ».",
+      "attribution": "Jean Calvin, Institution de la religion chrétienne, III, 11"
+    },
+    {
+      "titre": "Le berger, le roi, et la table dressée",
+      "corps_html": "Dès l'Antiquité chrétienne, ce psaume accompagne la préparation au baptême : la table dressée, l'huile qui oint la tête, la coupe qui déborde ont été lus comme figures du repas eucharistique et de l'onction baptismale offerts à celui qui vient d'être délivré de la mort. Cette lecture, attestée dès les catéchèses des IVe et Ve siècles, ne remplace pas le sens premier — la confiance du pèlerin en son berger — mais le prolonge jusque dans la liturgie de l'Église.",
+      "attribution": "note historique (catéchèses baptismales, IVe-Ve siècle)"
+    }
+  ],
+  "videos": [
+    {
+      "id": "wktA2VE4yhY",
+      "raison": "Éclaire le mot central de Tt 3,4-7 : « la grâce de Dieu notre Sauveur... manifestée, il nous a sauvés... selon sa miséricorde »",
+      "groupe": "mot"
+    },
+    {
+      "id": "2aNe6TsB64w",
+      "raison": "Panorama de la lettre à Tite, d'où est tirée la première lecture du jour (Tt 3,1-7)",
+      "groupe": "livre"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Panorama de Luc 10-24, qui contient l'épisode des dix lépreux (Lc 17,11-19)",
+      "groupe": "livre"
+    },
+    {
+      "id": "69_vtfw-0mA",
+      "raison": "Éclaire le cri des dix lépreux « aie pitié de nous » (Lc 17,13)",
+      "groupe": "mot"
+    },
+    {
+      "id": "ILFWnQ3izNw",
+      "raison": "Éclaire l'espérance dont parle Tt 3,7 : « héritiers, en espérance, de la vie éternelle »",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul parle-t-il d'abord de ce que nous étions (insensés, égarés) avant de parler de la bonté de Dieu ?",
+      "reponse_html": "Paul ne décrit pas une humanité neutre qui aurait simplement besoin d'un peu d'aide : il décrit, au verset 3, des hommes désobéissants, égarés, esclaves de leurs propres désirs, et jusqu'à se haïr entre eux. Ce tableau n'est pas fait pour accabler mais pour que la phrase suivante, « mais lorsque la bonté de Dieu... », tombe avec tout son poids de contraste. Chrysostome remarque que c'est précisément la mesure des fautes pardonnées qui révèle la mesure de la bonté reçue : plus le constat du verset 3 est honnête, plus la grâce du verset 4 devient intelligible, et non l'inverse.",
+      "sources": {
+        "jour": [
+          "Tt 3,3-4"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie V sur l'épître à Tite"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi seul le Samaritain revient-il remercier, alors que les dix ont été guéris de la même lèpre ?",
+      "reponse_html": "Rien dans le texte ne dit que les neuf autres aient douté de leur guérison ou manqué de foi au moment du cri commun du verset 13 : ils obéissent même à la lettre, puisque c'est en chemin vers les sacrificateurs qu'ils sont guéris. Mais une fois la santé retrouvée, chacun reprend sa route vers ce qui l'attend — famille, travail, le Temple pour les Juifs parmi eux — sans que rien ne les arrête. Seul celui qui n'a aucun Temple où aller, parce qu'il est samaritain, se trouve sans autre lieu où porter sa reconnaissance que la personne même de Jésus. Calvin, qui revient souvent sur l'ingratitude naturelle de l'homme pour les biens reçus de Dieu, y verrait moins un défaut moral isolé qu'une pente commune à tous, que seule une circonstance extérieure — ici, l'absence de tout autre recours — a empêchée de jouer chez cet homme-là.",
+      "sources": {
+        "jour": [
+          "Lc 17,14-16"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-institution",
+            "reference": "Institution, I, 5"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Les dix n'ont-ils pas tous été guéris ? Que signifie alors « ta foi t'a sauvée », adressé au seul qui revient ?",
+      "reponse_html": "Le texte grec distingue soigneusement les mots : les dix sont « purifiés » puis l'un d'eux se voit « guéri », mais seul celui qui revient entend le verbe sauver, au temps parfait, dont l'effet dure. La guérison du corps a été donnée aux dix sans condition, par pure compassion, avant même qu'ils aient fait demi-tour ; mais ce salut plus large, nommé seulement au dernier verset, est lié à ce retour et à la foi qu'il manifeste. Le texte ne dit pas que les neuf aient perdu leur guérison — il dit seulement qu'un seul d'entre eux a reçu, en plus, d'être reconnu et nommé par celui qui l'a guéri.",
+      "sources": {
+        "jour": [
+          "Lc 17,14.19"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Quel rapport entre le berger du psaume 23 et le Christ qui guérit les lépreux sur la route de Jérusalem ?",
+      "reponse_html": "Le psaume chante un berger qui conduit vers des pâturages sûrs et ne laisse personne seul dans la vallée la plus sombre ; l'évangile montre un homme qui, sur un chemin de frontière, s'arrête pour dix malades que la Loi obligeait à rester à distance. Dans les deux textes, c'est la même initiative qui précède toute demande méritée : le berger fait reposer avant qu'on le lui demande, Jésus guérit avant que les dix aient prouvé quoi que ce soit. Le psaume promet aussi une table dressée « en face de mes adversaires » — image reprise par la tradition chrétienne pour annoncer un repas où la lèpre, la frontière, la distance n'ont plus de pouvoir.",
+      "sources": {
+        "jour": [
+          "Ps 23,1-4",
+          "Lc 17,12-14"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Tt-V"
+  ]
+}
