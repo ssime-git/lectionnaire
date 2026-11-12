@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-13",
+  "date_humaine": "vendredi",
+  "semaine": "32ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "2 Jn 1a. 4-9 ; Lc 17, 26-37",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 120 h328\"/><path d=\"M16 14 h88 v92 h-88 z\"/><path d=\"M60 14 v92\"/><path d=\"M16 60 h88\"/><path d=\"M24 90 h72\"/><path d=\"M34 86 q2 -5 4 0\"/><path d=\"M58 86 q2 -5 4 0\"/><path d=\"M82 86 q2 -5 4 0\"/><path d=\"M44 88 q6 -4 12 0\"/></g><g class=\"trait-rubrique\"><path d=\"M225 102 q20 -4 40 0 q20 4 40 0\"/><path d=\"M230 110 q20 -4 40 0 q20 4 40 0\"/></g><g class=\"trait-liturgie\"><path d=\"M178 45 q8 -8 16 0\"/><path d=\"M196 32 q8 -8 16 0\"/><path d=\"M166 58 q8 -8 16 0\"/><path d=\"M150 75 q40 -45 90 -10\"/></g></svg>",
+  "titre": "Ce qui demeure",
+  "titre_html": "Ce qui <span class=\"it\">demeure</span>",
+  "sous_titre": "Le festin continue, le jour approche",
+  "suite_hier": null,
+  "gravure_alt": "Une noce en plein festin vue par une fenêtre ouverte ; au loin la mer monte sans que nul ne lève les yeux ; au-dessus d'un point invisible sur la plaine, des aigles tournent en silence.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Deuxième épître de Jean",
+      "reference": "2 Jean 1a, 4-9",
+      "traduction": "Louis Segond (1910)",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> L'ancien, à la dame élue et à ses enfants, que j'aime dans la <button class=\"mot\" data-g=\"g-aletheia\">vérité</button>, — et ce n'est pas moi seul qui les aime, mais aussi tous ceux qui ont connu la vérité, — <span class=\"s\">4</span> J'ai été fort réjoui de voir tes enfants marcher dans la vérité, selon le <button class=\"mot\" data-g=\"g-entole\">commandement</button> que nous avons reçu du Père. <span class=\"s\">5</span> Et maintenant, ce que je te demande, dame, non pas comme te prescrivant un commandement nouveau, mais celui que nous avons eu dès le commencement, c'est que nous nous aimions les uns les autres. <span class=\"s\">6</span> Et l'amour consiste à marcher selon ses commandements. Son commandement, vous l'avez appris dès le commencement, c'est que vous marchiez selon lui. <span class=\"s\">7</span> Car plusieurs séducteurs sont entrés dans le monde, ne confessant pas Jésus-Christ venu en chair : c'est l'<button class=\"mot\" data-g=\"g-antichristos\">antéchrist</button>. <span class=\"s\">8</span> Prenez garde à vous-mêmes, afin que vous ne perdiez pas le fruit de votre travail, mais que vous receviez une pleine récompense. <span class=\"s\">9</span> Quiconque va plus loin et ne <button class=\"mot\" data-g=\"g-menein\">demeure</button> pas dans la doctrine de Christ n'a point Dieu ; quiconque demeure dans cette doctrine a le Père et le Fils.",
+      "gloses": [
+        {
+          "id": "g-aletheia",
+          "lemme": "alètheia",
+          "html": "Le grec <span class=\"gr\">ἀλήθεια</span> (alètheia) signifie littéralement le non-oubli, le non-caché — du privatif a- et de λανθάνω, « être dissimulé ». Segond traduit simplement par « vérité », ce qui est juste, mais efface la nuance d'un dévoilement actif plutôt que d'une proposition exacte. Chez Jean, cette vérité n'est jamais une idée abstraite : l'évangile fait dire à Jésus « je suis la vérité » (Jean 14, 6), et aimer « dans la vérité », pour l'auteur de cette lettre, c'est aimer en lui."
+        },
+        {
+          "id": "g-entole",
+          "lemme": "entolè",
+          "html": "Le grec <span class=\"gr\">ἐντολή</span> (entolè) vient du verbe ἐντέλλομαι, « donner mission, charger d'exécuter un ordre ». Segond traduit fidèlement par « commandement », mais le mot grec porte l'idée d'une charge transmise plutôt que d'une règle abstraite : ce que les destinataires ont « reçu du Père » n'est pas un article de loi, mais une mission confiée. Jean reprendra ce vocabulaire dans l'évangile, lorsque Jésus donne un commandement qu'il dit à la fois nouveau et ancien (Jean 13, 34)."
+        },
+        {
+          "id": "g-antichristos",
+          "lemme": "antikhristos",
+          "html": "<span class=\"gr\">ἀντίχριστος</span> (antikhristos) est un mot que le Nouveau Testament ne connaît que sous la plume de Jean — en 1 Jean 2, 18.22, 4, 3 et ici même. Le préfixe anti- n'y signifie pas seulement « contre » mais aussi « à la place de » : l'antéchrist n'est pas d'abord un ennemi déclaré, mais un substitut qui occupe la place du Christ en niant qu'il soit venu en chair. Pour cette tradition johannique, l'erreur décisive ne porte jamais sur la morale, mais sur l'incarnation elle-même."
+        },
+        {
+          "id": "g-menein",
+          "lemme": "menein",
+          "html": "<span class=\"gr\">μένειν</span> (menein) est le verbe le plus caractéristique du vocabulaire de Jean, celui de « demeurer en moi » dans l'évangile (Jean 15, 4). Segond le traduit justement par « demeurer », qui garde l'idée d'habitation plutôt que de simple durée : celui qui « va plus loin » quitte une maison, non une opinion parmi d'autres. Ne pas demeurer dans la doctrine du Christ, c'est perdre jusqu'à la possession du Père — la gravité de la formule tient à cette image domestique."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Psaume 119 (118), 1-2.10-11.17-18",
+      "traduction": "Louis Segond (1910)",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Heureux ceux qui sont <button class=\"mot\" data-g=\"g-tamim\">intègres</button> dans leur voie, Qui marchent selon la loi de l'Éternel ! <span class=\"s\">2</span> Heureux ceux qui observent ses <button class=\"mot\" data-g=\"g-edut\">préceptes</button>, Qui le cherchent de tout leur cœur, <span class=\"s\">10</span> Je te cherche de tout mon cœur : Ne me laisse pas égarer loin de tes commandements ! <span class=\"s\">11</span> Je <button class=\"mot\" data-g=\"g-tsaphan\">serre</button> ta parole dans mon cœur, Afin de ne pas pécher contre toi. <span class=\"s\">17</span> Fais du bien à ton serviteur, pour que je vive Et que j'observe ta parole ! <span class=\"s\">18</span> Ouvre mes yeux, pour que je contemple Les merveilles de ta <button class=\"mot\" data-g=\"g-torah\">loi</button> !",
+      "gloses": [
+        {
+          "id": "g-tamim",
+          "lemme": "tamim",
+          "html": "L'hébreu <span class=\"gr\">תָּמִים</span> (tamim) vient de la racine תמם, « être complet, achevé, sans fissure » — c'est le mot qui qualifie l'agneau « sans défaut » offert en sacrifice (Exode 12, 5). Segond traduit « intègres », ce qui est défendable, mais Augustin, commentant ce même verset, préfère « irréprochables dans leur voie » : « Heureux les hommes irréprochables dans leur voie, qui marchent dans la loi du Seigneur. » Les deux traductions visent la même chose : non une perfection acquise, mais l'absence de double voie."
+        },
+        {
+          "id": "g-edut",
+          "lemme": "edut",
+          "html": "L'hébreu <span class=\"gr\">עֵדוּת</span> (edut) vient de la racine עוד, « témoigner, attester » : ce ne sont pas de simples règles, mais des témoignages, comme les tables déposées dans l'arche appelée pour cette raison « arche du témoignage » (Exode 25, 22). Segond traduit « préceptes », qui insiste sur l'obéissance ; le mot hébreu insiste plutôt sur une alliance dont Dieu lui-même est le témoin, vécue sous son regard plutôt que sous sa seule autorité."
+        },
+        {
+          "id": "g-tsaphan",
+          "lemme": "tsaphan",
+          "html": "Le verbe hébreu <span class=\"gr\">צָפַן</span> (tsaphan) signifie proprement cacher, enfouir, mettre en réserve comme un trésor soustrait au regard. Segond traduit par l'image « je serre ta parole dans mon cœur », qui est belle mais adoucit un peu l'idée hébraïque d'un dépôt caché pour le jour où il faudra s'en servir. Calvin, dans son commentaire des psaumes, voit dans ce verbe une discipline de la mémoire bien plus exigeante qu'un simple attachement sentimental à la parole reçue."
+        },
+        {
+          "id": "g-torah",
+          "lemme": "torah",
+          "html": "L'hébreu <span class=\"gr\">תּוֹרָה</span> (torah) vient de la racine ירה, « instruire, montrer la direction », et non d'une racine liée à la contrainte : la torah est d'abord un enseignement avant d'être un code. Segond traduit systématiquement par « loi », traduction consacrée mais qui risque, en français, de suggérer la seule obligation légale. Les rabbins y ont toujours aussi entendu une lumière qui guide, comme le dira un autre psaume de sagesse : « le commandement est une lampe, et la loi une lumière » (Proverbes 6, 23)."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile selon Luc",
+      "reference": "Luc 17, 26-37",
+      "traduction": "Louis Segond (1910)",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">26</span> Ce qui arriva du temps de Noé arrivera de même aux <button class=\"mot\" data-g=\"g-hemera\">jours</button> du Fils de l'homme. <span class=\"s\">27</span> Les hommes mangeaient, buvaient, se mariaient et étaient donnés en mariage, jusqu'au jour où Noé entra dans l'arche ; puis le déluge vint, et les fit tous périr. <span class=\"s\">28</span> Ce qui arriva du temps de Lot arrivera pareillement. Les hommes mangeaient, buvaient, achetaient, vendaient, plantaient, bâtissaient ; <span class=\"s\">29</span> et le jour où Lot sortit de Sodome, une pluie de feu et de soufre tomba du ciel, et les fit tous périr. <span class=\"s\">30</span> Il en sera de même le jour où le Fils de l'homme paraîtra. <span class=\"s\">31</span> En ce jour-là, que celui qui sera sur le toit ne descende pas pour prendre ce qui est dans sa maison, et que celui qui sera dans les champs ne retourne pas non plus sur ses pas. <span class=\"s\">32</span> <button class=\"mot\" data-g=\"g-mnemoneuete\">Souvenez-vous</button> de la femme de Lot. <span class=\"s\">33</span> Quiconque cherchera à sauver sa <button class=\"mot\" data-g=\"g-psyche\">vie</button> la perdra, et quiconque la perdra la retrouvera. <span class=\"s\">34</span> Je vous le dis, en cette nuit-là, de deux personnes qui seront dans un même lit, l'une sera prise et l'autre laissée ; <span class=\"s\">35</span> de deux femmes qui moudront ensemble, l'une sera prise et l'autre laissée. <span class=\"s\">37</span> Les disciples lui dirent : Où cela, Seigneur ? Et il répondit : Où sera le <button class=\"mot\" data-g=\"g-ptoma\">corps</button>, là s'assembleront les aigles.",
+      "gloses": [
+        {
+          "id": "g-hemera",
+          "lemme": "hèmera",
+          "html": "Le grec <span class=\"gr\">ἡμέρα</span> (hèmera), « jour », revient sans cesse dans ce passage : aux jours de Noé, au jour où Noé entra dans l'arche, au jour où Lot sortit de Sodome, au jour où le Fils de l'homme paraîtra. Le français de Segond varie les tournures (« du temps de », « le jour où »), ce qui dissout une répétition que le grec maintient délibérément, pour superposer ces jours plutôt que les comparer : ce n'est pas un précédent instructif, mais un seul et même type de jour qui revient."
+        },
+        {
+          "id": "g-mnemoneuete",
+          "lemme": "mnèmoneuete",
+          "html": "Le grec <span class=\"gr\">μνημονεύετε</span> (mnèmoneuete) est un impératif présent, qui commande une mémoire continue plutôt qu'un souvenir ponctuel. Segond traduit correctement « souvenez-vous », mais le présent grec suggère qu'il faut garder cette image constamment devant les yeux. Le rappel tient en un seul épisode — une femme devenue statue de sel, Genèse 19, 26 — mais Jésus en fait l'exemple même du regard qui se retourne vers ce qu'il faudrait quitter."
+        },
+        {
+          "id": "g-psyche",
+          "lemme": "psukhè",
+          "html": "Le grec <span class=\"gr\">ψυχή</span> (psukhè), que le Nouveau Testament traduit le plus souvent par « âme », est ici rendu par Segond par « vie » — choix défendable puisque le mot désigne l'existence entière de la personne et non une partie séparable d'elle, mais qui masque le jeu de mots avec les passages parallèles de Marc 8, 35 et Matthieu 16, 25. Calvin, commentant cette harmonie des évangiles, insiste sur le paradoxe : vouloir garder sa vie pour soi est précisément la manière de la perdre."
+        },
+        {
+          "id": "g-ptoma",
+          "lemme": "ptôma",
+          "html": "Le grec <span class=\"gr\">πτῶμα</span> (ptôma) désigne proprement une chose tombée, un cadavre, une charogne — le mot employé pour ce que guettent les rapaces, non le terme neutre pour « corps » (σῶμα, sôma). Segond adoucit en traduisant « corps », ce qui estompe la crudité de l'image : il ne s'agit pas d'une présence qu'on repérerait de loin, mais d'une mort, autour de laquelle se rassemblent nécessairement les charognards. Chrysostome, dans ses homélies sur le passage parallèle de Matthieu, y lit un jugement qui ne se laisse pas chercher mais se découvre de lui-même, comme les aigles repèrent une charogne sans qu'on ait à la leur signaler."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre très courte, un danger très concret",
+      "corps_html": "Avec ses treize versets, la deuxième épître de Jean est l'un des plus courts écrits du Nouveau Testament, et son autorité fut longtemps discutée : Eusèbe de Césarée la range, au IVe siècle, parmi les écrits controversés (Histoire ecclésiastique, III, 25). Elle s'adresse à une « dame élue et ses enfants » que plusieurs commentateurs anciens lisent comme une Église locale plutôt que comme une personne, désignée par l'image d'une maison qu'il faut garder ouverte à l'amour et fermée à l'erreur."
+    },
+    {
+      "titre": "Un discours prononcé en chemin, non à Jérusalem",
+      "corps_html": "Chez Luc, ce discours sur les jours du Fils de l'homme n'est pas prononcé, comme chez Matthieu, dans les derniers jours à Jérusalem, mais en pleine montée vers la ville, juste après la guérison des dix lépreux. Ce déplacement n'est pas anodin : pour Luc, l'attente de ce jour n'est pas réservée à une semaine sainte, elle doit habiter toute la route, le quotidien le plus ordinaire du disciple en chemin."
+    }
+  ],
+  "analogie": {
+    "titre": "Rester présent dans le jour ordinaire",
+    "variantes": [
+      "Il y a des périodes de ta vie où tu fais tout ce qu'il faut — tu travailles, tu rends service, tu tiens tes engagements — sans qu'aucun de ces gestes ne te touche plus vraiment. Rien n'est faux dans ce que tu fais, et pourtant quelque chose en toi a cessé d'être présent à ce qui compte, occupé qu'il est par le prochain repas, le prochain rendez-vous, la prochaine tâche. Ce n'est que plus tard, en relisant cette période, que tu comprends qu'elle fut traversée sans que Dieu y trouve jamais un instant de ton attention réelle — pas parce que tu l'avais refusé, mais parce que tu n'avais jamais eu le temps de le remarquer.",
+      "Tu as peut-être déjà vécu ce moment où, ayant pris une décision qui engageait tout — rompre avec une habitude, quitter une manière de vivre, dire oui à un appel — ton corps avançait mais ton regard, lui, restait tourné vers ce que tu croyais avoir laissé derrière toi. Ce tiraillement n'est pas forcément un péché spectaculaire : c'est souvent une simple hésitation, le désir de vérifier que ce que tu abandonnes est bien resté en place. Ce que le texte de ce jour te rappelle, c'est que Dieu ne te demande pas de ne rien ressentir en partant, mais de ne pas t'arrêter en chemin pour regarder ce que tu as choisi de laisser.",
+      "Il arrive que tu gardes fidèlement une parole reçue il y a longtemps — une promesse, un verset, une conviction transmise par quelqu'un qui n'est peut-être plus là — sans qu'elle produise sur le moment le moindre effet visible. Tu continues à la porter en toi, presque par habitude, sans preuve qu'elle te sert encore à quelque chose. Puis un jour où tout vacille autour de toi, c'est cette parole gardée en silence, et elle seule, qui tient encore debout et te permet de rester là où Dieu t'avait placé."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Le texte de ce jour ne demande pas de fuir le quotidien, mais de ne pas s'y endormir.",
+    "geste": "Avant un repas, un trajet ou une tâche ordinaire d'aujourd'hui, arrête-toi un instant et dis simplement : Me voici, Seigneur, dans ce jour. Puis continue ton geste sans rien changer d'autre.",
+    "note": "Ce n'est pas une formule qui protège de l'oubli : c'est un exercice répété, comme on apprend par cœur, pour que la mémoire de Dieu finisse par habiter les gestes les plus ordinaires."
+  },
+  "question": "Qu'est-ce qui, dans ta vie la plus ordinaire aujourd'hui — un repas, une habitude, une relation — pourrait te faire oublier le jour qui vient sans que tu t'en aperçoives ?",
+  "racines": [
+    {
+      "titre": "Noé et Lot, un couple d'exemples déjà fixé",
+      "corps_html": "Associer Noé et Lot comme figures jumelles du jugement soudain n'est pas une invention de Luc : 2 Pierre 2, 5-7 cite déjà ensemble « le monde ancien » englouti par le déluge et « Sodome et Gomorrhe » réduites en cendres, comme preuve que Dieu sait à la fois punir les impies et délivrer les justes. Jésus reprend ici une paire d'exemples déjà fixée dans la mémoire juive et chrétienne naissante.",
+      "attribution": "2 Pierre 2, 5-7"
+    },
+    {
+      "titre": "Une statue qui regarde en arrière",
+      "corps_html": "Le seul détail que Jésus retient de toute l'histoire de Lot, c'est un regard : en Genèse 19, 26, la femme de Lot, sortie de Sodome avec les siens, se retourne et devient une statue de sel. Les lecteurs anciens y ont lu moins une punition arbitraire qu'un diagnostic : ce n'est pas la ville qu'elle regrette, c'est ce que son cœur n'avait pas fini de quitter.",
+      "attribution": "Genèse 19, 26"
+    },
+    {
+      "titre": "Un mot que Jean seul emploie",
+      "corps_html": "Le terme « antéchrist » n'apparaît dans tout le Nouveau Testament que sous la plume de Jean, en 1 Jean 2, 18.22, 4, 3 et ici en 2 Jean 7. Dans chaque occurrence, le critère est le même : nier que Jésus-Christ soit venu en chair. Pour cette tradition johannique, l'erreur décisive ne porte jamais sur un détail moral mais sur l'incarnation elle-même.",
+      "attribution": "1 Jean 4, 2-3"
+    }
+  ],
+  "videos": [
+    {
+      "id": "utHEZsmzU74",
+      "raison": "Luc 17, 26-30 annonce « le jour du Fils de l'homme » dans la ligne du Jour du Seigneur annoncé par les prophètes, soudain et sans signe préalable.",
+      "groupe": "mot"
+    },
+    {
+      "id": "FLrm_KlwLv8",
+      "raison": "En Luc 17, 33, le mot que Segond traduit par « vie » est le grec psukhè, équivalent du nephesh hébreu étudié dans cette vidéo — l'être tout entier, non une partie séparable de la personne.",
+      "groupe": "mot"
+    },
+    {
+      "id": "N-q8TaM8opA",
+      "raison": "Panorama utile pour situer 2 Jean, lu aujourd'hui, dans l'ensemble des trois lettres attribuées à l'apôtre Jean et leur combat commun contre la négation de l'incarnation.",
+      "groupe": "livre"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Le discours sur les jours du Fils de l'homme (Luc 17, 26-37) appartient à la grande montée vers Jérusalem que ce panorama de Luc 10-24 parcourt.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi le psaume commence-t-il par parler de bonheur plutôt que de devoir ?",
+      "reponse_html": "Le psaume 119 ouvre sur une déclaration de bonheur, et non sur un ordre : « Heureux ceux qui sont intègres dans leur voie, qui marchent selon la loi de l'Éternel » (v. 1). Augustin, commentant ce verset, remarque que ce bonheur est celui que tout homme désire déjà naturellement, même lorsqu'il le cherche par de mauvais chemins ; le psaume ne crée donc pas un désir nouveau, il redresse celui qui existe déjà. Chercher Dieu « de tout son cœur » (v. 2.10) n'est donc pas d'abord une contrainte, mais la seule direction où ce désir déjà présent trouve où se poser. C'est pourquoi le psalmiste peut, quelques versets plus loin, demander d'avoir les yeux ouverts (v. 18) : on ne force pas un bonheur, on apprend à le voir.",
+      "sources": {
+        "jour": [
+          "Ps 119 (118), 1-2.10-11.17-18"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "discours sur le Psaume 118, n. 1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Jésus condamne-t-il le fait de manger, boire, se marier, bâtir — bref, la vie ordinaire ?",
+      "reponse_html": "Rien dans le texte ne dit que manger, boire, se marier ou bâtir soit mauvais : ce sont les gestes mêmes de toute vie humaine, avant et après le déluge, avant et après Sodome. Ce que Jésus souligne, c'est que ces gestes occupaient si entièrement les contemporains de Noé et de Lot qu'aucun d'eux n'a vu venir ce qui venait réellement — ni l'arche qui se fermait, ni le feu qui tombait. Le danger n'est donc pas dans l'activité elle-même, mais dans une absorption qui ne laisse plus aucune place à la vigilance. C'est pourquoi l'avertissement qui suit immédiatement — « souvenez-vous de la femme de Lot » — ne porte pas sur un interdit alimentaire ou matrimonial, mais sur un regard qui reste tourné vers ce qu'il faudrait laisser.",
+      "sources": {
+        "jour": [
+          "Lc 17, 26-29"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "En 2 Jean 9, « quiconque va plus loin » — plus loin que quoi exactement ?",
+      "reponse_html": "L'expression traduit un verbe grec qui signifie « être en avant, précéder » : certains enseignants prétendaient faire progresser la foi au-delà de ce que les apôtres avaient transmis « dès le commencement », en l'occurrence en niant que le Christ soit réellement venu en chair. Ce n'est donc pas la curiosité ou la réflexion qui sont visées, mais une prétention précise à dépasser la doctrine reçue sur l'incarnation. Jean répond par un paradoxe : celui qui croit avancer en s'éloignant de cet enseignement reçu n'avance pas, il perd ce qu'il croyait posséder — « il n'a point Dieu ». Demeurer, ici, n'est donc pas l'immobilisme craintif, mais la seule manière de rester relié à ce que l'on prétend développer.",
+      "sources": {
+        "jour": [
+          "2 Jn 1, 7-9"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi cette image finale des aigles et du corps (Lc 17, 37) est-elle si crue ?",
+      "reponse_html": "À la question des disciples — « où cela, Seigneur ? » — Jésus ne répond ni par un lieu ni par une date, mais par une image de nature : là où il y a une charogne, les rapaces se rassemblent sans qu'on ait besoin de les convoquer. Le mot grec que Segond traduit par « corps » porte justement cette crudité : il désigne une chose tombée, un cadavre, non une présence qu'on identifierait de loin. L'image dit ainsi que le jour du Fils de l'homme ne se laissera pas chercher sur une carte ni annoncer par un signe : il se manifestera de lui-même, avec l'évidence brutale d'un fait accompli. Chrysostome, commentant l'image parallèle chez Matthieu, y voit un avertissement contre toute spéculation sur le quand et le où.",
+      "sources": {
+        "jour": [
+          "Lc 17, 37"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-118"
+  ]
+}
