@@ -1,0 +1,303 @@
+{
+  "date": "2026-11-15",
+  "date_humaine": "dimanche",
+  "semaine": "33ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Pr 31, 10-13.19-20.30-31 ; 1 Th 5, 1-6 ; Mt 25, 14-30 ; Mt 25, 14-15.19-21",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M250 14 h38 v38 h-38 z M269 14 v38 M250 33 h38\"/><path d=\"M82 50 q5 -7 10 0 q-1 7 -5 7 q-4 0 -5 -7 z\"/><path d=\"M77 57 q-5 28 -3 50 h22 q2 -22 -3 -50 z\"/><path d=\"M90 65 q9 4 13 18 v20 q-4 3 -8 0 v-6\"/><path d=\"M235 85 q5 -6 9 0 q-1 6 -4 6 q-3 0 -5 -6 z\"/><path d=\"M231 91 q-3 20 0 34 h18 q3 -14 0 -34 z\"/><path d=\"M253 88 v42\"/><path d=\"M192 100 q4 -5 7 0 q-1 5 -3 5 q-2 0 -4 -5 z\"/><path d=\"M188 105 q-3 14 1 24 h12 q3 -8 -1 -24 z\"/><path d=\"M196 112 q8 3 13 10\"/><path d=\"M100 20 l3 3 M96 23 l7 -7 M190 15 l3 3 M186 18 l7 -7 M310 25 l3 3 M306 28 l7 -7\"/></g><g class=\"trait-rubrique\"><path d=\"M205 118 q-4 9 1 15 h18 q5 -6 1 -15 q-10 -5 -20 0 z M209 135 h2 M216 136 h2 M223 135 h2\"/></g><g class=\"trait-liturgie\"><path d=\"M265 20 q0 8 4 9 q4 -1 4 -9 q-4 -5 -4 -9 q-4 4 -4 9 z\"/></g></svg>",
+  "titre": "Ce qui est confié",
+  "titre_html": "Ce qui est <span class=\"it\">confié</span>",
+  "sous_titre": "De la femme vaillante au serviteur qui ose répondre",
+  "suite_hier": null,
+  "gravure_alt": "Dans l'obscurité d'une maison, une femme tient un fuseau tandis qu'une lampe reste allumée à la fenêtre ; au premier plan, un serviteur ouvre devant son maître revenu de voyage un sac de pièces, sous un ciel où veillent quelques étoiles.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Pr 31, 10-13.19-20.30-31",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">10</span> Qui peut trouver une <button class=\"mot\" data-g=\"g-chayil\">femme vertueuse</button>? Elle a plus de valeur que les <button class=\"mot\" data-g=\"g-peninim\">perles</button>. <span class=\"s\">11</span> Le cœur de son mari a confiance en elle, et les produits ne lui manqueront pas. <span class=\"s\">12</span> Elle lui fait du bien, et non du mal, tous les jours de sa vie. <span class=\"s\">13</span> Elle se procure de la laine et du lin, et travaille de ses mains avec plaisir. <span class=\"s\">19</span> Elle met la main à la quenouille, et ses doigts tiennent le fuseau. <span class=\"s\">20</span> Elle tend la main au malheureux, elle tend la main à l'indigent. <span class=\"s\">30</span> La grâce est trompeuse, et la beauté est vaine; la femme qui <button class=\"mot\" data-g=\"g-yirah-pr\">craint l'Éternel</button> est celle qui sera louée. <span class=\"s\">31</span> Donnez-lui du fruit de ses mains, et qu'à la porte ses œuvres la louent.",
+      "gloses": [
+        {
+          "id": "g-chayil",
+          "lemme": "chayil",
+          "html": "<span class=\"gr\">chayil</span> (חַיִל) ne signifie pas d'abord la vertu morale mais la force, la vaillance guerrière : c'est le mot qu'on emploie pour une armée ou pour un homme de guerre. Segond traduit « vertueuse », ce qui adoucit un terme plus rude — cette femme est un chef, un capitaine de maison. La tradition juive a fait de ce poème un chant, l'Eshet Chayil, entonné chaque veille de sabbat en l'honneur de l'épouse : on y célèbre moins la douceur que la force tranquille."
+        },
+        {
+          "id": "g-peninim",
+          "lemme": "peninim",
+          "html": "<span class=\"gr\">peninim</span> (פְּנִינִים) est un mot rare dont le sens exact reste disputé : perles pour les uns, coraux ou rubis pour d'autres, qui le rapprochent d'une racine évoquant la rougeur. Segond choisit « perles », suivant la Septante et la Vulgate, mais sans certitude absolue. L'incertitude même sert le poème : quoi qu'on y voie, la comparaison dit une valeur qu'aucune pierre ne peut égaler."
+        },
+        {
+          "id": "g-yirah-pr",
+          "lemme": "yirah",
+          "html": "<span class=\"gr\">yirah</span> (יִרְאָה), la « crainte », n'est pas la terreur mais une révérence qui fait trembler devant la grandeur de Dieu sans vouloir s'en détourner — le même mot ouvre le livre des Proverbes : « la crainte de l'Éternel est le commencement de la science » (Pr 1,7). En plaçant cette crainte à la dernière ligne du poème, après treize versets de qualités concrètes, le texte révèle leur source : ce n'est pas la force de cette femme qui fonde sa crainte, c'est sa crainte qui fonde sa force."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 127 (128), 1-2, 3, 4-5",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Heureux tout homme qui <button class=\"mot\" data-g=\"g-yirah-ps\">craint l'Éternel</button>, qui marche dans ses voies! <span class=\"s\">2</span> Tu jouis alors du travail de tes mains, tu es heureux, tu prospères. <span class=\"s\">3</span> Ta femme est comme une <button class=\"mot\" data-g=\"g-vigne\">vigne féconde</button>, dans l'intérieur de ta maison; tes fils sont comme des plants d'olivier, autour de ta table. <span class=\"s\">4</span> C'est ainsi qu'est béni l'homme qui craint l'Éternel. <span class=\"s\">5</span> L'Éternel te bénira de Sion, et tu verras le bonheur de Jérusalem, tous les jours de ta vie.",
+      "gloses": [
+        {
+          "id": "g-yirah-ps",
+          "lemme": "yirah",
+          "html": "Le psaume ouvre, comme la femme vaillante de Proverbes 31 lue ce même jour, sur la <span class=\"gr\">yirah</span> (יִרְאָה), la crainte de l'Éternel — les deux textes partagent le même mot-racine et la même conviction : le bonheur décrit ensuite n'est pas sa cause mais son fruit. Augustin, prêchant sur ce psaume, avertit pourtant qu'il faut se garder d'en faire une promesse littérale de prospérité : bien des impies possèdent ces biens en abondance, et bien des justes en sont privés (Discours sur le psaume 127)."
+        },
+        {
+          "id": "g-vigne",
+          "lemme": "gephen poriyyah",
+          "html": "<span class=\"gr\">gephen poriyyah</span>, la « vigne féconde », désigne une vigne qui porte sans faillir — l'image dit la fécondité tranquille, non la richesse ostentatoire. Segond garde la métaphore sans la gloser, mais le texte hébreu joue sur l'intérieur de la maison, littéralement « le fond » des pièces les plus retirées : la fécondité louée ici est celle qu'on ne voit pas de la rue."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Th 5, 1-6",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Pour ce qui est des temps et des moments, vous n'avez pas besoin, frères, qu'on vous en écrive. <span class=\"s\">2</span> Car vous savez bien vous-mêmes que le <button class=\"mot\" data-g=\"g-hemera\">jour du Seigneur</button> viendra comme un voleur en pleine nuit. <span class=\"s\">3</span> Quand les hommes diront: Paix et sûreté! alors une ruine soudaine les surprendra, comme les douleurs de l'enfantement surprennent la femme enceinte, et ils n'échapperont point. <span class=\"s\">4</span> Mais vous, frères, vous n'êtes pas dans les ténèbres, pour que ce jour vous surprenne comme un voleur; <span class=\"s\">5</span> vous êtes tous des <button class=\"mot\" data-g=\"g-huioi-photos\">enfants de la lumière</button> et des enfants du jour. Nous ne sommes point de la nuit ni des ténèbres. <span class=\"s\">6</span> Ne dormons donc point comme les autres, mais veillons et soyons <button class=\"mot\" data-g=\"g-nepho\">sobres</button>.",
+      "gloses": [
+        {
+          "id": "g-hemera",
+          "lemme": "hē hēmera tou kyriou",
+          "html": "<span class=\"gr\">hē hēmera tou kyriou</span>, « le jour du Seigneur », reprend tel quel le <span class=\"gr\">yom YHWH</span> des prophètes (Amos 5,18; Joël 2,1), jour de jugement redouté bien avant Paul. En le disant venir « comme un voleur », l'apôtre ne cherche pas à effrayer mais à couper toute spéculation sur la date : Chrysostome explique que Dieu a caché le jour par miséricorde, pour que l'ignorance même tienne en éveil chaque jour plutôt qu'à la seule veille supposée de la fin (Homélie IX sur la première Épître aux Thessaloniciens)."
+        },
+        {
+          "id": "g-huioi-photos",
+          "lemme": "huioi phōtos",
+          "html": "« Enfants de la lumière », <span class=\"gr\">huioi phōtos</span>, est un sémitisme : être « fils de » quelque chose, en hébreu comme en grec biblique, c'est en porter le caractère, non la filiation biologique — on dit de même « fils de paix » ou « fils de perdition ». Segond traduit littéralement, gardant l'étrangeté de l'expression plutôt que de la dissoudre; Jean emploie la même tournure (Jn 12,36)."
+        },
+        {
+          "id": "g-nepho",
+          "lemme": "nēphō",
+          "html": "<span class=\"gr\">nēphō</span>, « être sobre », désigne d'abord l'absence d'ivresse, mais Paul l'emploie au sens figuré d'une vigilance de l'esprit qui ne se laisse pas alourdir. Segond traduit « soyons sobres », juste mais plus faible que l'image grecque : il s'agit de garder la tête claire au milieu d'un monde ivre de fausses sécurités. Chrysostome associe ce mot au casque et à la cuirasse du verset suivant — la sobriété n'est pas une prudence craintive mais une arme."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 25, 14-30",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">14</span> Il en sera comme d'un homme qui, s'en allant en voyage, appela ses serviteurs, et leur remit ses biens. <span class=\"s\">15</span> Il donna cinq <button class=\"mot\" data-g=\"g-talanton\">talents</button> à l'un, deux talents à un autre, et un talent au troisième, à chacun selon sa capacité, et il partit. <span class=\"s\">16</span> Aussitôt celui qui avait reçu les cinq talents s'en alla, les fit valoir, et il gagna cinq autres talents. <span class=\"s\">17</span> De même, celui qui avait reçu les deux talents en gagna deux autres. <span class=\"s\">18</span> Mais celui qui n'en avait reçu qu'un alla faire un creux dans la terre, et cacha l'argent de son maître. <span class=\"s\">19</span> Longtemps après, le maître de ces serviteurs revint, et leur fit rendre compte. <span class=\"s\">20</span> Celui qui avait reçu les cinq talents approcha, en apportant cinq autres talents, et il dit: Seigneur, tu m'as remis cinq talents; voici, j'en ai gagné cinq autres. <span class=\"s\">21</span> Son maître lui dit: C'est bien, bon et <button class=\"mot\" data-g=\"g-pistos\">fidèle</button> serviteur; tu as été fidèle en peu de chose, je te confierai beaucoup; entre dans la <button class=\"mot\" data-g=\"g-chara\">joie</button> de ton maître. <span class=\"s\">22</span> Celui qui avait reçu les deux talents approcha aussi, et il dit: Seigneur, tu m'as remis deux talents; voici, j'en ai gagné deux autres. <span class=\"s\">23</span> Son maître lui dit: C'est bien, bon et fidèle serviteur; tu as été fidèle en peu de chose, je te confierai beaucoup; entre dans la joie de ton maître. <span class=\"s\">24</span> Celui qui n'avait reçu qu'un talent approcha, et il dit: Seigneur, je savais que tu es un homme dur, qui moissonnes où tu n'as pas semé, et qui amasses où tu n'as pas vanné; <span class=\"s\">25</span> j'ai eu peur, et je suis allé cacher ton talent dans la terre; voici, prends ce qui est à toi. <span class=\"s\">26</span> Son maître lui répondit: <button class=\"mot\" data-g=\"g-okneros\">Serviteur méchant et paresseux</button>, tu savais que je moissonne où je n'ai pas semé, et que j'amasse où je n'ai pas vanné; <span class=\"s\">27</span> il te fallait donc remettre mon argent aux changeurs, et, à mon retour, j'aurais retiré ce qui est à moi avec un intérêt. <span class=\"s\">28</span> Prenez-lui donc le talent, et donnez-le à celui qui a les dix talents. <span class=\"s\">29</span> Car on donnera à celui qui a, et il sera dans l'abondance, mais à celui qui n'a pas on ôtera même ce qu'il a. <span class=\"s\">30</span> Et le serviteur inutile, jetez-le dans les ténèbres du dehors, où il y aura des pleurs et des grincements de dents.",
+      "gloses": [
+        {
+          "id": "g-talanton",
+          "lemme": "talanton",
+          "html": "Le <span class=\"gr\">talanton</span> (τάλαντον) est d'abord un poids, puis la plus grosse unité monétaire du monde antique — un seul talent vaut environ vingt années de salaire d'un ouvrier. Segond garde le mot grec tel quel, et c'est de cette parabole, lue et relue, que le français a tiré son sens dérivé de « talent » comme aptitude ou don naturel : un glissement de sens qui, pour être tardif, reste fidèle à l'intuition du texte — ce qui est reçu n'est pas à soi, mais à faire valoir."
+        },
+        {
+          "id": "g-pistos",
+          "lemme": "pistos",
+          "html": "<span class=\"gr\">pistos</span>, « fidèle », vient de la même racine que la foi (<span class=\"gr\">pistis</span>) : être fidèle, dans ce texte, n'est pas d'abord une qualité morale mais une disposition de confiance qui répond à la confiance reçue. Le maître ne juge pas le montant rapporté — cinq talents ou deux reçoivent exactement la même parole — mais la fidélité à ce qui a été confié, quelle qu'en soit la mesure."
+        },
+        {
+          "id": "g-chara",
+          "lemme": "chara",
+          "html": "<span class=\"gr\">chara</span>, la « joie », n'est pas ici un sentiment mais un lieu où l'on entre — « entre dans la joie de ton maître » traduit une expression qui fait de la joie une demeure partagée, celle même du maître. Ce n'est pas une récompense extérieure ajoutée au travail accompli, mais sa destination : le serviteur fidèle est admis à ce que son maître éprouve."
+        },
+        {
+          "id": "g-okneros",
+          "lemme": "oknēros",
+          "html": "<span class=\"gr\">oknēros</span>, « paresseux », qualifie moins l'inaction que la lenteur craintive, celle qui recule devant l'effort. Ce qui est condamné n'est donc pas la peur elle-même — le serviteur dit l'avoir éprouvée au verset 25 — mais le fait d'en avoir fait une excuse à ne rien tenter. Chrysostome insiste : la faute n'est pas d'avoir craint, c'est d'avoir cru que la crainte dispensait d'agir (Homélie LXXVIII sur Matthieu)."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile — forme brève",
+      "reference": "Mt 25, 14-15.19-21",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">14</span> Il en sera comme d'un homme qui, s'en allant en voyage, appela ses serviteurs, et leur remit ses biens. <span class=\"s\">15</span> Il donna cinq <button class=\"mot\" data-g=\"g-talanton-2\">talents</button> à l'un, deux talents à un autre, et un talent au troisième, à chacun selon sa capacité, et il partit. <span class=\"s\">19</span> Longtemps après, le maître de ces serviteurs revint, et leur fit rendre compte. <span class=\"s\">20</span> Celui qui avait reçu les cinq talents approcha, en apportant cinq autres talents, et il dit: Seigneur, tu m'as remis cinq talents; voici, j'en ai gagné cinq autres. <span class=\"s\">21</span> Son maître lui dit: C'est bien, bon et <button class=\"mot\" data-g=\"g-pistos-2\">fidèle</button> serviteur; tu as été fidèle en peu de chose, je te confierai beaucoup; entre dans la <button class=\"mot\" data-g=\"g-chara-2\">joie</button> de ton maître.",
+      "gloses": [
+        {
+          "id": "g-talanton-2",
+          "lemme": "talanton",
+          "html": "Dans cette forme brève, l'accent tombe d'emblée sur l'écart des sommes confiées : cinq, deux, un <span class=\"gr\">talanton</span> (τάλαντον), chacune représentant déjà une fortune considérable, vingt années de salaire d'un ouvrier pour la plus petite. Segond transpose le mot grec sans le traduire, laissant sentir qu'il s'agit d'une mesure hors du commun — rien n'est donné en petite quantité dans cette maison, pas même la plus modeste part."
+        },
+        {
+          "id": "g-pistos-2",
+          "lemme": "pistos",
+          "html": "« Fidèle », <span class=\"gr\">pistos</span>, est le seul mot que le maître emploie pour juger ses serviteurs, qu'ils aient reçu cinq talents ou un seul : la fidélité ne se mesure pas à la taille du don reçu mais à la qualité de la réponse qu'on lui donne."
+        },
+        {
+          "id": "g-chara-2",
+          "lemme": "chara",
+          "html": "<span class=\"gr\">chara</span>, la joie où le serviteur « entre », désigne un lieu plus qu'un sentiment : la joie même du maître, partagée avec celui qui a répondu à sa confiance. Rien n'indique qu'elle soit proportionnée au gain réalisé — elle est offerte entière à qui a été fidèle."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un poème alphabétique",
+      "corps_html": "Les versets 10 à 31 de Proverbes 31 forment un acrostiche : chacun des vingt-deux vers commence par une lettre de l'alphabet hébreu, dans l'ordre, d'aleph à tav. Ce procédé, réservé aux textes de sagesse et à certains psaumes (111, 112, 119), signale un poème savant, destiné à être appris par cœur — un abécédaire de la fidélité quotidienne, et non un simple éloge de circonstance."
+    },
+    {
+      "titre": "La fin du grand discours",
+      "corps_html": "La parabole des talents clôt le discours eschatologique de Matthieu (ch. 24-25), prononcé sur le mont des Oliviers, face au Temple, peu avant la Passion. Elle suit immédiatement celle des dix vierges et précède le jugement des nations (25, 31-46) : trois paraboles de veille avant le dernier critère, celui de la charité envers les petits."
+    }
+  ],
+  "analogie": {
+    "titre": "Le talent enfoui",
+    "variantes": [
+      "Il t'est arrivé de recevoir, bien avant d'être prêt, une responsabilité, une parole, une capacité qu'on te reconnaissait sans que tu te la reconnaisses toi-même — et d'avoir si peur de la démentir que tu l'as mise de côté, en te promettant d'y revenir quand tu te sentirais enfin assez sûr. Ce jour de certitude n'est jamais venu, parce qu'il ne vient jamais : la confiance qu'on te faisait ne demandait pas que tu sois prêt, elle demandait que tu commences. Le maître qui revient dans le texte ne reproche pas au troisième serviteur d'avoir eu peur ; il lui reproche d'avoir cru que la peur le dispensait de répondre. Et il ne mesure la fidélité de personne à la taille de ce qui a été reçu — cinq talents ou un seul reçoivent la même parole, parce qu'elle ne porte pas sur le gain mais sur la réponse. C'est devant cela que le texte te place : non pas devant un bilan à présenter, mais devant ce qui t'a été confié et que tu peux encore, aujourd'hui, risquer.",
+      "Tu connais ces nuits où l'on attend sans savoir quand viendra ce qu'on attend — un appel, une nouvelle, le moment de décider — et où le sommeil, pourtant nécessaire, te semble une désertion. Personne ne t'a dit l'heure ; tu veilles sans repère, et cette veille sans date finit par t'apprendre une attention que ne t'aurait jamais donnée une alarme réglée d'avance. Paul dit cela des croyants devant le jour du Seigneur : nul ne connaît ni le jour ni l'heure, et c'est précisément pourquoi il faut rester éveillé plutôt que de se rassurer par un calcul. Tu n'es pas de la nuit, dit le texte, tu es enfant du jour — non parce que tu aurais deviné l'heure, mais parce que tu as choisi de rester attentif dans l'obscurité même où personne ne te regardait. C'est cette attention sans garantie, tenue pour elle-même, que le texte appelle sobriété et qu'il place devant toi comme une promesse plutôt que comme une contrainte.",
+      "Il y a un travail que tu fais sans que personne ne le voie ni ne le salue — reprendre une tâche abandonnée par un autre, tenir une maison, un lien, une fidélité que nul ne remarquera jamais parce qu'elle ne se remarque que par son absence. Tu le fais quand même, non par devoir mais parce que c'est ce qui t'a été donné à tenir, et tu finis par ne plus attendre qu'on te le reconnaisse. Le poème de la femme vaillante ne loue pas un exploit visible : il énumère des gestes de nuit, un fuseau tenu dans l'ombre, une main tendue à qui ne pourra jamais rendre — et le psaume que la liturgie lui associe promet, non la reconnaissance des hommes, mais que tu jouiras du travail de tes mains, que tu seras heureux. C'est devant ce regard-là, qui voit ce que personne d'autre ne voit, que ce travail caché trouve enfin sa mesure."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Prie avec ce que ces textes mettent entre tes mains aujourd'hui — non pour juger si tu en as fait assez, mais pour reconnaître ce qui t'a été confié et que tu n'as peut-être jamais nommé comme tel.",
+    "geste": "Note, ce soir, une seule chose que tu as reçue — un temps, une parole, une charge, une capacité — et que tu as laissée de côté par peur plutôt que par choix ; ne décide rien d'autre que de la nommer devant Dieu.",
+    "note": "Ce n'est pas un bilan de productivité spirituelle : le texte ne demande pas d'avoir doublé la mise, mais d'avoir répondu avec ce qui a été donné, si peu que ce soit."
+  },
+  "question": "Qu'as-tu enfoui par peur, en te persuadant que c'était par prudence, et que le Maître attend encore de te voir déterrer ?",
+  "racines": [
+    {
+      "titre": "Le talent, mesure de la charité",
+      "corps_html": "Chrysostome rapproche la parabole des talents de celle des dix vierges qui la précède : toutes deux, dit-il, nous poussent à secourir nos frères, parce qu'il n'y a pas d'autre chemin vers le salut. Le talent n'est donc pas seulement l'argent confié, mais tout don reçu — la parole, le temps, l'influence — mis au service du prochain. Ce que le maître reproche au troisième serviteur, ce n'est pas d'avoir eu peur, mais d'avoir cru que la peur dispensait d'agir.",
+      "attribution": "Jean Chrysostome, Homélie LXXVIII sur Matthieu"
+    },
+    {
+      "titre": "Ignorer le jour, une miséricorde",
+      "corps_html": "Chrysostome demande pourquoi Dieu n'a pas révélé le jour de la consommation des siècles. Si nous connaissions l'heure, répond-il, beaucoup vivraient dans le désordre jusqu'à la veille, puis se convertiraient à la dernière heure seulement. L'ignorance du jour est donc une miséricorde qui nous tient en éveil chaque jour de notre vie, et non une cruauté qui nous priverait d'un repère.",
+      "attribution": "Jean Chrysostome, Homélie IX sur la première Épître aux Thessaloniciens"
+    },
+    {
+      "titre": "Le bonheur du psaume n'est pas de ce monde",
+      "corps_html": "Augustin avertit que les biens énumérés par le psaume — la femme féconde, les fils autour de la table, la vieillesse paisible — ne sont pas la récompense littérale du juste, puisque les impies les possèdent souvent en abondance tandis que les martyrs en sont privés. Il lit donc le psaume comme une allégorie : l'homme béni, c'est le Christ et ses membres, et les biens promis sont ceux de la Jérusalem céleste.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 127"
+    }
+  ],
+  "videos": [
+    {
+      "id": "aY3R8FpE92Q",
+      "raison": "Proverbes 31 lu aujourd'hui est le dernier poème du livre ; ce panorama en situe la place et la logique de sagesse.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 128 chanté ce jour appartient au recueil dont ce panorama donne les grandes lignes de lecture.",
+      "groupe": "livre"
+    },
+    {
+      "id": "lTz0CuviQPE",
+      "raison": "1 Thessaloniciens 5, 1-6 est lu en entier aujourd'hui ; ce panorama situe le passage dans la lettre tout entière.",
+      "groupe": "livre"
+    },
+    {
+      "id": "mq0vO1vNVfY",
+      "raison": "La parabole des talents (Mt 25) appartient à ce second tiers de Matthieu dont ce panorama retrace l'ensemble.",
+      "groupe": "livre"
+    },
+    {
+      "id": "utHEZsmzU74",
+      "raison": "Éclaire « le jour du Seigneur viendra comme un voleur » (1 Th 5, 2), expression centrale de la deuxième lecture.",
+      "groupe": "mot"
+    },
+    {
+      "id": "xqUPT7BoX-w",
+      "raison": "Éclaire le « bon et fidèle serviteur » que le maître salue deux fois dans la parabole (Mt 25, 21.23).",
+      "groupe": "mot"
+    },
+    {
+      "id": "KcenGEY1w-U",
+      "raison": "Éclaire ce qu'il signifie d'« entrer dans la joie de ton maître » (Mt 25, 21.23).",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi le maître confie-t-il des sommes si différentes à ses trois serviteurs — cinq, deux, un talent ?",
+      "reponse_html": "Le texte le dit lui-même : « à chacun selon sa capacité » (Mt 25,15). La disproportion n'est pas une injustice mais un ajustement — chaque serviteur reçoit une charge à sa mesure, et aucun des trois n'est démuni au point de ne rien pouvoir faire valoir, pas même celui qui n'a qu'un talent, somme déjà considérable. Chrysostome rapproche ce détail de la parabole des dix vierges qui précède : dans les deux cas, ce qui est en jeu n'est pas la quantité reçue mais l'usage qu'on en fait pour le bien d'autrui (Homélie LXXVIII sur Matthieu). Le maître jugera donc chacun sur sa propre mesure, non sur celle du voisin.",
+      "sources": {
+        "jour": [
+          "Mt 25,15",
+          "Mt 25,20-23"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie LXXVIII sur Matthieu"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le troisième serviteur n'a rien volé, rien perdu : a-t-il vraiment commis une faute ?",
+      "reponse_html": "Il rend exactement ce qu'il a reçu, et c'est bien cela que le maître lui reproche : il n'a rien détourné, mais il n'a rien risqué. Le texte appelle cela « méchant et paresseux » (v. 26), des mots forts pour une inaction qui, en apparence, n'a fait de mal à personne. Chrysostome insiste sur ce point : la faute n'est pas d'avoir eu peur — le serviteur lui-même l'avoue au verset 25 — mais d'avoir cru que la peur dispensait d'agir (Homélie LXXVIII sur Matthieu). La parabole juge donc une fidélité absente plus sévèrement qu'une perte.",
+      "sources": {
+        "jour": [
+          "Mt 25,24-27"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie LXXVIII sur Matthieu"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Si nul ne connaît ni le jour ni l'heure, à quoi sert vraiment de veiller ?",
+      "reponse_html": "Paul ne demande pas de calculer une date, il demande une disposition permanente : rester éveillé précisément parce que l'heure échappe à tout calcul (1 Th 5,1-2.6). Chrysostome, commentant ce passage, explique que si le jour était connu, beaucoup vivraient dans le désordre jusqu'à la veille, puis se convertiraient à la dernière heure seulement ; l'ignorance de l'heure est donc une miséricorde qui tient chaque jour pour décisif, et non une menace suspendue (Homélie IX sur la première Épître aux Thessaloniciens). Veiller sert alors à vivre chaque jour comme s'il comptait, parce qu'il compte.",
+      "sources": {
+        "jour": [
+          "1 Th 5,1-2",
+          "1 Th 5,6"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie IX sur la première Épître aux Thessaloniciens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le Psaume 128 et le poème de la femme vaillante promettent-ils une vraie prospérité matérielle à qui craint Dieu ?",
+      "reponse_html": "Lus à la lettre, les deux textes semblent lier la crainte de Dieu à une réussite concrète — une maison pleine, des enfants, une vieillesse heureuse. Augustin met en garde contre cette lecture littérale dans son discours sur ce psaume : les impies possèdent souvent ces biens en abondance, et les justes, martyrs compris, en sont parfois privés sans que leur fidélité en soit démentie (Discours sur le psaume 127). Il invite donc à lire ces biens comme une allégorie des biens de la Jérusalem céleste, promis à ceux qui sont unis au Christ — une lecture qui n'annule pas la beauté concrète des versets, mais qui empêche d'en faire une mécanique de récompense.",
+      "sources": {
+        "jour": [
+          "Ps 128,2-3",
+          "Pr 31,30-31"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 127"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Faut-il avoir peur de Dieu, puisque le Psaume et les Proverbes louent tous deux « la crainte de l'Éternel » ?",
+      "reponse_html": "Le mot hébreu traduit par « crainte », yirah, n'est pas la terreur mais une révérence qui reconnaît une grandeur plus grande que soi sans vouloir s'y soustraire — c'est le même mot qui ouvre les Proverbes : « la crainte de l'Éternel est le commencement de la science » (Pr 1,7). Dans le poème de la femme vaillante comme dans le psaume lu aujourd'hui, cette crainte n'est pas un sentiment ajouté à la fin d'une vie réussie : elle en est la source, placée volontairement en dernière ligne pour révéler d'où venaient toutes les qualités énumérées avant elle. Craindre Dieu, dans ces textes, ressemble donc moins à trembler devant un juge qu'à se tenir, avec gravité et confiance, devant quelqu'un dont la grandeur dépasse la sienne.",
+      "sources": {
+        "jour": [
+          "Ps 128,1",
+          "Pr 31,30"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Mt-LXXVIII",
+    "chrysostome-1Th-IX",
+    "augustin-Ps-127"
+  ]
+}
