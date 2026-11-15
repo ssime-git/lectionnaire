@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-14",
+  "date_humaine": "samedi",
+  "semaine": "32ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "3 Jn 5-8 ; Lc 18, 1-8",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 135 h320\"/><path d=\"M170 135 v-95 h65 v95\"/><path d=\"M170 88 h65\"/><path d=\"M180 40 v-30 h45 v30\"/><path d=\"M100 130 q-6 -55 20 -68 q26 13 20 68 z\"/><path d=\"M118 53 q2 -11 11 -11 q9 0 11 11 q-2 9 -11 9 q-9 0 -11 -9 z\"/><path d=\"M140 72 q14 -4 24 0\"/><path d=\"M166 70 q-4 5 0 9 q4 3 6 -3\"/><path d=\"M198 32 q5 -5 10 0 q-2 6 -10 0\"/></g><g class=\"trait-liturgie\"><path d=\"M202 20 q4 -7 0 -13 q-4 6 0 13 z\"/></g></svg>",
+  "titre": "Prier sans se lasser",
+  "titre_html": "Prier sans <span class=\"it\">se lasser</span>",
+  "sous_titre": "Une veuve qui ne renonce pas, un hôte qui ne calcule pas, une lumière qui ne vacille pas.",
+  "suite_hier": null,
+  "gravure_alt": "Une veuve frappe du poing à une porte close, de nuit ; dans l'embrasure, une lampe à huile reste allumée alors que tout le reste du bois est sombre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "3 Jn 5-8",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">5</span> Bien-aimé, tu agis <button class=\"mot\" data-g=\"g-piston\">fidèlement</button> dans ce que tu fais pour les frères, et même pour des étrangers. <span class=\"s\">6</span> Ils ont rendu témoignage de ta charité, en présence de l'Église ; tu feras bien de pourvoir à leur voyage d'une manière digne de Dieu. <span class=\"s\">7</span> Car c'est pour <button class=\"mot\" data-g=\"g-onoma\">le nom</button> qu'ils sont partis, sans rien recevoir des païens. <span class=\"s\">8</span> Nous devons donc accueillir de tels hommes, afin d'être nous-mêmes <button class=\"mot\" data-g=\"g-synergoi\">ouvriers avec eux</button> pour la vérité.</p>",
+      "gloses": [
+        {
+          "id": "g-piston",
+          "lemme": "pistos",
+          "html": "Le grec dit πιστόν ποιεῖς (piston poieis), littéralement « tu fais une chose de foi » — l'adjectif pistos partage sa racine avec pistis, la foi elle-même. Segond traduit par « fidèlement », ce qui est juste mais efface le lien verbal avec la foi que le texte grec laisse entendre : l'hospitalité de Gaïus n'est pas seulement loyale, elle est un acte de croyant. On retrouve le même mot dans les salutations pauliniennes pour désigner les « frères fidèles » (Colossiens 1, 2)."
+        },
+        {
+          "id": "g-onoma",
+          "lemme": "onoma",
+          "html": "ὑπὲρ τοῦ ὀνόματος (hyper tou onomatos) : « pour le nom », sans complément — Segond garde cette absence, fidèle au grec, là où on attendrait « pour le nom du Christ ». Cet usage absolu est typiquement johannique : il suppose un lecteur qui sait déjà de quel Nom il s'agit, comme en Actes 5, 41 où les apôtres se réjouissent d'avoir « été jugés dignes de souffrir des outrages pour le nom ». Philippiens 2, 9 donne la clé : Dieu a donné à Jésus « le nom qui est au-dessus de tout nom »."
+        },
+        {
+          "id": "g-synergoi",
+          "lemme": "synergos",
+          "html": "συνεργοί (synergoi), de syn (avec) et ergon (l'œuvre) : des « coopérateurs ». Segond traduit « ouvriers avec eux », gardant le sens du travail commun plutôt que la simple sympathie. Paul emploie le même mot pour ses collaborateurs directs, comme en Romains 16, 3 ou Philippiens 4, 3 : la lettre range ainsi l'hôte qui nourrit et loge les missionnaires au même rang que ceux qui prêchent."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 111 (112), 1-2, 3-4, 5-6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1</span> Louez l'Éternel ! Heureux l'homme qui <button class=\"mot\" data-g=\"g-yare\">craint</button> l'Éternel, Qui trouve un grand plaisir à ses commandements. <span class=\"s\">2</span> Sa postérité sera puissante sur la terre, La génération des hommes droits sera bénie.</p><p><span class=\"s\">3</span> Il a dans sa maison bien-être et richesse, Et sa <button class=\"mot\" data-g=\"g-tsedaqah\">justice</button> subsiste à toujours. <span class=\"s\">4</span> La <button class=\"mot\" data-g=\"g-or\">lumière</button> se lève dans les ténèbres sur l'homme droit, Sur l'homme bon et compatissant et juste.</p><p><span class=\"s\">5</span> Heureux l'homme qui exerce la miséricorde et qui prête, Qui règle ses actions d'après la justice ! <span class=\"s\">6</span> Car il ne chancelle jamais, Le juste aura une mémoire éternelle.</p>",
+      "gloses": [
+        {
+          "id": "g-yare",
+          "lemme": "yare",
+          "html": "יָרֵא (yare), « craindre » : le mot couvre à la fois la terreur et le respect révérenciel, sans qu'un seul terme français ne rende les deux. Segond traduit « craint », choix constant dans tout le Psautier, y compris en Proverbes 1, 7 où « la crainte de l'Éternel est le commencement de la science ». La tradition juive a souvent distingué, à l'intérieur de ce même mot, une crainte du châtiment et une crainte aimante devant la grandeur de Dieu — les deux restent contenues dans le seul verbe hébreu."
+        },
+        {
+          "id": "g-tsedaqah",
+          "lemme": "tsedaqah",
+          "html": "צְדָקָה (tsedaqah), « justice » : le même mot, dans l'hébreu postbiblique et chez les rabbins, en vient à désigner l'aumône elle-même, la justice qui se fait don. Segond traduit uniformément par « justice », ce qui est exact mais masque, pour un lecteur français, le glissement qui unit ici richesse (v. 3) et justice (v. 3) comme deux faces d'une même vie : posséder, pour le juste, c'est déjà partager."
+        },
+        {
+          "id": "g-or",
+          "lemme": "or",
+          "html": "אוֹר (or), « lumière », avec le verbe זָרַח (zarach), « se lever » comme le soleil. Segond traduit littéralement « la lumière se lève dans les ténèbres ». La même image structure Ésaïe 9, 1 (« le peuple qui marchait dans les ténèbres voit une grande lumière ») et le prologue de Jean (« la lumière luit dans les ténèbres », Jean 1, 5) : le psaume applique à l'homme juste une image que l'Écriture réserve ailleurs à Dieu ou à son Messie."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 18, 1-8",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">1</span> Jésus leur adressa une parabole, pour montrer qu'il faut toujours prier, et ne jamais <button class=\"mot\" data-g=\"g-enkakein\">se relâcher</button>. <span class=\"s\">2</span> Il y avait dans une ville un juge qui n'avait point de crainte de Dieu et n'avait point de considération pour personne. <span class=\"s\">3</span> Il y avait aussi dans cette ville une veuve qui venait lui dire : Fais-moi justice de ma partie adverse.</p><p><span class=\"s\">4</span> Pendant longtemps il refusa. Mais ensuite il dit en lui-même : Quoique je n'aie point de crainte de Dieu ni de considération pour personne, <span class=\"s\">5</span> néanmoins, parce que cette veuve m'importune, je lui ferai justice, afin qu'elle ne vienne plus sans cesse <button class=\"mot\" data-g=\"g-hypopiazo\">me rompre la tête</button>.</p><p><span class=\"s\">6</span> Le Seigneur ajouta : Entendez ce que dit le juge inique. <span class=\"s\">7</span> Et Dieu ne fera-t-il pas justice à ses élus, qui crient à lui jour et nuit, et <button class=\"mot\" data-g=\"g-makrothymei\">tarde</button>-t-il à leur égard ? <span class=\"s\">8</span> Je vous le dis, il leur fera promptement justice. Mais, quand le Fils de l'homme viendra, trouvera-t-il la foi sur la terre ?</p>",
+      "gloses": [
+        {
+          "id": "g-enkakein",
+          "lemme": "enkakein",
+          "html": "ἐγκακεῖν (enkakein), composé de en et de kakos (le mal) : « être mal dedans », se décourager intérieurement. Segond traduit ici « se relâcher », qui déplace le sens vers l'abandon extérieur de l'effort plutôt que vers la lassitude intime que vise le grec. Paul emploie le même verbe pour lui-même en 2 Corinthiens 4, 16 (« nous ne perdons pas courage ») et en Éphésiens 3, 13 : c'est le mot du découragement qui ronge de l'intérieur, pas seulement celui qui fait cesser un geste."
+        },
+        {
+          "id": "g-hypopiazo",
+          "lemme": "hypopiazo",
+          "html": "ὑπωπιάζῃ (hypopiazē) est un terme de pugilat : frapper sous l'œil, donner un œil au beurre noir. Segond choisit l'image familière « me rompre la tête », qui garde la violence physique sans la préciser. Paul emploie le même verbe en 1 Corinthiens 9, 27 pour dire qu'il « dompte » son propre corps — littéralement qu'il se donne des coups. Ici, c'est un juge endurci qui redoute d'être ainsi malmené par l'insistance d'une veuve sans aucun pouvoir sur lui."
+        },
+        {
+          "id": "g-makrothymei",
+          "lemme": "makrothymei",
+          "html": "μακροθυμεῖ (makrothymei), de makros (long) et thymos (le souffle, l'ardeur) : « être longanime ». Segond traduit par « tarde », qui déplace le sens vers la durée écoulée plutôt que vers la qualité d'âme que nomme le grec. Le même verbe est rendu par « patiente » en 1 Corinthiens 13, 4 pour décrire la charité : la question n'est pas de savoir si Dieu met du temps, mais si son silence est de la même nature que celui du juge inique — ce que le texte nie."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre dans un conflit",
+      "corps_html": "La troisième épître de Jean est un billet privé adressé à Gaïus par « l'Ancien », dans une Église divisée : Diotrèphe, qui y tient le premier rang, refuse d'accueillir les frères itinérants que l'Ancien envoie (3 Jn 9-10). Ces prédicateurs sans ressources dépendaient de l'hospitalité des maisons chrétiennes, comme le rappelle la Didachè (XI-XII), qui fixe déjà des règles pour accueillir, et éprouver, les prophètes de passage."
+    },
+    {
+      "titre": "Deux paraboles sur la prière",
+      "corps_html": "Chez Luc, cette parabole suit immédiatement l'annonce du jour du Fils de l'homme (17, 20-37) et précède celle du pharisien et du publicain (18, 9-14) : deux paraboles sur la prière encadrent l'attente du Royaume. La veuve sans défenseur n'est pas un détail pittoresque : la Loi fait d'elle, avec l'orphelin et l'étranger, la figure même du sans-recours que Dieu promet de protéger (Exode 22, 21-22 ; Deutéronome 10, 18)."
+    }
+  ],
+  "analogie": {
+    "titre": "La demande qui ne se lasse pas",
+    "variantes": [
+      "Tu as peut-être porté une même demande pendant des années sans qu'elle semble jamais rejoindre le ciel : un proche loin de la foi, une guérison qui ne vient pas, une réconciliation toujours différée. Tu as fini par douter que prier change quoi que ce soit, et pourtant quelque chose en toi n'a pas pu cesser de revenir devant Dieu avec les mêmes mots, nuit après nuit, comme la veuve retourne chaque jour à la même porte. Ce retour obstiné, qui ne ressemble à aucune victoire, est déjà la foi que le Fils de l'homme cherche en venant — non la certitude d'être exaucé tout de suite, mais le fait de ne pas avoir renoncé à crier.",
+      "Il y a des saisons où prier ne produit en toi aucune émotion, aucune lumière intérieure, rien qu'une suite de mots que tu répètes parce que tu les as toujours dits, et tu te demandes si Dieu entend seulement quelque chose là-dedans. Le juge de la parabole n'a ni crainte ni égard pour personne, et pourtant il finit par céder — non parce qu'il a changé de cœur, mais parce que la demande n'a pas cessé. Ta prière sèche, répétée sans ferveur apparente, n'a donc pas besoin d'émouvoir Dieu pour être entendue : elle a seulement besoin de ne pas s'arrêter, car c'est Dieu, à la différence du juge inique, qui a hâte de faire droit à ceux qui crient vers lui.",
+      "Tu as sans doute connu cette gêne de demander une fois de plus la même chose à Dieu, comme si insister trahissait un manque de confiance ou de pudeur, et tu as parfois préféré te taire plutôt que de paraître importun. Le mot que Segond traduit par « elle m'importune » désignait, pour un juge, l'ennui d'une plaidoirie qui ne lâche rien ; c'est pourtant cette importunité-là, et non une prière mesurée, que Jésus donne en modèle. Tu peux donc revenir, encore, avec la même demande précise, sans t'excuser de ta persévérance : ce n'est pas de l'impatience devant Dieu, c'est la forme que prend, chez un homme pauvre, la certitude que le Père n'est pas semblable au juge inique."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Reprends ce soir une demande que tu portes depuis longtemps, sans l'habiller de nouveaux mots.",
+    "geste": "Note une phrase, une seule, qui dit ta demande la plus ancienne, et redis-la ce soir exactement ainsi, puis demain, aux mêmes mots.",
+    "note": "Dieu n'est pas lent comme le juge inique ; c'est nous qui avons appris à nous décourager vite."
+  },
+  "question": "Quelle demande portes-tu depuis si longtemps que tu as cessé d'attendre qu'elle soit entendue — et qu'est-ce qui, en toi, continue malgré tout à la répéter ?",
+  "racines": [
+    {
+      "titre": "Le vrai Temple",
+      "corps_html": "Le titre latin du psaume, dans la liturgie que connaît Augustin, porte : « Conversion d'Aggée et de Zacharie » — deux prophètes postérieurs à David, qui annoncèrent la reconstruction du Temple après l'exil. Augustin refuse d'arrêter son regard sur les pierres : la vraie postérité puissante sur la terre (Ps 111, 2) est l'Église, édifiée de pierres vivantes, et non l'édifice de Jérusalem relevé sous Darius.",
+      "attribution": "Augustin d'Hippone, Discours sur le Psaume 111"
+    },
+    {
+      "titre": "Un argument a fortiori",
+      "corps_html": "Calvin lit la parabole comme un raisonnement du moindre au plus grand : si même un juge sans foi ni égards finit par céder à l'insistance d'une veuve, à combien plus forte raison Dieu, qui est juste et qui aime les siens, fera-t-il droit à ceux qui crient vers lui jour et nuit. La lenteur apparente n'est donc jamais indifférence, mais le temps que Dieu prend pour éprouver la foi qu'il veut trouver en venant.",
+      "attribution": "Jean Calvin, Commentaires bibliques"
+    },
+    {
+      "titre": "Nourrir sans enrichir",
+      "corps_html": "Vers l'an 100, la Didachè organise déjà l'accueil des apôtres et prophètes itinérants : on les reçoit comme le Seigneur, mais pas plus de deux jours, et celui qui demande de l'argent est déclaré faux prophète (Didachè XI-XII). L'hospitalité que Gaïus offre dans la troisième épître de Jean s'inscrit dans cette discipline concrète, où nourrir un envoyé de Dieu sans l'enrichir devient lui-même une manière de servir l'Évangile.",
+      "attribution": "note historique (Didachè, XI-XII, c. 100)"
+    }
+  ],
+  "videos": [
+    {
+      "id": "IT3LVWWuDDo",
+      "raison": "Luc 18 est l'une de ces paraboles où Jésus pousse le lecteur à conclure de l'injuste au juste, du moindre au plus grand.",
+      "groupe": "mot"
+    },
+    {
+      "id": "N-q8TaM8opA",
+      "raison": "La troisième épître de Jean, lue aujourd'hui, met en scène le conflit entre Diotréphès et l'Ancien autour de l'hospitalité due aux envoyés.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 111 (112) lu aujourd'hui appartient au recueil dont cette vidéo trace l'architecture d'ensemble, entre louange et sagesse.",
+      "groupe": "livre"
+    },
+    {
+      "id": "Ws74bmmpf8w",
+      "raison": "Luc 18, 1 situe explicitement cette parabole dans l'enseignement de Jésus sur la nécessité de toujours prier.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Jésus compare-t-il Dieu à un juge qui n'a « point de crainte de Dieu » ?",
+      "reponse_html": "Jésus ne dit jamais que Dieu ressemble à ce juge ; il construit un raisonnement du moindre au plus grand : si même un homme sans foi ni égards finit par céder à l'insistance d'une veuve sans aucun pouvoir sur lui, à combien plus forte raison l'Éternel, qui est juste et qui aime les siens, fera-t-il droit à ceux qui crient vers lui jour et nuit. Le contraste est volontairement choquant : la bonté de Dieu paraît d'autant plus certaine qu'elle est comparée à son exact contraire. Calvin lit ainsi la parabole comme un argument a fortiori et non comme un portrait de Dieu.",
+      "sources": {
+        "jour": [
+          "Lc 18, 2.6-8"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-commentaires",
+            "reference": "sur Luc 18"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que représente la veuve, concrètement, pour les auditeurs de Jésus ?",
+      "reponse_html": "Dans le droit biblique, la veuve n'a par elle-même aucun recours : sans mari pour plaider sa cause, elle dépend entièrement du juge ou du bon vouloir d'un tiers. La Loi en fait, avec l'orphelin et l'étranger, la figure même du sans-protection que Dieu s'engage à défendre, sous peine de sa colère (Exode 22, 21-22 ; Deutéronome 10, 18). Jésus choisit donc, pour modèle de la prière, non un fidèle plein de ressources, mais quelqu'un qui n'a strictement rien d'autre que son insistance. C'est cette absence totale de pouvoir qui rend sa persévérance si parlante.",
+      "sources": {
+        "jour": [
+          "Lc 18, 3-5"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume affirme que le juste « ne chancelle jamais » (112, 6) — est-ce une promesse de vie facile ?",
+      "reponse_html": "Le verbe hébreu dit qu'il ne sera « pas ébranlé », non qu'il ne traversera aucune épreuve : c'est une affirmation de stabilité intérieure, pas d'absence de secousse. Augustin, commentant ce psaume, refuse de s'arrêter à une lecture matérielle de la bénédiction promise — maison, richesse, postérité — pour y voir la stabilité de celui qui est intégré, comme pierre vivante, à une construction qui ne passe pas. La même structure relie le psaume à la troisième épître de Jean lue aujourd'hui : la vraie richesse du juste se vérifie dans ce qu'il donne, non dans ce qu'il accumule.",
+      "sources": {
+        "jour": [
+          "Ps 111 (112), 3.6",
+          "3 Jn 5-8"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le Psaume 111"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire être « ouvrier avec » quelqu'un pour la vérité, si l'on ne prêche pas soi-même (3 Jean 8) ?",
+      "reponse_html": "L'auteur de la lettre range Gaïus, qui héberge et nourrit les missionnaires itinérants, au même rang que ceux qui annoncent directement l'Évangile : le mot grec traduit par « ouvriers avec eux » est celui que Paul emploie pour ses collaborateurs les plus proches. Servir la vérité ne suppose donc pas de parler soi-même ; cela peut consister à rendre possible, matériellement, la parole d'un autre. C'est tout le sens de l'hospitalité chrétienne telle que l'organise déjà la Didachè à la même époque : recevoir l'envoyé, c'est participer à son envoi.",
+      "sources": {
+        "jour": [
+          "3 Jn 7-8"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-111"
+  ]
+}
