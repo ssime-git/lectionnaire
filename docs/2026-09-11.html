@@ -5,65 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voir et courir — vendredi 11 septembre 2026</title>
 <meta name="description" content="Paul s'impose une discipline d'athlète pour ne pas être disqualifié ; Jésus demande qu'on ôte d'abord la poutre de son œil avant de vouloir guider qui que ce soit.">
-<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<script>document.documentElement.classList.add('js');(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
-   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
-   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+/* Direction « épurée » : beaucoup d'air, de fins filets, une seule couleur
+   d'accent (la couleur liturgique) ; la couleur vive vit dans les scènes.
+   On déclare les deux schémas : sans cela le « forced dark mode » du
+   navigateur invente son inversion. Ici le sombre est DESSINÉ, et chaud. */
 :root{
   color-scheme:light dark;
-
-  --papier:#F3F2ED;
-  --ink:#1B1A16;
-  --rubrique:#A33324;        /* rouge de missel */
+  --papier:var(--meteo-papier-clair,#FAF6EF);
+  --papier-creux:#F2EADD;
+  --ink:#2A221C;--ink-2:#55483D;
+  --muet:#76675A;            /* AA sur ivoire */
+  --filet:#E4D8C6;
+  --rubrique:#B4502F;        /* le crayon : cercles, petits repères */
   --liturgie:#345E44;
-  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
-  --filet:#D7D2C4;
-  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
-  --glose-ink:#3a382f;
-  --ctx-ink:#35332b;
-  --gravure-ink:#1B1A16;
+  --gravure-ink:#2B211B;--encre:#2B211B;
+  --c-ocre:#E9A23B;--c-rose:#E7837A;--c-terre:#C8553D;--c-bleu:#6E79B8;--c-jaune:#F2D16B;--c-lavande:#B9A3D6;--c-fond:#F6E3C6;
+  --ombre:0 24px 60px -24px rgba(70,40,20,.35);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --ui:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
-    --papier:#17161B;
-    --ink:#E9E5DB;
-    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
-       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
-    --rubrique:#D4705B;
+    /* Brun cacao et terre cuite : une nuit chaude, jamais noire. */
+    --papier:var(--meteo-papier-sombre,#3B2E26);
+    --papier-creux:#47382E;
+    --ink:#F6ECDD;--ink-2:#DDCDB9;
+    --muet:#BCA892;
+    --filet:#5C4B3E;
+    --rubrique:#EBA07C;
+    /* La couleur liturgique DOIT monter en luminosité sur fond sombre. */
     --liturgie:#6E9B7C;
-    --muet:#918B7C;
-    --filet:#332F38;
-    --papier-creux:#1E1C23;
-    --glose-ink:#CBC6BA;
-    --ctx-ink:#CBC6BA;
-    --gravure-ink:#E9E5DB;
+    --gravure-ink:#F4EADB;--encre:#FBEFDC;
+    --c-ocre:#DE9A45;--c-rose:#D98173;--c-terre:#C9603F;--c-bleu:#7680BE;--c-jaune:#E6C468;--c-lavande:#A895C8;--c-fond:#4F3E31;
+    --ombre:0 24px 60px -24px rgba(15,8,4,.6);
 
   }
 }
 :root[data-theme="dark"]{
-    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
-    --papier:#17161B;
-    --ink:#E9E5DB;
-    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
-       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
-    --rubrique:#D4705B;
+    /* Brun cacao et terre cuite : une nuit chaude, jamais noire. */
+    --papier:var(--meteo-papier-sombre,#3B2E26);
+    --papier-creux:#47382E;
+    --ink:#F6ECDD;--ink-2:#DDCDB9;
+    --muet:#BCA892;
+    --filet:#5C4B3E;
+    --rubrique:#EBA07C;
+    /* La couleur liturgique DOIT monter en luminosité sur fond sombre. */
     --liturgie:#6E9B7C;
-    --muet:#918B7C;
-    --filet:#332F38;
-    --papier-creux:#1E1C23;
-    --glose-ink:#CBC6BA;
-    --ctx-ink:#CBC6BA;
-    --gravure-ink:#E9E5DB;
+    --gravure-ink:#F4EADB;--encre:#FBEFDC;
+    --c-ocre:#DE9A45;--c-rose:#D98173;--c-terre:#C9603F;--c-bleu:#7680BE;--c-jaune:#E6C468;--c-lavande:#A895C8;--c-fond:#4F3E31;
+    --ombre:0 24px 60px -24px rgba(15,8,4,.6);
 
 }
 :root[data-theme="dark"]{color-scheme:dark}
 :root[data-theme="light"]{color-scheme:light}
+
+/* La météo nuance le papier et glisse la palette des scènes. */
+:root[data-meteo="soleil"]{--meteo-papier-clair:#FBF5EA;--meteo-papier-sombre:#3D2F25}
+:root[data-meteo="couvert"]{--meteo-papier-clair:#F6F1EA;--meteo-papier-sombre:#3A2F28;--c-ocre:#D3A266;--c-rose:#D79A90;--c-jaune:#E3CF95;--c-bleu:#8088B0;--c-lavande:#B8AABF}
+:root[data-meteo="pluie"]{--meteo-papier-clair:#F4EEE8;--meteo-papier-sombre:#3A2D28;--c-ocre:#C9935B;--c-rose:#C98A8C;--c-jaune:#DCC58F;--c-bleu:#5F6FAE;--c-lavande:#9C93C7}
+:root[data-meteo="neige"]{--meteo-papier-clair:#FCF9F4;--meteo-papier-sombre:#40342C;--c-ocre:#EDC184;--c-rose:#F0B3A8;--c-jaune:#F6E3A4;--c-bleu:#9CA7D6;--c-lavande:#D6C9E6}
 
 /* ---------- BASCULE DE THÈME ---------- */
 #basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
@@ -71,226 +76,299 @@
 #basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
-body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.22rem;line-height:1.7;overflow-x:hidden;transition:background .6s,color .6s}
+svg{display:block}
 
-/* ---------- MINI-CARTE (position dans la croix) ---------- */
+/* ---------- MINI-CARTE (position dans la page) ---------- */
 #carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
-#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
-#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a{width:6px;height:6px;border:1px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.5)}
 #carte a.lateral{border-radius:1px}
 #carte .fil{width:1px;height:9px;background:var(--filet)}
-@media(max-width:600px){#carte{right:.4rem}}
+@media(max-width:600px){#carte{display:none}}
 
-/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
-.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
-.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
-@media(max-width:560px){.mesure::before{left:.5rem}}
-.dedans{padding-left:2.4rem}
-@media(max-width:560px){.dedans{padding-left:1.4rem}}
+/* ---------- LA MESURE : une colonne de lecture, de l'air autour ---------- */
+.mesure{position:relative;max-width:46rem;margin:0 auto;padding:0 1.25rem}
+.dedans{padding:0}
 
-/* rubrique : instruction rouge, petites capitales espacées */
-.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
-.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
-h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+/* repères : une étiquette à chasse fixe, numérotée */
+.rubrique{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muet);margin-bottom:1rem;display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+.rubrique .num{color:var(--liturgie)}
+.rubrique .axe{text-transform:none;letter-spacing:0;font-family:var(--ui);font-size:.75rem;color:var(--muet)}
+h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08;letter-spacing:-.015em;margin-bottom:1.6rem}
+h3{font-family:'Fraunces',serif;font-weight:400}
 
 /* ---------- INCIPIT ---------- */
-.incipit{padding:3.4rem 0 2.6rem}
-.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
-.dateline .couleur{color:var(--liturgie);font-weight:500}
-.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
-.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
-h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
-h1 .it{font-style:italic;font-weight:400}
-.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
-.gravure{margin:2.2rem 0 .5rem;max-width:360px}
-.gravure svg{display:block;width:100%;height:auto}
-/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
-   reste figée quand le fond bascule. */
-.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
-.gravure svg .trait-liturgie{stroke:var(--liturgie)}
-.gravure svg .trait-rubrique{stroke:var(--rubrique)}
-.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
-.descendre:hover{color:var(--liturgie)}
-.descendre::after{content:" ↓"}
+.incipit{padding:4.5rem 0 1rem}
+.dateline{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muet);line-height:1.8}
+.dateline .couleur{color:var(--liturgie)}
+.dateline .couleur::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--liturgie);margin-right:.5em;vertical-align:.05em}
+.dateline .suite{display:block;font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;font-style:italic;font-size:1.02rem;margin-top:.6rem;color:var(--ink-2)}
+.badge{display:inline-block;margin-top:.8rem;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--rubrique);border:1px solid currentColor;border-radius:3px;padding:.1rem .5rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:300;font-size:clamp(3.2rem,11vw,6.6rem);line-height:.96;letter-spacing:-.03em;margin:1.2rem 0 .3rem}
+h1 .it{font-style:italic;color:var(--liturgie)}
+.chapeau{font-size:1.32rem;max-width:36ch;color:var(--ink-2);margin-top:1.2rem}
+.ambiance{font-family:var(--ui);font-size:.75rem;color:var(--muet);margin-top:1.2rem}
+.ambiance a{color:inherit}
 
-/* ---------- SÉPARATION DES MOMENTS ---------- */
-section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+/* La scène d'ouverture : aplats colorés, bois gravé du jour par-dessus.
+   Elle se dévoile du haut vers le bas au chargement. */
+.scene-ouverture{position:relative;margin:2.6rem -1.25rem 0;border-radius:24px;overflow:hidden;aspect-ratio:340/150;background:var(--c-fond)}
+@media(min-width:90rem){.scene-ouverture{margin:2.8rem -6rem 0}}
+.scene-ouverture .fond-scene{position:absolute;inset:0;width:100%;height:100%}
+.gravure{position:absolute;inset:0}
+.gravure svg{display:block;width:100%;height:100%}
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie);stroke-width:2}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.js .scene-ouverture{clip-path:inset(0 0 100% 0 round 24px);transition:clip-path 1.4s cubic-bezier(.7,0,.2,1) .15s}
+.js .scene-ouverture.vu{clip-path:inset(0 0 0 0 round 24px)}
+
+/* ---------- SÉPARATION DES MOMENTS : de l'air, pas de cadres ---------- */
+section.bloc{padding:7rem 0 1rem;scroll-margin-top:2rem}
 
 /* ---------- ÉCRITURE ---------- */
-.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
-.ecriture{font-size:1.24rem;line-height:1.66}
-.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
-.ecriture.evangile .init{color:var(--rubrique)}
-.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
-.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
-.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
-.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
-.glose.ouverte{display:block}
-.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.ref{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.85}
+.ecriture p{margin:.45rem 0}
+.ecriture.psaume p{padding-left:1.2rem;text-indent:-1.2rem}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:300;float:left;font-size:4.2rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.s{font-family:var(--mono);color:var(--muet);font-size:.58em;vertical-align:.5em;margin:0 .3em 0 .1em}
+/* Mot entouré à la main. Sans JavaScript : un cercle fixe (masque) ; avec,
+   un trait qui se dessine quand le mot arrive à l'écran. */
+.mot{position:relative;display:inline;cursor:pointer;color:inherit;border:0;background:transparent;font:inherit;padding:0 .08em;margin:0 .06em;isolation:isolate}
+.mot::before{content:"";position:absolute;inset:-.14em -.28em;z-index:-1;background:var(--rubrique);pointer-events:none;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 48' preserveAspectRatio='none'%3E%3Cpath d='M143 20C139 5 100 3 67 5C29 6 3 15 5 28C7 43 47 45 84 42C119 39 151 34 145 20C141 9 115 4 93 5' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.js .mot::before{display:none}
+.mot .cercle{position:absolute;left:-.3em;top:-.28em;width:calc(100% + .6em);height:calc(100% + .56em);overflow:visible;pointer-events:none;z-index:-1}
+.mot .cercle path{fill:none;stroke:var(--rubrique);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.85;transition:stroke-dashoffset 1.1s cubic-bezier(.6,.1,.3,1),stroke .3s}
+.mot:hover .cercle path,.mot[aria-expanded="true"] .cercle path{stroke:var(--liturgie);stroke-width:2.2;opacity:1}
+.mot[aria-expanded="true"]{color:var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:6px;border-radius:4px}
+/* La glose reste dans le document (lisible sans JS) ; avec JS elle s'ouvre
+   dans le compagnon, à droite. */
+.glose{display:block;margin:1.1rem 0 .5rem;padding:1rem 0 1rem 1.1rem;border-left:2px solid var(--rubrique);font-size:1.05rem;line-height:1.6;color:var(--ink-2)}
+.glose summary{cursor:pointer;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rubrique)}
+.glose[open] summary{margin-bottom:.5rem}
 .glose .gr{font-style:italic}
+.glose .aujourdhui{margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--filet)}
+.js .feuillet .glose{display:none}
+.indice-mots{font-family:var(--ui);font-size:.8rem;color:var(--muet);margin-bottom:.5rem}
+.indice-mots span{color:var(--rubrique)}
 
-/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
-   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
-   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ---------- */
 .chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
 .chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
-/* le maillon : un trait vertical qui relie chaque nom au suivant */
 .chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
 .chaine li:first-child::before{top:50%}
 .chaine li:last-child::before{bottom:50%}
 .chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
-/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
 .chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
 .chaine li.femme{color:var(--rubrique)}
 .chaine li.femme em{font-style:italic}
-/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
 .chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
 .chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
 .chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
-/* les trois sections de quatorze */
-.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muet);font-size:.7rem}
 .chaine .section::before,.chaine .section::after{display:none}
-.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+.compte{font-family:var(--mono);font-size:.7rem;color:var(--muet);margin-top:1rem}
 
-/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
-.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
-.rail-nav{display:flex;gap:.5rem}
-.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
-.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+/* ---------- RAILS : ↓ on descend, → on explore ---------- */
+.rail-tete{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;align-items:center;gap:.5rem}
+.rail-nav button{width:36px;height:36px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-size:.95rem;display:grid;place-items:center;transition:border-color .2s}
+.rail-nav button:hover{border-color:var(--ink)}
 .rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.25rem;padding:1.2rem 1.25rem 1.4rem;scroll-padding:0 1.25rem}
 .rail::-webkit-scrollbar{display:none}
-.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
-.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
-.feuillet.psaume .ref-lat{color:var(--liturgie)}
-.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.feuillet{flex:0 0 min(100%,44rem);scroll-snap-align:start;min-width:0}
+.feuillet .ref-lat{display:flex;justify-content:space-between;gap:1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);border-top:1px solid var(--ink);padding-top:1rem;margin-bottom:1.2rem;flex-wrap:wrap;align-items:baseline}
+.feuillet .ref-lat b{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;text-transform:none;letter-spacing:0;color:var(--ink)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);margin-top:.3rem}
 .points{display:flex;gap:.35rem}
-.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet);transition:background .3s}
 .points i.on{background:var(--liturgie)}
 
+/* Lecture continue : le contenu reste lisible sans JavaScript. */
+#r-textes,#r-racines{display:block;overflow:visible;margin:0;padding:0;scroll-snap-type:none}
+#r-textes>.feuillet{padding:0 0 3rem;min-width:0}
+#r-racines>.feuillet{padding:.7rem 0}
+#textes .rail-nav,#racines .rail-nav,#textes .points,#racines .points{display:none}
+/* Avec JavaScript, les lectures et les racines redeviennent des rails. */
+.js #r-textes,.js #r-racines{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -1.25rem;padding:1.2rem 1.25rem 1rem}
+.js #r-textes>.feuillet{flex-basis:min(90%,42rem)}
+.js #r-racines>.feuillet{flex-basis:min(85%,24rem)}
+.js #textes .rail-nav,.js #racines .rail-nav,.js #textes .points,.js #racines .points{display:flex}
+#lecture-0,#r-textes>.feuillet{scroll-margin-top:4rem}
+
+/* ---------- PAUSE : la scène s'ouvre en défilant, la question s'allume ---------- */
+.pause{padding:7rem 0 1rem}
+.pause .cadre{border-radius:24px;overflow:hidden;aspect-ratio:10/3;background:var(--c-fond)}
+.pause .cadre svg{width:100%;height:100%}
+@media(min-width:90rem){.pause .cadre{margin:0 -6rem}}
+.js .pause .cadre{clip-path:inset(var(--i,12%) var(--i,12%) round 24px);will-change:clip-path}
+.pause q,.question p{display:block;quotes:none;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.6rem,4.4vw,2.4rem);line-height:1.25;text-align:center;max-width:32rem;margin:2.6rem auto 0}
+.allume span{transition:opacity .5s}
+.js .allume span{opacity:.15}
+.js .allume span.on{opacity:1}
+.souffle{display:flex;justify-content:center;margin-top:1.6rem}
+.anneau{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ui);font-size:.8rem;border:1px solid var(--filet);background:none;color:var(--ink);border-radius:99px;padding:.3rem .95rem .3rem .35rem;cursor:pointer}
+.anneau svg{width:26px;height:26px;transform:rotate(-90deg)}
+.anneau .piste{stroke:var(--filet)}.anneau .prog{stroke:var(--liturgie);stroke-dasharray:88;stroke-dashoffset:88;transition:stroke-dashoffset 30s linear}
+.anneau.encours .prog{stroke-dashoffset:0}
+.pause .suite{text-align:center;color:var(--muet);font-style:italic;margin-top:1rem}
+.js .pause .suite{opacity:0;transition:opacity .8s}
+.js .pause .suite.vue{opacity:1}
+
 /* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
-.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+.ctx{display:grid;gap:2.4rem;grid-template-columns:1fr}
 @media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
-.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
-.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+.ctx>div{padding-top:1rem;border-top:1px solid var(--filet)}
+.ctx h3{font-size:1.2rem;margin-bottom:.5rem}
+.ctx p{font-size:1.06rem;color:var(--ink-2)}
 
-/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
-.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
-.analogie em{font-style:italic;color:var(--liturgie)}
-.analogie .lettrine-mot{font-family:'Fraunces',serif}
+/* ---------- ÉCLAIRAGES : une voix d'aujourd'hui, un classique en écho ---------- */
+.eclairage{border-top:1px solid var(--ink);padding-top:1.3rem;margin-bottom:3rem}
+.eclairage .auteur{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet)}
+.eclairage .auteur b{color:var(--ink);font-weight:500}
+.eclairage h3{font-weight:300;font-size:clamp(1.5rem,3.6vw,2rem);line-height:1.25;margin:1rem 0}
+.eclairage p{color:var(--ink-2);font-size:1.08rem}
+.eclairage p+p{margin-top:.8rem}
+.eclairage .lien-texte strong{color:var(--ink);font-weight:500}
+.eclairage .echo{margin-top:1.2rem;padding:1rem 0 0 1rem;border-left:2px solid var(--liturgie)}
+.eclairage .echo .rubrique{margin-bottom:.3rem;font-size:.7rem;color:var(--liturgie)}
+.eclairage .echo + p{margin-top:1.2rem}
+.eclairage .decouvrir{font-style:italic}
+.eclairage .limite,.eclairage .source{font-family:var(--ui);font-size:.78rem;color:var(--muet);line-height:1.5}
+.eclairage a{color:inherit;text-underline-offset:.2em}
+.eclairage a:focus-visible{outline:2px solid var(--liturgie);outline-offset:3px}
 
-/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
-.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
-.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
-.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+/* ---------- ANALOGIE : le pont, le texte s'éclaire en défilant ---------- */
+.analogie p:not(.rubrique){font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.4rem,3.4vw,1.95rem);line-height:1.42;margin-bottom:1rem}
+.analogie em{font-style:italic}
+.js .analogie p:not(.rubrique) span{color:var(--filet);transition:color .4s}
+.js .analogie p:not(.rubrique) span.on{color:var(--ink)}
 
-/* ---------- QUESTION : silence ---------- */
-.question{text-align:center;padding:4rem 1rem 3rem}
-.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
-.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+/* ---------- INVITATION : le geste ---------- */
+.invitation p{color:var(--ink-2)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.4rem,4vw,1.7rem);line-height:1.35;color:var(--ink);border-left:2px solid var(--liturgie);padding-left:1.2rem;margin:1.4rem 0}
+.invitation small{font-family:var(--ui);font-size:.8rem;color:var(--muet);display:block}
+
+/* ---------- QUESTION : la scène, puis le silence ---------- */
+.question{padding:7rem 0 2rem}
+.question .cadre{border-radius:24px;overflow:hidden;aspect-ratio:10/3;background:var(--c-fond)}
+.question .cadre svg{width:100%;height:100%}
+@media(min-width:90rem){.question .cadre{margin:0 -6rem}}
+.js .question .cadre{clip-path:inset(var(--i,12%) var(--i,12%) round 24px)}
 
 /* ---------- RACINES ---------- */
-.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
-.racine:last-child{border-bottom:0}
-.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
-.racine p{font-size:1.06rem;color:var(--ctx-ink)}
-.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+.racine{padding-top:1rem;border-top:1px solid var(--filet)}
+.racine h3{font-size:1.2rem;margin-bottom:.5rem}
+.racine p{font-size:1.04rem;color:var(--ink-2)}
+.racine .attrib{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muet);margin-top:.7rem}
 
-footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
-footer a{color:var(--rubrique)}
+footer{border-top:1px solid var(--filet);margin-top:5rem;padding:2rem 0 7rem;font-family:var(--ui);color:var(--muet);font-size:.78rem;line-height:1.8}
+footer a{color:var(--ink-2)}
 
-@media (prefers-reduced-motion:no-preference){
-  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-  .reveler.vu{opacity:1;transform:none}
-}
+/* ---------- RÉVÉLATION AU DÉFILEMENT (avec JS seulement) ---------- */
+.js .reveler:not(.vu){opacity:0;transform:translateY(24px)}
+.reveler{transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 
-/* ---------- PORTES & BARRE : les entrées de lecture ----------
-   Lire / Comprendre suivent la position ; Voir est un interrupteur qui
-   déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
-.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0;container-type:inline-size}
-.portes a{min-width:0;border-right:1px solid var(--filet);padding:1rem clamp(.3rem,1.6cqi,.7rem);color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
-.portes a:last-child{border-right:0}
-.portes .n{display:block;font-family:'Fraunces',serif;font-size:clamp(.95rem,3.2cqi,1.35rem);line-height:1;white-space:nowrap}
-.portes .d{display:block;font-size:clamp(.72rem,2.1cqi,.85rem);color:var(--muet);font-style:italic;margin-top:.3rem;line-height:1.3}
+/* ---------- PORTES & BARRE : les entrées de lecture ---------- */
+.portes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--filet);margin:2.6rem 0 0}
+@media(min-width:620px){.portes{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.portes a{min-width:0;padding:1.1rem 1rem 1.1rem 0;border-bottom:1px solid var(--filet);color:var(--ink);text-decoration:none;transition:color .25s}
+.portes .n{display:block;font-family:'Fraunces',serif;font-weight:300;font-size:1.45rem;line-height:1.1}
+.portes .d{display:block;font-family:var(--ui);font-size:.75rem;color:var(--muet);margin-top:.3rem;line-height:1.35}
 .portes a:hover .n,.portes .on .n{color:var(--liturgie)}
-.portes .on{background:var(--papier-creux)}
-.portes .voir .n{color:var(--rubrique)}
-.portes .ouvert-voir{background:var(--liturgie)}
-.portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
+.portes .ouvert-voir .n,.portes .ouvert-demander .n{color:var(--liturgie)}
 .portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-@media(max-width:560px){.portes .d{display:none}.portes a{padding:.85rem .15rem;text-align:center}.portes .n{font-size:clamp(.56rem,3.6cqi,1.02rem)}}
-.barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
-.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
-@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.35rem .6rem;letter-spacing:.04em}}
-.barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
+.barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;align-items:center;gap:2px;background:color-mix(in srgb,var(--papier) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--filet);border-radius:999px;padding:4px;box-shadow:0 10px 30px -14px rgba(40,25,15,.35);font-family:var(--ui);transition:left .35s ease}
+.barre-portes a,.barre-portes button{font:inherit;font-size:.82rem;background:none;border:0;padding:.45rem .95rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .25s,color .25s}
+@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.4rem .6rem}}
+.barre-portes .on,.barre-portes .ouvert-voir,.barre-portes .ouvert-demander,.barre-portes .ouvert-mot{background:var(--papier-creux)}
+.barre-portes .ask{color:var(--liturgie);font-weight:500}
+.barre-portes .avance{width:46px;height:3px;border-radius:3px;background:var(--filet);margin:0 .55rem 0 .35rem;overflow:hidden}
+.barre-portes .avance i{display:block;height:100%;width:0;background:var(--liturgie)}
 footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
 
-/* ---------- COMPAGNON : une vidéo à la fois ---------- */
-.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
-.compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+/* ---------- COMPAGNON : mot, vidéo, question ---------- */
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),background .6s}
+.compagnon .entete{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1.2rem}
 .compagnon .entete .rubrique{margin:0}
-.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem;flex:none}
 .compagnon .replier:hover,.fil .replier:hover{color:var(--ink);border-color:var(--ink)}
-.video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
-.video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
-.video:hover img,.video:focus-visible img{filter:none;opacity:1}
+/* le mot : l'original apparaît lettre à lettre, puis la glose, puis aujourd'hui */
+.vitre-mot .g-tete{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.vitre-mot .g-orig{font-family:'Fraunces',serif;font-weight:300;font-size:2.4rem;line-height:1.05;display:inline-flex;flex-wrap:wrap}
+.vitre-mot .g-orig span{display:inline-block;transition:opacity .35s,transform .55s cubic-bezier(.2,1.3,.4,1)}
+.vitre-mot:not(.vivant) .g-orig span{opacity:0;transform:translateY(14px)}
+.vitre-mot .g-fr{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muet);text-align:right}
+.vitre-mot .g-fr b{display:block;font-family:'EB Garamond',serif;font-weight:400;font-size:1.15rem;text-transform:none;letter-spacing:0;color:var(--liturgie)}
+.vitre-mot .g-meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);margin:.8rem 0 1.2rem}
+.vitre-mot .g-prose{font-size:1.08rem;line-height:1.65;transition:opacity .6s .15s}
+.vitre-mot .g-prose .gr{font-style:italic}
+.vitre-mot .aujourdhui{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--filet);transition:opacity .6s .4s,transform .6s .4s}
+.vitre-mot .aujourdhui::before{content:"Et pour nous, aujourd'hui";display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--liturgie);margin-bottom:.4rem}
+.vitre-mot:not(.vivant) .g-prose,.vitre-mot:not(.vivant) .aujourdhui{opacity:0;transform:translateY(8px)}
+.vitre-mot .tous{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--filet)}
+.vitre-mot .tous p{width:100%;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet)}
+.vitre-mot .tous button{font:inherit;font-size:.98rem;border:1px solid var(--filet);background:none;color:var(--ink);border-radius:99px;padding:.1rem .7rem;cursor:pointer}
+.vitre-mot .tous button:hover,.vitre-mot .tous button.on{border-color:var(--rubrique)}
+.video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border-radius:14px;overflow:hidden;cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85);transition:transform .5s}
+.video:hover img,.video:focus-visible img{transform:scale(1.03)}
 .video .facade-titre{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-family:'Fraunces',serif;font-size:1.3rem}
-.video .lire{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;background:var(--papier);color:var(--ink);padding:.35rem .8rem .35rem .45rem;border-radius:999px;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;border:1px solid var(--filet)}
-.video .lire::before{content:"▶";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--rubrique);color:var(--papier);font-size:.62rem}
+.video .lire{position:absolute;left:.8rem;bottom:.8rem;display:flex;align-items:center;gap:.5rem;background:var(--papier);color:var(--ink);padding:.3rem .8rem .3rem .35rem;border-radius:999px;font-family:var(--ui);font-size:.75rem}
+.video .lire::before{content:"▶";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--liturgie);color:#fff;font-size:.55rem}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video:focus-visible{outline:2px solid var(--liturgie);outline-offset:3px}
-.compteur{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.8rem;margin-top:.8rem}
-.vtitre{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-top:.4rem}
-.raison{font-size:1.02rem;color:var(--glose-ink);font-style:italic;margin-top:.3rem}
-.credit{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.8rem;margin-top:.45rem}
-.credit a{color:var(--muet);text-decoration:none;border-bottom:1px solid var(--filet)}
-.credit a:hover{color:var(--rubrique)}
-.pellicule{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.9rem 0 .5rem;margin-top:1rem;border-top:1px solid var(--filet);scrollbar-width:thin}
-.pellicule .groupe{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-variant:small-caps;letter-spacing:.1em;font-size:.72rem;color:var(--rubrique);border-left:1px solid var(--filet);padding-left:.3rem;margin-left:.3rem;text-align:center}
-.pellicule .groupe:first-child{margin-left:0;scroll-snap-align:start}
-.pellicule button{flex:0 0 112px;scroll-snap-align:start;background:none;border:2px solid transparent;padding:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit;border-radius:2px;opacity:.75;transition:opacity .2s,border-color .2s}
-.pellicule button img,.pellicule .sans-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:grayscale(1) sepia(.25);background:var(--papier-creux)}
-.pellicule button span:last-child{display:block;font-size:.8rem;line-height:1.25;padding:.25rem .2rem .1rem}
-.pellicule button:hover{opacity:1}
-.pellicule button.on{border-color:var(--liturgie);opacity:1}
-.pellicule button.on img{filter:none}
-/* ---------- LE FIL DU JOUR : volet gauche, se repérer ----------
-   Le jour, les lectures, le plan, les sources. Ouvert sur grand écran (il
-   pousse la page), tiroir sur mobile. Repliable, redimensionnable. */
-.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-size:.92rem;transform:translateX(-105%);transition:transform .35s ease}
+.compteur{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);margin-top:.9rem}
+.vtitre{font-family:'Fraunces',serif;font-weight:400;font-size:1.25rem;margin-top:.3rem}
+.raison{font-size:1.02rem;color:var(--ink-2);margin-top:.3rem}
+.credit{font-family:var(--ui);font-size:.72rem;color:var(--muet);margin-top:.5rem}
+.credit a{color:var(--muet)}
+.pellicule{display:flex;gap:.7rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 0 .5rem;margin-top:1.2rem;border-top:1px solid var(--filet);scrollbar-width:thin}
+.pellicule .groupe{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);text-align:center}
+.pellicule button{flex:0 0 120px;scroll-snap-align:start;background:none;border:0;padding:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit;opacity:.7;transition:opacity .2s}
+.pellicule button img,.pellicule .sans-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:8px;background:var(--papier-creux);outline:2px solid transparent;outline-offset:2px}
+.pellicule button span:last-child{display:block;font-family:var(--ui);font-size:.72rem;line-height:1.3;padding:.35rem .1rem 0}
+.pellicule button:hover,.pellicule button.on{opacity:1}
+.pellicule button.on img{outline-color:var(--liturgie)}
+
+/* ---------- LE FIL DU JOUR : volet gauche, se repérer ---------- */
+.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-family:var(--ui);font-size:.82rem;transform:translateX(-105%);transition:transform .35s ease,background .6s}
 .fil.ouvert{transform:none}
 .fil .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 1.4rem 2rem}
 .fil-tete{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem .6rem}
 .fil-tete .rubrique{margin:0}
-.fil h3{font-family:inherit;font-variant:small-caps;letter-spacing:.12em;font-size:.8rem;font-weight:400;color:var(--muet);margin:1.5rem 0 .45rem}
+.fil h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:400;color:var(--muet);margin:1.6rem 0 .5rem}
 .fil p{margin:0}
-.fil-jour .date{font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.3}
+.fil-jour .date{font-family:'Fraunces',serif;font-size:1.1rem;line-height:1.3}
 .fil-jour .temps{color:var(--muet);margin-top:.25rem}
-.fil-jour .pastille{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
-.fil-jour .suite{font-style:italic;color:var(--glose-ink);margin-top:.5rem;line-height:1.4}
-.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem!important;font-size:.85rem}
+.fil-jour .pastille{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
+.fil-jour .suite{font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:var(--ink-2);margin-top:.5rem;line-height:1.4}
+.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.8rem!important}
 .fil a{color:var(--muet);text-decoration:none;transition:color .2s}
 .fil a:hover{color:var(--ink)}
 .fil ol{list-style:none;margin:0;padding:0}
-.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:2px solid var(--filet);padding:.28rem .7rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
-.fil ol small{display:block;font-size:.75rem;font-variant:small-caps;letter-spacing:.06em}
-.fil ol .on{color:var(--ink);border-left-color:var(--liturgie)}
-.fil-sources .groupe{border-left:2px solid var(--filet);padding:.1rem 0 .1rem .7rem;margin-bottom:.7rem;color:var(--muet);line-height:1.4;transition:border-color .2s}
+.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:1px solid var(--filet);padding:.32rem .8rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
+.fil ol small{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase}
+.fil ol .on{color:var(--ink);border-left:1px solid var(--liturgie)}
+.fil-sources .groupe{border-left:1px solid var(--filet);padding:.1rem 0 .1rem .8rem;margin-bottom:.8rem;color:var(--muet);line-height:1.45;transition:border-color .2s}
 .fil-sources .groupe.on{border-left-color:var(--liturgie)}
 .fil-sources .groupe.on .nom{color:var(--ink)}
-.fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
+.fil-sources .nom{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase}
 .fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
-.fil-sources small{display:block;font-size:.75rem}
-.fil-note{font-size:.78rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
-.fil-liens{font-size:.82rem;margin-top:.8rem!important}
-.fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
-#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
+.fil-sources small{display:block;font-size:.7rem}
+.fil-note{font-size:.74rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
+.fil-liens{font-size:.78rem;margin-top:.8rem!important}
+.fil-ia{font-size:.74rem;color:var(--rubrique);margin-top:1rem!important}
+#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font-family:var(--ui);font-size:.78rem;cursor:pointer}
 #ouvrir-fil:hover{border-color:var(--ink)}
 .fil .poignee{right:0;top:0;bottom:0;width:14px;cursor:col-resize}
 .fil .poignee span{width:3px;height:48px}
 @media(min-width:1280px){
-  body{transition:padding .35s ease}
+  body{transition:padding .35s ease,background .6s,color .6s}
   body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
   body.fil-ouvert #carte{display:none}
   /* Le fil porte déjà références, sources et mention IA. */
@@ -302,8 +380,8 @@ footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
   .fil .poignee{display:none}
 }
 
-/* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
-   plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
+/* Poignée : on tire le bord du compagnon pour l'agrandir. Largeur (--panneau)
+   sur écran large, hauteur (--volet) sur mobile. */
 .compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
 .poignee{position:absolute;z-index:2;display:grid;place-items:center;touch-action:none}
 .poignee span{display:block;background:var(--filet);border-radius:999px;transition:background .2s}
@@ -313,7 +391,7 @@ body.redim,body.redim *{user-select:none;-webkit-user-select:none}
 body.redim .video iframe{pointer-events:none}
 body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
 @media(min-width:1100px){
-  body{transition:padding .35s ease}
+  body{transition:padding .35s ease,background .6s,color .6s}
   .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
   .compagnon .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
   .compagnon .poignee span{width:3px;height:48px}
@@ -325,50 +403,71 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
   .barre-portes{left:calc(var(--gauche,0px) + (100vw - var(--gauche,0px) - var(--droite,0px))/2)}
 }
 @media(max-width:1099px){
-  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:20px 20px 0 0;box-shadow:0 -20px 40px rgba(40,25,15,.18);transform:translateY(105%)}
   .compagnon .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
   .compagnon .poignee span{width:44px;height:5px}
   body.redim{cursor:row-resize}
 }
 .compagnon.ouvert{transform:none}
-.barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
-.barre-portes .ouvert-demander,.portes .ouvert-demander{background:var(--rubrique);color:var(--papier)}
-.portes .ouvert-demander .n,.portes .ouvert-demander .d{color:var(--papier)}
-.compagnon .onglets{display:flex;gap:.25rem;padding:.25rem;border:1px solid var(--filet);border-radius:999px}
-.compagnon .onglets button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;background:none;border:0;padding:.3rem 1rem;border-radius:999px;cursor:pointer;color:var(--ink);transition:background .3s,color .3s}
-.compagnon .onglets button.on{background:var(--liturgie);color:var(--papier)}
-.compagnon .onglets button[data-onglet=demander].on{background:var(--rubrique)}
-.carnet .avert{font-size:.86rem;line-height:1.4;color:var(--rubrique);border:1px solid var(--rubrique);padding:.45rem .7rem;margin:0 0 .9rem;border-radius:1px;background:var(--papier-creux)}
+.compagnon .onglets{display:flex;gap:2px;padding:3px;background:var(--papier-creux);border-radius:10px;font-family:var(--ui)}
+.compagnon .onglets button{font:inherit;font-size:.78rem;background:none;border:0;padding:.3rem .8rem;border-radius:8px;cursor:pointer;color:var(--muet);transition:background .25s,color .25s}
+.compagnon .onglets button.on{background:var(--papier);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.carnet .avert{font-family:var(--ui);font-size:.76rem;line-height:1.45;color:var(--rubrique);border:1px solid currentColor;padding:.5rem .7rem;margin:0 0 1rem;border-radius:10px}
 .carnet .qr{border-top:1px solid var(--filet)}
-.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-style:italic;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.75rem 1.4rem .75rem 0;cursor:pointer;position:relative}
-.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.7rem;color:var(--rubrique);font-style:normal}
+.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.8rem 1.6rem .8rem 0;cursor:pointer;position:relative}
+.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.75rem;font-family:var(--ui);color:var(--rubrique)}
 .carnet .q-btn[aria-expanded=true]::after{content:"−"}
 .carnet .q-btn:hover{color:var(--liturgie)}
 .carnet .q-btn:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
-.carnet .r{font-size:1.02rem;color:var(--ctx-ink);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
+.carnet .r{font-size:1.02rem;color:var(--ink-2);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
 .carnet .r p{margin-bottom:.5rem}
 .carnet .sources{display:grid;gap:.3rem;margin-top:.6rem}
-.carnet .sources p{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--muet);margin:0}
+.carnet .sources p{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muet);margin:0}
 .carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
-.carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
+.carnet .sources span{font-family:var(--ui);font-size:.7rem;color:var(--muet);border:1px solid var(--filet);padding:.05rem .5rem;border-radius:99px}
 .carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
 .carnet .sources .trad a{color:inherit;text-decoration:none}
 .carnet .sources .trad a:hover{text-decoration:underline}
-.carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet .ia{font-family:var(--ui);font-size:.72rem;color:var(--muet);margin-top:.5rem}
 .carnet-libre{border-top:1px solid var(--filet);padding-top:1rem;margin-top:.4rem}
-.carnet-libre .libre-titre{font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;color:var(--rubrique);margin-bottom:.5rem}
-.carnet-libre .libre-saisie{display:flex;gap:.6rem}
-.carnet-libre input{flex:1;font:inherit;font-size:1.05rem;background:none;border:0;border-bottom:1px solid var(--muet);color:var(--ink);padding:.3rem 0}
-.carnet-libre input:focus{outline:none;border-bottom-color:var(--liturgie)}
-.carnet-libre button{font:inherit;font-variant:small-caps;letter-spacing:.08em;background:none;border:1px solid var(--rubrique);color:var(--rubrique);padding:.2rem .8rem;cursor:pointer}
+.carnet-libre .libre-titre{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--liturgie);margin-bottom:.5rem}
+.carnet-libre .libre-saisie{display:flex;gap:.5rem}
+.carnet-libre input{flex:1;font-family:var(--ui);font-size:.9rem;background:var(--papier-creux);border:1px solid var(--filet);border-radius:12px;color:var(--ink);padding:.55rem .8rem}
+.carnet-libre input:focus{outline:none;border-color:var(--liturgie)}
+.carnet-libre button{font-family:var(--ui);font-size:.82rem;background:var(--liturgie);border:0;border-radius:12px;color:#fff;padding:.2rem .9rem;cursor:pointer}
 .carnet-libre button:disabled{opacity:.5;cursor:wait}
 .carnet-libre .libre-turnstile{margin-top:.7rem}
-.carnet-libre .libre-etat{font-size:.85rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre .libre-etat{font-family:var(--ui);font-size:.78rem;color:var(--muet);margin-top:.5rem}
 .carnet-libre .libre-reponse{margin-top:.7rem}
 .carnet .libre-ferme{font-style:italic;color:var(--muet);border-top:1px solid var(--filet);padding-top:.9rem;margin-top:.4rem}
+
+/* ---------- MÉTÉO DANS LES SCÈNES ---------- */
+.m{opacity:0;transition:opacity .9s}
+:root[data-meteo="soleil"] .m-soleil,:root[data-meteo="couvert"] .m-nuage,:root[data-meteo="pluie"] .m-nuage,:root[data-meteo="pluie"] .m-pluie,:root[data-meteo="neige"] .m-neige{opacity:1}
+.spirale{transform-box:fill-box;transform-origin:center;animation:tourne 50s linear infinite}
+.goutte{animation:pluie 1.3s linear infinite}
+.flocon{animation:neige 9s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+@keyframes pluie{from{transform:translate(0,-8%)}to{transform:translate(-3%,110%)}}
+@keyframes neige{from{transform:translate(0,-4%)}to{transform:translate(2.5%,110%)}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before{animation:none!important;transition:none!important}
+  .js .reveler:not(.vu){opacity:1;transform:none}
+  .js .scene-ouverture,.js .pause .cadre,.js .question .cadre{clip-path:none}
+  .js .allume span,.js .analogie p span{opacity:1;color:inherit}
+}
+@media print{
+  .js .reveler:not(.vu){opacity:1;transform:none}
+  .js .scene-ouverture,.js .pause .cadre,.js .question .cadre{clip-path:none}
+  .js .allume span,.js .analogie p span{opacity:1;color:inherit}
+  .js .feuillet .glose{display:block}
+  .barre-portes,.compagnon,.fil,#ouvrir-fil,#basculer-theme,#carte{display:none}
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="pastel" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="3" result="onde"/><feDisplacementMap in="SourceGraphic" in2="onde" scale="10" xChannelSelector="R" yChannelSelector="G" result="forme"/><feTurbulence type="fractalNoise" baseFrequency=".9 .22" numOctaves="2" seed="8" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.4 0 0 0 1.85" result="masque"/><feComposite in="forme" in2="masque" operator="in"/></filter><filter id="encre" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="11" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
 
 <button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
 
@@ -430,7 +529,8 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
 </p>
     <h1>Voir <span class="it">et courir</span></h1>
     <p class="chapeau">Paul s'impose une discipline d'athlète pour ne pas être disqualifié ; Jésus demande qu'on ôte d'abord la poutre de son œil avant de vouloir guider qui que ce soit.</p>
-    <figure class="gravure" aria-label="Un coureur du stade antique, corps penché vers la ligne d'arrivée, dont l'un des bras se lève non pour recevoir une couronne mais pour toucher son propre œil, comme s'il devait d'abord s'y voir avant d'atteindre le but — deux gestes de la lecture du jour fondus en une seule silhouette au trait gravé."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 128 h324"/><path d="M141 54 q9 -9 18 0 q-9 9 -18 0 z"/><path d="M150 63 q16 14 20 32"/><path d="M170 95 q-12 8 -15 15 q-6 8 -17 17"/><path d="M170 95 q14 8 20 13 q10 8 20 18"/><path d="M156 68 q-14 6 -24 16"/></g><g class="trait-liturgie"><path d="M268 28 v100"/><path d="M268 42 q-90 5 -160 30"/></g><g class="trait-rubrique"><path d="M152 64 q-12 -6 -6 -12"/><path d="M144 52 h5"/></g></svg></figure>
+    <p class="ambiance" id="ambiance" aria-live="polite">Une lumière douce pour lire.</p>
+    <figure class="scene-ouverture" aria-label="Un coureur du stade antique, corps penché vers la ligne d'arrivée, dont l'un des bras se lève non pour recevoir une couronne mais pour toucher son propre œil, comme s'il devait d'abord s'y voir avant d'atteindre le but — deux gestes de la lecture du jour fondus en une seule silhouette au trait gravé."><svg class="fond-scene" viewBox="0 0 340 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="340" height="150" fill="var(--c-fond)"/><g filter="url(#pastel)"><path d="M0 0H130L131 150H0Z" fill="var(--c-rose)" opacity=".5"/><path d="M130 0H216L204 150H131Z" fill="var(--c-ocre)" opacity=".5"/><path d="M216 0H340V150H204Z" fill="var(--c-jaune)" opacity=".5"/><circle cx="98" cy="43" r="21" fill="var(--c-jaune)" opacity=".55"/></g><g class="m m-soleil" filter="url(#encre)"><g class="spirale"><path d="M299 30 m-14 0 a14 14 0 1 1 27 0 a30 30 0 1 1 -60 0 a49 49 0 1 1 98 0 a71 71 0 1 1 -141 0" fill="none" stroke="var(--c-terre)" stroke-width="2.0" stroke-linecap="round"/></g></g><g class="m m-nuage" fill="var(--c-fond)" filter="url(#pastel)" opacity=".9"><ellipse cx="41" cy="21" rx="61" ry="17"/><ellipse cx="68" cy="15" rx="41" ry="11"/><ellipse cx="231" cy="24" rx="75" ry="21"/><ellipse cx="258" cy="16" rx="44" ry="12"/></g><g class="m m-pluie" stroke="var(--c-bleu)" stroke-width="2.0" stroke-linecap="round"><path class="goutte" style="animation-delay:-0.51s" d="M137 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-1.04s" d="M2 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.36s" d="M137 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.95s" d="M173 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.49s" d="M234 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.35s" d="M273 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.12s" d="M131 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.40s" d="M35 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.03s" d="M345 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.06s" d="M113 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.54s" d="M110 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.98s" d="M25 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-1.01s" d="M263 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.60s" d="M342 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.73s" d="M339 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.63s" d="M59 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.37s" d="M220 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.22s" d="M240 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.74s" d="M261 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.22s" d="M166 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.38s" d="M86 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.04s" d="M332 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-1.04s" d="M279 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.43s" d="M252 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-1.05s" d="M129 0 l-6.8 18.7"/><path class="goutte" style="animation-delay:-0.93s" d="M160 0 l-6.8 18.7"/></g><g class="m m-neige" fill="#fff"><circle class="flocon" style="animation-delay:-8.75s" cx="162" cy="0" r="2.5"/><circle class="flocon" style="animation-delay:-8.35s" cx="184" cy="0" r="1.5"/><circle class="flocon" style="animation-delay:-5.29s" cx="277" cy="0" r="3.1"/><circle class="flocon" style="animation-delay:-1.05s" cx="4" cy="0" r="1.6"/><circle class="flocon" style="animation-delay:-6.36s" cx="126" cy="0" r="3.3"/><circle class="flocon" style="animation-delay:-5.23s" cx="156" cy="0" r="3.3"/><circle class="flocon" style="animation-delay:-2.00s" cx="117" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-3.52s" cx="196" cy="0" r="3.3"/><circle class="flocon" style="animation-delay:-4.16s" cx="275" cy="0" r="3.2"/><circle class="flocon" style="animation-delay:-4.64s" cx="274" cy="0" r="3.1"/><circle class="flocon" style="animation-delay:-2.67s" cx="159" cy="0" r="1.9"/><circle class="flocon" style="animation-delay:-6.19s" cx="334" cy="0" r="3.1"/><circle class="flocon" style="animation-delay:-0.89s" cx="30" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-4.20s" cx="95" cy="0" r="3.1"/><circle class="flocon" style="animation-delay:-8.83s" cx="115" cy="0" r="3.0"/><circle class="flocon" style="animation-delay:-5.04s" cx="99" cy="0" r="2.7"/><circle class="flocon" style="animation-delay:-0.29s" cx="197" cy="0" r="2.9"/><circle class="flocon" style="animation-delay:-4.51s" cx="96" cy="0" r="2.9"/><circle class="flocon" style="animation-delay:-5.93s" cx="63" cy="0" r="1.7"/><circle class="flocon" style="animation-delay:-5.16s" cx="41" cy="0" r="2.8"/><circle class="flocon" style="animation-delay:-2.38s" cx="120" cy="0" r="3.1"/><circle class="flocon" style="animation-delay:-1.80s" cx="230" cy="0" r="2.8"/><circle class="flocon" style="animation-delay:-2.89s" cx="78" cy="0" r="2.7"/><circle class="flocon" style="animation-delay:-3.73s" cx="248" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-7.88s" cx="150" cy="0" r="3.3"/><circle class="flocon" style="animation-delay:-6.45s" cx="282" cy="0" r="2.9"/><circle class="flocon" style="animation-delay:-3.34s" cx="294" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-0.79s" cx="184" cy="0" r="2.2"/><circle class="flocon" style="animation-delay:-8.17s" cx="159" cy="0" r="3.0"/><circle class="flocon" style="animation-delay:-8.89s" cx="183" cy="0" r="3.3"/></g></svg><div class="gravure"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M8 128 h324"/><path d="M141 54 q9 -9 18 0 q-9 9 -18 0 z"/><path d="M150 63 q16 14 20 32"/><path d="M170 95 q-12 8 -15 15 q-6 8 -17 17"/><path d="M170 95 q14 8 20 13 q10 8 20 18"/><path d="M156 68 q-14 6 -24 16"/></g><g class="trait-liturgie"><path d="M268 28 v100"/><path d="M268 42 q-90 5 -160 30"/></g><g class="trait-rubrique"><path d="M152 64 q-12 -6 -6 -12"/><path d="M144 52 h5"/></g></svg></div></figure>
     <nav class="portes" aria-label="Entrées de lecture">
       <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
 <a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">2 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
@@ -442,42 +542,44 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
   <section class="bloc reveler" id="textes">
     <div class="rail-tete">
       <div>
-        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <p class="rubrique"><span class="num">01</span> La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
         <h2>Ce que dit le texte</h2>
       </div>
       <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
     </div>
+    <p class="indice-mots">Touchez un <span>mot entouré</span> pour explorer son sens.</p>
     <div class="rail" id="r-textes" data-points="p-textes">
-      <article class="feuillet ">
-        <p class="ref-lat">Première lecture — 1 Co 9, 16-19.22-27 — Segond 1910</p>
+      <article class="feuillet " id="lecture-0">
+        <p class="ref-lat"><b>Première lecture</b><span>1 Co 9, 16-19.22-27 · Segond 1910</span></p>
         <div class="ecriture "><p><span class="s">16</span> Si je prêche l'Évangile, ce n'est pas pour moi un sujet de gloire, car la <button class="mot" data-g="g-anagke">nécessité</button> m'en est imposée, et malheur à moi si je ne prêche pas l'Évangile !</p><p><span class="s">17</span> Si je le fais de bon cœur, j'en ai la récompense ; mais si je le fais malgré moi, c'est une charge qui m'est confiée.</p><p><span class="s">18</span> Quelle est donc ma récompense ? C'est d'offrir <button class="mot" data-g="g-adapanon">gratuitement</button> l'Évangile que j'annonce, sans user de mon droit de prédicateur de l'Évangile.</p><p><span class="s">19</span> Car, bien que je sois libre à l'égard de tous, je me suis rendu le <button class="mot" data-g="g-doulos">serviteur</button> de tous, afin de gagner le plus grand nombre.</p><p><span class="s">22</span> J'ai été faible avec les faibles, afin de gagner les faibles. Je me suis fait tout à tous, afin d'en sauver de toute manière quelques-uns.</p><p><span class="s">23</span> Je fais tout à cause de l'Évangile, afin d'y avoir part.</p><p><span class="s">24</span> Ne savez-vous pas que ceux qui courent dans le stade courent tous, mais qu'un seul remporte le prix ? Courez de manière à le remporter.</p><p><span class="s">25</span> Tous ceux qui combattent s'imposent toute espèce d'abstinences, et ils le font pour obtenir une couronne corruptible ; mais nous, faisons-le pour une <button class="mot" data-g="g-aphtharton">couronne incorruptible</button>.</p><p><span class="s">26</span> Ainsi donc, je cours, non pas comme au hasard ; je frappe, non pas comme battant l'air.</p><p><span class="s">27</span> Mais je traite durement mon corps et je le tiens assujetti, de peur d'être moi-même <button class="mot" data-g="g-adokimos">rejeté</button>, après avoir prêché aux autres.</p></div>
-        <div class="glose" id="g-anagke"><span class="lemme">ἀνάγκη</span> Le mot grec est <span class="gr">anankè</span>, contrainte ou nécessité, qui structure toute la phrase. Segond traduit « la nécessité m'en est imposée », gardant la passivité du verbe grec ἐπίκειται, « elle pèse sur moi » : Paul ne se vante pas d'un zèle personnel, il subit une charge posée sur lui, comme la main de Dieu sur Jérémie, « il y avait dans mon cœur comme un feu dévorant » (Jr 20, 9). Chrysostome, dans ses Homélies sur la première épître aux Corinthiens (homélie 21), insiste sur ce point : la prédication de Paul n'est pas un mérite mais une dette, ce qui fonde son « malheur à moi » comme un cri de prophète plutôt qu'une plainte d'employé.</div>
-        <div class="glose" id="g-adapanon"><span class="lemme">ἀδάπανον</span> Segond traduit « gratuitement », mais le grec <span class="gr">adapanon</span> signifie littéralement « sans dépense », un terme économique et non affectif. Paul ne dit pas qu'il prêche sans calcul intérieur, mais qu'il refuse de se faire payer, alors que la loi, évoquée juste avant, l'y autoriserait. Ce choix de traduction efface la dimension très concrète du débat corinthien, où certains reprochaient précisément à Paul de ne rien accepter — signe, pensaient-ils, qu'il n'était pas un vrai apôtre.</div>
-        <div class="glose" id="g-doulos"><span class="lemme">δοῦλος</span> Le mot grec est <span class="gr">doulos</span>, l'esclave, non le serviteur salarié que suggère la traduction adoucie de Segond. Paul choisit délibérément le mot le plus bas de l'échelle sociale antique pour décrire sa liberté même : libre de tous, il s'est fait l'esclave de tous. Ce renversement annonce le vocabulaire de Philippiens 2, 7, où le Christ « prit la forme d'un esclave » ; Paul applique à son propre ministère le mouvement même de l'incarnation.</div>
-        <div class="glose" id="g-aphtharton"><span class="lemme">ἄφθαρτον</span> L'adjectif grec <span class="gr">aphtharton</span> désigne ce qui échappe à la corruption, à la dissolution des corps. Segond traduit « incorruptible », ce qui garde bien le sens, mais perd l'écho qu'avait le mot pour des lecteurs corinthiens : la couronne de pin remise aux vainqueurs des Jeux isthmiques, disputés tout près de Corinthe, se flétrissait en quelques jours. Calvin, dans son commentaire, appelle cela « la récompense qui ne vieillit point ».</div>
-        <div class="glose" id="g-adokimos"><span class="lemme">ἀδόκιμος</span> Le grec <span class="gr">adokimos</span> appartient au vocabulaire de l'orfèvre : il qualifie le métal qui, à l'épreuve du feu, se révèle impur et doit être rejeté. Segond traduit « rejeté », ce qui est juste mais lisse la métaphore technique sous-jacente — Paul ne craint pas un jugement moral abstrait, il craint l'épreuve qui démasque le faux. C'est le même mot qu'il emploie en 2 Corinthiens 13, 5 pour inviter les croyants à s'examiner eux-mêmes, « de peur que vous ne soyez réprouvés ».</div>
+        <details class="glose" id="g-anagke" data-lemme="ἀνάγκη" data-lecture="1 Co 9, 16-19.22-27"><summary>ἀνάγκη</summary><div class="g-prose">Le mot grec est <span class="gr">anankè</span>, contrainte ou nécessité, qui structure toute la phrase. Segond traduit « la nécessité m'en est imposée », gardant la passivité du verbe grec ἐπίκειται, « elle pèse sur moi » : Paul ne se vante pas d'un zèle personnel, il subit une charge posée sur lui, comme la main de Dieu sur Jérémie, « il y avait dans mon cœur comme un feu dévorant » (Jr 20, 9). Chrysostome, dans ses Homélies sur la première épître aux Corinthiens (homélie 21), insiste sur ce point : la prédication de Paul n'est pas un mérite mais une dette, ce qui fonde son « malheur à moi » comme un cri de prophète plutôt qu'une plainte d'employé.</div></details>
+        <details class="glose" id="g-adapanon" data-lemme="ἀδάπανον" data-lecture="1 Co 9, 16-19.22-27"><summary>ἀδάπανον</summary><div class="g-prose">Segond traduit « gratuitement », mais le grec <span class="gr">adapanon</span> signifie littéralement « sans dépense », un terme économique et non affectif. Paul ne dit pas qu'il prêche sans calcul intérieur, mais qu'il refuse de se faire payer, alors que la loi, évoquée juste avant, l'y autoriserait. Ce choix de traduction efface la dimension très concrète du débat corinthien, où certains reprochaient précisément à Paul de ne rien accepter — signe, pensaient-ils, qu'il n'était pas un vrai apôtre.</div></details>
+        <details class="glose" id="g-doulos" data-lemme="δοῦλος" data-lecture="1 Co 9, 16-19.22-27"><summary>δοῦλος</summary><div class="g-prose">Le mot grec est <span class="gr">doulos</span>, l'esclave, non le serviteur salarié que suggère la traduction adoucie de Segond. Paul choisit délibérément le mot le plus bas de l'échelle sociale antique pour décrire sa liberté même : libre de tous, il s'est fait l'esclave de tous. Ce renversement annonce le vocabulaire de Philippiens 2, 7, où le Christ « prit la forme d'un esclave » ; Paul applique à son propre ministère le mouvement même de l'incarnation.</div></details>
+        <details class="glose" id="g-aphtharton" data-lemme="ἄφθαρτον" data-lecture="1 Co 9, 16-19.22-27"><summary>ἄφθαρτον</summary><div class="g-prose">L'adjectif grec <span class="gr">aphtharton</span> désigne ce qui échappe à la corruption, à la dissolution des corps. Segond traduit « incorruptible », ce qui garde bien le sens, mais perd l'écho qu'avait le mot pour des lecteurs corinthiens : la couronne de pin remise aux vainqueurs des Jeux isthmiques, disputés tout près de Corinthe, se flétrissait en quelques jours. Calvin, dans son commentaire, appelle cela « la récompense qui ne vieillit point ».</div></details>
+        <details class="glose" id="g-adokimos" data-lemme="ἀδόκιμος" data-lecture="1 Co 9, 16-19.22-27"><summary>ἀδόκιμος</summary><div class="g-prose">Le grec <span class="gr">adokimos</span> appartient au vocabulaire de l'orfèvre : il qualifie le métal qui, à l'épreuve du feu, se révèle impur et doit être rejeté. Segond traduit « rejeté », ce qui est juste mais lisse la métaphore technique sous-jacente — Paul ne craint pas un jugement moral abstrait, il craint l'épreuve qui démasque le faux. C'est le même mot qu'il emploie en 2 Corinthiens 13, 5 pour inviter les croyants à s'examiner eux-mêmes, « de peur que vous ne soyez réprouvés ».</div></details>
       </article>
-      <article class="feuillet psaume">
-        <p class="ref-lat">Psaume — Ps 83 (84), 3, 4, 5-6, 12 — Segond 1910</p>
+      <article class="feuillet psaume" id="lecture-1">
+        <p class="ref-lat"><b>Psaume</b><span>Ps 83 (84), 3, 4, 5-6, 12 · Segond 1910</span></p>
         <div class="ecriture psaume"><p><span class="s">3</span> Mon âme <button class="mot" data-g="g-nichsefa">soupire et languit</button> après les parvis de l'Éternel, mon cœur et ma chair poussent des cris vers le Dieu vivant.</p><p><span class="s">4</span> Le passereau même trouve une maison, et l'hirondelle un nid où elle dépose ses petits, tes autels, Éternel des armées ! Mon roi et mon Dieu !</p><p><span class="s">5</span> <button class="mot" data-g="g-ashrei">Heureux</button> ceux qui habitent ta maison ! Ils peuvent te célébrer encore. Pause.</p><p><span class="s">6</span> Heureux ceux qui placent en toi leur appui ! Ils trouvent dans leur cœur des <button class="mot" data-g="g-mesillot">chemins tout tracés</button>.</p><p><span class="s">12</span> Car l'Éternel Dieu est un soleil et un bouclier, l'Éternel donne la grâce et la gloire, il ne refuse aucun bien à ceux qui marchent dans l'intégrité.</p></div>
-        <div class="glose" id="g-nichsefa"><span class="lemme">נִכְסְפָה</span> Le verbe hébreu ici est <span class="gr">nikhsaf</span>, qui décrit littéralement le teint qui blêmit de désir, comme on pâlit à force d'attendre quelqu'un qui tarde. Segond le rend par un doublet, « soupire et languit », pour restituer en français ce que l'hébreu dit en un seul mot intense. Rachi et les commentateurs juifs médiévaux y entendent moins une émotion passagère qu'un épuisement physique du corps entier tourné vers le sanctuaire — le verset précise d'ailleurs aussitôt « mon cœur et ma chair ». Calvin, commentant ce psaume, y voit la marque d'un désir authentique de Dieu, distinct de la dévotion de façade.</div>
-        <div class="glose" id="g-ashrei"><span class="lemme">אַשְׁרֵי</span> L'hébreu porte <span class="gr">ashrei</span>, un pluriel construit intraduisible tel quel, littéralement « les bonheurs de… », qui ouvre aussi le Psaume 1 et que la Septante rendra par μακάριος, le mot même des Béatitudes de Matthieu 5. Segond traduit simplement « Heureux », ce qui est fidèle mais efface le lien littéraire que percevait tout lecteur juif ancien entre ce psaume et l'ouverture du Psautier. Ce n'est pas un souhait ni une émotion : c'est une déclaration sur l'état objectif de celui qui habite près de Dieu, avant même qu'il le ressente.</div>
-        <div class="glose" id="g-mesillot"><span class="lemme">מְסִלָּה</span> Le mot hébreu <span class="gr">mesillah</span> désigne une route surélevée et damée, souvent royale ou processionnelle — le même mot sert pour la route que le pèlerin trace en marchant vers Jérusalem à travers la vallée de Baca mentionnée juste après. Segond traduit « des chemins tout tracés », ce qui rend bien l'idée d'une voie déjà frayée, mais perd l'image très concrète de la chaussée construite. Les commentateurs rabbiniques y ont vu la promesse que celui qui met en Dieu son appui trouve, même dans une terre aride, un chemin praticable là où il n'y en avait pas.</div>
+        <details class="glose" id="g-nichsefa" data-lemme="נִכְסְפָה" data-lecture="Ps 83 (84), 3, 4, 5-6, 12"><summary>נִכְסְפָה</summary><div class="g-prose">Le verbe hébreu ici est <span class="gr">nikhsaf</span>, qui décrit littéralement le teint qui blêmit de désir, comme on pâlit à force d'attendre quelqu'un qui tarde. Segond le rend par un doublet, « soupire et languit », pour restituer en français ce que l'hébreu dit en un seul mot intense. Rachi et les commentateurs juifs médiévaux y entendent moins une émotion passagère qu'un épuisement physique du corps entier tourné vers le sanctuaire — le verset précise d'ailleurs aussitôt « mon cœur et ma chair ». Calvin, commentant ce psaume, y voit la marque d'un désir authentique de Dieu, distinct de la dévotion de façade.</div></details>
+        <details class="glose" id="g-ashrei" data-lemme="אַשְׁרֵי" data-lecture="Ps 83 (84), 3, 4, 5-6, 12"><summary>אַשְׁרֵי</summary><div class="g-prose">L'hébreu porte <span class="gr">ashrei</span>, un pluriel construit intraduisible tel quel, littéralement « les bonheurs de… », qui ouvre aussi le Psaume 1 et que la Septante rendra par μακάριος, le mot même des Béatitudes de Matthieu 5. Segond traduit simplement « Heureux », ce qui est fidèle mais efface le lien littéraire que percevait tout lecteur juif ancien entre ce psaume et l'ouverture du Psautier. Ce n'est pas un souhait ni une émotion : c'est une déclaration sur l'état objectif de celui qui habite près de Dieu, avant même qu'il le ressente.</div></details>
+        <details class="glose" id="g-mesillot" data-lemme="מְסִלָּה" data-lecture="Ps 83 (84), 3, 4, 5-6, 12"><summary>מְסִלָּה</summary><div class="g-prose">Le mot hébreu <span class="gr">mesillah</span> désigne une route surélevée et damée, souvent royale ou processionnelle — le même mot sert pour la route que le pèlerin trace en marchant vers Jérusalem à travers la vallée de Baca mentionnée juste après. Segond traduit « des chemins tout tracés », ce qui rend bien l'idée d'une voie déjà frayée, mais perd l'image très concrète de la chaussée construite. Les commentateurs rabbiniques y ont vu la promesse que celui qui met en Dieu son appui trouve, même dans une terre aride, un chemin praticable là où il n'y en avait pas.</div></details>
       </article>
-      <article class="feuillet evangile">
-        <p class="ref-lat">Évangile — Lc 6, 39-42 — Segond 1910</p>
+      <article class="feuillet evangile" id="lecture-2">
+        <p class="ref-lat"><b>Évangile</b><span>Lc 6, 39-42 · Segond 1910</span></p>
         <div class="ecriture evangile"><p><span class="s">39</span> Il leur dit aussi cette parabole : un aveugle peut-il conduire un aveugle ? Ne tomberont-ils pas tous deux dans une fosse ?</p><p><span class="s">40</span> Le disciple n'est pas au-dessus de son maître ; mais tout disciple accompli sera comme son maître.</p><p><span class="s">41</span> Pourquoi vois-tu la <button class="mot" data-g="g-karphos">paille</button> qui est dans l'œil de ton frère, et n'aperçois-tu pas la <button class="mot" data-g="g-dokos">poutre</button> qui est dans ton œil ?</p><p><span class="s">42</span> Ou comment peux-tu dire à ton frère : Frère, laisse-moi ôter la paille qui est dans ton œil, toi qui ne vois pas la poutre qui est dans le tien ? <button class="mot" data-g="g-hypokrites">Hypocrite</button>, ôte premièrement la poutre de ton œil, et alors tu verras comment ôter la paille qui est dans l'œil de ton frère.</p></div>
-        <div class="glose" id="g-karphos"><span class="lemme">κάρφος</span> Le grec <span class="gr">karphos</span> désigne un fragment minuscule et sec — un fétu de paille, une esquille de bois, quelque chose d'assez léger pour se loger sous une paupière. Segond traduit « paille », ce qui rend bien l'image rurale, familière à des auditeurs habitués aux aires de battage. Le mot n'a rien d'anodin dans sa légèreté même : c'est parce que la faute du frère est minime que l'aveuglement de celui qui la dénonce devient comique, un comique que Chrysostome, dans ses Homélies sur Matthieu (homélie 23, sur l'épisode parallèle), qualifie de grotesque plutôt que de simplement injuste.</div>
-        <div class="glose" id="g-dokos"><span class="lemme">δοκός</span> Le grec <span class="gr">dokos</span> est le terme technique de la charpente, la poutre maîtresse qui porte un toit, par opposition au fragile karphos. L'image ne fonctionne que par ce contraste de taille absurde, propre à l'hyperbole que Jésus emploie ailleurs, comme le chameau et le chas de l'aiguille. Segond traduit littéralement « poutre », sans perte notable ; la difficulté n'est pas lexicale ici mais existentielle, puisque nul ne sent le poids de sa propre poutre tant qu'il regarde à travers elle plutôt que de la regarder elle-même.</div>
-        <div class="glose" id="g-hypokrites"><span class="lemme">ὑποκριτής</span> Le grec <span class="gr">hypokritès</span> désignait à l'origine l'acteur du théâtre, celui qui répond depuis derrière un masque — le mot garde cette racine de réponse scénique, hypokrinomai, jouer un rôle. Segond conserve le mot par simple transcription, « Hypocrite », ce qui a fini par créer en français un faux ami : on entend une catégorie morale figée là où le grec décrit un geste, celui de jouer la scène du juge sans avoir soi-même quitté le banc des accusés. Jésus ne classe pas son interlocuteur parmi les hypocrites, il le surprend en train de jouer ce rôle précis, à cet instant précis.</div>
+        <details class="glose" id="g-karphos" data-lemme="κάρφος" data-lecture="Lc 6, 39-42"><summary>κάρφος</summary><div class="g-prose">Le grec <span class="gr">karphos</span> désigne un fragment minuscule et sec — un fétu de paille, une esquille de bois, quelque chose d'assez léger pour se loger sous une paupière. Segond traduit « paille », ce qui rend bien l'image rurale, familière à des auditeurs habitués aux aires de battage. Le mot n'a rien d'anodin dans sa légèreté même : c'est parce que la faute du frère est minime que l'aveuglement de celui qui la dénonce devient comique, un comique que Chrysostome, dans ses Homélies sur Matthieu (homélie 23, sur l'épisode parallèle), qualifie de grotesque plutôt que de simplement injuste.</div></details>
+        <details class="glose" id="g-dokos" data-lemme="δοκός" data-lecture="Lc 6, 39-42"><summary>δοκός</summary><div class="g-prose">Le grec <span class="gr">dokos</span> est le terme technique de la charpente, la poutre maîtresse qui porte un toit, par opposition au fragile karphos. L'image ne fonctionne que par ce contraste de taille absurde, propre à l'hyperbole que Jésus emploie ailleurs, comme le chameau et le chas de l'aiguille. Segond traduit littéralement « poutre », sans perte notable ; la difficulté n'est pas lexicale ici mais existentielle, puisque nul ne sent le poids de sa propre poutre tant qu'il regarde à travers elle plutôt que de la regarder elle-même.</div></details>
+        <details class="glose" id="g-hypokrites" data-lemme="ὑποκριτής" data-lecture="Lc 6, 39-42"><summary>ὑποκριτής</summary><div class="g-prose">Le grec <span class="gr">hypokritès</span> désignait à l'origine l'acteur du théâtre, celui qui répond depuis derrière un masque — le mot garde cette racine de réponse scénique, hypokrinomai, jouer un rôle. Segond conserve le mot par simple transcription, « Hypocrite », ce qui a fini par créer en français un faux ami : on entend une catégorie morale figée là où le grec décrit un geste, celui de jouer la scène du juge sans avoir soi-même quitté le banc des accusés. Jésus ne classe pas son interlocuteur parmi les hypocrites, il le surprend en train de jouer ce rôle précis, à cet instant précis.</div></details>
       </article>
     </div>
     <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i></span> 3 textes, un fil</div>
   </section>
 
+
   <!-- ③ CONTEXTE -->
   <section class="bloc reveler" id="contexte">
-    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <p class="rubrique"><span class="num">02</span> Le sol</p>
     <h2>D'où parlent ces textes</h2>
     <div class="ctx">
       <div><h3>Un apôtre sans salaire</h3><p>Paul écrit depuis Éphèse vers l'an 55, à une Église qu'il a fondée et qui doute désormais de lui : n'ayant jamais réclamé d'entretien matériel, contrairement aux autres prédicateurs itinérants, il passe pour faible aux yeux de certains Corinthiens plutôt que pour libre. Corinthe organisait tous les deux ans les Jeux isthmiques, second concours grec après Olympie : l'image du stade et de la couronne parle donc à un public qui l'avait vue de ses propres yeux, non loin de chez lui.</p></div>
@@ -485,15 +587,16 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
     </div>
   </section>
 
+
   <!-- ④ ANALOGIE -->
   <section class="bloc reveler analogie" id="analogie">
-    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <p class="rubrique"><span class="num">04</span> Le pont</p>
     <h2>L'œil et la charge</h2>
 <p>Il y a cette rapidité presque physique avec laquelle tu repères la faute de l'autre — une parole plus dure qu'elle n'aurait dû l'être, une lenteur, un manque — avant même d'avoir fini de la juger en toi tu as déjà commencé à t'en distinguer, à te placer un cran au-dessus. Ce qui met plus de temps à se lever, c'est le même défaut logé chez toi depuis si longtemps que tu as cessé de le voir comme un défaut : il a pris la texture du normal, du « c'est ainsi que je suis », et personne, pas même toi, ne songe plus à l'examiner. Ce n'est pas un effort de mémoire qui peut l'exhumer — seul le regard de Dieu, plus patient que le tien, sait remonter jusque-là et nommer ce que ton propre jugement, si prompt pour autrui, n'atteint jamais chez toi.</p>  </section>
 
   <!-- ⑤ INVITATION -->
   <section class="bloc reveler" id="invitation">
-    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <p class="rubrique"><span class="num">05</span> Le geste</p>
     <h2>Se laisser rejoindre</h2>
     <div class="invitation">
       <p>Avant de reprendre quiconque aujourd'hui, laisse Dieu regarder d'abord ce que tu portes, toi.</p>
@@ -504,14 +607,15 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
 
   <!-- ⑥ QUESTION -->
   <section class="reveler question" id="question">
-    <p>Quelle est la faute que tu repères le plus vite chez les autres — et depuis quand est-elle chez toi sans que tu l'aies vue ?</p>
+    <div class="cadre"><svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1000" height="300" fill="var(--c-fond)"/><g filter="url(#pastel)"><path d="M0 0H309L363 300H0Z" fill="var(--c-bleu)" opacity=".6"/><path d="M309 0H705L663 300H363Z" fill="var(--c-rose)" opacity=".6"/><path d="M705 0H1000V300H663Z" fill="var(--c-ocre)" opacity=".6"/><circle cx="240" cy="138" r="102" fill="var(--c-bleu)"/><circle cx="240" cy="138" r="61" fill="var(--c-terre)" opacity=".85"/><circle cx="240" cy="138" r="28" fill="var(--c-rose)"/><path d="M676 40 C746 40 776 90 778 130 L806 160 L776 170 C778 210 746 250 676 260Z" fill="var(--c-rose)"/><path d="M676 40 C606 40 586 110 591 160 C596 220 636 260 676 260Z" fill="var(--c-ocre)"/><path d="M80 236 C350 196 600 266 940 216" stroke="var(--liturgie)" stroke-width="9" fill="none" stroke-linecap="round"/></g><g class="m m-soleil" filter="url(#encre)"><g class="spirale"><path d="M880 60 m-16 0 a16 16 0 1 1 32 0 a35 35 0 1 1 -70 0 a58 58 0 1 1 115 0 a83 83 0 1 1 -166 0" fill="none" stroke="var(--c-terre)" stroke-width="2.4" stroke-linecap="round"/></g></g><g class="m m-nuage" fill="var(--c-fond)" filter="url(#pastel)" opacity=".9"><ellipse cx="120" cy="42" rx="72" ry="20"/><ellipse cx="200" cy="30" rx="48" ry="13"/><ellipse cx="680" cy="48" rx="88" ry="25"/><ellipse cx="760" cy="33" rx="52" ry="15"/></g><g class="m m-pluie" stroke="var(--c-bleu)" stroke-width="2.4" stroke-linecap="round"><path class="goutte" style="animation-delay:-0.66s" d="M65 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-1.24s" d="M1039 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-1.03s" d="M556 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.57s" d="M801 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.97s" d="M174 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.73s" d="M545 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.73s" d="M417 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.51s" d="M156 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-1.27s" d="M737 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.33s" d="M248 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.11s" d="M339 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.38s" d="M650 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-1.28s" d="M424 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.75s" d="M928 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.02s" d="M975 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-1.27s" d="M159 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.19s" d="M281 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.45s" d="M718 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.43s" d="M366 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.08s" d="M168 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.92s" d="M287 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.13s" d="M901 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.19s" d="M779 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.64s" d="M339 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.32s" d="M143 0 l-8.0 22.0"/><path class="goutte" style="animation-delay:-0.79s" d="M169 0 l-8.0 22.0"/></g><g class="m m-neige" fill="#fff"><circle class="flocon" style="animation-delay:-7.76s" cx="799" cy="0" r="3.6"/><circle class="flocon" style="animation-delay:-5.44s" cx="17" cy="0" r="3.0"/><circle class="flocon" style="animation-delay:-7.74s" cx="801" cy="0" r="1.6"/><circle class="flocon" style="animation-delay:-4.81s" cx="526" cy="0" r="1.8"/><circle class="flocon" style="animation-delay:-7.63s" cx="861" cy="0" r="1.8"/><circle class="flocon" style="animation-delay:-5.83s" cx="848" cy="0" r="4.0"/><circle class="flocon" style="animation-delay:-4.04s" cx="647" cy="0" r="3.5"/><circle class="flocon" style="animation-delay:-3.21s" cx="757" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-6.00s" cx="908" cy="0" r="2.2"/><circle class="flocon" style="animation-delay:-0.50s" cx="748" cy="0" r="2.8"/><circle class="flocon" style="animation-delay:-1.93s" cx="734" cy="0" r="3.4"/><circle class="flocon" style="animation-delay:-1.47s" cx="556" cy="0" r="3.5"/><circle class="flocon" style="animation-delay:-0.05s" cx="760" cy="0" r="3.7"/><circle class="flocon" style="animation-delay:-5.59s" cx="665" cy="0" r="2.5"/><circle class="flocon" style="animation-delay:-7.87s" cx="164" cy="0" r="2.1"/><circle class="flocon" style="animation-delay:-2.75s" cx="328" cy="0" r="2.1"/><circle class="flocon" style="animation-delay:-3.08s" cx="952" cy="0" r="2.4"/><circle class="flocon" style="animation-delay:-0.74s" cx="600" cy="0" r="2.5"/><circle class="flocon" style="animation-delay:-3.28s" cx="73" cy="0" r="3.3"/><circle class="flocon" style="animation-delay:-1.17s" cx="8" cy="0" r="2.8"/><circle class="flocon" style="animation-delay:-6.15s" cx="61" cy="0" r="1.7"/><circle class="flocon" style="animation-delay:-3.17s" cx="190" cy="0" r="3.6"/><circle class="flocon" style="animation-delay:-5.77s" cx="496" cy="0" r="2.0"/><circle class="flocon" style="animation-delay:-5.66s" cx="195" cy="0" r="3.4"/><circle class="flocon" style="animation-delay:-4.87s" cx="198" cy="0" r="2.3"/><circle class="flocon" style="animation-delay:-7.44s" cx="316" cy="0" r="1.8"/><circle class="flocon" style="animation-delay:-5.63s" cx="88" cy="0" r="3.2"/><circle class="flocon" style="animation-delay:-3.37s" cx="298" cy="0" r="1.9"/><circle class="flocon" style="animation-delay:-7.18s" cx="959" cy="0" r="1.8"/><circle class="flocon" style="animation-delay:-5.58s" cx="812" cy="0" r="1.8"/></g><g filter="url(#encre)" stroke="var(--encre)" stroke-width="2.2" fill="none" stroke-linecap="round"><circle cx="240" cy="138" r="102"/><path d="M706 125 Q728 108 750 125 Q728 140 706 125Z" fill="var(--c-fond)"/><circle cx="729" cy="125" r="6" fill="var(--encre)"/><path d="M676 40 C746 40 776 90 778 130 L806 160 L776 170 C778 210 746 250 676 260"/></g></svg></div>
+    <p class="allume">Quelle est la faute que tu repères le plus vite chez les autres — et depuis quand est-elle chez toi sans que tu l'aies vue ?</p>
   </section>
 
   <!-- ⑦ RACINES (rail) -->
   <section class="bloc reveler" id="racines">
     <div class="rail-tete">
       <div>
-        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <p class="rubrique"><span class="num">06</span> Les racines <span class="axe">→ exploration</span></p>
         <h2>Ce que les anciens y ont lu</h2>
       </div>
       <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
@@ -553,16 +657,23 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
   <a href="#textes" data-porte="lire">Lire</a>
 <button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
   <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
+  <span class="avance" aria-hidden="true"><i></i></span>
 </nav>
 
 <!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
 <aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
   <div class="poignee" role="separator" tabindex="0" aria-controls="compagnon" aria-label="Agrandir ou réduire le compagnon (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour agrandir"><span></span></div>
   <div class="entete">
-<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
+<div class="onglets" role="tablist"><button data-onglet="mot" role="tab" hidden>Mot</button><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
     <button class="replier" aria-label="Replier">→</button>
   </div>
   <div class="corps">
+  <div class="vitre vitre-mot" data-vitre="mot" hidden aria-live="polite">
+    <div class="g-tete"><div class="g-orig"></div><div class="g-fr"><span class="g-lemme"></span><b></b></div></div>
+    <p class="g-meta"></p>
+    <div class="g-cible"></div>
+    <div class="tous"><p>Les mots du jour</p><button type="button" data-g="g-anagke">ἀνάγκη</button><button type="button" data-g="g-adapanon">ἀδάπανον</button><button type="button" data-g="g-doulos">δοῦλος</button><button type="button" data-g="g-aphtharton">ἄφθαρτον</button><button type="button" data-g="g-adokimos">ἀδόκιμος</button><button type="button" data-g="g-nichsefa">נִכְסְפָה</button><button type="button" data-g="g-ashrei">אַשְׁרֵי</button><button type="button" data-g="g-mesillot">מְסִלָּה</button><button type="button" data-g="g-karphos">κάρφος</button><button type="button" data-g="g-dokos">δοκός</button><button type="button" data-g="g-hypokrites">ὑποκριτής</button></div>
+  </div>
   <div class="vitre" data-vitre="voir">
     <div class="video" id="ecran" role="button" tabindex="0" data-yt="txV5-inh6GM" data-titre="Jésus a dit « Ne jugez pas ».Que faisons-nous à la place ?" data-vignette="vignettes/txV5-inh6GM.jpg" aria-label="Lire la vidéo Jésus a dit « Ne jugez pas ».Que faisons-nous à la place ?"><img src="vignettes/txV5-inh6GM.jpg" alt=""><span class="lire">Regarder</span></div>
 <p class="compteur" id="compteur">Vidéo 1 sur 2</p>    <p class="vtitre" id="ecran-titre">Jésus a dit « Ne jugez pas ».Que faisons-nous à la place ?</p>
@@ -593,16 +704,17 @@ body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.r
   var b=document.getElementById('basculer-theme');
   function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
   function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
-  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}icone()});
   icone();
 })();
+// Un mot entouré s'ouvre dans le compagnon (vitre « mot ») ; sans
+// compagnon, la glose se déplie sous le texte comme avant.
 document.querySelectorAll('.mot').forEach(function(b){
+  var g=document.getElementById(b.dataset.g);if(!g)return;
+  b.setAttribute('aria-controls',b.dataset.g);b.setAttribute('aria-expanded','false');
   b.addEventListener('click',function(){
-    var g=document.getElementById(b.dataset.g);
-    var open=g.classList.contains('ouverte');
-    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
-    if(!open)g.classList.add('ouverte');
-  });
+    if(window.ouvrirMot){window.ouvrirMot(b.dataset.g);return}
+    g.open=!g.open;b.setAttribute('aria-expanded',g.open?'true':'false');if(g.open)g.scrollIntoView({behavior:'smooth',block:'nearest'})});
 });
 document.querySelectorAll('.rail').forEach(function(rail){
   var pts=document.getElementById(rail.dataset.points);if(!pts)return;
@@ -645,21 +757,19 @@ cibles.forEach(function(c){if(c)obsCarte.observe(c)});
   fil.querySelector('.replier').addEventListener('click',function(){etat(false);if(large.matches)ecrire('fil','replie')});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!large.matches&&fil.classList.contains('ouvert'))etat(false)});
   document.addEventListener('click',function(e){if(!large.matches&&fil.classList.contains('ouvert')&&!fil.contains(e.target)&&e.target!==btn)etat(false)});
-  // Lectures : un clic amène la bonne carte ; le défilement du rail l'allume.
+  // Toutes les lectures sont visibles ; le fil amène au texte demandé.
   var rail=document.getElementById('r-textes'),lecs=fil.querySelectorAll('[data-lecture]');
-  function pas(){return rail.firstElementChild.offsetWidth+32}
   lecs.forEach(function(b){b.addEventListener('click',function(){
-    document.getElementById('textes').scrollIntoView({behavior:'smooth'});
-    rail.scrollTo({left:pas()*+b.dataset.lecture,behavior:'smooth'});if(!large.matches)etat(false)})});
-  if(rail)rail.addEventListener('scroll',function(){var i=Math.round(rail.scrollLeft/pas());
-    lecs.forEach(function(b){b.classList.toggle('on',+b.dataset.lecture===i)})},{passive:true});
+    var texte=document.getElementById('lecture-'+b.dataset.lecture);
+    if(texte)texte.scrollIntoView({behavior:'smooth'});
+    lecs.forEach(function(x){x.classList.toggle('on',x===b)});if(!large.matches)etat(false)})});
   // Plan et sources : suivent la section à l'écran.
   var plan=fil.querySelectorAll('[data-plan]'),groupes=fil.querySelectorAll('.fil-sources .groupe');
   plan.forEach(function(a){a.addEventListener('click',function(){if(!large.matches)etat(false)})});
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
     plan.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
     groupes.forEach(function(g){g.classList.toggle('on',g.dataset.pour.split(' ').indexOf(id)>=0)})})},{rootMargin:'-40% 0px -50% 0px'});
-  ['haut','textes','contexte','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  ['haut','textes','contexte','eclairages','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
   // Veille et lendemain parmi les jours publiés.
   var ici=location.pathname.split('/').pop().replace('.html','');
   fetch('jours.json').then(function(r){return r.ok?r.json():[]}).then(function(js){var i=js.indexOf(ici);if(i<0)return;
@@ -678,7 +788,8 @@ cibles.forEach(function(c){if(c)obsCarte.observe(c)});
   poignee.addEventListener('keydown',function(e){var d={ArrowLeft:-30,ArrowRight:30}[e.key];if(!d)return;
     e.preventDefault();ecrire('fil-largeur',poser(fil.offsetWidth+d))});
 })();
-var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+// threshold 0 : une section plus haute que dix écrans (la Passion) doit aussi apparaître.
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
 // Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
 // Voir et Demander sont des interrupteurs qui déplient ou replient le
@@ -695,7 +806,9 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
     if(p==='voir'||p==='demander')e.setAttribute('aria-expanded',ouvert===p?'true':'false')});
     if(!comp)return;
     comp.querySelectorAll('[data-vitre]').forEach(function(v){v.hidden=!!ouvert&&v.dataset.vitre!==ouvert});
-    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')})}
+    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')});
+    var t=document.getElementById('titre-vitre');if(t)t.textContent=ouvert==='mot'?'Le mot':'Demander';
+    if(ouvert!=='mot')document.querySelectorAll('.mot[aria-expanded="true"]').forEach(function(m){m.setAttribute('aria-expanded','false')})}
   function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
     var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
     else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
@@ -708,12 +821,35 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
   portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
     if(p==='voir'||p==='demander'){ev.preventDefault();ouvrir(ouvert===p?null:p);return}
     position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
-  var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
+  var zones={haut:'lire',textes:'lire',contexte:'comprendre',eclairages:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting&&Date.now()-verrou>900){position=zones[e.target.id];peindre()}})},{rootMargin:'-45% 0px -50% 0px'});
   Object.keys(zones).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
   peindre();
   if(!comp)return;
+  // La vitre « mot » : l'original s'écrit lettre à lettre, puis la glose,
+  // puis ce que le mot dit pour nous aujourd'hui.
+  var vitreMot=comp.querySelector('[data-vitre="mot"]');
+  window.ouvrirMot=function(id){
+    var g=document.getElementById(id);if(!g||!vitreMot)return;
+    var lemme=g.dataset.lemme||'',mots=document.querySelectorAll('.mot[data-g="'+id+'"]');
+    vitreMot.classList.remove('vivant');
+    var o=vitreMot.querySelector('.g-orig');o.textContent='';
+    (lemme.match(/\P{M}\p{M}*/gu)||[]).forEach(function(c,i){var s=document.createElement('span');s.textContent=c;s.style.transitionDelay=(i*45+80)+'ms';o.appendChild(s)});
+    vitreMot.querySelector('.g-fr b').textContent=mots[0]?'« '+mots[0].textContent.trim()+' »':'';
+    vitreMot.querySelector('.g-meta').textContent=g.dataset.lecture||'';
+    var cible=vitreMot.querySelector('.g-cible');cible.textContent='';
+    g.querySelectorAll('.g-prose,.aujourdhui').forEach(function(n){cible.appendChild(n.cloneNode(true))});
+    vitreMot.querySelectorAll('.tous button').forEach(function(x){x.classList.toggle('on',x.dataset.g===id)});
+    var onglet=comp.querySelector('[data-onglet="mot"]');if(onglet)onglet.hidden=false;
+    ouvrir('mot');
+    document.querySelectorAll('.mot').forEach(function(m){m.setAttribute('aria-expanded',m.dataset.g===id?'true':'false')});
+    comp.querySelector('.corps').scrollTop=0;
+    requestAnimationFrame(function(){requestAnimationFrame(function(){vitreMot.classList.add('vivant')})});
+  };
+  if(vitreMot)vitreMot.querySelectorAll('.tous button').forEach(function(b){b.addEventListener('click',function(){
+    window.ouvrirMot(b.dataset.g);var m=document.querySelector('.mot[data-g="'+b.dataset.g+'"]');
+    if(m)m.scrollIntoView({behavior:'smooth',block:'center'})})});
   var replier=comp.querySelector('.replier');
   function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
   fleche();mq.addEventListener('change',fleche);
@@ -801,5 +937,71 @@ document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
     films.forEach(function(x){x.classList.toggle('on',x===b)})})});
 })();
 </script>
+<script>
+// Mise en mouvement : rien ici n'est nécessaire pour lire la page.
+(function(){
+  var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ① la scène d'ouverture se dévoile
+  var ouv=document.querySelector('.scene-ouverture');
+  if(ouv)requestAnimationFrame(function(){requestAnimationFrame(function(){ouv.classList.add('vu')})});
+  // ② les mots entourés à la main : jamais deux fois le même trait
+  function cercle(){var pts=[],a0=-2.4+Math.random()*.6,tours=1.12+Math.random()*.1,N=48;
+    for(var i=0;i<=N;i++){var t=i/N,a=a0+t*tours*2*Math.PI,g=1+t*.06,w=Math.sin(a*3+Math.random())*1.2;
+      pts.push((50+Math.cos(a)*(47+w)*g).toFixed(1)+' '+(20+Math.sin(a)*(17+w*.6)*g).toFixed(1))}
+    return 'M'+pts.join(' L')}
+  var NS='http://www.w3.org/2000/svg',mots=[].slice.call(document.querySelectorAll('.mot'));
+  mots.forEach(function(m){var svg=document.createElementNS(NS,'svg'),p=document.createElementNS(NS,'path');
+    svg.setAttribute('class','cercle');svg.setAttribute('viewBox','0 0 100 40');svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');
+    p.setAttribute('d',cercle());svg.appendChild(p);m.appendChild(svg);
+    var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=calme?0:L});
+  var vus=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    var p=e.target.querySelector('.cercle path');setTimeout(function(){p.style.strokeDashoffset=0},200+Math.random()*450);vus.unobserve(e.target)})},{threshold:1});
+  mots.forEach(function(m){vus.observe(m)});
+  // ③ texte qui s'allume mot à mot (analogie, questions)
+  function couper(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),ns=[];while(w.nextNode())ns.push(w.currentNode);
+    ns.forEach(function(n){var f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(function(x){
+      if(!x)return;if(/^\s+$/.test(x)){f.appendChild(document.createTextNode(x));return}
+      var s=document.createElement('span');s.textContent=x;f.appendChild(s)});n.parentNode.replaceChild(f,n)})}
+  var allumes=[].slice.call(document.querySelectorAll('.analogie p:not(.rubrique),.allume'));allumes.forEach(couper);
+  var cadres=[].slice.call(document.querySelectorAll('.pause .cadre,.question .cadre')),barre=document.querySelector('.barre-portes .avance i');
+  function progres(el,debut,fin){var r=el.getBoundingClientRect(),h=innerHeight;return Math.min(1,Math.max(0,(h*debut-r.top)/(r.height+h*(debut-fin))))}
+  var attente=false;
+  function defile(){attente=false;
+    var fond=scrollY+innerHeight>=document.documentElement.scrollHeight-4;
+    allumes.forEach(function(el){var sp=el.querySelectorAll('span'),n=calme||fond?sp.length:Math.round(progres(el,.85,.5)*sp.length);
+      sp.forEach(function(s,i){s.classList.toggle('on',i<n)})});
+    cadres.forEach(function(c){c.style.setProperty('--i',(calme?0:(1-progres(c,1,.45))*12).toFixed(2)+'%')});
+    if(barre){var tot=document.documentElement.scrollHeight-innerHeight;barre.style.width=(tot>0?Math.min(100,scrollY/tot*100):0)+'%'}}
+  addEventListener('scroll',function(){if(!attente){attente=true;requestAnimationFrame(defile)}},{passive:true});
+  addEventListener('resize',defile);defile();
+  // ④ la pause : un anneau de trente secondes
+  document.querySelectorAll('.anneau').forEach(function(b){b.addEventListener('click',function(){
+    if(b.classList.contains('encours'))return;b.classList.add('encours');var t=30,s=b.querySelector('span');s.textContent='Respire… 30';
+    var iv=setInterval(function(){t--;s.textContent=t>0?'Respire… '+t:'Merci';
+      if(t<=0){clearInterval(iv);var suite=b.closest('.pause').querySelector('.suite');if(suite)suite.classList.add('vue')}},1000)})});
+})();
+</script>
+<script id="meteo-config" type="application/json">{}</script>
+<script>
+(function(){
+  var c=JSON.parse(document.getElementById('meteo-config').textContent);
+  if(!c.ville||!Number.isFinite(c.latitude)||!Number.isFinite(c.longitude))return;
+  var status=document.getElementById('ambiance');
+  var p=new URLSearchParams({latitude:c.latitude,longitude:c.longitude,current:'weather_code',timezone:'auto',forecast_days:1});
+  fetch('https://api.open-meteo.com/v1/forecast?'+p,{signal:AbortSignal.timeout(6000)})
+  .then(function(r){if(!r.ok)throw Error('meteo');return r.json()})
+  .then(function(d){
+    var code=d.current&&d.current.weather_code;if(!Number.isInteger(code))throw Error('meteo');
+    var neige=[71,73,75,77,85,86].includes(code);
+    var pluie=[51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,97,99].includes(code);
+    var a=neige?'neige':pluie?'pluie':code<=1?'soleil':'couvert';
+    var noms={soleil:'Lumière de miel',couvert:'Lin sous les nuages',pluie:'Terre après la pluie',neige:'Ivoire d’hiver'};
+    document.documentElement.dataset.meteo=a;
+    status.textContent=c.ville+' · '+noms[a]+' · météo du '+d.current.time.replace('T',' à ')+'. ';
+    var source=document.createElement('a');source.href='https://open-meteo.com/';source.textContent='Open-Meteo';status.appendChild(source);
+  }).catch(function(){status.textContent='Une lumière douce pour lire · météo indisponible.'});
+})();
+</script>
+
 </body>
 </html>

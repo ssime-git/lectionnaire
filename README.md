@@ -235,3 +235,59 @@ reproduite.
 
 Le site est un **objet d'étude, pas une autorité**. Son honnêteté tient à une
 règle : chaque affirmation reste traçable vers sa source. 
+
+## Design et éclairages contemporains
+
+Direction « épurée » : beaucoup d'air, de fins filets, une seule couleur
+d'accent (la couleur liturgique) ; la couleur vive vit dans les scènes. Le thème
+sombre est un brun cacao chaud, jamais noir.
+
+- **Scènes** : `src/scene.py` compose, sans modèle ni réseau, des aplats
+  colorés au pastel derrière le bois gravé du jour, et une scène abstraite pour
+  la question finale (et la pause, si le JSON en porte une). Même date, même
+  image ; couleurs en variables CSS que la météo et le thème font glisser.
+- **Défilement** : ↓ les sections se révèlent, l'analogie s'éclaire mot à mot,
+  les scènes de pause s'ouvrent ; → lectures et racines restent des rails.
+  Tout cela ne s'applique qu'avec JavaScript (classe `js`) : sans lui, la page
+  se lit d'un bloc.
+- **Mots entourés** : un trait à la main se dessine à l'écran ; la glose
+  s'ouvre dans le compagnon (onglet « Mot »), à côté de Voir et Demander. Les
+  `details` restent dans le document pour la lecture sans JS et l'impression.
+- **Champs facultatifs** du JSON : `gloses[].aujourdhui` (ce que le mot dit
+  pour nous aujourd'hui) et `pauses` (au plus une `{question, suite}`). Le
+  générateur les demande ; le validateur les contrôle.
+
+La rubrique facultative « Éclairages contemporains » est alimentée par
+`data/eclairages.json`, un petit corpus éditorial relu, indépendant du modèle
+qui génère les brouillons. Chaque entrée contient une œuvre, un chapitre, un
+lien de vérification, la date de vérification et des versets d’ancrage précis.
+Elle distingue la reformulation de l’auteur, le rapprochement éditorial avec
+le texte du jour et les limites de ce rapprochement. Pas de citation longue,
+pas d’attribution inventée, pas de rubrique si aucun verset ne correspond.
+Le corpus réunit des voix protestantes, anglicanes, catholiques, orthodoxes
+et juives (Lewis, Bonhoeffer, Barth, Stott, Keller, Wright, Ellul, Ratzinger,
+Nouwen, Bloom, Schmemann, Delbrêl, Heschel…) ; un champ `echo` relie parfois
+l'œuvre moderne à un classique (Luther, Augustin, Kierkegaard, Edwards…), et
+`decouvrir` dit pourquoi lire le livre en entier. Le champ `preuve` garde, pour
+le relecteur, ce que la page source confirme.
+
+Pour ajouter un éclairage, vérifier la source avant d’écrire une reformulation
+originale, puis renseigner les champs du corpus et ses ancrages
+`[livre, chapitre, verset]` ou `[livre, chapitre, début, fin]` (psaumes en
+numérotation hébraïque, celle de Segond). Au plus deux encarts par jour,
+d'auteurs différents, l'évangile d'abord. Les références multichapitres ne
+déclenchent pas d’encart. Relancer le rendu des jours concernés après une
+modification du corpus ; les brouillons futurs le prennent en compte au rendu.
+
+### Ambiance météo
+
+Le rendu peut lire `data/meteo.json` avec les champs `ville`, `latitude` et
+`longitude`. Sans configuration, la palette chaleureuse reste disponible sans
+appel réseau. Avec configuration, une requête Open-Meteo à l’ouverture de la
+page nuance les fonds selon le temps actuel : soleil (miel), nuages (lin),
+pluie (terre cuite), neige (ivoire). Le choix clair/sombre reste indépendant.
+Aucune géolocalisation du lecteur. En cas d’échec, la palette par défaut et
+l’intégralité de la lecture restent accessibles.
+
+Documentation de la source : https://open-meteo.com/en/docs (vérifiée le
+15 novembre 2026). La ville n’est pas encore configurée.
