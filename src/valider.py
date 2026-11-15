@@ -113,6 +113,8 @@ def valider_contrat(d: dict, catalogue: set[str] | None = None,
             if lemme and len(lemme.split()) > 6:
                 fautes.append(f"{ref} : lemme trop long ({lemme[:30]}…), "
                               f"2 à 5 mots")
+            if "aujourdhui" in g and not str(g["aujourdhui"]).strip():
+                fautes.append(f"{ref} : glose {g.get('id')!r}, « aujourdhui » vide")
         if classe == "genealogie" and "<ul" in corps and corps.strip().startswith("<p>") is False:
             pass  # la structure exacte est libre, le rendu l'enveloppe dans un div
         if classe == "psaume" and 'class="init"' in corps:
@@ -197,6 +199,16 @@ def valider_contrat(d: dict, catalogue: set[str] | None = None,
         chemin = TEXTES_TRADITION / str(p).split("-", 1)[0] / "passages" / f"{p}.json"
         if not isinstance(p, str) or not chemin.exists():
             fautes.append(f"passage inconnu {p!r} (absent de data/tradition/textes/<auteur>/passages).")
+
+    # 12. Pauses (optionnel) : une question, une phrase pour rester dans le silence
+    pauses = d.get("pauses")
+    if pauses is not None:
+        if not isinstance(pauses, list) or len(pauses) > 1:
+            fautes.append("pauses : une liste d'au plus une pause {question, suite}.")
+        else:
+            for p in pauses:
+                if not isinstance(p, dict) or not str(p.get("question", "")).strip():
+                    fautes.append("pauses : chaque pause porte une question.")
 
     return fautes
 

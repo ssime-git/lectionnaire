@@ -22,14 +22,18 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from refs import parser_versets
 from videos import CHAINE, charger_catalogue, telecharger_vignette
 from valider import charger_oeuvres
 from corpus import AUTEURS, MAX_PAR_AUTEUR, charger_passages, passages_pour
+from scene import FILTRES, composition, fond_ouverture
 
 RACINE = Path(__file__).resolve().parent.parent
 DATA_JOURS = RACINE / "data" / "jours"
 TEMPLATE_DIR = RACINE / "template"
 DOCS = RACINE / "docs"
+ECLAIRAGES = RACINE / "data" / "eclairages.json"
+METEO = RACINE / "data" / "meteo.json"
 
 
 # La date affichée se compose ici, en français et sans locale système :
@@ -62,8 +66,25 @@ def charger_jour(jour: str) -> dict:
     _preparer_videos(donnees, charger_catalogue(), DOCS / "vignettes")
     donnees.setdefault("carnet", [])
     donnees["oeuvres"] = charger_oeuvres()
+    donnees["meteo"] = json.loads(METEO.read_text()) if METEO.exists() else {}
+    donnees["eclairages"] = _eclairages(donnees)
     donnees["peres"] = _tradition(donnees)  # sources du fil du jour
+    _preparer_scenes(donnees, jour)
     return donnees
+
+
+def _preparer_scenes(d: dict, jour: str) -> None:
+    """Scènes colorées du jour, déterministes (même date, même image).
+    Les pauses viennent du JSON (« pauses », facultatif) ; la question finale
+    a toujours sa scène."""
+    graine = d.get("date", jour)
+    d["filtres_svg"] = FILTRES
+    d["scene_fond"] = fond_ouverture(graine)
+    d["scene_question"] = composition(graine + ":question")
+    d["pauses"] = [
+        {"question": p["question"], "suite": p.get("suite", ""), "svg": composition(f"{graine}:pause:{i}")}
+        for i, p in enumerate(d.get("pauses") or []) if p.get("question")
+    ][:1]
 
 
 def _preparer_videos(d: dict, catalogue: dict[str, str], dossier: Path) -> None:
@@ -201,6 +222,68 @@ def contexte_du_jour(d: dict) -> dict:
     }
 
 
+# Les lectures du jour arrivent parfois avec le nom du livre en toutes lettres.
+SIGLES = {
+    "Matthieu": "Mt", "Marc": "Mc", "Luc": "Lc", "Jean": "Jn", "Romains": "Rm",
+    "Galates": "Ga", "Éphésiens": "Ep", "Ép": "Ep", "Philippiens": "Ph",
+    "Psaume": "Ps", "Psaumes": "Ps", "Ézéchiel": "Ez", "Daniel": "Dn", "Siracide": "Si",
+    "Deutéronome": "Dt", "Michée": "Mi", "Genèse": "Gn", "Isaïe": "Is", "Jérémie": "Jr",
+    "Apocalypse": "Ap", "Exode": "Ex", "Job": "Jb", "Proverbes": "Pr", "Qohèleth": "Qo",
+}
+
+
+def _passage(reference: str) -> tuple[str | None, int | None, list[int]]:
+    """« Ps 22 (23), 1-6 » → ("Ps", 23, [1..6]) : pour les psaumes, la
+    numérotation hébraïque (entre parenthèses, celle de Segond) fait foi."""
+    m = re.match(r"\s*(\S+)\s+(\d+)\s*\((\d+)\)\s*,\s*(.+)", reference)
+    if m:
+        reference = f"{m.group(1)} {m.group(3)}, {m.group(4)}"
+    tete = re.match(r"\s*\S+\s+(\d+)\s*,(.*)", reference)
+    if not tete:
+        return None, None, []
+    chapitre_lu, suite = int(tete.group(1)), tete.group(2)
+    # « Mt 21, 33-22, 14 » change de chapitre : pas pris en charge. Mais
+    # « Ps 33 (34), 2-3, 4-5 » n'est qu'une suite de versets du même psaume.
+    for a, b in re.findall(r"(\d+)[a-z]*\s*-\s*(\d+)\s*,", suite):
+        if int(b) == chapitre_lu + 1 and int(b) < int(a):
+            return None, None, []
+    reference = reference[:tete.start(2)] + suite.replace(",", ".")
+    livre, chapitre, versets = parser_versets(reference)
+    return SIGLES.get(livre, livre), chapitre, versets
+
+
+def _ancre(a: list) -> tuple[str, int, set[int]]:
+    """[livre, chapitre, verset] ou [livre, chapitre, début, fin]."""
+    fin = a[3] if len(a) > 3 else a[2]
+    return a[0], a[1], set(range(a[2], fin + 1))
+
+
+MAX_ECLAIRAGES = 2
+
+
+def _eclairages(d: dict) -> list[dict]:
+    """Corpus relu, apparié à un verset effectivement présent dans les lectures.
+
+    Aucun appel au modèle : on ne lui demande pas d'inventer une attribution.
+    L'évangile passe en premier ; deux auteurs différents au plus.
+    """
+    corpus = json.loads(ECLAIRAGES.read_text(encoding="utf-8"))
+    resultat, auteurs = [], set()
+    for lecture in reversed(d.get("lectures", [])):
+        reference = lecture.get("reference", "")
+        livre, chapitre, versets = _passage(reference)
+        if not livre:
+            continue
+        for e in corpus:
+            if e["auteur"] in auteurs or any(r["id"] == e["id"] for r in resultat):
+                continue
+            if any(l == livre and c == chapitre and v & set(versets)
+                   for l, c, v in map(_ancre, e["ancrages"])):
+                resultat.append({**e, "lecture": reference})
+                auteurs.add(e["auteur"])
+    return resultat[:MAX_ECLAIRAGES]
+
+
 def rendre_html(donnees: dict) -> str:
     """Rend la page d'un jour déjà chargé, sans rien écrire."""
     env = Environment(
@@ -278,11 +361,11 @@ _INDEX_AVANT = """<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light dark;
-  --papier:#EFEAE0;--ink:#26302A;--muet:#8E8B7C;--filet:#DAD1BE;--accent:#7A5230;--rubrique:#A33324}
+  --papier:#F7EEDF;--ink:#3C3028;--muet:#796451;--filet:#D9C5AC;--accent:#886026;--rubrique:#9B5039}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}}
+  --papier:#261E1A;--ink:#F2E5D1;--muet:#C7B09A;--filet:#594738;--accent:#E5BE83;--rubrique:#E3AC8F}}
 :root[data-theme="dark"]{
-  --papier:#17161B;--ink:#E9E5DB;--muet:#918B7C;--filet:#332F38;--accent:#C99A6B;--rubrique:#D4705B}
+  --papier:#261E1A;--ink:#F2E5D1;--muet:#C7B09A;--filet:#594738;--accent:#E5BE83;--rubrique:#E3AC8F}
 :root[data-theme="dark"]{color-scheme:dark}
 :root[data-theme="light"]{color-scheme:light}
 body{font-family:'EB Garamond',serif;background:var(--papier);color:var(--ink);max-width:640px;margin:0 auto;padding:3rem 1.5rem}
