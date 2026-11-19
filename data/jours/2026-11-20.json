@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-20",
+  "date_humaine": "vendredi",
+  "semaine": "33ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ap 10, 8-11 ; Lc 19, 45-48",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M20 128 v-38 q9 -14 18 0 v38\"/><path d=\"M44 128 v-38 q9 -14 18 0 v38\"/><path d=\"M68 128 v-38 q9 -14 18 0 v38\"/><path d=\"M232 68 q-3 10 4 15\"/><path d=\"M238 52 q3 -9 9 -9\"/><path d=\"M250 52 q3 -9 9 -9\"/><path d=\"M262 52 q3 -9 9 -9\"/><path d=\"M236 56 h42\"/><path d=\"M236 66 h42\"/><path d=\"M236 56 q-9 5 0 10\"/><path d=\"M278 56 q9 5 0 10\"/><path d=\"M243 92 q12 9 24 0\"/><path d=\"M243 97 q12 6 24 0\"/><path d=\"M85 136 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0\"/><path d=\"M105 132 m-4 0 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0\"/></g><g class=\"trait-rubrique\"><path d=\"M28 118 l72 -9 l4 13 l-74 10 z\"/><path d=\"M36 119 l-9 13\"/><path d=\"M92 112 l9 11\"/></g><g class=\"trait-liturgie\"><path d=\"M60 134 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0\"/></g></svg>",
+  "titre": "Doux et amer",
+  "titre_html": "Doux <span class=\"it\">et amer</span>",
+  "sous_titre": "Un livre à manger, une maison à rendre à la prière",
+  "suite_hier": null,
+  "gravure_alt": "Une main tient un petit rouleau ouvert au-dessus d'une bouche entrouverte ; à l'arrière-plan, sous les arcades d'un temple, une table de changeurs est renversée et des pièces roulent au sol.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ap 10, 8-11",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">8</span> Et la voix que j'avais entendue du ciel me parla de nouveau, et dit: Va, prends le <button class=\"mot\" data-g=\"g-biblaridion\">petit livre</button> qui est ouvert dans la main de l'ange qui se tient debout sur la mer et sur la terre. <span class=\"s\">9</span> Et j'allai vers l'ange, en lui disant de me donner le petit livre. Et il me dit: Prends-le, et avale-le; il sera <button class=\"mot\" data-g=\"g-amertume\">amer</button> à ton estomac, mais dans ta bouche il sera <button class=\"mot\" data-g=\"g-glykys\">doux comme du miel</button>. <span class=\"s\">10</span> Je pris le petit livre de la main de l'ange, et je l'avalai; il fut dans ma bouche doux comme du miel, mais quand je l'eus avalé, mes entrailles furent remplies d'amertume. <span class=\"s\">11</span> Puis il me dit: Il faut que tu prophétises de nouveau sur des peuples, des nations, des langues, et des rois en grand nombre.",
+      "gloses": [
+        {
+          "id": "g-biblaridion",
+          "lemme": "biblaridion",
+          "html": "Le mot grec est <span class=\"gr\">biblaridion</span>, diminutif de <span class=\"gr\">biblion</span>, le « livre ». Segond traduit fidèlement par « petit livre », mais certaines versions effacent ce diminutif en disant simplement « livre », perdant le contraste voulu avec le grand livre scellé du chapitre 5. Ce petit rouleau que Jean doit manger reprend un geste déjà vécu par Ézéchiel, invité à avaler un volume de lamentations avant de parler au nom de Dieu (Éz 2, 8 – 3, 3) : la petitesse du livre n'est pas la mesure de sa charge.",
+          "aujourdhui": "Tu as peut-être reçu un jour une parole brève — une phrase dans une lettre, une ligne entendue en passant — qui t'a semblé minuscule et qui, avec le temps, s'est révélée porter plus que tout le reste. Ce n'est pas la taille d'une parole qui mesure ce qu'elle finit par peser."
+        },
+        {
+          "id": "g-amertume",
+          "lemme": "amer / amertume",
+          "html": "Segond rend par « amer » et « amertume » deux formes du même radical grec <span class=\"gr\">pikros</span>, qui désigne une âpreté physique autant que morale. Le texte joue sur un mouvement inversé : doux à la bouche, amer à l'estomac, l'inverse de ce qu'on attend d'un aliment, puisque le miel, lui, ne rend jamais malade. Cette amertume différée reprend presque mot pour mot l'expérience d'Ézéchiel mangeant un rouleau de « lamentations, plaintes et gémissements » qui, pourtant, « fut dans sa bouche doux comme du miel » (Éz 3, 3) : le prophète porte dans son corps ce que le peuple refusera d'entendre.",
+          "aujourdhui": "Il y a des vérités que tu reçois avec joie en les lisant seul, et qui deviennent lourdes au moment de les dire à quelqu'un qui souffre. La douceur de la lecture ne supprime pas le poids de la parole à porter ensuite."
+        },
+        {
+          "id": "g-glykys",
+          "lemme": "glykys",
+          "html": "Le grec <span class=\"gr\">glykys</span>, « doux », appartient au même vocabulaire que la Septante emploie au Psaume 118 (119), 103, pour dire que la parole de Dieu est plus douce que le miel à la bouche de celui qui la reçoit. Segond garde l'image concrète du miel plutôt que de l'affaiblir en une douceur abstraite, ce qui permet de relier spontanément cette vision à la prière du psalmiste lue le même jour. La tradition a lu ce goût comme celui, inimitable, de la Parole reçue avant d'être annoncée — un plaisir qui ne dispense pas de la charge qui suit.",
+          "aujourdhui": "Tu reconnais peut-être ce goût : une phrase de la Bible lue sans attente particulière, qui soudain nourrit comme personne ne l'avait annoncé. Ce goût-là ne s'explique pas, il se reçoit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 118 (119), 14.24, 72.103, 111.131",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">14</span> Je me réjouis de suivre tes <button class=\"mot\" data-g=\"g-synonymes\">préceptes</button>, Comme si je possédais tous les trésors. <span class=\"s\">24</span> Tes préceptes sont mes délices, Ce sont mes conseillers. <span class=\"s\">72</span> Mieux vaut pour moi la loi de ta bouche Que mille pièces d'or et d'argent. <span class=\"s\">103</span> Que ta parole est <button class=\"mot\" data-g=\"g-debash\">douce à mon palais, Plus que le miel</button> à ma bouche! <span class=\"s\">111</span> Tes préceptes sont pour toujours mon héritage, Car ils sont la joie de mon cœur. <span class=\"s\">131</span> J'ouvre la bouche et je <button class=\"mot\" data-g=\"g-shaaph\">soupire</button>, Car je suis avide de tes commandements.",
+      "gloses": [
+        {
+          "id": "g-synonymes",
+          "lemme": "préceptes",
+          "html": "Le Psaume 119 (118) fait tourner, sur ses cent soixante-seize versets, une demi-douzaine de mots hébreux presque synonymes pour désigner la parole de Dieu — parmi eux <span class=\"gr\">torah</span>, la loi, <span class=\"gr\">piqqudim</span>, littéralement les charges confiées, de la racine <span class=\"gr\">paqad</span>, « visiter, mandater », et <span class=\"gr\">edot</span>, les témoignages. Segond varie son vocabulaire français — loi, préceptes, témoignages, commandements, statuts — sans toujours faire correspondre un seul mot hébreu à un seul mot français, si bien que le « préceptes » qu'on lit ici n'est pas garanti d'être le même terme en 24 et en 111. Cette abondance n'est pas une redondance stylistique : elle signale qu'aucun mot seul ne suffit à nommer ce que le psalmiste reçoit de Dieu.",
+          "aujourdhui": "Il y a une différence entre obéir à un règlement impersonnel et accomplir ce qu'une personne de confiance t'a confié en te regardant dans les yeux. L'un des mots de ce psaume porte exactement cette nuance d'une charge reçue d'une main qui te connaît, même si on ne peut pas toujours dire, verset par verset, lequel des synonymes hébreux est employé."
+        },
+        {
+          "id": "g-debash",
+          "lemme": "devash",
+          "html": "Le mot hébreu <span class=\"gr\">devash</span> désigne le miel, image de douceur déjà présente dans la description du pays promis « ruisselant de lait et de miel » et reprise ici pour qualifier le goût même de la parole de Dieu, <span class=\"gr\">imrah</span>. Segond conserve l'image sans l'édulcorer, à la différence de certaines paraphrases modernes qui parlent seulement d'une parole « agréable ». Calvin, commentant ce psaume, remarque que cette saveur n'est perceptible qu'à qui a reçu un appétit renouvelé : pour le cœur non touché par l'Esprit, la loi reste amère ou indifférente, elle n'est jamais spontanément plus douce que le miel.",
+          "aujourdhui": "Après des semaines où lire la Bible ressemblait à un devoir sans saveur, il arrive qu'un verset retrouve soudain un goût presque physique de nourriture. Ce retour du goût ne dépend pas de ta discipline, il surprend comme une grâce."
+        },
+        {
+          "id": "g-shaaph",
+          "lemme": "sha'aph",
+          "html": "Segond traduit par « je soupire » le verbe hébreu <span class=\"gr\">sha'aph</span>, qui signifie littéralement haleter, panteler, respirer avec effort — l'image d'une bouche grande ouverte qui cherche l'air. « Soupirer » adoucit ce que le texte dit plus rudement : le psalmiste manque d'air sans les commandements de Dieu, comme on manquerait d'oxygène. Ce même verbe réapparaît ailleurs dans des contextes de poursuite acharnée, ce qui donne à ce désir de la Parole une intensité presque violente, loin d'une piété tranquille.",
+          "aujourdhui": "Il y a des moments de prière qui ressemblent moins à une conversation posée qu'à une respiration haletante, comme si tu manquais d'air sans cette parole précise. Ce halètement-là n'est pas un manque de maîtrise, c'est un désir qui ne feint pas."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 19, 45-48",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">45</span> Il entra dans le temple, et il se mit à chasser ceux qui vendaient et qui achetaient, <span class=\"s\">46</span> en leur disant: Il est écrit: Ma <button class=\"mot\" data-g=\"g-oikos\">maison sera une maison de prière</button>. Mais vous, vous en avez fait une <button class=\"mot\" data-g=\"g-splelaion\">caverne de voleurs</button>. <span class=\"s\">47</span> Il enseignait tous les jours dans le temple. Les principaux sacrificateurs, les scribes et les principaux du peuple cherchaient à le faire périr; <span class=\"s\">48</span> mais ils ne savaient comment s'y prendre, car tout le peuple l'<button class=\"mot\" data-g=\"g-exekremeto\">écoutait avidement</button>.",
+      "gloses": [
+        {
+          "id": "g-oikos",
+          "lemme": "oikos proseuchēs",
+          "html": "L'expression grecque <span class=\"gr\">oikos proseuchēs</span>, « maison de prière », cite presque mot pour mot Ésaïe 56, 7 selon la Septante, où le Temple est promis à tous les peuples comme lieu d'adresse à Dieu. Segond traduit <span class=\"gr\">proseuchē</span> par « prière », ce qui est juste mais efface la construction du mot grec, formé du préfixe « vers » et d'un verbe « vouer, souhaiter » : une maison tournée vers Dieu plutôt qu'un simple lieu où l'on prie entre autres activités. Chrysostome, commentant la scène parallèle de Matthieu, souligne que le Christ ne condamne pas le commerce en lui-même mais le fait qu'il ait envahi le seul lieu voué à cette adresse-là.",
+          "aujourdhui": "Il y a en toi un lieu réservé, en principe, à l'adresse silencieuse à Dieu, et tu sais reconnaître le moment où il se remplit d'autre chose — calcul, urgence, bruit de ce qu'il faut encore faire. Ce lieu ne cesse pas d'exister quand il est encombré, il attend seulement d'être rendu à ce pour quoi il a été creusé."
+        },
+        {
+          "id": "g-splelaion",
+          "lemme": "spēlaion lēstōn",
+          "html": "Le grec <span class=\"gr\">spēlaion lēstōn</span>, « caverne de voleurs », cite Jérémie 7, 11, où le prophète dénonçait déjà un Temple fréquenté comme refuge par des gens injustes ailleurs. Segond traduit <span class=\"gr\">spēlaion</span> par « caverne », gardant l'image précise d'une grotte où l'on se cache après un délit, plus forte qu'un simple « repaire » : ce n'est pas le marché qui est visé, mais l'usage du Temple comme abri pour une injustice déjà commise au-dehors. En citant Jérémie, Jésus inscrit son geste dans une longue tradition prophétique de mise en cause du culte sans justice.",
+          "aujourdhui": "Il arrive qu'on vienne prier non pour se tenir devant Dieu mais pour se mettre, un moment, à l'abri de ce qu'on a négligé ailleurs — une grotte où l'on range ce qu'on ne veut pas regarder en face. Le texte ne condamne pas le lieu, il dénonce cet usage-là."
+        },
+        {
+          "id": "g-exekremeto",
+          "lemme": "exekremeto",
+          "html": "Le verbe grec que Segond traduit par « écoutait avidement » est <span class=\"gr\">exekremeto</span>, littéralement « était suspendu à partir de » — l'image d'un poids accroché qui ne tient que par le fil auquel il pend. « Avidement » rend bien l'intensité de l'attention, mais perd l'image physique d'une foule suspendue aux mots de Jésus comme à ce qui, seul, la retient de tomber. Ce verbe, rare dans le Nouveau Testament, accentue par contraste l'impuissance des chefs religieux, incapables d'agir contre quelqu'un à qui tout un peuple est ainsi rattaché.",
+          "aujourdhui": "Tu as peut-être connu cette sensation d'être suspendu aux mots de quelqu'un au point d'oublier, pour un temps, tout ce qui t'inquiète autour — une parole qui tient mieux que le sol sous tes pieds."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Un petit rouleau entre deux trompettes",
+      "corps_html": "La scène du petit livre se situe entre la sixième et la septième trompette de l'Apocalypse, dans une pause qui suspend le récit du jugement. Jean y reprend presque trait pour trait la vocation d'Ézéchiel, invité six siècles plus tôt à manger un rouleau de lamentations avant de parler au nom de Dieu (Éz 2, 8 – 3, 3). La tradition situe l'écriture de l'Apocalypse à la fin du Ier siècle, sous Domitien, en un temps de pression sur les Églises d'Asie Mineure."
+    },
+    {
+      "titre": "Le Temple, la semaine de la Passion",
+      "corps_html": "Cette scène ouvre, chez Luc, la dernière semaine de Jésus à Jérusalem : entré dans la ville acclamé, il entre maintenant dans le Temple, précisément dans la cour des Gentils, où se tenait le commerce nécessaire aux pèlerins — change de monnaie, vente d'animaux pour les sacrifices. En citant ensemble Ésaïe 56, 7 et Jérémie 7, 11, Jésus ne vise pas ce commerce comme tel, mais son envahissement du seul espace du Temple ouvert à la prière des non-Juifs."
+    }
+  ],
+  "analogie": {
+    "titre": "Après la douceur",
+    "variantes": [
+      "Il t'est peut-être arrivé de recevoir une parole d'Écriture avec une joie presque immédiate — une promesse, une parole de pardon, une certitude soudaine d'être aimé — et de la croire acquise, comme un goût qui resterait sur la langue sans rien demander en retour. Puis vient le moment où cette même parole doit être redite à quelqu'un qui souffre, portée dans une situation où elle coûte, annoncée à un cœur qui résiste : ce n'est plus seulement une saveur, c'est un poids dans le corps, une amertume qui n'annule pas la douceur mais qui la suit. Le texte de ce jour ne te promet pas d'éviter ce second moment ; il te promet seulement que la parole qui pèse dans les entrailles est la même qui a d'abord été douce dans la bouche — qu'il n'y a pas deux paroles, une consolante et une exigeante, mais une seule que tu es invité à manger jusqu'au bout.",
+      "Tu connais ce glissement lent par lequel un lieu intérieur réservé à Dieu — quelques minutes de silence, une prière sans attente, un regard posé sur lui sans but — se remplit, sans bruit ni décision, de calculs : à quoi cela sert, ce que cela va produire, ce qu'il faudrait encore faire pendant ce temps. Tu ne t'en aperçois souvent qu'après coup, quand tu réalises que tu n'as plus prié depuis longtemps sans arrière-pensée, que la prière elle-même est devenue une tâche rentabilisée parmi d'autres. Ce que Jésus fait dans le Temple, il peut encore le faire dans cet espace-là : renverser ce qui s'y est installé, non pour te punir d'y avoir laissé entrer le commerce, mais pour te rendre ce lieu tel qu'il devait être — une maison tournée vers lui, et vers rien d'autre.",
+      "Il y a des jours où lire la Bible ressemble à s'acquitter d'une dette — tu ouvres le texte par discipline, tu le refermes sans avoir rien goûté, et tu te demandes si cette sécheresse dit quelque chose de grave sur ta foi. Puis, sans que tu aies rien changé à ta méthode, une phrase ancienne retrouve soudain un appétit que tu croyais perdu, et tu reconnais, presque physiquement, le manque d'air de celui qui a soif d'autre chose que de mots. Le psaume de ce jour ne loue pas la régularité de la lecture, il loue ce moment où la loi de Dieu cesse d'être un règlement extérieur pour redevenir un héritage désiré — et c'est cela, plus qu'une performance de piété, qu'il te promet encore possible."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, prends un instant pour repérer, dans ton propre rapport à la prière ou à l'Écriture, où se loge aujourd'hui la douceur et où se loge le poids.",
+    "geste": "Relis lentement un seul verset du jour — Ap 10, 9 ou Ps 119, 103 — et demande-toi avec quel goût tu l'as reçu la première fois, puis ce qu'il te coûte de le vivre maintenant.",
+    "note": "Il ne s'agit pas de trouver une réponse nette, mais de laisser la question se poser honnêtement, sans la refermer trop vite par une explication."
+  },
+  "question": "Qu'est-ce qui, dans ta prière, a cessé d'être tourné vers Dieu sans que tu t'en rendes vraiment compte ?",
+  "racines": [
+    {
+      "titre": "Manger le rouleau",
+      "corps_html": "Six siècles avant Jean, Ézéchiel reçoit l'ordre d'ouvrir la bouche et de manger un rouleau rempli de « lamentations, plaintes et gémissements » (Éz 2, 10). Le texte précise, à sa grande surprise, qu'il « fut dans sa bouche doux comme du miel » (Éz 3, 3). Cette scène fonde tout un type littéraire de vocation prophétique par ingestion de la parole, repris presque sans changement par Jean dans la vision du petit livre.",
+      "attribution": "Éz 2, 8 – 3, 3"
+    },
+    {
+      "titre": "Un Temple sans justice",
+      "corps_html": "Dans la cour du Temple, Jérémie dénonce ceux qui répètent « Temple de l'Éternel, Temple de l'Éternel » comme une formule magique, tandis qu'ils oppriment l'étranger, l'orphelin et la veuve (Jr 7, 4-6). Il va jusqu'à dire que le Temple est devenu pour eux une « caverne de voleurs » (Jr 7, 11) — l'expression exacte que Jésus reprend dans l'évangile de Luc, quatre siècles plus tard, presque mot pour mot.",
+      "attribution": "Jr 7, 3-11"
+    },
+    {
+      "titre": "Une maison pour tous les peuples",
+      "corps_html": "L'oracle d'Ésaïe promet que les étrangers attachés à l'Éternel et les eunuques fidèles à l'alliance seront accueillis dans le Temple, « car ma maison sera appelée une maison de prière pour tous les peuples » (És 56, 7). Cette universalité est précisément ce que Jésus invoque en citant ce verset dans la cour des Gentils, l'endroit même que le commerce occupait.",
+      "attribution": "És 56, 6-7"
+    }
+  ],
+  "pauses": [
+    {
+      "question": "Que signifierait, pour toi, que la parole de Dieu redevienne à la fois ce qui nourrit et ce qui coûte, plutôt que l'un sans l'autre ?",
+      "suite": "Reste un moment sans chercher à répondre."
+    }
+  ],
+  "videos": [
+    {
+      "id": "higvLX003DY",
+      "raison": "Couvre Luc 19 à 23, donc l'épisode même où Jésus chasse les vendeurs du Temple (Lc 19, 45-48).",
+      "groupe": "livre"
+    },
+    {
+      "id": "cAOAPSfpbR4",
+      "raison": "Panorama d'Apocalypse 1 à 11, qui situe la scène du petit livre avalé par Jean (Ap 10, 8-11) dans l'ensemble des visions.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Panorama des Psaumes, pour resituer le long poème du Psaume 119 (118) dont les versets du jour chantent la douceur de la loi.",
+      "groupe": "livre"
+    },
+    {
+      "id": "ZjoRCeqpUSA",
+      "raison": "Étude du thème du Temple, qui éclaire pourquoi Jésus en chasse les marchands au nom de sa vocation de maison de prière (Lc 19, 46).",
+      "groupe": "mot"
+    },
+    {
+      "id": "IDS6LONO8Sw",
+      "raison": "Étude du thème de la Loi, utile pour comprendre pourquoi le psalmiste dit que les préceptes sont sa joie (Ps 119, 24.111).",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Jean doit-il manger le petit livre avant de prophétiser ?",
+      "reponse_html": "Le geste reprend celui d'Ézéchiel, qui doit avaler un rouleau de lamentations avant de parler au nom de Dieu (Éz 2, 8 – 3, 3). Manger la parole, dans ce type de récit, signifie qu'elle doit devenir chair du prophète avant de devenir discours : il ne transmet pas un message extérieur à lui, il le porte d'abord dans son propre corps. La double sensation, douce en bouche et amère dans les entrailles, dit ce que coûte cette incorporation : joie de recevoir une révélation, poids d'avoir ensuite à l'annoncer à des peuples et des rois qui n'en voudront pas.",
+      "sources": {
+        "jour": [
+          "Ap 10, 8-11"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que veut dire Jésus en citant « maison de prière pour tous les peuples » dans la cour des Gentils ?",
+      "reponse_html": "Il cite Ésaïe 56, 7, un oracle qui promettait déjà l'accueil des étrangers et des exclus dans le Temple à venir. En agissant précisément dans la cour des Gentils — le seul espace du Temple ouvert aux non-Juifs — Jésus dénonce que cet espace d'universalité ait été réduit à un marché, empêchant de fait ceux pour qui il était prévu de s'y tenir en prière. La citation conjointe de Jérémie 7, 11 ajoute que ce détournement n'est pas une négligence récente mais un mal ancien, déjà visé par les prophètes.",
+      "sources": {
+        "jour": [
+          "Lc 19, 45-48",
+          "És 56, 6-7",
+          "Jr 7, 11"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le Psaume 119 est le plus long de la Bible et semble répétitif : pourquoi le lire comme une prière vivante plutôt qu'un exercice ?",
+      "reponse_html": "Augustin, ouvrant son commentaire de ce psaume, part du constat que tout homme désire être heureux, même celui qui se trompe de chemin pour l'atteindre, et que ce psaume indique où se trouve ce bonheur : marcher dans la voie de Dieu, s'attacher à lui. Lu ainsi, le psaume n'est pas une accumulation scolaire de synonymes pour la loi, mais la reprise, par cent soixante-seize fois, d'un même désir qui ne s'épuise pas. Les versets du jour en sont l'illustration concrète : trésor, délice, héritage, faim d'air — autant de manières de dire qu'obéir n'y est jamais vécu comme une contrainte extérieure.",
+      "sources": {
+        "jour": [
+          "Ps 118 (119), 14.24, 72.103, 111.131"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "sur le psaume 118, discours 1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi les chefs religieux ne parviennent-ils pas à agir contre Jésus malgré leur volonté de le faire périr ?",
+      "reponse_html": "Luc note que tout le peuple restait suspendu à ses paroles, ce qui rendait toute action publique contre lui politiquement risquée : s'en saisir ouvertement aurait pu provoquer la foule qui l'écoutait avec ferveur. Ce blocage n'est pas présenté comme un hasard mais comme un délai qui prépare le récit de la Passion, où ses adversaires devront attendre un moment et des moyens plus discrets pour agir. Le texte laisse ainsi deviner, sans le dire encore, que la mise à mort de Jésus se fera dans l'ombre, précisément parce qu'en plein jour, dans le Temple, le peuple ne le lâchait pas.",
+      "sources": {
+        "jour": [
+          "Lc 19, 47-48"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le miel revient dans l'Apocalypse et dans le psaume du jour : est-ce un hasard du choix des lectures ?",
+      "reponse_html": "Les deux textes partagent le même vocabulaire de la douceur de la parole comparée au miel, mais ils ne le tirent pas de la même source directe : le psaume prolonge une image de sagesse déjà présente ailleurs dans l'Ancien Testament, tandis que l'Apocalypse reprend plus précisément la scène d'Ézéchiel mangeant un rouleau. Leur rapprochement dans le lectionnaire met en lumière, sans qu'il faille y voir une dépendance littéraire directe, une même conviction biblique : la parole de Dieu se goûte avant de se comprendre, et ce goût est toujours décrit comme celui du miel.",
+      "sources": {
+        "jour": [
+          "Ap 10, 9-10",
+          "Ps 118 (119), 103"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-118"
+  ]
+}
