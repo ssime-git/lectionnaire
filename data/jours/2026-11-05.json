@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-05",
+  "date_humaine": "jeudi",
+  "semaine": "31ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 3, 3-8a ; Lc 15, 1-10",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 125 h328\"/><path d=\"M6 95 q55 -32 110 -14 q35 10 70 -2 M186 90 q60 -22 148 -2\"/><path d=\"M190 44 q-7 -3 -7 4 q0 6 7 3 M195 48 v74\"/><path d=\"M165 42 q5 -7 10 0 q-5 7 -10 0\"/><path d=\"M158 50 q-7 35 -8 72 M182 50 q7 35 8 72\"/><path d=\"M148 122 h8 M186 122 h8\"/><path d=\"M148 46 q22 -16 44 0 M152 46 q-2 12 1 20 M186 46 q2 12 -1 20 M142 44 q-7 -3 -9 3 q2 5 9 2\"/><path d=\"M65 50 v68 M52 118 h26 M35 66 q30 -20 60 -28\"/><path d=\"M95 38 l3 18 M93 56 q8 4 16 -1\"/><path d=\"M266 112 q10 -10 24 -2 q2 8 -6 10 q-12 4 -18 -8 M278 122 v4 M270 126 h18\"/><path d=\"M268 123 q4 -5 8 0 q-4 5 -8 0 M250 127 q10 -2 20 0 M274 128 q9 -2 18 0\"/></g><g class=\"trait-rubrique\"><path d=\"M35 66 l-5 22 M18 86 q13 12 28 2 M12 92 l-8 10 M22 96 l-6 13 M34 94 l4 15\"/></g><g class=\"trait-liturgie\"><path d=\"M282 100 q-4 6 0 10 q4 -4 0 -10\"/></g></svg>",
+  "titre": "La joie retrouvée",
+  "titre_html": "La joie <span class=\"it\">retrouvée</span>",
+  "sous_titre": "Ce que Paul dépose, ce que le Père recherche.",
+  "suite_hier": null,
+  "gravure_alt": "Gravure sur bois : un berger porte un agneau sur ses épaules au centre d'un paysage de collines nocturnes ; à sa gauche, une balance ancienne dont un plateau, chargé de parchemins scellés, s'est renversé tandis que l'autre reste vide et léger ; en bas à droite, une petite lampe à huile éclaire une pièce de monnaie posée sur un sol fraîchement balayé.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ph 3, 3-8a",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">3</span> Car les <button class=\"mot\" data-g=\"g-peritome\">circoncis</button>, c'est nous, qui rendons à Dieu notre culte par l'Esprit de Dieu, qui nous glorifions en Jésus-Christ, et qui ne mettons point notre confiance en la <button class=\"mot\" data-g=\"g-sarx\">chair</button>. <span class=\"s\">4</span> Moi aussi, cependant, j'aurais sujet de mettre ma confiance en la chair. Si quelque autre croit pouvoir se confier en la chair, je le puis bien davantage, <span class=\"s\">5</span> moi circoncis le huitième jour, de la race d'Israël, de la tribu de Benjamin, Hébreu né d'Hébreux, pharisien selon la loi, <span class=\"s\">6</span> quant au zèle, persécuteur de l'Église, irréprochable à l'égard de la justice de la loi. <span class=\"s\">7</span> Mais ces choses qui étaient pour moi des <button class=\"mot\" data-g=\"g-kerdos\">gains</button>, je les ai regardées comme une perte, à cause de Christ. <span class=\"s\">8</span> Et même je regarde toutes choses comme une perte, à cause de l'<button class=\"mot\" data-g=\"g-hyperoche\">excellence</button> de la connaissance de Jésus-Christ mon Seigneur,",
+      "gloses": [
+        {
+          "id": "g-peritome",
+          "lemme": "peritomē",
+          "html": "<span class=\"gr\">peritomē</span> désigne l'incision rituelle d'Abraham, signe de l'alliance (Genèse 17). Paul retourne le mot contre ceux qui en font un titre de gloire : « les circoncis, c'est nous », dit-il des croyants marqués non par la chair mais par l'Esprit, reprenant le mouvement de Romains 2, 29, où la vraie circoncision est « celle du cœur ». Chrysostome, dans son Homélie X sur l'épître aux Philippiens, s'arrête justement sur ce verset pour montrer en quoi consiste cette vraie circoncision, et comment Paul, ayant eu tous les avantages de la loi, les a sacrifiés pour Jésus-Christ."
+        },
+        {
+          "id": "g-sarx",
+          "lemme": "sarx",
+          "html": "<span class=\"gr\">sarx</span>, la chair, n'est pas chez Paul le corps biologique mais l'homme replié sur ses titres, ses œuvres, sa propre justice. Segond garde « chair », fidèle au mot, mais le lecteur français risque d'y entendre seulement le corporel, alors que Paul vise une attitude du cœur. Calvin, dans son commentaire sur ce chapitre, insiste : la confiance en la chair n'est pas d'abord un péché des sens, mais l'orgueil le plus spirituel, celui qui se pare de la loi elle-même."
+        },
+        {
+          "id": "g-kerdos",
+          "lemme": "kerdos / zēmia",
+          "html": "Le grec emploie ici le vocabulaire du commerce : <span class=\"gr\">kerdos</span>, le gain porté au crédit ; <span class=\"gr\">zēmia</span>, la perte portée au débit. Segond traduit fidèlement, mais perd la saveur comptable du verset : Paul reprend ses états de service — naissance, tribu, zèle — comme on reprendrait un livre de comptes, et il en recalcule la somme à la lumière du Christ. Ce que la loi inscrivait au crédit passe tout entier au débit, non par mépris du passé, mais parce qu'un autre bien l'a dépassé."
+        },
+        {
+          "id": "g-hyperoche",
+          "lemme": "hyperochē",
+          "html": "<span class=\"gr\">hyperochē</span> vient du verbe « dépasser, surpasser » : Segond traduit « excellence », mot un peu plat pour une image qui dit une supériorité si forte qu'elle fait pencher toute la balance d'un seul côté. Ce n'est pas que la connaissance du Christ s'ajoute aux autres titres de Paul pour les compléter ; elle les surclasse si radicalement qu'ils cessent de compter. Le mot ne revient que deux fois dans le Nouveau Testament, ici et en 1 Timothée 2, 2, ce qui souligne combien Paul force la langue pour dire une disproportion sans mesure commune."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 104 (105), 2-3, 4-5, 6-7",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">2</span> <button class=\"mot\" data-g=\"g-zammeru\">Chantez</button>, chantez en son honneur! Parlez de toutes ses merveilles! <span class=\"s\">3</span> <button class=\"mot\" data-g=\"g-hithallelu\">Glorifiez-vous</button> de son saint nom! Que le cœur de ceux qui cherchent l'Éternel se réjouisse! <span class=\"s\">4</span> Ayez recours à l'Éternel et à son appui, Cherchez continuellement sa face! <span class=\"s\">5</span> Souvenez-vous des prodiges qu'il a faits, De ses miracles et des jugements de sa bouche, <span class=\"s\">6</span> Postérité d'Abraham, son <button class=\"mot\" data-g=\"g-ebed\">serviteur</button>, Enfants de Jacob, ses élus! <span class=\"s\">7</span> L'Éternel est notre Dieu; Ses jugements s'étendent sur toute la terre.",
+      "gloses": [
+        {
+          "id": "g-zammeru",
+          "lemme": "zamar",
+          "html": "Le verbe hébreu, de la racine <span class=\"gr\">zamar</span>, ne désigne pas un simple chant mais une musique accompagnée, pincée ou soufflée — c'est de là que vient, par le grec <span class=\"gr\">psallein</span>, notre mot « psaume ». Segond traduit deux fois « chantez » là où l'hébreu varie les verbes, ce qui aplatit un peu la montée du texte. Le psalmiste ne demande pas seulement une parole sur Dieu, mais un corps engagé, un instrument tenu, pour dire ce qui dépasse la parole seule."
+        },
+        {
+          "id": "g-hithallelu",
+          "lemme": "hithhalelou",
+          "html": "<span class=\"gr\">hithhalelou</span> est la forme réfléchie du verbe <span class=\"gr\">halal</span>, celui-là même qui donne « hallelou-yah » : littéralement, « glorifiez-vous dans son saint nom », comme on se pare d'un vêtement. Segond rend bien l'audace du verbe par « glorifiez-vous », car il s'agit vraiment d'une fierté — mais une fierté qui se prend dans son nom, non en soi. Augustin, commentant ce psaume, remarque que la louange ainsi comprise n'est pas d'abord un sentiment mais un acte, premier mot avant même la demande, à l'image de l'oraison dominicale qui commence par le nom du Père avant toute requête."
+        },
+        {
+          "id": "g-ebed",
+          "lemme": "ebed",
+          "html": "<span class=\"gr\">ebed</span>, que Segond traduit « serviteur », porte en hébreu toute la gamme du travail contraint : c'est le mot de l'esclave autant que du ministre de confiance. Appliqué à Abraham, il ne diminue pas le patriarche mais dit son appartenance entière à Celui qui l'a appelé — le même mot désignera plus tard Moïse, David, puis le Serviteur souffrant d'Ésaïe. Le psaume fait ainsi mémoire d'une filiation de service plus que de sang : être enfant de Jacob, ici, c'est d'abord hériter d'un maître, avant d'hériter d'une terre."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 15, 1-10",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Tous les publicains et les gens de mauvaise vie s'approchaient de Jésus pour l'entendre. <span class=\"s\">2</span> Et les pharisiens et les scribes <button class=\"mot\" data-g=\"g-gongyzo\">murmuraient</button>, disant: Cet homme reçoit des gens de mauvaise vie, et mange avec eux. <span class=\"s\">3</span> Mais il leur dit cette parabole: <span class=\"s\">4</span> Quel homme d'entre vous, s'il a cent brebis, et qu'il en perde une, ne laisse les quatre-vingt-dix-neuf autres dans le désert pour aller après celle qui est <button class=\"mot\" data-g=\"g-apollymi\">perdue</button>, jusqu'à ce qu'il la retrouve? <span class=\"s\">5</span> Lorsqu'il l'a retrouvée, il la met avec joie sur ses épaules, <span class=\"s\">6</span> et, de retour à la maison, il appelle ses amis et ses voisins, et leur dit: Réjouissez-vous avec moi, car j'ai retrouvé ma brebis qui était perdue. <span class=\"s\">7</span> De même, je vous le dis, il y aura plus de joie au ciel pour un seul pécheur qui se <button class=\"mot\" data-g=\"g-metanoia\">repent</button>, que pour quatre-vingt-dix-neuf justes qui n'ont pas besoin de repentance. <span class=\"s\">8</span> Ou quelle femme, si elle a dix drachmes, et qu'elle en perde une, n'allume la lampe, ne balaie la maison, et ne cherche avec soin, jusqu'à ce qu'elle la retrouve? <span class=\"s\">9</span> Lorsqu'elle l'a retrouvée, elle appelle ses amies et ses voisines, et dit: Réjouissez-vous avec moi, car j'ai retrouvé la drachme que j'avais perdue. <span class=\"s\">10</span> De même, je vous le dis, il y a de la joie devant les anges de Dieu pour un seul pécheur qui se repent.",
+      "gloses": [
+        {
+          "id": "g-gongyzo",
+          "lemme": "diegongyzon",
+          "html": "<span class=\"gr\">diegongyzon</span>, l'imparfait du verbe grec « murmurer », est le mot même que la Septante emploie pour le peuple d'Israël grondant contre Moïse et contre Dieu au désert, quand manque le pain ou l'eau (Exode 16, 2 ; Nombres 14, 2). Luc choisit ce verbe précis pour que l'oreille grecque entende l'écho : les pharisiens, en murmurant contre Jésus qui mange avec les pécheurs, reprennent le rôle du peuple infidèle. Paul s'en souviendra en 1 Corinthiens 10, 10 : « Ne murmurez point, comme murmurèrent quelques-uns d'entre eux. »"
+        },
+        {
+          "id": "g-apollymi",
+          "lemme": "apolōlos",
+          "html": "<span class=\"gr\">apolōlos</span>, participe parfait du verbe « perdre, détruire », est plus fort que ce que le français laisse entendre : ce n'est pas une brebis égarée pour un temps, mais une brebis que l'on tient déjà pour perdue, comme morte. Segond traduit « perdue » sobrement, ce qui est juste, mais il faut entendre sous le mot toute la gravité d'une chose qu'on ne compte plus pouvoir reprendre. Le même verbe reviendra au chapitre suivant pour le fils qui « était mort » et qui « est revenu à la vie » (Luc 15, 24) — la brebis, la drachme et le fils subissent le même sort avant d'être retrouvés."
+        },
+        {
+          "id": "g-metanoia",
+          "lemme": "metanoounti",
+          "html": "Segond traduit <span class=\"gr\">metanoounti</span> par « se repent », mot qui, en français, penche vers le regret et le remords. Le grec dit autre chose : <span class=\"gr\">meta-noia</span> est un changement de pensée, un retournement de l'intelligence et de l'orientation entière de la personne, non d'abord un sentiment de culpabilité. La parabole ne décrit d'ailleurs aucun remords intérieur de la brebis ni de la pièce retrouvée — seulement le geste de celui qui cherche et qui trouve, et la joie qui s'ensuit. Ce déplacement, du sentiment du pécheur vers l'initiative de celui qui cherche, est au cœur des deux paraboles qui précèdent celle du fils prodigue dans le même chapitre."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre depuis la prison",
+      "corps_html": "Philippiens est l'une des « lettres de la captivité » : Paul écrit depuis une prison, vraisemblablement à Rome, à une Église qu'il aime sans réserve. Le chapitre 3 s'ouvre sur un avertissement brutal — « Prenez garde aux chiens, prenez garde aux mauvais ouvriers, prenez garde aux circoncis » — visant des prédicateurs qui exigeaient des païens convertis la circoncision et l'observance complète de la loi. C'est en réponse à cette menace que Paul reprend le mot même de ses adversaires, « circoncis », pour le retourner vers les croyants qui se confient en l'Esprit plutôt qu'en la chair."
+    },
+    {
+      "titre": "Au milieu de ceux qu'on évite",
+      "corps_html": "Luc 15 ouvre la plus longue section de paraboles propres à son évangile, au cœur du grand récit de la montée vers Jérusalem. La scène est provoquée par un murmure : des pharisiens et des scribes reprochent à Jésus de fréquenter des publicains et des pécheurs. Les deux paraboles lues aujourd'hui, la brebis et la drachme, répondent directement à cette accusation avant qu'une troisième, celle du fils prodigue, ne vienne clore le chapitre sur la même joie du Père qui retrouve ce qu'il avait perdu."
+    }
+  ],
+  "analogie": {
+    "titre": "Le compte qui bascule",
+    "variantes": [
+      "Il y a des soirs où tu refais tes comptes avec toi-même : ce que tu as accompli, ce qu'on a reconnu en toi, ce qui, additionné, devait suffire à te dire que ta vie avait un poids. Et puis un jour, devant quelque chose de plus grand — un amour, une perte, une rencontre avec Dieu qui ne te lâche pas — cette addition cesse soudain de compter. Non que tu renies ce qui s'y trouvait, mais une autre mesure est entrée, à côté de laquelle l'ancien total, même honorable, devient simplement secondaire. Ce déplacement-là n'est pas un échec : c'est ce que Paul appelle connaître le Christ.",
+      "Tu as pu chercher longtemps une direction, une réponse, un sens à donner à ce qui t'arrivait, sans jamais vraiment la trouver par toi-même. Puis, sans que tu saches dire comment, elle t'a rejoint — par une parole, un silence, une présence qui ne t'accusait de rien et qui semblait t'avoir devancé depuis longtemps. Tu n'avais pas fini de chercher qu'on t'avait déjà trouvé. C'est cette antériorité-là, le fait d'être cherché avant même d'avoir bien su qu'on était perdu, qui porte toute la joie des deux paraboles de ce jour.",
+      "Une phrase entendue il y a longtemps — dans une liturgie suivie sans attention, ou dite par quelqu'un qui ne savait pas encore ce qu'elle pesait pour toi — peut rester inerte pendant des années, sans jamais te toucher vraiment. Puis un jour où tu te sens d'avance disqualifié, incapable de revendiquer quoi que ce soit devant Dieu, elle revient d'elle-même, intacte, et elle dit alors ce que tu n'avais jamais vraiment reçu : que la joie du ciel ne se mesure pas à ce que tu apportes, mais au seul fait d'être rejoint. Tu n'as rien fait pour la garder vivante ; elle t'attendait."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre tes comptes du jour, laisse-toi rejoindre.",
+    "geste": "Nomme devant Dieu, en une phrase, ce que tu considérais jusqu'ici comme un gain — puis dis-lui simplement : au regard de toi, Seigneur, voilà ce que cela pèse maintenant.",
+    "note": "Il ne s'agit pas de mépriser ce que tu as reçu, mais de le déposer."
+  },
+  "question": "Qu'est-ce que tu tiens encore pour un gain, et que deviendrait-il si tu le reposais, aujourd'hui, devant le Christ ?",
+  "racines": [
+    {
+      "titre": "La vraie circoncision",
+      "corps_html": "Au IVe siècle, prêchant sur ce chapitre, Jean Chrysostome insiste : Paul ne dévalue aucun des titres qu'il énumère — naissance, tribu, zèle, observance — il les reconnaît tous comme réels et enviables selon la chair. Le renversement ne porte donc pas sur leur valeur ancienne, mais sur ce qui vient désormais les mesurer : la connaissance du Christ, à côté de laquelle tout le reste, même le meilleur, pèse comme rien.",
+      "attribution": "Jean Chrysostome, Homélie X sur l'épître aux Philippiens"
+    },
+    {
+      "titre": "Louer avant de demander",
+      "corps_html": "Augustin remarque que le psaume commence par la louange — « Confessez l'Éternel, invoquez son nom » — et que l'invocation ne vient qu'après. Il rapproche ce mouvement de l'oraison dominicale, qui s'ouvre par le nom du Père avant toute demande. Aux chrétiens les plus affermis, dit-il, le psaume propose l'amour de Dieu pour lui-même ; aux plus faibles, il propose en exemple la foi des patriarches et l'accomplissement des promesses qui leur furent faites.",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 104"
+    },
+    {
+      "titre": "Manger avec les pécheurs",
+      "corps_html": "Au Ier siècle, partager un repas engageait bien plus qu'aujourd'hui : on mangeait dans un cercle de pureté rituelle que les pharisiens prenaient soin de garder strict. Les publicains, fermiers d'impôts au service de l'occupant romain, étaient tenus pour des exclus sociaux et religieux, au même rang que les gens de mauvaise vie. Que Jésus mange avec eux n'est donc pas une tolérance discrète : c'est un geste public, délibérément scandaleux pour qui mesure la sainteté à la distance gardée.",
+      "attribution": "Note historique sur les usages de table en Galilée au Ier siècle"
+    }
+  ],
+  "videos": [
+    {
+      "id": "KcenGEY1w-U",
+      "raison": "Le mot grec chara, la joie, est celui qui soutient la conclusion des deux paraboles lues aujourd'hui : « il y aura plus de joie au ciel » (Luc 15, 7) et « il y a de la joie devant les anges de Dieu » (Luc 15, 10).",
+      "groupe": "mot"
+    },
+    {
+      "id": "IT3LVWWuDDo",
+      "raison": "Cette étude des paraboles de Jésus éclaire la construction même des deux paraboles jumelles lues ce jour, la brebis et la drachme perdues (Luc 15, 4-10).",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Ce panorama de Luc 10 à 24 situe le chapitre 15 dans le grand récit de la montée vers Jérusalem, où s'enchaînent les paraboles de la miséricorde.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul, qui a tant à son crédit, dit-il que tout cela est une perte ?",
+      "reponse_html": "Paul ne renie rien de ce qu'il énumère : sa naissance, sa tribu, son zèle sont décrits comme de vrais titres, pas des illusions. Le verset emploie un vocabulaire de comptabilité — un gain (<span class=\"gr\">kerdos</span>) porté au crédit, une perte (<span class=\"gr\">zēmia</span>) portée au débit — pour dire que la connaissance du Christ ne s'ajoute pas à cette liste, mais la fait basculer tout entière de l'autre côté du bilan. Ce n'est donc pas un mépris du passé, mais la découverte d'une valeur si supérieure que l'ancienne, même réelle, cesse de compter. Chrysostome, dans son Homélie X sur l'épître aux Philippiens, montre ainsi en quoi consiste la vraie circoncision dont Paul se réclame : non plus la marque reçue à huit jours, mais le choix fait à l'âge adulte de tout risquer pour le Christ.",
+      "sources": {
+        "jour": [
+          "Ph 3, 7-8a"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélie X sur l'épître aux Philippiens"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le berger a-t-il raison d'abandonner quatre-vingt-dix-neuf brebis pour une seule ?",
+      "reponse_html": "Lu comme un calcul de probabilités, le geste du berger paraît déraisonnable : laisser quatre-vingt-dix-neuf brebis en sécurité pour une seule égarée. Mais la parabole ne raisonne pas en proportions ; elle décrit un berger pour qui aucune perte n'est acceptable comme définitive, aussi minime soit-elle statistiquement. Luc rapporte deux fois cette logique — la brebis, puis la pièce de monnaie — pour qu'elle s'imprime : la valeur de ce qui est cherché ne se mesure pas à sa part dans le troupeau, mais au simple fait qu'il est perdu et qu'il appartient à quelqu'un.",
+      "sources": {
+        "jour": [
+          "Lc 15, 4-7"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi la femme allume-t-elle une lampe pour chercher une seule petite pièce ?",
+      "reponse_html": "Une drachme représentait à peu près le salaire d'une journée de travail : une perte réelle, mais pas ruineuse pour qui en possédait dix. Les maisons de l'époque, souvent sans fenêtre ou à la lumière rare, expliquent le détail très concret de la lampe allumée en plein jour et du sol balayé avec soin. Ce luxe de précision dans un détail aussi modeste indique que la parabole veut être prise au pied de la lettre : la femme cherche réellement, méthodiquement, comme on cherche ce qui compte.",
+      "sources": {
+        "jour": [
+          "Lc 15, 8-9"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que veut dire le psaume quand il appelle Israël « élus » alors qu'il parle de serviteurs ?",
+      "reponse_html": "Le psaume appelle Israël « son serviteur » et « ses élus » dans le même mouvement, parce que l'élection biblique ne libère jamais du service : elle y engage plus profondément. Être choisi, pour la postérité d'Abraham, ce n'est pas recevoir un privilège sans contrepartie, mais être rattaché à Celui qui appelle, comme le furent Abraham, puis Moïse, puis David. Augustin, dans son Discours sur le psaume 104, remarque que ce psaume propose deux degrés de lecture : aux chrétiens les plus affermis, l'amour de Dieu pour lui-même ; aux plus faibles, l'exemple de la foi des patriarches et l'accomplissement des promesses qui leur furent faites.",
+      "sources": {
+        "jour": [
+          "Ps 105, 6"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 104"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi Jésus raconte-t-il deux fois la même histoire, la brebis puis la pièce ?",
+      "reponse_html": "Luc aime doubler ses paraboles pour qu'une seconde image confirme et élargisse la première : un berger, puis une femme ; un troupeau, puis une bourse ; un animal vivant, puis une pièce inerte. La répétition n'est pas une redondance mais une insistance : ce que Dieu cherche avec cette patience ne se limite pas à un cas particulier, il vaut pour toute chose perdue, grande ou infime. Les deux paraboles préparent d'ailleurs immédiatement la troisième, celle du fils prodigue, qui clôt le chapitre sur la même joie retrouvée.",
+      "sources": {
+        "jour": [
+          "Lc 15, 1-10"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "chrysostome-Ph-X",
+    "augustin-Ps-104"
+  ]
+}
