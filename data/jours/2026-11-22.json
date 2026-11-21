@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-22",
+  "date_humaine": "dimanche",
+  "semaine": null,
+  "ferie": "Solennité du Seigneur",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ez 34, 11-12.15-17 ; 1 Co 15, 20-26.28 ; Mt 25, 31-46",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 130 q60 -45 150 -40 q110 5 170 10\"/><path d=\"M95 95 v-40\"/><path d=\"M85 58 h20\"/><path d=\"M95 58 q18 2 18 22\"/><path d=\"M48 126 q6 -10 16 -8 q6 -10 16 -2 q4 -8 12 0\"/><path d=\"M45 128 q24 2 50 0\"/><path d=\"M140 132 q7 -9 16 -6 q5 -9 14 -1\"/><path d=\"M138 134 q18 2 34 0\"/></g><g class=\"trait-liturgie\"><path d=\"M250 90 q-20 0 -20 20 q0 20 20 20 q20 0 20 -20 q0 -20 -20 -20 z\"/><path d=\"M240 95 h20\"/><path d=\"M238 103 h24\"/></g></svg>",
+  "titre": "Le Roi berger",
+  "titre_html": "Le Roi <span class=\"it\">berger</span>",
+  "sous_titre": "Christ, Roi de l'univers — Ézéchiel 34 ; Psaume 22(23) ; 1 Corinthiens 15 ; Matthieu 25",
+  "suite_hier": null,
+  "gravure_alt": "Un berger au bâton levé rassemble des brebis dispersées sur une colline, tandis qu'au loin un trône vide attend, sculpté dans le style sobre d'une gravure sur bois.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ez 34, 11-12.15-17",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">11</span> Car ainsi parle le Seigneur, l'Éternel: Voici, j'irai moi-même à la recherche de mes brebis, et j'en aurai soin.</p><p><span class=\"s\">12</span> Comme un <button class=\"mot\" data-g=\"g-raah\">berger</button> inspecte son troupeau le jour où il est au milieu de ses brebis éparses, ainsi j'inspecterai mes brebis, et je les recueillerai de tous les lieux où elles ont été dispersées au jour des nuages et de l'obscurité.</p><p><span class=\"s\">15</span> Moi-même, je ferai paître mes brebis, moi-même je les ferai reposer, dit le Seigneur, l'Éternel.</p><p><span class=\"s\">16</span> Je chercherai celle qui était perdue, je ramènerai celle qui s'était égarée, je panserai celle qui est blessée, et je fortifierai celle qui est malade; mais je détruirai celles qui sont grasses et vigoureuses. Je veux les paître avec justice.</p><p><span class=\"s\">17</span> Et vous, mes brebis, ainsi parle le Seigneur, l'Éternel: Voici, je <button class=\"mot\" data-g=\"g-mishpat\">jugerai</button> entre brebis et brebis, entre béliers et boucs.</p>",
+      "gloses": [
+        {
+          "id": "g-raah",
+          "lemme": "ra'ah",
+          "html": "Le verbe hébreu <span class=\"gr\">ra'ah</span> porte à lui seul tout le chapitre: il signifie à la fois « faire paître » et « être berger », sans qu'on puisse séparer nettement les deux sens. Segond le traduit tour à tour par « berger » et par « paître », ce qui est juste mais dissout une unité que l'hébreu garde intacte: conduire et nourrir sont ici un seul geste, non deux fonctions distinctes. Les bergers dénoncés plus haut dans le chapitre (v. 2-3) se sont repus eux-mêmes sans faire paître le troupeau; c'est ce même verbe que Dieu reprend à son compte, aux deux sens, en disant qu'il s'en chargera lui-même.",
+          "aujourdhui": "Tu reconnais rarement la main qui te conduit au moment où elle agit: ce n'est souvent qu'après coup, en relisant une période difficile, que tu vois qu'un soin s'exerçait déjà sur toi avant que tu saches le nommer. Ce verset ne décrit pas un sentiment de protection, mais un geste réel et continu, que tu peux ignorer sans qu'il s'arrête pour autant."
+        },
+        {
+          "id": "g-mishpat",
+          "lemme": "mishpat",
+          "html": "Le mot traduit par « justice », <span class=\"gr\">mishpat</span>, ne désigne pas d'abord une qualité morale mais l'acte de trancher une cause entre deux parties réelles. Segond choisit « avec justice », ce qui est exact, mais peut faire oublier que ce mishpat se joue ici entre la brebis grasse et la brebis exténuée du verset 16, non dans l'abstrait. Le verbe apparenté, « je jugerai », reprend la même racine au verset suivant: les rabbins, comme plus tard les lecteurs chrétiens de ce texte, y ont entendu l'annonce d'un jugement dernier entre brebis et boucs, image que Matthieu 25 reprendra presque mot pour mot.",
+          "aujourdhui": "Tu as peut-être déjà ressenti ce trouble de voir quelqu'un profiter d'une situation aux dépens des plus faibles, sans que rien ne semble jamais se rétablir. Ce verset ne promet pas une vengeance, mais une remise en ordre réelle des causes, portée par un autre que toi — ce qui peut être, selon les jours, un soulagement ou une mise en question de ta propre hâte à juger."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 22 (23), 1-2ab, 2c-3, 4, 5, 6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">1-2ab</span> Cantique de David. L'Éternel est mon <button class=\"mot\" data-g=\"g-raah-ps\">berger</button>: je ne manquerai de rien. Il me fait reposer dans de verts pâturages,</p><p><span class=\"s\">2c-3</span> il me dirige près des eaux paisibles. Il restaure mon âme, il me conduit dans les sentiers de la justice, à cause de son nom.</p><p><span class=\"s\">4</span> Quand je marche dans la vallée de l'ombre de la mort, je ne crains aucun mal, car tu es avec moi: ta <button class=\"mot\" data-g=\"g-shebet\">houlette</button> et ton bâton me rassurent.</p><p><span class=\"s\">5</span> Tu dresses devant moi une table, en face de mes adversaires; tu oins d'huile ma tête, et ma coupe déborde.</p><p><span class=\"s\">6</span> Oui, le bonheur et la grâce m'accompagneront tous les jours de ma vie, et j'habiterai dans la maison de l'Éternel jusqu'à la fin de mes jours.</p>",
+      "gloses": [
+        {
+          "id": "g-raah-ps",
+          "lemme": "ra'ah",
+          "html": "Le même verbe qu'en Ézéchiel, <span class=\"gr\">ra'ah</span>, ouvre le psaume: « L'Éternel est mon berger ». Segond traduit par un substantif alors que l'hébreu porte un participe, littéralement « celui qui me fait paître », une action continuée plutôt qu'un titre fixe une fois pour toutes. Augustin, dans son discours sur ce psaume, lit le même mouvement continu: le pâturage où Dieu le place, dit-il, « commence par me conduire à la foi » — ce n'est pas un lieu où l'on arrive, mais un soin qui ne s'arrête pas.",
+          "aujourdhui": "Il y a des jours où rien ne manque vraiment, et où tu ne sais pas dire pourquoi: aucune raison extérieure ne justifie ce repos, et pourtant il est là, sans que tu l'aies produit. Le psaume ne décrit pas une circonstance heureuse, mais une présence qui continue de faire paître, même quand tu ne t'en aperçois pas."
+        },
+        {
+          "id": "g-shebet",
+          "lemme": "shebet",
+          "html": "Segond distingue « houlette » et « bâton » pour deux mots hébreux voisins, <span class=\"gr\">shebet</span> et <span class=\"gr\">mish'enah</span>: le premier corrige et ramène la brebis égarée, le second soutient la marche et repousse la bête sauvage. Le texte les unit dans un seul verset, comme deux fonctions d'une même main plutôt que deux instruments opposés. Augustin, commentant ce psaume, resserre encore ce lien: « votre discipline est pour moi comme la verge qui ramène les brebis au bercail » — la correction elle-même devient consolation parce qu'elle vient de celui qui nourrit.",
+          "aujourdhui": "Une parole de correction, reçue au moment même comme une blessure, peut devenir avec le temps ce dont tu te souviens comme d'un soutien — sans que la dureté initiale disparaisse de ta mémoire. Le psaume ne sépare pas ces deux gestes: il les reçoit de la même main, et c'est cela, plus qu'une consolation facile, qui finit par rassurer."
+        }
+      ]
+    },
+    {
+      "etiquette": "Deuxième lecture",
+      "reference": "1 Co 15, 20-26.28",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">20</span> Mais maintenant, Christ est ressuscité des morts, il est les <button class=\"mot\" data-g=\"g-aparche\">prémices</button> de ceux qui sont morts.</p><p><span class=\"s\">21</span> Car, puisque la mort est venue par un homme, la résurrection des morts aussi est venue par un homme.</p><p><span class=\"s\">22</span> Et comme tous meurent en Adam, de même aussi tous revivront en Christ,</p><p><span class=\"s\">23</span> mais chacun en son rang: Christ comme prémices, puis ceux qui appartiennent à Christ, lors de son avènement.</p><p><span class=\"s\">24</span> Ensuite viendra la fin, quand il remettra le royaume à Dieu le Père, après avoir détruit toute domination, toute autorité et toute puissance.</p><p><span class=\"s\">25</span> Car il faut qu'il règne jusqu'à ce qu'il ait mis tous les ennemis sous ses pieds.</p><p><span class=\"s\">26</span> Le dernier ennemi qui sera détruit, c'est la mort.</p><p><span class=\"s\">28</span> Et lorsque toutes choses lui auront été <button class=\"mot\" data-g=\"g-hypotasso\">soumises</button>, alors le Fils lui-même sera soumis à celui qui lui a soumis toutes choses, afin que Dieu soit tout en tous.</p>",
+      "gloses": [
+        {
+          "id": "g-aparche",
+          "lemme": "aparchē",
+          "html": "Le mot grec <span class=\"gr\">aparchē</span> désigne la première gerbe offerte au Temple, celle qui consacrait et garantissait par avance toute la moisson à venir (Lv 23, 10). Segond garde « prémices », terme technique qu'on ne relie plus spontanément, aujourd'hui, au rite agricole que Paul avait sous les yeux. L'image est précise et volontaire: la résurrection du Christ n'est pas un exemple isolé à admirer, mais le premier geste d'une moisson déjà engagée, celle de « ceux qui appartiennent à Christ » nommés au verset suivant.",
+          "aujourdhui": "Tu as peut-être déjà espéré, devant une situation qui semblait entièrement refermée, qu'un seul signe positif suffirait à garantir que tout n'était pas perdu. Paul ne parle pas d'un signe parmi d'autres, mais d'un premier fruit qui engage toute la récolte: ce qui est arrivé au Christ n'est pas un exemple encourageant, mais un commencement qui te concerne déjà."
+        },
+        {
+          "id": "g-hypotasso",
+          "lemme": "hypotassō",
+          "html": "Le verbe grec <span class=\"gr\">hypotassō</span>, répété trois fois en deux versets, signifie littéralement « ranger sous », comme des troupes sous un chef plutôt qu'un vaincu sous un vainqueur. Segond traduit uniformément par « soumettre », fidèle mais qui peut, en français, évoquer une contrainte subie, alors que le mouvement décrit va du Père au Fils puis du Fils au Père, dans un ordre de mission et non de rivalité. Chrysostome, dans ses homélies sur cette épître, insiste sur le fait que cette soumission finale du Fils n'énonce rien d'une infériorité de nature, mais l'achèvement d'une œuvre qui lui avait été confiée.",
+          "aujourdhui": "Se savoir dépendant d'un ordre plus grand que soi peut être vécu comme une humiliation ou comme un repos, selon qu'on y voit une contrainte ou une place reçue. Ce que Paul décrit ici n'est ni l'un ni l'autre tout à fait: c'est l'achèvement d'une tâche menée à son terme, où se remettre entre les mains d'un autre devient enfin possible parce que tout est accompli."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Mt 25, 31-46",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">31</span> Lorsque le Fils de l'homme viendra dans sa gloire, avec tous les anges, il s'assiéra sur le trône de sa gloire.</p><p><span class=\"s\">32</span> Toutes les nations seront assemblées devant lui. Il séparera les uns des autres, comme le berger sépare les brebis des <button class=\"mot\" data-g=\"g-eriphon\">boucs</button>;</p><p><span class=\"s\">33</span> et il mettra les brebis à sa droite, et les boucs à sa gauche.</p><p><span class=\"s\">34</span> Alors le roi dira à ceux qui seront à sa droite: Venez, vous qui êtes bénis de mon Père; prenez possession du royaume qui vous a été préparé dès la fondation du monde.</p><p><span class=\"s\">35</span> Car j'ai eu faim, et vous m'avez donné à manger; j'ai eu soif, et vous m'avez donné à boire; j'étais étranger, et vous m'avez recueilli;</p><p><span class=\"s\">36</span> j'étais nu, et vous m'avez vêtu; j'étais malade, et vous m'avez visité; j'étais en prison, et vous êtes venus me voir.</p><p><span class=\"s\">37</span> Les justes lui répondront: Seigneur, quand t'avons-nous vu avoir faim, et t'avons-nous donné à manger; ou avoir soif, et t'avons-nous donné à boire?</p><p><span class=\"s\">38</span> Quand t'avons-nous vu étranger, et t'avons-nous recueilli; ou nu, et t'avons-nous vêtu?</p><p><span class=\"s\">39</span> Quand t'avons-nous vu malade, ou en prison, et sommes-nous allés vers toi?</p><p><span class=\"s\">40</span> Et le roi leur répondra: Je vous le dis en vérité, toutes les fois que vous avez fait ces choses à l'un de ces <button class=\"mot\" data-g=\"g-elachistos\">plus petits</button> de mes frères, c'est à moi que vous les avez faites.</p><p><span class=\"s\">41</span> Ensuite il dira à ceux qui seront à sa gauche: Retirez-vous de moi, maudits; allez au feu éternel qui a été préparé pour le diable et ses anges.</p><p><span class=\"s\">42</span> Car j'ai eu faim, et vous ne m'avez pas donné à manger; j'ai eu soif, et vous ne m'avez pas donné à boire;</p><p><span class=\"s\">43</span> j'étais étranger, et vous ne m'avez pas recueilli; j'étais nu, et vous ne m'avez pas vêtu; j'étais malade et en prison, et vous ne m'avez pas visité.</p><p><span class=\"s\">44</span> Ils répondront aussi: Seigneur, quand t'avons-nous vu avoir faim, ou soif, ou étranger, ou nu, ou malade, ou en prison, et ne t'avons-nous pas assisté?</p><p><span class=\"s\">45</span> Et il leur répondra: Je vous le dis en vérité, toutes les fois que vous n'avez pas fait ces choses à l'un de ces plus petits, c'est à moi que vous ne les avez pas faites.</p><p><span class=\"s\">46</span> Et ceux-ci iront au châtiment éternel, mais les justes à la vie éternelle.</p>",
+      "gloses": [
+        {
+          "id": "g-eriphon",
+          "lemme": "eriphos",
+          "html": "Le mot grec traduit par « boucs », <span class=\"gr\">eriphos</span>, désigne précisément le jeune chevreau, non le bouc adulte qu'on imagine parfois noir et menaçant par contraste avec la brebis blanche. Segond simplifie en « boucs », ce qui durcit une image que le grec garde plus neutre: dans un troupeau réel de Palestine, brebis et chèvres paissaient ensemble le jour et n'étaient séparées que le soir, par nécessité d'élevage et non par nature opposée. Le tri du verset 32 ne distingue donc pas deux espèces bonnes et mauvaises par essence, mais rejoue un geste quotidien et familier du berger, rendu ici définitif.",
+          "aujourdhui": "Tu as pu vivre, dans ta propre existence, des moments où tu ne savais pas toi-même de quel côté tu te trouvais — capable du même geste qui secourt ou qui abandonne, selon le jour. Le texte ne te demande pas de deviner d'avance ton camp, mais de prêter attention à ce que tu fais, maintenant, à quelqu'un qui a faim ou qui est seul."
+        },
+        {
+          "id": "g-elachistos",
+          "lemme": "elachistos",
+          "html": "Le superlatif grec <span class=\"gr\">elachistos</span>, « le plus petit », n'apparaît dans Matthieu qu'ici et déjà en 5, 19, à propos du moindre commandement. Segond traduit littéralement, et c'est juste, car le mot porte tout le poids de la phrase: non pas « les pauvres » en général, terme que l'évangile emploie par ailleurs, mais celui qui ne pèse rien, qu'on ne songe même pas à compter. Jean Chrysostome, dans ses homélies sur Matthieu, revient souvent sur ce thème pour dire que le Christ se cache précisément là où personne n'aurait eu l'idée de le chercher.",
+          "aujourdhui": "Il arrive qu'on rende service sans y penser, à quelqu'un dont on a déjà oublié le visage, et qu'on apprenne bien plus tard que ce geste minuscule a compté plus que tout ce qu'on croyait avoir réussi par ailleurs. Ce verset ne mesure rien à l'intention ni à la reconnaissance reçue, mais à ce qui a été réellement fait, à quelqu'un de réel."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Ézéchiel, les bergers qui se paissent eux-mêmes",
+      "corps_html": "<p>Le chapitre 34 s'ouvre par un oracle très dur contre les rois et les chefs d'Israël, appelés bergers, qui se sont nourris du troupeau au lieu de le nourrir (Éz 34, 2-3). Le texte est écrit depuis l'exil babylonien, après 587 avant notre ère, quand la monarchie de Juda s'est effondrée et que le peuple est dispersé « au jour des nuages et de l'obscurité » (v. 12), expression qui désigne la catastrophe elle-même. C'est dans ce vide de toute autorité légitime que Dieu annonce qu'il reprendra lui-même, directement, la charge de berger.</p>"
+    },
+    {
+      "titre": "La fête du Christ Roi, un dimanche récent",
+      "corps_html": "<p>Le rattachement de Matthieu 25 au thème de la royauté du Christ vient d'une fête instituée en 1925 par l'encyclique Quas primas du pape Pie XI, placée au terme de l'année liturgique pour couronner le parcours des dimanches ordinaires. Le choix du jugement des nations plutôt que d'une image de puissance pour « Christ Roi » n'est pas neutre: il fait du service des plus petits le seul critère de la royauté reconnue au dernier jour.</p>"
+    }
+  ],
+  "analogie": {
+    "titre": "Reconnu sans le savoir",
+    "variantes": [
+      "Tu as peut-être rendu un service que tu as oublié le jour même — une parole dite à quelqu'un de découragé, un geste qui ne t'a rien coûté d'apparent — et tu l'as appris bien plus tard, par un autre, que ce geste avait compté au-delà de toute proportion avec ce que tu croyais avoir donné. Ce décalage entre ce que tu penses avoir fait et ce qui a réellement été reçu est exactement la surprise des justes de l'Évangile, qui demandent « quand t'avons-nous vu avoir faim » sans se souvenir d'avoir vu qui que ce soit d'autre qu'un homme ordinaire. Devant Dieu, ce n'est pas ta mémoire du bien que tu as fait qui compte, mais le bien lui-même, posé une fois pour toutes, même sans témoin et sans retour.",
+      "Il y a des périodes où tu te sens dispersé en toi-même, incapable de rassembler ce que tu penses, ce que tu crois et ce que tu fais en une seule personne cohérente, comme si plusieurs parts de toi paissaient chacune de son côté sans berger. Et puis, sans que tu puisses dire exactement quand ni comment, un apaisement revient, une unité se refait, sans que tu aies toi-même conduit ce rassemblement. Ce que le prophète annonce à des exilés dispersés n'est pas d'abord un retour géographique, mais ce resserrement intérieur que seul un autre que toi peut opérer, et devant lequel tu n'as rien à faire qu'à le reconnaître déjà à l'œuvre.",
+      "Face à une perte que tu croyais définitive — un lien rompu, un deuil, une part de toi-même que tu pensais morte pour de bon — il arrive qu'une espérance se lève sans que tu l'aies cherchée, pas comme une consolation fabriquée mais comme si quelque chose, ailleurs, avait déjà commencé à répondre à cette mort. Paul ne décrit pas un vœu pieux quand il parle de prémices: il décrit un premier fruit déjà cueilli, qui engage toute une moisson que tu ne vois pas encore. Ce que tu croyais clos continue, non par ta force, mais parce qu'un commencement a eu lieu avant toi et pour toi."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre le jour, reste un instant avec une seule question: à qui, récemment, as-tu rendu un service sans y penser deux fois ?",
+    "geste": "Prends le temps d'écrire le nom de cette personne, sans rien ajouter — ni justification, ni suite à donner — simplement pour la nommer devant Dieu.",
+    "note": "Ce geste n'a pas vocation à produire un effet: il consiste seulement à laisser remonter ce que tu avais déjà oublié."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore d'être rassemblé par un autre que toi-même ?",
+  "racines": [
+    {
+      "titre": "Augustin, le pâturage qui fait grandir dans la foi",
+      "corps_html": "<p>Commentant le psaume 22, Augustin lit le premier pâturage comme un commencement et non une installation: « Il m'a placé, pour me nourrir, dans ce lieu de pâturage qui commence par me conduire à la foi. » Le repos du psaume n'est donc pas un acquis mais une croissance continuée, que la vallée de l'ombre, quelques versets plus loin, ne viendra pas interrompre.</p>",
+      "attribution": "Augustin d'Hippone, Discours sur le psaume 22"
+    },
+    {
+      "titre": "Calvin et la résurrection finale",
+      "corps_html": "<p>Calvin consacre tout un chapitre de son Institution (livre III, chapitre XXV) à ce qu'il nomme la résurrection finale, qu'il adosse précisément à 1 Corinthiens 15: la garantie de notre propre résurrection n'est pas une spéculation sur l'âme, mais tient à ce que le Christ en est, dit Paul, les prémices. Douter de sa propre résurrection reviendrait, pour Calvin, à douter que celle du Christ ait eu lieu.</p>",
+      "attribution": "Jean Calvin, Institution de la religion chrétienne, livre III, ch. XXV"
+    },
+    {
+      "titre": "1925 — une fête née d'une inquiétude",
+      "corps_html": "<p>Quas primas, l'encyclique qui institue la fête du Christ Roi, répond à la montée des nationalismes et des totalitarismes de l'entre-deux-guerres: elle affirme une royauté qui ne se mesure à aucune puissance politique. Placer ce jour-là la scène du jugement selon l'accueil fait aux plus petits (Mt 25, 31-46) renverse délibérément l'image du roi triomphant pour celle d'un roi reconnu dans ce qu'on fait au plus démuni.</p>",
+      "attribution": "note historique"
+    }
+  ],
+  "pauses": [
+    {
+      "question": "Peux-tu accepter d'être jugé sur ce que tu as fait sans le savoir, plutôt que sur ce que tu as voulu faire ?",
+      "suite": "Reste un moment sans répondre."
+    }
+  ],
+  "videos": [
+    {
+      "id": "9lxl6CS1RJk",
+      "raison": "Mt 25, 31 ouvre la scène du jugement par le titre « le Fils de l'homme viendra dans sa gloire », que cette vidéo étudie comme thème biblique.",
+      "groupe": "mot"
+    },
+    {
+      "id": "u-2dqyddp2o",
+      "raison": "Mt 25, 46 et 1 Co 15, 22 se rejoignent sur la « vie éternelle » promise à ceux qui revivent en Christ.",
+      "groupe": "mot"
+    },
+    {
+      "id": "H3-GGFM3WqM",
+      "raison": "Ez 34, 16 annonce que Dieu veut paître son troupeau « avec justice », mot repris dans le tri de Mt 25.",
+      "groupe": "mot"
+    },
+    {
+      "id": "MyFcRxLzW6g",
+      "raison": "Panorama d'Ézéchiel 34-48, le bloc qui contient précisément l'oracle du bon berger lu aujourd'hui.",
+      "groupe": "livre"
+    },
+    {
+      "id": "q99CrlpKBrw",
+      "raison": "Panorama de 1 Corinthiens, l'épître dont est tiré le passage sur la résurrection et le règne du Christ (1 Co 15, 20-28).",
+      "groupe": "livre"
+    },
+    {
+      "id": "mq0vO1vNVfY",
+      "raison": "Panorama de Matthieu 14-28, qui situe le discours du jugement des nations (Mt 25) dans l'ensemble de la fin de l'évangile.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi le jugement de Matthieu 25 porte-t-il sur des gestes aussi concrets, et jamais sur une déclaration de foi ?",
+      "reponse_html": "<p>Le texte ne met en scène aucune profession de foi, ni d'un côté ni de l'autre: ni les bénis ni les maudits ne savent, au moment des faits, qu'ils ont affaire au Christ (Mt 25, 37.44). Ce silence est volontaire: il empêche de transformer la rencontre avec les plus petits en occasion de se faire reconnaître. La foi n'est pas absente du texte, elle est simplement déplacée: elle consiste à croire par avance que le Christ s'est réellement caché là, et à agir en conséquence sans certitude ni retour visible.</p>",
+      "sources": {
+        "jour": [
+          "Mt 25, 37",
+          "Mt 25, 40",
+          "Mt 25, 44-45"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Comment le psaume peut-il dire « je ne manquerai de rien » juste avant de parler de la vallée de l'ombre de la mort ?",
+      "reponse_html": "<p>Le psaume ne juxtapose pas deux expériences contradictoires, il les relie par la même présence: « tu es avec moi » au verset 4 reprend exactement ce qui fondait l'assurance du verset 1. Augustin, commentant ce psaume, situe la vallée de l'ombre au cœur même de la vie présente, qu'il appelle justement « l'ombre de la mort » par contraste avec la vie à venir. Le « je ne manquerai de rien » n'annule donc pas la traversée, il en change seulement la nature: on peut y manquer de tout, sauf de cette présence.</p>",
+      "sources": {
+        "jour": [
+          "Ps 22(23), 1",
+          "Ps 22(23), 4"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 22"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le Fils « remettra le royaume à Dieu le Père » — cela veut-il dire que son règne a une fin ?",
+      "reponse_html": "<p>Paul ne décrit pas une abdication mais un achèvement: le règne du Christ dure, dit-il, « jusqu'à ce qu'il ait mis tous les ennemis sous ses pieds » (v. 25), ce qui désigne une mission menée à son terme plutôt qu'un pouvoir révoqué. Le dernier ennemi nommé, la mort elle-même, situe cette fin très précisément: le règne s'arrête quand son objet, vaincre la mort, est pleinement réalisé. Ce que Paul vise, en disant que Dieu sera « tout en tous », n'est donc pas la disparition du Christ mais l'aboutissement de son œuvre, dans un ordre de mission accompli et non de rivalité.</p>",
+      "sources": {
+        "jour": [
+          "1 Co 15, 24-26",
+          "1 Co 15, 28"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "En quoi la résurrection du Christ garantit-elle la nôtre, et pas seulement un espoir vague ?",
+      "reponse_html": "<p>Paul emploie un mot technique, les « prémices », qui désigne la première gerbe offerte au Temple et qui engage par avance toute la moisson à venir (Lv 23, 10). Dire que le Christ est les prémices de ceux qui sont morts, c'est affirmer que sa résurrection n'est pas un exemple à imiter mais un premier geste déjà accompli, dont le reste découle nécessairement, « chacun en son rang » (v. 23). La garantie ne repose donc pas sur un sentiment d'espérance, mais sur un fait déjà survenu, dont dépend tout le reste de la moisson.</p>",
+      "sources": {
+        "jour": [
+          "1 Co 15, 20",
+          "1 Co 15, 23"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-22"
+  ]
+}
