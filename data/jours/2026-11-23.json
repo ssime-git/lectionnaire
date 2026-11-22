@@ -1,0 +1,250 @@
+{
+  "date": "2026-11-23",
+  "date_humaine": "lundi",
+  "semaine": "34ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ap 14, 1-3.4b-5 ; Lc 21, 1-4",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 128 h328\"/><path d=\"M150 128 q40 -90 90 -98 q50 8 90 98\"/><path d=\"M35 128 q-2 -30 18 -42 q10 -6 14 -14\"/><path d=\"M64 66 q6 -5 10 1 q2 5 -3 8 q-6 3 -9 -2 q-2 -4 2 -7\"/><path d=\"M58 92 q10 0 16 5\"/><path d=\"M62 128 v-30 q0 -5 5 -5 h14 q5 0 5 5 v30\"/><path d=\"M70 96 v9\"/><path d=\"M58 128 h34\"/><path d=\"M72 108 q1 2 0 4\"/><path d=\"M76 113 q1 2 0 4\"/><path d=\"M185 115 q6 -5 12 0 q6 -5 12 0 q6 -5 12 0\"/><path d=\"M210 85 q6 -5 12 0 q6 -5 12 0 q6 -5 12 0\"/><path d=\"M180 124 q25 -50 55 -88\"/></g><g class=\"trait-liturgie\"><path d=\"M222 48 q9 -7 18 0 q3 5 -2 8 q-8 4 -14 0 q-4 -3 -2 -8\"/><path d=\"M238 44 q5 -3 7 1 q1 4 -3 5\"/><path d=\"M225 56 v5 M231 57 v5 M237 56 v5\"/></g></svg>",
+  "titre": "Tout donner",
+  "titre_html": "Tout <span class=\"it\">donner</span>",
+  "sous_titre": "De l'Agneau suivi sans réserve à la veuve qui donne tout ce qu'elle a",
+  "suite_hier": null,
+  "gravure_alt": "Au premier plan, une veuve courbée laisse tomber deux piécettes dans un tronc de pierre ; à l'arrière-plan, sur une montagne, une multitude innombrable suit un agneau dont le pas ne dévie pas.",
+  "lectures": [
+    {
+      "type": "lecture_1",
+      "etiquette": "Lecture",
+      "reference": "Ap 14, 1-3.4b-5",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Puis je regardai, et voici, l'agneau se tenait sur la <button class=\"mot\" data-g=\"g-sion\">montagne de Sion</button>, et avec lui cent quarante-quatre mille personnes, qui avaient son nom et le nom de son Père écrits sur leurs fronts. <span class=\"s\">2</span> Et j'entendis du ciel une voix, comme un bruit de grosses eaux, comme le bruit d'un grand tonnerre ; et cette voix que j'entendis était comme celle de joueurs de harpes jouant de leurs harpes. <span class=\"s\">3</span> Et ils chantaient un <button class=\"mot\" data-g=\"g-cantique\">cantique nouveau</button> devant le trône, devant les quatre êtres vivants et devant les vieillards. Et personne ne pouvait apprendre le cantique, sauf les cent quarante-quatre mille, qui ont été rachetés de la terre. <span class=\"s\">4</span> Ils suivent l'agneau partout où il va. Ils ont été rachetés d'entre les hommes comme des <button class=\"mot\" data-g=\"g-premices\">prémices</button> pour Dieu et pour l'agneau ; <span class=\"s\">5</span> et dans leur bouche il ne s'est pas trouvé de mensonge, car ils sont <button class=\"mot\" data-g=\"g-irreprehensibles\">irrépréhensibles</button> devant le trône de Dieu.",
+      "gloses": [
+        {
+          "id": "g-sion",
+          "lemme": "Sion",
+          "html": "Sion (<span class=\"gr\">Σιών</span>) est à l'origine la citadelle que David prit aux Jébusiens, puis le nom de la colline du Temple à Jérusalem. Segond garde le mot hébreu sans le traduire, comme un nom propre qu'aucune équivalence française ne pourrait porter. Dans l'Apocalypse, cette montagne n'est plus de pierre : elle s'oppose à la bête qui se dresse sur le sable de la mer au chapitre précédent, et devient le lieu où se tient l'Agneau. L'épître aux Hébreux (12, 22) nomme déjà cette même Sion « céleste », préparant la lecture que les Pères feront de Jérusalem comme figure de l'Église.",
+          "aujourdhui": "Il y a des lieux où tu te sens debout sans savoir pourquoi — pas parce que le sol y est plus solide, mais parce que quelque chose s'y tient avec toi. Sion n'est pas une adresse, c'est une présence qui te fait tenir."
+        },
+        {
+          "id": "g-cantique",
+          "lemme": "Cantique nouveau",
+          "html": "Le texte grec porte <span class=\"gr\">ᾠδὴν καινήν</span>, un chant <span class=\"gr\">καινός</span> — non pas simplement récent (<span class=\"gr\">νέος</span>), mais d'une qualité inédite, comme si aucun chant antérieur n'avait pu l'anticiper. Segond traduit par « cantique nouveau », choix fidèle mais qui perd la nuance : il ne s'agit pas d'une chanson de plus, mais d'un genre de chant qui n'existait pas avant. Augustin, commentant les psaumes qui portent la même expression, lie ce chant nouveau à l'homme nouveau : on ne peut chanter ce cantique qu'en ayant déjà dépouillé le vieil homme.",
+          "aujourdhui": "Certaines joies ne trouvent pas de mots que tu connaissais déjà — tu cherches dans ton vocabulaire habituel et rien ne convient. Ce n'est pas que la langue te manque, c'est que la joie elle-même est d'une espèce que tu n'avais pas encore rencontrée."
+        },
+        {
+          "id": "g-premices",
+          "lemme": "Prémices",
+          "html": "<span class=\"gr\">ἀπαρχή</span> désigne dans le culte juif la première gerbe du grain nouveau, offerte avant toute récolte — un geste qui consacre le tout en n'en prélevant qu'une part. Segond traduit par « prémices », mot aujourd'hui rare mais juste : il garde l'image agricole et cultuelle que le grec porte. L'image inverse celle qu'on attendrait : ces rachetés ne sont pas le reste après le prélèvement de Dieu, ils sont eux-mêmes le prélèvement, la part qui sanctifie tout le reste.",
+          "aujourdhui": "Donner en premier, avant de savoir ce qui restera, n'est pas un calcul que tu peux refaire après coup — c'est un geste qui se joue une fois, au début, et qui change le sens de tout ce qui suit."
+        },
+        {
+          "id": "g-irreprehensibles",
+          "lemme": "Irrépréhensibles",
+          "html": "<span class=\"gr\">ἄμωμοι</span> est le mot technique de la victime sacrificielle « sans défaut » prescrite par la Loi (Exode 12, 5 dans la Septante, pour l'agneau pascal). Segond choisit « irrépréhensibles », qui déplace le sens vers le registre moral et juridique — on ne peut rien leur reprocher — alors que le grec évoque d'abord un corps offert intact sur l'autel. Ce glissement n'est pas une erreur, mais il efface un lien textuel volontaire : ceux qui suivent l'Agneau sans tache deviennent, dans leur existence même, une offrande de la même nature que lui.",
+          "aujourdhui": "Il y a une fidélité qui ne se voit dans aucun acte précis, seulement dans l'absence de fissure sur la durée — rien à montrer, rien à reprendre non plus, et c'est déjà beaucoup."
+        }
+      ]
+    },
+    {
+      "type": "psaume",
+      "etiquette": "Psaume",
+      "reference": "Ps 23 (24), 1-2, 3-4ab, 5-6",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Psaume de David. A l'Éternel la terre et ce qu'elle renferme, le monde et ceux qui l'habitent ! <span class=\"s\">2</span> Car il l'a fondée sur les mers, et affermie sur les fleuves. <span class=\"s\">3</span> Qui pourra monter à la <button class=\"mot\" data-g=\"g-montagne\">montagne de l'Éternel</button> ? Qui s'élèvera jusqu'à son lieu saint ? <span class=\"s\">4</span> Celui qui a les <button class=\"mot\" data-g=\"g-mains\">mains innocentes</button> et le <button class=\"mot\" data-g=\"g-coeur\">cœur pur</button> ; celui qui ne livre pas son âme au mensonge, <span class=\"s\">5</span> il obtiendra la bénédiction de l'Éternel, la miséricorde du Dieu de son salut. <span class=\"s\">6</span> Voilà le partage de la génération qui l'invoque, de ceux qui recherchent ta <button class=\"mot\" data-g=\"g-face\">face</button>, Jacob !",
+      "gloses": [
+        {
+          "id": "g-montagne",
+          "lemme": "Montagne de l'Éternel",
+          "html": "« Monter à la montagne de l'Éternel » traduit l'hébreu <span class=\"gr\">הַר יהוה</span> (har YHWH), désignant très concrètement le mont du Temple à Jérusalem, où l'on montait en pèlerinage pour les trois fêtes annuelles. Segond garde l'image spatiale du mouvement ascendant, fidèle au verbe hébreu <span class=\"gr\">עָלָה</span> (alah), « monter », qui est aussi le verbe technique du pèlerinage et, plus tard dans le judaïsme, de la migration vers la terre d'Israël. La question du psaume n'est donc pas théorique : elle demande qui a le droit d'entrer effectivement dans l'enceinte sacrée.",
+          "aujourdhui": "Il y a des moments où tu sens que tu voudrais entrer plus loin dans une présence, sans savoir si tu en as le droit — ce n'est pas une question de mérite que tu peux cocher, c'est une question qui te laisse debout devant la porte, à attendre une réponse qui n'est pas de toi."
+        },
+        {
+          "id": "g-mains",
+          "lemme": "Mains innocentes",
+          "html": "L'hébreu <span class=\"gr\">נְקִי כַפַּיִם</span> (naqi kappayim), « pur de mains », est une image concrète issue du geste rituel : on lavait ses mains avant d'entrer dans l'enceinte sacrée, et le psalmiste déplace ce geste physique vers une pureté d'action. Segond traduit « mains innocentes », optant pour le registre moral plutôt que rituel — un choix qui aplanit l'image mais la rend immédiatement compréhensible. Calvin, dans son commentaire des psaumes, insiste sur ce point : la pureté extérieure du rite ne vaut rien sans l'innocence réelle des actes qu'elle devait signifier.",
+          "aujourdhui": "Tu peux avoir les mains occupées toute une journée à des gestes irréprochables, et pourtant savoir, toi seul, qu'il y a un geste précis que tu n'as pas fait proprement — ce verset ne parle pas de ce qu'on voit de tes mains, mais de ce que toi tu sais d'elles."
+        },
+        {
+          "id": "g-coeur",
+          "lemme": "Cœur pur",
+          "html": "« Cœur pur » traduit <span class=\"gr\">לֵבָב בַּר</span> (levav bar) : <span class=\"gr\">בַּר</span> est l'adjectif qui qualifie le grain vanné, séparé de la paille et de la poussière — un pur produit, sans mélange. Segond traduit « pur », terme juste mais qui ne porte plus l'image agricole du grain trié. Le lebav biblique n'est pas le siège du sentiment comme le cœur moderne, mais celui de la volonté et du discernement : un cœur « bar » est une intention sans grain étranger mêlé à elle.",
+          "aujourdhui": "Il y a des intentions en toi si mélangées que tu ne sais plus toi-même ce qui, dans ton geste, vient du désir de bien faire et ce qui vient d'autre chose — vouloir un cœur pur, ce n'est pas se juger sans cesse, c'est souhaiter qu'un jour le tri se fasse vraiment."
+        },
+        {
+          "id": "g-face",
+          "lemme": "Face",
+          "html": "« Rechercher ta face » rend l'hébreu <span class=\"gr\">דָּרַשׁ פָּנִים</span> (darash panim), expression cultuelle qui désignait la démarche du pèlerin venant littéralement se présenter devant la face de Dieu au Temple, puisque l'on croyait sa présence localisée entre les chérubins. Segond garde « face », fidèle à l'anthropomorphisme hébraïque que le français n'édulcore pas. Les rabbins ont lu cette expression comme fondatrice de toute prière véritable : chercher Dieu, c'est chercher non une faveur mais une face, un vis-à-vis.",
+          "aujourdhui": "Prier sans rien ressentir, sans aucune réponse perceptible, c'est pourtant déjà chercher une face — tu ne cherches pas une sensation, tu cherches quelqu'un, et chercher un visage, même dans le vide, n'est jamais chercher pour rien."
+        }
+      ]
+    },
+    {
+      "type": "evangile",
+      "etiquette": "Évangile",
+      "reference": "Lc 21, 1-4",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">1</span> Jésus, ayant levé les yeux, vit les riches qui mettaient leurs offrandes dans le <button class=\"mot\" data-g=\"g-tronc\">tronc</button>. <span class=\"s\">2</span> Il vit aussi une pauvre veuve, qui y mettait <button class=\"mot\" data-g=\"g-lepta\">deux petites pièces de monnaie</button>. <span class=\"s\">3</span> Et il dit : Je vous le dis en vérité, cette pauvre veuve a mis plus que tous les autres ; <span class=\"s\">4</span> car tous ceux-ci ont mis des offrandes de leur <button class=\"mot\" data-g=\"g-superflu\">superflu</button>, mais elle a mis de son <button class=\"mot\" data-g=\"g-indigence\">indigence</button> tout ce qu'elle avait pour vivre.",
+      "gloses": [
+        {
+          "id": "g-tronc",
+          "lemme": "Tronc",
+          "html": "Le grec <span class=\"gr\">γαζοφυλάκιον</span> (gazophylakion) désigne la salle du trésor du Temple, dans la cour des Femmes, où se trouvaient treize coffres en forme de trompette recevant les offrandes selon leur destination, d'après la Mishna (traité Sheqalim). Segond traduit simplement « tronc », terme efficace mais qui perd l'ampleur du lieu : ce n'est pas une boîte dans un coin, mais une salle du Temple où l'on pouvait voir et être vu en donnant. Le geste de la veuve se joue donc devant témoins, dans un lieu pensé pour l'exposition publique de la générosité.",
+          "aujourdhui": "Il y a des dons que tu fais en sachant qu'on les verra, et d'autres que tu fais au même endroit, devant les mêmes regards, sans qu'ils voient ce que ce don t'a réellement coûté — le lieu est public, mais ce qui se joue en toi ne l'est pas."
+        },
+        {
+          "id": "g-lepta",
+          "lemme": "Lepta",
+          "html": "<span class=\"gr\">λεπτά</span> (lepta) est le pluriel de <span class=\"gr\">λεπτόν</span>, littéralement « ce qui est mince, pelé » — la plus petite monnaie de bronze en circulation, valant une fraction infime d'un denier. Segond traduit par « deux petites pièces de monnaie », périphrase prudente puisqu'aucun équivalent français ne nomme une monnaie aussi insignifiante. L'évangile parallèle de Marc (12, 42) précise que ces deux lepta équivalent à un quadrant ; Luc laisse le chiffre parler seul, sans même cette précision monétaire.",
+          "aujourdhui": "Tu offres parfois quelque chose de si petit, de si peu monnayable, que tu doutes que cela compte vraiment — un mot, un instant d'attention, une prière distraite — et pourtant rien, dans ce texte, ne dit que la taille du don mesure ce qu'il vaut."
+        },
+        {
+          "id": "g-superflu",
+          "lemme": "Superflu",
+          "html": "Le grec <span class=\"gr\">περισσεύοντος</span> (perisseuontos), participe du verbe « être en surabondance », décrit ce qui dépasse le nécessaire, ce qui reste une fois les besoins couverts. Segond traduit « superflu », mot juste et sobre. Chrysostome, commentant ce même épisode rapporté aussi par Marc, insiste sur ce contraste : les riches donnent ce qui ne leur coûte rien à perdre, et c'est précisément cette absence de coût qui rend leur don, aux yeux de Dieu, moins lourd que les deux piécettes de la veuve.",
+          "aujourdhui": "Donner de ce qui ne te manquera pas est un geste réel, mais il ne te déplace pas — tu restes exactement au même endroit avant et après l'avoir fait, et ce texte ne condamne pas ce don, il dit seulement qu'un autre existe, qui te déplace."
+        },
+        {
+          "id": "g-indigence",
+          "lemme": "Indigence",
+          "html": "<span class=\"gr\">ὑστέρησις</span> (hysterēsis), de la racine <span class=\"gr\">ὑστερέω</span>, « être en retard, manquer, être en dessous ». Segond traduit « indigence », mot fort et rare qui rend bien la radicalité du manque décrit : ce n'est pas la pauvreté relative, c'est l'insuffisance pour vivre. Le texte grec dit littéralement qu'elle a donné « tout son moyen de vivre » (<span class=\"gr\">ὅλον τὸν βίον</span>), son existence même, et non un simple surplus de pauvre.",
+          "aujourdhui": "Il y a des jours où donner quelque chose — du temps, de l'attention, une présence — te coûte littéralement ce qu'il te restait pour tenir toi-même ; ce texte ne dit pas que c'est sans danger, il dit que c'est cela, précisément, que Dieu regarde."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "La fin de l'Apocalypse, le début de la fin de l'année liturgique",
+      "corps_html": "Le chapitre 14 vient après la vision de la bête (ch. 13) et avant les fléaux des coupes (ch. 15-16) : il forme un repos contemplatif entre deux scènes de violence, où l'Agneau debout sur Sion répond terme à terme à la bête debout sur le sable de la mer (13, 1). Lu dans les derniers jours de l'année liturgique, avant l'Avent, ce passage annonce déjà, à sa manière, le retournement final que l'Église attend."
+    },
+    {
+      "titre": "L'obole de la veuve, charnière du récit de Luc",
+      "corps_html": "Cet épisode clôt l'enseignement public de Jésus dans le Temple (Lc 19, 45 - 21, 4) et précède immédiatement l'annonce de la destruction de ce même Temple (21, 5-6). Luc place le regard de Jésus sur cette femme juste avant qu'il n'annonce que les pierres de l'édifice seront renversées : ce qui demeure, dans cette page, n'est pas la pierre mais le geste caché d'une pauvre."
+    }
+  ],
+  "analogie": {
+    "titre": "Le don qui ne compte pas",
+    "variantes": [
+      "Il y a des jours où tu donnes de ton attention, de ta patience, de ton temps à quelqu'un, alors qu'il ne t'en restait presque plus pour toi-même — tu le fais sans bruit, sans le signaler, et personne autour de toi ne sait que ce geste t'a coûté ce qui te permettait, à toi, de tenir. Tu ne calcules pas ce qu'il te reste après, parce qu'il n'y a plus de calcul possible : tu as déjà tout donné de ce que tu avais pour ce moment précis. C'est devant cela, devant ce don qui ne laisse rien derrière lui, que le texte te place : non pour que tu l'admires de loin, mais pour que tu reconnaisses qu'un regard, ailleurs que le tien, pèse ce don à sa vraie mesure.",
+      "Tu as dit oui, un jour, à quelque chose sans savoir où cela te mènerait ni ce que cela te coûterait à la longue — un engagement, une parole donnée, une fidélité promise avant d'en connaître le prix. Les années ont changé les circonstances, mais pas la direction que tu avais prise, et tu te retrouves à la tenir encore, non par habitude, mais parce qu'il n'y a jamais eu, dans ce que tu avais dit, de double fond. Ce texte ne te demande pas d'avoir tout compris d'avance : il te montre une multitude qui suit, sans savoir non plus où cela conduit, et dont la seule marque reconnaissable est qu'aucun mensonge ne s'est jamais trouvé dans sa bouche.",
+      "Il t'est arrivé de traverser quelque chose — une épreuve, une grâce, une nuit — au bout de laquelle une gratitude s'est levée en toi, si précise et si entièrement tienne que tu n'as pas pu la faire passer dans les mots que tu emploies d'habitude pour dire merci. Tu as essayé de la raconter, et ce que tu disais sonnait toujours plus petit que ce que tu portais réellement. Ce n'est pas que tu caches quelque chose : c'est que certains chants ne s'apprennent qu'en ayant vécu ce qu'ils chantent, et que celui-là, personne d'autre ne pouvait te l'enseigner avant que tu ne le reçoives toi-même."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Un seul geste, aujourd'hui, à la mesure de ce que tu viens de lire.",
+    "geste": "Repère un don que tu fais sans qu'on le sache — du temps, une attention, une prière — et ne le raconte à personne, pas même pour t'en rassurer toi-même.",
+    "note": "Ce n'est pas un exercice de discrétion : c'est une façon de laisser ce don appartenir entièrement à celui qui, seul, en voit le poids réel."
+  },
+  "question": "Qu'est-ce que tu donnes aujourd'hui en te disant que ce n'est pas grand-chose — et si c'était, pour Dieu, tout ce que tu as ?",
+  "racines": [
+    {
+      "titre": "Les treize troncs de la cour des Femmes",
+      "corps_html": "La Mishna (traité Sheqalim 6, 5) décrit treize coffres en forme de cor, placés dans la cour des Femmes du second Temple, chacun affecté à un usage précis des offrandes. Le geste de la veuve n'est donc pas improvisé dans un recoin : il se joue dans un dispositif public et codifié, où la somme versée, visible de tous, pouvait aussi trahir la condition de celui qui donnait. C'est dans cette exposition que Jésus choisit de regarder, non les grosses sommes, mais la plus petite.",
+      "attribution": "Note historique, Mishna Sheqalim"
+    },
+    {
+      "titre": "Le poids du cœur, non celui de la main",
+      "corps_html": "Jean Calvin, commentant cet épisode, relève que Dieu ne regarde point tant la grandeur du don que l'affection d'où il procède : la veuve n'est pas louée parce qu'elle a peu, mais parce qu'elle a donné depuis le lieu même de son manque. Cette lecture déplace l'attention du montant vers la disposition intérieure, ce qui l'empêche de devenir un éloge naïf de la pauvreté pour elle-même.",
+      "attribution": "Jean Calvin, Commentaires bibliques, sur Luc 21"
+    },
+    {
+      "titre": "Sion contre la bête",
+      "corps_html": "Le chapitre 13 de l'Apocalypse montre une bête se dressant sur le sable, au bord de la mer, recevant l'adoration de la terre entière ; le chapitre 14 lui oppose, verset pour verset, l'Agneau debout sur une montagne, entouré non d'adorateurs trompés mais de rachetés marqués de deux noms. Cette construction en diptyque, voulue par l'auteur, invite à lire la scène de Sion comme une réponse délibérée à la scène précédente, non comme un tableau isolé.",
+      "attribution": "Lecture structurelle de l'Apocalypse"
+    }
+  ],
+  "pauses": [
+    {
+      "question": "Qu'est-ce qui, en toi, n'a besoin d'aucun témoin pour exister devant Dieu ?",
+      "suite": "Reste un instant sans chercher à répondre."
+    }
+  ],
+  "videos": [
+    {
+      "id": "cAOAPSfpbR4",
+      "raison": "Pour situer la vision de l'Agneau sur la montagne de Sion (Ap 14, 1-5) dans l'ensemble des chapitres 12 à 22.",
+      "groupe": "livre"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Pour relire l'épisode de l'obole de la veuve (Lc 21, 1-4) dans la place qu'il occupe au sein des chapitres 10 à 24 de Luc.",
+      "groupe": "livre"
+    },
+    {
+      "id": "fnP-hBi2A2Y",
+      "raison": "Pour approfondir ce que signifie donner de son indigence plutôt que de son superflu, comme la veuve au Temple.",
+      "groupe": "mot"
+    },
+    {
+      "id": "W2-G9yjdgtg",
+      "raison": "Pour éclairer ce que signifie n'avoir « dans la bouche aucun mensonge » (Ap 14, 5), au sens biblique du témoin fiable.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Qui sont les cent quarante-quatre mille qui suivent l'Agneau ?",
+      "reponse_html": "Le chiffre n'est pas un recensement mais une construction symbolique : douze, le nombre des tribus d'Israël et des apôtres, multiplié par lui-même puis par mille, pour dire une totalité parfaite plutôt qu'un effectif précis. Ap 7 avait déjà scellé ce même nombre avant les fléaux ; au chapitre 14, on les retrouve debout, victorieux, chantant un chant qu'eux seuls peuvent apprendre. Ce ne sont donc pas une élite restreinte à côté d'une masse de croyants ordinaires, mais une image de l'Église entière vue sous l'angle de sa fidélité accomplie.",
+      "sources": {
+        "jour": [
+          "Ap 14,1.3"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi la pauvre veuve donne-t-elle « plus que tous les autres » alors qu'elle donne objectivement moins ?",
+      "reponse_html": "Luc oppose deux mesures : celle de la somme versée et celle de ce qu'elle représente pour celui qui la verse. Les riches donnent de leur superflu, ce qui ne change rien à leur vie après le don ; la veuve donne de son indigence, c'est-à-dire tout ce qu'elle avait pour vivre ce jour-là. Jean Calvin le souligne : Dieu ne pèse pas la grandeur du don mais l'affection et le dépouillement réel qu'il engage. La phrase de Jésus ne mesure donc pas une générosité mais un engagement total de l'existence.",
+      "sources": {
+        "jour": [
+          "Lc 21,2-4"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-commentaires",
+            "reference": "sur Luc 21"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire suivre l'Agneau « partout où il va » ?",
+      "reponse_html": "L'expression ne décrit pas un trajet géographique mais une disponibilité sans condition posée à l'avance : ceux qui suivent ne connaissent pas le chemin avant de s'y engager. Dans l'Apocalypse, cette fidélité se vérifie par deux traits concrets, l'absence de mensonge dans la bouche et l'absence de tache dans la conduite — une cohérence tenue dans la durée plutôt qu'une émotion. Le texte ne promet pas que ce chemin soit compris d'avance, seulement qu'il mène, pour ceux qui le tiennent, jusqu'au trône.",
+      "sources": {
+        "jour": [
+          "Ap 14,4-5"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Qui peut « monter à la montagne de l'Éternel », selon le psaume ?",
+      "reponse_html": "Le psaume pose la question comme une liturgie d'entrée, probablement chantée aux portes du Temple, et y répond par des critères qui ne sont pas rituels mais moraux : des mains innocentes, un cœur pur, une parole sans mensonge. Augustin, commentant ce même psaume, y lit l'ascension du Christ lui-même, seul à pouvoir véritablement s'élever jusqu'à ce lieu saint et y ouvrir un passage pour ceux qui le suivent. Lire ce psaume le même jour que la montagne de Sion en Apocalypse 14 n'est pas un hasard de lectionnaire : c'est la même ascension qui s'y joue, promise et déjà accomplie.",
+      "sources": {
+        "jour": [
+          "Ps 23(24),3-4"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le Psaume 23"
+          }
+        ]
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-23"
+  ]
+}
