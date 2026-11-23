@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-07",
+  "date_humaine": "samedi",
+  "semaine": "31ème Semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ph 4, 10-19 ; Lc 16, 9-15",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 130 h328\"/><path d=\"M163 34 a7 7 0 1 0 14 0 a7 7 0 1 0 -14 0\"/><path d=\"M170 41 v40\"/><path d=\"M170 46 L150 22 M150 22 l-5 -5 M150 22 l0 -7 M150 22 l5 -6\"/><path d=\"M170 46 L190 22 M190 22 l5 -5 M190 22 l0 -7 M190 22 l-5 -6\"/><path d=\"M170 81 L158 120 M170 81 L182 120\"/><path d=\"M45 100 h70 M55 100 v20 M105 100 v20\"/><path d=\"M170 105 v15 M158 120 h24\"/><path d=\"M150 105 h40\"/><path d=\"M170 101 v6\"/><path d=\"M152 105 v6 q9 6 18 0 M188 105 v6 q-9 6 -18 0\"/></g><g class=\"trait-liturgie\"><path d=\"M225 100 h70 M235 100 v20 M285 100 v20\"/><path d=\"M240 100 q7 -11 14 0 M258 100 q7 -13 14 0 M276 100 q7 -10 14 0\"/></g></svg>",
+  "titre": "Cœur affermi",
+  "titre_html": "Cœur <span class=\"it\">affermi</span>",
+  "sous_titre": "Ce que ni l'abondance ni le manque ne donnent — et qu'un seul maître garde.",
+  "suite_hier": "Hier, Paul demandait de ne s'inquiéter de rien, promettant que la paix de Dieu garderait les cœurs et les pensées ; aujourd'hui il raconte de l'intérieur comment cette paix a tenu, dans la faim comme dans l'abondance.",
+  "gravure_alt": "Un homme debout entre une table vide et une table chargée de pain, les deux mains ouvertes vers le ciel sans regarder ni l'une ni l'autre ; à ses pieds, une balance immobile dont l'aiguille reste au centre.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ph 4, 10-19",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">10</span> J'ai éprouvé une grande joie dans le Seigneur, de ce que vous avez pu enfin renouveler l'expression de vos sentiments pour moi ; vous y pensiez bien, mais l'occasion vous manquait. <span class=\"s\">11</span> Ce n'est pas par privation que je dis cela, car j'ai appris à être content de mon sort, quel qu'il soit. <span class=\"s\">12</span> Je sais vivre dans l'humiliation, et je sais vivre dans l'abondance ; en tout et partout j'ai <button class=\"mot\" data-g=\"g-memyemai\">appris</button> à être rassasié et à avoir faim, à être dans l'abondance et à être dans la disette. <span class=\"s\">13</span> Je puis tout par celui qui me <button class=\"mot\" data-g=\"g-endynamoo\">fortifie</button>. <span class=\"s\">14</span> Cependant vous avez bien fait de prendre part à ma détresse. <span class=\"s\">15</span> Vous le savez vous-mêmes, Philippiens, au commencement de la prédication de l'Évangile, lorsque je partis de la Macédoine, aucune Église n'entra en compte avec moi pour ce qu'elle donnait et recevait, excepté vous seuls ; <span class=\"s\">16</span> car vous fûtes les seuls à m'envoyer des dons, une et même deux fois, pour pourvoir à mes besoins, lorsque j'étais à Thessalonique. <span class=\"s\">17</span> Ce n'est pas que je cherche les dons ; mais je cherche le fruit qui abonde pour votre compte. <span class=\"s\">18</span> Or, j'ai tout en abondance et je suis dans l'abondance : j'ai été comblé de biens, en recevant par Épaphrodite ce qui vient de vous comme un <button class=\"mot\" data-g=\"g-osme\">parfum de bonne odeur</button>, un sacrifice que Dieu accepte, et qui lui est agréable. <span class=\"s\">19</span> Et mon Dieu <button class=\"mot\" data-g=\"g-pleroo\">pourvoira</button> à tous vos besoins selon sa richesse, avec gloire, en Jésus-Christ.",
+      "gloses": [
+        {
+          "id": "g-memyemai",
+          "lemme": "memyēmai",
+          "html": "Le verbe grec employé ici, <span class=\"gr\">memyēmai</span>, n'appartient pas au vocabulaire scolaire mais à celui des mystères religieux : il signifie proprement « j'ai été initié ». Segond traduit sobrement par « j'ai appris », effaçant l'image d'une initiation presque sacrée à l'art de vivre selon Dieu, que la langue grecque de l'époque partage aussi avec le vocabulaire philosophique. Paul reprend ce mot d'emprunt pour dire que la paix qu'il connaît ne s'est pas apprise dans un livre, mais reçue par degrés, comme on reçoit un mystère, à travers des expériences opposées."
+        },
+        {
+          "id": "g-endynamoo",
+          "lemme": "endynamoô",
+          "html": "Le participe grec <span class=\"gr\">endynamounti</span> vient de la même racine que « dynamis », la puissance : littéralement, « celui qui met de la force en moi », presque « celui qui m'habite de puissance ». Segond choisit « fortifie », verbe un peu extérieur, alors que le grec suggère une force insufflée du dedans, continue, et non un simple renfort ponctuel. Jean Chrysostome, commentant cette épître, insistait sur le fait que cette force n'abolit pas la faim ni la disette réelles de Paul, mais les traverse — le mot ne promet pas l'absence d'épreuve, mais une présence qui tient debout au milieu d'elle."
+        },
+        {
+          "id": "g-osme",
+          "lemme": "osmē euōdias",
+          "html": "L'expression grecque <span class=\"gr\">osmēn euōdias</span>, « odeur de bonne odeur », est un hébraïsme calqué sur le vocabulaire sacrificiel de la Septante, où elle désigne la fumée des holocaustes montant vers Dieu. Segond traduit fidèlement « parfum de bonne odeur », mais le lecteur français perd le lien direct avec le culte du Temple que tout auditeur juif de Paul percevait aussitôt. En appelant ainsi le don matériel des Philippiens, Paul fait de leur générosité un acte sacrificiel, un culte rendu à Dieu par l'intermédiaire d'un geste envers un homme."
+        },
+        {
+          "id": "g-pleroo",
+          "lemme": "plērōsei",
+          "html": "Le verbe grec <span class=\"gr\">plērōsei</span> signifie « il remplira », au sens de combler entièrement, à ras bord, et non simplement « pourvoir », verbe plus discret que choisit Segond. La nuance compte : Paul ne promet pas une aide mesurée au besoin, mais un remplissage à la mesure de « sa richesse, avec gloire » — une abondance qui dépasse le manque qu'elle comble. Calvin, dans son commentaire de ce passage, rapproche cette promesse de celle faite à Israël dans le désert, où Dieu pourvoyait chaque jour sans que nul n'ait à amasser pour le lendemain."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 111 (112), 1-2, 5-6, 8a.9",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Louez l'Éternel ! Heureux l'homme qui <button class=\"mot\" data-g=\"g-yare\">craint</button> l'Éternel, Qui trouve un grand plaisir à ses commandements. <span class=\"s\">2</span> Sa postérité sera puissante sur la terre, La génération des hommes droits sera bénie. <span class=\"s\">5</span> Heureux l'homme qui exerce la <button class=\"mot\" data-g=\"g-chesed\">miséricorde</button> et qui prête, Qui règle ses actions d'après la justice. <span class=\"s\">6</span> Car il ne chancelle jamais ; La mémoire du juste dure toujours. <span class=\"s\">8</span> Son cœur est <button class=\"mot\" data-g=\"g-samak\">affermi</button>, il est sans crainte, <span class=\"s\">9</span> Il fait des <button class=\"mot\" data-g=\"g-pazar\">largesses</button>, il donne aux indigents ; Sa justice subsiste à toujours ; Sa tête s'élève avec gloire.",
+      "gloses": [
+        {
+          "id": "g-yare",
+          "lemme": "yārē'",
+          "html": "L'hébreu <span class=\"gr\">yare'</span> désigne la crainte, mais une crainte qui n'effraie pas : celle du serviteur devant un maître qu'il aime et qu'il ne veut pas offenser, plus que celle de l'esclave devant un bourreau. Segond garde « craint », fidèle au mot, mais le français moderne entend souvent la peur seule, là où l'hébreu biblique entend aussi le respect qui attache. Les rabbins distinguaient la crainte du châtiment, inférieure, de la crainte de la majesté, supérieure et proche de l'amour ; c'est cette seconde crainte que le psaume loue dès son premier mot."
+        },
+        {
+          "id": "g-chesed",
+          "lemme": "chesed",
+          "html": "Le mot hébreu <span class=\"gr\">chesed</span> est un des termes les plus chargés de toute la Bible hébraïque : il désigne la fidélité tenace d'une alliance, bien plus qu'un sentiment de pitié passagère. Segond le traduit ici par « miséricorde », choix défendable mais qui risque d'évoquer une émotion, alors que le mot hébreu décrit un engagement loyal, le même employé pour dire la fidélité de Dieu envers Israël. L'homme qui exerce le chesed envers son prochain imite donc, à sa mesure, l'attachement constant de Dieu pour son peuple."
+        },
+        {
+          "id": "g-samak",
+          "lemme": "samakh",
+          "html": "La racine hébraïque <span class=\"gr\">samakh</span> signifie s'appuyer, être soutenu, comme un mur qu'on étaye. Segond traduit « affermi », ce qui rend bien l'idée de stabilité, mais efface l'image concrète d'un appui extérieur : ce cœur n'est pas ferme par sa propre épaisseur, il est soutenu par un autre. Le verset précédent disait déjà ce cœur « ferme, confiant en l'Éternel » : la fermeté du juste n'est donc jamais autonome, elle tient à ce sur quoi elle s'appuie."
+        },
+        {
+          "id": "g-pazar",
+          "lemme": "pazar",
+          "html": "Le verbe hébreu <span class=\"gr\">pazar</span> veut dire disperser, répandre au loin, comme on sème à poignées sans compter les grains. Segond choisit « il fait des largesses », qui garde la générosité mais perd l'image du geste large et sans calcul. L'apôtre Paul citera ce verset presque mot pour mot dans sa seconde lettre aux Corinthiens, pour encourager leur collecte en faveur de l'Église de Jérusalem, preuve que ce verset a nourri très tôt une théologie chrétienne du don."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 16, 9-15",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">9</span> Et moi, je vous dis : Faites-vous des amis avec les richesses injustes, pour qu'ils vous reçoivent dans les <button class=\"mot\" data-g=\"g-skenas\">tabernacles éternels</button>, quand vous viendrez à manquer. <span class=\"s\">10</span> Celui qui est fidèle dans les moindres choses est aussi fidèle dans les grandes, et celui qui est injuste dans les moindres choses est aussi injuste dans les grandes. <span class=\"s\">11</span> Si donc vous n'avez pas été fidèles dans les richesses injustes, qui vous confiera les <button class=\"mot\" data-g=\"g-alethinon\">véritables</button> ? <span class=\"s\">12</span> Et si vous n'avez pas été fidèles dans ce qui est à autrui, qui vous donnera ce qui est à vous ? <span class=\"s\">13</span> Nul serviteur ne peut servir deux maîtres. Car, ou il haïra l'un et aimera l'autre ; ou il s'attachera à l'un et méprisera l'autre. Vous ne pouvez servir Dieu et <button class=\"mot\" data-g=\"g-mamon\">Mamon</button>. <span class=\"s\">14</span> Les pharisiens, qui étaient avares, entendirent tout cela, et ils se moquèrent de lui. <span class=\"s\">15</span> Jésus leur dit : Vous, vous vous donnez pour justes devant les hommes, mais Dieu connaît vos cœurs ; car ce qui est élevé parmi les hommes est une <button class=\"mot\" data-g=\"g-bdelygma\">abomination</button> devant Dieu.",
+      "gloses": [
+        {
+          "id": "g-skenas",
+          "lemme": "skēnai",
+          "html": "Le mot grec <span class=\"gr\">skēnas</span> désigne les tentes ou tabernacles, et renvoie directement à la tente de la rencontre dressée au désert, lieu où Dieu habitait au milieu de son peuple en marche. Segond traduit « tabernacles éternels », gardant le mot ancien plutôt que « demeures », ce qui conserve l'écho du désert et du provisoire appelé à devenir permanent. Jésus promet ainsi que l'usage juste de biens eux-mêmes provisoires ouvre sur une demeure qui, elle, ne lève jamais le camp."
+        },
+        {
+          "id": "g-alethinon",
+          "lemme": "alēthinon",
+          "html": "L'adjectif grec <span class=\"gr\">alēthinon</span> ne dit pas seulement « vrai » par opposition à « faux », mais « véritable » par opposition à « ce qui n'est qu'une image, une ombre » — le même mot qualifie ailleurs le vrai pain ou le vrai cep de vigne. Segond rend bien cette nuance par « véritables », en vis-à-vis des richesses « injustes » du verset précédent. L'argent n'est donc pas condamné comme mauvais en soi, mais classé parmi les choses qui ne sont que l'ombre d'une réalité plus stable, confiée seulement à qui a fait ses preuves dans l'ombre."
+        },
+        {
+          "id": "g-mamon",
+          "lemme": "Mamôn",
+          "html": "Mamon n'est pas un nom grec mais un mot araméen, <span class=\"gr\">māmônā</span>, que Jésus laisse tel quel, sans le traduire, comme on nomme une idole par son nom propre plutôt que par un simple concept. Segond conserve cette transcription plutôt que de la rendre par « l'argent » ou « la richesse », ce qui a pour effet de personnifier la chose : on ne peut pas servir deux maîtres parce que Mamon se comporte, dans la phrase même, comme un maître rival de Dieu. Dès les Pères, on a lu dans ce nom laissé intact un avertissement : l'argent ne devient dangereux que lorsqu'il cesse d'être un outil pour devenir, de fait, un seigneur qu'on sert."
+        },
+        {
+          "id": "g-bdelygma",
+          "lemme": "bdelygma",
+          "html": "Le mot grec <span class=\"gr\">bdelygma</span>, « abomination », est le terme même employé par la Septante pour les idoles et les cultes païens, non un simple défaut moral ordinaire. Segond le traduit littéralement, mais le lecteur français n'entend plus forcément l'écho cultuel : ce que les hommes célèbrent comme une réussite, Dieu le classe dans la catégorie de l'idolâtrie. Le mot referme ainsi la scène sur elle-même, puisque le chapitre avait commencé par un intendant injuste et se termine par un jugement sur ce que les hommes adorent sans le nommer."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre de prison, un don reçu deux fois",
+      "corps_html": "Paul écrit depuis une captivité — Rome selon la tradition la plus ancienne, vers les années 61-62. Les Philippiens, seuls parmi les Églises fondées par lui, l'avaient déjà secouru à Thessalonique, puis à nouveau par Épaphrodite. Calvin note dans son commentaire que Paul loue leur don sans jamais s'y attacher comme à une dette : il distingue la joie du bienfait reçu et l'indépendance du cœur à son égard, deux choses que l'on confond trop souvent."
+    },
+    {
+      "titre": "Entre l'intendant habile et le riche sans nom",
+      "corps_html": "Ce passage clôt la parabole de l'intendant malhonnête (Luc 16, 1-8) et prépare celle du riche et de Lazare (16, 19-31) : Luc tient les trois textes ensemble comme une méditation continue sur l'usage de l'argent. Les pharisiens visés au verset 14, note Luc, étaient « avares » — le seul endroit des évangiles où ce trait leur est attribué nommément. Jésus ne leur reproche pas la richesse, mais l'apparence de justice qui la dissimule devant les hommes."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui tient quand rien ne se sent",
+    "variantes": [
+      "Tu as connu ces jours où la prière ne portait rien, où tu répétais les mots sans qu'ils te touchent, par pure obéissance, sans joie ni soulagement sensible. Rien ne changeait en toi que tu puisses nommer. Et pourtant, des semaines plus tard, tu t'es surpris à tenir debout dans une épreuve que tu n'aurais pas crue supportable, sans savoir d'où venait cette force, puisque tu ne l'avais pas sentie venir. C'est exactement ce que Paul appelle apprendre à être content en tout : non un sentiment qu'on cultive, mais une force reçue en secret, qui ne se révèle qu'à l'usage, quand vient la disette ou l'abondance.",
+      "Il t'est arrivé de donner alors que tu n'avais presque rien à donner — un peu de temps, un peu d'argent qui te manquerait, une attention que tu aurais pu garder pour toi tant tu étais épuisé. Et au lieu du vide que tu attendais, tu as senti quelque chose se stabiliser en toi, une paix qui n'avait aucun rapport avec ce que tu venais de perdre. Tu n'as rien récupéré en retour, et pourtant ton cœur, ce jour-là, était plus affermi qu'avant le don. C'est ce que chante le psaume : celui qui disperse sans compter ne s'appauvrit pas de la manière qu'il croyait — sa justice, elle, ne bouge pas.",
+      "Tu connais ce tiraillement précis : une part de toi qui calcule sans cesse l'argent, qui s'inquiète, compare, retient — et une autre part qui voudrait appartenir tout entière à Dieu, sans réserve. Tu as essayé de faire tenir les deux ensemble, en te disant que tu servirais un peu l'un et un peu l'autre, comme on partage son temps entre deux maîtres patients. Mais tu as fini par sentir, à l'usure, que cette division même te fatiguait plus que n'importe quel renoncement net n'aurait pu le faire. C'est ce que Jésus nomme sans détour : on ne sert pas deux maîtres, on finit toujours par en aimer un et mépriser l'autre — et il te reste à savoir lequel, dans le secret, tu as déjà choisi."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, reste un instant avec cette question simple : à qui ton cœur obéit-il réellement quand nul ne te voit faire tes comptes ?",
+    "geste": "Choisis aujourd'hui un don que tu feras sans le dire à personne, et remarque, ce soir, ce qui en toi s'est affermi.",
+    "note": "Ce texte ne demande pas d'être pauvre ou riche, mais libre dans l'un et dans l'autre état — c'est la liberté que Paul dit avoir apprise, pas reçue d'un coup."
+  },
+  "question": "Qu'est-ce qui, en toi, se calme seulement quand tu donnes et jamais quand tu amasses ?",
+  "racines": [
+    {
+      "titre": "Un mot stoïcien détourné",
+      "corps_html": "Le mot grec que Paul emploie pour son contentement, autarkês, est un terme technique de la philosophie stoïcienne : il désigne l'âme qui se suffit à elle-même, indépendante des circonstances par sa seule maîtrise intérieure. Paul reprend ce mot de son époque mais en déplace radicalement la source, puisque son indépendance ne vient pas d'un exercice personnel, mais de celui qui le fortifie : elle est reçue, non conquise par la volonté seule. Ce déplacement d'un vocabulaire philosophique courant vers une théologie de la grâce est un trait caractéristique du style de Paul dans ses lettres de captivité.",
+      "attribution": "note philologique sur le vocabulaire stoïcien (autarkeia)"
+    },
+    {
+      "titre": "Le temple que bâtit la miséricorde",
+      "corps_html": "Dans son commentaire sur ce psaume, Augustin s'arrête sur son titre dans la version grecque et latine : « Conversion d'Aggée et de Zacharie », deux prophètes pourtant postérieurs à David de plusieurs siècles. Il y voit le signe que le vrai temple annoncé n'est pas de pierre mais spirituel : chaque homme droit devient, par la miséricorde qu'il exerce, une pierre vivante de cette construction que Dieu bâtit à travers le temps.",
+      "attribution": "Augustin d'Hippone, Commentaires sur les Psaumes, sur le Psaume 111"
+    },
+    {
+      "titre": "Un mot de contrat devenu nom d'idole",
+      "corps_html": "En araméen comme en hébreu mishnique, mamôn est un mot ordinaire du droit des biens, employé couramment dans les discussions sur les contrats et les successions, sans aucune charge démoniaque intrinsèque. C'est le choix de Jésus de le laisser tel quel, en face de Dieu, qui lui donne ici le relief d'un nom propre et presque d'une idole. Le mot garde ainsi, dans sa bouche, sa banalité juridique tout en recevant une gravité nouvelle : le danger n'est jamais dans le mot lui-même, mais dans la place qu'on lui donne.",
+      "attribution": "note philologique sur l'usage juridique araméen de mamôn"
+    }
+  ],
+  "videos": [
+    {
+      "id": "mBJrqtG_Cdk",
+      "raison": "Cette étude sur l'enseignement de Jésus concernant les richesses éclaire directement Luc 16, 9-15, où il appelle à se faire des amis avec les richesses injustes plutôt que de les laisser devenir un maître rival de Dieu.",
+      "groupe": "mot"
+    },
+    {
+      "id": "fnP-hBi2A2Y",
+      "raison": "Le thème de la générosité prolonge le verset du psaume « il fait des largesses, il donne aux indigents » (Ps 111 (112), 9), que Paul cite presque mot pour mot dans sa théologie du don.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Ce panorama de Luc 10 à 24 situe l'épisode de l'intendant malhonnête et de Mamon (Lc 16, 9-15) dans l'ensemble du grand voyage de Jésus vers Jérusalem que Luc raconte.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul dit-il qu'il a « appris » à être content, comme si cela ne venait pas naturellement ?",
+      "reponse_html": "Parce que ça ne vient pas naturellement, précisément : le verbe grec qu'il emploie, proche du vocabulaire de l'initiation, indique un apprentissage progressif, fait d'expériences opposées — la faim et l'abondance, l'humiliation et le confort. Paul ne décrit pas un trait de caractère stoïque qu'il aurait depuis toujours, mais un chemin, avec des rechutes possibles, où chaque situation extrême devient une leçon. Ce contentement n'est donc pas une résignation passive, mais le fruit d'une fidélité éprouvée dans la durée, au contact d'un Dieu qui fortifie plutôt que d'une volonté qui se discipline seule.",
+      "sources": {
+        "jour": [
+          "Ph 4,11-13"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le psaume promet-il la richesse à celui qui craint Dieu ?",
+      "reponse_html": "Il décrit plutôt une sécurité intérieure que les richesses elles-mêmes ne donnent pas : le cœur affermi, sans crainte, n'est pas d'abord celui qui possède beaucoup, mais celui qui a appris à donner sans compter. La postérité « puissante sur la terre » annoncée au verset 2 doit se lire à la lumière du verset 9 : c'est la générosité, et non l'accumulation, qui produit cette stabilité durable. Augustin, commentant ce psaume, refuse d'ailleurs de l'arrêter à des réalités matérielles et y lit l'édification d'un temple spirituel bien plus vaste qu'une maison prospère.",
+      "sources": {
+        "jour": [
+          "Ps 111 (112), 1-2.5-6.8a.9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Commentaire sur le Psaume 111"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Jésus condamne-t-il l'argent lui-même dans ce passage ?",
+      "reponse_html": "Non : il demande qu'on en soit le maître et non le serviteur, et va jusqu'à dire qu'on peut s'en faire des amis pour l'éternité, ce qui suppose un usage juste et non une suppression. Le problème qu'il vise n'est pas la possession, mais la division du cœur entre deux maîtres, division rendue visible par les pharisiens qui se moquent de lui juste après, trahissant où se trouve réellement leur attachement. La fidélité « dans les moindres choses », dit-il, se vérifie d'abord dans ce domaine matériel très concret, avant de se vérifier ailleurs.",
+      "sources": {
+        "jour": [
+          "Lc 16,9-13",
+          "Lc 16,14-15"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que vient faire la moquerie des pharisiens au verset 14 dans cet enseignement sur l'argent ?",
+      "reponse_html": "Elle montre, en acte, exactement ce que Jésus vient d'énoncer en théorie : des hommes attachés à l'argent qui tournent en dérision un enseignement qui les met en cause, preuve que leur cœur a déjà choisi son maître. Luc précise que ces pharisiens étaient « avares », seule occurrence de ce trait appliqué nommément à ce groupe dans les évangiles, ce qui ancre la parole de Jésus dans une situation réelle et non dans une généralité morale. La réponse de Jésus au verset 15 referme la scène sur eux : ce que les hommes admirent peut être, devant Dieu, une abomination.",
+      "sources": {
+        "jour": [
+          "Lc 16,14-15"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-111"
+  ]
+}
