@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-12",
+  "date_humaine": "jeudi",
+  "semaine": "32ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "rouge",
+    "nom": "rouge",
+    "hex": "#8C2B22",
+    "hex_sombre": "#D2685A"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Phm 7-20 ; Lc 17, 20-25",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 125 H334\"/><path d=\"M135 125 V40 H205 V125\"/><path d=\"M135 40 L172 58\"/><path d=\"M135 125 L172 108\"/><path d=\"M172 58 L172 108\"/><path d=\"M148 92 q2 -12 14 -14 q9 -1 14 6\"/><path d=\"M192 92 q-2 -12 -14 -14 q-9 -1 -14 6\"/><path d=\"M172 80 v8\"/></g><g class=\"trait-rubrique\"><path d=\"M8 22 L60 34 L50 34 L110 14 L100 14 L160 30 L150 30 L210 16 L200 16 L260 30 L250 30 L310 18 L300 18 L332 24\"/></g><g class=\"trait-liturgie\"><path d=\"M148 102 q-5 2 -5 8 q0 6 5 8 q5 -2 5 -8 q0 -6 -5 -8\"/><path d=\"M150 122 q-5 2 -5 7\"/></g></svg>",
+  "titre": "Au milieu",
+  "titre_html": "Au <span class=\"it\">milieu</span>",
+  "sous_titre": "Ni ici, ni là : il est déjà au milieu de vous",
+  "suite_hier": null,
+  "gravure_alt": "Un ciel nocturne traversé d'un éclair d'une rive à l'autre ; au premier plan, une porte entrouverte où deux mains se rejoignent, l'une tenant encore une chaîne brisée.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Phm 7-20",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<p><span class=\"s\">7</span> Car j'ai eu une grande joie et une grande consolation au sujet de ta <button class=\"mot\" data-g=\"g-charite\">charité</button> ; car par toi, frère, le cœur des saints a été tranquillisé.</p><p><span class=\"s\">8</span> C'est pourquoi, bien que j'aie en Christ une pleine liberté de te commander ce qui est convenable, <span class=\"s\">9</span> je préfère te prier, à cause de cette charité, moi qui suis Paul, un vieillard, et de plus maintenant prisonnier pour Jésus-Christ.</p><p><span class=\"s\">10</span> Je te prie pour mon enfant, que j'ai engendré dans les chaînes, Onésime, <span class=\"s\">11</span> qui autrefois t'a été inutile, mais qui maintenant est utile, et à toi et à moi.</p><p><span class=\"s\">12</span> Je te le renvoie lui, mes propres <button class=\"mot\" data-g=\"g-entrailles\">entrailles</button>. <span class=\"s\">13</span> J'aurais désiré le retenir auprès de moi, pour qu'il me servît à ta place, pendant que je suis dans les chaînes pour l'Évangile. <span class=\"s\">14</span> Mais je n'ai rien voulu faire sans ton avis, afin que ton bienfait ne soit pas comme forcé, mais qu'il soit <button class=\"mot\" data-g=\"g-volontaire\">volontaire</button>.</p><p><span class=\"s\">15</span> Peut-être a-t-il été séparé de toi pour un temps, afin que tu le recouvres pour toujours, <span class=\"s\">16</span> non plus comme un esclave, mais comme supérieur à un esclave, comme un frère bien-aimé, particulièrement de moi, et combien plus de toi, et selon la chair, et selon le Seigneur.</p><p><span class=\"s\">17</span> Si donc tu me regardes comme uni à toi par la communion de la foi, reçois-le comme moi-même. <span class=\"s\">18</span> Et s'il t'a fait quelque tort, ou s'il te doit quelque chose, mets-le sur mon compte. <span class=\"s\">19</span> Moi Paul, je l'écris de ma propre main, je paierai ; pour ne pas te dire que tu me dois toi-même davantage.</p><p><span class=\"s\">20</span> Oui, frère, que j'obtienne de toi cet avantage, dans le Seigneur ; tranquillise mon cœur en Christ.</p>",
+      "gloses": [
+        {
+          "id": "g-charite",
+          "lemme": "agapè",
+          "html": "Le mot grec est <span class=\"gr\">agapè</span>, celui-là même qui nomme ailleurs l'amour de Dieu manifesté en Christ. Segond le traduit ici par « charité », selon l'usage du français classique où ce mot ne désignait pas encore seulement l'aumône mais l'amour qui se donne et qui engage. Le choix reste fidèle à l'intention de Paul : il ne s'agit pas d'un sentiment mais d'un lien agissant, le même qui tient ensemble les saints. Calvin, commentant ce verset, note que cette charité de Philémon s'est vérifiée dans un soulagement bien concret apporté aux croyants."
+        },
+        {
+          "id": "g-entrailles",
+          "lemme": "splagchna",
+          "html": "Segond garde ici le mot presque à la lettre : <span class=\"gr\">splagchna</span>, les viscères, siège des émotions les plus profondes dans l'anthropologie grecque comme hébraïque, là où l'on dirait aussi les entrailles d'une mère, <span class=\"gr\">rachamim</span>. Appeler Onésime « mes propres entrailles » n'est donc pas une métaphore affaiblie mais l'aveu d'un attachement viscéral, presque charnel. Chrysostome, dans ses homélies sur cette lettre, s'arrête sur cette expression pour montrer combien Paul s'identifie à cet esclave fugitif, au point de porter sa cause comme la sienne propre."
+        },
+        {
+          "id": "g-volontaire",
+          "lemme": "hekousion",
+          "html": "Le texte grec oppose deux termes qui portent tout le poids de la lettre : <span class=\"gr\">kata anankèn</span>, « par contrainte », et <span class=\"gr\">hekousion</span>, « volontaire », littéralement ce qui procède du vouloir libre, <span class=\"gr\">hekôn</span>. Segond traduit fidèlement cette opposition : Paul a l'autorité de commander, mais il la dépose pour que le bienfait de Philémon naisse d'un consentement et non d'un ordre. Cette retenue volontaire de l'apôtre a été lue, depuis les Pères, comme une figure de la manière même dont Dieu traite avec la liberté humaine."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 145 (146), 6c-7, 8-9a, 9bc-10",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<p><span class=\"s\">6</span> … qui garde la <button class=\"mot\" data-g=\"g-emet\">fidélité</button> à toujours, <span class=\"s\">7</span> Qui fait droit aux <button class=\"mot\" data-g=\"g-ashuqim\">opprimés</button>, Qui donne du pain aux affamés. L'Éternel <button class=\"mot\" data-g=\"g-matir\">délivre</button> les captifs ;</p><p><span class=\"s\">8</span> L'Éternel ouvre les yeux des aveugles ; L'Éternel redresse ceux qui sont courbés ; L'Éternel aime les justes. <span class=\"s\">9</span> L'Éternel protège les étrangers,</p><p>Il soutient l'orphelin et la veuve, Mais il renverse la voie des méchants. <span class=\"s\">10</span> L'Éternel régnera éternellement ; Ton Dieu, ô Sion ! subsiste d'âge en âge ! Louez l'Éternel !</p>",
+      "gloses": [
+        {
+          "id": "g-emet",
+          "lemme": "émet",
+          "html": "Le texte porte <span class=\"gr\">émet</span>, mot qui dit moins l'exactitude des faits que la solidité sur laquelle on peut s'appuyer — la même racine donne « amen ». Segond traduit par « fidélité », ce qui est juste mais peut faire oublier la dimension de vérité et de stabilité portée par le mot hébreu : Dieu n'est pas seulement constant dans ses dispositions, il est le sol ferme sous les pas de qui s'y confie. Les commentateurs juifs rapprochent ce verset de l'alliance faite aux patriarches, gardée « à toujours » malgré les générations qui passent."
+        },
+        {
+          "id": "g-ashuqim",
+          "lemme": "ashouqim",
+          "html": "Le participe passif <span class=\"gr\">ashouqim</span> vient de la racine <span class=\"gr\">ashaq</span>, qui décrit l'extorsion, le fait de presser quelqu'un jusqu'à lui arracher son dû. Segond traduit par « opprimés », terme plus large que l'hébreu, qui vise précisément celui qu'on a dépouillé par la force ou par la ruse. Le psaume ne chante donc pas une souffrance diffuse mais une injustice nommément commise, à laquelle l'Éternel répond par un droit rendu."
+        },
+        {
+          "id": "g-matir",
+          "lemme": "matir",
+          "html": "Le verbe hébreu <span class=\"gr\">matir</span> signifie littéralement « délier, détacher », de la racine <span class=\"gr\">natar</span>. Segond traduit par « délivre », ce qui est juste mais lisse une image plus concrète, celle de liens qu'on dénoue un à un. Augustin, prêchant sur ce psaume, entend dans tout le chant la voix de l'âme en exil, qui s'exhorte elle-même à louer Dieu en attendant d'être enfin déliée de ses attaches terrestres pour retourner à sa patrie. Le captif libéré par l'Éternel devient ainsi la figure de toute âme qui espère son propre retour."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 17, 20-25",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<p><span class=\"s\">20</span> Les pharisiens lui demandèrent : Quand viendra le royaume de Dieu ? Il répondit : Le royaume de Dieu ne vient point de manière à <button class=\"mot\" data-g=\"g-observation\">frapper les regards</button>.</p><p><span class=\"s\">21</span> On ne dira point : Il est ici, ou : Il est là. Car voici, le royaume de Dieu est <button class=\"mot\" data-g=\"g-entos\">au milieu de vous</button>.</p><p><span class=\"s\">22</span> Et il dit aux disciples : Des jours viendront où vous désirerez voir un des jours du Fils de l'homme, et vous ne le verrez point.</p><p><span class=\"s\">23</span> On vous dira : Il est ici, il est là. N'y allez pas, n'y courez pas.</p><p><span class=\"s\">24</span> Car, comme l'<button class=\"mot\" data-g=\"g-eclair\">éclair</button> resplendit et brille d'une extrémité du ciel à l'autre, ainsi sera le Fils de l'homme en son jour.</p><p><span class=\"s\">25</span> Mais il faut auparavant qu'il souffre beaucoup, et qu'il soit rejeté par cette génération.</p>",
+      "gloses": [
+        {
+          "id": "g-observation",
+          "lemme": "paratèrèsis",
+          "html": "Le texte parle d'un règne qui ne vient pas <span class=\"gr\">meta paratèrèseôs</span>, mot qui désignait l'observation scrupuleuse des astres ou des présages, la guette de signes qu'on épie pour calculer un moment. Segond rend cela par « de manière à frapper les regards », traduction plus libre qui perd la nuance technique mais garde l'essentiel : on ne surveille pas le règne de Dieu comme un astrologue surveille le ciel. Chrysostome, dans ses homélies, oppose déjà cette attente calculatrice à la foi qui reçoit sans exiger de signe."
+        },
+        {
+          "id": "g-entos",
+          "lemme": "entos humôn",
+          "html": "L'expression grecque est <span class=\"gr\">entos humôn</span>, qu'on peut comprendre « au milieu de vous », au sens collectif, dans votre groupe, ou « au-dedans de vous », au sens intérieur, dans votre cœur. Segond choisit « au milieu de vous », suivant la majorité des traducteurs, parce que Jésus s'adresse ici à des pharisiens hostiles chez qui on imagine mal qu'il désigne une présence intérieure déjà donnée. Le débat reste pourtant ouvert depuis les Pères : Calvin, commentant ce passage, insiste sur le fait que le règne de Dieu n'est pas un spectacle extérieur mais une réalité qui agit déjà, qu'on la situe parmi les hommes ou en eux."
+        },
+        {
+          "id": "g-eclair",
+          "lemme": "astrapè",
+          "html": "Le mot grec <span class=\"gr\">astrapè</span> désigne l'éclair, dont Jésus se sert ailleurs pour la même comparaison (Mt 24, 27). Segond traduit fidèlement, mais il faut entendre ce que l'image porte : l'éclair ne se laisse pas localiser d'avance, il traverse le ciel entier d'un bord à l'autre dans l'instant même où il paraît. Le jour du Fils de l'homme sera de cet ordre, soudain et total, et c'est pourquoi il est vain de courir après des indications de lieu."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Une lettre privée devenue Écriture",
+      "corps_html": "Philémon est le plus court et le plus personnel des écrits de Paul : une lettre privée, adressée à un particulier au sujet d'un esclave fugitif, Onésime, et pourtant reçue par l'Église comme parole inspirée. L'Antiquité romaine ne reconnaissait à l'esclave aucun droit propre ; le renvoyer à son maître après une fuite pouvait signifier la mort. Chrysostome voyait dans cette lettre la preuve que l'Évangile transforme les rapports sociaux non par décret soudain, mais en les travaillant du dedans."
+    },
+    {
+      "titre": "Sur la route, une question pressée",
+      "corps_html": "La question des pharisiens au chapitre 17 de Luc s'inscrit dans l'attente juive d'un règne de Dieu visible, souvent politique, qui renverserait l'occupation romaine par des signes repérables. Luc place cet échange au milieu du grand voyage de Jésus vers Jérusalem, où il instruit ses disciples en marchant. Calvin note que Jésus ne nie pas la venue du règne : il en corrige seulement la manière d'en attendre les signes, refusant tout calcul qui remplacerait la foi."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui ne se guette pas",
+    "variantes": [
+      "Tu as pu, certains soirs, chercher dans la prière un signe qui te prouverait que Dieu est là — un sentiment plus net, une parole plus claire, quelque chose à montrer. Et ce signe n'est jamais venu de la façon dont tu l'attendais, parce que tu guettais un lieu, une sensation localisable, alors que ce qui te portait déjà, depuis le début, n'avait pas besoin d'être repéré pour être réel. Le royaume dont parle Jésus n'est pas ce qu'on finit par apercevoir après une surveillance suffisamment longue ; c'est ce qui était déjà au milieu de toi avant même que tu commences à chercher.",
+      "Il t'est arrivé de vouloir attendre, avant de pardonner vraiment, que l'autre ait assez payé, assez montré qu'il le méritait — comme si l'amour ne pouvait être donné qu'en réponse à une dette suffisamment acquittée. Et puis un jour tu as compris que tant que tu attendais cette preuve, ce n'était pas encore du pardon que tu donnais, mais un calcul déguisé. Ce que Paul demande à Philémon, c'est exactement ce renoncement-là : ne pas forcer la main de celui qui pardonne, pour que le don, s'il vient, vienne d'un cœur enfin libre, et non d'une dette enfin remboursée.",
+      "Tu as pu porter longtemps une question sans réponse, relire les mêmes pages, attendre une clarté qui ne venait pas selon l'horaire que tu lui fixais. Puis un jour, sans que tu l'aies provoquée, elle est arrivée d'un coup, entière, comme une évidence qui n'a pas besoin d'être confirmée deux fois. Ce que Jésus annonce de son propre jour a cette allure : il ne se prépare pas par une veille anxieuse de signes, il fond sur celui qui ne le guettait plus et le trouve déjà en marche vers autre chose."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de fermer cette page, laisse ces trois textes se répondre : une lettre qui renonce à commander, un psaume qui chante un Dieu qui délie, un évangile qui refuse de localiser son propre règne.",
+    "geste": "Nomme, en silence, une personne ou une situation où tu attends encore une preuve avant de donner ce que tu pourrais déjà donner librement — et dépose cette attente devant Dieu.",
+    "note": "Il ne s'agit pas de forcer un sentiment, mais de remettre à Dieu le calcul que tu entretenais."
+  },
+  "question": "Qu'attends-tu encore de voir, de sentir ou de vérifier, avant de croire que Dieu est déjà à l'œuvre en toi ?",
+  "racines": [
+    {
+      "titre": "Agapè, le mot que Paul choisit",
+      "corps_html": "Dans le monde grec, <span class=\"gr\">agapè</span> n'était pas le mot le plus noble pour l'amour : on lui préférait <span class=\"gr\">erôs</span> ou <span class=\"gr\">philia</span>. Les premiers chrétiens l'ont pris, presque neuf, pour nommer un amour qui ne cherche pas sa propre satisfaction mais le bien de l'autre. Paul l'emploie pour la charité très concrète de Philémon envers les saints, preuve que ce mot, loin d'être réservé à de grands énoncés théologiques, se vérifie dans des gestes d'hospitalité ordinaires.",
+      "attribution": "D'après l'usage du grec classique et du Nouveau Testament"
+    },
+    {
+      "titre": "Un débat qui traverse les siècles",
+      "corps_html": "La traduction d'<span class=\"gr\">entos humôn</span> a divisé les commentateurs depuis l'Antiquité : présence intérieure pour les uns, présence agissante au milieu des hommes pour les autres. Calvin tranche en faveur du sens collectif, estimant que Jésus, parlant à des pharisiens incrédules, ne pouvait leur annoncer un règne déjà intérieur à un cœur fermé ; le règne est plutôt là, agissant sous leurs yeux, dans les œuvres du Christ qu'ils refusent de reconnaître.",
+      "attribution": "Jean Calvin, Commentaires bibliques, sur Luc 17"
+    },
+    {
+      "titre": "Le psaume de l'âme en exil",
+      "corps_html": "Augustin lit l'ensemble de ce psaume comme la voix d'une âme qui s'adresse à elle-même pour s'exhorter à la louange au milieu de l'exil terrestre. Chanter que Dieu délie les captifs et redresse les courbés, ce n'est pas seulement décrire ses actes envers autrui, c'est aussi, pour l'âme qui prie, se rappeler sa propre condition d'exilée qui espère un jour être délivrée et retourner à sa patrie véritable.",
+      "attribution": "Augustin d'Hippone, Commentaires sur les Psaumes, sur le psaume 145"
+    }
+  ],
+  "videos": [
+    {
+      "id": "6FHGUa1Usfc",
+      "raison": "Panorama du livre de Philémon, lu aujourd'hui en Phm 7-20.",
+      "groupe": "livre"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "Panorama de Luc 10-24, qui couvre le passage de Luc 17, 20-25 lu aujourd'hui.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Panorama des Psaumes, pour situer le psaume 146 chanté aujourd'hui.",
+      "groupe": "livre"
+    },
+    {
+      "id": "9lxl6CS1RJk",
+      "raison": "Étude du titre « Fils de l'homme », que Jésus emploie en Lc 17, 22 et 24 pour désigner son propre jour.",
+      "groupe": "mot"
+    },
+    {
+      "id": "utHEZsmzU74",
+      "raison": "Étude du « Jour du Seigneur », l'attente eschatologique à l'arrière-plan de Lc 17, 24-25.",
+      "groupe": "mot"
+    },
+    {
+      "id": "wktA2VE4yhY",
+      "raison": "Étude de la grâce, qui éclaire le geste de Paul renonçant à commander Philémon pour lui laisser consentir librement (Phm 14).",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Paul ne demande-t-il pas directement à Philémon d'affranchir Onésime ?",
+      "reponse_html": "Paul ne commande rien : il dit explicitement qu'il pourrait le faire en toute liberté mais choisit de prier plutôt que d'ordonner (Phm 8-9). Ce choix n'est pas de la diplomatie mais une conviction : un bienfait arraché par l'autorité n'est pas le même don qu'un bienfait consenti (Phm 14). Paul attend de Philémon qu'il reconnaisse en Onésime un frère, et cette reconnaissance ne peut naître que d'un acte libre, à l'image de la liberté que donne l'Évangile lui-même.",
+      "sources": {
+        "jour": [
+          "Phm 8-9",
+          "Phm 14"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "chrysostome-homelies",
+            "reference": "Homélies sur l'épître à Philémon"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire Jésus quand il dit que « le royaume de Dieu est au milieu de vous » ?",
+      "reponse_html": "La phrase grecque peut se comprendre de deux façons : le règne est présent parmi les pharisiens, dans les actes et la personne de Jésus qu'ils ont devant eux, ou il est déjà intérieur à chacun. Segond traduit dans le premier sens, suivi par Calvin, qui insiste sur le fait que les pharisiens voient déjà les œuvres du règne sans vouloir les reconnaître (Lc 17, 20-21). Dans les deux lectures, le point commun demeure : le règne n'est pas à venir comme un spectacle, il est déjà à l'œuvre, discrètement, et c'est le regard qui doit changer, non l'attente d'un signe supplémentaire.",
+      "sources": {
+        "jour": [
+          "Lc 17, 20-21"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "calvin-commentaires",
+            "reference": "sur Luc 17, 21"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Le psaume dit que Dieu « délivre les captifs » — de quoi s'agit-il concrètement ?",
+      "reponse_html": "Dans son contexte, le psaume chante l'action historique de l'Éternel envers les opprimés, les affamés, les aveugles, les étrangers, l'orphelin et la veuve (Ps 146, 6-9) : ce ne sont pas des captifs au sens seulement spirituel, mais les plus vulnérables d'une société concrète. Augustin, en priant ce psaume, y entend aussi la voix de l'âme elle-même, captive de ses attachements terrestres et attendant d'être déliée pour rejoindre sa patrie véritable. Les deux lectures ne s'excluent pas : le Dieu qui agit pour le pauvre réel est le même qui délivre l'âme qui le prie.",
+      "sources": {
+        "jour": [
+          "Ps 146, 6-9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "sur le psaume 145"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Pourquoi Jésus annonce-t-il d'abord sa souffrance juste après avoir parlé de la gloire de son jour ?",
+      "reponse_html": "Luc place la croix avant l'éclat : « il faut auparavant qu'il souffre beaucoup, et qu'il soit rejeté par cette génération » (Lc 17, 25). Le jour glorieux du Fils de l'homme, comparé à l'éclair, ne supprime pas le chemin du rejet, il le suppose. Cette séquence annonce déjà, au milieu de l'évangile, ce que Luc développera dans le récit de la passion : la gloire ne contourne pas la souffrance, elle passe par elle.",
+      "sources": {
+        "jour": [
+          "Lc 17, 24-25"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-145"
+  ]
+}
