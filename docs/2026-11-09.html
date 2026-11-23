@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple vivant — lundi 9 novembre 2026</title>
+<meta name="description" content="Dédicace de la basilique du Latran — Ézéchiel, Paul et Jean devant la même demeure">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* On déclare explicitement les deux schémas. Sans cette ligne, le « forced dark
+   mode » du navigateur invente son inversion et laisse l'encre sombre sur un
+   fond devenu sombre : titre noir sur noir. Ici le sombre est DESSINÉ. */
+:root{
+  color-scheme:light dark;
+
+  --papier:#F3F2ED;
+  --ink:#1B1A16;
+  --rubrique:#A33324;        /* rouge de missel */
+  --liturgie:#8C7B4E;
+  --muet:#726C5D;         /* AA sur ivoire : 4.66:1 */
+  --filet:#D7D2C4;
+  --papier-creux:#EDEBE2;    /* léger renfoncement, pas une carte */
+  --glose-ink:#3a382f;
+  --ctx-ink:#35332b;
+  --gravure-ink:#1B1A16;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+  }
+}
+:root[data-theme="dark"]{
+    /* Encre profonde et chaude, pas un gris neutre : on reste dans le papier. */
+    --papier:#17161B;
+    --ink:#E9E5DB;
+    /* Rubrique et couleur liturgique DOIVENT monter en luminosité, sinon elles
+       s'éteignent sur fond sombre. Ce sont les mêmes teintes, éclaircies. */
+    --rubrique:#D4705B;
+    --liturgie:#D6BE83;
+    --muet:#918B7C;
+    --filet:#332F38;
+    --papier-creux:#1E1C23;
+    --glose-ink:#CBC6BA;
+    --ctx-ink:#CBC6BA;
+    --gravure-ink:#E9E5DB;
+
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+
+/* ---------- BASCULE DE THÈME ---------- */
+#basculer-theme{position:fixed;top:1rem;right:1rem;z-index:60;width:36px;height:36px;border:1px solid var(--filet);border-radius:50%;background:var(--papier);color:var(--ink);font-size:1rem;cursor:pointer;display:grid;place-items:center}
+#basculer-theme:hover{border-color:var(--liturgie);color:var(--liturgie)}
+#basculer-theme:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:'EB Garamond',serif;font-size:1.2rem;line-height:1.62;overflow-x:hidden}
+
+/* ---------- MINI-CARTE (position dans la croix) ---------- */
+#carte{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+#carte a{width:8px;height:8px;border:1.5px solid var(--muet);border-radius:50%;transition:all .25s}
+#carte a.actif{background:var(--liturgie);border-color:var(--liturgie);transform:scale(1.4)}
+#carte a.lateral{border-radius:1px}
+#carte .fil{width:1px;height:9px;background:var(--filet)}
+@media(max-width:600px){#carte{right:.4rem}}
+
+/* ---------- L'AXE vertical : le filet liturgique = axe de la croix ---------- */
+.mesure{position:relative;max-width:720px;margin:0 auto;padding:0 1.5rem}
+.mesure::before{content:"";position:absolute;top:0;bottom:0;left:1.5rem;width:2px;background:var(--liturgie);opacity:.85}
+@media(max-width:560px){.mesure::before{left:.5rem}}
+.dedans{padding-left:2.4rem}
+@media(max-width:560px){.dedans{padding-left:1.4rem}}
+
+/* rubrique : instruction rouge, petites capitales espacées */
+.rubrique{font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;color:var(--rubrique);font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:baseline;gap:.8rem}
+.rubrique .axe{font-variant:normal;text-transform:none;letter-spacing:.02em;color:var(--muet);font-size:.82rem;font-style:italic}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+
+/* ---------- INCIPIT ---------- */
+.incipit{padding:3.4rem 0 2.6rem}
+.dateline{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.92rem;line-height:1.5}
+.dateline .couleur{color:var(--liturgie);font-weight:500}
+.dateline .suite{display:block;font-variant:normal;letter-spacing:0;font-style:italic;font-size:.98rem;margin-top:.4rem;color:var(--glose-ink)}
+.badge{display:inline-block;margin-top:.6rem;font-variant:small-caps;letter-spacing:.08em;font-size:.78rem;color:var(--rubrique);border:1px solid var(--rubrique);border-radius:1px;padding:.1rem .55rem}
+h1{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;font-size:clamp(3.4rem,13vw,6rem);line-height:.94;letter-spacing:-.02em;margin:.7rem 0 .1rem}
+h1 .it{font-style:italic;font-weight:400}
+.chapeau{font-style:italic;font-size:1.28rem;max-width:33ch;color:var(--glose-ink);margin-top:1rem}
+.gravure{margin:2.2rem 0 .5rem;max-width:360px}
+.gravure svg{display:block;width:100%;height:auto}
+/* Le bois gravé est tracé à trois encres. Chacune suit le thème, sinon elle
+   reste figée quand le fond bascule. */
+.gravure svg .trait-encre,.gravure svg.trait-encre{stroke:var(--gravure-ink)}
+.gravure svg .trait-liturgie{stroke:var(--liturgie)}
+.gravure svg .trait-rubrique{stroke:var(--rubrique)}
+.descendre{display:inline-block;margin-top:1.6rem;font-variant:small-caps;letter-spacing:.12em;color:var(--muet);font-size:.85rem;text-decoration:none}
+.descendre:hover{color:var(--liturgie)}
+.descendre::after{content:" ↓"}
+
+/* ---------- SÉPARATION DES MOMENTS ---------- */
+section.bloc{padding:2.8rem 0 .4rem;border-top:1px solid var(--filet);margin-top:2.6rem}
+
+/* ---------- ÉCRITURE ---------- */
+.ref{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.95rem;margin-bottom:.9rem}
+.ecriture{font-size:1.24rem;line-height:1.66}
+.ecriture .init{font-family:'Fraunces',serif;font-weight:500;float:left;font-size:4.1rem;line-height:.74;padding:.06em .1em 0 0;color:var(--liturgie)}
+.ecriture.evangile .init{color:var(--rubrique)}
+.s{color:var(--rubrique);font-size:.62em;vertical-align:.5em;margin:0 .12em 0 .18em;font-family:'Fraunces',serif}
+.mot{cursor:pointer;color:inherit;border:0;background:none;font:inherit;padding:0;box-shadow:inset 0 -1px 0 var(--liturgie)}
+.mot:hover{box-shadow:inset 0 -2px 0 var(--liturgie)}
+.mot:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.glose{display:none;margin:.9rem 0 .4rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--rubrique);font-size:1.04rem;line-height:1.55;color:var(--glose-ink)}
+.glose.ouverte{display:block}
+.glose .lemme{font-variant:small-caps;letter-spacing:.04em;color:var(--rubrique);margin-right:.4em}
+.glose .gr{font-style:italic}
+
+/* ---------- GÉNÉALOGIE : quand le texte est une liste, pas un récit ----------
+   Le lectionnaire sert parfois des chaînes de noms (Mt 1, Lc 3). La prose
+   coulante devient illisible : on rend la CHAÎNE elle-même, et sa rupture. */
+.chaine{list-style:none;margin:.4rem 0 0;padding:0;font-size:1.1rem;line-height:1.5}
+.chaine li{position:relative;padding:.18rem 0 .18rem 1.4rem}
+/* le maillon : un trait vertical qui relie chaque nom au suivant */
+.chaine li::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:1px;background:var(--filet)}
+.chaine li:first-child::before{top:50%}
+.chaine li:last-child::before{bottom:50%}
+.chaine li::after{content:"";position:absolute;left:.1rem;top:calc(50% - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--filet)}
+/* les quatre femmes : Matthieu les insère exprès dans une lignée d'hommes */
+.chaine li.femme::after{background:var(--rubrique);width:7px;height:7px;left:.05rem;top:calc(50% - 3.5px)}
+.chaine li.femme{color:var(--rubrique)}
+.chaine li.femme em{font-style:italic}
+/* la rupture : là où « engendra » cesse. Le trait s'arrête. */
+.chaine li.rupture::before{background:none;border-left:1px dashed var(--liturgie)}
+.chaine li.rupture::after{background:var(--liturgie);width:8px;height:8px;left:0;top:calc(50% - 4px)}
+.chaine li.rupture{font-family:'Fraunces',serif;font-size:1.18rem;padding-top:.6rem;padding-bottom:.2rem}
+/* les trois sections de quatorze */
+.chaine .section{padding-left:0;margin:1.2rem 0 .4rem;font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.85rem}
+.chaine .section::before,.chaine .section::after{display:none}
+.compte{font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:1rem}
+
+/* ---------- RAILS latéraux (exploration = axe horizontal) ---------- */
+.rail-tete{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.rail-nav{display:flex;gap:.5rem}
+.rail-nav button{width:30px;height:30px;border:1px solid var(--filet);background:none;border-radius:50%;cursor:pointer;color:var(--ink);font-family:'EB Garamond',serif;font-size:1rem;display:grid;place-items:center}
+.rail-nav button:hover{border-color:var(--liturgie);color:var(--liturgie)}
+.rail-nav button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.rail{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -1.5rem;padding:1.2rem 1.5rem 1.4rem 0}
+.rail::-webkit-scrollbar{display:none}
+.feuillet{flex:0 0 min(100%,640px);scroll-snap-align:start}
+.feuillet .ref-lat{font-variant:small-caps;letter-spacing:.06em;color:var(--muet);font-size:.92rem;margin-bottom:.7rem}
+.feuillet.psaume .ref-lat{color:var(--liturgie)}
+.rail-pied{display:flex;align-items:center;gap:.7rem;font-variant:small-caps;letter-spacing:.08em;color:var(--muet);font-size:.85rem;margin-top:.3rem}
+.points{display:flex;gap:.35rem}
+.points i{width:6px;height:6px;border-radius:50%;background:var(--filet)}
+.points i.on{background:var(--liturgie)}
+
+/* ---------- CONTEXTE : deux colonnes, filets, pas de cartes ---------- */
+.ctx{display:grid;gap:1.6rem 2.4rem;grid-template-columns:1fr}
+@media(min-width:620px){.ctx{grid-template-columns:1fr 1fr}}
+.ctx h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.4rem;padding-top:.6rem;border-top:2px solid var(--liturgie)}
+.ctx p{font-size:1.08rem;color:var(--ctx-ink)}
+
+/* ---------- ANALOGIE : le pont, texte au premier plan ---------- */
+.analogie p{font-size:clamp(1.2rem,3.4vw,1.4rem);line-height:1.55;max-width:34ch;margin-bottom:1rem}
+.analogie em{font-style:italic;color:var(--liturgie)}
+.analogie .lettrine-mot{font-family:'Fraunces',serif}
+
+/* ---------- INVITATION : le geste, encadré fin rouge ---------- */
+.invitation{border:1px solid var(--rubrique);border-radius:1px;padding:1.6rem 1.5rem;background:var(--papier-creux)}
+.invitation .geste{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.3rem,4vw,1.55rem);line-height:1.4;margin:.7rem 0 .9rem}
+.invitation small{font-variant:small-caps;letter-spacing:.04em;color:var(--muet);font-size:.9rem;display:block}
+
+/* ---------- QUESTION : silence ---------- */
+.question{text-align:center;padding:4rem 1rem 3rem}
+.question::before{content:"✝";display:block;color:var(--liturgie);font-size:1.1rem;margin-bottom:1.6rem;opacity:.7}
+.question p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,5vw,2rem);line-height:1.4;max-width:22ch;margin:0 auto}
+
+/* ---------- RACINES ---------- */
+.racine{padding:1.3rem 0;border-bottom:1px solid var(--filet)}
+.racine:last-child{border-bottom:0}
+.racine h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:.35rem}
+.racine p{font-size:1.06rem;color:var(--ctx-ink)}
+.racine .attrib{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;margin-top:.35rem}
+
+footer{border-top:1px solid var(--filet);margin-top:3rem;padding:2rem 0 4rem;font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.85rem;line-height:1.7}
+footer a{color:var(--rubrique)}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveler{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveler.vu{opacity:1;transform:none}
+}
+
+/* ---------- PORTES & BARRE : les entrées de lecture ----------
+   Lire / Comprendre suivent la position ; Voir est un interrupteur qui
+   déplie le compagnon (panneau à droite sur écran large, volet sur mobile). */
+.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);margin:2rem 0 0;container-type:inline-size}
+.portes a{min-width:0;border-right:1px solid var(--filet);padding:1rem clamp(.3rem,1.6cqi,.7rem);color:var(--ink);text-decoration:none;transition:background .25s,color .25s}
+.portes a:last-child{border-right:0}
+.portes .n{display:block;font-family:'Fraunces',serif;font-size:clamp(.95rem,3.2cqi,1.35rem);line-height:1;white-space:nowrap}
+.portes .d{display:block;font-size:clamp(.72rem,2.1cqi,.85rem);color:var(--muet);font-style:italic;margin-top:.3rem;line-height:1.3}
+.portes a:hover .n,.portes .on .n{color:var(--liturgie)}
+.portes .on{background:var(--papier-creux)}
+.portes .voir .n{color:var(--rubrique)}
+.portes .ouvert-voir{background:var(--liturgie)}
+.portes .ouvert-voir .n,.portes .ouvert-voir .d{color:var(--papier)}
+.portes a:focus-visible,.barre-portes a:focus-visible,.barre-portes button:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+@media(max-width:560px){.portes .d{display:none}.portes a{padding:.85rem .15rem;text-align:center}.portes .n{font-size:clamp(.56rem,3.6cqi,1.02rem)}}
+.barre-portes{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:90;display:flex;background:var(--papier);border:1px solid var(--filet);border-radius:999px;padding:.25rem;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:left .35s ease}
+.barre-portes a,.barre-portes button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;background:none;border:0;padding:.35rem .9rem;border-radius:999px;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+@media(max-width:420px){.barre-portes a,.barre-portes button{padding:.35rem .6rem;letter-spacing:.04em}}
+.barre-portes .on,.barre-portes .ouvert-voir{background:var(--liturgie);color:var(--papier)}
+footer .mention-ia{display:block;margin-top:.6rem;color:var(--rubrique)}
+
+/* ---------- COMPAGNON : une vidéo à la fois ---------- */
+.compagnon{display:flex;flex-direction:column;position:fixed;z-index:75;background:var(--papier);overflow:hidden;transition:transform .35s ease}
+.compagnon .entete{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.compagnon .entete .rubrique{margin:0}
+.compagnon .replier,.fil .replier{background:none;border:1px solid var(--filet);border-radius:50%;width:32px;height:32px;color:var(--muet);cursor:pointer;font-size:1rem}
+.compagnon .replier:hover,.fil .replier:hover{color:var(--ink);border-color:var(--ink)}
+.video{position:relative;aspect-ratio:16/9;background:var(--papier-creux);border:1px solid var(--filet);border-radius:2px;overflow:hidden;cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(.25) contrast(1.05);opacity:.9;transition:filter .4s,opacity .4s}
+.video:hover img,.video:focus-visible img{filter:none;opacity:1}
+.video .facade-titre{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-family:'Fraunces',serif;font-size:1.3rem}
+.video .lire{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;background:var(--papier);color:var(--ink);padding:.35rem .8rem .35rem .45rem;border-radius:999px;font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;border:1px solid var(--filet)}
+.video .lire::before{content:"▶";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--rubrique);color:var(--papier);font-size:.62rem}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video:focus-visible{outline:2px solid var(--liturgie);outline-offset:3px}
+.compteur{font-variant:small-caps;letter-spacing:.1em;color:var(--muet);font-size:.8rem;margin-top:.8rem}
+.vtitre{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-top:.4rem}
+.raison{font-size:1.02rem;color:var(--glose-ink);font-style:italic;margin-top:.3rem}
+.credit{font-variant:small-caps;letter-spacing:.05em;color:var(--muet);font-size:.8rem;margin-top:.45rem}
+.credit a{color:var(--muet);text-decoration:none;border-bottom:1px solid var(--filet)}
+.credit a:hover{color:var(--rubrique)}
+.pellicule{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.9rem 0 .5rem;margin-top:1rem;border-top:1px solid var(--filet);scrollbar-width:thin}
+.pellicule .groupe{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-variant:small-caps;letter-spacing:.1em;font-size:.72rem;color:var(--rubrique);border-left:1px solid var(--filet);padding-left:.3rem;margin-left:.3rem;text-align:center}
+.pellicule .groupe:first-child{margin-left:0;scroll-snap-align:start}
+.pellicule button{flex:0 0 112px;scroll-snap-align:start;background:none;border:2px solid transparent;padding:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit;border-radius:2px;opacity:.75;transition:opacity .2s,border-color .2s}
+.pellicule button img,.pellicule .sans-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:grayscale(1) sepia(.25);background:var(--papier-creux)}
+.pellicule button span:last-child{display:block;font-size:.8rem;line-height:1.25;padding:.25rem .2rem .1rem}
+.pellicule button:hover{opacity:1}
+.pellicule button.on{border-color:var(--liturgie);opacity:1}
+.pellicule button.on img{filter:none}
+/* ---------- LE FIL DU JOUR : volet gauche, se repérer ----------
+   Le jour, les lectures, le plan, les sources. Ouvert sur grand écran (il
+   pousse la page), tiroir sur mobile. Repliable, redimensionnable. */
+.fil{position:fixed;z-index:76;top:0;bottom:0;left:0;width:var(--fil,270px);display:flex;flex-direction:column;background:var(--papier);border-right:1px solid var(--filet);font-size:.92rem;transform:translateX(-105%);transition:transform .35s ease}
+.fil.ouvert{transform:none}
+.fil .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 1.4rem 2rem}
+.fil-tete{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem .6rem}
+.fil-tete .rubrique{margin:0}
+.fil h3{font-family:inherit;font-variant:small-caps;letter-spacing:.12em;font-size:.8rem;font-weight:400;color:var(--muet);margin:1.5rem 0 .45rem}
+.fil p{margin:0}
+.fil-jour .date{font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.3}
+.fil-jour .temps{color:var(--muet);margin-top:.25rem}
+.fil-jour .pastille{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--liturgie);margin-right:.45rem}
+.fil-jour .suite{font-style:italic;color:var(--glose-ink);margin-top:.5rem;line-height:1.4}
+.fil-voisins{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem!important;font-size:.85rem}
+.fil a{color:var(--muet);text-decoration:none;transition:color .2s}
+.fil a:hover{color:var(--ink)}
+.fil ol{list-style:none;margin:0;padding:0}
+.fil ol button,.fil ol a{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-left:2px solid var(--filet);padding:.28rem .7rem;color:var(--muet);cursor:pointer;transition:color .2s,border-color .2s}
+.fil ol small{display:block;font-size:.75rem;font-variant:small-caps;letter-spacing:.06em}
+.fil ol .on{color:var(--ink);border-left-color:var(--liturgie)}
+.fil-sources .groupe{border-left:2px solid var(--filet);padding:.1rem 0 .1rem .7rem;margin-bottom:.7rem;color:var(--muet);line-height:1.4;transition:border-color .2s}
+.fil-sources .groupe.on{border-left-color:var(--liturgie)}
+.fil-sources .groupe.on .nom{color:var(--ink)}
+.fil-sources .nom{font-variant:small-caps;letter-spacing:.06em;font-size:.85rem}
+.fil-sources a{text-decoration:underline;text-decoration-color:var(--filet);text-underline-offset:2px}
+.fil-sources small{display:block;font-size:.75rem}
+.fil-note{font-size:.78rem;color:var(--muet);margin-top:1rem!important;line-height:1.4}
+.fil-liens{font-size:.82rem;margin-top:.8rem!important}
+.fil-ia{font-size:.78rem;font-style:italic;color:var(--rubrique);margin-top:1rem!important}
+#ouvrir-fil{position:fixed;top:1rem;left:1rem;z-index:60;height:36px;padding:0 .9rem;border:1px solid var(--filet);border-radius:999px;background:var(--papier);color:var(--ink);font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;cursor:pointer}
+#ouvrir-fil:hover{border-color:var(--ink)}
+.fil .poignee{right:0;top:0;bottom:0;width:14px;cursor:col-resize}
+.fil .poignee span{width:3px;height:48px}
+@media(min-width:1280px){
+  body{transition:padding .35s ease}
+  body.fil-ouvert{padding-left:var(--fil,270px);--gauche:var(--fil,270px)}
+  body.fil-ouvert #carte{display:none}
+  /* Le fil porte déjà références, sources et mention IA. */
+  body.fil-ouvert footer{display:none}
+}
+@media(max-width:1279px){
+  .fil{z-index:95;width:min(86vw,320px);box-shadow:20px 0 40px rgba(0,0,0,.14)}
+  .fil .corps{padding-bottom:5rem}
+  .fil .poignee{display:none}
+}
+
+/* Poignée : on tire le bord du compagnon pour l'agrandir (vidéo ou carnet en
+   plus grand). Largeur (--panneau) sur écran large, hauteur (--volet) sur mobile. */
+.compagnon .corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.poignee{position:absolute;z-index:2;display:grid;place-items:center;touch-action:none}
+.poignee span{display:block;background:var(--filet);border-radius:999px;transition:background .2s}
+.poignee:hover span,.poignee:focus-visible span,.poignee.tire span{background:var(--liturgie)}
+.poignee:focus-visible{outline:none}
+body.redim,body.redim *{user-select:none;-webkit-user-select:none}
+body.redim .video iframe{pointer-events:none}
+body.redim,body.redim .compagnon,body.redim .fil,body.redim .barre-portes,body.redim #basculer-theme,body.redim #carte{transition:none}
+@media(min-width:1100px){
+  body{transition:padding .35s ease}
+  .compagnon{top:0;right:0;bottom:0;width:var(--panneau,460px);padding:4rem 1.8rem 1.6rem;border-left:1px solid var(--filet);transform:translateX(105%)}
+  .compagnon .poignee{left:0;top:0;bottom:0;width:14px;cursor:col-resize}
+  .compagnon .poignee span{width:3px;height:48px}
+  body.redim{cursor:col-resize}
+  body.panneau{padding-right:var(--panneau,460px)}
+  #basculer-theme,#carte{transition:right .35s ease}
+  body.panneau #basculer-theme,body.panneau #carte{right:calc(var(--panneau,460px) + 1rem)}
+  body.panneau{--droite:var(--panneau,460px)}
+  .barre-portes{left:calc(var(--gauche,0px) + (100vw - var(--gauche,0px) - var(--droite,0px))/2)}
+}
+@media(max-width:1099px){
+  .compagnon{left:0;right:0;bottom:0;height:var(--volet,78vh);max-height:calc(100vh - 2.5rem);padding:1.9rem 1.2rem 5rem;border-top:1px solid var(--filet);border-radius:14px 14px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.14);transform:translateY(105%)}
+  .compagnon .poignee{left:0;right:0;top:0;height:1.7rem;cursor:row-resize}
+  .compagnon .poignee span{width:44px;height:5px}
+  body.redim{cursor:row-resize}
+}
+.compagnon.ouvert{transform:none}
+.barre-portes .ask,.portes .ask .n{color:var(--rubrique)}
+.barre-portes .ouvert-demander,.portes .ouvert-demander{background:var(--rubrique);color:var(--papier)}
+.portes .ouvert-demander .n,.portes .ouvert-demander .d{color:var(--papier)}
+.compagnon .onglets{display:flex;gap:.25rem;padding:.25rem;border:1px solid var(--filet);border-radius:999px}
+.compagnon .onglets button{font:inherit;font-variant:small-caps;letter-spacing:.08em;font-size:.88rem;background:none;border:0;padding:.3rem 1rem;border-radius:999px;cursor:pointer;color:var(--ink);transition:background .3s,color .3s}
+.compagnon .onglets button.on{background:var(--liturgie);color:var(--papier)}
+.compagnon .onglets button[data-onglet=demander].on{background:var(--rubrique)}
+.carnet .avert{font-size:.86rem;line-height:1.4;color:var(--rubrique);border:1px solid var(--rubrique);padding:.45rem .7rem;margin:0 0 .9rem;border-radius:1px;background:var(--papier-creux)}
+.carnet .qr{border-top:1px solid var(--filet)}
+.carnet .q-btn{display:block;width:100%;text-align:left;font:inherit;font-style:italic;font-size:1.05rem;background:none;border:0;color:var(--ink);padding:.75rem 1.4rem .75rem 0;cursor:pointer;position:relative}
+.carnet .q-btn::after{content:"+";position:absolute;right:.2rem;top:.7rem;color:var(--rubrique);font-style:normal}
+.carnet .q-btn[aria-expanded=true]::after{content:"−"}
+.carnet .q-btn:hover{color:var(--liturgie)}
+.carnet .q-btn:focus-visible{outline:2px solid var(--liturgie);outline-offset:2px}
+.carnet .r{font-size:1.02rem;color:var(--ctx-ink);border-left:2px solid var(--liturgie);padding:0 0 .9rem .9rem;margin-bottom:.4rem}
+.carnet .r p{margin-bottom:.5rem}
+.carnet .sources{display:grid;gap:.3rem;margin-top:.6rem}
+.carnet .sources p{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--muet);margin:0}
+.carnet .sources div{display:flex;flex-wrap:wrap;gap:.3rem}
+.carnet .sources span{font-variant:small-caps;letter-spacing:.04em;font-size:.76rem;color:var(--muet);border:1px solid var(--filet);padding:0 .45rem;border-radius:1px}
+.carnet .sources .trad span{border-color:var(--rubrique);color:var(--rubrique)}
+.carnet .sources .trad a{color:inherit;text-decoration:none}
+.carnet .sources .trad a:hover{text-decoration:underline}
+.carnet .ia{font-size:.78rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre{border-top:1px solid var(--filet);padding-top:1rem;margin-top:.4rem}
+.carnet-libre .libre-titre{font-variant:small-caps;letter-spacing:.08em;font-size:.85rem;color:var(--rubrique);margin-bottom:.5rem}
+.carnet-libre .libre-saisie{display:flex;gap:.6rem}
+.carnet-libre input{flex:1;font:inherit;font-size:1.05rem;background:none;border:0;border-bottom:1px solid var(--muet);color:var(--ink);padding:.3rem 0}
+.carnet-libre input:focus{outline:none;border-bottom-color:var(--liturgie)}
+.carnet-libre button{font:inherit;font-variant:small-caps;letter-spacing:.08em;background:none;border:1px solid var(--rubrique);color:var(--rubrique);padding:.2rem .8rem;cursor:pointer}
+.carnet-libre button:disabled{opacity:.5;cursor:wait}
+.carnet-libre .libre-turnstile{margin-top:.7rem}
+.carnet-libre .libre-etat{font-size:.85rem;font-style:italic;color:var(--muet);margin-top:.5rem}
+.carnet-libre .libre-reponse{margin-top:.7rem}
+.carnet .libre-ferme{font-style:italic;color:var(--muet);border-top:1px solid var(--filet);padding-top:.9rem;margin-top:.4rem}
+</style>
+</head>
+<body>
+
+<button id="basculer-theme" aria-label="Basculer entre thème clair et sombre"></button>
+
+<nav id="carte" aria-label="Position dans la page">
+  <a href="#haut" title="L'image"></a><span class="fil"></span>
+  <a href="#textes" class="lateral" title="Les textes"></a><span class="fil"></span>
+  <a href="#contexte" title="Le contexte"></a><span class="fil"></span>
+  <a href="#analogie" title="L'analogie"></a><span class="fil"></span>
+  <a href="#invitation" title="Le geste"></a><span class="fil"></span>
+  <a href="#question" title="La question"></a><span class="fil"></span>
+  <a href="#racines" class="lateral" title="Les racines"></a>
+</nav>
+
+<!-- LE FIL DU JOUR : volet gauche pour se repérer. Repliable, redimensionnable. -->
+<button id="ouvrir-fil" aria-controls="fil" aria-expanded="false" hidden>☰ Le fil</button>
+<aside class="fil" id="fil" aria-label="Le fil du jour">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="fil" aria-label="Élargir ou réduire le fil du jour (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour élargir"><span></span></div>
+  <div class="fil-tete"><p class="rubrique">Le fil du jour</p><button class="replier" aria-label="Replier le fil du jour">←</button></div>
+  <div class="corps">
+    <div class="fil-jour">
+      <p class="date">lundi 9 novembre 2026</p>
+      <p class="temps"><span class="pastille"></span>None</p>
+      <p class="fil-voisins"><a id="fil-veille" hidden>← la veille</a><a href="./">archive</a><a id="fil-lendemain" hidden>le lendemain →</a></p>
+    </div>
+    <h3>Les lectures</h3>
+    <ol class="fil-lectures">
+<li><button data-lecture="0" class="on"><small>Première lecture</small>Ézéchiel 47, 1-2.8-9.12</button></li>
+<li><button data-lecture="1"><small>Deuxième lecture</small>1 Corinthiens 3, 9c-11.16-17</button></li>
+<li><button data-lecture="2"><small>Psaume</small>Psaume 45 (46), 2-3.5-6.8-9a.10a</button></li>
+<li><button data-lecture="3"><small>Évangile</small>Jean 2, 13-22</button></li>
+    </ol>
+    <h3>La page</h3>
+    <ol class="fil-plan">
+      <li><a href="#textes" data-plan>Le texte</a></li>
+      <li><a href="#contexte" data-plan>Le sol</a></li>
+      <li><a href="#analogie" data-plan>Le pont</a></li>
+      <li><a href="#invitation" data-plan>Le geste</a></li>
+      <li><a href="#question" data-plan>La question</a></li>
+      <li><a href="#racines" data-plan>Les racines</a></li>
+    </ol>
+    <h3>Les sources</h3>
+    <div class="fil-sources">
+      <div class="groupe" data-pour="textes"><p class="nom">Textes</p>
+<p>Segond 1910, domaine public</p>        <p><a href="https://www.aelf.org/2026-11-09/romain/messe" target="_blank" rel="noopener">Lectionnaire romain (AELF)</a></p>
+      </div>
+<div class="groupe" data-pour="racines contexte"><p class="nom">Les anciens</p>
+<p>note historique</p><p>Jean Chrysostome, Homélie XXIII sur l'Évangile de Jean</p><p>Augustin d'Hippone, Discours sur le Psaume 45</p>      </div><div class="groupe" data-pour="voir"><p class="nom">Vidéos</p><p><a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a></p></div>      <p class="fil-note">Objet d'étude, pas une autorité — chaque affirmation reste traçable.</p>
+      <p class="fil-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</p>
+      <p class="fil-liens"><a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a></p>
+    </div>
+  </div>
+</aside>
+
+<div class="mesure">
+<div class="dedans">
+
+  <!-- ① INCIPIT -->
+  <header class="incipit" id="haut">
+    <p class="dateline">lundi 9 novembre 2026 · None · <span class="couleur">blanc · Fête</span>
+</p>
+    <h1>Temple <span class="it">vivant</span></h1>
+    <p class="chapeau">Dédicace de la basilique du Latran — Ézéchiel, Paul et Jean devant la même demeure</p>
+    <figure class="gravure" aria-label="Gravure sur bois : un fleuve jaillit du seuil d'un temple et serpente entre deux rangs d'arbres chargés de fruits ; au premier plan, une main renverse une table tandis que des pièces se dispersent sur le sol."><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><g class="trait-encre"><path d="M14 40 L40 16 L66 40"/><path d="M16 40 h48"/><path d="M20 40 v34"/><path d="M60 40 v34"/><path d="M10 76 h60"/><path d="M112 70 v-24"/><path d="M98 46 q14 -18 28 0 q-14 11 -28 0"/><path d="M232 72 v-26"/><path d="M217 46 q15 -19 30 0 q-15 12 -30 0"/><path d="M150 144 v-30"/><path d="M136 94 q14 -20 28 0 q-14 13 -28 0"/><path d="M282 146 v-36"/><path d="M266 88 q16 -22 32 0 q-16 14 -32 0"/><path d="M244 106 l12 -14 q5 -5 11 -2"/><path d="M258 88 l6 -7 M263 90 l5 -8 M268 94 l4 -8"/><path d="M250 112 l34 -10"/><path d="M256 110 l-6 16 M272 106 l2 18 M280 104 l10 14"/></g><g class="trait-rubrique"><path d="M40 76 q8 14 -6 24 q-16 12 2 26 q18 14 46 8 q34 -8 58 10 q28 20 58 4 q26 -14 54 2 q18 10 36 -2"/></g><g class="trait-liturgie"><path d="M258 128 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 M272 132 a2.5 2.5 0 1 0 5 0 a2.5 2.5 0 1 0 -5 0 M286 126 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0"/></g></svg></figure>
+    <nav class="portes" aria-label="Entrées de lecture">
+      <a href="#textes" data-porte="lire"><span class="n">Lire</span><span class="d">les textes, mot à mot</span></a>
+<a href="#" data-porte="voir" class="voir" aria-controls="compagnon" aria-expanded="false"><span class="n">Voir</span><span class="d">6 vidéos pour ce jour</span></a>      <a href="#contexte" data-porte="comprendre"><span class="n">Comprendre</span><span class="d">le sol et les anciens</span></a>
+      <a href="#" data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false"><span class="n">Demander</span><span class="d">questions sur ces textes</span></a>
+    </nav>
+  </header>
+
+  <!-- ② TEXTES (rail) -->
+  <section class="bloc reveler" id="textes">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">La rencontre <span class="axe">↓ profondeur · → exploration</span></p>
+        <h2>Ce que dit le texte</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-textes" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-textes" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-textes" data-points="p-textes">
+      <article class="feuillet ">
+        <p class="ref-lat">Première lecture — Ézéchiel 47, 1-2.8-9.12 — Segond 1910</p>
+        <div class="ecriture "><span class="s">1</span> Il me ramena vers la porte de la maison ; et voici, de l'eau sortait sous le seuil de la maison, à l'orient, car la face de la maison était à l'orient ; l'eau descendait sous le côté droit de la maison, au midi de l'autel. <span class="s">2</span> Il me conduisit par le chemin de la porte septentrionale, et me fit faire le tour par dehors jusqu'à la porte extérieure, du côté de l'orient. Et voici, l'eau coulait du côté droit. <span class="s">8</span> Et il me dit : Cette eau coulera vers la contrée orientale, descendra dans la plaine, et entrera dans la mer ; en se jetant dans la mer, ses eaux deviendront <button class="mot" data-g="g-saines">saines</button>. <span class="s">9</span> Tout être vivant qui se mouvra partout où coulera le fleuve vivra, et il y aura une grande quantité de poissons ; car là où cette eau arrivera, les eaux deviendront saines, et partout où le fleuve coulera, il y aura de la vie. <span class="s">12</span> Sur les deux rives du fleuve, il croîtra toute espèce d'arbres fruitiers dont le feuillage ne se flétrira point, et dont les fruits ne cesseront pas ; ils porteront des fruits chaque mois, parce que les eaux sortiront du <button class="mot" data-g="g-sanctuaire">sanctuaire</button> ; et les fruits en seront un aliment, et les feuilles un <button class="mot" data-g="g-remede">remède</button>.</div>
+        <div class="glose" id="g-saines"><span class="lemme">saines</span> Le verbe hébreu sous-jacent est <span class="gr">rapha</span>, qui signifie proprement « guérir ». Segond traduit « deviendront saines », affaiblissant presque le mot en notation sanitaire, alors que le texte dit que la mer la plus morte sera guérie comme on guérit une personne malade. Les eaux ne deviennent pas seulement potables, elles sont soignées d'un mal. On retrouvera la même racine deux versets plus loin pour les feuilles de l'arbre, signe que c'est la même logique de guérison qui porte tout ce que touche l'eau du sanctuaire.</div>
+        <div class="glose" id="g-sanctuaire"><span class="lemme">sanctuaire</span> <span class="gr">Miqdash</span> désigne le lieu saint par excellence, l'endroit mis à part, de la racine <span class="gr">qadash</span>, être saint. Segond garde « sanctuaire » plutôt que « temple », gardant la nuance d'un espace consacré plus que d'un bâtiment. Dans la vision d'Ézéchiel, c'est de ce point précis, et nulle part ailleurs, que jaillit l'eau qui transforme tout ce qu'elle touche : la sainteté de Dieu n'est pas statique, elle devient source.</div>
+        <div class="glose" id="g-remede"><span class="lemme">remède</span> Segond traduit <span class="gr">terufah</span> par « remède », mais le mot partage sa racine avec <span class="gr">rapha</span>, guérir, employé au verset 8 pour les eaux elles-mêmes. La feuille de l'arbre planté près du fleuve du sanctuaire ne nourrit pas seulement, elle soigne — c'est l'image que reprendra l'Apocalypse en parlant des feuilles de l'arbre de vie données « pour la guérison des nations » (Ap 22,2), signe que cette vision d'Ézéchiel n'a jamais cessé d'être relue.</div>
+      </article>
+      <article class="feuillet ">
+        <p class="ref-lat">Deuxième lecture — 1 Corinthiens 3, 9c-11.16-17 — Segond 1910</p>
+        <div class="ecriture "><span class="s">9</span> […] vous êtes l'<button class="mot" data-g="g-edifice">édifice</button> de Dieu. <span class="s">10</span> Selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte, et un autre bâtit dessus. Mais que chacun prenne garde à la manière dont il bâtit dessus. <span class="s">11</span> Car personne ne peut poser un autre fondement que celui qui a été posé, savoir Jésus-Christ. <span class="s">16</span> Ne savez-vous pas que vous êtes le <button class="mot" data-g="g-naos">temple</button> de Dieu, et que l'Esprit de Dieu habite en vous ? <span class="s">17</span> Si quelqu'un <button class="mot" data-g="g-detruit">détruit</button> le temple de Dieu, Dieu le détruira ; car le temple de Dieu est saint, et c'est ce que vous êtes.</div>
+        <div class="glose" id="g-edifice"><span class="lemme">édifice</span> Le grec <span class="gr">oikodomé</span> ne désigne pas un bâtiment achevé mais l'action même de construire, le chantier plus que l'édifice. Segond choisit un nom figé, « édifice », là où Paul vient de dire « vous êtes le champ de Dieu » : l'image est dynamique, une communauté en travaux permanents et non une façade terminée. Calvin, dans son commentaire sur ce passage, insiste sur le fait que nul ministre, pas même Paul, n'est le fondement : il n'est qu'ouvrier sur un chantier dont un autre a posé la première pierre.</div>
+        <div class="glose" id="g-naos"><span class="lemme">temple</span> Le grec distingue deux mots que le français confond sous « temple » : <span class="gr">hieron</span>, l'enceinte sacrée tout entière avec ses parvis et ses marchands, celui que Jésus traverse en Jean 2,14, et <span class="gr">naos</span>, le sanctuaire intérieur où Dieu seul habite. Paul choisit ici <span class="gr">naos</span>, et non <span class="gr">hieron</span> : il ne dit pas que les croyants sont une cour fréquentable, mais le lieu même, inaccessible et saint, où Dieu réside. Segond traduit les deux mots par le même « temple » en français, et le lecteur perd sans le savoir cette précision que les Pères grecs lisaient d'emblée.</div>
+        <div class="glose" id="g-detruit"><span class="lemme">détruit</span> Paul emploie le même verbe grec, <span class="gr">phtheirei / phtherei</span>, pour « détruit » et « détruira » : ce n'est pas une variation stylistique mais une loi de réciprocité stricte. Segond rend fidèlement cette répétition, ce qui n'est pas si fréquent dans les traductions qui cherchent parfois à varier le vocabulaire par élégance. Le verbe porte aussi l'idée de corrompre, de gâter de l'intérieur, plus que de démolir par un coup extérieur : on détruit ce temple-là moins par une attaque frontale que par une lente corruption.</div>
+      </article>
+      <article class="feuillet psaume">
+        <p class="ref-lat">Psaume — Psaume 45 (46), 2-3.5-6.8-9a.10a — Segond 1910</p>
+        <div class="ecriture psaume"><span class="s">2</span> Dieu est pour nous un refuge et un appui, un secours qui ne manque jamais dans la détresse. <span class="s">3</span> C'est pourquoi nous sommes sans crainte quand la terre est bouleversée, et que les montagnes chancellent au cœur des mers, <span class="s">5</span> il est un <button class="mot" data-g="g-fleuve">fleuve</button> dont les courants réjouissent la cité de Dieu, le sanctuaire des demeures du Très-Haut. <span class="s">6</span> Dieu est au milieu d'elle : elle n'est point ébranlée ; Dieu la secourt dès l'aube du matin. <span class="s">8</span> L'Éternel des armées est avec nous, le Dieu de Jacob est pour nous une <button class="mot" data-g="g-forteresse">forteresse</button>. <span class="s">9</span> Venez, contemplez les œuvres de l'Éternel, <span class="s">10</span> il a fait cesser les combats jusqu'au bout de la terre.</div>
+        <div class="glose" id="g-fleuve"><span class="lemme">fleuve</span> Le mot hébreu <span class="gr">nahar</span> désigne un cours d'eau permanent, à la différence du <span class="gr">nahal</span>, le torrent saisonnier qui s'assèche en été. Or Jérusalem, contrairement à Babylone ou à l'Égypte, n'a jamais eu de fleuve véritable à ses portes — seule la source du Guihon l'alimentait. Le psalmiste chante donc un fleuve qui n'existe pas géographiquement, mais que la présence de Dieu rend réel : Augustin, méditant ce psaume, y entend l'annonce des grâces de l'Esprit qui comblent ce que la nature a refusé à la ville.</div>
+        <div class="glose" id="g-forteresse"><span class="lemme">forteresse</span> <span class="gr">Misgab</span> vient d'une racine qui signifie être élevé, hors d'atteinte : ce n'est pas d'abord un mur mais une hauteur inaccessible. Segond traduit par « forteresse », qui évoque la pierre et l'architecture, alors que l'image hébraïque est plus celle d'un à-pic où l'ennemi ne peut grimper. Le refrain revient identique au verset 12 du psaume, encadrant tout le texte comme deux parois d'un même rocher.</div>
+      </article>
+      <article class="feuillet evangile">
+        <p class="ref-lat">Évangile — Jean 2, 13-22 — Segond 1910</p>
+        <div class="ecriture evangile"><span class="s">13</span> Or, la Pâque des Juifs était proche, et Jésus monta à Jérusalem. <span class="s">14</span> Il trouva dans le temple les vendeurs de bœufs, de brebis et de pigeons, et les changeurs assis. <span class="s">15</span> Ayant fait un <button class="mot" data-g="g-fouet">fouet</button> avec des cordes, il les chassa tous du temple, ainsi que les brebis et les bœufs ; il dispersa la monnaie des changeurs, et renversa les tables ; <span class="s">16</span> et il dit aux vendeurs de pigeons : Otez cela d'ici, ne faites pas de la maison de mon Père une maison de <button class="mot" data-g="g-trafic">trafic</button>. <span class="s">17</span> Ses disciples se souvinrent qu'il est écrit : Le <button class="mot" data-g="g-zele">zèle</button> de ta maison me dévore. <span class="s">18</span> Les Juifs lui dirent : Quel miracle nous montres-tu, pour agir de cette manière ? <span class="s">19</span> Jésus leur répondit : Détruisez ce <button class="mot" data-g="g-temple-corps">temple</button>, et en trois jours je le relèverai. <span class="s">20</span> Les Juifs lui dirent : Il a fallu quarante-six ans pour bâtir ce temple, et toi, tu le relèverais en trois jours ? <span class="s">21</span> Mais il parlait du temple de son corps. <span class="s">22</span> C'est pourquoi, lorsqu'il fut ressuscité des morts, ses disciples se souvinrent qu'il avait dit cela, et ils crurent à l'Écriture et à la parole qu'il avait dite.</div>
+        <div class="glose" id="g-fouet"><span class="lemme">fouet</span> Le grec <span class="gr">phragellion</span> est un emprunt au latin <span class="gr">flagellum</span>, un mot rare, technique, que Jean seul des quatre évangélistes emploie pour cette scène. Ce n'est pas une improvisation de colère : le mot évoque un objet façonné, qui a pris le temps d'être tordu avant que Jésus n'agisse. Jean, qui aime les gestes signifiants, note ce détail que Matthieu, Marc et Luc passent sous silence, comme si la préméditation comptait autant que le geste lui-même.</div>
+        <div class="glose" id="g-trafic"><span class="lemme">trafic</span> <span class="gr">Emporion</span> est le mot grec pour un marché, un comptoir commercial — le terme technique des échanges, pas une insulte populaire. Segond traduit « maison de trafic », gardant la connotation commerciale exacte du mot, à distinguer du « repaire de brigands » que citent Matthieu, Marc et Luc en reprenant Jérémie 7,11. Jean seul retient cette formule plus sobre : le problème n'est pas d'abord le vol, mais d'avoir fait d'un lieu de présence un lieu d'échange.</div>
+        <div class="glose" id="g-zele"><span class="lemme">zèle</span> <span class="gr">Zélos</span> est le mot d'où vient notre « zèle », mais aussi notre « jalousie » : en grec biblique, c'est la même passion, selon qu'elle protège ce qui est sien ou convoite ce qui appartient à autrui. La citation reprend le Psaume 69,10 (LXX), où le juste est consumé par l'amour de la maison de Dieu. Chrysostome, commentant ce passage, y voit non un emportement mais une passion juste, celle d'un fils qui ne tolère pas qu'on avilisse la maison de son père.</div>
+        <div class="glose" id="g-temple-corps"><span class="lemme">temple</span> Jean emploie ici <span class="gr">naos</span>, le sanctuaire intime, et non <span class="gr">hieron</span>, l'enceinte des marchands qu'il vient de décrire au verset 14 : Jésus ne parle pas du même espace que celui qu'il a traversé avec son fouet. Ce glissement verbal, invisible dans la traduction française, porte toute la pointe du récit : le lieu que Dieu habite véritablement n'est déjà plus la pierre d'Hérode mais le corps que les Juifs vont livrer à la mort. Jean le précise lui-même au verset 21, signe que le double sens était voulu et qu'il attendait d'être levé après Pâques.</div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-textes"><i class="on"></i><i ></i><i ></i><i ></i></span> 4 textes, un fil</div>
+  </section>
+
+  <!-- ③ CONTEXTE -->
+  <section class="bloc reveler" id="contexte">
+    <p class="rubrique">Le sol <span class="axe">↓ profondeur</span></p>
+    <h2>D'où parlent ces textes</h2>
+    <div class="ctx">
+      <div><h3>La dédicace du Latran</h3><p>Le 9 novembre 324, le pape Silvestre consacre la basilique du Latran, cathédrale de Rome et, de ce fait, selon la tradition, mère de toutes les églises de la ville et du monde. Fêter la dédicace d'un seul bâtiment romain dans toute l'Église a un sens précis : rappeler que chaque assemblée locale, où qu'elle soit, est elle-même ce que Paul appelle le temple de Dieu — la pierre de Rome n'étant qu'un signe visible de cette unique demeure spirituelle.</p></div>
+      <div><h3>Le temple d'Ézéchiel et d'Hérode</h3><p>La vision d'Ézéchiel (ch. 40-47) est donnée en exil, avant toute reconstruction : un temple qu'aucune pierre ne porte encore, mais dont l'eau coule déjà en vision. Le temple que traverse Jésus en Jean 2 est, lui, bien réel : l'agrandissement commencé par Hérode le Grand vers 20-19 avant notre ère, toujours en chantier — d'où la remarque des Juifs sur les quarante-six années déjà écoulées, qui situe la scène au tout début du ministère de Jésus.</p></div>
+    </div>
+  </section>
+
+  <!-- ④ ANALOGIE -->
+  <section class="bloc reveler analogie" id="analogie">
+    <p class="rubrique">Le pont <span class="axe">↓ profondeur</span></p>
+    <h2>Le courant sous les jours arides</h2>
+<p>Il y a des jours où prier ne produit rien que tu puisses nommer : aucune paix sensible, aucune parole qui descend, rien qu'un silence poli devant lequel tu restes, un peu gêné de t'être arrêté. Tu te relèves en te demandant si quelque chose s'est passé. Et pourtant, des mois plus tard, dans une épreuve que tu n'avais pas vue venir, tu te découvres tenir — porté par une force dont tu ne saurais dire d'où exactement elle te vient, mais que tu reconnais, après coup, comme ayant déjà coulé sous ces jours arides où tu croyais prier pour rien. C'est devant cette source invisible, et non devant tes propres sentiments de prière, qu'il faut te tenir.</p>  </section>
+
+  <!-- ⑤ INVITATION -->
+  <section class="bloc reveler" id="invitation">
+    <p class="rubrique">Le geste <span class="axe">aujourd'hui</span></p>
+    <h2>Se laisser rejoindre</h2>
+    <div class="invitation">
+      <p>Avant de reprendre le jour, laisse ces textes te poser une question simple : qu'est-ce qui, en toi, est devenu un lieu de passage plutôt qu'une demeure ?</p>
+      <p class="geste">Reste une minute sans rien demander. Remarque seulement ce qui, en toi, est agité, encombré — et nomme-le, sans chercher encore à le changer.</p>
+      <small>Il n'est pas nécessaire de ressentir quoi que ce soit pour que ce temps compte.</small>
+    </div>
+  </section>
+
+  <!-- ⑥ QUESTION -->
+  <section class="reveler question" id="question">
+    <p>Qu'est-ce qui, chez toi, empêche l'eau du sanctuaire de couler jusqu'au bout — et accepterais-tu que quelqu'un vienne y renverser une table ?</p>
+  </section>
+
+  <!-- ⑦ RACINES (rail) -->
+  <section class="bloc reveler" id="racines">
+    <div class="rail-tete">
+      <div>
+        <p class="rubrique">Les racines <span class="axe">→ exploration</span></p>
+        <h2>Ce que les anciens y ont lu</h2>
+      </div>
+      <div class="rail-nav"><button data-rail="r-racines" data-dir="-1" aria-label="Précédent">←</button><button data-rail="r-racines" data-dir="1" aria-label="Suivant">→</button></div>
+    </div>
+    <div class="rail" id="r-racines" data-points="p-racines">
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le Latran, mère des Églises</h3>
+          <p>La consécration de la basilique du Latran par le pape Silvestre, en 324, suit de peu l'édit de Constantin qui met fin aux persécutions. On y a vu, très tôt, le signe public que l'Église, longtemps cachée, devenait elle-même visible comme un temple au milieu des cités — sans que cette visibilité change rien à ce que Paul affirmait déjà : c'est l'assemblée des croyants, non la pierre, qui est le véritable édifice de Dieu.</p>
+<p class="attrib">note historique</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le zèle de la maison</h3>
+          <p>Chrysostome, commentant ce chapitre de Jean, relie le geste de Jésus non à un accès de colère mais à une passion filiale pour l'honneur de son Père, et il situe cet épisode comme la première annonce publique du conflit qui conduira à la croix. Les disciples, note-t-il, ne comprennent la portée du geste qu'après la résurrection, quand l'Écriture et la parole de Jésus se rejoignent enfin dans leur mémoire.</p>
+<p class="attrib">Jean Chrysostome, Homélie XXIII sur l'Évangile de Jean</p>        </div>
+      </article>
+      <article class="feuillet">
+        <div class="racine">
+          <h3>Le fleuve qui réjouit la cité</h3>
+          <p>Augustin, méditant le psaume de ce jour, lit les « fils de Coré » comme figure de ceux que le Christ attire à lui depuis sa Passion, et la cité que réjouit le fleuve comme l'Église elle-même, bâtie non de pierres mais de membres unis à leur tête. Il insiste : il faut suivre l'esprit qui vivifie et non la lettre, pour reconnaître dans ce vieux chant la promesse faite à l'assemblée des croyants.</p>
+<p class="attrib">Augustin d'Hippone, Discours sur le Psaume 45</p>        </div>
+      </article>
+    </div>
+    <div class="rail-pied"><span class="points" id="p-racines"><i class="on"></i><i ></i><i ></i></span> 3 racines</div>
+  </section>
+
+  <footer>
+    Références : lectionnaire romain (AELF), None — Ez 47, 1-2.8-9.12 ; 1 Co 3, 9c-11.16-17 ; Jn 2, 13-22.<br>
+    Texte : Louis Segond 1910, domaine public. Objet d'étude, pas une autorité — chaque affirmation reste traçable.<br>
+    <a href="./">Archive</a> · <a href="./guide.html">Comment lire une page</a> · <a href="./calendrier.html">L'année liturgique</a>
+    <span class="mention-ia">Gloses, contexte et réponses du carnet rédigés avec l'aide d'une intelligence artificielle : à relire et vérifier.</span>
+  </footer>
+
+</div>
+</div>
+
+<nav class="barre-portes" aria-label="Entrées de lecture">
+  <a href="#textes" data-porte="lire">Lire</a>
+<button data-porte="voir" aria-controls="compagnon" aria-expanded="false">Voir</button>  <a href="#contexte" data-porte="comprendre">Comprendre</a>
+  <button data-porte="demander" class="ask" aria-controls="compagnon" aria-expanded="false">✦ Demander</button>
+</nav>
+
+<!-- COMPAGNON : Voir (vidéos) et Demander (questions relues). Repliable. -->
+<aside class="compagnon" id="compagnon" aria-label="Compagnon de lecture">
+  <div class="poignee" role="separator" tabindex="0" aria-controls="compagnon" aria-label="Agrandir ou réduire le compagnon (glisser, flèches ; double-clic pour la taille d'origine)" title="Glisser pour agrandir"><span></span></div>
+  <div class="entete">
+<div class="onglets" role="tablist"><button data-onglet="voir" role="tab">Voir</button><button data-onglet="demander" role="tab">✦ Demander</button></div>
+    <button class="replier" aria-label="Replier">→</button>
+  </div>
+  <div class="corps">
+  <div class="vitre" data-vitre="voir">
+    <div class="video" id="ecran" role="button" tabindex="0" data-yt="ZjoRCeqpUSA" data-titre="Temple" data-vignette="vignettes/ZjoRCeqpUSA.jpg" aria-label="Lire la vidéo Temple"><img src="vignettes/ZjoRCeqpUSA.jpg" alt=""><span class="lire">Regarder</span></div>
+<p class="compteur" id="compteur">Vidéo 1 sur 6</p>    <p class="vtitre" id="ecran-titre">Temple</p>
+    <p class="raison" id="ecran-raison">Étude du mot « temple », central dans les trois lectures de ce jour, d'Ézéchiel 47 à Jean 2,19-21.</p>
+    <p class="credit">Vidéo : <a href="https://www.youtube.com/@BibleProject-Fran%C3%A7ais" target="_blank" rel="noopener">BibleProject - Français</a> · <a id="ecran-yt" href="https://www.youtube.com/watch?v=ZjoRCeqpUSA" target="_blank" rel="noopener">voir sur YouTube</a></p>
+    <div class="pellicule" aria-label="Autres vidéos du jour">
+<span class="groupe">Les mots du jour</span>      <button data-i="0" data-yt="ZjoRCeqpUSA" data-titre="Temple" data-raison="Étude du mot « temple », central dans les trois lectures de ce jour, d&#39;Ézéchiel 47 à Jean 2,19-21." data-vignette="vignettes/ZjoRCeqpUSA.jpg" class="on"><img src="vignettes/ZjoRCeqpUSA.jpg" alt="" loading="lazy"><span>Temple</span></button>
+      <button data-i="1" data-yt="mz0tAI2SdPk" data-titre="Découvrez le sens du mot “Demeure” (Mishkan) dans la Bible" data-raison="Le thème biblique de la demeure (Mishkan) éclaire 1 Co 3,16, où Paul affirme que l&#39;Esprit habite les croyants." data-vignette="vignettes/mz0tAI2SdPk.jpg"><img src="vignettes/mz0tAI2SdPk.jpg" alt="" loading="lazy"><span>Découvrez le sens du mot “Demeure” (Mishkan) dans la Bible</span></button>
+<span class="groupe">Situer les livres</span>      <button data-i="2" data-yt="MyFcRxLzW6g" data-titre="Ézéchiel 34–48 - Panorama" data-raison="Panorama d&#39;Ézéchiel 34 à 48, qui inclut la vision du fleuve jaillissant du sanctuaire lue en Ézéchiel 47." data-vignette="vignettes/MyFcRxLzW6g.jpg"><img src="vignettes/MyFcRxLzW6g.jpg" alt="" loading="lazy"><span>Ézéchiel 34–48 - Panorama</span></button>
+      <button data-i="3" data-yt="QReuhS_R8Kk" data-titre="Jean 1–12 - Panorama" data-raison="Panorama de Jean 1 à 12, qui situe l&#39;épisode du temple purifié de Jean 2,13-22 dans l&#39;ensemble de l&#39;évangile." data-vignette="vignettes/QReuhS_R8Kk.jpg"><img src="vignettes/QReuhS_R8Kk.jpg" alt="" loading="lazy"><span>Jean 1–12 - Panorama</span></button>
+      <button data-i="4" data-yt="q99CrlpKBrw" data-titre="1 Corinthiens - Panorama" data-raison="Panorama de 1 Corinthiens, dont le chapitre 3 sur le fondement et le temple de l&#39;Esprit est lu aujourd&#39;hui." data-vignette="vignettes/q99CrlpKBrw.jpg"><img src="vignettes/q99CrlpKBrw.jpg" alt="" loading="lazy"><span>1 Corinthiens - Panorama</span></button>
+      <button data-i="5" data-yt="T-DvRiiLS1Y" data-titre="Psaumes - Panorama" data-raison="Panorama des Psaumes, qui situe le psaume 46 (45) et son fleuve réjouissant la cité de Dieu lu aujourd&#39;hui." data-vignette="vignettes/T-DvRiiLS1Y.jpg"><img src="vignettes/T-DvRiiLS1Y.jpg" alt="" loading="lazy"><span>Psaumes - Panorama</span></button>
+    </div>
+  </div>
+  <div class="vitre carnet" data-vitre="demander">
+    <p class="avert">Généré par intelligence artificielle. Les réponses peuvent se tromper : relis-les et vérifie toujours dans les textes cités.</p>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-1">Pourquoi fête-t-on, dans le monde entier, la consécration d&#39;une seule basilique de Rome ?</button>
+      <div class="r" id="r-1" hidden>
+        Parce que la fête ne célèbre pas d'abord une pierre, mais ce qu'elle signifie : le Latran, cathédrale de l'évêque de Rome, est dédié dès 324 et devient le modèle visible de toute église locale. Paul l'a dit avant qu'aucune basilique n'existe : « vous êtes l'édifice de Dieu », puis « vous êtes le temple de Dieu » (1 Co 3,9.16). Fêter une dédicace romaine dans une paroisse de province revient donc à se rappeler que chaque assemblée, où qu'elle se réunisse, est elle-même ce temple-là, non par analogie vague mais parce que l'Esprit y habite réellement.
+        <div class="sources">
+<p>Textes du jour</p><div><span>1 Co 3,9.16</span><span>Jn 2,13-22</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-2">Que signifient les « quarante-six ans » que les Juifs évoquent en Jean 2,20 ?</button>
+      <div class="r" id="r-2" hidden>
+        Hérode le Grand a lancé l'agrandissement du temple de Jérusalem vers 20-19 avant notre ère ; compter quarante-six années depuis ce chantier situe la scène aux débuts du ministère de Jésus, peu après son baptême. Le détail n'est pas un simple repère chronologique : Jean place ainsi, dès l'ouverture de son évangile, l'annonce que ce temple en construction depuis des décennies sera remplacé par un édifice levé en trois jours. Le contraste entre la lenteur humaine et la rapidité de la résurrection porte toute l'ironie du passage.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Jn 2,19-20</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-3">Pourquoi Jésus agit-il avec cette violence, lui qui ailleurs bénit et pardonne ?</button>
+      <div class="r" id="r-3" hidden>
+        Le geste n'est pas de la colère ordinaire : Jean le relie explicitement au zèle du Psaume 69, celui d'un fils jaloux de l'honneur de la maison de son père, et non à une improvisation. Chrysostome, commentant cet épisode, insiste sur le fait que ce premier affrontement public annonce déjà, au tout début de l'évangile, la haine qui conduira Jésus à la croix. La foi des disciples, précise le texte, ne naîtra pleinement qu'après la résurrection, lorsqu'ils se souviendront de cette parole.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Jn 2,15-17.22</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Jean Chrysostome, Homélies (IVe-Ve s.), Homélie XXIII sur l&#39;Évangile de Jean</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-4">Le psaume parle d&#39;un fleuve qui réjouit la cité de Dieu — quel rapport avec Ézéchiel ?</button>
+      <div class="r" id="r-4" hidden>
+        Les deux textes partagent une image plus ancienne qu'eux-mêmes, celle des fleuves qui arrosaient le jardin d'Éden (Genèse 2,10-14) : un cours d'eau né du lieu même où Dieu se tient. Le psaume chante cette eau comme un fait déjà présent au cœur de Jérusalem, Ézéchiel l'annonce comme une promesse à venir depuis le sanctuaire reconstruit. Augustin, méditant ce même psaume, y voit l'annonce des grâces répandues sur l'Église, cité de Dieu bâtie non de pierres mais de croyants rassemblés autour du Christ.
+        <div class="sources">
+<p>Textes du jour</p><div><span>Ps 45(46), 5</span><span>Ez 47,1.12</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Augustin d&#39;Hippone, Commentaires sur les Psaumes (392-422), Discours sur le Psaume 45</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <div class="qr">
+      <button class="q-btn" aria-expanded="false" aria-controls="r-5">« Détruit… détruira » (1 Co 3,17) : est-ce une menace de Dieu contre les pécheurs ?</button>
+      <div class="r" id="r-5" hidden>
+        Le texte ne vise pas un péché individuel mais ce qui abîme la communauté comme telle, les divisions que Paul dénonce dans tout le chapitre. Le verbe grec est le même aux deux emplois, détruire et être détruit : ce n'est pas une sanction arbitraire mais une conséquence symétrique de s'attaquer à ce que Dieu lui-même habite. Calvin, commentant ce passage, rappelle que la sainteté du temple n'est pas une qualité que l'Église posséderait par elle-même, mais celle de l'Esprit qui y réside, ce qui rend d'autant plus grave de la profaner.
+        <div class="sources">
+<p>Textes du jour</p><div><span>1 Co 3,16-17</span></div><p>Pères et Réformateurs</p><div class="trad"><span>Jean Calvin, Commentaires bibliques, sur 1 Corinthiens 3,17</span></div>        </div>
+        <p class="ia">Réponse générée par IA — à vérifier.</p>
+      </div>
+    </div>
+    <!-- Question libre : visible seulement si /api/carnet est ouvert (voir JS). -->
+    <form class="carnet-libre" hidden data-date="2026-11-09">
+      <p class="libre-titre">Ta question sur les textes du jour</p>
+      <div class="libre-saisie"><input name="question" maxlength="400" minlength="3" required placeholder="Pourquoi… ?" aria-label="Ta question sur les textes du jour"><button type="submit">Poser</button></div>
+      <div class="libre-turnstile"></div>
+      <p class="libre-etat" aria-live="polite"></p>
+      <div class="libre-reponse r" hidden><div class="libre-texte"></div><div class="libre-sources sources" hidden></div><p class="ia">Réponse générée par IA, non relue — à vérifier.</p></div>
+    </form>
+    <p class="libre-ferme" hidden></p>
+  </div>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var b=document.getElementById('basculer-theme');
+  function courant(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function icone(){b.textContent=courant()==='dark'?'☀':'☾'}
+  b.addEventListener('click',function(){var t=courant()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);icone()});
+  icone();
+})();
+document.querySelectorAll('.mot').forEach(function(b){
+  b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.g);
+    var open=g.classList.contains('ouverte');
+    b.closest('.feuillet').querySelectorAll('.glose').forEach(function(x){x.classList.remove('ouverte')});
+    if(!open)g.classList.add('ouverte');
+  });
+});
+document.querySelectorAll('.rail').forEach(function(rail){
+  var pts=document.getElementById(rail.dataset.points);if(!pts)return;
+  var dots=pts.querySelectorAll('i');
+  rail.addEventListener('scroll',function(){
+    var idx=Math.min(dots.length-1,Math.round(rail.scrollLeft/(rail.firstElementChild.offsetWidth+32)));
+    dots.forEach(function(d,k){d.classList.toggle('on',k===idx)});
+  },{passive:true});
+});
+document.querySelectorAll('.rail-nav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var rail=document.getElementById(btn.dataset.rail);
+    rail.scrollBy({left:(rail.firstElementChild.offsetWidth+32)*parseInt(btn.dataset.dir,10),behavior:'smooth'});
+  });
+});
+var liens=document.querySelectorAll('#carte a');
+var cibles=[...liens].map(function(a){return document.querySelector(a.getAttribute('href'))});
+var obsCarte=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var i=cibles.indexOf(e.target);
+      liens.forEach(function(l,k){l.classList.toggle('actif',k===i)});
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+cibles.forEach(function(c){if(c)obsCarte.observe(c)});
+// Le fil du jour : ouvert sur grand écran (sauf si on l'a replié), tiroir sur
+// mobile. Il suit la lecture (lecture affichée, section, sources) et trouve la
+// veille et le lendemain dans jours.json.
+(function(){
+  var fil=document.getElementById('fil'),btn=document.getElementById('ouvrir-fil');if(!fil)return;
+  var large=matchMedia('(min-width:1280px)'),rac=document.documentElement;
+  function lire(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function ecrire(k,v){try{v===null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}
+  function etat(o){fil.classList.toggle('ouvert',o);document.body.classList.toggle('fil-ouvert',o&&large.matches);
+    btn.hidden=o;btn.setAttribute('aria-expanded',o?'true':'false')}
+  function defaut(){etat(large.matches&&lire('fil')!=='replie')}
+  defaut();large.addEventListener('change',defaut);
+  btn.addEventListener('click',function(){etat(true);if(large.matches)ecrire('fil',null)});
+  fil.querySelector('.replier').addEventListener('click',function(){etat(false);if(large.matches)ecrire('fil','replie')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!large.matches&&fil.classList.contains('ouvert'))etat(false)});
+  document.addEventListener('click',function(e){if(!large.matches&&fil.classList.contains('ouvert')&&!fil.contains(e.target)&&e.target!==btn)etat(false)});
+  // Lectures : un clic amène la bonne carte ; le défilement du rail l'allume.
+  var rail=document.getElementById('r-textes'),lecs=fil.querySelectorAll('[data-lecture]');
+  function pas(){return rail.firstElementChild.offsetWidth+32}
+  lecs.forEach(function(b){b.addEventListener('click',function(){
+    document.getElementById('textes').scrollIntoView({behavior:'smooth'});
+    rail.scrollTo({left:pas()*+b.dataset.lecture,behavior:'smooth'});if(!large.matches)etat(false)})});
+  if(rail)rail.addEventListener('scroll',function(){var i=Math.round(rail.scrollLeft/pas());
+    lecs.forEach(function(b){b.classList.toggle('on',+b.dataset.lecture===i)})},{passive:true});
+  // Plan et sources : suivent la section à l'écran.
+  var plan=fil.querySelectorAll('[data-plan]'),groupes=fil.querySelectorAll('.fil-sources .groupe');
+  plan.forEach(function(a){a.addEventListener('click',function(){if(!large.matches)etat(false)})});
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
+    plan.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+    groupes.forEach(function(g){g.classList.toggle('on',g.dataset.pour.split(' ').indexOf(id)>=0)})})},{rootMargin:'-40% 0px -50% 0px'});
+  ['haut','textes','contexte','analogie','invitation','question','racines'].forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  // Veille et lendemain parmi les jours publiés.
+  var ici=location.pathname.split('/').pop().replace('.html','');
+  fetch('jours.json').then(function(r){return r.ok?r.json():[]}).then(function(js){var i=js.indexOf(ici);if(i<0)return;
+    [['fil-veille',js[i-1]],['fil-lendemain',js[i+1]]].forEach(function(x){var a=document.getElementById(x[0]);
+      if(x[1]){a.href='./'+x[1]+'.html';a.hidden=false}})}).catch(function(){});
+  // Poignée (grand écran) : glisser pour élargir, double-clic pour revenir.
+  var poignee=fil.querySelector('.poignee'),depart=null;
+  function poser(v){v=Math.min(Math.max(220,innerWidth*.3),Math.max(220,v));rac.style.setProperty('--fil',v+'px');return v}
+  var garde=lire('fil-largeur');if(garde)poser(+garde);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,t:fil.offsetWidth};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(depart)poser(depart.t+e.clientX-depart.x)});
+  function lacher(){if(!depart)return;depart=null;poignee.classList.remove('tire');document.body.classList.remove('redim');ecrire('fil-largeur',fil.offsetWidth)}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--fil');ecrire('fil-largeur',null)});
+  poignee.addEventListener('keydown',function(e){var d={ArrowLeft:-30,ArrowRight:30}[e.key];if(!d)return;
+    e.preventDefault();ecrire('fil-largeur',poser(fil.offsetWidth+d))});
+})();
+var rev=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');rev.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveler').forEach(function(s){rev.observe(s)});
+// Portes : la pastille suit la position (Lire / Comprendre) et le clic ;
+// Voir et Demander sont des interrupteurs qui déplient ou replient le
+// compagnon ; passer de l'un à l'autre change d'onglet sans replier.
+(function(){
+  var portes=document.querySelectorAll('[data-porte]');
+  var comp=document.getElementById('compagnon'),ecran=document.getElementById('ecran');
+  var mq=matchMedia('(min-width:1100px)');
+  var ouvert=null,position='lire',verrou=0;
+  function peindre(){portes.forEach(function(e){var p=e.dataset.porte;
+    e.classList.toggle('on',!ouvert&&p===position);
+    e.classList.toggle('ouvert-voir',ouvert==='voir'&&p==='voir');
+    e.classList.toggle('ouvert-demander',ouvert==='demander'&&p==='demander');
+    if(p==='voir'||p==='demander')e.setAttribute('aria-expanded',ouvert===p?'true':'false')});
+    if(!comp)return;
+    comp.querySelectorAll('[data-vitre]').forEach(function(v){v.hidden=!!ouvert&&v.dataset.vitre!==ouvert});
+    comp.querySelectorAll('[data-onglet]').forEach(function(b){var on=b.dataset.onglet===ouvert;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')})}
+  function facade(){var src=ecran.dataset.vignette;ecran.textContent='';
+    var f;if(src){f=document.createElement('img');f.src=src;f.alt=''}
+    else{f=document.createElement('span');f.className='facade-titre';f.textContent=ecran.dataset.titre}
+    var l=document.createElement('span');l.className='lire';l.textContent='Regarder';ecran.appendChild(f);ecran.appendChild(l)}
+  function ouvrir(o){ouvert=o;
+    if(comp){comp.classList.toggle('ouvert',!!o);document.body.classList.toggle('panneau',!!o&&mq.matches);
+      if(o!=='voir'&&ecran&&ecran.querySelector('iframe'))facade();  // quitter Voir coupe la vidéo
+      if(o==='demander')initLibre()}
+    peindre()}
+  portes.forEach(function(e){e.addEventListener('click',function(ev){var p=e.dataset.porte;
+    if(p==='voir'||p==='demander'){ev.preventDefault();ouvrir(ouvert===p?null:p);return}
+    position=p;verrou=Date.now();if(!mq.matches&&ouvert)ouvrir(null);peindre()})});
+  var zones={haut:'lire',textes:'lire',contexte:'comprendre',analogie:'comprendre',invitation:'comprendre',question:'comprendre',racines:'comprendre'};
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&Date.now()-verrou>900){position=zones[e.target.id];peindre()}})},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(zones).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+  peindre();
+  if(!comp)return;
+  var replier=comp.querySelector('.replier');
+  function fleche(){replier.textContent=mq.matches?'→':'↓';document.body.classList.toggle('panneau',!!ouvert&&mq.matches)}
+  fleche();mq.addEventListener('change',fleche);
+  replier.addEventListener('click',function(){ouvrir(null)});
+  // Poignée : glisser pour agrandir ; sur mobile, un tap bascule mi-hauteur /
+  // plein écran, le relâcher s'aimante à 45, 78 ou 92 % et tirer tout en bas
+  // replie. Double-clic : taille d'origine. Flèches au clavier. Taille gardée.
+  var poignee=comp.querySelector('.poignee'),rac=document.documentElement,depart=null;
+  function cle(){return mq.matches?'panneau':'volet'}
+  function poser(v){var large=mq.matches,min=large?340:15,max=large?Math.max(340,innerWidth*.7):92;
+    v=Math.min(max,Math.max(min,v));rac.style.setProperty('--'+cle(),v+(large?'px':'vh'));return v}
+  function garder(v){try{localStorage.setItem('compagnon-'+cle(),Math.round(v))}catch(e){}}
+  function taille(){return mq.matches?comp.offsetWidth:comp.offsetHeight/innerHeight*100}
+  function retrouver(){try{var v=localStorage.getItem('compagnon-'+cle());if(v)poser(+v)}catch(e){}}
+  retrouver();mq.addEventListener('change',retrouver);
+  poignee.addEventListener('pointerdown',function(e){e.preventDefault();depart={x:e.clientX,y:e.clientY,t:taille()};
+    poignee.setPointerCapture(e.pointerId);poignee.classList.add('tire');document.body.classList.add('redim')});
+  poignee.addEventListener('pointermove',function(e){if(!depart)return;
+    poser(mq.matches?depart.t+depart.x-e.clientX:depart.t+(depart.y-e.clientY)/innerHeight*100)});
+  function lacher(e){if(!depart)return;var d=depart;depart=null;
+    poignee.classList.remove('tire');document.body.classList.remove('redim');
+    if(mq.matches){garder(taille());return}
+    var h=d.t+(d.y-e.clientY)/innerHeight*100,tap=Math.abs(d.y-e.clientY)<6;
+    if(tap)h=d.t>70?45:92;
+    else if(h<30){poser(d.t);ouvrir(null);return}
+    else h=[45,78,92].reduce(function(a,b){return Math.abs(b-h)<Math.abs(a-h)?b:a});
+    garder(poser(h))}
+  poignee.addEventListener('pointerup',lacher);poignee.addEventListener('pointercancel',lacher);
+  poignee.addEventListener('dblclick',function(){rac.style.removeProperty('--'+cle());try{localStorage.removeItem('compagnon-'+cle())}catch(e){}});
+  poignee.addEventListener('keydown',function(e){var pas={ArrowLeft:40,ArrowRight:-40,ArrowUp:8,ArrowDown:-8}[e.key];
+    if(!pas||(mq.matches!==(e.key==='ArrowLeft'||e.key==='ArrowRight')))return;
+    e.preventDefault();garder(poser(taille()+pas))});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ouvert)ouvrir(null)});
+  comp.querySelectorAll('[data-onglet]').forEach(function(b){b.addEventListener('click',function(){ouvrir(b.dataset.onglet)})});
+  var qs=comp.querySelectorAll('.q-btn');
+  qs.forEach(function(b){b.addEventListener('click',function(){var ouvre=b.getAttribute('aria-expanded')!=='true';
+    qs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    if(ouvre){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false}})});
+  // Question libre : on demande d'abord si le carnet est ouvert ; Turnstile
+  // n'est chargé qu'à ce moment-là, jamais à l'ouverture de la page.
+  var libre=comp.querySelector('.carnet-libre'),demande=false,widget=null;
+  function fermeLibre(msg){var f=comp.querySelector('.libre-ferme');if(libre)libre.hidden=true;if(msg&&f){f.textContent=msg;f.hidden=false}}
+  function initLibre(){if(!libre||demande)return;demande=true;
+    fetch('/api/carnet',{headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json():null}).then(function(e){
+      if(!e||!e.ouvert){fermeLibre(e&&e.message||'Les questions en direct ne sont pas disponibles pour le moment.');return}
+      var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
+      s.onload=function(){widget=window.turnstile.render(libre.querySelector('.libre-turnstile'),{sitekey:e.sitekey,size:'flexible'});libre.hidden=false};
+      document.head.appendChild(s)}).catch(function(){fermeLibre('Les questions en direct ne sont pas disponibles pour le moment.')})}
+  if(libre)libre.addEventListener('submit',function(ev){ev.preventDefault();
+    var etat=libre.querySelector('.libre-etat'),btn=libre.querySelector('button'),q=libre.question.value.trim();
+    var jeton=window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';
+    if(!jeton){etat.textContent='Merci de valider la vérification anti-robot.';return}
+    btn.disabled=true;etat.textContent='Le carnet cherche dans les textes du jour…';
+    fetch('/api/carnet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({date:libre.dataset.date,question:q,jeton:jeton})})
+      .then(function(r){return r.json().then(function(c){return {s:r.status,c:c}})}).then(function(x){
+        if(x.c.raison==='plafond'){fermeLibre(x.c.message);return}
+        if(x.s!==200){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.';return}
+        var zone=libre.querySelector('.libre-texte');zone.textContent='';
+        x.c.reponse.split(/\n\s*\n/).forEach(function(par){var p=document.createElement('p');p.textContent=par.trim();zone.appendChild(p)});
+        var src=libre.querySelector('.libre-sources');src.textContent='';
+        if(x.c.sources&&x.c.sources.length){var t=document.createElement('p');t.textContent='Pères et Réformateurs';src.appendChild(t);
+          var l=document.createElement('div');l.className='trad';
+          x.c.sources.forEach(function(s){var a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';
+            a.textContent=s.titre+' ('+s.credit+')';var sp=document.createElement('span');sp.appendChild(a);l.appendChild(sp)});
+          src.appendChild(l);src.hidden=false}else{src.hidden=true}
+        libre.querySelector('.libre-reponse').hidden=false;
+        etat.textContent=x.c.restant>0?'Encore '+x.c.restant+' question'+(x.c.restant>1?'s':'')+' aujourd\'hui.':'C\'était ta dernière question pour aujourd\'hui.';
+        if(x.c.restant<=0)libre.querySelector('.libre-saisie').hidden=true})
+      .catch(function(){etat.textContent='Le carnet n\'a pas pu répondre. Réessaie dans un instant.'})
+      .then(function(){btn.disabled=false;if(window.turnstile&&widget!==null)window.turnstile.reset(widget)})});
+  if(!ecran)return;
+  function lancer(){var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(ecran.dataset.yt)+'?autoplay=1&rel=0&hl=fr';
+    f.title=ecran.dataset.titre;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+    ecran.textContent='';ecran.appendChild(f)}
+  ecran.addEventListener('click',function(){if(!ecran.querySelector('iframe'))lancer()});
+  ecran.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&!ecran.querySelector('iframe')){e.preventDefault();lancer()}});
+  var films=comp.querySelectorAll('.pellicule button');
+  films.forEach(function(b){b.addEventListener('click',function(){
+    ['yt','titre','vignette'].forEach(function(k){ecran.dataset[k]=b.dataset[k]});lancer();
+    document.getElementById('ecran-titre').textContent=b.dataset.titre;
+    document.getElementById('ecran-raison').textContent=b.dataset.raison;
+    document.getElementById('ecran-yt').href='https://www.youtube.com/watch?v='+encodeURIComponent(b.dataset.yt);
+    document.getElementById('compteur').textContent='Vidéo '+(+b.dataset.i+1)+' sur '+films.length;
+    films.forEach(function(x){x.classList.toggle('on',x===b)})})});
+})();
+</script>
+</body>
+</html>
