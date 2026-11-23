@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-19",
+  "date_humaine": "jeudi",
+  "semaine": "33ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "vert",
+    "nom": "vert",
+    "hex": "#345E44",
+    "hex_sombre": "#6E9B7C"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ap 5, 1-10 ; Lc 19, 41-44",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M10 100 H330\"/><path d=\"M100 72 Q170 15 240 72\"/><path d=\"M152 80 q-3 -22 15 -26 q14 -3 19 7 q4 9 -2 15 l1 8\"/><path d=\"M156 84 v8 M164 85 v9 M176 85 v9 M184 84 v8\"/><path d=\"M168 44 q4 -7 10 -3\"/><path d=\"M182 52 V14 M175 20 H189\"/><path d=\"M148 82 H168 V96 H148 Z M168 82 H188 V96 H168 Z\"/><path d=\"M150 96 l0 6 M154 96 l1 6 M159 96 l-1 7 M164 96 l1 6 M172 96 l-1 6 M177 96 l1 7 M182 96 l0 6\"/><path d=\"M38 92 Q50 82 66 88 Q58 96 46 95 Q40 95 38 92 Z\"/><path d=\"M30 85 L30 55 L50 60 L50 85 M34 60 V80 M40 59 V82 M46 60 V84\"/><path d=\"M302 92 Q290 82 274 88 Q282 96 294 95 Q300 95 302 92 Z\"/><path d=\"M296 58 Q296 70 304 70 Q312 70 312 58 M304 70 V80 M297 80 H311\"/></g><g class=\"trait-rubrique\"><path d=\"M164 60 L168 66\"/></g><g class=\"trait-liturgie\"><path d=\"M80 140 V126 H90 V120 H100 V126 H112 V116 H124 V126 H140 V110 H152 V126 H180 V118 H192 V126 H210 V122 H222 V126 H240 V130 H260 V140 Z\"/><path d=\"M165 96 Q172 100 170 108 Q166 112 160 110 M170 100 Q175 98 176 94\"/></g></svg>",
+  "titre": "L'Agneau et les larmes",
+  "titre_html": "L'Agneau <span class=\"it\">et les larmes</span>",
+  "sous_titre": "Ce que nul ne pouvait ouvrir, lui seul le pleure et le dévoile.",
+  "suite_hier": null,
+  "gravure_alt": "Un agneau debout, portant encore la marque du sacrifice, au centre d'un trône entouré de vieillards prosternés qui tiennent harpes et coupes ; à ses pieds, un livre ouvert dont pendent sept cachets rompus. Au bas de la gravure, loin en contrebas, la silhouette fortifiée d'une ville surplombée par une figure penchée, comme en pleurs.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Ap 5, 1-10",
+      "traduction": "Segond 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">1</span> Puis je vis dans la main droite de celui qui était assis sur le trône un livre écrit en dedans et en dehors, <button class=\"mot\" data-g=\"g-sphragis\">scellé</button> de sept sceaux. <span class=\"s\">2</span> Et je vis un ange puissant, qui criait d'une voix forte : Qui est digne d'ouvrir le livre, et d'en rompre les sceaux ? <span class=\"s\">3</span> Et personne dans le ciel, ni sur la terre, ni sous la terre, ne pouvait ouvrir le livre ni le regarder. <span class=\"s\">4</span> Et je pleurais beaucoup de ce que personne ne fût trouvé digne d'ouvrir le livre ni de le regarder. <span class=\"s\">5</span> Et l'un des vieillards me dit : Ne pleure point ; voici, le lion de la tribu de Juda, le rejeton de David, a vaincu, pour ouvrir le livre et ses sept sceaux. <span class=\"s\">6</span> Et je vis, au milieu du trône et des quatre êtres vivants et au milieu des vieillards, un <button class=\"mot\" data-g=\"g-arnion\">agneau</button> qui était là comme <button class=\"mot\" data-g=\"g-sphazo\">immolé</button>, et qui avait sept cornes et sept yeux, qui sont les sept esprits de Dieu, envoyés par toute la terre. <span class=\"s\">7</span> Il vint, et il prit le livre de la main droite de celui qui était assis sur le trône. <span class=\"s\">8</span> Quand il eut pris le livre, les quatre êtres vivants et les vingt-quatre vieillards se prosternèrent devant l'agneau, tenant chacun une harpe et des coupes d'or remplies de parfums, qui sont les prières des saints. <span class=\"s\">9</span> Et ils chantaient un cantique nouveau, en disant : Tu es digne de prendre le livre, et d'en ouvrir les sceaux ; car tu as été immolé, et tu as <button class=\"mot\" data-g=\"g-agorazo\">racheté</button> pour Dieu par ton sang des hommes de toute tribu, de toute langue, de tout peuple, et de toute nation ; <span class=\"s\">10</span> tu en as fait pour notre Dieu un royaume et des sacrificateurs, et ils régneront sur la terre.",
+      "gloses": [
+        {
+          "id": "g-sphragis",
+          "lemme": "Sphragis",
+          "html": "Le mot grec <span class=\"gr\">sphragis</span> désigne le sceau de cire ou d'argile qui ferme un document et en garantit l'inviolabilité : tant qu'il n'est pas rompu, nul ne peut lire ce qui est écrit à l'intérieur. Segond traduit simplement « scellé », ce qui est juste, mais efface l'image juridique très concrète du monde antique, où un testament pouvait être fermé de sept cachets apposés par sept témoins, que seul l'héritier légitime avait le droit de rompre devant le juge. Victorin de Poetovio, qui laisse au IIIe siècle le plus ancien commentaire latin connu de l'Apocalypse, lit déjà dans ces sept sceaux les étapes de l'histoire du salut que seul l'Agneau a l'autorité de dévoiler.",
+          "aujourdhui": "Il t'arrive de porter en toi une période de ta vie que tu n'as jamais pu relire avec sens, un deuil ou un silence de Dieu que tu as refermé parce que tu ne trouvais personne pour l'ouvrir avec toi. Ce texte ne promet pas que tu comprendras tout de suite, mais que cela n'est pas voué à rester scellé pour toujours. Il y a une autorité, qui n'est pas la tienne, qui peut un jour faire sens de ce que tu portes fermé."
+        },
+        {
+          "id": "g-arnion",
+          "lemme": "Arnion",
+          "html": "Le mot <span class=\"gr\">arnion</span>, diminutif d'<span class=\"gr\">arēn</span> (l'agneau), est propre à l'Apocalypse : il y revient une trentaine de fois pour désigner le Christ, alors que le même Jean, dans son évangile, préfère <span class=\"gr\">amnos</span> (Jn 1, 29). Segond traduit « agneau » sans signaler cette particularité lexicale, qui semble insister sur la petitesse de l'animal, en contraste voulu avec le « lion de la tribu de Juda » annoncé au verset 5. Victorin de Poetovio relève déjà ce renversement : la force attendue, celle du lion, se révèle être une faiblesse victorieuse, celle de l'agneau immolé.",
+          "aujourdhui": "Tu attends souvent que Dieu agisse avec la force que tu lui demandes, un geste puissant qui règle enfin la situation. Ce texte déplace la victoire : elle a déjà eu lieu, mais sous les traits les plus désarmés qu'on puisse imaginer. Ce que tu espérais voir venir comme un lion est peut-être déjà venu comme un agneau, sans que tu l'aies reconnu."
+        },
+        {
+          "id": "g-sphazo",
+          "lemme": "Sphazō",
+          "html": "Le verbe <span class=\"gr\">sphazō</span> ne désigne pas une mort douce : c'est le vocabulaire de l'égorgement rituel, employé dans la Septante pour l'abattage des victimes au Temple. Segond rend par « immolé », ce qui garde la dimension cultuelle mais adoucit la violence du terme grec. L'agneau est « comme immolé » : il porte pour toujours, dans sa gloire céleste, la marque de la mise à mort, ce qu'Augustin commente ailleurs en disant que le Christ ressuscité ne cesse pas d'être l'Agneau pascal, seulement il est désormais debout, vivant, au milieu du trône.",
+          "aujourdhui": "Une blessure ancienne, une fois guérie, ne s'efface pas toujours sans laisser de trace visible. Ce texte donne à voir une gloire qui n'a pas besoin de gommer la cicatrice pour être une gloire véritable. Ce que tu as traversé de plus douloureux peut rester lisible sur toi sans cesser d'être recouvert par la vie."
+        },
+        {
+          "id": "g-agorazo",
+          "lemme": "Agorazō",
+          "html": "<span class=\"gr\">Agorazō</span> vient du nom de la place publique, l'<span class=\"gr\">agora</span> : c'est le verbe ordinaire du commerce, « acheter sur le marché ». Segond traduit « racheté », ce qui introduit une nuance théologique — le rachat suppose un esclavage antérieur — absente du simple verbe grec, qui dit seulement l'achat, le transfert de propriété par un prix payé. Le sang de l'Agneau n'est pas ici une métaphore vague mais le prix réel de cette transaction, versé pour des hommes « de toute tribu, de toute langue, de tout peuple, de toute nation » : l'universalité du prix payé répond à l'universalité de la dette. Cette extension à toutes les nations reprend, en l'élargissant, la vocation d'Israël comme « royaume de sacrificateurs » promise en Exode 19, 6.",
+          "aujourdhui": "Il y a des moments où tu sens bien que tu appartiens à quelque chose ou à quelqu'un qui n'est pas toi, sans pouvoir dire comment cela s'est produit ni quand. Ce verset nomme ce transfert : tu n'as pas été gagné par un argument, tu as été acheté, à un prix que tu n'as pas fixé. Reconnaître cela n'enlève rien à ta liberté, cela lui donne enfin une adresse."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Ps 149, 1-2, 3-4, 5-6a.9b",
+      "traduction": "Segond 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> Louez l'Éternel ! Chantez à l'Éternel un <button class=\"mot\" data-g=\"g-shir-hadash\">cantique nouveau</button> ! Chantez ses louanges dans l'assemblée des saints ! <span class=\"s\">2</span> Qu'Israël se réjouisse en celui qui l'a créé ! Que les fils de Sion se réjouissent en leur roi ! <span class=\"s\">3</span> Qu'ils louent son nom avec des danses, qu'ils le célèbrent avec le tambourin et la harpe ! <span class=\"s\">4</span> Car l'Éternel prend plaisir à son peuple ; il glorifie les malheureux en les sauvant. <span class=\"s\">5</span> Que les <button class=\"mot\" data-g=\"g-hasidim\">saints</button> tressaillent d'allégresse, dans leur gloire ; qu'ils poussent des cris de joie sur leur couche ! <span class=\"s\">6</span> Que les louanges de Dieu soient dans leur bouche. <span class=\"s\">9</span> C'est une gloire pour tous ses saints. Louez l'Éternel !",
+      "gloses": [
+        {
+          "id": "g-shir-hadash",
+          "lemme": "Shir chadash",
+          "html": "L'hébreu <span class=\"gr\">shir chadash</span>, « cantique nouveau », revient six fois dans le psautier (33, 40, 96, 98, 144, 149) : chaque fois il accompagne un acte de salut inédit de Dieu, jamais une simple nouveauté musicale. Segond traduit littéralement, ce qui est fidèle, mais ne signale pas que les rabbins associent ce cantique nouveau au jour messianique, au chant qu'Israël n'a pas encore pu chanter parce que le salut qu'il célèbre n'a pas encore eu lieu. Augustin, commentant précisément ce psaume, distingue le vieux cantique, celui de l'homme attaché aux promesses terrestres, du cantique nouveau, celui de l'amour qui ne vieillit pas parce qu'il est le Verbe lui-même.",
+          "aujourdhui": "Il y a des manières de prier qui te sont devenues si familières qu'elles ne te touchent plus, des mots que tu répètes sans qu'ils remontent jusqu'à toi. Ce psaume ne demande pas d'en inventer de nouveaux à chaque fois, mais de rester capable d'être surpris par ce que Dieu fait, au point qu'une prière ancienne redevienne neuve dans ta bouche. Le cantique n'est nouveau que parce que ce qu'il chante continue réellement d'arriver."
+        },
+        {
+          "id": "g-hasidim",
+          "lemme": "Chasidim",
+          "html": "Le mot hébreu <span class=\"gr\">chasidim</span>, que Segond traduit « saints », vient de <span class=\"gr\">chesed</span>, la fidélité loyale de l'alliance : les chasidim ne sont pas des individus moralement parfaits, mais ceux qui demeurent fidèles au Dieu qui leur a fait des promesses, souvent dans des temps d'épreuve. Traduire par « saints » n'est pas faux mais introduit, en français, une connotation de pureté personnelle que l'hébreu ne porte pas d'abord : c'est une qualité relationnelle avant d'être une qualité morale. Les rabbins ont souvent lu ce psaume comme le chant des fidèles d'Israël à la fin des temps, ce qui éclaire la tonalité presque guerrière des versets suivants, où leur joie coexiste avec le jugement rendu aux nations.",
+          "aujourdhui": "Tenir fidèle n'a souvent rien d'héroïque : c'est revenir, jour après jour, vers la même promesse, sans qu'il se passe grand-chose de visible. Ce mot dit que cette fidélité tenace, sans éclat, est déjà ce que Dieu appelle une sainteté. Ce que tu tiens discrètement depuis longtemps compte, même si personne ne le voit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Lc 19, 41-44",
+      "traduction": "Segond 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">41</span> Comme il approchait de la ville, Jésus, en la voyant, <button class=\"mot\" data-g=\"g-klaio\">pleura</button> sur elle, et dit : <span class=\"s\">42</span> Si tu connaissais, toi aussi, au moins en ce jour qui t'est donné, ce qui conduit à la <button class=\"mot\" data-g=\"g-eirene\">paix</button> ! Mais maintenant cela est caché à tes yeux. <span class=\"s\">43</span> Il viendra sur toi des jours où tes ennemis t'environneront de tranchées, t'enfermeront, et te serreront de toutes parts ; <span class=\"s\">44</span> ils te renverseront par terre, toi et tes enfants au milieu de toi, et ils ne laisseront pas en toi pierre sur pierre, parce que tu n'as pas connu le temps où tu as été <button class=\"mot\" data-g=\"g-episkope\">visitée</button>.",
+      "gloses": [
+        {
+          "id": "g-klaio",
+          "lemme": "Klaiō",
+          "html": "Le verbe grec <span class=\"gr\">klaiō</span> décrit des larmes bruyantes, sonores, le gémissement du deuil public, à la différence de <span class=\"gr\">dakryō</span> employé pour les larmes silencieuses de Jésus devant le tombeau de Lazare (Jn 11, 35). Segond traduit simplement « pleura », qui ne rend pas cette nuance : Luc décrit une lamentation visible, presque scandaleuse pour un homme entrant en triomphe dans la ville. Le contraste est volontaire avec l'acclamation des Rameaux qui précède (v. 37-40) : le roi qu'on acclame pleure sur ceux-là mêmes qui l'acclament, parce qu'il voit ce qu'ils ne voient pas encore.",
+          "aujourdhui": "Il y a des larmes qu'on retient parce qu'elles ne semblent pas convenir au moment, une tristesse qui monte alors que tout autour de toi semble aller bien. Ce texte montre que Dieu lui-même ne retient pas ce genre de larmes devant ce qu'il aime et qui ne le voit pas venir. Ta peine pour quelqu'un qui ne la perçoit pas n'est pas déplacée : elle ressemble, d'une certaine manière, à celle du Christ sur Jérusalem."
+        },
+        {
+          "id": "g-eirene",
+          "lemme": "Eirēnē",
+          "html": "<span class=\"gr\">Eirēnē</span> traduit ici l'hébreu <span class=\"gr\">shalom</span>, bien plus large que l'absence de conflit : c'est l'état d'intégrité, de justesse des relations avec Dieu, avec les autres, avec soi-même. Segond traduit « paix », ce qui est le mot juste mais, en français courant, s'est appauvri en simple tranquillité, alors que le shalom biblique inclut la plénitude de vie et la réconciliation. Jérusalem, dont le nom porte la racine même de « shalom », est ici l'objet d'un jeu de mots tragique : la ville de la paix ne connaît pas ce qui conduirait à sa paix, parce qu'elle ne reconnaît pas en qui elle se tient.",
+          "aujourdhui": "Tu as peut-être déjà pressenti, dans une relation ou une décision, ce qui aurait pu t'apporter une paix réelle et profonde, sans pouvoir ou vouloir t'y rendre au bon moment. Ce texte ne condamne pas cette cécité, il la nomme avec une tristesse qui ressemble à de la compassion plus qu'à un reproche. Ce qui conduit à la paix reste offert, même quand il est caché à tes yeux pour un temps."
+        },
+        {
+          "id": "g-episkope",
+          "lemme": "Episkopē",
+          "html": "Le substantif <span class=\"gr\">episkopē</span>, « visite, inspection », vient du verbe <span class=\"gr\">episkeptomai</span>, regarder attentivement — d'où dérivera plus tard le mot « évêque ». Segond traduit « tu as été visitée », fidèle au grec, mais le français affaiblit la portée du terme : dans la Septante, l'<span class=\"gr\">episkopē</span> de Dieu désigne les moments où il vient regarder son peuple pour le juger ou le sauver (Genèse 50, 24-25 ; Exode 3, 16). Jérusalem n'a pas manqué une simple visite de courtoisie : elle n'a pas reconnu le jour où Dieu lui-même est venu l'inspecter en personne, dans le Christ qui pleure sur elle.",
+          "aujourdhui": "Certains moments de ta vie, au moment où ils arrivent, ne ressemblent à rien de particulier — une rencontre, une parole, une occasion qui passe sans bruit. Ce n'est souvent qu'après coup, parfois longtemps après, que tu reconnais que Dieu est passé là, précisément à cet endroit que tu croyais sans importance. Le temps de la visitation ne s'annonce pas toujours comme tel : il se reconnaît en regardant en arrière."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Le livre scellé de sept sceaux",
+      "corps_html": "Le livre scellé reprend une image connue des lecteurs juifs de Jean : en Ézéchiel 2, 9-10, le prophète reçoit un rouleau écrit recto-verso rempli de lamentations ; en Daniel 12, 4, les paroles sont scellées jusqu'au temps de la fin. Dans le droit successoral romain, un testament pouvait être fermé de sept cachets apposés par sept témoins, que seul l'héritier légitime avait qualité de rompre devant le juge. Jean superpose ces deux mondes : le document est à la fois révélation prophétique et acte juridique, et seul l'Agneau a, de droit, l'autorité d'en disposer."
+    },
+    {
+      "titre": "Jérusalem entre acclamation et jugement",
+      "corps_html": "Luc place ces pleurs juste après l'entrée triomphale (19, 28-40) et juste avant l'expulsion des vendeurs du Temple (19, 45-46) : la royauté reconnue par la foule et le jugement sur la ville encadrent ce passage. L'image des tranchées et de l'encerclement total annonce, avec une précision que l'histoire confirmera en l'an 70, le siège de Jérusalem par les armées romaines. Plusieurs exégètes situent la rédaction de Luc après cet événement, ce qui donne à ces mots, pour ses premiers lecteurs, le poids d'une prophétie déjà accomplie."
+    }
+  ],
+  "analogie": {
+    "titre": "Ce qui attend une autre main que la tienne",
+    "variantes": [
+      "Tu as peut-être déjà porté, pour quelqu'un que tu aimes, un chagrin qu'il ne voyait pas lui-même venir : tu sentais la catastrophe se former avant lui, et tu ne pouvais rien dire qui l'aurait fait se détourner à temps. Ce poids-là, de voir clair pour un autre qui reste aveugle, est proche de ce que porte le Christ sur Jérusalem — non pas une colère, mais une lucidité qui fait mal parce qu'elle aime. Ce texte ne te demande pas de réussir à ouvrir les yeux de celui que tu pleures ainsi, seulement de savoir que tes larmes pour lui ne sont pas étrangères à celles de Dieu.",
+      "Il existe en toi, sans doute, une pièce fermée depuis longtemps — un refus, une blessure, une question que tu as cessé d'interroger parce que personne ne semblait pouvoir y répondre, pas même toi. Le livre scellé de sept sceaux dit que cette fermeture n'est pas un échec de ta part : certaines choses ne sont scellées que pour attendre une autorité précise, et non n'importe qui, pour les ouvrir. Tu n'as pas à forcer ce qui reste clos en toi ; tu peux seulement reconnaître devant qui, un jour, cela pourrait s'ouvrir sans se briser.",
+      "Tu as peut-être déjà compris, après coup seulement, qu'une difficulté que tu croyais devoir résoudre seul avait déjà été réglée par un autre, à ton insu, avant même que tu t'en rendes compte. Le cantique nouveau du psaume et le prix versé par l'Agneau disent une chose semblable : la joie qui t'est demandée n'est pas celle de produire ton salut, mais celle de découvrir qu'il a déjà un prix payé, une date, une main. Tu peux chanter avant d'avoir fini de comprendre, parce que ce que tu chantes a déjà eu lieu."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Avant de reprendre ta journée, laisse-toi rejoindre par ce double mouvement du jour : les larmes du Christ sur ce qu'il voit et que nous ne voyons pas encore, et le chant de ceux qui ont déjà reconnu en lui l'Agneau digne d'ouvrir ce qui était fermé.",
+    "geste": "Nomme, en silence, une situation ou une personne pour laquelle tu pressens quelque chose que l'autre ne voit pas encore ; dépose-la, sans chercher à la résoudre, devant celui qui pleure avec toi sur elle.",
+    "note": "Il n'est pas nécessaire de ressentir quoi que ce soit pour que ce geste soit vrai."
+  },
+  "question": "Quel jour de visite, dans ta vie, n'as-tu reconnu qu'après qu'il fut passé ?",
+  "racines": [
+    {
+      "titre": "Le plus ancien commentaire latin de l'Apocalypse",
+      "corps_html": "Victorin de Poetovio, évêque martyrisé vers 304, a laissé le plus ancien commentaire latin connu de l'Apocalypse. Il y lit les sept sceaux comme les étapes de l'histoire du salut que seul le Christ, vainqueur de la mort, a l'autorité de dévoiler une à une. Son texte, repris et corrigé plus tard par Jérôme, atteste que, dès le IIIe siècle, l'Église latine lisait ce chapitre comme une clé de lecture de toute l'histoire du salut, non comme une énigme réservée à des initiés.",
+      "attribution": "Victorin de Poetovio, Commentaire sur l'Apocalypse (IIIe s.)"
+    },
+    {
+      "titre": "Les larmes qui ne sont pas une faiblesse",
+      "corps_html": "Jean Chrysostome revient, dans plusieurs de ses homélies, sur l'idée que la tristesse devant le malheur d'autrui n'est pas un manque de foi mais une marque de charité véritable, et que les larmes versées sur ceux qui se perdent honorent Dieu plutôt qu'elles ne le contredisent. Il invite à reconnaître, dans les pleurs du Christ sur Jérusalem, non un geste de faiblesse mais l'expression la plus juste de l'amour qui voit venir ce que l'aimé ne voit pas encore. Pour lui, un chrétien incapable de pleurer sur ce qui se perd n'a pas encore compris pleinement ce qu'il annonce.",
+      "attribution": "Jean Chrysostome, Homélies (IVe s.)"
+    },
+    {
+      "titre": "Le cantique qui ne vieillit jamais",
+      "corps_html": "Commentant ce psaume, Augustin distingue le vieux cantique, celui de l'homme attaché aux promesses terrestres de l'ancienne alliance, du cantique nouveau, celui de l'amour même, qui ne vieillit pas parce qu'il est le Verbe de Dieu. L'homme, dit-il, vieillit par le péché ; la grâce seule le rajeunit et lui permet de chanter ce chant toujours ancien et toujours nouveau. Chanter ainsi, précise-t-il, ne se limite pas à la voix : c'est toute une vie, pensée et actes compris, qui doit devenir ce cantique.",
+      "attribution": "Augustin d'Hippone, Commentaires sur les Psaumes, Ps 149 (392-422)"
+    }
+  ],
+  "pauses": [
+    {
+      "question": "Qu'est-ce qui, en toi, demeure scellé non par punition mais parce qu'il attend une main précise pour s'ouvrir sans se briser ?",
+      "suite": "Reste un moment sans chercher à répondre ; laisse seulement la question se poser."
+    }
+  ],
+  "videos": [
+    {
+      "id": "cAOAPSfpbR4",
+      "raison": "Situe la vision du trône et de l'Agneau immolé (Apocalypse 5) dans l'ensemble des chapitres 1 à 11.",
+      "groupe": "livre"
+    },
+    {
+      "id": "wmICj1t6UIA",
+      "raison": "Éclaire le sens de l'agneau « comme immolé » (Apocalypse 5, 6) dans la tradition sacrificielle biblique.",
+      "groupe": "mot"
+    },
+    {
+      "id": "NRG4AmocCPA",
+      "raison": "Resitue les pleurs de Jésus sur Jérusalem (Luc 19, 41-44) dans la montée vers la ville racontée en Luc 9 à 19.",
+      "groupe": "livre"
+    },
+    {
+      "id": "66mFOG3ukGY",
+      "raison": "Approfondit ce que Jésus nomme « ce qui conduit à la paix » en Luc 19, 42.",
+      "groupe": "mot"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi l'Agneau a-t-il sept cornes et sept yeux ?",
+      "reponse_html": "Dans le langage symbolique de l'Apocalypse, sept désigne la plénitude : les sept cornes disent une puissance totale, et les sept yeux sont explicitement identifiés aux « sept esprits de Dieu, envoyés par toute la terre » (Apocalypse 5, 6), une image qui reprend les sept yeux de l'Éternel de Zacharie 4, 10 et l'Esprit septiforme annoncé en Ésaïe 11, 2. Ce n'est donc pas une description physique à imaginer littéralement, mais une manière de dire que la puissance et la vigilance de Dieu lui-même habitent désormais cet agneau immolé. L'image tient ensemble deux affirmations qui semblent contraires : la faiblesse de la mise à mort et la plénitude de la puissance divine.",
+      "sources": {
+        "jour": [
+          "Ap 5, 6"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Que sont les coupes d'or remplies de parfums tenues par les vieillards ?",
+      "reponse_html": "Le texte le dit lui-même : « des coupes d'or remplies de parfums, qui sont les prières des saints » (Apocalypse 5, 8). L'image reprend un geste très concret du culte du Temple, où l'encens brûlé montait en fumée devant Dieu, et que le psautier applique déjà à la prière : « que ma prière s'élève devant toi comme l'encens » (Psaume 141, 2). Ici, ce ne sont plus des prêtres qui portent l'encens, mais les représentants de tout le peuple des rachetés, et leurs prières elles-mêmes deviennent l'offrande portée devant le trône.",
+      "sources": {
+        "jour": [
+          "Ap 5, 8"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Jésus savait-il vraiment que Jérusalem serait détruite ?",
+      "reponse_html": "Le texte ne permet pas de trancher entre une prescience exacte des événements de 70 et une mise en forme, par Luc, d'une annonce prophétique après coup : les deux lectures coexistent depuis longtemps chez les commentateurs. Ce qui est sûr, c'est que l'image des tranchées, de l'encerclement et des pierres renversées correspond de très près au siège réel de la ville, et que Luc écrit sans doute après ces événements. Mais le texte ne s'intéresse pas d'abord à la précision historique : il s'attarde sur la tristesse de celui qui voit venir un malheur que la ville ne reconnaît pas.",
+      "sources": {
+        "jour": [
+          "Lc 19, 43-44"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi un psaume de louange parle-t-il, juste après, d'un glaive à deux tranchants ?",
+      "reponse_html": "La suite du psaume, non lue aujourd'hui, associe la joie des fidèles à l'exécution du jugement sur les nations (Psaume 149, 6-9) : c'est un psaume post-exilique, marqué par l'attente d'une restauration où la fidélité d'Israël et le jugement de ses oppresseurs se tiennent ensemble. La liturgie d'aujourd'hui retient seulement le début du verset 6 et la fin du verset 9, qui parlent de louange et de gloire, en laissant de côté la tonalité guerrière du milieu. Augustin, commentant ce psaume, rattache cette joie moins à une victoire militaire qu'au chant de l'amour nouveau, celui qui ne vieillit pas.",
+      "sources": {
+        "jour": [
+          "Ps 149, 6-9"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "sur Ps 149"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que signifie exactement que l'Agneau nous a « rachetés » ?",
+      "reponse_html": "Le verbe grec employé est celui du commerce ordinaire, acheter sur le marché : ce que l'Agneau acquiert, ce ne sont pas des âmes abstraites mais « des hommes de toute tribu, de toute langue, de tout peuple, de toute nation » (Apocalypse 5, 9), au prix de son propre sang. Cette universalité élargit à toutes les nations ce qui était promis à Israël seul en Exode 19, 6 : devenir « un royaume de sacrificateurs », formule que le texte reprend presque mot pour mot au verset 10. Le rachat n'est donc pas d'abord une transaction individuelle et intime, mais la constitution d'un peuple nouveau, sorti de toutes les nations, appelé à servir.",
+      "sources": {
+        "jour": [
+          "Ap 5, 9-10",
+          "Exode 19, 6 (écho)"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-149"
+  ]
+}
