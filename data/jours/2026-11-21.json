@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-21",
+  "date_humaine": "samedi",
+  "semaine": "33ème semaine du Temps Ordinaire",
+  "ferie": "",
+  "liturgie": {
+    "cle": "blanc",
+    "nom": "blanc",
+    "hex": "#8C7B4E",
+    "hex_sombre": "#D6BE83"
+  },
+  "deuterocanonique": false,
+  "references_brutes": "Ap 11, 4-12 ; Lc 20, 27-40",
+  "traduction_globale": "Louis Segond 1910",
+  "gravure_svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g class=\"trait-encre\"><path d=\"M6 124 h328\"/><path d=\"M40 118 q50 -10 80 0\"/><path d=\"M160 118 q50 -10 80 0\"/><path d=\"M20 110 q6 -8 14 0\"/><path d=\"M250 110 q6 -8 14 0\"/><path d=\"M270 112 q8 -9 16 0\"/><path d=\"M14 113 q7 -7 13 0\"/><path d=\"M55 108 v12\"/><path d=\"M100 110 v10\"/><path d=\"M200 110 v10\"/><path d=\"M225 108 v12\"/></g><g class=\"trait-rubrique\"><path d=\"M60 102 q25 -30 55 -2\"/><path d=\"M70 92 q22 -20 40 0\"/><path d=\"M175 100 q25 -28 55 -2\"/><path d=\"M185 90 q22 -18 38 0\"/></g><g class=\"trait-liturgie\"><path d=\"M140 10 q30 -8 60 2\"/><path d=\"M150 10 q10 -6 20 -1\"/><path d=\"M190 11 q10 -5 18 1\"/></g></svg>",
+  "titre": "Dieu des vivants",
+  "titre_html": "Dieu des <span class=\"it\">vivants</span>",
+  "sous_titre": "Deux témoins debout, une question tranchée sur la mort",
+  "suite_hier": "Hier, les pharisiens tendaient un piège sur l'impôt dû à César ; aujourd'hui ce sont les sadducéens qui en tendent un sur la résurrection — Luc enchaîne les pièges avant que les scribes eux-mêmes reconnaissent que Jésus « a bien parlé ».",
+  "gravure_alt": "Deux corps étendus sur le pavé d'une place publique, entourés d'une foule figée aux visages indistincts ; au-dessus d'eux, un souffle tracé en traits obliques commence à les redresser, tandis qu'en haut de la gravure une nuée s'entrouvre sur un ciel resté presque vide.",
+  "lectures": [
+    {
+      "etiquette": "Première lecture",
+      "reference": "Apocalypse 11, 4-12",
+      "traduction": "Segond, 1910",
+      "classe": "",
+      "corps_html": "<span class=\"s\">4</span> Ce sont les deux oliviers et les deux chandeliers qui se tiennent devant le Seigneur de la terre. <span class=\"s\">5</span> Si quelqu'un veut leur faire du mal, un feu sort de leur bouche et dévore leurs ennemis ; et si quelqu'un veut leur faire du mal, c'est ainsi qu'il doit être tué. <span class=\"s\">6</span> Ils ont le pouvoir de fermer le ciel, afin qu'il ne tombe point de pluie pendant les jours de leur prophétie ; et ils ont le pouvoir de changer les eaux en sang, et de frapper la terre de toute espèce de plaies, autant de fois qu'ils le voudront. <span class=\"s\">7</span> Quand ils auront achevé leur <button class=\"mot\" data-g=\"g-martyria\">témoignage</button>, la bête qui monte de l'<button class=\"mot\" data-g=\"g-abussos\">abîme</button> leur fera la guerre, les vaincra, et les tuera. <span class=\"s\">8</span> Et leurs cadavres seront sur la place de la grande ville, qui est appelée, dans un sens spirituel, Sodome et Égypte, là même où leur Seigneur a été crucifié. <span class=\"s\">9</span> Des hommes d'entre les peuples, les tribus, les langues, et les nations, verront leurs cadavres pendant trois jours et demi, et ne permettront pas que leurs cadavres soient mis dans un sépulcre. <span class=\"s\">10</span> Et les habitants de la terre à cause d'eux se réjouiront et seront dans l'allégresse, et ils s'enverront des présents les uns aux autres, parce que ces deux prophètes ont tourmenté les habitants de la terre. <span class=\"s\">11</span> Mais, après les trois jours et demi, un <button class=\"mot\" data-g=\"g-pneuma-zoes\">esprit de vie</button>, venant de Dieu, entra en eux, et ils se tinrent sur leurs pieds ; et une grande crainte s'empara de ceux qui les voyaient. <span class=\"s\">12</span> Et ils entendirent une voix forte qui venait du ciel, leur disant : Montez ici ! Et ils montèrent au ciel dans la nuée, et leurs ennemis les regardèrent.",
+      "gloses": [
+        {
+          "id": "g-martyria",
+          "lemme": "témoignage",
+          "html": "<span class=\"gr\">marturia</span>, de la même racine que <span class=\"gr\">martus</span>, le témoin — mot qui donnera plus tard martyr. Segond traduit simplement par « témoignage », perdant le lien que le français garde pourtant avec martyr. Dans l'Apocalypse, le mot ne désigne pas une déposition mais une parole publique tenue jusqu'au bout, au prix du sang ; Tertullien et les premiers martyrologes liront cette scène comme la préfiguration de tout chrétien appelé à témoigner devant le monde.",
+          "aujourdhui": "Tu as peut-être dit une parole vraie une seule fois, dans une conversation difficile, sans savoir si elle a changé quoi que ce soit chez l'autre. Ce verset ne promet pas que le témoignage porte du fruit visible avant la fin — seulement qu'il doit être tenu jusqu'au bout, même quand il semble inutile."
+        },
+        {
+          "id": "g-abussos",
+          "lemme": "abîme",
+          "html": "<span class=\"gr\">abussos</span>, littéralement « sans fond ». Segond garde presque le mot grec tel quel, chose rare chez lui, d'ordinaire soucieux de tout traduire en français courant. Dans la Septante, ce mot rend l'hébreu <span class=\"gr\">tehom</span>, l'abîme primordial de Genèse 1,2, que Dieu seul contient et borne ; en Apocalypse il devient le lieu d'où surgit la bête, signe que le chaos n'est jamais vaincu que provisoirement, jusqu'au jugement.",
+          "aujourdhui": "Il y a des résistances en toi qui reviennent sans cesse, comme si elles remontaient d'un fond que tu ne maîtrises pas — une colère, une peur, une habitude que tu croyais réglée. Le texte ne nie pas ce fond trouble ; il dit seulement qu'il reste sous l'autorité de Dieu, même quand il échappe à la tienne."
+        },
+        {
+          "id": "g-pneuma-zoes",
+          "lemme": "esprit de vie",
+          "html": "<span class=\"gr\">pneuma zoês</span>. Segond traduit « esprit de vie », reprenant l'écho de Genèse 2,7 où Dieu insuffle dans l'homme un souffle qui ne lui appartient pas en propre. L'expression reprend presque mot pour mot Ézéchiel 37,5, où le souffle entre dans les ossements desséchés pour les faire revivre ; Jean présente ainsi la résurrection des deux témoins comme un nouvel Ézéchiel, une création qui recommence là où elle semblait finie.",
+          "aujourdhui": "Il arrive qu'une partie de toi se sente vidée, incapable de prier, de croire, d'espérer encore — comme ces corps étendus sans vie sur la place. Ce même souffle qui est entré en eux n'est pas quelque chose que tu dois produire ; le texte le dit venu d'ailleurs, de Dieu, à l'heure qu'il choisit."
+        }
+      ]
+    },
+    {
+      "etiquette": "Psaume",
+      "reference": "Psaume 143 (144), 1-2.9-10",
+      "traduction": "Segond, 1910",
+      "classe": "psaume",
+      "corps_html": "<span class=\"s\">1</span> De David. Béni soit l'Éternel, mon <button class=\"mot\" data-g=\"g-tsour\">rocher</button>, Qui exerce mes mains au combat, Mes doigts à la bataille, <span class=\"s\">2</span> Mon bienfaiteur et ma forteresse, Ma haute retraite et mon libérateur, Mon <button class=\"mot\" data-g=\"g-magen\">bouclier</button>, celui qui est mon refuge, Qui m'assujettit mon peuple ! <span class=\"s\">9</span> O Dieu ! je te chanterai un <button class=\"mot\" data-g=\"g-shir-chadash\">cantique nouveau</button>, Je te célébrerai sur le luth à dix cordes. <span class=\"s\">10</span> Toi, qui donnes le salut aux rois, Qui sauvas du glaive meurtrier David, ton serviteur,",
+      "gloses": [
+        {
+          "id": "g-tsour",
+          "lemme": "rocher",
+          "html": "<span class=\"gr\">tsour</span>, roc massif, image fréquente du psautier pour un abri qu'aucune armée ne peut entamer. Segond traduit fidèlement par « rocher », mais le français ne rend pas l'allitération hébraïque entre <span class=\"gr\">tsour</span> et le verbe façonner, qui associe discrètement le Rocher à celui qui façonne son peuple. Calvin, commentant ce psaume, insiste sur le fait que David ne loue pas sa propre vaillance mais une force reçue, celle d'un Dieu qui seul « exerce ses mains au combat ».",
+          "aujourdhui": "Tu connais peut-être ces jours où rien d'humain ne tient, où les appuis habituels — un travail, une relation, une santé — se dérobent d'un coup. Le psalmiste ne loue pas un abri contre les difficultés mais une solidité qui reste quand tout le reste a cédé."
+        },
+        {
+          "id": "g-magen",
+          "lemme": "bouclier",
+          "html": "<span class=\"gr\">magen</span>, petit bouclier rond porté au bras, par opposition au grand <span class=\"gr\">tsinna</span> qui protège tout le corps. Segond traduit simplement par « bouclier », aplatissant une distinction militaire que le texte hébreu, ailleurs dans le psautier, prend soin de maintenir. L'image dit une protection rapprochée, au corps à corps, plus qu'un rempart lointain — lecture que les commentateurs juifs médiévaux retiennent pour dire la proximité du Dieu guerrier aux côtés du roi.",
+          "aujourdhui": "Dans les moments où tu te sens exposé, jugé, mis à nu par le regard des autres ou par le tien, ce mot dit une protection qui n'éloigne pas le danger mais se tient juste contre toi, au plus près, comme un bras replié. Ce n'est pas une muraille lointaine, c'est un corps à corps."
+        },
+        {
+          "id": "g-shir-chadash",
+          "lemme": "cantique nouveau",
+          "html": "<span class=\"gr\">shir chadash</span>, expression qui revient plusieurs fois dans le psautier, toujours liée à un salut si inouï que l'ancien chant ne suffit plus à le dire. Segond traduit littéralement, gardant la force de l'expression hébraïque. Les commentateurs juifs y lisent l'annonce d'un salut qui dépasse toute louange déjà composée, lecture que la tradition chrétienne reprendra en l'appliquant au chant nouveau de l'Église rachetée (cf. Apocalypse 5,9).",
+          "aujourdhui": "Il y a des reconnaissances si neuves qu'aucune prière apprise par cœur ne suffit plus à les dire — un soulagement inattendu, une grâce reçue après une longue attente. Le psaume ne demande pas de chanter mieux, mais de laisser la nouveauté du salut inventer elle-même ses propres mots."
+        }
+      ]
+    },
+    {
+      "etiquette": "Évangile",
+      "reference": "Luc 20, 27-40",
+      "traduction": "Segond, 1910",
+      "classe": "evangile",
+      "corps_html": "<span class=\"s\">27</span> Quelques-uns des sadducéens, qui disent qu'il n'y a point de résurrection, s'approchèrent, et posèrent à Jésus cette question : <span class=\"s\">28</span> Maître, voici ce que Moïse nous a prescrit : Si le frère de quelqu'un meurt, ayant une femme sans avoir d'enfants, son frère épousera la veuve, et suscitera une postérité à son frère. <span class=\"s\">29</span> Or, il y avait sept frères. Le premier se maria, et mourut sans enfants. <span class=\"s\">30</span> Le second, <span class=\"s\">31</span> et le troisième aussi, épousèrent la veuve ; il en fut de même des sept, qui moururent sans laisser d'enfants. <span class=\"s\">32</span> Enfin, la femme mourut aussi. <span class=\"s\">33</span> A la résurrection, duquel donc des sept sera-t-elle la femme ? Car tous les sept l'ont eue pour femme. <span class=\"s\">34</span> Jésus leur répondit : Les enfants de ce siècle prennent des femmes et des maris ; <span class=\"s\">35</span> mais ceux qui seront trouvés dignes d'avoir part au siècle à venir et à la résurrection des morts ne prendront ni femmes ni maris. <span class=\"s\">36</span> Car ils ne pourront plus mourir, parce qu'ils seront <button class=\"mot\" data-g=\"g-isangeloi\">semblables aux anges</button>, et qu'ils seront fils de Dieu, étant <button class=\"mot\" data-g=\"g-huioi-anastaseos\">fils de la résurrection</button>. <span class=\"s\">37</span> Que les morts ressuscitent, c'est ce que Moïse a fait connaître quand, à propos du buisson, il appelle le Seigneur le Dieu d'Abraham, le Dieu d'Isaac, et le Dieu de Jacob. <span class=\"s\">38</span> Or, <button class=\"mot\" data-g=\"g-theos-zontwn\">Dieu n'est pas Dieu des morts, mais des vivants</button> ; car pour lui tous sont vivants. <span class=\"s\">39</span> Quelques-uns des scribes, prenant la parole, dirent : Maître, tu as bien parlé. <span class=\"s\">40</span> Et ils n'osaient plus lui faire aucune question.",
+      "gloses": [
+        {
+          "id": "g-isangeloi",
+          "lemme": "semblables aux anges",
+          "html": "<span class=\"gr\">isangeloi</span>, mot composé rarissime — <span class=\"gr\">isos</span>, égal, et <span class=\"gr\">angelos</span>, ange — qu'on ne retrouve nulle part ailleurs dans le Nouveau Testament. Segond le dissout en « semblables aux anges », traduction juste mais qui efface la densité d'un néologisme que Luc semble forger pour l'occasion. Grégoire de Nysse, dans son traité sur l'âme et la résurrection, y lit moins une transformation angélique qu'une égalité de condition devant Dieu : ne plus mourir, ne plus engendrer, parce que la mort elle-même est vaincue.",
+          "aujourdhui": "Tu demandes peut-être encore à quoi ressemblera ta vie après la mort, et tu bâtis des images à partir de ce que tu connais déjà, comme les sadducéens avec leur mariage. Ce mot dit seulement une égalité de condition devant Dieu, sans fournir d'image — une sobriété qui laisse justement de la place à l'espérance plutôt qu'à la curiosité."
+        },
+        {
+          "id": "g-huioi-anastaseos",
+          "lemme": "fils de la résurrection",
+          "html": "<span class=\"gr\">huioi tês anastaseôs</span>, hébraïsme typique où « fils de » ne désigne pas une filiation biologique mais une appartenance totale à une réalité, comme ailleurs chez Luc « fils de la paix » (Luc 10,6). Segond garde cette tournure sémitique plutôt que de la franciser en « ressuscités », au prix d'une légère étrangeté en français. Chrysostome y voit la preuve que la résurrection n'est pas seulement un événement futur isolé mais un état d'appartenance qui qualifie déjà, dès maintenant, ceux qui croient.",
+          "aujourdhui": "Être « fils de » quelque chose, dans ce texte, ce n'est pas attendre un événement lointain mais appartenir déjà à une réalité qui vous qualifie entièrement. Tu peux te demander ce qui te définit le plus aujourd'hui à tes propres yeux — et entendre que, pour Dieu, autre chose déjà te qualifie."
+        },
+        {
+          "id": "g-theos-zontwn",
+          "lemme": "Dieu des vivants",
+          "html": "<span class=\"gr\">theos zôntôn</span>, en écho symétrique à <span class=\"gr\">theos nekrôn</span>, Dieu des morts, que Segond traduit terme à terme pour garder le parallélisme du grec. Le verset s'appuie sur Exode 3,6, où Dieu se nomme lui-même devant le buisson ardent ; Jésus en tire un argument de type rabbinique : si Dieu peut encore se dire aujourd'hui le Dieu d'Abraham, c'est qu'Abraham vit pour lui. Calvin reprend cet argument en soulignant que la résurrection n'est pas affaire de spéculation mais de fidélité de Dieu à son alliance.",
+          "aujourdhui": "Quand tu penses à quelqu'un que tu as perdu, tu dis souvent de lui au passé, comme s'il n'existait plus que dans ta mémoire. Ce verset renverse la phrase : devant Dieu, cette personne n'est pas au passé mais au présent, vivante pour lui, même si elle ne l'est plus pour toi."
+        }
+      ]
+    }
+  ],
+  "contexte": [
+    {
+      "titre": "Les sadducéens et la résurrection",
+      "corps_html": "Les sadducéens formaient l'aristocratie sacerdotale de Jérusalem ; ils ne reconnaissaient que la Torah écrite et rejetaient la résurrection des morts, doctrine selon eux absente des cinq livres de Moïse (cf. Actes 23,8). Leur question sur les sept frères n'est pas une curiosité mais un piège construit sur la loi du lévirat, destiné à ridiculiser la croyance pharisienne en une résurrection jugée absurde. Jésus ne discute pas la loi elle-même, il déplace le débat sur la nature du monde à venir."
+    },
+    {
+      "titre": "Les deux témoins de l'Apocalypse",
+      "corps_html": "La durée de leur ministère, 1260 jours soit trois ans et demi, reprend le temps de la persécution d'Antiochos Épiphane en Daniel 7,25 et 12,7, nombre symbolique d'une épreuve limitée par Dieu. Leurs pouvoirs — fermer le ciel, changer l'eau en sang — rappellent Élie (1 Rois 17) et Moïse (Exode 7), les deux figures attendues avant le jour du Seigneur selon Malachie 3,23-24. Dès le IIIe siècle, Hippolyte de Rome y reconnaît Hénoc et Élie, les deux seuls à n'avoir pas connu la mort."
+    }
+  ],
+  "analogie": {
+    "titre": "Debout, sans qu'on s'y attende",
+    "variantes": [
+      "Il y a sans doute en toi un endroit que tu as fini par considérer comme mort — une espérance que tu as cessé d'attendre, un désir de prier que tu as laissé s'éteindre faute de résultat, une capacité à croire que la déception a visiblement achevée. Tu n'y reviens plus, tu l'as même oubliée, comme on cesse de visiter une tombe. Et pourtant rien, dans ce que Jean et Luc racontent aujourd'hui, ne dit que ce qui gît ainsi, exposé et sans vie apparente, a dit son dernier mot : un souffle peut encore entrer, venant d'ailleurs que de toi, et te remettre debout sur ce point précis où tu te croyais définitivement couché.",
+      "Tu as peut-être connu ce moment où un deuil, une rupture, un rôle qui s'achève, a semblé te redéfinir entièrement — tu n'étais plus que la personne qui reste, celle qu'un lien a quittée, et rien d'autre ne semblait pouvoir te qualifier devant les autres. Les sadducéens raisonnent ainsi de la femme aux sept maris : ils la réduisent à ce qu'elle a été l'un pour l'autre, comme si une vie entière se résumait à une liste d'appartenances. Jésus répond que devant Dieu, ce qui te définit n'est pas d'abord ce que tu as perdu ou ce que tu as été pour quelqu'un, mais que tu es vivant pour celui qui t'a appelé par ton nom.",
+      "Il arrive qu'une conviction tenue en silence pendant des années — une fidélité, une parole dite une seule fois et jamais reprise, un service rendu sans que personne ne le sache — paraisse finalement sans effet, comme éteinte, et que tu en viennes à te demander si elle a jamais compté pour qui que ce soit. Les deux témoins de l'Apocalypse gisent ainsi trois jours et demi sous les yeux de ceux qui se réjouissent de les voir tus. Mais le texte ne s'arrête pas là : ce qui semblait clos reçoit un ordre venu d'en haut — « Montez ici » — et se redresse devant les mêmes regards qui le croyaient vaincu pour de bon."
+    ],
+    "choisi": 0
+  },
+  "invitation": {
+    "intro": "Choisis aujourd'hui l'endroit précis où tu t'es cru définitivement arrêté.",
+    "geste": "Nomme-le devant Dieu, sans l'embellir, simplement comme il est encore couché là — et laisse la phrase du psaume « je te chanterai un cantique nouveau » être ta seule prière sur ce point, même sans rien ressentir.",
+    "note": "Pas besoin de sentir un changement : le texte ne demande pas de ressusciter soi-même, seulement de rester en vue, comme les deux témoins, le temps qu'il faut."
+  },
+  "question": "Qu'est-ce qui, en toi, attend encore d'être redressé — et peux-tu le laisser entre les mains de Dieu sans chercher à le relever toi-même ?",
+  "racines": [
+    {
+      "titre": "Le lévirat, une loi de protection",
+      "corps_html": "La loi du lévirat visait à protéger la veuve sans enfant et à perpétuer dans l'héritage d'Israël le nom du frère défunt ; elle ne réglait en rien une question sur l'au-delà, mais la transmission de la terre promise. Les sadducéens en tirent un cas limite absurde, non pour comprendre la loi, mais pour ridiculiser une croyance qu'elle ne mentionne jamais.",
+      "attribution": "Deutéronome 25, 5-10"
+    },
+    {
+      "titre": "Zacharie derrière les deux témoins",
+      "corps_html": "L'image des deux oliviers et des deux chandeliers, reprise mot pour mot en Apocalypse 11,4, vient de Zacharie 4,3.11-14, où elle figurait Zorobabel le gouverneur et Josué le grand prêtre, les deux « fils de l'huile » qui se tiennent devant le Seigneur de toute la terre. En transposant cette image sur deux témoins anonymes de la fin des temps, Jean suggère que leur autorité réunit, comme autrefois, le pouvoir et le sacerdoce, au service d'une même parole.",
+      "attribution": "Zacharie 4, 3.11-14"
+    },
+    {
+      "titre": "Calvin sur l'argument du buisson ardent",
+      "corps_html": "Calvin, commentant ce passage, souligne que Jésus ne tire pas un argument de pure logique mais de l'alliance : si Dieu continue, longtemps après leur mort, de se nommer le Dieu d'Abraham, d'Isaac et de Jacob, c'est que le lien de l'alliance ne s'éteint pas dans la tombe, et que la vie des patriarches, bien que cachée à nos yeux, demeure réelle devant lui.",
+      "attribution": "Jean Calvin, Commentaire sur l'Évangile selon Luc, 20, 37"
+    }
+  ],
+  "pauses": [
+    {
+      "question": "Crois-tu que la mort a vraiment le dernier mot sur ce que Dieu a commencé en toi ?",
+      "suite": "Laisse cette question reposer, sans y répondre tout de suite."
+    }
+  ],
+  "videos": [
+    {
+      "id": "cAOAPSfpbR4",
+      "raison": "Le récit des deux témoins appartient à la première moitié de l'Apocalypse, dont cette vidéo donne la structure d'ensemble.",
+      "groupe": "livre"
+    },
+    {
+      "id": "Tn09RdxfqbM",
+      "raison": "Pour comprendre les nombres symboliques (1260 jours, trois jours et demi) du récit des deux témoins, propres au langage apocalyptique.",
+      "groupe": "mot"
+    },
+    {
+      "id": "u-2dqyddp2o",
+      "raison": "Jésus répond aux sadducéens en parlant de « fils de la résurrection » — cette vidéo explore ce que la Bible appelle la vie qui ne finit pas.",
+      "groupe": "mot"
+    },
+    {
+      "id": "O-Za0jggT8Q",
+      "raison": "La controverse avec les sadducéens se situe dans la montée vers Jérusalem que cette vidéo replace dans l'ensemble de la seconde partie de Luc.",
+      "groupe": "livre"
+    },
+    {
+      "id": "T-DvRiiLS1Y",
+      "raison": "Le psaume 144 chanté aujourd'hui prend tout son relief resitué dans l'ensemble du psautier que présente cette vidéo.",
+      "groupe": "livre"
+    }
+  ],
+  "carnet": [
+    {
+      "question": "Pourquoi Jésus ne répond-il pas directement à la question des sept frères ?",
+      "reponse_html": "Jésus déplace la question parce qu'elle repose sur une fausse prémisse : elle imagine la résurrection comme une simple continuation de la vie présente, mariage compris. Il répond que le « siècle à venir » n'est pas une prolongation mais une transformation radicale de la condition humaine, où la mort elle-même n'a plus de prise et où le mariage, institué pour perpétuer une humanité mortelle (Genèse 1,28), n'a plus d'objet. Ce n'est donc pas un détail de la loi juive qu'il corrige, mais l'image même que ses interlocuteurs se font de l'éternité.",
+      "sources": {
+        "jour": [
+          "Lc 20, 34-36"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Qui sont les deux témoins de l'Apocalypse ?",
+      "reponse_html": "Le texte ne les nomme pas, mais leurs pouvoirs — fermer le ciel, changer l'eau en sang — sont ceux d'Élie (1 Rois 17) et de Moïse (Exode 7), les deux figures associées à la Loi et aux prophètes, déjà réunies à la Transfiguration (Luc 9,30-31). L'image des deux oliviers et des deux chandeliers vient elle-même de Zacharie 4, où elle désignait le gouverneur et le grand prêtre revenus d'exil. Plutôt qu'une identification biographique certaine, le texte invite à reconnaître dans ces deux témoins la figure de toute Église fidèle jusqu'au bout.",
+      "sources": {
+        "jour": [
+          "Ap 11, 4-6"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Le combat que chante le psaume est-il un combat armé ?",
+      "reponse_html": "Le psaume loue Dieu qui « exerce mes mains au combat », verset que le titre latin associe traditionnellement à la victoire de David sur Goliath. Augustin, commentant ce psaume, refuse d'y voir d'abord un récit guerrier : Goliath figure le démon, et David le chrétien armé non des armes de Saül, trop lourdes pour lui, mais des cinq pierres du torrent, qu'il identifie aux cinq livres de la Loi recueillis par la charité dans le « vase du berger ». Le combat que chante le psalmiste n'est donc pas de chair, mais celui de la foi qui dépouille les armures empruntées pour ne garder que ce que la grâce donne sans mérite.",
+      "sources": {
+        "jour": [
+          "Ps 143 (144), 1-2"
+        ],
+        "tradition": [
+          {
+            "oeuvre": "augustin-enarrationes",
+            "reference": "Discours sur le psaume 143 (144), §1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Que veut dire être « fils de la résurrection » ?",
+      "reponse_html": "L'expression ne désigne pas ceux qui ressusciteront plus tard, mais ceux qui appartiennent déjà, dès maintenant, à cette réalité — comme on dit ailleurs chez Luc « fils de la paix » pour celui qui est fait pour l'accueillir. Être fils de la résurrection, c'est donc moins attendre un événement que porter déjà, dans sa manière d'exister, la marque de ce qui ne meurt pas. C'est pourquoi Jésus peut dire au présent que ces fils « ne peuvent plus mourir » : leur condition future qualifie déjà, en germe, ce qu'ils sont.",
+      "sources": {
+        "jour": [
+          "Lc 20, 36"
+        ],
+        "tradition": []
+      }
+    },
+    {
+      "question": "Pourquoi les habitants de la terre se réjouissent-ils de la mort des deux témoins ?",
+      "reponse_html": "Le texte dit que les peuples s'envoient des présents, comme à une fête, parce que ces deux prophètes « les tourmentaient » — leur parole dérangeait un ordre qui se croyait en paix. Cette scène inverse l'attente habituelle : ce n'est pas la mort du juste qui est pleurée mais célébrée, avant que Dieu ne retourne la situation en trois jours et demi, délai qui évoque sans le nommer le troisième jour de la résurrection du Christ, crucifié selon le verset 8 « là même » que ses témoins sont exposés. La joie du monde devant un témoignage réduit au silence n'a donc jamais le dernier mot dans ce texte.",
+      "sources": {
+        "jour": [
+          "Ap 11, 9-10"
+        ],
+        "tradition": []
+      }
+    }
+  ],
+  "passages_tradition": [
+    "augustin-Ps-143"
+  ]
+}
